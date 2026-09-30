@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "daca7a522e73b08401da08917c9b769afa218ff80dac9e6db1ccd14ca5e1dd49",
+ "sources": "35609d44a14382f7a41974e6841ae9d88de1a81c46c9ab3ad7e9014ed1b7cda2",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -188,6 +188,11 @@
     "MathMap.Cone",
     "MathMap.coneSetoid"
    ]
+  },
+  "MathMap.LTTopology": {
+   "status": "proved",
+   "axioms": [],
+   "deps": []
   },
   "MathMap.AntitoneGC": {
    "status": "proved",
@@ -401,6 +406,61 @@
     "MathMap.Level.sheaf",
     "MathMap.Level.skeleton",
     "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.LTTopology.axioms": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LTTopology"
+   ]
+  },
+  "MathMap.LTTopology.injective_iff_eq_bot": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LTTopology"
+   ]
+  },
+  "MathMap.LTTopology.mem_range_iff": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LTTopology"
+   ]
+  },
+  "MathMap.LTTopology.frameOfTruthValues": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LTTopology"
+   ]
+  },
+  "MathMap.LTTopology.retract": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LTTopology"
    ]
   },
   "MathMap.Cone.contractible": {

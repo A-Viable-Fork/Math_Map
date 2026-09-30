@@ -50,6 +50,10 @@ const DEFS = [
   D("Cone.mk", "The quotient map from the cylinder to the cone.", Q("source/math_map.md", "CX = X × [0,1] / (X × {1})")),
   D("Cone.base", "The base of the cone: x ↦ [x, 0], the end of the cylinder that is not collapsed.",
     Q("excerpts/wikipedia-cone-topology.txt", "[[Embedding|embeds]] a space as a [[subspace (topology)|subspace]] of a contractible space.")),
+  D("LTTopology", "The nLab's definition read in a meet-semilattice of truth values: a closure operator that is a left exact idempotent monad, that is an inflationary, idempotent, meet-preserving map (Mathlib's Nucleus). External truth values, as for the frame of opens of a space; the internal version in an arbitrary topos is not formalized.",
+    Q("excerpts/nlab-lawvere-tierney-definition.txt", "a [[closure operator]] given by a [[exact functor|left exact]] [[idempotent monad]] on the internal meet-[[semilattice]] $\\Omega$."),
+    Q("excerpts/nlab-lawvere-tierney-definition.txt", "1. $j true = true$, equivalently $\\id_\\Omega \\leq j: \\Omega \\to \\Omega$"),
+    Q("excerpts/nlab-lawvere-tierney-definition.txt", "1. $j j = j$")),
   D("AntitoneGC", "The corrected D1-099: antitone maps with a ≤ g(f(a)) and b ≤ f(g(b)).",
     Q("excerpts/wikipedia-galois-connection.txt", "=== Antitone Galois connection ==="),
     Q("excerpts/wikipedia-galois-connection.txt", "{{math|''a'' ≤ ''GF''(''a'')}} for all {{mvar|a}} in {{mvar|A}} and {{math|''b'' ≤ ''FG''(''b'')}} for all {{mvar|b}} in {{mvar|B}}.")),
@@ -74,6 +78,12 @@ const CLAIMS = [
   C("D7-X01", "preserved", "Level.IsAufhebung.sheaves_are_sheaves", "exact", "i-sheaves survive as j-sheaves: the Aufhebung lies above i.", { whole: true }),
   C("D7-X01", "broken", "Level.IsAufhebung.opposition_resolved", "exact", "Both sides of the opposition at level i, its skeleta and its sheaves, become j-sheaves. The step sizes the field also gives (n to n+1, 2n-1, 2n) are not formalized.", { invariant: "level-opposition" }),
   C("D7-X01", "output", "Level.IsAufhebung.unique", "exact", "The least resolving level, when it exists, is unique up to having the same sheaves.", { whole: true }),
+  // D7-288, read in external truth values (special: the internal statement in a topos is not formalized).
+  C("D7-288", "description", "LTTopology.axioms", "special", "j is inflationary, idempotent and meet-preserving: the entry's description, for truth values given as a meet-semilattice."),
+  C("D7-288", "broken", "LTTopology.injective_iff_eq_bot", "special", "j identifies truth values unless it is the trivial topology: the collapse the entry names.", { invariant: "truth-values" }),
+  C("D7-288", "broken", "LTTopology.mem_range_iff", "special", "The truth values that survive are the fixed points of j."),
+  C("D7-288", "broken", "LTTopology.frameOfTruthValues", "special", "The surviving truth values again form a frame."),
+  C("D7-288", "broken", "LTTopology.retract", "special", "The truth values retract onto the surviving ones (a Galois insertion)."),
   // D4-075.
   C("D4-075", "output", "Cone.contractible", "exact", "The cone on a nonempty space is contractible (for empty X the landed formula gives the empty space: conditions.js).", { invariant: "contractibility", whole: true }),
   C("D4-075", "preserved", "Cone.isEmbedding_base", "exact", "X embeds in its cone as the base.", { invariant: "topology-of-input", whole: true }),

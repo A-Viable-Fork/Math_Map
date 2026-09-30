@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "0006e6f6affce217943c003a8aed90a1962c6fec"
+  "commit": "3aefb35da241506a1dcc96447391cec65f8ce199"
  },
  "domains": {
   "D1": {
@@ -381,10 +381,10 @@
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 26,
-   "entries": 8,
-   "definitions": 19,
-   "proved": 26,
+   "claims": 31,
+   "entries": 9,
+   "definitions": 20,
+   "proved": 31,
    "stated": 0
   },
   "claimEvidence": {
@@ -44451,6 +44451,49 @@
      "basis": [
       "field broken: sourced"
      ]
+    }
+   ],
+   "lean": [
+    {
+     "field": "description",
+     "decl": "MathMap.LTTopology.axioms",
+     "match": "special",
+     "status": "proved",
+     "note": "j is inflationary, idempotent and meet-preserving: the entry's description, for truth values given as a meet-semilattice.",
+     "file": "lean/MathMap/LawvereTierney.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.LTTopology.injective_iff_eq_bot",
+     "match": "special",
+     "status": "proved",
+     "invariant": "truth-values",
+     "note": "j identifies truth values unless it is the trivial topology: the collapse the entry names.",
+     "file": "lean/MathMap/LawvereTierney.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.LTTopology.mem_range_iff",
+     "match": "special",
+     "status": "proved",
+     "note": "The truth values that survive are the fixed points of j.",
+     "file": "lean/MathMap/LawvereTierney.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.LTTopology.frameOfTruthValues",
+     "match": "special",
+     "status": "proved",
+     "note": "The surviving truth values again form a frame.",
+     "file": null
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.LTTopology.retract",
+     "match": "special",
+     "status": "proved",
+     "note": "The truth values retract onto the surviving ones (a Galois insertion).",
+     "file": "lean/MathMap/LawvereTierney.lean"
     }
    ],
    "tier": "audited",
