@@ -54,6 +54,16 @@ const CONDITIONS = [
     receipts: [
       { file: "excerpts/wikipedia-cone-topology.txt", quote: "is a [[point (topology)|point]] (called the vertex of the cone)" },
     ] },
+  { id: "D5-037", name: "Doob h-transform",
+    conditions: "h need only be excessive; a harmonic h gives a conservative process. For Brownian motion killed on leaving (0, infinity), h(x) = x is harmonic, and the h-transform is Brownian motion conditioned to stay positive: equal in law to a Bessel-3 process, dX = dW + dt/X (Doob and McKean). The drift 1/x away from the threshold comes from the conditioning alone; the unconditioned motion has none.",
+    counterexamples: [],
+    receipts: [
+      { file: "excerpts/wikipedia-doob-h-transform.txt", quote: "&=\\frac{1}{h(x)}A(fh)(x)" },
+      { file: "excerpts/arxiv-2103.12179.txt", quote: "to stay positive via a Doob h-transform with respect to Brownian motion killed on exiting" },
+      { file: "excerpts/arxiv-2103.12179.txt", quote: "[0,∞), using the harmonic function h(x) =x." },
+      { file: "excerpts/arxiv-2103.12179.txt", quote: "is equal in law to a Bessel-3 process." },
+      { file: "excerpts/wikipedia-bessel-process.txt", quote: "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}" },
+    ] },
   { id: "D6-090", name: "Lebesgue decomposition",
     conditions: "The two-part decomposition (absolutely continuous plus singular) holds for sigma-finite measures and is unique; the three-part refinement (absolutely continuous, singular continuous, pure point) is stated for regular Borel measures.",
     counterexamples: [],

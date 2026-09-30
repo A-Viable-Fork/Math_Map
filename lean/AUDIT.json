@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "eae1753007df4dc7367ce19ad3005cac3a281bf37e64d390fb8d8765714c75f9",
+ "sources": "9e2beca1d505ed716cfd17421cd5f38d6312a58771e63720dc3a98ec21a43e36",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -261,6 +261,24 @@
     "MathMap.internalAnd",
     "MathMap.truthPair_mono"
    ]
+  },
+  "MathMap.bmGenerator": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.hTransformGenerator": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
   },
   "MathMap.AntitoneGC": {
    "status": "proved",
@@ -646,6 +664,18 @@
    ],
    "deps": [
     "MathMap.LTTopology"
+   ]
+  },
+  "MathMap.hTransform_bm_id": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.bmGenerator",
+    "MathMap.hTransformGenerator"
    ]
   },
   "MathMap.Cone.contractible": {

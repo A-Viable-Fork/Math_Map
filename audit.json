@@ -2451,6 +2451,49 @@
    }
   },
   {
+   "id": "D5-037",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&title=Doob%27s_h-transform"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''Doob's h-transform''' is a method to transform a [[Markov process]] into a new Markov process"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function",
+     "note": "The formula is right (the transformed semigroup is (1/h(x)) times the integral of h(y) against P_t(x,dy)), but h need only be excessive; a harmonic h gives a conservative process, an excessive one a killed process. Conditioning on the future is one use, alongside time reversal."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function",
+     "note": "As the description: excessive h, harmonic as the conservative case."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "is defined as the Markov process with transition semigroup"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "is defined as the Markov process with transition semigroup",
+     "note": "The Markov property is kept. For an Ito diffusion the transform is again an Ito diffusion."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "with an explicit drift term depending on <math>\\nabla\\log h</math>",
+     "note": "The transitions are reweighted by h(y)/h(x); for a diffusion the drift gains the gradient of log h."
+    }
+   }
+  },
+  {
    "id": "D7-288",
    "why": "Requested by a composite; receipted.",
    "sources": {

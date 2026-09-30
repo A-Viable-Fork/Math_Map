@@ -145,6 +145,13 @@ const CORRECTIONS = [
     receipts: [R("excerpts/wikipedia-rotation-matrix.txt", "rotation matrices describe rotations about the origin", "description", "input", "output", "preserved", "broken"),
       R("excerpts/wikipedia-rotation-matrix.txt", "they can be characterized as [[orthogonal matrix|orthogonal matrices]] with [[determinant]] 1", "description", "preserved"),
       R("excerpts/wikipedia-rotation-matrix.txt", "a transformation that moves points without changing the distances between them.", "preserved")] },
+  { id: "D5-037", name: "Doob h-transform",
+    fields: { description: "Transforms a Markov process by an excessive function h: the new transitions are p^h(x,dy) = h(y) p(x,dy) / h(x). A harmonic h gives a conservative process; an h built from a future event conditions the process on it (h(x) = x for Brownian motion killed at 0 conditions it to stay positive).",
+      input: "Markov process + excessive h (a harmonic h for a conservative transform)" },
+    reason: "Description and input graded imprecise: the source requires h to be excessive, with harmonic h the conservative case; conditioning on the future is one use of the transform.",
+    receipts: [R("excerpts/wikipedia-doob-h-transform.txt", "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function", "description", "input"),
+      R("excerpts/wikipedia-doob-h-transform.txt", "can also be used to condition the process <math>X</math> on hitting a distinct point", "description"),
+      R("excerpts/arxiv-2103.12179.txt", "[0,∞), using the harmonic function h(x) =x.", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

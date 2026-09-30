@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Bessel process (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1334897616
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 80da251a2965430f946674ec078d580cfa90579416c5a1719f350e3e92b61168
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+dX_t = dW_t + \frac{n-1}{2}\frac{dt}{X_t}

@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "7413cb6385035ac4679e846c669cadbb37f8c82b"
+  "commit": "e909e87f734d93d28dc039ee754abcb182ba2008"
  },
  "domains": {
   "D1": {
@@ -85,7 +85,8 @@
    "evolution": null,
    "connection": null,
    "vector-field": "form",
-   "operation": null
+   "operation": null,
+   "process": null
   },
   "terms": [
    {
@@ -271,6 +272,34 @@
     "definition": "Linearity over smooth functions (C-infinity linearity) in an argument."
    },
    {
+    "id": "markov-property",
+    "name": "Markov property",
+    "kind": "property",
+    "carrier": "process",
+    "definition": "The future depends on the past only through the present state."
+   },
+   {
+    "id": "transition-law",
+    "name": "Transition law",
+    "kind": "structure",
+    "carrier": "process",
+    "definition": "The process's transition probabilities as given."
+   },
+   {
+    "id": "drift-from-threshold",
+    "name": "Drift away from the threshold",
+    "kind": "analytic",
+    "carrier": "process",
+    "definition": "A mean velocity away from an absorbing threshold: 1/x for Brownian motion conditioned to stay positive."
+   },
+   {
+    "id": "exponential-lifetime",
+    "name": "Exponential lifetime",
+    "kind": "numerical",
+    "carrier": "process",
+    "definition": "Mean lifetime growing exponentially in a depth (a barrier height over the noise)."
+   },
+   {
     "id": "flatness",
     "name": "Flatness",
     "kind": "geometric",
@@ -345,6 +374,22 @@
       "quote": "yields two [[adjoint modalities]]"
      }
     ]
+   },
+   {
+    "entry": "D5-037",
+    "field": "output",
+    "invariant": "drift-from-threshold",
+    "note": "With h(x) = x, harmonic for Brownian motion killed at 0, the transform is Brownian motion conditioned to stay positive, a Bessel-3 process with drift 1/x (the SDE at n = 3).",
+    "receipts": [
+     {
+      "file": "excerpts/arxiv-2103.12179.txt",
+      "quote": "[0,∞), using the harmonic function h(x) =x."
+     },
+     {
+      "file": "excerpts/wikipedia-bessel-process.txt",
+      "quote": "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}"
+     }
+    ]
    }
   ]
  },
@@ -364,27 +409,27 @@
    "added": 9
   },
   "byTier": {
-   "landed": 1339,
-   "audited": 115,
+   "landed": 1338,
+   "audited": 116,
    "authored": 494,
    "receipted": 15
   },
-  "withConditions": 8,
-  "corrected": 21,
+  "withConditions": 9,
+  "corrected": 22,
   "fieldEvidence": {
    "contradicted": 0,
    "unsupported": 100,
-   "unchecked": 10998,
+   "unchecked": 10992,
    "imprecise": 20,
-   "sourced": 611,
+   "sourced": 617,
    "formal": 49
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 40,
-   "entries": 9,
-   "definitions": 26,
-   "proved": 40,
+   "claims": 41,
+   "entries": 10,
+   "definitions": 28,
+   "proved": 41,
    "stated": 0
   },
   "claimEvidence": {
@@ -392,8 +437,8 @@
    "unsupported": 0,
    "unchecked": 0,
    "imprecise": 0,
-   "sourced": 25,
-   "formal": 19
+   "sourced": 29,
+   "formal": 20
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
@@ -28954,8 +28999,8 @@
    "tags": [
     "surgery"
    ],
-   "description": "Conditions Markov process on future via positive harmonic h. p^h(x,y)=h(y)p(x,y)/h(x).",
-   "input": "Markov process + harmonic h",
+   "description": "Transforms a Markov process by an excessive function h: the new transitions are p^h(x,dy) = h(y) p(x,dy) / h(x). A harmonic h gives a conservative process; an h built from a future event conditions the process on it (h(x) = x for Brownian motion killed at 0 conditions it to stay positive).",
+   "input": "Markov process + excessive h (a harmonic h for a conservative transform)",
    "output": "h-transformed process",
    "preserved": "Markov property, conditioned behavior",
    "broken": "Unconditioned transitions",
@@ -28963,15 +29008,134 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+   "invariants": {
+    "preserved": [
+     "markov-property"
+    ],
+    "broken": [
+     "transition-law"
+    ],
+    "output": [
+     "drift-from-threshold"
+    ]
    },
-   "tier": "landed"
+   "actsOn": {
+    "input": [
+     "process",
+     "function"
+    ],
+    "output": [
+     "process"
+    ]
+   },
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "markov-property",
+     "level": "sourced",
+     "basis": [
+      "field preserved: sourced"
+     ]
+    },
+    {
+     "field": "broken",
+     "invariant": "transition-law",
+     "level": "sourced",
+     "basis": [
+      "field broken: sourced"
+     ]
+    },
+    {
+     "field": "output",
+     "invariant": "drift-from-threshold",
+     "level": "formal",
+     "basis": [
+      "receipted link",
+      "Lean MathMap.hTransform_bm_id"
+     ]
+    }
+   ],
+   "corrected": {
+    "fields": [
+     "description",
+     "input"
+    ],
+    "landed": {
+     "description": "Conditions Markov process on future via positive harmonic h. p^h(x,y)=h(y)p(x,y)/h(x).",
+     "input": "Markov process + harmonic h"
+    },
+    "reason": "Description and input graded imprecise: the source requires h to be excessive, with harmonic h the conservative case; conditioning on the future is one use of the transform.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-doob-h-transform.txt",
+      "quote": "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function",
+      "fields": [
+       "description",
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-doob-h-transform.txt",
+      "quote": "can also be used to condition the process <math>X</math> on hitting a distinct point",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/arxiv-2103.12179.txt",
+      "quote": "[0,∞), using the harmonic function h(x) =x.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "lean": [
+    {
+     "field": "output",
+     "decl": "MathMap.hTransform_bm_id",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "drift-from-threshold",
+     "note": "The h-transform of Brownian motion with h(x) = x has generator f''/2 + f'/x: drift 1/x away from the threshold, the Bessel-3 generator.",
+     "file": "lean/MathMap/HTransform.lean"
+    }
+   ],
+   "conditions": "h need only be excessive; a harmonic h gives a conservative process. For Brownian motion killed on leaving (0, infinity), h(x) = x is harmonic, and the h-transform is Brownian motion conditioned to stay positive: equal in law to a Bessel-3 process, dX = dW + dt/X (Doob and McKean). The drift 1/x away from the threshold comes from the conditioning alone; the unconditioned motion has none.",
+   "counterexamples": [],
+   "conditionReceipts": [
+    {
+     "file": "excerpts/wikipedia-doob-h-transform.txt",
+     "quote": "&=\\frac{1}{h(x)}A(fh)(x)"
+    },
+    {
+     "file": "excerpts/arxiv-2103.12179.txt",
+     "quote": "to stay positive via a Doob h-transform with respect to Brownian motion killed on exiting"
+    },
+    {
+     "file": "excerpts/arxiv-2103.12179.txt",
+     "quote": "[0,∞), using the harmonic function h(x) =x."
+    },
+    {
+     "file": "excerpts/arxiv-2103.12179.txt",
+     "quote": "is equal in law to a Bessel-3 process."
+    },
+    {
+     "file": "excerpts/wikipedia-bessel-process.txt",
+     "quote": "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D5-038",
@@ -56852,6 +57016,21 @@
      "quote": "\\frac{\\omega_a\\omega_H}{2\\pi\\gamma}\\exp\\left(-\\frac{E_H-E_A}{k_\\text{B}T}\\right)"
     }
    ],
+   "invariants": {
+    "preserved": [
+     "exponential-lifetime"
+    ],
+    "broken": [],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "process"
+    ],
+    "output": [
+     "function"
+    ]
+   },
    "evidence": {
     "name": "sourced",
     "description": "sourced",
@@ -56860,6 +57039,16 @@
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "exponential-lifetime",
+     "level": "sourced",
+     "basis": [
+      "field preserved: sourced"
+     ]
+    }
+   ],
    "tier": "receipted"
   },
   {
@@ -56898,6 +57087,21 @@
      "quote": "\\sim \\operatorname{IG} \\left(\\frac\\alpha\\nu"
     }
    ],
+   "invariants": {
+    "preserved": [],
+    "broken": [
+     "exponential-lifetime"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "process"
+    ],
+    "output": [
+     "function"
+    ]
+   },
    "evidence": {
     "name": "sourced",
     "description": "sourced",
@@ -56906,6 +57110,16 @@
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "claims": [
+    {
+     "field": "broken",
+     "invariant": "exponential-lifetime",
+     "level": "sourced",
+     "basis": [
+      "field broken: sourced"
+     ]
+    }
+   ],
    "tier": "receipted"
   },
   {

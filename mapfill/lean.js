@@ -70,6 +70,10 @@ const DEFS = [
     Q("excerpts/nlab-closure-operator.txt", "The elements of the poset that are fixed by the closure operator are called _closed_")),
   D("LawvereTierney.close", "j corestricted to its fixed truth values: the collapse onto the closed ones.",
     Q("excerpts/nlab-closure-operator.txt", "The elements of the poset that are fixed by the closure operator are called _closed_")),
+  D("bmGenerator", "The generator of standard Brownian motion on the line, f to f''/2.",
+    Q("excerpts/wikipedia-wiener-generator.txt", "whose generator is <math>A=\\frac{1}{2}\\Delta</math>")),
+  D("hTransformGenerator", "The generator of an h-transformed process: A^h f = (1/h) A (h f).",
+    Q("excerpts/wikipedia-doob-h-transform.txt", "&=\\frac{1}{h(x)}A(fh)(x)")),
   D("AntitoneGC", "The corrected D1-099: antitone maps with a ≤ g(f(a)) and b ≤ f(g(b)).",
     Q("excerpts/wikipedia-galois-connection.txt", "=== Antitone Galois connection ==="),
     Q("excerpts/wikipedia-galois-connection.txt", "{{math|''a'' ≤ ''GF''(''a'')}} for all {{mvar|a}} in {{mvar|A}} and {{math|''b'' ≤ ''FG''(''b'')}} for all {{mvar|b}} in {{mvar|B}}.")),
@@ -110,6 +114,8 @@ const CLAIMS = [
   C("D7-288", "broken", "LTTopology.mem_range_iff", "special", "The truth values that survive are the fixed points of j."),
   C("D7-288", "broken", "LTTopology.frameOfTruthValues", "special", "The surviving truth values again form a frame."),
   C("D7-288", "broken", "LTTopology.retract", "special", "The truth values retract onto the surviving ones (a Galois insertion)."),
+  // D5-037.
+  C("D5-037", "output", "hTransform_bm_id", "exact", "The h-transform of Brownian motion with h(x) = x has generator f''/2 + f'/x: drift 1/x away from the threshold, the Bessel-3 generator.", { invariant: "drift-from-threshold" }),
   // D4-075.
   C("D4-075", "output", "Cone.contractible", "exact", "The cone on a nonempty space is contractible (for empty X the landed formula gives the empty space: conditions.js).", { invariant: "contractibility", whole: true }),
   C("D4-075", "preserved", "Cone.isEmbedding_base", "exact", "X embeds in its cone as the base.", { invariant: "topology-of-input", whole: true }),

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Doob's h-transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375974329
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: fd12badda0420ce275fff57e4ac53d15bb48feafd758bfccf7b81c5d68c8c78d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is again an Itô diffusion with an explicit drift term depending on <math>\nabla\log h</math>
+
+&=\frac{1}{h(x)}A(fh)(x)
+
+'''Doob's h-transform''' is a method to transform a [[Markov process]] into a new Markov process
+
+Let <math>h:E\to[0,\infty]</math> be an ''excessive'' function
+
+can also be used to condition the process <math>X</math> on hitting a distinct point

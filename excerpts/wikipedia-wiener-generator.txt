@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Wiener process, the generator (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376996896
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 1209690a5985a2e06933e5fad1eedfa22d6d4e18c4fa82cb22f24430bfa3fa72
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+whose generator is <math>A=\frac{1}{2}\Delta</math>

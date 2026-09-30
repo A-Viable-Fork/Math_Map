@@ -812,6 +812,17 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
 
   e: https://ncatlab.org/nlab/source/essential+geometric+morphism
 
+### D5-037 Doob h-transform (imprecise; for Requested by a composite; receipted.)
+
+- name: **confirmed** [h] "'''Doob's h-transform''' is a method to transform a [[Markov process]] into a new Markov process"
+- description: **imprecise** [h] "Let <math>h:E\to[0,\infty]</math> be an ''excessive'' function" *The formula is right (the transformed semigroup is (1/h(x)) times the integral of h(y) against P_t(x,dy)), but h need only be excessive; a harmonic h gives a conservative process, an excessive one a killed process. Conditioning on the future is one use, alongside time reversal.*
+- input: **imprecise** [h] "Let <math>h:E\to[0,\infty]</math> be an ''excessive'' function" *As the description: excessive h, harmonic as the conservative case.*
+- output: **confirmed** [h] "is defined as the Markov process with transition semigroup"
+- preserved: **confirmed** [h] "is defined as the Markov process with transition semigroup" *The Markov property is kept. For an Ito diffusion the transform is again an Ito diffusion.*
+- broken: **confirmed** [h] "with an explicit drift term depending on <math>\nabla\log h</math>" *The transitions are reweighted by h(y)/h(x); for a diffusion the drift gains the gradient of log h.*
+
+  h: https://en.wikipedia.org/w/index.php?action=raw&title=Doob%27s_h-transform
+
 ### D7-288 Lawvere-Tierney Topology Closure (confirmed; for Requested by a composite; receipted.)
 
 - name: **confirmed** [l] "a closure operator given by a left exact idempotent monad on the internal meet-semilattice"

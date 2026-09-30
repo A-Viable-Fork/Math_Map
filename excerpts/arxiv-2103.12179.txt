@@ -1,0 +1,16 @@
+Excerpts, verbatim as extracted, from: Andreas E. Kyprianou, Neil O'Connell, The Doob-McKean identity for stable Levy processes, arXiv:2103.12179 (2021)
+URL: https://arxiv.org/pdf/2103.12179
+Fetched: 2026-09-30. SHA-256 of the PDF as fetched: 5a0b65799d950d1c16db0156bef4d5fdab9668d9492fffe5dc7be9bf1a625231
+Text extracted with pypdf, which keeps ligatures ("deﬁnition") and breaks some sub- and superscripts across lines. Only the windows below are kept; each was checked to occur in the extracted text.
+
+equates the law of a Brownian motion conditioned to stay positive with that of a Bessel-3
+
+The change of measure (2) presents a second deﬁnition of the Brownian motion conditioned
+
+to stay positive via a Doob h-transform with respect to Brownian motion killed on exiting
+
+[0,∞), using the harmonic function h(x) =x.
+
+As alluded to above, the so-called Doob–McKean identity states that the process (B, P↑)
+
+is equal in law to a Bessel-3 process.

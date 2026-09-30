@@ -21,7 +21,7 @@ const CARRIERS = {
   space: null, "point-cloud": null, "simplicial-set": "space",
   category: null, functor: null, topos: "category", level: null,
   field: null, function: "field", form: "field", evolution: null, connection: null, "vector-field": "form",
-  operation: null,
+  operation: null, process: null,
 };
 
 const I = (id, name, kind, carrier, definition) => ({ id, name, kind, carrier, definition });
@@ -57,6 +57,11 @@ const INVARIANTS = [
   // Differential geometry
   I("leibniz-rule", "Leibniz rule", "algebraic", "operation", "The product rule for derivations."),
   I("tensoriality", "Tensoriality", "algebraic", "operation", "Linearity over smooth functions (C-infinity linearity) in an argument."),
+  // Stochastic processes
+  I("markov-property", "Markov property", "property", "process", "The future depends on the past only through the present state."),
+  I("transition-law", "Transition law", "structure", "process", "The process's transition probabilities as given."),
+  I("drift-from-threshold", "Drift away from the threshold", "analytic", "process", "A mean velocity away from an absorbing threshold: 1/x for Brownian motion conditioned to stay positive."),
+  I("exponential-lifetime", "Exponential lifetime", "numerical", "process", "Mean lifetime growing exponentially in a depth (a barrier height over the noise)."),
   I("flatness", "Flatness", "geometric", "connection", "Vanishing curvature: covariant derivatives commute."),
 ];
 
@@ -80,6 +85,9 @@ const ACTS_ON = [
   A("D4-176", ["form"], ["form"], "k-forms", "Orthogonal decomposition"),
   A("D6-X02", ["evolution", "field"], ["field"], ["Linear evolution operator", "source f(s)"], "The solution u(t)"),
   A("D4-086", ["vector-field", "connection"], ["vector-field"], "Vector fields", "Covariant derivative"),
+  A("D5-X02", ["process"], ["function"], "Brownian motion", "Distribution of the first hitting time"),
+  A("D5-037", ["process", "function"], ["process"], ["Markov process", "harmonic h"], "h-transformed process"),
+  A("D5-X01", ["process"], ["function"], "One-dimensional potential with a well and a barrier", "Escape rate k"),
 ];
 
 const RELATIONS = [
@@ -110,6 +118,9 @@ const LINKS = [
   L("D6-X02", "broken", "instantaneous-locality", "Instantaneous locality"),
   L("D4-086", "preserved", "leibniz-rule", "Leibniz rule"), L("D4-086", "preserved", "tensoriality", "tensoriality"),
   L("D4-086", "broken", "flatness", "Flat derivative"),
+  L("D5-X02", "broken", "exponential-lifetime", "any exponential dependence on distance"),
+  L("D5-X01", "preserved", "exponential-lifetime", "The exponential dependence on barrier height over noise"),
+  L("D5-037", "preserved", "markov-property", "Markov property"), L("D5-037", "broken", "transition-law", "Unconditioned transitions"),
   L("D7-X02", "preserved", "limits", "Limits (the inclusion is a right adjoint)"), L("D7-X02", "broken", "colimits", "Colimits"),
   L("D7-X03", "preserved", "limits", "The adjoint triple"), L("D7-X03", "preserved", "colimits", "The adjoint triple"),
   L("D7-X03", "output", "skeletal-objects", "modalities: skeleton left of sheaf"), L("D7-X03", "output", "level-opposition", "skeleton left of sheaf"),
@@ -122,6 +133,8 @@ const LINKS = [
     receipts: [{ file: "excerpts/wikipedia-hodge-projection.txt", quote: "be the orthogonal projection" }] },
   { entry: "D7-284", field: "output", invariant: "skeletal-objects", note: "An essential inclusion's adjoint triple yields the skeleton modality, whose fixed objects are the level's skeleta.",
     receipts: [{ file: "excerpts/nlab-aufhebung-modalities.txt", quote: "yields two [[adjoint modalities]]" }] },
+  { entry: "D5-037", field: "output", invariant: "drift-from-threshold", note: "With h(x) = x, harmonic for Brownian motion killed at 0, the transform is Brownian motion conditioned to stay positive, a Bessel-3 process with drift 1/x (the SDE at n = 3).",
+    receipts: [{ file: "excerpts/arxiv-2103.12179.txt", quote: "[0,∞), using the harmonic function h(x) =x." }, { file: "excerpts/wikipedia-bessel-process.txt", quote: "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}" }] },
 ];
 
 module.exports = { CARRIERS, INVARIANTS, RELATIONS, ACTS_ON, LINKS };

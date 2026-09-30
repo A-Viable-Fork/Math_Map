@@ -61,6 +61,15 @@ const TARGETED = [
     broken: I("e", "is essential iff $f^\\ast$ preserves small limits iff $f^\\ast$ preserves small products",
       "Essentiality is a property of the geometric morphism (a condition on its inverse image, with the extra left adjoint determined up to isomorphism), not extra structure. \"Nothing is broken\" stands."),
   }),
+  t("D5-037", USE, { h: W("Doob%27s_h-transform") }, {
+    name: C("h", "'''Doob's h-transform''' is a method to transform a [[Markov process]] into a new Markov process"),
+    description: I("h", "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function",
+      "The formula is right (the transformed semigroup is (1/h(x)) times the integral of h(y) against P_t(x,dy)), but h need only be excessive; a harmonic h gives a conservative process, an excessive one a killed process. Conditioning on the future is one use, alongside time reversal."),
+    input: I("h", "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function", "As the description: excessive h, harmonic as the conservative case."),
+    output: C("h", "is defined as the Markov process with transition semigroup"),
+    preserved: C("h", "is defined as the Markov process with transition semigroup", "The Markov property is kept. For an Ito diffusion the transform is again an Ito diffusion."),
+    broken: C("h", "with an explicit drift term depending on <math>\\nabla\\log h</math>", "The transitions are reweighted by h(y)/h(x); for a diffusion the drift gains the gradient of log h."),
+  }),
   t("D7-288", USE, { l: N("Lawvere-Tierney+topology") }, {
     name: C("l", "a closure operator given by a left exact idempotent monad on the internal meet-semilattice"),
     description: C("l", "a closure operator given by a left exact idempotent monad on the internal meet-semilattice",
