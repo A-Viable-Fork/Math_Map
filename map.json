@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "5e1cfa76099377b0a325f5c1f56e8b53a9fb34b3"
+  "commit": "be886228f66bf2611e98181e810cfe008add85c9"
  },
  "domains": {
   "D1": {
@@ -376,15 +376,15 @@
    "unsupported": 100,
    "unchecked": 10998,
    "imprecise": 20,
-   "sourced": 615,
-   "formal": 45
+   "sourced": 613,
+   "formal": 47
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 34,
+   "claims": 38,
    "entries": 9,
    "definitions": 26,
-   "proved": 34,
+   "proved": 38,
    "stated": 0
   },
   "claimEvidence": {
@@ -392,8 +392,8 @@
    "unsupported": 0,
    "unchecked": 0,
    "imprecise": 0,
-   "sourced": 26,
-   "formal": 17
+   "sourced": 25,
+   "formal": 18
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
@@ -44329,8 +44329,8 @@
    "evidence": {
     "name": "sourced",
     "description": "sourced",
-    "input": "sourced",
-    "output": "sourced",
+    "input": "formal",
+    "output": "formal",
     "preserved": "formal",
     "broken": "imprecise"
    },
@@ -44341,7 +44341,7 @@
      "level": "formal",
      "basis": [
       "field preserved: formal",
-      "Mathlib CategoryTheory.Adjunction.leftAdjoint_preservesColimits given output (sourced)",
+      "Mathlib CategoryTheory.Adjunction.leftAdjoint_preservesColimits given output (formal)",
       "Lean MathMap.EssentialGeometricMorphism.inverse_preservesColimits"
      ]
     },
@@ -44351,16 +44351,18 @@
      "level": "formal",
      "basis": [
       "field preserved: formal",
-      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given output (sourced)",
+      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given output (formal)",
       "Lean MathMap.EssentialGeometricMorphism.inverse_preservesLimits"
      ]
     },
     {
      "field": "output",
      "invariant": "skeletal-objects",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "receipted link"
+      "receipted link",
+      "Lean MathMap.EssentialGeometricMorphism.skeleton_idempotent",
+      "Lean MathMap.EssentialGeometricMorphism.isSkeleton_iff"
      ]
     }
    ],
@@ -44383,6 +44385,42 @@
      "invariant": "colimits",
      "whole": true,
      "note": "f^* preserves colimits.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "input",
+     "decl": "MathMap.EssentialGeometricMorphism.geometric",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "The input is a geometric morphism; the essential one extends it.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.EssentialGeometricMorphism.triple",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "An essential geometric morphism is the adjoint triple f_! ⊣ f^* ⊣ f_*: the entry's output.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.EssentialGeometricMorphism.skeleton_idempotent",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "skeletal-objects",
+     "note": "For an essential inclusion (f_* fully faithful, as the chain's D7-X02 step supplies) the skeleton f_! f^* is idempotent: a modality.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.EssentialGeometricMorphism.isSkeleton_iff",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "skeletal-objects",
+     "note": "For an essential inclusion the objects the skeleton modality fixes are exactly the image of f_!: the skeleta.",
      "file": "lean/MathMap/Topos.lean"
     },
     {

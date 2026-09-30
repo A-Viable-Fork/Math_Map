@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "9fd887cab07718e294982d5b3893185d62f74d23eed893d7a9fbc8b1ecec0da9",
+ "sources": "4128dda28c2ed995f62ab05dceb0b65302a509fcbac1e296db3c9006384e9806",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -321,6 +321,54 @@
    ]
   },
   "MathMap.EssentialGeometricMorphism.inverse_preservesColimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
+  "MathMap.EssentialGeometricMorphism.geometric": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
+  "MathMap.EssentialGeometricMorphism.triple": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
+  "MathMap.EssentialGeometricMorphism.skeleton_idempotent": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
+  "MathMap.EssentialGeometricMorphism.isSkeleton_iff": {
    "status": "proved",
    "axioms": [
     "propext",

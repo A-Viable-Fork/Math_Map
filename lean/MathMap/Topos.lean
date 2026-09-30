@@ -1,5 +1,6 @@
 import Mathlib.CategoryTheory.Adjunction.Limits
 import Mathlib.CategoryTheory.Limits.Preserves.Finite
+import Mathlib.CategoryTheory.Adjunction.Triple
 
 /-!
 # Subtoposes, essential geometric morphisms and levels
@@ -97,6 +98,47 @@ codomain, `f_! f^* ⊣ f_* f^*`: the skeleton and sheaf sides that a level makes
 def EssentialGeometricMorphism.modalities (f : EssentialGeometricMorphism E F) :
     f.inverse ⋙ f.shriek ⊣ f.inverse ⋙ f.direct :=
   f.adj.comp f.adj'
+
+/-- D7-284, input: an essential geometric morphism is a geometric morphism with extra structure. -/
+def EssentialGeometricMorphism.geometric (f : EssentialGeometricMorphism E F) : GeometricMorphism E F :=
+  f.toGeometricMorphism
+
+/-- D7-284, output: an essential geometric morphism is an adjoint triple `f_! ⊣ f^* ⊣ f_*`. -/
+def EssentialGeometricMorphism.triple (f : EssentialGeometricMorphism E F) :
+    Adjunction.Triple f.shriek f.inverse f.direct :=
+  ⟨f.adj', f.adj⟩
+
+/-- D7-284, output: when the direct image is fully faithful (an essential inclusion), so is `f_!`,
+and the counit of `f_! ⊣ f^*` is an isomorphism on the image of `f_!`. -/
+theorem EssentialGeometricMorphism.isIso_counit_shriek (f : EssentialGeometricMorphism E F)
+    [f.direct.Full] [f.direct.Faithful] (Y : E) : IsIso (f.adj'.counit.app (f.shriek.obj Y)) := by
+  have ff := f.triple.fullyFaithfulEquiv.symm (Functor.FullyFaithful.ofFullyFaithful f.direct)
+  have := ff.full
+  have := ff.faithful
+  have : IsIso (f.shriek.map (f.adj'.unit.app Y)) := inferInstance
+  have h := f.adj'.left_triangle_components Y
+  have : IsIso (f.shriek.map (f.adj'.unit.app Y) ≫ f.adj'.counit.app (f.shriek.obj Y)) := by
+    rw [h]; exact IsIso.id _
+  exact IsIso.of_isIso_comp_left (f.shriek.map (f.adj'.unit.app Y)) _
+
+/-- D7-284, output: for an essential inclusion the skeleton modality `f_! f^*` is idempotent: its
+counit, whiskered by the modality, is an isomorphism `f_! f^* f_! f^* ≅ f_! f^*`. -/
+theorem EssentialGeometricMorphism.skeleton_idempotent (f : EssentialGeometricMorphism E F)
+    [f.direct.Full] [f.direct.Faithful] :
+    IsIso (Functor.whiskerLeft (f.inverse ⋙ f.shriek) f.adj'.counit) := by
+  exact @NatIso.isIso_of_isIso_app _ _ _ _ _ _ _ fun X => f.isIso_counit_shriek (f.inverse.obj X)
+
+/-- D7-284, output: for an essential inclusion the objects the skeleton modality fixes (the skeleta)
+are exactly the objects in the image of `f_!`. -/
+theorem EssentialGeometricMorphism.isSkeleton_iff (f : EssentialGeometricMorphism E F)
+    [f.direct.Full] [f.direct.Faithful] (X : F) :
+    Nonempty ((f.inverse ⋙ f.shriek).obj X ≅ X) ↔ ∃ Y : E, Nonempty (f.shriek.obj Y ≅ X) := by
+  constructor
+  · rintro ⟨e⟩
+    exact ⟨f.inverse.obj X, ⟨e⟩⟩
+  · rintro ⟨Y, ⟨e⟩⟩
+    have := f.isIso_counit_shriek Y
+    exact ⟨(f.inverse ⋙ f.shriek).mapIso e.symm ≪≫ asIso (f.adj'.counit.app (f.shriek.obj Y)) ≪≫ e⟩
 
 /-- A level of `E`: an essential subtopos, whose reflector `i^*` has a further left adjoint `i_!`,
 giving the triple `i_! ⊣ i^* ⊣ i_*`. -/
