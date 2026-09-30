@@ -1,0 +1,106 @@
+// Role: second readings of the Mathlib match grades. Builds a blind packet (each link's entry field and
+//   the quoted Lean statement, without the grade or note) and compares a reader's grades with the map's.
+// Contract: `node scripts/blind.mjs --packet` (once; refuses to overwrite) writes audit/blind/packet-0_1.md and audit/blind/key-0_1.json
+//   (item ids only, for the reader's answers). `node scripts/blind.mjs --compare audit/blind/READER.json`
+//   reads { reader, independence, grades: { item: { match, reason } } } and writes
+//   reports/SECOND-READING.md: agreement per reader, Cohen's kappa, and every disagreement with both
+//   grades and the reader's reason. `--check` (CI) re-renders the report from every reader file present.
+// Invariant: the packet never shows the map's grade or note. A second reading is evidence about the
+//   grades, never an edit to them; disagreements are for a human to rule on.
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
+import { createRequire } from "node:module";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { excerptFile } from "./formal.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const require = createRequire(import.meta.url);
+const { FORMAL } = require("../mapfill/formal.js");
+const GRADES = ["exact", "general", "special", "related", "ingredient", "conflicts"];
+const DIR = join(ROOT, "audit/blind");
+const item = (k, i) => `F${String(i + 1).padStart(3, "0")}`;
+
+async function entries() { const { parse } = await import("./mathmap.mjs"); return Object.fromEntries(parse().entries.map((e) => [e.id, e])); }
+
+function statement(k) {
+  const t = readFileSync(join(ROOT, excerptFile(k.file)), "utf8");
+  const start = t.indexOf(`-- ${k.decl} (line `);
+  if (start < 0) return null;
+  const rest = t.slice(start).split("\n").slice(1);
+  const end = rest.findIndex((l) => l.startsWith("-- ") || l === "");
+  return rest.slice(0, end < 0 ? undefined : end).join("\n");
+}
+
+async function packet() {
+  if (existsSync(join(DIR, "key-0_1.json")) && !process.argv.includes("--force")) { console.log("blind: packet-0_1 exists and is fixed once readers have it (use a new version, or --force before any reading)"); process.exit(1); }
+  const E = await entries();
+  mkdirSync(DIR, { recursive: true });
+  const L = ["# Blind second reading: Mathlib match grades", "",
+    "Each item pairs a claim from the math map (one field of one entry) with a declaration from Mathlib at commit 380f2aafb622cb2c1c93dac545b6389083c68c51. Grade how the Lean statement bears on the claim, using exactly one of:", "",
+    "- **exact**: the statement states the claim as written (a definition counts when the claim is the definition).",
+    "- **general**: the statement implies the claim (it is more general; the claim follows given the entry's own setting).",
+    "- **special**: the statement proves a special case of the claim, or the claim under an extra hypothesis the statement makes explicit.",
+    "- **related**: a weaker or neighbouring result; the claim itself is not stated.",
+    "- **ingredient**: the statement defines the objects or the operation, not the claim.",
+    "- **conflicts**: the statement conflicts with the claim as written.", "",
+    "A field may contain several claims; grade the item by the claim the declaration bears on most directly, and say which. Answer as JSON: `{ \"F001\": { \"match\": \"exact\", \"reason\": \"one sentence\" }, ... }`. Do not try to be generous; try to be right.", ""];
+  const key = [];
+  FORMAL.forEach((k, i) => {
+    const e = E[k.entry], id = item(k, i);
+    key.push({ id, entry: k.entry, field: k.field, decl: k.decl, invariant: k.invariant ?? null });
+    // A conflict was graded against the landed text; a field corrected since is shown as landed.
+    const text = k.match === "conflicts" && e.corrected?.includes(k.field) ? e.landedFields[k.field] : e[k.field];
+    L.push(`## ${id}`, "", `**Entry ${k.entry} (${e.name}), field ${k.field}:** ${text}`, "", `**Mathlib \`${k.decl}\`** (${k.file}):`, "", "```lean", statement(k) ?? "(statement missing)", "```", "");
+  });
+  writeFileSync(join(DIR, "packet-0_1.md"), L.join("\n"));
+  writeFileSync(join(DIR, "key-0_1.json"), JSON.stringify({ items: key }, null, 1) + "\n");
+  console.log(`blind: wrote audit/blind/packet-0_1.md (${key.length} items)`);
+}
+
+function kappa(pairs) {
+  const n = pairs.length; if (!n) return null;
+  const po = pairs.filter(([a, b]) => a === b).length / n;
+  const pa = (g, s) => pairs.filter((p) => p[s] === g).length / n;
+  const pe = GRADES.reduce((x, g) => x + pa(g, 0) * pa(g, 1), 0);
+  return pe === 1 ? 1 : (po - pe) / (1 - pe);
+}
+
+function report() {
+  const readers = existsSync(DIR) ? readdirSync(DIR).filter((f) => f.startsWith("reader-") && f.endsWith(".json")) : [];
+  const F = [], L = ["# Second reading of the Mathlib match grades", "", "*Generated by `scripts/blind.mjs` from `audit/blind/reader-*.json`. Do not edit by hand.*", "",
+    "Each reader grades the links in `audit/blind/packet-0_1.md` without seeing the map's grade or note. Agreement is exact agreement on the six grades; kappa corrects it for chance. Disagreements are listed for a human to rule on; the map's grades are not changed by a reading.", ""];
+  for (const f of readers.sort()) {
+    const R = JSON.parse(readFileSync(join(DIR, f), "utf8")), pairs = [], dis = [];
+    // Items are matched to links through the packet's key, so links added later do not shift them.
+    const KEY = JSON.parse(readFileSync(join(DIR, "key-0_1.json"), "utf8")).items;
+    for (const it of KEY) {
+      const k = FORMAL.find((x) => x.entry === it.entry && x.field === it.field && x.decl === it.decl && (x.invariant ?? null) === it.invariant);
+      const g = R.grades[it.id];
+      if (!g) continue;
+      if (!k) { F.push(`${f}: ${it.id} names a link no longer in mapfill/formal.js`); continue; }
+      if (!GRADES.includes(g.match)) { F.push(`${f}: ${it.id} has grade ${g.match}`); continue; }
+      pairs.push([k.match, g.match]);
+      if (k.match !== g.match) dis.push(`| ${it.id} | ${k.entry} ${k.field} | \`${k.decl}\` | ${k.match} | ${g.match} | ${String(g.reason || "").replace(/\|/g, "/")} |`);
+    }
+    const agree = pairs.filter(([a, b]) => a === b).length, kp = kappa(pairs);
+    L.push(`## ${R.reader}`, "", `Independence: ${R.independence}`, "", `Graded ${pairs.length} of the packet's ${JSON.parse(readFileSync(join(DIR, "key-0_1.json"), "utf8")).items.length} items. Agreement ${agree}/${pairs.length} (${(100 * agree / pairs.length).toFixed(0)}%), Cohen's kappa ${kp === null ? "n/a" : kp.toFixed(2)}.`, "");
+    if (dis.length) L.push("| Item | Claim | Declaration | Map | Reader | Reader's reason |", "|---|---|---|---|---|---|", ...dis, "");
+  }
+  if (!readers.length) L.push("No readings yet.", "");
+  return { text: L.join("\n"), F };
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const a = process.argv.slice(2);
+  if (a.includes("--packet")) await packet();
+  else {
+    const { text, F } = report();
+    for (const f of F) console.log("FAIL", f);
+    if (F.length) process.exit(1);
+    const out = join(ROOT, "reports/SECOND-READING.md");
+    if (a.includes("--check")) {
+      if (!existsSync(out) || readFileSync(out, "utf8") !== text) { console.log("FAIL reports/SECOND-READING.md is stale: run node scripts/blind.mjs"); process.exit(1); }
+      console.log("blind: PASS (second-reading report fresh)");
+    } else { writeFileSync(out, text); console.log("blind: wrote reports/SECOND-READING.md"); }
+  }
+}

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Lebesgue's decomposition theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1326695511
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 0787b958f5334ebe5887b189cd7edd4315544a1621818af3a5b786ffe7117d77
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An alternative refinement is that of the decomposition of a regular [[Borel measure]]
+
+are [[sigma-finite measure|σ-finite]] [[signed measure]]s on <math>\Sigma</math>, then there exist two uniquely determined σ-finite signed measures

@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Order/Zorn.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Zorn.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d113f394eedc0aa89fc9b466efa94c61219f3e81bb6a3e26be6824faf7d42db7
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- zorn_le (line 104)
+theorem zorn_le (h : ∀ c : Set α, IsChain (· ≤ ·) c → BddAbove c) : ∃ m : α, IsMax m

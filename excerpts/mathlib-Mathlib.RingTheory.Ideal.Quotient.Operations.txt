@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Ideal/Quotient/Operations.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Operations.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: bb2ff14aca84072d5753aba125a447de445671dff661a4e1cc435fc33996cf4f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Ideal.quotientInfRingEquivPiQuotient (line 248)
+noncomputable def quotientInfRingEquivPiQuotient (f : ι → Ideal R)
+    (hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i :=
+  { Equiv.ofBijective _ ⟨quotientInfToPiQuotient_inj f, quotientInfToPiQuotient_surj hf⟩,
+    quotientInfToPiQuotient f with }

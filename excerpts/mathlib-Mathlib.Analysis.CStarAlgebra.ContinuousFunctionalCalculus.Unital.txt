@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: a9730644aa854a1169d531587ad41f846648861ce44b79269838c4d6dcae696f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- cfc_map_spectrum (line 388)
+lemma cfc_map_spectrum (ha : p a := by cfc_tac)
+    (hf : ContinuousOn f (spectrum R a) := by cfc_cont_tac) :
+    spectrum R (cfc f a) = f '' spectrum R a
+
+-- cfcHom (line 237)
+noncomputable def cfcHom : C(spectrum R a, R) →⋆ₐ[R] A :=
+  (ContinuousFunctionalCalculus.exists_cfc_of_predicate a ha).choose

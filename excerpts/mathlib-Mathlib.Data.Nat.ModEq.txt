@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Data/Nat/ModEq.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Data/Nat/ModEq.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: a497c26a9c0ceab9ce37458de4dcb3a1647ef67121e74a2683ec33c6b3bebd1e
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Nat.chineseRemainder (line 472)
+def chineseRemainder (co : n.Coprime m) (a b : ℕ) : { k // k ≡ a [MOD n] ∧ k ≡ b [MOD m] } :=
+  chineseRemainder' (by convert! @modEq_one a b)
+
+-- Nat.chineseRemainder_modEq_unique (line 489)
+theorem chineseRemainder_modEq_unique (co : n.Coprime m) {a b z}
+    (hzan : z ≡ a [MOD n]) (hzbm : z ≡ b [MOD m]) : z ≡ chineseRemainder co a b [MOD n * m]

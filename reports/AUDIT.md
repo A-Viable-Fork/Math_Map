@@ -1305,6 +1305,96 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
 
   z: https://en.wikipedia.org/w/index.php?action=raw&title=Zariski_topology
 
+### D2-193 Chinese Remainder Theorem Reduction (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [c] "Chinese remainder theorem states that if one knows the remainders of the Euclidean division of an integer n by several integers"
+- description: **confirmed** [m] "(hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i" *The ring form: for pairwise coprime ideals, R modulo their intersection is the product of the quotients.*
+- input: **confirmed** [m] "(hf : Pairwise (IsCoprime on f))"
+- output: **confirmed** [m] "(hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i"
+- preserved: **confirmed** [m] "(hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i" *A ring isomorphism.*
+- broken: **unsupported** *"Unified quotient" names no invariant.*
+
+  c: https://en.wikipedia.org/w/index.php?action=raw&title=Chinese_remainder_theorem
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Operations.lean
+
+### D8-022 Chinese remainder algorithm transformation (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [c] "Chinese remainder theorem states that if one knows the remainders of the Euclidean division of an integer n by several integers"
+- description: **confirmed** [c] "then one can determine uniquely the remainder of the division of n by the product of these integers"
+- input: **confirmed** [c] "under the condition that the divisors are pairwise coprime"
+- output: **confirmed** [c] "then one can determine uniquely the remainder of the division of n by the product of these integers"
+- preserved: **confirmed** [c] "then one can determine uniquely the remainder of the division of n by the product of these integers"
+- broken: **unsupported** *"Unified integer representation" names no invariant.*
+
+  c: https://en.wikipedia.org/w/index.php?action=raw&title=Chinese_remainder_theorem
+
+### D4-041 Cantor space construction (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [k] "a topological space is a Cantor space if it is homeomorphic to the Cantor set"
+- description: **confirmed** [k] "is indeed a Cantor space"
+- input: **confirmed** [k] "is indeed a Cantor space" *Countably many copies of the discrete two-point space, with the product topology.*
+- output: **confirmed** [k] "a topological space is a Cantor space if it is homeomorphic to the Cantor set"
+- preserved: **confirmed** [k] "a topological space is a Cantor space if it is homeomorphic to the Cantor set" *Compact, metrizable, zero-dimensional; universality (every compact metrizable zero-dimensional space embeds in it) is not stated on the lines checked.*
+- broken: **unsupported** *Total disconnectedness is true but not stated on the lines checked.*
+
+  k: https://en.wikipedia.org/w/index.php?action=raw&title=Cantor_space
+
+### D7-199 Zorn's Lemma Maximization (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [z] "also known as the Kuratowski–Zorn lemma"
+- description: **confirmed** [z] "containing upper bounds for every chain (that is, every totally ordered subset) necessarily contains at least one maximal element"
+- input: **confirmed** [z] "a partially ordered set containing upper bounds for every chain"
+- output: **confirmed** [z] "necessarily contains at least one maximal element"
+- preserved: **confirmed** [z] "necessarily contains at least one maximal element"
+- broken: **unsupported** *Non-constructivity (Zorn's lemma is equivalent to the axiom of choice) is not stated on the lines checked.*
+
+  z: https://en.wikipedia.org/w/index.php?action=raw&title=Zorn%27s_lemma
+
+### D6-023 Continuous functional calculus (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [f] "the continuous functional calculus is a functional calculus which allows the application of a continuous function to normal elements of a C*-algebra"
+- description: **confirmed** [f] "the continuous functional calculus is a functional calculus which allows the application of a continuous function to normal elements of a C*-algebra"
+- input: **confirmed** [f] "a restriction to normal elements"
+- output: **confirmed** [f] "the continuous functional calculus is a functional calculus which allows the application of a continuous function to normal elements of a C*-algebra"
+- preserved: **confirmed** [m] "spectrum R (cfc f a) = f '' spectrum R a" *Spectral mapping (Mathlib's cfc_map_spectrum).*
+- broken: **unsupported** *"Non-continuous functions" names no invariant.*
+
+  f: https://en.wikipedia.org/w/index.php?action=raw&title=Continuous_functional_calculus
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean
+
+### D6-090 Lebesgue decomposition (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [l] "Lebesgue's decomposition theorem can be refined in a number of ways"
+- description: **confirmed** [l] "An alternative refinement is that of the decomposition of a regular Borel measure" *The three-part form refines the two-part theorem, for regular Borel measures (conditions.js).*
+- input: **confirmed** [l] "there exist two uniquely determined σ-finite signed measures"
+- output: **confirmed** [l] "is the singular continuous part"
+- preserved: **confirmed** [l] "there exist two uniquely determined σ-finite signed measures" *Uniqueness is stated.*
+- broken: **unsupported** *"Unified measure description" names no invariant.*
+
+  l: https://en.wikipedia.org/w/index.php?action=raw&title=Lebesgue%27s_decomposition_theorem
+
+### D4-408 Tychonoff topology construction (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [t] "Tychonoff's theorem states"
+- description: **confirmed** [t] "Product of any collection of compact topological spaces is compact"
+- input: **confirmed** [t] "Product of any collection of compact topological spaces is compact"
+- output: **confirmed** [t] "Product of any collection of compact topological spaces is compact"
+- preserved: **confirmed** [t] "Product of any collection of compact topological spaces is compact" *Compactness passes to the product.*
+- broken: **unsupported** *"Box topology properties": the product topology is coarser than the box topology, which the lines checked do not state.*
+
+  t: https://en.wikipedia.org/w/index.php?action=raw&title=Tychonoff%27s_theorem
+
+### D5-030 Diffeomorphism (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [d] "It is an invertible function that maps one differentiable manifold to another such that both the function and its inverse are continuously differentiable"
+- description: **confirmed** [d] "It is an invertible function that maps one differentiable manifold to another such that both the function and its inverse are continuously differentiable"
+- input: **confirmed** [d] "maps one differentiable manifold to another"
+- output: **confirmed** [d] "It is an invertible function that maps one differentiable manifold to another"
+- preserved: **confirmed** [d] "both the function and its inverse are continuously differentiable"
+- broken: **unsupported** *"Specific point positions, metric": a diffeomorphism need not be an isometry, which the lines checked do not state.*
+
+  d: https://en.wikipedia.org/w/index.php?action=raw&title=Diffeomorphism
+
 ### D8-107 Jordan decomposition (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
 
 - name: **confirmed** [j] "its Jordan normal form is also called the Jordan normal form of"

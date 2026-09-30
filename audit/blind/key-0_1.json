@@ -1,0 +1,655 @@
+{
+ "items": [
+  {
+   "id": "F001",
+   "entry": "D1-003",
+   "field": "output",
+   "decl": "SimpleGraph.lineGraph",
+   "invariant": null
+  },
+  {
+   "id": "F002",
+   "entry": "D1-003",
+   "field": "description",
+   "decl": "SimpleGraph.lineGraph_adj_iff_exists",
+   "invariant": null
+  },
+  {
+   "id": "F003",
+   "entry": "D1-059",
+   "field": "output",
+   "decl": "Matroid.dual_isBase_iff'",
+   "invariant": null
+  },
+  {
+   "id": "F004",
+   "entry": "D1-059",
+   "field": "preserved",
+   "decl": "Matroid.dual_ground",
+   "invariant": null
+  },
+  {
+   "id": "F005",
+   "entry": "D1-059",
+   "field": "broken",
+   "decl": "Matroid.eRank_add_eRank_dual",
+   "invariant": null
+  },
+  {
+   "id": "F006",
+   "entry": "D1-099",
+   "field": "description",
+   "decl": "GaloisConnection",
+   "invariant": null
+  },
+  {
+   "id": "F007",
+   "entry": "D1-099",
+   "field": "description",
+   "decl": "GaloisConnection.le_u_l",
+   "invariant": null
+  },
+  {
+   "id": "F008",
+   "entry": "D1-099",
+   "field": "preserved",
+   "decl": "GaloisConnection.closureOperator",
+   "invariant": null
+  },
+  {
+   "id": "F009",
+   "entry": "D2-031",
+   "field": "description",
+   "decl": "mellin",
+   "invariant": null
+  },
+  {
+   "id": "F010",
+   "entry": "D2-031",
+   "field": "preserved",
+   "decl": "mellin_comp_mul_left",
+   "invariant": null
+  },
+  {
+   "id": "F011",
+   "entry": "D2-103",
+   "field": "description",
+   "decl": "TensorProduct.lift.unique",
+   "invariant": null
+  },
+  {
+   "id": "F012",
+   "entry": "D2-103",
+   "field": "preserved",
+   "decl": "rTensor_exact",
+   "invariant": null
+  },
+  {
+   "id": "F013",
+   "entry": "D3-033",
+   "field": "preserved",
+   "decl": "FirstOrder.Language.Ultraproduct.sentence_realize",
+   "invariant": null
+  },
+  {
+   "id": "F014",
+   "entry": "D3-116",
+   "field": "description",
+   "decl": "CategoryTheory.sheafificationAdjunction",
+   "invariant": null
+  },
+  {
+   "id": "F015",
+   "entry": "D4-153",
+   "field": "output",
+   "decl": "PositiveLinearMap.gnsStarAlgHom",
+   "invariant": null
+  },
+  {
+   "id": "F016",
+   "entry": "D4-264",
+   "field": "output",
+   "decl": "CategoryTheory.nerveFunctor",
+   "invariant": null
+  },
+  {
+   "id": "F017",
+   "entry": "D4-264",
+   "field": "preserved",
+   "decl": "CategoryTheory.nerveFunctor.fullyfaithful",
+   "invariant": "category-structure"
+  },
+  {
+   "id": "F018",
+   "entry": "D6-117",
+   "field": "output",
+   "decl": "MeasureTheory.Measure.haveLebesgueDecomposition_add",
+   "invariant": null
+  },
+  {
+   "id": "F019",
+   "entry": "D6-117",
+   "field": "description",
+   "decl": "MeasureTheory.Measure.mutuallySingular_singularPart",
+   "invariant": null
+  },
+  {
+   "id": "F020",
+   "entry": "D6-117",
+   "field": "input",
+   "decl": "MeasureTheory.Measure.haveLebesgueDecomposition_of_sigmaFinite",
+   "invariant": null
+  },
+  {
+   "id": "F021",
+   "entry": "D7-068",
+   "field": "input",
+   "decl": "CategoryTheory.Reflective",
+   "invariant": null
+  },
+  {
+   "id": "F022",
+   "entry": "D7-068",
+   "field": "preserved",
+   "decl": "CategoryTheory.monadicOfReflective",
+   "invariant": null
+  },
+  {
+   "id": "F023",
+   "entry": "D7-068",
+   "field": "preserved",
+   "decl": "CategoryTheory.monadicCreatesLimits",
+   "invariant": "limits"
+  },
+  {
+   "id": "F024",
+   "entry": "D7-157",
+   "field": "preserved",
+   "decl": "Subgroup.normalClosure_normal",
+   "invariant": null
+  },
+  {
+   "id": "F025",
+   "entry": "D7-157",
+   "field": "description",
+   "decl": "Subgroup.normalClosure_le_normal",
+   "invariant": null
+  },
+  {
+   "id": "F026",
+   "entry": "D7-157",
+   "field": "output",
+   "decl": "Subgroup.normalClosure",
+   "invariant": null
+  },
+  {
+   "id": "F027",
+   "entry": "D7-X02",
+   "field": "preserved",
+   "decl": "CategoryTheory.Sheaf.createsLimits",
+   "invariant": null
+  },
+  {
+   "id": "F028",
+   "entry": "D7-X02",
+   "field": "description",
+   "decl": "CategoryTheory.preservesFiniteLimits_presheafToSheaf",
+   "invariant": null
+  },
+  {
+   "id": "F029",
+   "entry": "D7-X02",
+   "field": "preserved",
+   "decl": "CategoryTheory.Adjunction.rightAdjoint_preservesLimits",
+   "invariant": "limits"
+  },
+  {
+   "id": "F030",
+   "entry": "D7-284",
+   "field": "preserved",
+   "decl": "CategoryTheory.Adjunction.rightAdjoint_preservesLimits",
+   "invariant": "limits"
+  },
+  {
+   "id": "F031",
+   "entry": "D7-284",
+   "field": "preserved",
+   "decl": "CategoryTheory.Adjunction.leftAdjoint_preservesColimits",
+   "invariant": "colimits"
+  },
+  {
+   "id": "F032",
+   "entry": "D7-X03",
+   "field": "preserved",
+   "decl": "CategoryTheory.Adjunction.rightAdjoint_preservesLimits",
+   "invariant": "limits"
+  },
+  {
+   "id": "F033",
+   "entry": "D7-X03",
+   "field": "preserved",
+   "decl": "CategoryTheory.Adjunction.leftAdjoint_preservesColimits",
+   "invariant": "colimits"
+  },
+  {
+   "id": "F034",
+   "entry": "D4-086",
+   "field": "preserved",
+   "decl": "IsCovariantDerivativeOn",
+   "invariant": "leibniz-rule"
+  },
+  {
+   "id": "F035",
+   "entry": "D4-086",
+   "field": "preserved",
+   "decl": "IsCovariantDerivativeOn",
+   "invariant": "tensoriality"
+  },
+  {
+   "id": "F036",
+   "entry": "D1-058",
+   "field": "output",
+   "decl": "Matroid.contract_ground",
+   "invariant": null
+  },
+  {
+   "id": "F037",
+   "entry": "D1-058",
+   "field": "description",
+   "decl": "Matroid.dual_contract",
+   "invariant": null
+  },
+  {
+   "id": "F038",
+   "entry": "D1-058",
+   "field": "preserved",
+   "decl": "Matroid.IsNonloop.contractElem_indep_iff",
+   "invariant": null
+  },
+  {
+   "id": "F039",
+   "entry": "D2-071",
+   "field": "output",
+   "decl": "InnerProductSpace.gramSchmidtNormed_orthonormal",
+   "invariant": null
+  },
+  {
+   "id": "F040",
+   "entry": "D2-071",
+   "field": "preserved",
+   "decl": "InnerProductSpace.span_gramSchmidt",
+   "invariant": null
+  },
+  {
+   "id": "F041",
+   "entry": "D2-072",
+   "field": "output",
+   "decl": "IsLocalization.AtPrime.isLocalRing",
+   "invariant": null
+  },
+  {
+   "id": "F042",
+   "entry": "D2-072",
+   "field": "preserved",
+   "decl": "IsLocalization.orderIsoOfPrime",
+   "invariant": null
+  },
+  {
+   "id": "F043",
+   "entry": "D2-075",
+   "field": "output",
+   "decl": "FractionRing.field",
+   "invariant": null
+  },
+  {
+   "id": "F044",
+   "entry": "D2-075",
+   "field": "preserved",
+   "decl": "IsFractionRing.injective",
+   "invariant": null
+  },
+  {
+   "id": "F045",
+   "entry": "D2-075",
+   "field": "description",
+   "decl": "IsFractionRing.lift",
+   "invariant": null
+  },
+  {
+   "id": "F046",
+   "entry": "D2-080",
+   "field": "output",
+   "decl": "exists_finite_inj_algHom_of_fg",
+   "invariant": null
+  },
+  {
+   "id": "F047",
+   "entry": "D2-145",
+   "field": "preserved",
+   "decl": "MulAction.quotient",
+   "invariant": null
+  },
+  {
+   "id": "F048",
+   "entry": "D2-145",
+   "field": "preserved",
+   "decl": "Subgroup.index",
+   "invariant": null
+  },
+  {
+   "id": "F049",
+   "entry": "D2-168",
+   "field": "output",
+   "decl": "denseRange_stoneCechUnit",
+   "invariant": null
+  },
+  {
+   "id": "F050",
+   "entry": "D2-168",
+   "field": "preserved",
+   "decl": "stoneCechExtend_extends",
+   "invariant": null
+  },
+  {
+   "id": "F051",
+   "entry": "D2-168",
+   "field": "broken",
+   "decl": "DenseRange.separableSpace",
+   "invariant": null
+  },
+  {
+   "id": "F052",
+   "entry": "D2-180",
+   "field": "output",
+   "decl": "Algebra.GrothendieckGroup.instCommGroup",
+   "invariant": null
+  },
+  {
+   "id": "F053",
+   "entry": "D2-180",
+   "field": "preserved",
+   "decl": "Algebra.GrothendieckGroup.of",
+   "invariant": null
+  },
+  {
+   "id": "F054",
+   "entry": "D2-180",
+   "field": "broken",
+   "decl": "Algebra.GrothendieckGroup.of_injective",
+   "invariant": null
+  },
+  {
+   "id": "F055",
+   "entry": "D2-195",
+   "field": "output",
+   "decl": "CategoryTheory.ShortComplex.SnakeInput.snake_lemma",
+   "invariant": null
+  },
+  {
+   "id": "F056",
+   "entry": "D2-195",
+   "field": "preserved",
+   "decl": "CategoryTheory.ShortComplex.SnakeInput.δ",
+   "invariant": null
+  },
+  {
+   "id": "F057",
+   "entry": "D2-196",
+   "field": "description",
+   "decl": "MonoidHom.bijective_of_surjective_of_bijective_of_bijective_of_injective",
+   "invariant": null
+  },
+  {
+   "id": "F058",
+   "entry": "D3-035",
+   "field": "input",
+   "decl": "FirstOrder.Language.IsFraisse",
+   "invariant": null
+  },
+  {
+   "id": "F059",
+   "entry": "D3-035",
+   "field": "output",
+   "decl": "FirstOrder.Language.IsFraisseLimit",
+   "invariant": null
+  },
+  {
+   "id": "F060",
+   "entry": "D3-035",
+   "field": "description",
+   "decl": "FirstOrder.Language.IsFraisseLimit.nonempty_equiv",
+   "invariant": null
+  },
+  {
+   "id": "F061",
+   "entry": "D3-114",
+   "field": "output",
+   "decl": "CategoryTheory.Yoneda.fullyFaithful",
+   "invariant": null
+  },
+  {
+   "id": "F062",
+   "entry": "D3-114",
+   "field": "preserved",
+   "decl": "CategoryTheory.Yoneda.fullyFaithful",
+   "invariant": null
+  },
+  {
+   "id": "F063",
+   "entry": "D1-060",
+   "field": "output",
+   "decl": "Matroid.IsMinor",
+   "invariant": null
+  },
+  {
+   "id": "F064",
+   "entry": "D1-060",
+   "field": "description",
+   "decl": "Matroid.IsMinor.trans",
+   "invariant": null
+  },
+  {
+   "id": "F065",
+   "entry": "D1-098",
+   "field": "description",
+   "decl": "OrderIso.le_iff_le",
+   "invariant": null
+  },
+  {
+   "id": "F066",
+   "entry": "D2-051",
+   "field": "output",
+   "decl": "Module.End.exists_isNilpotent_isSemisimple",
+   "invariant": null
+  },
+  {
+   "id": "F067",
+   "entry": "D2-073",
+   "field": "description",
+   "decl": "AdicCompletion.of_injective_iff",
+   "invariant": null
+  },
+  {
+   "id": "F068",
+   "entry": "D2-110",
+   "field": "description",
+   "decl": "AddChar.doubleDualEmb_bijective",
+   "invariant": null
+  },
+  {
+   "id": "F069",
+   "entry": "D2-112",
+   "field": "preserved",
+   "decl": "AlgebraicGeometry.Scheme.ΓSpecIso",
+   "invariant": null
+  },
+  {
+   "id": "F070",
+   "entry": "D2-112",
+   "field": "output",
+   "decl": "AlgebraicGeometry.Spec",
+   "invariant": null
+  },
+  {
+   "id": "F071",
+   "entry": "D2-153",
+   "field": "preserved",
+   "decl": "CategoryTheory.Monad.adj",
+   "invariant": null
+  },
+  {
+   "id": "F072",
+   "entry": "D2-153",
+   "field": "output",
+   "decl": "CategoryTheory.Monad.Algebra",
+   "invariant": null
+  },
+  {
+   "id": "F073",
+   "entry": "D2-154",
+   "field": "output",
+   "decl": "CategoryTheory.Kleisli",
+   "invariant": null
+  },
+  {
+   "id": "F074",
+   "entry": "D2-154",
+   "field": "preserved",
+   "decl": "CategoryTheory.Kleisli.Adjunction.adj",
+   "invariant": null
+  },
+  {
+   "id": "F075",
+   "entry": "D2-188",
+   "field": "description",
+   "decl": "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition",
+   "invariant": null
+  },
+  {
+   "id": "F076",
+   "entry": "D7-290",
+   "field": "description",
+   "decl": "CategoryTheory.GrothendieckTopology.sheafify",
+   "invariant": null
+  },
+  {
+   "id": "F077",
+   "entry": "D7-290",
+   "field": "description",
+   "decl": "CategoryTheory.sheafificationAdjunction",
+   "invariant": null
+  },
+  {
+   "id": "F078",
+   "entry": "D4-414",
+   "field": "description",
+   "decl": "VectorBundleCore",
+   "invariant": null
+  },
+  {
+   "id": "F079",
+   "entry": "D4-010",
+   "field": "output",
+   "decl": "Abelianization",
+   "invariant": null
+  },
+  {
+   "id": "F080",
+   "entry": "D4-010",
+   "field": "preserved",
+   "decl": "Abelianization.of",
+   "invariant": null
+  },
+  {
+   "id": "F081",
+   "entry": "D4-072",
+   "field": "output",
+   "decl": "ContinuousMap.compactOpen",
+   "invariant": null
+  },
+  {
+   "id": "F082",
+   "entry": "D4-127",
+   "field": "preserved",
+   "decl": "extDeriv_extDeriv",
+   "invariant": null
+  },
+  {
+   "id": "F083",
+   "entry": "D4-249",
+   "field": "description",
+   "decl": "TopologicalSpace.metrizableSpace_of_t3_secondCountable",
+   "invariant": null
+  },
+  {
+   "id": "F084",
+   "entry": "D4-273",
+   "field": "preserved",
+   "decl": "OnePoint.isOpenEmbedding_coe",
+   "invariant": null
+  },
+  {
+   "id": "F085",
+   "entry": "D4-273",
+   "field": "broken",
+   "decl": "OnePoint.denseRange_coe",
+   "invariant": null
+  },
+  {
+   "id": "F086",
+   "entry": "D4-373",
+   "field": "output",
+   "decl": "denseRange_stoneCechUnit",
+   "invariant": null
+  },
+  {
+   "id": "F087",
+   "entry": "D4-373",
+   "field": "preserved",
+   "decl": "stoneCechExtend_extends",
+   "invariant": null
+  },
+  {
+   "id": "F088",
+   "entry": "D4-373",
+   "field": "broken",
+   "decl": "DenseRange.separableSpace",
+   "invariant": null
+  },
+  {
+   "id": "F089",
+   "entry": "D4-427",
+   "field": "description",
+   "decl": "SmoothBumpCovering.embeddingPiTangent_injective",
+   "invariant": null
+  },
+  {
+   "id": "F090",
+   "entry": "D4-436",
+   "field": "output",
+   "decl": "PrimeSpectrum.isClosed_iff_zeroLocus",
+   "invariant": null
+  },
+  {
+   "id": "F091",
+   "entry": "D8-125",
+   "field": "preserved",
+   "decl": "Real.strictMonoOn_log",
+   "invariant": null
+  },
+  {
+   "id": "F092",
+   "entry": "D8-125",
+   "field": "description",
+   "decl": "Real.log_mul",
+   "invariant": null
+  },
+  {
+   "id": "F093",
+   "entry": "D8-107",
+   "field": "description",
+   "decl": "Module.End.exists_isNilpotent_isSemisimple",
+   "invariant": null
+  }
+ ]
+}

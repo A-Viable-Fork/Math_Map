@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Compactness/Compact.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactness/Compact.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: f74899b1773966e2019e54ca51249e2c3cbcdd84271c594a9f404f7a0651bbd1
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Pi.compactSpace (line 1177)
+instance Pi.compactSpace [∀ i, CompactSpace (X i)] : CompactSpace (∀ i, X i)

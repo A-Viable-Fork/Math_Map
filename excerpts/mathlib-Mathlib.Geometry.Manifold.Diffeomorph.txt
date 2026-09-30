@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Geometry/Manifold/Diffeomorph.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/Diffeomorph.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 077bc7d6ffed47ed4daf67615380238ffa4652bbfe7a5ccb7d9aa9e31bdc7be6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Diffeomorph (line 82)
+structure Diffeomorph extends M ≃ M' where
+  protected contMDiff_toFun : CMDiff n toEquiv
+  protected contMDiff_invFun : CMDiff n toEquiv.symm

@@ -4231,6 +4231,320 @@
    }
   },
   {
+   "id": "D2-193",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Chinese_remainder_theorem",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Operations.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Chinese remainder theorem states that if one knows the remainders of the Euclidean division of an integer n by several integers"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "(hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i",
+     "note": "The ring form: for pairwise coprime ideals, R modulo their intersection is the product of the quotients."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "(hf : Pairwise (IsCoprime on f))"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "(hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "(hf : Pairwise (IsCoprime on f)) : (R ⧸ ⨅ i, f i) ≃+* ∀ i, R ⧸ f i",
+     "note": "A ring isomorphism."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Unified quotient\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D8-022",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Chinese_remainder_theorem"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Chinese remainder theorem states that if one knows the remainders of the Euclidean division of an integer n by several integers"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "then one can determine uniquely the remainder of the division of n by the product of these integers"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "under the condition that the divisors are pairwise coprime"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "then one can determine uniquely the remainder of the division of n by the product of these integers"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "then one can determine uniquely the remainder of the division of n by the product of these integers"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Unified integer representation\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D4-041",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&title=Cantor_space"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a topological space is a Cantor space if it is homeomorphic to the Cantor set"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is indeed a Cantor space"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is indeed a Cantor space",
+     "note": "Countably many copies of the discrete two-point space, with the product topology."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a topological space is a Cantor space if it is homeomorphic to the Cantor set"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a topological space is a Cantor space if it is homeomorphic to the Cantor set",
+     "note": "Compact, metrizable, zero-dimensional; universality (every compact metrizable zero-dimensional space embeds in it) is not stated on the lines checked."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Total disconnectedness is true but not stated on the lines checked."
+    }
+   }
+  },
+  {
+   "id": "D7-199",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&title=Zorn%27s_lemma"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "also known as the Kuratowski–Zorn lemma"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "containing upper bounds for every chain (that is, every totally ordered subset) necessarily contains at least one maximal element"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "a partially ordered set containing upper bounds for every chain"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "necessarily contains at least one maximal element"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "necessarily contains at least one maximal element"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Non-constructivity (Zorn's lemma is equivalent to the axiom of choice) is not stated on the lines checked."
+    }
+   }
+  },
+  {
+   "id": "D6-023",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&title=Continuous_functional_calculus",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the continuous functional calculus is a functional calculus which allows the application of a continuous function to normal elements of a C*-algebra"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the continuous functional calculus is a functional calculus which allows the application of a continuous function to normal elements of a C*-algebra"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "a restriction to normal elements"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the continuous functional calculus is a functional calculus which allows the application of a continuous function to normal elements of a C*-algebra"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "spectrum R (cfc f a) = f '' spectrum R a",
+     "note": "Spectral mapping (Mathlib's cfc_map_spectrum)."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-continuous functions\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D6-090",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&title=Lebesgue%27s_decomposition_theorem"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Lebesgue's decomposition theorem can be refined in a number of ways"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "An alternative refinement is that of the decomposition of a regular Borel measure",
+     "note": "The three-part form refines the two-part theorem, for regular Borel measures (conditions.js)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "there exist two uniquely determined σ-finite signed measures"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is the singular continuous part"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "there exist two uniquely determined σ-finite signed measures",
+     "note": "Uniqueness is stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Unified measure description\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D4-408",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&title=Tychonoff%27s_theorem"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Tychonoff's theorem states"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Product of any collection of compact topological spaces is compact"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Product of any collection of compact topological spaces is compact"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Product of any collection of compact topological spaces is compact"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Product of any collection of compact topological spaces is compact",
+     "note": "Compactness passes to the product."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Box topology properties\": the product topology is coarser than the box topology, which the lines checked do not state."
+    }
+   }
+  },
+  {
+   "id": "D5-030",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&title=Diffeomorphism"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "It is an invertible function that maps one differentiable manifold to another such that both the function and its inverse are continuously differentiable"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "It is an invertible function that maps one differentiable manifold to another such that both the function and its inverse are continuously differentiable"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "maps one differentiable manifold to another"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "It is an invertible function that maps one differentiable manifold to another"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "both the function and its inverse are continuously differentiable"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Specific point positions, metric\": a diffeomorphism need not be an isometry, which the lines checked do not state."
+    }
+   }
+  },
+  {
    "id": "D8-107",
    "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
    "sources": {

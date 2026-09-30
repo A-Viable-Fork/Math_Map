@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 533008acb976d26a1f89cd03b93834628bde1001ae0851e78f9c99e18f1b29cb
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- IsStarNormal.instContinuousFunctionalCalculus (line 140)
+theorem IsStarNormal.instContinuousFunctionalCalculus :
+    ContinuousFunctionalCalculus ℂ A IsStarNormal

@@ -54,6 +54,13 @@ const CONDITIONS = [
     receipts: [
       { file: "excerpts/wikipedia-cone-topology.txt", quote: "is a [[point (topology)|point]] (called the vertex of the cone)" },
     ] },
+  { id: "D6-090", name: "Lebesgue decomposition",
+    conditions: "The two-part decomposition (absolutely continuous plus singular) holds for sigma-finite measures and is unique; the three-part refinement (absolutely continuous, singular continuous, pure point) is stated for regular Borel measures.",
+    counterexamples: [],
+    receipts: [
+      { file: "excerpts/wikipedia-lebesgue-decomposition.txt", quote: "then there exist two uniquely determined σ-finite signed measures" },
+      { file: "excerpts/wikipedia-lebesgue-decomposition.txt", quote: "An alternative refinement is that of the decomposition of a regular [[Borel measure]]" },
+    ] },
 ];
 
 module.exports = { CONDITIONS };

@@ -154,6 +154,18 @@ const FORMAL = [
   K("D4-427", "description", "SmoothBumpCovering.embeddingPiTangent_injective", "Mathlib/Geometry/Manifold/WhitneyEmbedding.lean", "related",
     "Mathlib has the weak Whitney theorem (a compact manifold embeds in some Euclidean space via bump functions), not the embedding in R^{2n}."),
   K("D4-436", "output", "PrimeSpectrum.isClosed_iff_zeroLocus", "Mathlib/RingTheory/Spectrum/Prime/Topology.lean", "exact", "The closed sets of Spec R are the zero loci.", { whole: true }),
+  // Citation pass 5.
+  K("D2-193", "output", "Ideal.quotientInfRingEquivPiQuotient", "Mathlib/RingTheory/Ideal/Quotient/Operations.lean", "exact", "For pairwise coprime ideals, R modulo their intersection is isomorphic to the product of the quotients.", { whole: true }),
+  K("D8-022", "output", "Nat.chineseRemainder", "Mathlib/Data/Nat/ModEq.lean", "exact", "For coprime moduli, a number with the given residues (two moduli; the general case iterates).", { whole: true }),
+  K("D8-022", "preserved", "Nat.chineseRemainder_modEq_unique", "Mathlib/Data/Nat/ModEq.lean", "exact", "Uniqueness modulo the product."),
+  K("D4-041", "description", "cantorSet", "Mathlib/Topology/Instances/CantorSet.lean", "ingredient", "The middle-thirds Cantor set in the reals; Mathlib does not state its homeomorphism with 2^ω or the universality claim at the pin."),
+  K("D7-199", "description", "zorn_le", "Mathlib/Order/Zorn.lean", "exact", "If every chain is bounded above, there is a maximal element.", { whole: true }),
+  K("D6-023", "input", "IsStarNormal.instContinuousFunctionalCalculus", "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean", "exact", "Normal elements of a C*-algebra have a continuous functional calculus.", { whole: true }),
+  K("D6-023", "preserved", "cfc_map_spectrum", "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean", "exact", "Spectral mapping: the spectrum of f(a) is f applied to the spectrum of a."),
+  K("D6-023", "output", "cfcHom", "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean", "exact", "The *-homomorphism from continuous functions on the spectrum to the algebra."),
+  K("D6-090", "output", "MeasureTheory.Measure.haveLebesgueDecomposition_add", "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean", "special", "Mathlib has the two-part decomposition (absolutely continuous plus singular); the three-part refinement is not stated."),
+  K("D4-408", "description", "Pi.compactSpace", "Mathlib/Topology/Compactness/Compact.lean", "exact", "Tychonoff: a product of compact spaces is compact.", { whole: true }),
+  K("D5-030", "output", "Diffeomorph", "Mathlib/Geometry/Manifold/Diffeomorph.lean", "exact", "A bijection that is C^n with C^n inverse, between manifolds.", { whole: true }),
   // D8 Computation
   K("D8-125", "preserved", "Real.strictMonoOn_log", "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean", "exact", "The logarithm is strictly increasing on the positive reals, so the transform preserves order (the corrected field).", { whole: true }),
   K("D8-125", "description", "Real.log_mul", "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean", "exact", "log(xy) = log x + log y: products become sums (the corrected field)."),

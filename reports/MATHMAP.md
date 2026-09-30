@@ -55,9 +55,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 43 links from entries (17 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 17 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
-- **Mathlib links: 93** on 49 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
+- **Mathlib links: 104** on 57 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
 
-- **Conditions: 7** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 2.
+- **Conditions: 8** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 2.
 
 - **Corrections: 21** (`mapfill/corrections.js`): landed fields a check found wrong or imprecise, replaced by receipted text (the landed text is kept on the entry). 50 fields in D1-099, D4-264, D2-117, D4-176, D2-118, D4-048, D4-075, D2-072, D2-168, D2-196, D3-035, D1-060, D2-051, D2-073, D4-373, D8-089, D8-125, D8-132, D8-133, D8-185, D8-186; 6 flags resolved.
 

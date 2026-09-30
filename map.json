@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "3aefb35da241506a1dcc96447391cec65f8ce199"
+  "commit": "d476839270f58d3c7702b6800d4e7cd20a650365"
  },
  "domains": {
   "D1": {
@@ -364,20 +364,20 @@
    "added": 9
   },
   "byTier": {
-   "landed": 1346,
-   "audited": 107,
-   "authored": 495,
+   "landed": 1339,
+   "audited": 115,
+   "authored": 494,
    "receipted": 15
   },
-  "withConditions": 7,
+  "withConditions": 8,
   "corrected": 21,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 92,
-   "unchecked": 11046,
+   "unsupported": 100,
+   "unchecked": 10998,
    "imprecise": 20,
-   "sourced": 581,
-   "formal": 39
+   "sourced": 615,
+   "formal": 45
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -397,14 +397,14 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 49,
-   "links": 93,
+   "entries": 57,
+   "links": 104,
    "byMatch": {
-    "exact": 64,
+    "exact": 73,
     "conflicts": 4,
-    "special": 9,
+    "special": 10,
     "general": 9,
-    "ingredient": 5,
+    "ingredient": 6,
     "related": 2
    }
   }
@@ -9801,14 +9801,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Ideal.quotientInfRingEquivPiQuotient",
+     "file": "Mathlib/RingTheory/Ideal/Quotient/Operations.lean",
+     "match": "exact",
+     "note": "For pairwise coprime ideals, R modulo their intersection is isomorphic to the product of the quotients.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Operations.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-194",
@@ -16468,14 +16479,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "cantorSet",
+     "file": "Mathlib/Topology/Instances/CantorSet.lean",
+     "match": "ingredient",
+     "note": "The middle-thirds Cantor set in the reals; Mathlib does not state its homeomorphism with 2^ω or the universality claim at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Instances/CantorSet.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-042",
@@ -27070,14 +27092,25 @@
    "origin": "clone:D4-312",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "formal",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Pi.compactSpace",
+     "file": "Mathlib/Topology/Compactness/Compact.lean",
+     "match": "exact",
+     "note": "Tychonoff: a product of compact spaces is compact.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactness/Compact.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-409",
@@ -28726,14 +28759,25 @@
    "anchorable": true,
    "landedAs": "See Domain 4 home entry.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Diffeomorph",
+     "file": "Mathlib/Geometry/Manifold/Diffeomorph.lean",
+     "match": "exact",
+     "note": "A bijection that is C^n with C^n inverse, between manifolds.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/Diffeomorph.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D5-031",
@@ -32645,14 +32689,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "formal",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "input",
+     "decl": "IsStarNormal.instContinuousFunctionalCalculus",
+     "file": "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean",
+     "match": "exact",
+     "note": "Normal elements of a C*-algebra have a continuous functional calculus.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "cfc_map_spectrum",
+     "file": "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean",
+     "match": "exact",
+     "note": "Spectral mapping: the spectrum of f(a) is f applied to the spectrum of a.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean"
+    },
+    {
+     "field": "output",
+     "decl": "cfcHom",
+     "file": "Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean",
+     "match": "exact",
+     "note": "The *-homomorphism from continuous functions on the spectrum to the algebra.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Unital.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D6-024",
@@ -34472,14 +34543,37 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "MeasureTheory.Measure.haveLebesgueDecomposition_add",
+     "file": "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean",
+     "match": "special",
+     "note": "Mathlib has the two-part decomposition (absolutely continuous plus singular); the three-part refinement is not stated.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean"
+    }
+   ],
+   "conditions": "The two-part decomposition (absolutely continuous plus singular) holds for sigma-finite measures and is unique; the three-part refinement (absolutely continuous, singular continuous, pure point) is stated for regular Borel measures.",
+   "counterexamples": [],
+   "conditionReceipts": [
+    {
+     "file": "excerpts/wikipedia-lebesgue-decomposition.txt",
+     "quote": "then there exist two uniquely determined σ-finite signed measures"
+    },
+    {
+     "file": "excerpts/wikipedia-lebesgue-decomposition.txt",
+     "quote": "An alternative refinement is that of the decomposition of a regular [[Borel measure]]"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D6-091",
@@ -41885,14 +41979,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "formal",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "zorn_le",
+     "file": "Mathlib/Order/Zorn.lean",
+     "match": "exact",
+     "note": "If every chain is bounded above, there is a maximal element.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Zorn.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-200",
@@ -49841,14 +49946,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Nat.chineseRemainder",
+     "file": "Mathlib/Data/Nat/ModEq.lean",
+     "match": "exact",
+     "note": "For coprime moduli, a number with the given residues (two moduli; the general case iterates).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Data/Nat/ModEq.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Nat.chineseRemainder_modEq_unique",
+     "file": "Mathlib/Data/Nat/ModEq.lean",
+     "match": "exact",
+     "note": "Uniqueness modulo the product.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Data/Nat/ModEq.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-024",
