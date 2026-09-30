@@ -1,0 +1,93 @@
+// Role: additions. Entries the map lacks, written because a composite needs them, each receipted by
+//   verbatim windows in excerpts/ (from PDF, wiki and web sources). See mapfill/README.md.
+// Contract: exports ADDITIONS = [{ id, name, kind, tags, description, input, output, preserved, broken,
+//   complexity, requestedBy, receipts: [{ file, quote }] }]. id is D<n>-X<nn>, a series the landed map
+//   never uses. Tags come from the map's controlled vocabulary. Every receipt's quote occurs in its file.
+//   Checked by scripts/mathmap.mjs.
+// Invariant: data only. An addition is an upward correction offered to the map, never a landed entry; it
+//   carries origin "added" everywhere it appears.
+"use strict";
+
+const ADDITIONS = [
+  { id: "D2-X01", name: "Strict transform under a point blow-up", kind: "Transformer", tags: ["surgery", "local"],
+    description: "Carries a curve through the blow-up of a point on a surface: the closure of the preimage of the curve with the point removed. Blowing up a smooth point of the curve lowers its self-intersection by 1; a point of multiplicity m lowers it by m squared.",
+    input: "Surface X, curve C through a point P, the blow-up of X at P",
+    output: "Strict transform C' in the blown-up surface, meeting the exceptional curve with multiplicity m",
+    preserved: "C away from P; for P a smooth point of C, C' is isomorphic to C",
+    broken: "Self-intersection: C'^2 = C^2 - m^2. A (-1)-curve blown up at one of its points becomes a (-2)-curve, which no longer contracts to a smooth point",
+    complexity: "Polynomial",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/arxiv-1608.02921.txt", quote: "Blowing up a smooth point of any divisor decreases its self-intersection by1." },
+      { file: "excerpts/arxiv-1608.02921.txt", quote: "blowing up that point leads to a strict transform with self-intersection e−m2." },
+    ] },
+  { id: "D7-X01", name: "Aufhebung of a level", kind: "Correspondence", tags: ["closure", "expansion"],
+    description: "For a level i of a topos (an essential subtopos, with its adjoint modality, skeleton left of sheaf), the least level j above i at which every i-skeleton is a j-sheaf (Lawvere). In the colloquial form: the least k such that n-skeletal implies k-coskeletal. It need not exist.",
+    input: "Topos with its lattice of levels; a level i",
+    output: "The least level j resolving the opposite of i (every i-skeleton a j-sheaf), when it exists",
+    preserved: "The lower level's objects: i-skeleta survive as j-sheaves",
+    broken: "The opposition at level i: the skeleton side is absorbed into the higher level's sheaf side. The step depends on the shape category: n to n+1 for reflexive globular sets, n to 2n-1 for simplicial sets (n > 1), n to 2n for cubical sets",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/nlab-aufhebung.txt", quote: "iff it is a minimal level which resolves the opposites of level $i$" },
+      { file: "excerpts/nlab-aufhebung.txt", quote: "amounts to saying that every $i$-skeleton is a $j$-sheaf" },
+      { file: "excerpts/arxiv-1003.5944.txt", quote: "is called the Aufhebung of B′" },
+      { file: "excerpts/arxiv-1003.5944.txt", quote: "for reﬂexive globular sets this is indeed the case" },
+      { file: "excerpts/arxiv-1003.5944.txt", quote: "If a simplicial set is n-skeletal with n > 1, it is (2n− 1)-coskeletal." },
+      { file: "excerpts/arxiv-1003.5944.txt", quote: "The Aufhebung relation for the topos of cubical sets is 2n." },
+    ] },
+  { id: "D6-X01", name: "Littlewood-Paley dyadic decomposition", kind: "Transformer", tags: ["decomposition", "spectral"],
+    description: "Splits a function into pieces with frequencies in dyadic annuli, 2^k to 2^(k+1), by Fourier multipliers (sharp or smooth cutoffs); the band index k is a scale. Used in place of orthogonality arguments outside L^2.",
+    input: "Function f (on R^n, or a field on a domain)",
+    output: "Band pieces f_k, one per dyadic frequency annulus, summing to f",
+    preserved: "f itself (the pieces sum to it); in L^2 the pieces are orthogonal; in L^p comparable norms through the square function",
+    broken: "Spatial locality (each band piece is spread in space by the uncertainty principle); pointwise identity of the pieces",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/wikipedia-littlewood-paley.txt", quote: "uses a decomposition of a function ''f'' into a sum of functions ''f''<sub>''&rho;''</sub> with localized frequencies." },
+      { file: "excerpts/wikipedia-littlewood-paley.txt", quote: "this gives a so-called \"dyadic decomposition\" of ''f''" },
+      { file: "excerpts/wikipedia-littlewood-paley.txt", quote: "It is typically used as a substitute for orthogonality arguments" },
+    ] },
+  { id: "D6-X02", name: "Duhamel propagation of a source", kind: "Transformer", tags: ["composition", "construction"],
+    description: "Solves an inhomogeneous linear evolution by superposing homogeneous evolutions started at all earlier times, each with the source at that time as its initial impulse: u(t) = integral from 0 to t of G(t,s) f(s) ds, with G the propagator.",
+    input: "Linear evolution operator (a propagator G(t,s)), source f(s)",
+    output: "The solution u(t), or its projection onto a chosen mode: the integral of the pairing of G(t,s)* applied to the mode with f(s)",
+    preserved: "Linearity: sources superpose; causality (only earlier times contribute)",
+    broken: "Instantaneous locality: a source's effect at time t depends on its whole propagated history, so a pairing that vanishes at each instant can be nonzero after propagation",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/wikipedia-duhamel.txt", quote: "the solution to an inhomogeneous, linear, partial differential equation can be solved by first finding the solution for a step input, and then superposing" },
+      { file: "excerpts/wikipedia-duhamel.txt", quote: "superposing homogeneous evolutions started at all earlier times" },
+    ] },
+  { id: "D5-X01", name: "Kramers escape rate", kind: "Transformer", tags: ["local", "spectral"],
+    description: "The rate at which a noisy particle in a potential well escapes over a barrier, in the overdamped regime: k = (w_a w_H / 2 pi gamma) exp(-(E_H - E_A)/k_B T). Mean lifetime is 1/k, so log lifetime is the barrier height over the noise, up to a prefactor.",
+    input: "One-dimensional potential with a well and a barrier; damping gamma; noise temperature",
+    output: "Escape rate k (mean lifetime 1/k)",
+    preserved: "The exponential dependence on barrier height over noise; the well and barrier curvatures enter only the prefactor",
+    broken: "Path detail inside the well (only the barrier height and two curvatures survive); valid when the barrier is high against the noise",
+    complexity: "Closed form",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/wikipedia-transition-state-theory.txt", quote: "was able to derive a relationship between the shape of the potential-energy surface along the reaction coordinate and the transition rates of the system." },
+      { file: "excerpts/wikipedia-transition-state-theory.txt", quote: "\\frac{\\omega_a\\omega_H}{2\\pi\\gamma}\\exp\\left(-\\frac{E_H-E_A}{k_\\text{B}T}\\right)" },
+    ] },
+  { id: "D5-X02", name: "First passage time of Brownian motion", kind: "Transformer", tags: ["projection", "local"],
+    description: "The time a Brownian motion first reaches a fixed level: Levy distributed (heavy t^(-3/2) tail, infinite mean) without drift; inverse Gaussian with mean distance/drift when drifting toward the level. The model for lifetimes ending at an adverse threshold.",
+    input: "Brownian motion (diffusion constant, drift) and a threshold at a given distance",
+    output: "Distribution of the first hitting time",
+    preserved: "Scaling with distance: mean distance/drift with drift toward the threshold; typical time distance^2/D without drift",
+    broken: "Finite mean without drift (the Levy tail); any exponential dependence on distance (there is no well)",
+    complexity: "Closed form",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/wikipedia-first-passage.txt", quote: "When the process reaches an adverse threshold state for the first time, the patient dies, or the device breaks down." },
+      { file: "excerpts/wikipedia-first-passage.txt", quote: "The first-passage time for a Brownian particle therefore follows a [[Lévy distribution]]." },
+      { file: "excerpts/wikipedia-inverse-gaussian.txt", quote: "the inverse Gaussian describes the distribution of the time a Brownian motion with positive drift takes to reach a fixed positive level." },
+      { file: "excerpts/wikipedia-inverse-gaussian.txt", quote: "\\sim \\operatorname{IG} \\left(\\frac\\alpha\\nu" },
+    ] },
+];
+
+module.exports = { ADDITIONS };

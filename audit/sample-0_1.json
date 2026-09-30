@@ -1,0 +1,247 @@
+{
+  "seed": 20260929,
+  "drawn": "2026-09-29",
+  "note": "Stratified: 5 landed entries per domain with landed content (D7 has none), 15 D7 fills, 10 missing-home fills (one per home). Fixed before grading.",
+  "sample": [
+    {
+      "id": "D1-045",
+      "stratum": "landed-D1"
+    },
+    {
+      "id": "D1-110",
+      "stratum": "landed-D1"
+    },
+    {
+      "id": "D1-085",
+      "stratum": "landed-D1"
+    },
+    {
+      "id": "D1-111",
+      "stratum": "landed-D1"
+    },
+    {
+      "id": "D1-017",
+      "stratum": "landed-D1"
+    },
+    {
+      "id": "D2-191",
+      "stratum": "landed-D2"
+    },
+    {
+      "id": "D2-120",
+      "stratum": "landed-D2"
+    },
+    {
+      "id": "D2-067",
+      "stratum": "landed-D2"
+    },
+    {
+      "id": "D2-075",
+      "stratum": "landed-D2"
+    },
+    {
+      "id": "D2-200",
+      "stratum": "landed-D2"
+    },
+    {
+      "id": "D3-124",
+      "stratum": "landed-D3"
+    },
+    {
+      "id": "D3-002",
+      "stratum": "landed-D3"
+    },
+    {
+      "id": "D3-117",
+      "stratum": "landed-D3"
+    },
+    {
+      "id": "D3-068",
+      "stratum": "landed-D3"
+    },
+    {
+      "id": "D3-085",
+      "stratum": "landed-D3"
+    },
+    {
+      "id": "D4-414",
+      "stratum": "landed-D4"
+    },
+    {
+      "id": "D4-186",
+      "stratum": "landed-D4"
+    },
+    {
+      "id": "D4-326",
+      "stratum": "landed-D4"
+    },
+    {
+      "id": "D4-091",
+      "stratum": "landed-D4"
+    },
+    {
+      "id": "D4-431",
+      "stratum": "landed-D4"
+    },
+    {
+      "id": "D5-070",
+      "stratum": "landed-D5"
+    },
+    {
+      "id": "D5-054",
+      "stratum": "landed-D5"
+    },
+    {
+      "id": "D5-132",
+      "stratum": "landed-D5"
+    },
+    {
+      "id": "D5-130",
+      "stratum": "landed-D5"
+    },
+    {
+      "id": "D5-015",
+      "stratum": "landed-D5"
+    },
+    {
+      "id": "D6-077",
+      "stratum": "landed-D6"
+    },
+    {
+      "id": "D6-014",
+      "stratum": "landed-D6"
+    },
+    {
+      "id": "D6-117",
+      "stratum": "landed-D6"
+    },
+    {
+      "id": "D6-060",
+      "stratum": "landed-D6"
+    },
+    {
+      "id": "D6-062",
+      "stratum": "landed-D6"
+    },
+    {
+      "id": "D8-034",
+      "stratum": "landed-D8"
+    },
+    {
+      "id": "D8-133",
+      "stratum": "landed-D8"
+    },
+    {
+      "id": "D8-083",
+      "stratum": "landed-D8"
+    },
+    {
+      "id": "D8-143",
+      "stratum": "landed-D8"
+    },
+    {
+      "id": "D8-125",
+      "stratum": "landed-D8"
+    },
+    {
+      "id": "D7-376",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-290",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-212",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-123",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-052",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-275",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-183",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-129",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-339",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-192",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-235",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-252",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-302",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-402",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D7-318",
+      "stratum": "fill-D7"
+    },
+    {
+      "id": "D8-222",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-102",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-169",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-040",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D2-036",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-234",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-163",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-140",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-101",
+      "stratum": "fill-home"
+    },
+    {
+      "id": "D8-058",
+      "stratum": "fill-home"
+    }
+  ]
+}
