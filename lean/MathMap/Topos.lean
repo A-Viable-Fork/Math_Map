@@ -92,6 +92,12 @@ theorem EssentialGeometricMorphism.inverse_preservesColimits (f : EssentialGeome
     PreservesColimitsOfSize.{w, w'} f.inverse :=
   f.adj.leftAdjoint_preservesColimits
 
+/-- D7-284, output: an essential geometric morphism carries an adjoint pair of modalities on its
+codomain, `f_! f^* ⊣ f_* f^*`: the skeleton and sheaf sides that a level makes idempotent. -/
+def EssentialGeometricMorphism.modalities (f : EssentialGeometricMorphism E F) :
+    f.inverse ⋙ f.shriek ⊣ f.inverse ⋙ f.direct :=
+  f.adj.comp f.adj'
+
 /-- A level of `E`: an essential subtopos, whose reflector `i^*` has a further left adjoint `i_!`,
 giving the triple `i_! ⊣ i^* ⊣ i_*`. -/
 structure Level (E : Type u) [Category.{v} E] extends Subtopos E where
@@ -154,6 +160,12 @@ theorem Level.IsAufhebung.skeleta_are_sheaves {i j : Level E} (h : i.IsAufhebung
 theorem Level.IsAufhebung.sheaves_are_sheaves {i j : Level E} (h : i.IsAufhebung j) :
     ∀ X, i.IsSheaf X → j.IsSheaf X :=
   h.1.1.1
+
+/-- D7-X01, broken: the Aufhebung erases the opposition at level `i`. Both of its sides, the
+`i`-skeleta and the `i`-sheaves, become `j`-sheaves, so at level `j` they are no longer opposed. -/
+theorem Level.IsAufhebung.opposition_resolved {i j : Level E} (h : i.IsAufhebung j) :
+    (∀ X, i.IsSkeleton X → j.IsSheaf X) ∧ (∀ X, i.IsSheaf X → j.IsSheaf X) :=
+  ⟨h.skeleta_are_sheaves, h.sheaves_are_sheaves⟩
 
 /-- D7-X01, output: the Aufhebung of a level, when it exists, is unique up to having the same
 sheaves. -/

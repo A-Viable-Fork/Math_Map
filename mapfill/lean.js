@@ -64,6 +64,7 @@ const CLAIMS = [
   C("D7-X02", "output", "Subtopos.embedding_direct_full_faithful", "exact", "Its direct image is fully faithful: a geometric embedding.", { whole: true }),
   C("D7-284", "preserved", "EssentialGeometricMorphism.inverse_preservesLimits", "exact", "f^* preserves limits.", { invariant: "limits", whole: true }),
   C("D7-284", "preserved", "EssentialGeometricMorphism.inverse_preservesColimits", "exact", "f^* preserves colimits.", { invariant: "colimits", whole: true }),
+  C("D7-284", "output", "EssentialGeometricMorphism.modalities", "general", "Any essential geometric morphism carries the adjoint pair f_! f^* ⊣ f_* f^*; the pair is idempotent, a level's skeleton and sheaf modalities, when the morphism is an embedding (Level.skeletonSheafAdj). General, so it does not by itself make the step's claim formal.", { invariant: "skeletal-objects" }),
   C("D7-X03", "input", "Level.essential", "exact", "The inclusion of a level is an essential geometric morphism: the entry's input kind.", { whole: true }),
   C("D7-X03", "preserved", "Level.reflector_preservesLimits", "exact", "The middle functor i^* of the triple preserves limits.", { invariant: "limits" }),
   C("D7-X03", "preserved", "Level.reflector_preservesColimits", "exact", "The middle functor i^* preserves colimits.", { invariant: "colimits" }),
@@ -71,6 +72,7 @@ const CLAIMS = [
   C("D7-X03", "output", "Level.skeleton", "exact", "The skeleton modality, whose fixed objects are the level's skeleta.", { invariant: "skeletal-objects" }),
   C("D7-X01", "preserved", "Level.IsAufhebung.skeleta_are_sheaves", "exact", "i-skeleta survive as j-sheaves: the entry's field, true by the nLab's definition.", { invariant: "skeletal-objects", whole: true }),
   C("D7-X01", "preserved", "Level.IsAufhebung.sheaves_are_sheaves", "exact", "i-sheaves survive as j-sheaves: the Aufhebung lies above i.", { whole: true }),
+  C("D7-X01", "broken", "Level.IsAufhebung.opposition_resolved", "exact", "Both sides of the opposition at level i, its skeleta and its sheaves, become j-sheaves. The step sizes the field also gives (n to n+1, 2n-1, 2n) are not formalized.", { invariant: "level-opposition" }),
   C("D7-X01", "output", "Level.IsAufhebung.unique", "exact", "The least resolving level, when it exists, is unique up to having the same sheaves.", { whole: true }),
   // D4-075.
   C("D4-075", "output", "Cone.contractible", "exact", "The cone on a nonempty space is contractible (for empty X the landed formula gives the empty space: conditions.js).", { invariant: "contractibility", whole: true }),

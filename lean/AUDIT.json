@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "19da1ef2ddaf45a80711bcaf846a50c7ed39c4bf4499ee750f27f989cd6e4fd2",
+ "sources": "af3cb6faaa59190573e53e4589a592de0aa2d743ce99276e536384753a41409f",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -259,6 +259,18 @@
     "MathMap.GeometricMorphism"
    ]
   },
+  "MathMap.EssentialGeometricMorphism.modalities": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
   "MathMap.Level.essential": {
    "status": "proved",
    "axioms": [
@@ -332,6 +344,26 @@
    ]
   },
   "MathMap.Level.IsAufhebung.sheaves_are_sheaves": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Level.Below",
+    "MathMap.Level.IsAufhebung",
+    "MathMap.Level.IsSheaf",
+    "MathMap.Level.IsSkeleton",
+    "MathMap.Level.Prec",
+    "MathMap.Level.Resolves",
+    "MathMap.Level.sheaf",
+    "MathMap.Level.skeleton",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsAufhebung.opposition_resolved": {
    "status": "proved",
    "axioms": [
     "propext",

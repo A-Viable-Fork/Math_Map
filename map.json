@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "3582eb1d7fa225182a4b2e5c31515030265f9a5f"
+  "commit": "692630342ee11e666d8c3a90dfd79ff36e3a4c06"
  },
  "domains": {
   "D1": {
@@ -376,15 +376,15 @@
    "unsupported": 76,
    "unchecked": 11220,
    "imprecise": 20,
-   "sourced": 438,
-   "formal": 18
+   "sourced": 437,
+   "formal": 19
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 22,
+   "claims": 24,
    "entries": 6,
    "definitions": 19,
-   "proved": 22,
+   "proved": 24,
    "stated": 0
   },
   "claimEvidence": {
@@ -392,18 +392,18 @@
    "unsupported": 0,
    "unchecked": 0,
    "imprecise": 0,
-   "sourced": 27,
-   "formal": 14
+   "sourced": 25,
+   "formal": 16
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
    "entries": 18,
    "links": 38,
    "byMatch": {
-    "exact": 23,
+    "exact": 24,
     "conflicts": 1,
     "special": 3,
-    "general": 9,
+    "general": 8,
     "ingredient": 1,
     "related": 1
    }
@@ -22350,16 +22350,17 @@
     "description": "sourced",
     "input": "sourced",
     "output": "sourced",
-    "preserved": "sourced",
+    "preserved": "formal",
     "broken": "sourced"
    },
    "claims": [
     {
      "field": "preserved",
      "invariant": "category-structure",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field preserved: sourced"
+      "field preserved: formal",
+      "Mathlib CategoryTheory.nerveFunctor.fullyfaithful"
      ]
     }
    ],
@@ -22410,8 +22411,8 @@
      "field": "preserved",
      "decl": "CategoryTheory.nerveFunctor.fullyfaithful",
      "file": "Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean",
-     "match": "general",
-     "note": "The nerve functor is fully faithful on all small categories, so functors between categories are exactly maps of their nerves. The entry's restriction to groupoids is unnecessary.",
+     "match": "exact",
+     "note": "The nerve functor is fully faithful on all small categories, so functors between categories are exactly maps of their nerves: the corrected field. (The landed field restricted this to groupoids, which is unnecessary.)",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean"
     }
    ],
@@ -43523,6 +43524,15 @@
      "whole": true,
      "note": "f^* preserves colimits.",
      "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.EssentialGeometricMorphism.modalities",
+     "match": "general",
+     "status": "proved",
+     "invariant": "skeletal-objects",
+     "note": "Any essential geometric morphism carries the adjoint pair f_! f^* ⊣ f_* f^*; the pair is idempotent, a level's skeleton and sheaf modalities, when the morphism is an embedding (Level.skeletonSheafAdj). General, so it does not by itself make the step's claim formal.",
+     "file": "lean/MathMap/Topos.lean"
     }
    ],
    "formal": [
@@ -55558,9 +55568,10 @@
     {
      "field": "broken",
      "invariant": "level-opposition",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field broken: sourced"
+      "field broken: sourced",
+      "Lean MathMap.Level.IsAufhebung.opposition_resolved"
      ]
     }
    ],
@@ -55582,6 +55593,15 @@
      "status": "proved",
      "whole": true,
      "note": "i-sheaves survive as j-sheaves: the Aufhebung lies above i.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.Level.IsAufhebung.opposition_resolved",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "level-opposition",
+     "note": "Both sides of the opposition at level i, its skeleta and its sheaves, become j-sheaves. The step sizes the field also gives (n to n+1, 2n-1, 2n) are not formalized.",
      "file": "lean/MathMap/Topos.lean"
     },
     {

@@ -39,7 +39,7 @@ export function audit() {
   writeFileSync(file, ["import MathMap", ...decls.flatMap((d) => [`#print axioms ${d}`, `#mathmap_deps ${d}`])].join("\n") + "\n");
   let out;
   try { out = execFileSync("lake", ["env", "lean", file], { cwd: LEAN, maxBuffer: 1 << 26 }).toString(); }
-  catch (e) { out = (e.stdout?.toString() ?? "") + (e.stderr?.toString() ?? ""); rmSync(dir, { recursive: true, force: true }); throw new Error(`lean failed:\n${out}`); }
+  catch (e) { out = (e.stdout?.toString() ?? "") + (e.stderr?.toString() ?? ""); rmSync(dir, { recursive: true, force: true }); throw new Error(`lean failed (${e.message.split("\n")[0]}):\n${out}`); }
   rmSync(dir, { recursive: true, force: true });
   const flat = out.replace(/\s+/g, " "), result = {};
   for (const d of decls) {

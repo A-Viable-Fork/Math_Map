@@ -48,8 +48,8 @@ const FORMAL = [
   K("D4-153", "output", "PositiveLinearMap.gnsStarAlgHom", "Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean", "exact",
     "The GNS representation of the algebra on the completion of A with the inner product given by the positive functional. State recovery through a cyclic vector, the entry's preserved claim, is listed as future work in the file at the pin.", { whole: true }),
   K("D4-264", "output", "CategoryTheory.nerveFunctor", "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean", "ingredient", "The nerve functor from categories to simplicial sets."),
-  K("D4-264", "preserved", "CategoryTheory.nerveFunctor.fullyfaithful", "Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean", "general",
-    "The nerve functor is fully faithful on all small categories, so functors between categories are exactly maps of their nerves. The entry's restriction to groupoids is unnecessary."),
+  K("D4-264", "preserved", "CategoryTheory.nerveFunctor.fullyfaithful", "Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean", "exact",
+    "The nerve functor is fully faithful on all small categories, so functors between categories are exactly maps of their nerves: the corrected field. (The landed field restricted this to groupoids, which is unnecessary.)", { invariant: "category-structure", whole: true }),
   // D6 Analysis
   K("D6-117", "output", "MeasureTheory.Measure.haveLebesgueDecomposition_add", "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean", "exact",
     "mu = singular part + nu.withDensity (Radon-Nikodym derivative), given that a Lebesgue decomposition exists.", { whole: true }),
