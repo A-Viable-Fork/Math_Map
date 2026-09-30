@@ -9,3 +9,22 @@ jobs:
         with:
           node-version: 20
       - run: node scripts/check-all.mjs
+  lean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Fetch Mathlib's build cache
+        working-directory: lean
+        run: lake exe cache get
+      - name: Build
+        working-directory: lean
+        run: lake build
+      - name: Audit (proved or stated, and dependencies) matches the committed lean/AUDIT.json
+        run: node scripts/lean.mjs --audit --verify

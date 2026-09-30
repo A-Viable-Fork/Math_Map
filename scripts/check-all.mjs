@@ -8,7 +8,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const CHECKS = [["scripts/mathmap.mjs", "--check"], ["scripts/audit.mjs", "--check"], ["scripts/formal.mjs"], ["scripts/build.mjs", "--check"], ["scripts/compose.mjs", "--chain", "D2-118,D2-117"], ["scripts/mcp.mjs", "--selftest"]];
+const CHECKS = [["scripts/mathmap.mjs", "--check"], ["scripts/audit.mjs", "--check"], ["scripts/formal.mjs"], ["scripts/lean.mjs"], ["scripts/build.mjs", "--check"], ["scripts/compose.mjs", "--chain", "D2-118,D2-117"], ["scripts/mcp.mjs", "--selftest"]];
 const REPORTS = [["scripts/mathmap.mjs", "reports/MATHMAP.md"], ["scripts/audit.mjs", "reports/AUDIT.md"]];
 let fail = 0;
 for (const [s, ...a] of CHECKS) {
@@ -17,7 +17,7 @@ for (const [s, ...a] of CHECKS) {
 }
 const tmp = mkdtempSync(join(tmpdir(), "math-map-"));
 try {
-  for (const d of ["source", "mapfill", "audit", "excerpts", "scripts", "reports"]) cpSync(join(ROOT, d), join(tmp, d), { recursive: true });
+  for (const d of ["source", "mapfill", "audit", "excerpts", "scripts", "reports", "lean"]) cpSync(join(ROOT, d), join(tmp, d), { recursive: true, filter: (s) => !/[\\/]\.lake([\\/]|$)/.test(s) });
   for (const [s, r] of REPORTS) {
     try { execFileSync("node", [join(tmp, s)], { cwd: tmp }); } catch { console.log(`FAIL ${s} did not render`); fail++; continue; }
     if (readFileSync(join(tmp, r), "utf8") !== readFileSync(join(ROOT, r), "utf8")) { console.log(`FAIL ${r} is stale: run node ${s}`); fail++; }

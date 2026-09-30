@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "942f2e3c64c44b6e4549df37010a4c0f95faf985"
+  "commit": "df8a7b4661d08dc193aabe84297d21a5cd076cab"
  },
  "domains": {
   "D1": {
@@ -376,16 +376,24 @@
    "unsupported": 76,
    "unchecked": 11238,
    "imprecise": 21,
-   "sourced": 429,
-   "formal": 8
+   "sourced": 422,
+   "formal": 15
+  },
+  "lean": {
+   "toolchain": "leanprover/lean4:v4.35.0-rc3",
+   "claims": 18,
+   "entries": 5,
+   "definitions": 14,
+   "proved": 18,
+   "stated": 0
   },
   "claimEvidence": {
    "contradicted": 0,
    "unsupported": 0,
    "unchecked": 7,
    "imprecise": 0,
-   "sourced": 32,
-   "formal": 1
+   "sourced": 24,
+   "formal": 9
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
@@ -3176,7 +3184,7 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "sourced",
+    "output": "formal",
     "preserved": "sourced",
     "broken": "sourced"
    },
@@ -3205,6 +3213,49 @@
      }
     ]
    },
+   "lean": [
+    {
+     "field": "description",
+     "decl": "MathMap.antitoneGC_iff",
+     "match": "exact",
+     "status": "proved",
+     "note": "The corrected definition is equivalent to b ≤ f(a) iff a ≤ g(b).",
+     "file": "lean/MathMap/Order.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.antitoneGC_iff_galoisConnection",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "An antitone Galois connection is exactly a Galois connection in Mathlib's sense into the order dual: an adjunction.",
+     "file": "lean/MathMap/Order.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.AntitoneGC.closureGF",
+     "match": "exact",
+     "status": "proved",
+     "note": "g∘f is a closure operator (Mathlib's ClosureOperator).",
+     "file": "lean/MathMap/Order.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.AntitoneGC.closureFG",
+     "match": "exact",
+     "status": "proved",
+     "note": "f∘g is a closure operator. The fixed-point correspondence is not yet proved.",
+     "file": "lean/MathMap/Order.lean"
+    },
+    {
+     "field": "description",
+     "decl": "MathMap.landedGC_neither",
+     "match": "refutes-landed",
+     "status": "proved",
+     "note": "The landed definition admits (not, const true) on Bool, a Galois connection in neither convention: why the field was corrected.",
+     "file": "lean/MathMap/Order.lean"
+    }
+   ],
    "formal": [
     {
      "field": "description",
@@ -43218,26 +43269,28 @@
     "description": "sourced",
     "input": "sourced",
     "output": "sourced",
-    "preserved": "sourced",
+    "preserved": "formal",
     "broken": "imprecise"
    },
    "claims": [
     {
      "field": "preserved",
      "invariant": "colimits",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field preserved: sourced",
-      "Mathlib CategoryTheory.Adjunction.leftAdjoint_preservesColimits given output (sourced)"
+      "field preserved: formal",
+      "Mathlib CategoryTheory.Adjunction.leftAdjoint_preservesColimits given output (sourced)",
+      "Lean MathMap.EssentialGeometricMorphism.inverse_preservesColimits"
      ]
     },
     {
      "field": "preserved",
      "invariant": "limits",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field preserved: sourced",
-      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given output (sourced)"
+      "field preserved: formal",
+      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given output (sourced)",
+      "Lean MathMap.EssentialGeometricMorphism.inverse_preservesLimits"
      ]
     },
     {
@@ -43247,6 +43300,28 @@
      "basis": [
       "receipted link"
      ]
+    }
+   ],
+   "lean": [
+    {
+     "field": "preserved",
+     "decl": "MathMap.EssentialGeometricMorphism.inverse_preservesLimits",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "limits",
+     "whole": true,
+     "note": "f^* preserves limits.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.EssentialGeometricMorphism.inverse_preservesColimits",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "colimits",
+     "whole": true,
+     "note": "f^* preserves colimits.",
+     "file": "lean/MathMap/Topos.lean"
     }
    ],
    "formal": [
@@ -55265,17 +55340,18 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "sourced",
-    "preserved": "sourced",
+    "output": "formal",
+    "preserved": "formal",
     "broken": "sourced"
    },
    "claims": [
     {
      "field": "preserved",
      "invariant": "skeletal-objects",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field preserved: sourced"
+      "field preserved: formal",
+      "Lean MathMap.Level.IsAufhebung.skeleta_are_sheaves"
      ]
     },
     {
@@ -55285,6 +55361,36 @@
      "basis": [
       "field broken: sourced"
      ]
+    }
+   ],
+   "lean": [
+    {
+     "field": "preserved",
+     "decl": "MathMap.Level.IsAufhebung.skeleta_are_sheaves",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "skeletal-objects",
+     "whole": true,
+     "note": "i-skeleta survive as j-sheaves: the entry's field, true by the nLab's definition.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.Level.IsAufhebung.sheaves_are_sheaves",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "i-sheaves survive as j-sheaves: the Aufhebung lies above i.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.Level.IsAufhebung.unique",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "The least resolving level, when it exists, is unique up to having the same sheaves.",
+     "file": "lean/MathMap/Topos.lean"
     }
    ],
    "tier": "receipted"
@@ -55600,7 +55706,7 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "sourced",
+    "output": "formal",
     "preserved": "sourced",
     "broken": "sourced"
    },
@@ -55608,11 +55714,41 @@
     {
      "field": "preserved",
      "invariant": "limits",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
       "field preserved: sourced",
-      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given description (sourced)"
+      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given description (sourced)",
+      "Lean MathMap.Subtopos.inclusion_preservesLimits"
      ]
+    }
+   ],
+   "lean": [
+    {
+     "field": "preserved",
+     "decl": "MathMap.Subtopos.inclusion_preservesLimits",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "limits",
+     "note": "The inclusion of a subtopos preserves limits.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.Subtopos.embedding",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "The inclusion is a geometric morphism with the reflector as inverse image.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.Subtopos.embedding_direct_full_faithful",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "Its direct image is fully faithful: a geometric embedding.",
+     "file": "lean/MathMap/Topos.lean"
     }
    ],
    "formal": [
@@ -55693,8 +55829,8 @@
    "evidence": {
     "name": "sourced",
     "description": "sourced",
-    "input": "sourced",
-    "output": "sourced",
+    "input": "formal",
+    "output": "formal",
     "preserved": "sourced",
     "broken": "sourced"
    },
@@ -55702,36 +55838,88 @@
     {
      "field": "preserved",
      "invariant": "limits",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
       "field preserved: sourced",
-      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given input (sourced)"
+      "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given input (formal)",
+      "Lean MathMap.Level.reflector_preservesLimits"
      ]
     },
     {
      "field": "preserved",
      "invariant": "colimits",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
       "field preserved: sourced",
-      "Mathlib CategoryTheory.Adjunction.leftAdjoint_preservesColimits given input (sourced)"
+      "Mathlib CategoryTheory.Adjunction.leftAdjoint_preservesColimits given input (formal)",
+      "Lean MathMap.Level.reflector_preservesColimits"
      ]
     },
     {
      "field": "output",
      "invariant": "skeletal-objects",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field output: sourced"
+      "field output: formal",
+      "Lean MathMap.Level.skeleton"
      ]
     },
     {
      "field": "output",
      "invariant": "level-opposition",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field output: sourced"
+      "field output: formal",
+      "Lean MathMap.Level.skeletonSheafAdj"
      ]
+    }
+   ],
+   "lean": [
+    {
+     "field": "input",
+     "decl": "MathMap.Level.essential",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "The inclusion of a level is an essential geometric morphism: the entry's input kind.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.Level.reflector_preservesLimits",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "limits",
+     "note": "The middle functor i^* of the triple preserves limits.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.Level.reflector_preservesColimits",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "colimits",
+     "note": "The middle functor i^* preserves colimits.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.Level.skeletonSheafAdj",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "level-opposition",
+     "whole": true,
+     "note": "The level carries the adjoint modalities skeleton ⊣ sheaf: the opposition at the level.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "output",
+     "decl": "MathMap.Level.skeleton",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "skeletal-objects",
+     "note": "The skeleton modality, whose fixed objects are the level's skeleta.",
+     "file": "lean/MathMap/Topos.lean"
     }
    ],
    "formal": [

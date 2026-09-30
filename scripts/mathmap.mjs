@@ -258,7 +258,7 @@ export function check(P = parse()) {
     used.add(l.invariant);
   }
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
-  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
+  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/lean.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
   return F;
 }

@@ -6,10 +6,12 @@
 //   (landed or authored, never checked), imprecise (right idea, a detail wrong), sourced (a verbatim quote
 //   supports it: an audit grade of confirmed, an addition's or a correction's receipts, a receipted link),
 //   formal (Mathlib states it: an exact link covering the whole field or naming the invariant, or a general
-//   link whose premise field is itself formal). A relation between invariants passes evidence along at the
+//   link whose premise field is itself formal; or lean/ proves it: an exact claim in mapfill/lean.js naming the
+//   invariant, or the whole-field claims, all proved according to lean/AUDIT.json, over receipted definitions). A relation between invariants passes evidence along at the
 //   weaker of the claim's level and the relation's (receipts: sourced; a definitional basis: formal).
 // Invariant: read-only. A level summarizes recorded evidence; it is never raised by argument alone.
 import { createRequire } from "node:module";
+import { status as leanStatus } from "./lean.mjs";
 
 const require = createRequire(import.meta.url);
 export const LEVELS = ["contradicted", "unsupported", "unchecked", "imprecise", "sourced", "formal"];
@@ -22,6 +24,8 @@ const FROM_GRADE = { wrong: "contradicted", unsupported: "unsupported", imprecis
 export function evidence(P) {
   const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
   const links = P.formal.links, V = P.vocabulary;
+  const LA = leanStatus(), LC = require("../mapfill/lean.js").CLAIMS;
+  const proved = (c) => LA?.decls?.[c.decl]?.status === "proved";
   const field = (e, f) => {
     const basis = [];
     const conflict = links.some((k) => k.entry === e.id && k.field === f && k.match === "conflicts");
@@ -34,6 +38,8 @@ export function evidence(P) {
     else if (g) { level = e.origin === "added" ? stronger(level, FROM_GRADE[g.verdict]) : FROM_GRADE[g.verdict]; basis.push(`audit: ${g.verdict}`); if (g.verdict === "wrong") level = "contradicted"; }
     if (conflict && !corrected) { level = "contradicted"; basis.push("Mathlib conflict"); }
     if (level !== "contradicted") for (const k of links.filter((k) => k.entry === e.id && k.field === f && k.whole && k.match === "exact")) { level = "formal"; basis.push(`Mathlib ${k.decl}`); }
+    const whole = LC.filter((c) => c.entry === e.id && c.field === f && c.whole);
+    if (level !== "contradicted" && whole.length && whole.every(proved)) { level = "formal"; basis.push(...whole.map((c) => `Lean ${c.decl}`)); }
     return { level, basis };
   };
   const claim = (e, f, inv) => {
@@ -48,6 +54,7 @@ export function evidence(P) {
       if (k.match === "exact") { level = "formal"; basis.push(`Mathlib ${k.decl}`); }
       if (k.match === "general" && k.premise) { const pe = field(e, k.premise).level, l = weaker("formal", pe); if (rank(l) > rank(level)) { level = l; } basis.push(`Mathlib ${k.decl} given ${k.premise} (${pe})`); }
     }
+    if (level !== "contradicted") for (const c of LC.filter((c) => c.entry === e.id && c.field === f && c.invariant === inv && c.match === "exact" && proved(c))) { level = "formal"; basis.push(`Lean ${c.decl}`); }
     return { level, basis };
   };
   const relation = (r) => (r.receipts?.length ? "sourced" : "formal");

@@ -11,6 +11,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse, anchorable } from "./mathmap.mjs";
 import { evidence, LEVELS } from "./evidence.mjs";
+import { status as leanStatus } from "./lean.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -27,6 +28,9 @@ export function build() {
   const gradeOf = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
   const grades = Object.fromEntries(Object.entries(gradeOf).map(([id, g]) => [id, worst(g)]));
   const E = evidence(P);
+  const { CLAIMS: LC, DEFS: LD } = require("../mapfill/lean.js"), LA = leanStatus();
+  const leanSrc = readdirSync(join(ROOT, "lean/MathMap")).filter((f) => f.endsWith(".lean")).map((f) => [`lean/MathMap/${f}`, readFileSync(join(ROOT, "lean/MathMap", f), "utf8")]);
+  const leanFile = (decl) => { const short = decl.split(".").pop(); return leanSrc.find(([, t]) => new RegExp(`^(theorem|def|structure|abbrev)\\s+(\\S+\\.)?${short.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "m").test(t))?.[0] ?? null; };
   const commit = (() => { try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
   const entries = P.entries.map((e) => {
     const o = { id: e.id, domain: e.domain, name: e.name, kind: e.kind, tags: e.tags, description: e.description,
@@ -43,6 +47,8 @@ export function build() {
     if (e.invariants) o.claims = ["preserved", "broken", "output"].flatMap((f) => e.invariants[f].map((v) => ({ field: f, invariant: v, ...E.claim(e, f, v) })));
     if (e.corrected) o.corrected = { fields: e.corrected, landed: e.landedFields, reason: e.correction.reason, receipts: e.correction.receipts };
     if (e.flagResolved) o.flagResolved = { kind: e.flagResolved.kind, evidence: e.flagResolved.evidence };
+    const lc = LC.filter((c) => c.entry === e.id);
+    if (lc.length) o.lean = lc.map((c) => ({ field: c.field, decl: c.decl, match: c.match, status: LA?.decls?.[c.decl]?.status ?? "unaudited", ...(c.invariant ? { invariant: c.invariant } : {}), ...(c.whole ? { whole: true } : {}), note: c.note, file: leanFile(c.decl) }));
     if (e.formal) o.formal = e.formal.map((k) => ({ ...k, url: `https://github.com/leanprover-community/mathlib4/blob/${P.formal.mathlib.commit}/${k.file}` }));
     if (e.conditions) { o.conditions = e.conditions; o.counterexamples = e.counterexamples; o.conditionReceipts = e.conditionReceipts; }
     const g = grades[e.id];
@@ -61,6 +67,8 @@ export function build() {
     counts: { entries: entries.length, anchorable: entries.filter((e) => e.anchorable).length, byOrigin: entries.reduce((a, e) => { const k = e.origin.startsWith("clone:") ? "clone" : e.origin; a[k] = (a[k] || 0) + 1; return a; }, {}),
       byTier: entries.reduce((a, e) => { a[e.tier] = (a[e.tier] || 0) + 1; return a; }, {}), withConditions: entries.filter((e) => e.conditions).length, corrected: entries.filter((e) => e.corrected).length,
       fieldEvidence: Object.fromEntries(LEVELS.map((l) => [l, entries.reduce((n, e) => n + FIELDS6.filter((f) => e.evidence[f] === l).length, 0)])),
+      lean: { toolchain: LA?.toolchain, claims: LC.length, entries: new Set(LC.map((c) => c.entry)).size, definitions: LD.length,
+        proved: LC.filter((c) => LA?.decls?.[c.decl]?.status === "proved").length, stated: LC.filter((c) => LA?.decls?.[c.decl]?.status === "stated").length },
       claimEvidence: Object.fromEntries(LEVELS.map((l) => [l, entries.reduce((n, e) => n + (e.claims || []).filter((c) => c.level === l).length, 0)])),
       formal: { mathlibCommit: P.formal.mathlib.commit, entries: entries.filter((e) => e.formal).length, links: P.formal.links.length,
         byMatch: P.formal.links.reduce((a, k) => { a[k.match] = (a[k.match] || 0) + 1; return a; }, {}) } },
@@ -77,6 +85,7 @@ export function build() {
       L.push(`- evidence: ${FIELDS6.map((f) => `${f} ${e.evidence[f]}`).join(", ")}`);
       if (e.corrected) L.push(`- corrected: ${e.corrected.fields.join(", ")}. ${e.corrected.reason} Landed: ${e.corrected.fields.map((f) => `${f} "${e.corrected.landed[f]}"`).join("; ")}.`);
       if (e.conditions) L.push(`- conditions: ${e.conditions}`);
+      for (const k of e.lean || []) L.push(`- Lean (${k.match}, ${k.status}, on ${k.field}${k.invariant ? `: ${k.invariant}` : ""}): \`${k.decl}\` in \`${k.file}\`. ${k.note}`);
       for (const k of e.formal || []) L.push(`- Mathlib (${k.match}, on ${k.field}): [\`${k.decl}\`](${k.url}). ${k.note}`);
       for (const k of e.counterexamples || []) L.push(`- counterexample: ${k.case}`);
       if (e.reading) L.push(`- reading: ${e.reading}`);
@@ -106,6 +115,8 @@ export function build() {
     `\`mapfill/corrections.js\` replaces landed fields that a check found wrong or imprecise with receipted text; the landed text is kept on the entry (\`corrected.landed\`). A correction needs a prior finding (an audit grade, a flag, or a Mathlib conflict) and a receipt for every field it changes. ${map.counts.corrected} entries are corrected so far; correcting every field of a flagged entry resolves the flag. The audit's error rates still describe the map as landed.`, "",
     "## Formal links (Lean and Mathlib)", "",
     `\`mapfill/formal.js\` links entries to declarations in [Mathlib](https://github.com/leanprover-community/mathlib4), pinned at commit \`${P.formal.mathlib.commit}\`: ${map.counts.formal.links} links on ${map.counts.formal.entries} entries. Each link names the field it bears on and grades the match: **exact** (Mathlib states the claim), **general** (Mathlib states something that implies it), **special** (a special case), **related** (a weaker or neighbouring result; the claim itself is not formalized), **ingredient** (the objects, not the claim), or **conflicts** (Mathlib's statement conflicts with the claim as written; the note says how). Counts: ${Object.entries(map.counts.formal.byMatch).map(([k, v]) => k + " " + v).join(", ")}. The declaration statements are quoted in \`excerpts/mathlib-*.txt\` with the hash of each file at the pin; \`node scripts/formal.mjs --verify\` refetches them. A link says Mathlib proves the quoted statement, which its CI type-checked at that commit; the grade of how it bears on the entry is a judgment, like an audit grade. \`reports/FORMAL-QUEUE.md\` lists unreviewed name matches still to be read.`, "",
+    "## Lean", "",
+    `\`lean/\` is a Lean 4 project on the same pinned Mathlib. It states and proves claims of entries that Mathlib does not cover, over definitions of its own (subtoposes, essential geometric morphisms, levels and the Aufhebung, following the nLab; antitone Galois connections). \`mapfill/lean.js\` registers each definition with receipts from its source and each claim with the entry, field and invariant it bears on. Whether a claim is proved or only stated is read from Lean itself: \`node scripts/lean.mjs --audit\` runs \`#print axioms\` (a proof that uses \`sorry\` is only stated) and lists the definitions each statement depends on, all of which must be receipted; the result is \`lean/AUDIT.json\`, which CI regenerates after \`lake build\` and compares. ${map.counts.lean.claims} claims on ${map.counts.lean.entries} entries: ${map.counts.lean.proved} proved, ${map.counts.lean.stated} stated, over ${map.counts.lean.definitions} receipted definitions. A proved exact claim makes its invariant claim, or its whole field, formal. To build: \`cd lean && lake exe cache get && lake build\`.`, "",
     "## Audit", "",
     "`audit.json` holds field-by-field grades (confirmed, imprecise, wrong, unsupported) against cited sources: a fixed random sample of 60 entries, kept for unbiased error rates, and targeted grades for entries chosen for use (composites) or for citation (entries with a Mathlib counterpart), kept out of the estimates. Six landed entries are flagged as misaligned and carry their evidence.", "",
     "## Layout", "",

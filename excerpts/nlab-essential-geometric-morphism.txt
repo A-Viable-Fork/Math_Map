@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, essential geometric morphism (page source)
+URL: https://ncatlab.org/nlab/source/essential+geometric+morphism
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 53e644cf80038533298aa8d9db7c39c482bf1c23959b4d0649f6294a2fedd23e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+it is an **essential geometric morphism** if the [[inverse image]] functor $f^*$ has not only the [[right adjoint]] $f_*$, but also a [[left adjoint]] $f_!$:

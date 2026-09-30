@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, geometric morphism (page source)
+URL: https://ncatlab.org/nlab/source/geometric+morphism
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 3161ae27bb1335f2fd03ee61b8f42f493895b60e20c130e72019906113ad319b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a **geometric morphism** $f:E\to F$ consists of a pair of [[adjoint functors]] $(f^*,f_*)$
+
+* furthermore, $f^*$ is [[exact functor|left exact]] in that it preserves finite [[limits]].
+
+If moreover the [[inverse image]] $f^*$ has also a [[left adjoint]] $f_! : E \to F$, then $f$ is an [[essential geometric morphism]].

@@ -1,0 +1,10 @@
+name = "MathMap"
+defaultTargets = ["MathMap"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "380f2aafb622cb2c1c93dac545b6389083c68c51"
+
+[[lean_lib]]
+name = "MathMap"

@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, Aufhebung, the definition (page source)
+URL: https://ncatlab.org/nlab/source/Aufhebung
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 74a4678d0b5484b70fae4beef62588da913cbb08b736c9607f7171014f4e1486
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* the _i-sheaves_ : $X\in\mathcal{B}$ with $\bigcirc _i X\simeq X$
+
+* the _i-skeleta_ : $X\in\mathcal{B}$ with $\Box _i X\simeq X$
+
+(or $i\prec j$ for short) when every i-sheaf ($\bigcirc_i$-[[modal type]]) is also a j-sheaf and every i-skeleton ($\Box_i$-[[modal type]]) is a j-skeleton.
+
+Let $i\prec j$, we say that the level $j$ _resolves the opposite_ of level $i$, written
+
+(or just $i\ll j$ for short[^wayb]), if $\bigcirc _j\Box_i=\Box _i$.
+
+iff it is a minimal level which resolves the opposites of level $i$, i.e. iff $i\ll\bar{i}$ and for any $k$ with $i\ll k$ then it holds that $\bar{i}\leq k$ in the order relation (by subtopos inclusion) between levels.

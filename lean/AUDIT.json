@@ -1,0 +1,368 @@
+{
+ "toolchain": "leanprover/lean4:v4.35.0-rc3",
+ "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
+ "sources": "c1d49bf85240fb194ecdde0626c51b0b07095cd0b3570013449bb1584e35ab73",
+ "decls": {
+  "MathMap.GeometricMorphism": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.EssentialGeometricMorphism": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.Subtopos": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.Level": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.Level.skeleton": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.sheaf": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsSheaf": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsSkeleton": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.Prec": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.Resolves": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.Below": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsAufhebung": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.AntitoneGC": {
+   "status": "proved",
+   "axioms": [],
+   "deps": []
+  },
+  "MathMap.LandedGC": {
+   "status": "proved",
+   "axioms": [],
+   "deps": []
+  },
+  "MathMap.Subtopos.inclusion_preservesLimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Subtopos.embedding": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.GeometricMorphism",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Subtopos.embedding_direct_full_faithful": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.GeometricMorphism",
+    "MathMap.Subtopos",
+    "MathMap.Subtopos.embedding"
+   ]
+  },
+  "MathMap.EssentialGeometricMorphism.inverse_preservesLimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
+  "MathMap.EssentialGeometricMorphism.inverse_preservesColimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism"
+   ]
+  },
+  "MathMap.Level.essential": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.EssentialGeometricMorphism",
+    "MathMap.GeometricMorphism",
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.reflector_preservesLimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.reflector_preservesColimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.skeletonSheafAdj": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Level.sheaf",
+    "MathMap.Level.skeleton",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsAufhebung.skeleta_are_sheaves": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Level.Below",
+    "MathMap.Level.IsAufhebung",
+    "MathMap.Level.IsSheaf",
+    "MathMap.Level.IsSkeleton",
+    "MathMap.Level.Prec",
+    "MathMap.Level.Resolves",
+    "MathMap.Level.sheaf",
+    "MathMap.Level.skeleton",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsAufhebung.sheaves_are_sheaves": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Level.Below",
+    "MathMap.Level.IsAufhebung",
+    "MathMap.Level.IsSheaf",
+    "MathMap.Level.IsSkeleton",
+    "MathMap.Level.Prec",
+    "MathMap.Level.Resolves",
+    "MathMap.Level.sheaf",
+    "MathMap.Level.skeleton",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.IsAufhebung.unique": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Level.Below",
+    "MathMap.Level.IsAufhebung",
+    "MathMap.Level.IsSheaf",
+    "MathMap.Level.IsSkeleton",
+    "MathMap.Level.Prec",
+    "MathMap.Level.Resolves",
+    "MathMap.Level.sheaf",
+    "MathMap.Level.skeleton",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.antitoneGC_iff": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.AntitoneGC"
+   ]
+  },
+  "MathMap.antitoneGC_iff_galoisConnection": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.AntitoneGC"
+   ]
+  },
+  "MathMap.AntitoneGC.closureGF": {
+   "status": "proved",
+   "axioms": [
+    "propext"
+   ],
+   "deps": [
+    "MathMap.AntitoneGC"
+   ]
+  },
+  "MathMap.AntitoneGC.closureFG": {
+   "status": "proved",
+   "axioms": [
+    "propext"
+   ],
+   "deps": [
+    "MathMap.AntitoneGC"
+   ]
+  },
+  "MathMap.landedGC_neither": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.AntitoneGC",
+    "MathMap.LandedGC"
+   ]
+  }
+ }
+}
