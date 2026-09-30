@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Inverse Gaussian distribution (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Inverse_Gaussian_distribution
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: b64f592b91a00060c83f24349c28afd9017a08f86c1e3678af364036e3e6c0ce
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the inverse Gaussian describes the distribution of the time a Brownian motion with positive drift takes to reach a fixed positive level.
+
+T_\alpha = \inf\{ t > 0 \mid X_t=\alpha \} \sim \operatorname{IG} \left(\frac\alpha\nu, \left(\frac \alpha \sigma \right)^2 \right)
+
+where <math>\mu > 0</math> is the mean

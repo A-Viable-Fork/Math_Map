@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Littlewood-Paley theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Littlewood%E2%80%93Paley_theory
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 8e75e198982f10d3dcb87872b1b27d31514292a6e17a51595e9b92b4bb4558d9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Littlewood–Paley theory uses a decomposition of a function ''f'' into a sum of functions ''f''<sub>''&rho;''</sub> with localized frequencies.
+
+this gives a so-called "dyadic decomposition" of ''f''
+
+It is typically used as a substitute for orthogonality arguments which only apply to ''L''<sup>''p''</sup> functions when ''p''&nbsp;=&nbsp;2.

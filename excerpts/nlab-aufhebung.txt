@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, Aufhebung (page source)
+URL: https://ncatlab.org/nlab/source/Aufhebung
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 74a4678d0b5484b70fae4beef62588da913cbb08b736c9607f7171014f4e1486
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+iff it is a minimal level which resolves the opposites of level $i$
+
+The Aufhebung of a level is the smallest level that resolves its opposites or contradictions.
+
+The condition $\bigcirc_j \Box_i=\Box_i$ amounts to saying that every $i$-skeleton is a $j$-sheaf

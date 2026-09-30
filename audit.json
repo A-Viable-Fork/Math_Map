@@ -1,0 +1,2539 @@
+{
+ "sample": {
+  "seed": 20260929,
+  "note": "A fixed stratified random sample, graded field by field against cited sources.",
+  "grades": [
+   {
+    "id": "D1-045",
+    "sources": {
+     "w": "https://en.wikipedia.org/w/index.php?action=raw&title=Graph_bandwidth",
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Indifference_graph"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "w",
+      "quote": "a proper interval supergraph of the given graph"
+     },
+     "description": {
+      "verdict": "imprecise",
+      "src": "w",
+      "quote": "The bandwidth may also be defined as one less than the maximum clique size in a proper interval supergraph of the given graph, chosen to minimize its clique size",
+      "note": "Conflates two objectives: completion minimizes added edges, while the bandwidth link is to minimizing clique size. \"Stricter than interval completion\" is right (proper interval graphs are a subclass)."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "w",
+      "quote": "a proper interval supergraph of the given graph"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "these graphs are also called unit interval graphs or proper interval graphs; they form a subclass of the interval graphs"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "w",
+      "quote": "a proper interval supergraph of the given graph",
+      "note": "A supergraph keeps the vertices and edges."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"non-proper-interval structure\" restates the output type."
+     }
+    }
+   },
+   {
+    "id": "D1-110",
+    "sources": {
+     "r": "https://en.wikipedia.org/w/index.php?action=raw&title=Reflection_(mathematics)"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "is a mapping from a Euclidean space to itself that is an isometry with a hyperplane as the set of fixed points"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "is a mapping from a Euclidean space to itself that is an isometry with a hyperplane as the set of fixed points"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "this set is called the axis (in dimension 2) or plane (in dimension 3) of reflection"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "The image of a figure by a reflection is its mirror image"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "is a mapping from a Euclidean space to itself that is an isometry"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "every improper rotation is the result of reflecting in an odd number",
+      "note": "Indirect: orientation reversal follows from reflections generating the improper rotations."
+     }
+    }
+   },
+   {
+    "id": "D1-085",
+    "sources": {
+     "a": "https://arxiv.org/abs/2402.01483"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "unify and simplify known bijections between rectangulations and permutation classes"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "unify and simplify known bijections between rectangulations and permutation classes"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "weak rectangulations that preserve rectangle-segment adjacencies"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "known bijections between rectangulations and permutation classes"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "weak rectangulations that preserve rectangle-segment adjacencies"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Interpretive: \"geometric representation replaced by permutation\" is a gloss, not a stated property."
+     }
+    }
+   },
+   {
+    "id": "D1-111",
+    "sources": {
+     "r": "https://en.wikipedia.org/w/index.php?action=raw&title=Rotation_(mathematics)"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "Any rotation is a motion of a certain space that preserves at least one point"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "Any rotation is a motion of a certain space that preserves at least one point"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "Any rotation is a motion of a certain space that preserves at least one point"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "Any rotation is a motion of a certain space that preserves at least one point"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "it leaves the distance between any two points unchanged after the transformation. But a (proper) rotation also has to preserve the orientation structure"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "Any rotation is a motion of a certain space that preserves at least one point",
+      "note": "Positions of non-fixed points change by definition of a nontrivial motion."
+     }
+    }
+   },
+   {
+    "id": "D1-017",
+    "sources": {
+     "o": "https://en.wikipedia.org/w/index.php?action=raw&title=Graph_operations"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "o",
+      "quote": "Graph with all the edges that connect the vertices of the first graph with the vertices of the second graph"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "o",
+      "quote": "Graph with all the edges that connect the vertices of the first graph with the vertices of the second graph"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "o",
+      "quote": "Graph with all the edges that connect the vertices of the first graph with the vertices of the second graph"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "o",
+      "quote": "Graph with all the edges that connect the vertices of the first graph with the vertices of the second graph"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "o",
+      "quote": "Graph with all the edges that connect the vertices of the first graph with the vertices of the second graph",
+      "note": "Each input graph is an induced subgraph of the join."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "\"Sparsity\" is a reasonable gloss; not stated by the source."
+     }
+    }
+   },
+   {
+    "id": "D2-191",
+    "sources": {
+     "l": "https://en.wikipedia.org/w/index.php?action=raw&title=Loewy_ring"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "If M is a module, then define the Loewy series",
+      "note": "The socle filtration is the Loewy (socle) series."
+     },
+     "description": {
+      "verdict": "imprecise",
+      "src": "l",
+      "quote": "If M is a module, then define the Loewy series",
+      "note": "Each layer is the socle of a quotient, which is semisimple, not simple: \"simple layers\" should be \"semisimple layers\"."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "If M is a module, then define the Loewy series"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "The Loewy length of M is defined to be the smallest"
+     },
+     "preserved": {
+      "verdict": "imprecise",
+      "src": "l",
+      "quote": "every non-zero left (right) module has a non-zero socle",
+      "note": "Semisimple, not simple, structure per layer."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"global structure\"."
+     }
+    }
+   },
+   {
+    "id": "D2-120",
+    "sources": {
+     "f": "https://en.wikipedia.org/w/index.php?action=raw&title=Flip_(algebraic_geometry)"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "the flop of f if K is relatively trivial"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "the flop of f if K is relatively trivial",
+      "note": "\"Numerically trivial\" matches K relatively trivial on the contracted curves."
+     },
+     "input": {
+      "verdict": "imprecise",
+      "src": "f",
+      "quote": "In applications, f is often a small contraction of an extremal ray",
+      "note": "The contraction is K-trivial and small; \"trivial extremal contraction\" misstates it."
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "flips and flops are codimension-2 surgery operations"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "any two birationally equivalent minimal models are connected by a sequence of flops",
+      "note": "Birational type (hence Kodaira dimension) is kept; the canonical class is kept in the sense that K stays trivial on the flopped curves."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Plausible (the intersection form on the flopped locus changes) but not stated by the source."
+     }
+    }
+   },
+   {
+    "id": "D2-067",
+    "sources": {
+     "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Smith_normal_form"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "is a normal form that can be defined for any matrix (not necessarily square) with entries in a principal ideal domain"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "The Smith normal form of a matrix is diagonal, and can be obtained from the original matrix by multiplying on the left and right by invertible square matrices"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "with entries in a principal ideal domain"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "The Smith normal form of a matrix is diagonal"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "are called the elementary divisors, invariants, or invariant factors"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"original entries\"."
+     }
+    }
+   },
+   {
+    "id": "D2-075",
+    "sources": {
+     "q": "https://en.wikipedia.org/w/index.php?action=raw&title=Field_of_fractions"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "the field of fractions of an integral domain is the smallest field in which it can be embedded"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "the field of fractions of an integral domain is the smallest field in which it can be embedded"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "the field of fractions of an integral domain is the smallest field in which it can be embedded"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "the field of fractions of an integral domain is the smallest field in which it can be embedded"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "the smallest field in which it can be embedded"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "the smallest field in which it can be embedded",
+      "note": "In a field every nonzero element is invertible."
+     }
+    }
+   },
+   {
+    "id": "D2-200",
+    "sources": {
+     "v": "https://en.wikipedia.org/w/index.php?action=raw&title=Invariant_theory"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "This space of invariant polynomials is denoted"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "the set of polynomials such that g\\cdot f = f for all g\\in G"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "With this action it is natural to consider the subspace of all polynomial functions which are invariant under this group action"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "If the ring of invariants is finitely generated"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "If the ring of invariants is finitely generated"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "which are invariant under this group action",
+      "note": "Non-invariant elements are excluded by definition."
+     }
+    }
+   },
+   {
+    "id": "D3-124",
+    "sources": {
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Prenex_normal_form"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "these rules require that the variable quantified in one subformula does not appear free in the other subformula"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "these rules require that the variable quantified in one subformula does not appear free in the other subformula"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "these rules require that the variable quantified in one subformula does not appear free in the other subformula"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "Every formula in classical logic is logically equivalent to a formula in prenex normal form"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "Every formula in classical logic is logically equivalent to a formula in prenex normal form",
+      "note": "Classical logic; some shifts fail intuitionistically, which the entry does not say."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"original quantifier placement\"."
+     }
+    }
+   },
+   {
+    "id": "D3-002",
+    "sources": {
+     "n": "https://en.wikipedia.org/w/index.php?action=raw&title=Natural_deduction"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "n",
+      "quote": "any derivation containing an introduction of a connective followed immediately by its elimination can be turned into an equivalent derivation without this detour"
+     },
+     "description": {
+      "verdict": "imprecise",
+      "src": "n",
+      "quote": "It is a check on the strength of elimination rules",
+      "note": "Normalization presupposes harmony (local reducibility); it does not guarantee it. The rest of the description is right."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "n",
+      "quote": "any derivation containing an introduction of a connective followed immediately by its elimination"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "n",
+      "quote": "In most logics, every derivation has an equivalent normal derivation, called a normal form"
+     },
+     "preserved": {
+      "verdict": "imprecise",
+      "src": "n",
+      "quote": "can be turned into an equivalent derivation without this detour",
+      "note": "Provability is preserved; \"logical harmony\" is a property of the rules, not something a normalization step preserves."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Correct in fact (normal proofs can be far longer), but not stated by the source."
+     }
+    }
+   },
+   {
+    "id": "D3-117",
+    "sources": {
+     "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Conjunctive_normal_form",
+     "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Skolem_normal_form"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "This is the only step that preserves only satisfiability rather than equivalence"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "Move quantifiers outwards",
+      "note": "The source's conversion procedure runs prenexing, Skolemizing, dropping universals and distributing, as the entry says."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "Every first-order formula may be converted into Skolem normal form"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "Drop all universal quantifiers"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "is equisatisfiable with it: it is satisfiable if and only if the original one is satisfiable"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "The resulting formula is not necessarily equivalent to the original one"
+     }
+    }
+   },
+   {
+    "id": "D3-068",
+    "sources": {
+     "k": "https://en.wikipedia.org/w/index.php?action=raw&title=Core_model"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "In set theory, the core model is a definable inner model of the universe of all sets"
+     },
+     "description": {
+      "verdict": "imprecise",
+      "src": "k",
+      "quote": "Intuitively, the core model is \"the largest canonical inner model there is\"",
+      "note": "\"Maximal inner model not containing specific large cardinals\" is the right intuition, but the source stresses that the core model is not one object: it is a class of inner models, each defined relative to an anti-large-cardinal hypothesis. The consistency-strength claim is not stated."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "under the right set-theoretic assumptions have very special properties"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "it is a class of inner models"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "most notably covering properties"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not stated by the source."
+     }
+    }
+   },
+   {
+    "id": "D3-085",
+    "sources": {
+     "l": "https://en.wikipedia.org/w/index.php?action=raw&title=Constructible_universe"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "This gives rise to the concept of relative constructibility, of which there are two flavors"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "This gives rise to the concept of relative constructibility, of which there are two flavors"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "includes or is influenced by a set that is not constructible"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "of which there are two flavors, denoted by L(A) and L[A]",
+      "note": "The entry names only L[B] and omits the L(B) flavor."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Vacuous: restates the relation."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "\"Computational boundedness\" has no evident meaning here; likely noise."
+     }
+    }
+   },
+   {
+    "id": "D4-414",
+    "sources": {
+     "v": "https://en.wikipedia.org/w/index.php?action=raw&title=Vector_bundle"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "may be glued over the intersection"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "may be glued over the intersection"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "may be glued over the intersection"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "is called a local trivialization of the vector bundle"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "Vector bundles are almost always required to be locally trivial"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "v",
+      "quote": "is called the trivial bundle of rank k over",
+      "note": "Global triviality is the special case; transition functions encode its failure."
+     }
+    }
+   },
+   {
+    "id": "D4-186",
+    "sources": {
+     "h": "https://en.wikipedia.org/w/index.php?action=raw&title=Hough_transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "The purpose of the technique is to find imperfect instances of objects within a certain class of shapes by a voting procedure"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "This voting procedure is carried out in a parameter space"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "The classical Hough transform was concerned with the identification of lines in the image"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "from which object candidates are obtained as local maxima in a so-called accumulator space"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"shape detection\" names the purpose, not an invariant."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"non-shape features\"."
+     }
+    }
+   },
+   {
+    "id": "D4-326",
+    "sources": {
+     "r": "https://en.wikipedia.org/w/index.php?action=raw&title=Relative_homology"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "If we denote this quotient by"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "induces a boundary map"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "induces a boundary map"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "An application of the snake lemma then yields a long exact sequence"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "The excision theorem says that removing a sufficiently nice subset"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "r",
+      "quote": "The connected component containing x_0 becomes trivial in relative homology",
+      "note": "Homology carried by A is quotiented out, as the entry says."
+     }
+    }
+   },
+   {
+    "id": "D4-091",
+    "sources": {
+     "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Cup_product"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "the cup product is a method of adjoining two cocycles of degree p and q to form a composite cocycle of degree p+q"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "turning the cohomology of a space X into a graded ring"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "adjoining two cocycles of degree p and q"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "to form a composite cocycle of degree p+q"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "This defines an associative (and distributive) graded commutative product operation in cohomology"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"individual class detail\"."
+     }
+    }
+   },
+   {
+    "id": "D4-431",
+    "sources": {
+     "w": "https://en.wikipedia.org/w/index.php?action=raw&title=Wirtinger's_inequality_for_functions"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "w",
+      "quote": "the Wirtinger inequality is an important inequality for functio"
+     },
+     "description": {
+      "verdict": "imprecise",
+      "src": "w",
+      "quote": "It was used by Adolf Hurwitz in 1901 to give a new proof of the isoperimetric inequality for curves in the plane",
+      "note": "Wirtinger's inequality bounds a function by its derivative (a Poincare-type inequality); relating arc length to enclosed area is the isoperimetric inequality it is used to prove. The entry states the application as the inequality."
+     },
+     "input": {
+      "verdict": "imprecise",
+      "src": "w",
+      "quote": "Let {{mvar|y}} be a continuous and differentiable function",
+      "note": "The input is a function (periodic, or with zero boundary values or mean), not a closed curve."
+     },
+     "output": {
+      "verdict": "imprecise",
+      "src": "w",
+      "quote": "all of which can be viewed as certain forms of the Poincar",
+      "note": "The output is an integral bound between a function and its derivative; the isoperimetric bound is a consequence."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Vacuous."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous."
+     }
+    }
+   },
+   {
+    "id": "D5-070",
+    "sources": {
+     "i": "https://en.wikipedia.org/w/index.php?action=raw&title=Inverse_transform_sampling"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "Inverse transformation sampling takes uniform samples of a number u between 0 and 1"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "the random variable F_X^{-1}(U) has the same distribution as X"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "and U is uniform on [0,1]"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "the random variable F_X^{-1}(U) has the same distribution as X"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "has the same distribution as X"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"uniform source\"."
+     }
+    }
+   },
+   {
+    "id": "D5-054",
+    "sources": {
+     "g": "https://en.wikipedia.org/w/index.php?action=raw&title=Girsanov_theorem"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "g",
+      "quote": "if Q is a measure being absolutely continuous with respect to P, then every P-semimartingale is also a Q-semimartingale"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "g",
+      "quote": "changes the asset's drift from"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "g",
+      "quote": "changes the asset's drift from"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "g",
+      "quote": "then every P-semimartingale is also a Q-semimartingale"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "g",
+      "quote": "while leaving the diffusion coefficient"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "g",
+      "quote": "changes the asset's drift from"
+     }
+    }
+   },
+   {
+    "id": "D5-132",
+    "sources": {
+     "k": "https://arxiv.org/abs/math/0202285"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "the foldings approach of John Stallings"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "the foldings approach of John Stallings",
+      "note": "Filed under probability and information theory; it belongs to combinatorial group theory."
+     },
+     "input": {
+      "verdict": "imprecise",
+      "src": "k",
+      "quote": "the foldings approach of John Stallings",
+      "note": "The input is a labeled graph (for a finitely generated subgroup of a free group); calling it an automaton is a reading, and the group-theoretic setting is not named."
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "pursue a detailed study of the subgroup structure of free groups",
+      "note": "The folded core graph represents the subgroup."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Correct in fact (folding preserves the subgroup the graph represents), but the abstract does not state it."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"all redundancy\"."
+     }
+    }
+   },
+   {
+    "id": "D5-130",
+    "sources": {
+     "a": "https://en.wikipedia.org/w/index.php?action=raw&title=Anscombe_transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "is a variance-stabilizing transformation that transforms a random variable with a Poisson distribution"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "is a variance-stabilizing transformation that transforms a random variable with a Poisson distribution",
+      "note": "The Anscombe transform is the shifted square root."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "a random variable with a Poisson distribution"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "into one with an approximately standard Gaussian dis"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "a",
+      "quote": "is a variance-stabilizing transformation"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"scale\"."
+     }
+    }
+   },
+   {
+    "id": "D5-015",
+    "sources": {
+     "b": "https://en.wikipedia.org/w/index.php?action=raw&title=Box–Muller_transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "is a random number sampling method for generating pairs of independent, standard, normally distributed"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "is a random number sampling method for generating pairs of independent, standard, normally distributed"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "given a source of uniforml"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "generating pairs of independent, standard, normally distributed"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "generating pairs of independent, standard, normally distributed"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"uniform structure\"."
+     }
+    }
+   },
+   {
+    "id": "D6-077",
+    "sources": {
+     "i": "https://en.wikipedia.org/w/index.php?action=raw&title=Itô_calculus"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "which is a Brownian motion or, more generally, a semimartingale. The result of the integration is then another stochastic process"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "Typically, the left end of the interval is used",
+      "note": "The contrast with Stratonovich confirms the chain-rule claim."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "which is a Brownian motion or, more generally, a semimartingale"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "The result of the integration is then another stochastic process"
+     },
+     "preserved": {
+      "verdict": "imprecise",
+      "src": "i",
+      "quote": "The stochastic integral satisfies the It",
+      "note": "The isometry is right (for Brownian or L^2 martingale integrators). \"Martingale property\" overstates: against a local martingale the integral is a local martingale, and against a general semimartingale it is a semimartingale."
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "i",
+      "quote": "it does follow the chain rule, and does not require It",
+      "note": "Said of the Stratonovich integral, by contrast with Ito's."
+     }
+    }
+   },
+   {
+    "id": "D6-014",
+    "sources": {
+     "b": "https://en.wikipedia.org/w/index.php?action=raw&title=Borel_functional_calculus"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "the bounded Borel functional calculus of a self adjoint operator T on Hilbert s"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "Extending by continuity defines f(T) for a continuous function f",
+      "note": "The source develops the self-adjoint case; the normal case the entry names is the standard generalization."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "the bounded Borel functional calculus of a self adjoint operator T on Hilbert s",
+      "note": "Self-adjoint in the source; normal in the entry."
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "is an involution-preserving and unit-preserving homomorphism from the ring of complex-valued bounded measurable functions"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "is an involution-preserving and unit-preserving homomorphism"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: non-measurable functions are outside the domain, not broken by the map."
+     }
+    }
+   },
+   {
+    "id": "D6-117",
+    "sources": {
+     "l": "https://en.wikipedia.org/w/index.php?action=raw&title=Lebesgue's_decomposition_theorem"
+    },
+    "fields": {
+     "name": {
+      "verdict": "imprecise",
+      "src": "l",
+      "quote": "is absolutely continuous with respect to",
+      "note": "The decomposition into absolutely continuous and singular parts is Lebesgue's decomposition; Radon-Nikodym then gives the density of the first part. The name conflates the two theorems, though the content is right."
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "is absolutely continuous with respect to"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "is absolutely continuous with respect to"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "are singular"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "is absolutely continuous with respect to"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"unified measure description\"."
+     }
+    }
+   },
+   {
+    "id": "D6-060",
+    "sources": {
+     "h": "https://en.wikipedia.org/w/index.php?action=raw&title=Hadamard_transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "is an example of a generalized class of Fourier transforms"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "also known as the Walsh"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "is an example of a generalized class of Fourier transforms"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "It performs an orthogonal, symmetric, involutive, linear operat"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "It performs an orthogonal, symmetric, involutive, linear operat",
+      "note": "Orthogonal gives Parseval; involutive gives self-inverse."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "\"Complex phase information\": the transform is real, so there is no phase to break; not stated by the source."
+     }
+    }
+   },
+   {
+    "id": "D6-062",
+    "sources": {
+     "k": "https://en.wikipedia.org/w/index.php?action=raw&title=Hankel_transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "is the Bessel function of the first kind of order"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "then its two-dimensional Fourier transform is given by",
+      "note": "The link to the 2D Fourier transform of circularly symmetric functions is stated; diagonalizing the radial Laplacian is not."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "is expanded in a multipole series"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "The inverse Hankel transform of"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "the Hankel transform defined this way is also its own inverse"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"Cartesian structure\"."
+     }
+    }
+   },
+   {
+    "id": "D8-034",
+    "sources": {
+     "c": "https://en.wikipedia.org/w/index.php?action=raw&title=CUR_matrix_approximation"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "A CUR matrix approximation is a set of three matrices C, U and R that, when multiplied together, closely approximate a given matrix"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "the rows and columns come from the original matrix"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "closely approximate a given matrix"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "A CUR matrix approximation is a set of three matrices C, U and R"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "the rows and columns come from the original matrix (rather than left and right singular vectors)"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "less accurate than the SVD"
+     }
+    }
+   },
+   {
+    "id": "D8-133",
+    "sources": {
+     "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Square_root_of_a_matrix"
+    },
+    "fields": {
+     "name": {
+      "verdict": "wrong",
+      "src": "s",
+      "quote": "Matrix B such that B",
+      "note": "The name is the matrix square root; the content describes marching triangles (isosurface reconstruction). Name and content are misaligned."
+     },
+     "description": {
+      "verdict": "wrong",
+      "src": "s",
+      "quote": "Matrix B such that B",
+      "note": "Describes marching triangles, not a matrix square root."
+     },
+     "input": {
+      "verdict": "wrong",
+      "src": "s",
+      "quote": "Matrix B such that B",
+      "note": "Cross-sectional data and an isovalue; a matrix square root takes a square matrix."
+     },
+     "output": {
+      "verdict": "wrong",
+      "src": "s",
+      "quote": "Matrix B such that B",
+      "note": "A triangle mesh; a matrix square root returns a matrix B."
+     },
+     "preserved": {
+      "verdict": "wrong",
+      "src": "s",
+      "quote": "Matrix B such that B",
+      "note": "Surface topology belongs to the misplaced content."
+     },
+     "broken": {
+      "verdict": "wrong",
+      "src": "s",
+      "quote": "Matrix B such that B",
+      "note": "Belongs to the misplaced content."
+     }
+    }
+   },
+   {
+    "id": "D8-083",
+    "sources": {
+     "t": "https://arxiv.org/abs/1011.1595"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "a structured dimension-reduction map called the subsampled randomized Hadamard transform"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "a structured dimension-reduction map called the subsampled randomized Hadamard transform",
+      "note": "The formula R H D with sampling, Walsh-Hadamard and random signs is the standard form; the abstract names the map but not its factors."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "a structured dimension-reduction map"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "a structured dimension-reduction map"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "the map preserves the Euclidean geometry of an entire subspace of vectors"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"full matrix (compressed)\"."
+     }
+    }
+   },
+   {
+    "id": "D8-143",
+    "sources": {
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Persistent_data_structure"
+    },
+    "fields": {
+     "name": {
+      "verdict": "unsupported",
+      "note": "Node splitting is the Driscoll, Sarnak, Sleator and Tarjan technique for full persistence (from memory); the source found names the paper but not the technique."
+     },
+     "description": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source found."
+     },
+     "input": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source found."
+     },
+     "output": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source found."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source found."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source found."
+     }
+    }
+   },
+   {
+    "id": "D8-125",
+    "sources": {
+     "d": "https://en.wikipedia.org/w/index.php?action=raw&title=Data_transformation_(statistics)",
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Principal_component_analysis"
+    },
+    "fields": {
+     "name": {
+      "verdict": "wrong",
+      "src": "d",
+      "quote": "both the area and population data have been transformed using the logarithm function",
+      "note": "The name is the log transform; the content describes principal component analysis. Name and content are misaligned."
+     },
+     "description": {
+      "verdict": "wrong",
+      "src": "d",
+      "quote": "both the area and population data have been transformed using the logarithm function",
+      "note": "Describes PCA (\"PCA on data matrix\"), not a log transform."
+     },
+     "input": {
+      "verdict": "wrong",
+      "src": "d",
+      "quote": "both the area and population data have been transformed using the logarithm function",
+      "note": "A data matrix for PCA; a log transform takes positive data."
+     },
+     "output": {
+      "verdict": "wrong",
+      "src": "d",
+      "quote": "both the area and population data have been transformed using the logarithm function",
+      "note": "Principal components; a log transform returns log-scaled data."
+     },
+     "preserved": {
+      "verdict": "wrong",
+      "src": "d",
+      "quote": "both the area and population data have been transformed using the logarithm function",
+      "note": "\"Variance explained\" belongs to PCA."
+     },
+     "broken": {
+      "verdict": "wrong",
+      "src": "d",
+      "quote": "both the area and population data have been transformed using the logarithm function",
+      "note": "Belongs to PCA."
+     }
+    }
+   },
+   {
+    "id": "D7-376",
+    "sources": {
+     "o": "https://arxiv.org/abs/1703.10857"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "o",
+      "quote": "These data accessors are collectively known as optics",
+      "note": "Setters are a kind of optic; the abstract does not name them."
+     },
+     "description": {
+      "verdict": "unsupported",
+      "note": "The setter's type is standard in the Haskell lens literature; the source found does not state it."
+     },
+     "input": {
+      "verdict": "unsupported",
+      "note": "\"Functorial structure\" is loose; not settled by the source."
+     },
+     "output": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     }
+    }
+   },
+   {
+    "id": "D7-290",
+    "sources": {
+     "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Sheaf_(mathematics)"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "called the sheafification or sheaf associated to the presheaf"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "is the left adjoint functor to the inclusion functor (or forgetful functor) from the category of sheaves to the category of presheaves",
+      "note": "The plus-construction-twice clause is standard but not stated here."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "It takes a presheaf"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "s",
+      "quote": "and produces a new sheaf"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Exactness and stalk preservation are standard but not stated by the source."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous."
+     }
+    }
+   },
+   {
+    "id": "D7-212",
+    "sources": {
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Graded_poset"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "admits a grading if and only if all maximal chains in P have the same length"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "admits a grading if and only if all maximal chains in P have the same length"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "A bounded poset"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "equipped with a rank function"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "all maximal chains in P have the same length"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim; nothing to check."
+     }
+    }
+   },
+   {
+    "id": "D7-123",
+    "sources": {
+     "l": "https://arxiv.org/abs/1701.00260",
+     "b": "https://arxiv.org/abs/2104.11808"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "It follows that the Siggers term is the weakest non-trivial loop condition"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "two independent proofs of the CSP Dichotomy Theorem",
+      "note": "The equivalence with a Taylor term follows from Siggers being the weakest non-trivial condition; the displayed identity is not in the abstracts."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "the Constraint Satisfaction Problem (CSP)"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "the Siggers term is the weakest non-trivial loop condition"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "l",
+      "quote": "the Siggers term is the weakest non-trivial loop condition"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim."
+     }
+    }
+   },
+   {
+    "id": "D7-052",
+    "sources": {
+     "b": "https://en.wikipedia.org/w/index.php?action=raw&title=Braided_monoidal_category"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "equipped with a braiding"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "a commutativity constraint"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "equipped with a braiding"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "a commutativity constraint"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "that satisfies axioms including the hexagon identities"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "A braided monoidal category is called symmetric if",
+      "note": "Symmetry is an extra condition, so a braiding squared need not be the identity."
+     }
+    }
+   },
+   {
+    "id": "D7-275",
+    "sources": {
+     "t": "https://en.wikipedia.org/w/index.php?action=raw&title=Triangulated_category"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "It follows from the other axioms that an exact triangle (and in particular the object Z) is determined up to isomorphism by the morphism"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "although not always up to a unique isomorphism"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "is determined up to isomorphism by the morphism"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "an exact triangle"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Long exact sequences under homological functors are standard; not stated in the matched text."
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "t",
+      "quote": "although not always up to a unique isomorphism",
+      "note": "Non-unique isomorphism is why the cone is not functorial."
+     }
+    }
+   },
+   {
+    "id": "D7-183",
+    "sources": {
+     "f": "https://en.wikipedia.org/w/index.php?action=raw&title=Filter_(mathematics)"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "is a filter, called the principal filter at"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "is a filter, called the principal filter at"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "is a filter, called the principal filter at"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "is a filter, called the principal filter at"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Order-reversing embedding into filters is correct but not stated by the source."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim."
+     }
+    }
+   },
+   {
+    "id": "D7-129",
+    "sources": {
+     "d": "https://en.wikipedia.org/w/index.php?action=raw&title=Distributive_property"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "x \\cdot (y + z) = x \\cdot y + x \\cdot z"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "x \\cdot (y + z) = x \\cdot y + x \\cdot z"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "x \\cdot (y + z) = x \\cdot y + x \\cdot z"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "x \\cdot (y + z) = x \\cdot y + x \\cdot z"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "x \\cdot (y + z) = x \\cdot y + x \\cdot z"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"term length and shape\"."
+     }
+    }
+   },
+   {
+    "id": "D7-339",
+    "sources": {
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Postnikov_system"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "A Postnikov system of a path-connected space"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "induces an isomorphism"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "A Postnikov system of a path-connected space"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "that are fibrations with Eilenberg-MacLane spaces"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "induces an isomorphism"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "In short, we are decomposing the homotopy type of X using an inverse s",
+      "note": "Each stage kills the homotopy above n."
+     }
+    }
+   },
+   {
+    "id": "D7-192",
+    "sources": {
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Priestley_space"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "between the category of Priestley spaces and the category of bounded distributive lattices"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "Priestley spaces play a fundamental role in the study of distributive lattices",
+      "note": "The prime-filter construction of the dual space is standard; not in the matched text."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "the category of bounded distributive lattices"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "between the category of Priestley spaces"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "Each open up-set of",
+      "note": "Clopen up-sets recover the lattice."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim for a dual equivalence."
+     }
+    }
+   },
+   {
+    "id": "D7-235",
+    "sources": {
+     "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Mapping_cylinder"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "Mapping cylinders are central to the definition of cofibrations"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "is a deformation retract of"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "Mapping cylinders are central to the definition of cofibrations"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "is a deformation retract of"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "is a deformation retract of"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "\"Strictness of Y\" is loose; not settled by the source."
+     }
+    }
+   },
+   {
+    "id": "D7-252",
+    "sources": {
+     "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Galois_cohomology"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "uer group, and the implications seem to have been well known to algebraists of the 1930s",
+      "note": "The source's history of Galois cohomology."
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "In another direction, that of torsors",
+      "note": "Indirect: torsors and forms (quadratic forms, simple algebras) appear as the objects the theory classifies."
+     },
+     "input": {
+      "verdict": "unsupported",
+      "note": "Field and Galois module: standard, not in the matched text."
+     },
+     "output": {
+      "verdict": "unsupported",
+      "note": "Not in the matched text."
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "c",
+      "quote": "such as quadratic forms, simple algebras",
+      "note": "Indirect."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim."
+     }
+    }
+   },
+   {
+    "id": "D7-302",
+    "sources": {
+     "n": "https://ncatlab.org/nlab/show/comprehension+category"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "n",
+      "quote": "A comprehension category consists of a strictly commutative triangle of functors"
+     },
+     "description": {
+      "verdict": "unsupported",
+      "note": "The attribution (Lawvere, Jacobs) and the subobject reading are standard; not settled by the matched text."
+     },
+     "input": {
+      "verdict": "unsupported",
+      "note": "Not settled by the matched text."
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "n",
+      "quote": "A comprehension category consists of a strictly commutative triangle of functors"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Vacuous: \"membership\"."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim."
+     }
+    }
+   },
+   {
+    "id": "D7-402",
+    "sources": {
+     "k": "https://en.wikipedia.org/w/index.php?action=raw&title=Killing_form"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "Symmetric bilinear form in mathematics"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "which states that the Killing form is non-degenerate if and only if the Lie algebra is a direct sum of simple Lie algebras"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "Consider a Lie al"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "Symmetric bilinear form in mathematics"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "k",
+      "quote": "is invariant"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim."
+     }
+    }
+   },
+   {
+    "id": "D7-318",
+    "sources": {
+     "d": "https://en.wikipedia.org/w/index.php?action=raw&title=Double-negation_translation"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "is a general approach for embedding classical logic into intuitionistic logic"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "the Gödel–Gentzen translation and Kuroda's translation for first-order logic",
+      "note": "The topos-theoretic clause is not in the matched text."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "is a general approach for embedding classical logic into intuitionistic logic"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "is a general approach for embedding classical logic into intuitionistic logic"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "d",
+      "quote": "in classical logic if and only if T"
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Loss of disjunction and existence properties is standard; not stated in the matched text."
+     }
+    }
+   },
+   {
+    "id": "D8-222",
+    "sources": {},
+    "fields": {
+     "name": {
+      "verdict": "unsupported",
+      "note": "Uniform row sampling as a sketch is standard in randomized linear algebra; no source found that settles this entry."
+     },
+     "description": {
+      "verdict": "unsupported",
+      "note": "Not settled by a source found."
+     },
+     "input": {
+      "verdict": "unsupported",
+      "note": "Not settled by a source found."
+     },
+     "output": {
+      "verdict": "unsupported",
+      "note": "Not settled by a source found."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "The coherence condition is correct from memory; not settled by a source found."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not settled by a source found."
+     }
+    }
+   },
+   {
+    "id": "D8-102",
+    "sources": {
+     "z": "https://en.wikipedia.org/w/index.php?action=raw&title=Z-transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "The inverse Z-transform is"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "The inverse Z-transform is",
+      "note": "The contour integral is the source's displayed formula; the partial-fraction and series methods are not in the matched text."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "The inverse Z-transform is"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "the Z-transform converts a discrete-time signal, which is a sequence of real or complex n"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Invertibility given the region is standard; not in the matched text."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "A no-loss claim."
+     }
+    }
+   },
+   {
+    "id": "D8-169",
+    "sources": {
+     "q": "https://en.wikipedia.org/w/index.php?action=raw&title=Quotient_graph"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "a quotient graph Q of a graph G is a graph whose vertices are blocks of a partition of the vertices of G"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "a quotient graph Q of a graph G is a graph whose vertices are blocks of a partition of the vertices of G"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "blocks of a partition of the vertices of G"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "is a graph whose vertices are blocks of a partition"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "where block B is adjacent to block C if some vertex in B is adj"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "q",
+      "quote": "a graph whose vertices are blocks of a partition of the vertices of G",
+      "note": "Edges inside a block have no image."
+     }
+    }
+   },
+   {
+    "id": "D8-040",
+    "sources": {
+     "h": "https://arxiv.org/abs/1501.01652"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "h",
+      "quote": "computing the discrete Hankel transform of order"
+     },
+     "description": {
+      "verdict": "imprecise",
+      "src": "h",
+      "quote": "evaluating Schlömilch and Fourier--Bessel expansions",
+      "note": "Sampling at Bessel zeros is one standard definition (Fourier-Bessel); the source treats several discretizations, so the fill's single definition is narrower than the term."
+     },
+     "input": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     },
+     "output": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "\"Approximate energy\" is not settled by the source."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     }
+    }
+   },
+   {
+    "id": "D2-036",
+    "sources": {
+     "z": "https://en.wikipedia.org/w/index.php?action=raw&title=Zonal_spherical_function"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "Zonal spherical functions have been explicitly determined for real semisimple groups by Harish-Chandra"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "is the K-biinvariant continuous function of compact support",
+      "note": "The spherical transform setting (K-bi-invariant functions, spherical functions) is stated; the reduction to the Cartan subspace modulo the Weyl group is not in the matched text."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "is the K-biinvariant continuous function of compact support"
+     },
+     "output": {
+      "verdict": "unsupported",
+      "note": "Weyl-invariant function on a*: standard, not in the matched text."
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "they were obtained in full generality in the 1960s in terms of Harish-Chandra's c-function",
+      "note": "The Plancherel theorem with the c-function."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not settled by the source."
+     }
+    }
+   },
+   {
+    "id": "D8-234",
+    "sources": {
+     "z": "https://en.wikipedia.org/w/index.php?action=raw&title=Z-transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "the Z-transform converts a discrete-time signal, which is a sequence of real or complex n"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "Z-transform is derived from the Laplace transform"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "which is a sequence of real or complex n"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "z",
+      "quote": "discrete spatial domain signal into complex frequency domain representation"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Convolution theorem and region-of-convergence invertibility are standard; not in the matched text."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Not settled by the matched text."
+     }
+    }
+   },
+   {
+    "id": "D8-163",
+    "sources": {
+     "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Principal_component_analysis"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "Principal component analysis (PCA) is a linear dimensionality reduction technique"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "The first principal component can equivalently be defined as a direction that maximizes the variance of the projected data"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "The data are linearly transformed onto a new coordinate system"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "The data are linearly transformed onto a new coordinate system such that the directions (principal comp"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "a direction that maximizes the variance of the projected data"
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "p",
+      "quote": "is a linear dimensionality reduction technique",
+      "note": "Linear: non-linear structure is not captured."
+     }
+    }
+   },
+   {
+    "id": "D8-140",
+    "sources": {
+     "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Mycielskian"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "The construction preserves the property of being triangle-free but increases the chromatic number"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "The construction preserves the property of being triangle-free but increases the chromatic number"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "The Mycielski graph μ(G) contains G itself as a subgraph"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "has 2n+1 vertices and 3m+n edges"
+     },
+     "preserved": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "The only new triangles in μ(G) are of the form",
+      "note": "Clique number is preserved when G has an edge; for an edgeless G it rises from 1 to 2. The fill omits that case."
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "m",
+      "quote": "but increases the chromatic number"
+     }
+    }
+   },
+   {
+    "id": "D8-101",
+    "sources": {
+     "b": "https://en.wikipedia.org/w/index.php?action=raw&title=Two-sided_Laplace_transform"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "The inverse transformation then represents a synthesis of the signal as the sum of its frequency components"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "the above definition converges in a strip",
+      "note": "The Bromwich contour inside the strip is standard; the matched text states the strip and the inverse."
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "the above definition converges in a strip"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "b",
+      "quote": "The inverse transformation then represents a synthesis of the signal"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Invertibility given the strip: standard, not in the matched text."
+     },
+     "broken": {
+      "verdict": "unsupported",
+      "note": "Ambiguity without the strip: standard, not in the matched text."
+     }
+    }
+   },
+   {
+    "id": "D8-058",
+    "sources": {
+     "f": "https://en.wikipedia.org/w/index.php?action=raw&title=Finite_difference_method"
+    },
+    "fields": {
+     "name": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "finite-difference methods (FDM) are a class of numerical techniques for solving differential equations by approximating derivatives with finite differences"
+     },
+     "description": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "are approximated by solving algebraic equations containing finite differences and values from nearby points"
+     },
+     "input": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "for solving differential equations"
+     },
+     "output": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "by solving algebraic equations containing finite differences"
+     },
+     "preserved": {
+      "verdict": "unsupported",
+      "note": "Consistency and conservation are standard; not in the matched text."
+     },
+     "broken": {
+      "verdict": "confirmed",
+      "src": "f",
+      "quote": "truncation error or discretization error, the difference between the exact solution of the original"
+     }
+    }
+   }
+  ]
+ },
+ "targeted": [
+  {
+   "id": "D2-117",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&title=Blowing_up"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "blowing up or blowup is a type of geometric transformation"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "which replaces a subspace of a given space with the space of all directions pointing out of that subspace",
+     "note": "The locus need not be singular: any closed subscheme (or submanifold) can be blown up. \"Fundamental birational surgery\" is right: the source calls blowups the most fundamental transformation in birational geometry."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "let X be a scheme, and let",
+     "note": "The general input is a scheme with a coherent sheaf of ideals; a variety with a closed subvariety is the classical case."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "to replace the blow-up locus Z with the exceptional divisor E"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "is a birational mapping which, away from",
+     "note": "Birational, hence the same function field."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "It is not difficult to show that E intersects itself negatively.",
+     "note": "What changes is more than local structure at Z: Z is replaced by a divisor of negative self-intersection (for a point on a surface, a (-1)-curve), and the topology changes (over C a connected sum with a reversed projective plane; over R a Moebius strip)."
+    }
+   }
+  },
+  {
+   "id": "D2-118",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Castelnuovo%27s_contraction_theorem",
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&title=Intersection_theory"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "This contraction morphism is sometimes called a blowdown, which is the inverse operation of blowup."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "This contraction morphism is sometimes called a blowdown, which is the inverse operation of blowup."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "which means a smooth rational curve of self-intersection number",
+     "note": "\"Contractible exceptional\" hides the condition. On a smooth projective surface, contraction to a smooth point needs a (-1)-curve (Castelnuovo). Other curves contract, when they do, to singular points: a (-2)-curve to a Du Val point."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "has been contracted to one point"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "this morphism is an isomorphism outside"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "-curve is the exceptional curve of some blow-up",
+     "note": "What is lost is recoverable: the contracted curve is the exceptional curve of the blow-up at its image point. The Stacks Project defines a contraction exactly so (Tag 0C5J: X is the blowing up of X' at x)."
+    }
+   }
+  },
+  {
+   "id": "D7-068",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "r": "https://ncatlab.org/nlab/source/reflective+subcategory",
+    "a": "https://ncatlab.org/nlab/source/Aufhebung"
+   },
+   "fields": {
+    "name": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "whose reflection preserves finite limits",
+     "note": "In the nLab's usage (Lawvere's), a localization is a reflective subcategory whose reflector is left exact. A bare reflective subcategory is not yet a localization in that sense, and a composite built on this entry needs the left exact kind."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The reflector in that case is the sheafification functor."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "A _reflective subcategory_ is a full subcategory"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The left adjoint is sometimes called the __reflector__"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "A reflective subcategory is always closed under limits which exist in the ambient category"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "When the unit of the reflector is a monomorphism",
+     "note": "The unit can add (a monomorphism, as in completion) or kill (an epimorphism, as in abelianization); the entry's gloss holds."
+    }
+   }
+  },
+  {
+   "id": "D7-284",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/essential+geometric+morphism"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "it is an **essential geometric morphism** if the"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "but also a left adjoint"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Given a geometric morphism"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "f_! \\dashv f^* \\dashv f_*"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "of an essential geometric morphism preserves small limits since it is a right adjoint",
+     "note": "Limits because the inverse image is now a right adjoint; colimits because it was already a left adjoint."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "e",
+     "quote": "is essential iff $f^\\ast$ preserves small limits iff $f^\\ast$ preserves small products",
+     "note": "Essentiality is a property of the geometric morphism (a condition on its inverse image, with the extra left adjoint determined up to isomorphism), not extra structure. \"Nothing is broken\" stands."
+    }
+   }
+  },
+  {
+   "id": "D7-288",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/Lawvere-Tierney+topology"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "a closure operator given by a left exact idempotent monad on the internal meet-semilattice"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "a closure operator given by a left exact idempotent monad on the internal meet-semilattice",
+     "note": "Inflationary and idempotent (a monad on the truth values), meet-preserving (left exact): the entry's three conditions."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "a Lawvere-Tierney topology on $E$, the inclusion"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is itself a topos"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "which has a left exact left adjoint functor",
+     "note": "Sheafification, the left adjoint, preserves finite limits: the inclusion of j-sheaves is a geometric embedding, the left exact localization a composite built on this entry needs."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "which amounts to the same thing as a natural closure operator on subobjects",
+     "note": "Subobjects with the same closure are identified among the j-sheaves: the truth values j collapses."
+    }
+   }
+  },
+  {
+   "id": "D4-176",
+   "why": "Requested by a composite; receipted.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&title=Hodge_theory",
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&title=Helmholtz_decomposition"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A variant of the Hodge theorem is the Hodge decomposition."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The Hodge decomposition is a generalization of the Helmholtz decomposition for the de Rham complex.",
+     "note": "The map's formula is the standard one; for vector fields in three dimensions it is the Helmholtz (Leray) decomposition used in the Navier-Stokes cascade."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "on a closed Riemannian manifold as a sum of three parts in the form"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "this gives an orthogonal direct sum decomposition"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "has an orthogonal decomposition",
+     "note": "The L^2 orthogonality of gradient and curl parts is the invariant the PDE program uses: a pressure gradient pairs to zero with any curl."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "there is a unique decomposition of any differential form",
+     "note": "A decomposition breaks nothing: it is an isomorphism onto the direct sum. What loses information is projecting onto one part (as the Leray projection discards the gradient part)."
+    }
+   }
+  }
+ ]
+}

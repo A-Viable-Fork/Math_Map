@@ -1,0 +1,8 @@
+Excerpts, verbatim as extracted, from: József Bodnár, Construction of bicuspidal rational complex projective plane curves, arXiv:1608.02921 (2016)
+URL: https://arxiv.org/pdf/1608.02921
+Fetched: 2026-09-30. SHA-256 of the PDF as fetched: f6d4964028c9b93126ad44086ed3d5b2f0993cc82b7372b4f5859d253fcdcaec
+Text extracted with pypdf, which drops some spaces and superscripts ("by1" is "by 1"; "e−m2" is e minus m squared) and keeps ligatures. Only the windows below are kept; each was checked to occur in the extracted text.
+
+Blowing up a smooth point of any divisor decreases its self-intersection by1.
+
+More generally, if a curve with self-intersectione on a complex surface has a singular point with multiplicitym, then blowing up that point leads to a strict transform with self-intersection e−m2.

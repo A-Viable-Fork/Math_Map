@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Transition state theory, section on Kramers theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Transition_state_theory
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: dbb452dd493f715fe59a8028a52ffc9f19fc9c4a116b96065f005d55cb333802
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+By modeling reactions as Langevin motion along a one dimensional reaction coordinate, [[Hans Kramers|Hendrik Kramers]] was able to derive a relationship between the shape of the potential-energy surface along the reaction coordinate and the transition rates of the system.
+
+In the overdamped (or "diffusive") regime, the transition rate from state ''A'' to ''B'' is related to the resonant frequency of the wells via
+
+k^{A\rightarrow B} = \frac{\omega_a\omega_H}{2\pi\gamma}\exp\left(-\frac{E_H-E_A}{k_\text{B}T}\right)

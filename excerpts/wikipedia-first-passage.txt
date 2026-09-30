@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, First-hitting-time model (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=First-hitting-time_model
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: a289d4fd34adefc4d28a221eb25bde8cbdc11d7b973198f90524182590c37641
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+First-hitting-time models can be applied to expected lifetimes, of patients or mechanical devices. When the process reaches an adverse threshold state for the first time, the patient dies, or the device breaks down.
+
+The first-passage time for a Brownian particle therefore follows a [[Lévy distribution]].

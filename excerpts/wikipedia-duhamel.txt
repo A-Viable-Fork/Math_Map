@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Duhamel's principle (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Duhamel%27s_principle
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 2bf9cc283771fbb8c8989f270c520c5466a39e4b45cd966336eecbfb33c90957
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Duhamel's principle is the result that the solution to an inhomogeneous, linear, partial differential equation can be solved by first finding the solution for a step input, and then superposing using [[Duhamel's integral]].
+
+In this formulation, Duhamel's principle says that the solution of the inhomogeneous problem is obtained by superposing homogeneous evolutions started at all earlier times
