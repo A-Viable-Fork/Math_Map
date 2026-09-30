@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Completion of a ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899860
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 6adf4592b2612d24073fec1a6a7e8d2b615a3b479b0e7610ae516a7b3054ab44
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,
+
+when the intersection of the <math>F^i E</math> equals zero, this produces a [[Topological_ring#Completion|complete topological ring]].

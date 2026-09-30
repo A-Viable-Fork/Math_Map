@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/AdicCompletion/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/AdicCompletion/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 002059eb974c53959c2212ab49fbaefb33c24cb030ac6807682bf24c466a0fb2
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AdicCompletion.of_injective_iff (line 618)
+theorem of_injective_iff : Function.Injective (of I M) ↔ IsHausdorff I M

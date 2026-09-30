@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Matroid minor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374757504
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 5570ef394609a882d0a9860b123b4e2de2d126ba1ce622a26de5a42d9a155958
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Robertson and Seymour conjectured that the matroids representable over any particular [[finite field]] are well-quasi-ordered. So far this has been proven only for the matroids of bounded branchwidth.
+
+A proof of this conjecture was announced, but not published, by Geelen, Gerards, and Whittle in 2014.

@@ -3518,6 +3518,401 @@
    }
   },
   {
+   "id": "D1-060",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Matroid_minor"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "a minor of a matroid M is another matroid N that is obtained from M by a sequence of restriction and contraction operations"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "conjectured that the matroids representable over any particular finite field are well-quasi-ordered. So far this has been proven only for the matroids of bounded branchwidth.",
+     "note": "The entry states well-quasi-ordering for matroids representable over finite fields as a fact. The source gives it as a conjecture of Robertson and Seymour, proved for bounded branchwidth; Geelen, Gerards and Whittle announced a proof of the related Rota conjecture in 2014 but have not published it."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is obtained from M by a sequence of restriction and contraction operations"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "a minor of a matroid M is another matroid N"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "shows that the minor ordering is not a well-quasi-ordering on all matroids",
+     "note": "Minor-closed properties survive by definition; representability over a field is minor-closed."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is obtained from M by a sequence of restriction and contraction operations"
+    }
+   }
+  },
+  {
+   "id": "D1-098",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&title=Order_isomorphism"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "an order isomorphism from"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is a bijective function f from S to T with the property that, for every x"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "given two posets"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is a bijective function f from S to T"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "by simply relabeling the vertices"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "by simply relabeling the vertices",
+     "note": "Only the labels change."
+    }
+   }
+  },
+  {
+   "id": "D2-051",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&title=Jordan%E2%80%93Chevalley_decomposition"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "Jordan–Chevalley decomposition"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": "potentially diagonalisable part is also characterised as the semisimple part.",
+     "note": "D is semisimple: diagonalizable over an extension field where the characteristic polynomial splits, not necessarily over the given field."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "If K is a perfect field, then every polynomial is a product of separable polynomials"
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": "potentially diagonalisable part is also characterised as the semisimple part.",
+     "note": "D is semisimple (potentially diagonalizable), as Mathlib states it."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "Jordan–Chevalley decomposition",
+     "note": "D and N are polynomials in A; D has A's eigenvalues."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Single operator form\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D2-073",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Completion_of_a_ring"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "completion is the inverse limit of the factor rings,"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "completion is the inverse limit of the factor rings,",
+     "note": "The completion is the inverse limit of R/I^n, which is a formal power series ring only in cases like k[x] at (x). It extends R (the map R -> R-hat is injective) only when the powers of I intersect in zero."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the filtration on a commutative ring R by the powers of a proper ideal I"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "completion is the inverse limit of the factor rings,"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "completion is the inverse limit of the factor rings,",
+     "note": "A ring map, and ideals extend."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Finiteness, algebraic simplicity\" names no invariant; a completion of a Noetherian ring is Noetherian."
+    }
+   }
+  },
+  {
+   "id": "D2-078",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&title=Integral_element"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is called the integral closure of A in B"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "integral closure is closely related with normalization and normal schemes"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is called the integral closure of A in B"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is called the integral closure of A in B"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is called the integral closure of A in B",
+     "note": "The integral closure of a domain in its fraction field has the same fraction field."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "integral closure is closely related with normalization and normal schemes",
+     "note": "Normalization resolves singularities in codimension one (all of them, for curves), not all singularities."
+    }
+   }
+  },
+  {
+   "id": "D2-110",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&title=Pontryagin_duality"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The Pontryagin duality theorem establishes Pontryagin duality"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "any locally compact abelian group is naturally isomorphic with its bidual"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "any locally compact abelian group is naturally isomorphic with its bidual"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The Pontryagin duality theorem establishes Pontryagin duality"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "any locally compact abelian group is naturally isomorphic with its bidual"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Element structure\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D2-112",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Spectrum_of_a_ring"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the prime spectrum (or simply the spectrum) of a commutative ring R is the set of all prime ideals of R"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "called the structure sheaf, which makes it a ringed space"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the prime spectrum (or simply the spectrum) of a commutative ring R is the set of all prime ideals of R"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "equipped with a topology called the Zariski topology"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "called the structure sheaf, which makes it a ringed space",
+     "note": "Global sections of the structure sheaf recover R (Mathlib's AlgebraicGeometry.Scheme.ΓSpecIso)."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-geometric properties\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D2-153",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Monad_(category_theory)"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "using the Eilenberg–Moore category"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "using the Eilenberg–Moore category"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "any monad can be found as an explicit adjunction of functors using the Eilenberg–Moore category"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "using the Eilenberg–Moore category"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "any monad can be found as an explicit adjunction of functors using the Eilenberg–Moore category"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Underlying category\" names no invariant; the forgetful functor keeps it."
+    }
+   }
+  },
+  {
+   "id": "D2-154",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&title=Kleisli_category"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a Kleisli category is a category naturally associated to any monad T"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a Kleisli category is a category naturally associated to any monad T"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a Kleisli category is a category naturally associated to any monad T"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a Kleisli category is a category naturally associated to any monad T"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "It is equivalent to the category of free T-algebras."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original morphisms\": the Kleisli category has C's objects and new morphisms; C's morphisms embed through the free functor."
+    }
+   }
+  },
+  {
+   "id": "D2-188",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&title=Adjoint_functors"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the adjoint functor theorem of Peter J. Freyd"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the adjoint functor theorem of Peter J. Freyd"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "has a left adjoint if and only if it is continuous",
+     "note": "Needs a complete domain category, preservation of limits, and the solution set condition."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the adjoint functor theorem of Peter J. Freyd"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the adjoint functor theorem of Peter J. Freyd"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-adjoint properties\" names no invariant."
+    }
+   }
+  },
+  {
    "id": "D8-107",
    "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
    "sources": {

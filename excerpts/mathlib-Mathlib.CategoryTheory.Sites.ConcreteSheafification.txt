@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Sites/ConcreteSheafification.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/ConcreteSheafification.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: b199bc8313bf24226be5244857c667f13a0a302eb54814eb023fe0f8bc55b5a6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.GrothendieckTopology.sheafify (line 441)
+noncomputable def sheafify (P : Cᵒᵖ ⥤ D) : Cᵒᵖ ⥤ D :=
+  J.plusObj (J.plusObj P)

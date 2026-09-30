@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Jordan–Chevalley decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376010683
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: e57bbb9b255f48ed8d893ed9fe6a3f9ce9e9d8af4e797431701642e8f8f7b14f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+potentially diagonalisable part is also characterised as the [[Semi-simple operator|semisimple]] part.

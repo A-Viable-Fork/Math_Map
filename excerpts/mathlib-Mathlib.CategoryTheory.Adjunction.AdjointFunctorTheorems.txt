@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: dcdd75a8f7827f376aa76edfec469ac044efd6d31cd444e154f7a5590c386ca6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition (line 81)
+lemma isRightAdjoint_of_preservesLimits_of_solutionSetCondition [HasLimitsOfSize.{w, w} D]
+    [PreservesLimitsOfSize.{w, w} G] (hG : SolutionSetCondition.{w} G)
+    [LocallySmall.{w} D] : G.IsRightAdjoint

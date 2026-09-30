@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Combinatorics/Matroid/Minor/Order.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Order.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 434f51c9d1532b4837f9876520cc0b1e7ac9968fb71488c5e16a40f9e592eb5c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matroid.IsMinor (line 48)
+def IsMinor (N M : Matroid α) : Prop := ∃ C D, N = M ／ C ＼ D
+
+-- Matroid.IsMinor.trans (line 78)
+lemma IsMinor.trans {M₁ M₂ M₃ : Matroid α} (h : M₁ ≤m M₂) (h' : M₂ ≤m M₃) : M₁ ≤m M₃

@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "90b47359f1ca38df3a5f104f9b462dca835cf224"
+  "commit": "43cedba66bae1315bd8bc4da39524c0d3bdc7141"
  },
  "domains": {
   "D1": {
@@ -364,20 +364,20 @@
    "added": 8
   },
   "byTier": {
-   "landed": 1364,
-   "audited": 89,
+   "landed": 1354,
+   "audited": 99,
    "authored": 495,
    "receipted": 14
   },
   "withConditions": 7,
-  "corrected": 17,
+  "corrected": 20,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 82,
-   "unchecked": 11154,
+   "unsupported": 89,
+   "unchecked": 11094,
    "imprecise": 20,
-   "sourced": 489,
-   "formal": 27
+   "sourced": 536,
+   "formal": 33
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -397,14 +397,14 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 30,
-   "links": 65,
+   "entries": 41,
+   "links": 81,
    "byMatch": {
-    "exact": 44,
-    "conflicts": 2,
-    "special": 6,
+    "exact": 56,
+    "conflicts": 3,
+    "special": 8,
     "general": 9,
-    "ingredient": 3,
+    "ingredient": 4,
     "related": 1
    }
   }
@@ -2130,7 +2130,7 @@
     "compression",
     "surgery"
    ],
-   "description": "Result of any sequence of deletion and contraction operations. Gives rise to forbidden minor characterizations of matroid classes. Well-quasi-ordering under the minor relation (for matroids representable over finite fields).",
+   "description": "Result of any sequence of deletion and contraction operations. Gives rise to forbidden-minor characterizations of matroid classes. Minors are not well-quasi-ordered on all matroids; for matroids representable over a fixed finite field, well-quasi-ordering is a conjecture of Robertson and Seymour, proved for bounded branchwidth (Geelen, Gerards and Whittle announced a proof of the related Rota conjecture in 2014, unpublished).",
    "input": "Matroid M + sequence of deletion/contraction operations",
    "output": "Minor matroid N",
    "preserved": "Properties closed under minors (representability over given field, excluded minor characterizations)",
@@ -2140,14 +2140,59 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Result of any sequence of deletion and contraction operations. Gives rise to forbidden minor characterizations of matroid classes. Well-quasi-ordering under the minor relation (for matroids representable over finite fields)."
+    },
+    "reason": "Graded imprecise: the landed text states well-quasi-ordering for matroids over finite fields as settled.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-matroid-minor.txt",
+      "quote": "Robertson and Seymour conjectured that the matroids representable over any particular [[finite field]] are well-quasi-ordered. So far this has been proven only for the matroids of bounded branchwidth.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-matroid-minor.txt",
+      "quote": "A proof of this conjecture was announced, but not published, by Geelen, Gerards, and Whittle in 2014.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Matroid.IsMinor",
+     "file": "Mathlib/Combinatorics/Matroid/Minor/Order.lean",
+     "match": "ingredient",
+     "note": "The minor relation.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Order.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Matroid.IsMinor.trans",
+     "file": "Mathlib/Combinatorics/Matroid/Minor/Order.lean",
+     "match": "exact",
+     "note": "A minor of a minor is a minor: any sequence of deletions and contractions gives a minor.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Order.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D1-061",
@@ -3179,14 +3224,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "OrderIso.le_iff_le",
+     "file": "Mathlib/Order/Hom/Basic.lean",
+     "match": "exact",
+     "note": "e x ≤ e y iff x ≤ y.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Hom/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D1-099",
@@ -5293,9 +5349,9 @@
     "decomposition",
     "spectral"
    ],
-   "description": "A = D + N (commuting diag + nilpotent).",
+   "description": "A = D + N with D semisimple (diagonalizable over a splitting field), N nilpotent, and DN = ND.",
    "input": "Linear operator on fin-dim space over perfect field",
-   "output": "D (diagonalizable) + N (nilpotent), DN = ND",
+   "output": "D (semisimple) + N (nilpotent), DN = ND",
    "preserved": "Eigenvalues in D, nilpotent index in N",
    "broken": "Single operator form",
    "complexity": "O(n^3)",
@@ -5303,14 +5359,55 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "output"
+    ],
+    "landed": {
+     "description": "A = D + N (commuting diag + nilpotent).",
+     "output": "D (diagonalizable) + N (nilpotent), DN = ND"
+    },
+    "reason": "Description and output graded imprecise: over a perfect field D is semisimple, diagonalizable only once the characteristic polynomial splits.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-jordan-chevalley.txt",
+      "quote": "potentially diagonalisable part is also characterised as the [[Semi-simple operator|semisimple]] part.",
+      "fields": [
+       "description",
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt",
+      "quote": "IsNilpotent n ∧ IsSemisimple s ∧ f = n + s",
+      "fields": [
+       "description",
+       "output"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Module.End.exists_isNilpotent_isSemisimple",
+     "file": "Mathlib/LinearAlgebra/JordanChevalley.lean",
+     "match": "conflicts",
+     "note": "Over a perfect field Mathlib's decomposition has a semisimple part, not a diagonalizable one: the landed output says diagonalizable, which needs the characteristic polynomial to split.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-052",
@@ -5967,7 +6064,7 @@
     "construction",
     "algebra-bridge"
    ],
-   "description": "Extends ring to formal power series via I-adic topology. Enables analytic methods on algebraic structures.",
+   "description": "The inverse limit of the quotients R/I^n (for k[x] at the ideal (x), the formal power series ring k[[x]]). The map from R is injective, so the completion extends R, exactly when the powers of I intersect in zero.",
    "input": "Ring R + ideal I",
    "output": "Completion R-hat",
    "preserved": "Ring structure, ideal containment",
@@ -5977,14 +6074,58 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Extends ring to formal power series via I-adic topology. Enables analytic methods on algebraic structures."
+    },
+    "reason": "Graded imprecise: the landed text says the completion extends R to formal power series, true only in special cases and only when R is I-adically separated.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-completion-of-a-ring.txt",
+      "quote": "The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-completion-of-a-ring.txt",
+      "quote": "when the intersection of the <math>F^i E</math> equals zero, this produces a [[Topological_ring#Completion|complete topological ring]].",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.RingTheory.AdicCompletion.Basic.txt",
+      "quote": "theorem of_injective_iff : Function.Injective (of I M) ↔ IsHausdorff I M",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "AdicCompletion.of_injective_iff",
+     "file": "Mathlib/RingTheory/AdicCompletion/Basic.lean",
+     "match": "special",
+     "note": "The map into the completion is injective exactly when the module is I-adically Hausdorff: the condition under which completion extends R.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/AdicCompletion/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-074",
@@ -6141,14 +6282,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-079",
@@ -7041,14 +7183,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "AddChar.doubleDualEmb_bijective",
+     "file": "Mathlib/Analysis/Fourier/FiniteAbelian/PontryaginDuality.lean",
+     "match": "special",
+     "note": "Pontryagin duality for finite abelian groups: the map to the double dual is bijective. The locally compact case is not in Mathlib at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Fourier/FiniteAbelian/PontryaginDuality.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-111",
@@ -7097,14 +7250,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "formal",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "AlgebraicGeometry.Scheme.ΓSpecIso",
+     "file": "Mathlib/AlgebraicGeometry/Scheme.lean",
+     "match": "exact",
+     "note": "Global sections of Spec R recover R.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicGeometry/Scheme.lean"
+    },
+    {
+     "field": "output",
+     "decl": "AlgebraicGeometry.Spec",
+     "file": "Mathlib/AlgebraicGeometry/Scheme.lean",
+     "match": "exact",
+     "note": "Spec R is a scheme (an affine one).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicGeometry/Scheme.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-113",
@@ -8399,14 +8571,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Monad.adj",
+     "file": "Mathlib/CategoryTheory/Monad/Algebra.lean",
+     "match": "exact",
+     "note": "The free and forgetful functors between C and its Eilenberg-Moore category are adjoint.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Algebra.lean"
+    },
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Monad.Algebra",
+     "file": "Mathlib/CategoryTheory/Monad/Algebra.lean",
+     "match": "exact",
+     "note": "An algebra for a monad: an object with a structure map satisfying unit and associativity.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Algebra.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-154",
@@ -8426,14 +8617,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Kleisli",
+     "file": "Mathlib/CategoryTheory/Monad/Kleisli.lean",
+     "match": "exact",
+     "note": "The Kleisli category of a monad.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Kleisli.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Kleisli.Adjunction.adj",
+     "file": "Mathlib/CategoryTheory/Monad/Kleisli.lean",
+     "match": "exact",
+     "note": "The Kleisli adjunction, whose monad is T.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Kleisli.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-155",
@@ -9442,14 +9652,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "formal",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition",
+     "file": "Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean",
+     "match": "exact",
+     "note": "Freyd's general adjoint functor theorem: a limit-preserving functor from a complete category satisfying the solution set condition is a right adjoint.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-189",
@@ -26885,6 +27106,16 @@
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "VectorBundleCore",
+     "file": "Mathlib/Topology/VectorBundle/Basic.lean",
+     "match": "exact",
+     "note": "A vector bundle given by base sets and transition functions (coordinate changes) satisfying the cocycle condition.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/VectorBundle/Basic.lean"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -44115,12 +44346,30 @@
    "anchorable": true,
    "evidence": {
     "name": "sourced",
-    "description": "sourced",
+    "description": "formal",
     "input": "sourced",
     "output": "sourced",
     "preserved": "unsupported",
     "broken": "unsupported"
    },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.GrothendieckTopology.sheafify",
+     "file": "Mathlib/CategoryTheory/Sites/ConcreteSheafification.lean",
+     "match": "exact",
+     "note": "Sheafification is the plus construction applied twice.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/ConcreteSheafification.lean"
+    },
+    {
+     "field": "description",
+     "decl": "CategoryTheory.sheafificationAdjunction",
+     "file": "Mathlib/CategoryTheory/Sites/Sheafification.lean",
+     "match": "exact",
+     "note": "Sheafification is left adjoint to the inclusion.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "partly unsupported"
   },

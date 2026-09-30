@@ -1,0 +1,21 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Monad/Algebra.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Algebra.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2260fa156b6ab8d3e0005d2cfd9a439cd719f25c889beeb9b801fa6dae5930d6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Monad.adj (line 156)
+def adj : T.free ⊣ T.forget :=
+  Adjunction.mkOfHomEquiv
+    { homEquiv := fun X Y =>
+        { toFun := fun f => T.η.app X ≫ f.f
+          invFun := fun f =>
+            { f := T.map f ≫ Y.a
+
+-- CategoryTheory.Monad.Algebra (line 43)
+structure Algebra (T : Monad C) : Type max u₁ v₁ where
+  /-- The underlying object associated to an algebra. -/
+  A : C
+  /-- The structure morphism associated to an algebra. -/
+  a : (T : C ⥤ C).obj A ⟶ A
+  /-- The unit axiom associated to an algebra. -/
+  unit : T.η.app A ≫ a = 𝟙 A

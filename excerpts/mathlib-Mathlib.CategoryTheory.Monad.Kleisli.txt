@@ -1,0 +1,17 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Monad/Kleisli.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Kleisli.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 219e82cea7a7221ca9855f14fec1215b8149b38e7f4416b34de02a8293719c9d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Kleisli (line 35)
+structure Kleisli (T : Monad C) where mk (T) ::
+  /-- The underlying object of the base category. -/
+  of : C
+
+-- CategoryTheory.Kleisli.Adjunction.adj (line 102)
+def adj : toKleisli T ⊣ fromKleisli T :=
+  Adjunction.mkOfHomEquiv
+    { homEquiv X Y := { toFun f := f.of, invFun f := .mk f }
+      homEquiv_naturality_left_symm := fun {X} {Y} {Z} f g => by
+        ext
+        simp [← T.η.naturality_assoc g] }

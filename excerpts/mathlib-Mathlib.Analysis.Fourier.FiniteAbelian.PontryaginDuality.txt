@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/Fourier/FiniteAbelian/PontryaginDuality.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Fourier/FiniteAbelian/PontryaginDuality.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d16db84f568cdc9495c20505edb26c981d8cee3e4b00307bf50b899da7dbb662
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AddChar.doubleDualEmb_bijective (line 158)
+lemma doubleDualEmb_bijective : Bijective (doubleDualEmb : α → AddChar (AddChar α ℂ) ℂ)

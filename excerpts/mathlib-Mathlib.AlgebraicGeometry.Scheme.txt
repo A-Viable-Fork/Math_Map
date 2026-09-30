@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/AlgebraicGeometry/Scheme.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicGeometry/Scheme.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 619d808179e5afb5663f444590d9aa5ffb77ac55a2fa0bcea79d5f80c040368d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AlgebraicGeometry.Scheme.ΓSpecIso (line 602)
+def ΓSpecIso : Γ(Spec R, ⊤) ≅ R := SpecΓIdentity.app R
+
+-- AlgebraicGeometry.Spec (line 466)
+def Spec (R : CommRingCat) : Scheme where
+  local_affine _ := ⟨⟨⊤, trivial⟩, R, ⟨(Spec.toLocallyRingedSpace.obj (op R)).restrictTopIso⟩⟩
+  toLocallyRingedSpace := Spec.locallyRingedSpaceObj R

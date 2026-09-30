@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/VectorBundle/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/VectorBundle/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 46d087d777ebeb41ba6a240f69d82a583bd220500044045880f05047685fc218
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- VectorBundleCore (line 558)
+structure VectorBundleCore (ι : Type*) where
+  baseSet : ι → Set B
+  isOpen_baseSet : ∀ i, IsOpen (baseSet i)
+  indexAt : B → ι
+  mem_baseSet_at : ∀ x, x ∈ baseSet (indexAt x)
+  coordChange : ι → ι → B → F →L[R] F
+  coordChange_self : ∀ i, ∀ x ∈ baseSet i, ∀ v, coordChange i i x v = v
+  continuousOn_coordChange : ∀ i j, ContinuousOn (coordChange i j) (baseSet i ∩ baseSet j)
+  coordChange_comp : ∀ i j k, ∀ x ∈ baseSet i ∩ baseSet j ∩ baseSet k, ∀ v,
+    (coordChange j k x) (coordChange i j x v) = coordChange i k x v

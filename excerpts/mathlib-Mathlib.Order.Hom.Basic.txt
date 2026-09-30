@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Order/Hom/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Hom/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: e05fe6535f107a31b29bcb62753f507d8c78f40a95516c317a0bc88b361e73fb
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- OrderIso.le_iff_le (line 1050)
+theorem le_iff_le (e : α ≃o β) {x y : α} : e x ≤ e y ↔ x ≤ y
