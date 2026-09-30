@@ -15,9 +15,9 @@ Every entry states where its content comes from:
 
 ## Trust tiers
 
-Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Counts: landed 1378, audited 75, authored 495, receipted 14.
+Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Counts: landed 1376, audited 77, authored 495, receipted 14.
 
-Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 5 entries have conditions so far.
+Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 7 entries have conditions so far.
 
 ## Named invariants and composition
 
@@ -25,11 +25,11 @@ Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js`
 
 ## Evidence per claim
 
-Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and Mathlib links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest. Fields by level: contradicted 0, unsupported 76, unchecked 11238, imprecise 21, sourced 422, formal 15. Invariant claims by level: contradicted 0, unsupported 0, unchecked 7, imprecise 0, sourced 24, formal 9.
+Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and Mathlib links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest. Fields by level: contradicted 0, unsupported 76, unchecked 11226, imprecise 20, sourced 432, formal 18. Invariant claims by level: contradicted 0, unsupported 0, unchecked 3, imprecise 0, sourced 26, formal 12.
 
 ## Corrections
 
-`mapfill/corrections.js` replaces landed fields that a check found wrong or imprecise with receipted text; the landed text is kept on the entry (`corrected.landed`). A correction needs a prior finding (an audit grade, a flag, or a Mathlib conflict) and a receipt for every field it changes. 10 entries are corrected so far; correcting every field of a flagged entry resolves the flag. The audit's error rates still describe the map as landed.
+`mapfill/corrections.js` replaces landed fields that a check found wrong or imprecise with receipted text; the landed text is kept on the entry (`corrected.landed`). A correction needs a prior finding (an audit grade, a flag, or a Mathlib conflict) and a receipt for every field it changes. 13 entries are corrected so far; correcting every field of a flagged entry resolves the flag. The audit's error rates still describe the map as landed.
 
 ## Formal links (Lean and Mathlib)
 
@@ -37,7 +37,7 @@ Every field of every entry, and every named-invariant claim, carries an evidence
 
 ## Lean
 
-`lean/` is a Lean 4 project on the same pinned Mathlib. It states and proves claims of entries that Mathlib does not cover, over definitions of its own (subtoposes, essential geometric morphisms, levels and the Aufhebung, following the nLab; antitone Galois connections). `mapfill/lean.js` registers each definition with receipts from its source and each claim with the entry, field and invariant it bears on. Whether a claim is proved or only stated is read from Lean itself: `node scripts/lean.mjs --audit` runs `#print axioms` (a proof that uses `sorry` is only stated) and lists the definitions each statement depends on, all of which must be receipted; the result is `lean/AUDIT.json`, which CI regenerates after `lake build` and compares. 18 claims on 5 entries: 18 proved, 0 stated, over 14 receipted definitions. A proved exact claim makes its invariant claim, or its whole field, formal. To build: `cd lean && lake exe cache get && lake build`.
+`lean/` is a Lean 4 project on the same pinned Mathlib. It states and proves claims of entries that Mathlib does not cover, over definitions of its own (subtoposes, essential geometric morphisms, levels and the Aufhebung, following the nLab; antitone Galois connections). `mapfill/lean.js` registers each definition with receipts from its source and each claim with the entry, field and invariant it bears on. Whether a claim is proved or only stated is read from Lean itself: `node scripts/lean.mjs --audit` runs `#print axioms` (a proof that uses `sorry` is only stated) and lists the definitions each statement depends on, all of which must be receipted; the result is `lean/AUDIT.json`, which CI regenerates after `lake build` and compares. 22 claims on 6 entries: 22 proved, 0 stated, over 19 receipted definitions. A proved exact claim makes its invariant claim, or its whole field, formal. To build: `cd lean && lake exe cache get && lake build`.
 
 ## Audit
 

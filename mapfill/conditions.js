@@ -41,6 +41,19 @@ const CONDITIONS = [
     receipts: [
       { file: "excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt", quote: "def sheafificationAdjunction [HasWeakSheafify J A] :" },
     ] },
+  { id: "D4-048", name: "Cech complex construction",
+    conditions: "The nerve theorem needs a good cover: every nonempty intersection of the balls contractible, as for balls in Euclidean space (they are convex). In a general metric space the Cech complex need not have the homotopy type of the union.",
+    counterexamples: [{ case: "Two contractible sets can cover an n-sphere and meet: their nerve is a 1-simplex, not a sphere. The intersection is not contractible, so the cover is not good.",
+      receipt: { file: "excerpts/wikipedia-nerve-complex.txt", quote: "one can cover any [[N-sphere|''n''-sphere]] with two contractible sets <math>U_1</math> and <math>U_2</math> that have a non-empty intersection" } }],
+    receipts: [
+      { file: "excerpts/wikipedia-nerve-complex.txt", quote: "the set <math>\\bigcap_{i\\in J} U_i</math> is either empty or contractible" },
+    ] },
+  { id: "D4-075", name: "Cone construction",
+    conditions: "The landed formula X x [0,1] / (X x {1}) is empty when X is empty; the source attaches the cylinder to a point v, which gives the point. The contractibility claim needs X nonempty or that definition.",
+    counterexamples: [{ case: "X empty: the landed quotient is the empty space, which is not contractible." }],
+    receipts: [
+      { file: "excerpts/wikipedia-cone-topology.txt", quote: "is a [[point (topology)|point]] (called the vertex of the cone)" },
+    ] },
 ];
 
 module.exports = { CONDITIONS };

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Nerve complex (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1355571372
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 38cf415fd7d1605cc558ad658bb6915ca00a845fb59713f47a083e5d094be6d5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+(equivalently: for each finite <math>J\subset I</math> the set <math>\bigcap_{i\in J} U_i</math> is either empty or contractible; equivalently: ''C'' is a [[good cover|good open cover]]), then <math>N(C)</math> is [[homotopy-equivalent]] to
+
+one can cover any [[N-sphere|''n''-sphere]] with two contractible sets <math>U_1</math> and <math>U_2</math> that have a non-empty intersection, as in example 1 above. In this case, <math>N(C)</math> is an abstract 1-simplex, which is similar to a line but not to a sphere.

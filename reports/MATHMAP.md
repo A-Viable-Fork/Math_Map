@@ -53,13 +53,13 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Additions: 8** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion.
 
-- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 40 links from entries (16 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 16 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 41 links from entries (16 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 16 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
 - **Mathlib links: 36** on 17 entries (`mapfill/formal.js`), pinned at 380f2aa; 1 record a conflict with the entry as written.
 
-- **Conditions: 5** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 0.
+- **Conditions: 7** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 2.
 
-- **Corrections: 10** (`mapfill/corrections.js`): landed fields a check found wrong or imprecise, replaced by receipted text (the landed text is kept on the entry). 35 fields in D1-099, D4-264, D2-117, D4-176, D8-089, D8-125, D8-132, D8-133, D8-185, D8-186; 6 flags resolved.
+- **Corrections: 13** (`mapfill/corrections.js`): landed fields a check found wrong or imprecise, replaced by receipted text (the landed text is kept on the entry). 40 fields in D1-099, D4-264, D2-117, D4-176, D2-118, D4-048, D4-075, D8-089, D8-125, D8-132, D8-133, D8-185, D8-186; 6 flags resolved.
 
 - **Flagged entries: 6.** Landed content known to be wrong (`mapfill/flags.js`); withheld from anchoring until corrected.
 

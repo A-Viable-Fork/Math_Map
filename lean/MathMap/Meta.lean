@@ -13,8 +13,15 @@ open Lean Elab Command
 
 namespace MathMap.Audit
 
-/-- A structure's projections, constructor and recursor stand for the structure itself. -/
-def owner (env : Environment) : Name → Name
+/-- A compiler-generated auxiliary (`_proof_1`, `_aux_1`) stands for the declaration it belongs to. -/
+def unaux : Name → Name
+  | n@(.str p s) => if s.startsWith "_" then unaux p else n
+  | n => n
+
+/-- A structure's projections, constructor and recursor stand for the structure itself; auxiliaries
+stand for their declaration. -/
+def owner (env : Environment) (n : Name) : Name :=
+  match unaux n with
   | n@(.str p _) =>
     let generated := env.isProjectionFn n || isAuxRecursor env n || isNoConfusion env n ||
       (match env.find? n with | some (.ctorInfo _) | some (.recInfo _) => true | _ => false)

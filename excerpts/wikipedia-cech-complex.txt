@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Čech complex (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1339780162
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: e9e6a6b20dc6857e92e6a653e7ae19023fda6579ca5c147189333b19aeccf1ce
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]
+
+Take the elements of ''X'' as the vertex set of
+
+the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex.

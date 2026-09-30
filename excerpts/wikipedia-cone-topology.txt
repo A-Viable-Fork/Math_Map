@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Cone (topology) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1359480329
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 16e1df497f8be68e65d650222228e42b554b071d58e48328c3297cd501a39d32
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''cone''' '''of a [[topological space]]''' <math>X</math> is intuitively obtained by stretching ''X'' into a [[Cylinder (geometry)|cylinder]] and then collapsing one of its end faces to a point.
+
+Furthermore, every cone is [[contractible]] to the vertex point by the [[homotopy]]
+
+The cone is used in algebraic topology precisely because it [[Embedding|embeds]] a space as a [[subspace (topology)|subspace]] of a contractible space.
+
+where <math>v</math> is a [[point (topology)|point]] (called the vertex of the cone) and <math>p</math> is the [[Projection (mathematics)|projection]] to that point.

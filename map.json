@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "df8a7b4661d08dc193aabe84297d21a5cd076cab"
+  "commit": "c5f75a1ea9bc463fec2291f29c5ad9522552487e"
  },
  "domains": {
   "D1": {
@@ -153,10 +153,10 @@
    },
    {
     "id": "point-structure",
-    "name": "Individual point structure",
+    "name": "Point positions and distances",
     "kind": "structure",
     "carrier": "point-cloud",
-    "definition": "The identity and arrangement of individual input points."
+    "definition": "The positions of the input points and the distances between them."
    },
    {
     "id": "limits",
@@ -364,36 +364,36 @@
    "added": 8
   },
   "byTier": {
-   "landed": 1378,
-   "audited": 75,
+   "landed": 1376,
+   "audited": 77,
    "authored": 495,
    "receipted": 14
   },
-  "withConditions": 5,
-  "corrected": 10,
+  "withConditions": 7,
+  "corrected": 13,
   "fieldEvidence": {
    "contradicted": 0,
    "unsupported": 76,
-   "unchecked": 11238,
-   "imprecise": 21,
-   "sourced": 422,
-   "formal": 15
+   "unchecked": 11226,
+   "imprecise": 20,
+   "sourced": 432,
+   "formal": 18
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 18,
-   "entries": 5,
-   "definitions": 14,
-   "proved": 18,
+   "claims": 22,
+   "entries": 6,
+   "definitions": 19,
+   "proved": 22,
    "stated": 0
   },
   "claimEvidence": {
    "contradicted": 0,
    "unsupported": 0,
-   "unchecked": 7,
+   "unchecked": 3,
    "imprecise": 0,
-   "sourced": 24,
-   "formal": 9
+   "sourced": 26,
+   "formal": 12
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
@@ -7208,7 +7208,7 @@
     "compression"
    ],
    "description": "Inverse of blow-up. Contracts exceptional divisor.",
-   "input": "Variety X + contractible exceptional E",
+   "input": "Variety X + a curve E that is the exceptional curve of a blow-up: on a smooth projective surface, a (-1)-curve (smooth rational, self-intersection -1)",
    "output": "Y with E collapsed",
    "preserved": "Birational type",
    "broken": "Exceptional divisor",
@@ -7236,7 +7236,7 @@
    "evidence": {
     "name": "sourced",
     "description": "sourced",
-    "input": "imprecise",
+    "input": "sourced",
     "output": "sourced",
     "preserved": "sourced",
     "broken": "sourced"
@@ -7259,6 +7259,31 @@
      ]
     }
    ],
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Variety X + contractible exceptional E"
+    },
+    "reason": "Graded imprecise: \"contractible exceptional\" hides the condition. Castelnuovo: a (-1)-curve on a smooth projective surface contracts to a smooth point, and the contraction inverts the blow-up there.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-castelnuovo.txt",
+      "quote": "(which means a smooth [[algebraic curve#rational curves|rational curve]] of [[intersection theory#self-intersection|self-intersection]] number&nbsp;&minus;1)",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-castelnuovo.txt",
+      "quote": "a (&minus;1)-[[algebraic curve|curve]] on <math>X</math>",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
    "conditions": "The curve contracted is a (-1)-curve (a smooth rational curve of self-intersection -1) on a smooth projective surface: then it contracts to a smooth point and the contraction is inverse to the blow-up (Castelnuovo). Other curves contract, when they do, to singular points.",
    "counterexamples": [],
    "conditionReceipts": [
@@ -7272,7 +7297,8 @@
     }
    ],
    "tier": "audited",
-   "auditVerdict": "imprecise"
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-119",
@@ -16015,11 +16041,11 @@
     "construction",
     "parameterized"
    ],
-   "description": "Nerve of ball cover: simplex for every subset of points whose balls intersect. Exact topology via nerve theorem.",
+   "description": "Nerve of the ball cover: a simplex for every subset of points whose balls have a common point. When the balls form a good cover (every nonempty intersection contractible, as for balls in Euclidean space), the nerve theorem gives the homotopy type of the union of the balls.",
    "input": "Point cloud P + radius ε",
    "output": "Cech complex Č_ε(P)",
    "preserved": "Homotopy type of ∪B(p_i, ε) (nerve theorem, exact)",
-   "broken": "Individual point structure",
+   "broken": "Positions and distances of the points, beyond which balls intersect (the points themselves survive as the vertex set)",
    "complexity": "Exponential in point count (all subsets checked)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
@@ -16042,32 +16068,84 @@
     ]
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "claims": [
     {
      "field": "preserved",
      "invariant": "homotopy-type",
-     "level": "unchecked",
+     "level": "sourced",
      "basis": [
-      "field preserved: unchecked"
+      "field preserved: sourced"
      ]
     },
     {
      "field": "broken",
      "invariant": "point-structure",
-     "level": "unchecked",
+     "level": "sourced",
      "basis": [
-      "field broken: unchecked"
+      "field broken: sourced"
      ]
     }
    ],
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "broken"
+    ],
+    "landed": {
+     "description": "Nerve of ball cover: simplex for every subset of points whose balls intersect. Exact topology via nerve theorem.",
+     "broken": "Individual point structure"
+    },
+    "reason": "Description graded imprecise (the nerve theorem gives the homotopy type, not the topology, and needs a good cover); broken graded imprecise (the points survive as vertices).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cech-complex.txt",
+      "quote": "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-nerve-complex.txt",
+      "quote": "is either empty or contractible; equivalently: ''C'' is a [[good cover|good open cover]]), then <math>N(C)</math> is [[homotopy-equivalent]] to",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cech-complex.txt",
+      "quote": "Take the elements of ''X'' as the vertex set of",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "conditions": "The nerve theorem needs a good cover: every nonempty intersection of the balls contractible, as for balls in Euclidean space (they are convex). In a general metric space the Cech complex need not have the homotopy type of the union.",
+   "counterexamples": [
+    {
+     "case": "Two contractible sets can cover an n-sphere and meet: their nerve is a 1-simplex, not a sphere. The intersection is not contractible, so the cover is not good.",
+     "receipt": {
+      "file": "excerpts/wikipedia-nerve-complex.txt",
+      "quote": "one can cover any [[N-sphere|''n''-sphere]] with two contractible sets <math>U_1</math> and <math>U_2</math> that have a non-empty intersection"
+     }
+    }
+   ],
+   "conditionReceipts": [
+    {
+     "file": "excerpts/wikipedia-nerve-complex.txt",
+     "quote": "the set <math>\\bigcap_{i\\in J} U_i</math> is either empty or contractible"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-049",
@@ -16782,20 +16860,22 @@
    "description": "CX = X × [0,1] / (X × {1}). Contractible. Used in mapping cone and suspension.",
    "input": "Topological space X",
    "output": "Cone CX (contractible)",
-   "preserved": "Contractibility",
-   "broken": "Original topology of X (collapsed at tip)",
+   "preserved": "X itself, embedded as the base of the cone (a subspace of CX)",
+   "broken": "The homotopy type of X: the cone is contractible whatever X is (one end of the cylinder collapses to the vertex)",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "invariants": {
     "preserved": [
-     "contractibility"
-    ],
-    "broken": [
      "topology-of-input"
     ],
-    "output": []
+    "broken": [
+     "homotopy-type"
+    ],
+    "output": [
+     "contractibility"
+    ]
    },
    "actsOn": {
     "input": [
@@ -16806,32 +16886,132 @@
     ]
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "formal",
+    "broken": "formal"
    },
    "claims": [
     {
      "field": "preserved",
-     "invariant": "contractibility",
-     "level": "unchecked",
+     "invariant": "topology-of-input",
+     "level": "formal",
      "basis": [
-      "field preserved: unchecked"
+      "field preserved: formal",
+      "Lean MathMap.Cone.isEmbedding_base"
      ]
     },
     {
      "field": "broken",
-     "invariant": "topology-of-input",
-     "level": "unchecked",
+     "invariant": "homotopy-type",
+     "level": "formal",
      "basis": [
-      "field broken: unchecked"
+      "field broken: formal",
+      "Lean MathMap.Cone.homotopyEquiv_iff"
+     ]
+    },
+    {
+     "field": "output",
+     "invariant": "contractibility",
+     "level": "formal",
+     "basis": [
+      "field output: formal",
+      "Lean MathMap.Cone.contractible"
      ]
     }
    ],
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved",
+     "broken"
+    ],
+    "landed": {
+     "preserved": "Contractibility",
+     "broken": "Original topology of X (collapsed at tip)"
+    },
+    "reason": "Preserved graded imprecise (contractibility is produced by the cone, not preserved from X); broken graded imprecise (X embeds in its cone; its homotopy type is what is lost).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cone-topology.txt",
+      "quote": "[[Embedding|embeds]] a space as a [[subspace (topology)|subspace]] of a contractible space.",
+      "fields": [
+       "preserved",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cone-topology.txt",
+      "quote": "every cone is [[contractible]] to the vertex point by the [[homotopy]]",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cone-topology.txt",
+      "quote": "and then collapsing one of its end faces to a point.",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "lean": [
+    {
+     "field": "output",
+     "decl": "MathMap.Cone.contractible",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "contractibility",
+     "whole": true,
+     "note": "The cone on a nonempty space is contractible (for empty X the landed formula gives the empty space: conditions.js).",
+     "file": "lean/MathMap/Cone.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.Cone.isEmbedding_base",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "topology-of-input",
+     "whole": true,
+     "note": "X embeds in its cone as the base.",
+     "file": "lean/MathMap/Cone.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.Cone.homotopyEquiv_iff",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "homotopy-type",
+     "whole": true,
+     "note": "The cone keeps X's homotopy type exactly when X is already contractible.",
+     "file": "lean/MathMap/Cone.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.Cone.not_homotopyEquiv_bool",
+     "match": "special",
+     "status": "proved",
+     "note": "The instance: the cone on two points is not homotopy equivalent to them.",
+     "file": "lean/MathMap/Cone.lean"
+    }
+   ],
+   "conditions": "The landed formula X x [0,1] / (X x {1}) is empty when X is empty; the source attaches the cylinder to a point v, which gives the point. The contractibility claim needs X nonempty or that definition.",
+   "counterexamples": [
+    {
+     "case": "X empty: the landed quotient is the empty space, which is not contractible."
+    }
+   ],
+   "conditionReceipts": [
+    {
+     "file": "excerpts/wikipedia-cone-topology.txt",
+     "quote": "is a [[point (topology)|point]] (called the vertex of the cone)"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-076",

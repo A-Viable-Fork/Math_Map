@@ -946,6 +946,29 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
 
   n: https://en.wikipedia.org/w/index.php?action=raw&title=Normal_closure_(group_theory)
 
+### D4-048 Cech complex construction (imprecise; for Weakest link: a composite rests on this entry's unchecked claims (scripts/compose.mjs).)
+
+- name: **confirmed** [c] "is an abstract simplicial complex constructed from a point cloud in any metric space"
+- description: **imprecise** [c] "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex." *"Exact topology" overstates it: the nerve theorem gives the homotopy type of the union of the balls, not its topology, and only when every nonempty intersection of the balls is contractible (a good cover), as for balls in Euclidean space. The source's "any metric space" is loose in the same way.*
+- input: **confirmed** [c] "Take the elements of X as the vertex set of"
+- output: **confirmed** [c] "is an abstract simplicial complex constructed from a point cloud in any metric space"
+- preserved: **confirmed** [c] "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex." *Under the good-cover condition (conditions.js), as for Euclidean balls.*
+- broken: **imprecise** [c] "Take the elements of X as the vertex set of" *The points survive, as the vertex set. What is lost is their positions and distances, beyond which balls intersect.*
+
+  c: https://en.wikipedia.org/w/index.php?action=raw&title=%C4%8Cech_complex
+  n: https://en.wikipedia.org/w/index.php?action=raw&title=Nerve_complex
+
+### D4-075 Cone construction (imprecise; for Weakest link: a composite rests on this entry's unchecked claims (scripts/compose.mjs).)
+
+- name: **confirmed** [k] "the cone of a topological space"
+- description: **confirmed** [k] "every cone is contractible to the vertex point by the homotopy" *The source collapses the end X x {0} rather than X x {1}; the convention does not matter. For empty X the landed formula X x [0,1] / (X x {1}) is empty, while the source's definition (attach the cylinder to a point) gives the point; the claims below need X nonempty or the source's definition.*
+- input: **confirmed** [k] "the cone of a topological space"
+- output: **confirmed** [k] "every cone is contractible to the vertex point by the homotopy"
+- preserved: **imprecise** [k] "embeds a space as a subspace of a contractible space" *Contractibility is not preserved from X: the cone is contractible whatever X is, so it is produced. What the cone preserves is X itself, embedded as the base.*
+- broken: **imprecise** [k] "embeds a space as a subspace of a contractible space" *X's topology is not lost (X embeds as a subspace); one end of the cylinder collapses to the vertex, and what is lost is X's homotopy type.*
+
+  k: https://en.wikipedia.org/w/index.php?action=raw&title=Cone_(topology)
+
 ### D8-107 Jordan decomposition (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
 
 - name: **confirmed** [j] "its Jordan normal form is also called the Jordan normal form of"

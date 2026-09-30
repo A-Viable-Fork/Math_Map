@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "c1d49bf85240fb194ecdde0626c51b0b07095cd0b3570013449bb1584e35ab73",
+ "sources": "19da1ef2ddaf45a80711bcaf846a50c7ed39c4bf4499ee750f27f989cd6e4fd2",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -133,6 +133,60 @@
    "deps": [
     "MathMap.Level",
     "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.coneSetoid": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.Cone": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.instTopologicalSpaceCone": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.coneSetoid"
+   ]
+  },
+  "MathMap.Cone.mk": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.coneSetoid"
+   ]
+  },
+  "MathMap.Cone.base": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.coneSetoid"
    ]
   },
   "MathMap.AntitoneGC": {
@@ -315,6 +369,60 @@
     "MathMap.Level.sheaf",
     "MathMap.Level.skeleton",
     "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Cone.contractible": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.coneSetoid",
+    "MathMap.instTopologicalSpaceCone"
+   ]
+  },
+  "MathMap.Cone.isEmbedding_base": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.Cone.base",
+    "MathMap.Cone.mk",
+    "MathMap.coneSetoid",
+    "MathMap.instTopologicalSpaceCone"
+   ]
+  },
+  "MathMap.Cone.homotopyEquiv_iff": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.coneSetoid",
+    "MathMap.instTopologicalSpaceCone"
+   ]
+  },
+  "MathMap.Cone.not_homotopyEquiv_bool": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Cone",
+    "MathMap.coneSetoid",
+    "MathMap.instTopologicalSpaceCone"
    ]
   },
   "MathMap.antitoneGC_iff": {
