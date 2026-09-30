@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Castelnuovo's contraction theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Castelnuovo%27s_contraction_theorem
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 7abe920ac69a4fa1a79bb6237038dbbb334de6b8ef3207aa1ffd6f21146ad15c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+be a [[smooth variety|smooth]] [[algebraic surface|projective surface]] over <math>\mathbb{C}</math> and <math>C</math> a (&minus;1)-[[algebraic curve|curve]] on <math>X</math>
+
+(which means a smooth [[algebraic curve#rational curves|rational curve]] of [[intersection theory#self-intersection|self-intersection]] number&nbsp;&minus;1)

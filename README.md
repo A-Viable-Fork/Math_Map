@@ -13,6 +13,12 @@ Every entry states where its content comes from:
 - **clone:<id>**: the landed entry pointed at another entry; the pointer is resolved.
 - **added**: an entry the landed map lacked. Every weight-bearing claim is receipted by a verbatim quote in `excerpts/`.
 
+## Trust tiers
+
+Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Formal verification would sit above audited; no entry has it yet. Counts: landed 1387, audited 64, authored 497, flagged 6, receipted 6.
+
+Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 3 entries have conditions so far.
+
 ## Audit
 
 `audit.json` holds field-by-field grades (confirmed, imprecise, wrong, unsupported) against cited sources: a fixed random sample of 60 entries, and targeted receipts for entries that were needed. Six landed entries are flagged as misaligned and carry their evidence.

@@ -124,7 +124,10 @@ export function parse() {
   for (const fl of FLAGS) { const e = outById[fl.id]; if (e && e.origin === "map") e.flag = fl; }
   const { ADDITIONS } = require("../mapfill/additions.js");
   for (const a of ADDITIONS) out.push({ ...a, domain: a.id.slice(0, 2), heading: a.name, status: "Added / receipted (mapfill/additions.js)", iso: "", origin: "added", reading: null, unknown: false, ptr: {} });
-  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, landed };
+  const { CONDITIONS } = require("../mapfill/conditions.js");
+  const outById2 = Object.fromEntries(out.map((e) => [e.id, e]));
+  for (const c of CONDITIONS) { const e = outById2[c.id]; if (e) { e.conditions = c.conditions; e.counterexamples = c.counterexamples || []; e.conditionReceipts = c.receipts; } }
+  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, landed };
 }
 
 export function check(P = parse()) {
@@ -172,7 +175,19 @@ export function check(P = parse()) {
       if (!n(t).includes(n(r.quote))) F.push(`${a.id}: receipt quote not in ${r.file}: "${r.quote.slice(0, 50)}"`);
     }
   }
-  const self = ["scripts/mathmap.mjs", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
+  const byIdAll = Object.fromEntries(P.entries.map((e) => [e.id, e])), cids = new Set();
+  const inFile = (r) => { if (!/^(excerpts|source)\//.test(r.file)) return `receipt must point into excerpts/ or source/`; let t = ""; try { t = readFileSync(join(ROOT, r.file), "utf8"); } catch { return `missing receipt file ${r.file}`; } const n = (x) => x.replace(/\s+/g, " "); return n(t).includes(n(r.quote)) ? null : `receipt quote not in ${r.file}: "${r.quote.slice(0, 50)}"`; };
+  for (const c of P.conditions) {
+    const e = byIdAll[c.id];
+    if (!e) { F.push(`${c.id}: conditions name no entry`); continue; }
+    if (cids.has(c.id)) F.push(`${c.id}: conditions given twice`); cids.add(c.id);
+    if (e.name !== c.name) F.push(`${c.id}: conditions name "${c.name}", the map says "${e.name}"`);
+    if (!c.conditions || !String(c.conditions).trim()) F.push(`${c.id}: empty conditions`);
+    if (!(c.receipts || []).length) F.push(`${c.id}: conditions need receipts`);
+    for (const r of c.receipts || []) { const x = inFile(r); if (x) F.push(`${c.id}: ${x}`); }
+    for (const k of c.counterexamples || []) { if (!k.case) F.push(`${c.id}: a counterexample needs a case`); if (k.receipt) { const x = inFile(k.receipt); if (x) F.push(`${c.id}: ${x}`); } }
+  }
+  const self = ["scripts/mathmap.mjs", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
   return F;
 }
@@ -212,6 +227,7 @@ function render(P) {
   L.push(`- **Fills with a stated reading: ${readings.length}.** The name is ambiguous or nonstandard; the fill says how it was read.`, "");
   if (readings.length) L.push("| Entry | Name | Reading |", "|---|---|---|", ...readings.map((e) => `| ${e.id} | ${e.name} | ${e.unknown ? "**Unidentified.** " : ""}${e.reading} |`), "");
   if (P.additions.length) L.push(`- **Additions: ${P.additions.length}** (\`mapfill/additions.js\`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. ${P.additions.map((a) => `${a.id} ${a.name}`).join("; ")}.`, "");
+  L.push(`- **Conditions: ${P.conditions.length}** (\`mapfill/conditions.js\`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: ${P.conditions.reduce((n, c) => n + (c.counterexamples || []).length, 0)}.`, "");
   if (P.flags.length) L.push(`- **Flagged entries: ${P.flags.length}.** Landed content known to be wrong (\`mapfill/flags.js\`); withheld from anchoring until corrected.`, "", "| Entry | Name | Kind | Evidence |", "|---|---|---|---|", ...P.flags.map((f) => `| ${f.id} | ${f.name} | ${f.kind} | ${f.evidence} |`), "");
   L.push("## 3. Functional tags", "", "| Tag | Entries |", "|---|---|");
   for (const t of P.vocab) L.push(`| \`${t}\` | ${P.entries.filter((e) => e.tags.includes(t)).length} |`);
@@ -234,6 +250,8 @@ function show(e, full) {
   const head = `${e.id} ${e.name} [${e.kind}; ${e.tags.join(", ")}]${isStub(e) ? " (stub)" : ""}${origin}`;
   if (!full) return `${head}\n  ${e.description}`;
   const lines = [head, `  ${e.description}`, `  input: ${e.input ?? "-"}`, `  output: ${e.output ?? "-"}`, `  preserved: ${e.preserved ?? "-"}`, `  broken: ${e.broken ?? "-"}`, `  complexity: ${e.complexity}`, `  status: ${e.status}`];
+  if (e.conditions) lines.push(`  conditions: ${e.conditions}`);
+  for (const k of e.counterexamples || []) lines.push(`  counterexample: ${k.case}`);
   if (e.reading) lines.push(`  reading: ${e.reading}`);
   if (e.pointer) lines.push(`  landed as: ${e.pointer}`);
   return lines.join("\n");

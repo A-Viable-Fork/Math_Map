@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, reflective subcategory (page source)
+URL: https://ncatlab.org/nlab/source/reflective+subcategory
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 1aa342531c23a7079a024cad5c9578073d51e154a4ed7220c69948a3776a12b1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If the reflector (which as a [[left adjoint]] always preserves all [[colimit]]s) in addition preserves [[finite limits]], then the embedding is called _exact_. If the categories are [[topos]]es then such embeddings are called [[geometric embedding]]s.

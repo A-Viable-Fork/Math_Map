@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Helmholtz decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Helmholtz_decomposition
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 1d481d25213d375496753f0988086733be59192c6fd97d3b02f6f42a4e56db0e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Suppose {{math|Ω}} is a bounded, simply-connected, [[Lipschitz domain]]. Every [[square-integrable]] vector field {{math|'''u''' ∈ (''L''<sup>2</sup>(Ω))<sup>3</sup>}} has an [[orthogonality|orthogonal]] decomposition
