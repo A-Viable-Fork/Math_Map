@@ -82,6 +82,18 @@ const DEFS = [
     Q("excerpts/arxiv-1603.04641.txt", "k1(y1) = π1(k(y1, PG2 (σ2, x2)))\nk2(y2) = π2(k(PG1 (σ1, x1), y2))")),
   D("decision", "A utility-maximising decision (Definition 4): a best response chooses a maximum of the continuation.",
     Q("excerpts/arxiv-1603.04641.txt", "• (σ, σ′) ∈ BD(x, k) iff σ′(x) ∈ arg max k")),
+  D("Environment", "Each agent's weak preference over outcomes at each state (a preference profile per state).",
+    Q("excerpts/wikipedia-maskin-monotonicity.txt", "Each voter reports his entire [[preference (economics)|preference relation]] over the set of alternatives.")),
+  D("Mechanism", "Message spaces and an outcome function: the institution whose equilibrium outcomes implement a correspondence.",
+    Q("excerpts/wikipedia-implementation-theory.txt", "whose equilibrium outcomes implement a given set of [[normative]] goals or [[Welfare economics|welfare]] criteria")),
+  D("Mechanism.IsNash", "A message profile from which no agent does better by changing only its own message.",
+    Q("excerpts/wikipedia-nash-equilibrium.txt", "no player can do better by unilaterally changing their strategy.")),
+  D("Mechanism.Implements", "Full implementation: at every state the Nash equilibrium outcomes are exactly the chosen outcomes.",
+    Q("excerpts/wikipedia-implementation-theory.txt", "whose equilibrium outcomes implement a given set of [[normative]] goals or [[Welfare economics|welfare]] criteria"),
+    Q("excerpts/wikipedia-maskin-monotonicity.txt", "A ''social choice rule'' maps the preference profile to the selected alternative.")),
+  D("MaskinMonotonic", "An outcome chosen at one state stays chosen at any state where, for every agent, it is still at least as good as everything it was at least as good as.",
+    Q("excerpts/wikipedia-maskin-monotonicity.txt", "such that the position of <math>A_1</math> relative to each of the other alternatives either improves or stays the same as in <math>P_1</math>."),
+    Q("excerpts/wikipedia-maskin-monotonicity.txt", "With Maskin monotonicity, <math>A_1</math> should still be chosen at <math>P_2</math>.")),
   D("AntitoneGC", "The corrected D1-099: antitone maps with a ≤ g(f(a)) and b ≤ f(g(b)).",
     Q("excerpts/wikipedia-galois-connection.txt", "=== Antitone Galois connection ==="),
     Q("excerpts/wikipedia-galois-connection.txt", "{{math|''a'' ≤ ''GF''(''a'')}} for all {{mvar|a}} in {{mvar|A}} and {{math|''b'' ≤ ''FG''(''b'')}} for all {{mvar|b}} in {{mvar|B}}.")),
@@ -127,6 +139,9 @@ const CLAIMS = [
   // D7-X04.
   C("D7-X04", "preserved", "OpenGame.tensor_best_separable", "exact", "With a separable continuation, the product's best responses are exactly pairs of component best responses in contexts that do not mention the other component.", { whole: true }),
   C("D7-X04", "broken", "tensor_context_dependent", "exact", "With a coordination continuation, the same player-1 strategy is a best response beside one partner strategy and not beside another.", { whole: true }),
+  C("D7-X04", "preserved", "OpenGame.tensor_best_of_dominant", "special", "A component whose strategy is a best response against every partner strategy stays verified in the product, with no separability assumption: dominance is the other route to verification that composes."),
+  // D7-X05.
+  C("D7-X05", "preserved", "Mechanism.maskinMonotonic_of_implements", "exact", "Maskin's necessity theorem: any correspondence implemented in Nash equilibrium is Maskin monotonic.", { whole: true }),
   // D4-075.
   C("D4-075", "output", "Cone.contractible", "exact", "The cone on a nonempty space is contractible (for empty X the landed formula gives the empty space: conditions.js).", { invariant: "contractibility", whole: true }),
   C("D4-075", "preserved", "Cone.isEmbedding_base", "exact", "X embeds in its cone as the base.", { invariant: "topology-of-input", whole: true }),

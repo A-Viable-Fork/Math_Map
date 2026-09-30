@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Maskin monotonicity (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1298849571
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 4bdd3711df91e54b32510b5ac45b0e13d035e840a17457d40f8ebb1c8bd9be89
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Each voter reports his entire [[preference (economics)|preference relation]] over the set of alternatives.
+
+A ''social choice rule'' maps the preference profile to the selected alternative.
+
+With Maskin monotonicity, <math>A_1</math> should still be chosen at <math>P_2</math>.
+
+Maskin monotonicity is a necessary condition for implementability in [[Nash equilibrium]].
+
+any social choice rule that satisfies Maskin monotonicity and another property called "no veto power" can be implemented in Nash equilibrium form if there are three or more voters.
+
+such that the position of <math>A_1</math> relative to each of the other alternatives either improves or stays the same as in <math>P_1</math>.

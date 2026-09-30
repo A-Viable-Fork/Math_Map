@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Jackson, Bayesian Implementation, Econometrica 59(2) 461-477 (1991), abstract page
+URL: https://www.econometricsociety.org/publications/econometrica/1991/03/01/bayesian-implementation
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 2b2239b8df23a9dfa6e6938cf1c1376d118cb5bbd57cd684833a634494028b85
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+there exists a mechanism whose Bayesian equilibria coincide with a desired collection of social choice functions if and only if closure, incentive compatibility, and Bayesian monotonicity conditions are satisfied.

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Implementation theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374757806
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 162e69288b67b9d20f444c171ee94adccad3ed65bd1da5e327c271a9932907b5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+whose equilibrium outcomes implement a given set of [[normative]] goals or [[Welfare economics|welfare]] criteria
+
+A function is '''Bayesian-Nash implementable''' if it is attainable by a mechanism which is Bayesian-Nash-incentive-compatible.
+
+A function is '''dominant-strategy implementable''' if it is attainable by a mechanism which is dominant-strategy-incentive-compatible

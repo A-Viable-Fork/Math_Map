@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Gibbard-Satterthwaite theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374797634
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: f218290910653de6d1614ea994b98c3b925bd2ed7c68d9ab1c30105a112d1403
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If an ordinal voting rule has at least 3 possible outcomes and is non-dictatorial, then it is manipulable.

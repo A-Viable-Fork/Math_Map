@@ -59,6 +59,16 @@ theorem tensor_best_separable (G₁ : OpenGame X₁ S₁ Y₁ R₁) (G₂ : Open
       G₁.best x.1 f₁ σ.1 σ'.1 ∧ G₂.best x.2 f₂ σ.2 σ'.2 :=
   Iff.rfl
 
+/-- D7-X04, preserved (a sufficient condition): a component whose strategy is a best response against
+every strategy of the other component (a dominant strategy with respect to its partner) stays verified
+in the product whatever the partner plays, with no separability assumption. -/
+theorem tensor_best_of_dominant (G₁ : OpenGame X₁ S₁ Y₁ R₁) (G₂ : OpenGame X₂ S₂ Y₂ R₂)
+    (x : X₁ × X₂) (k : Y₁ × Y₂ → R₁ × R₂) (σ σ' : G₁.Strat × G₂.Strat)
+    (h₁ : ∀ τ : G₂.Strat, G₁.best x.1 (fun y₁ => (k (y₁, G₂.play τ x.2)).1) σ.1 σ'.1)
+    (h₂ : ∀ τ : G₁.Strat, G₂.best x.2 (fun y₂ => (k (G₁.play τ x.1, y₂)).2) σ.2 σ'.2) :
+    (G₁.tensor G₂).best x k σ σ' :=
+  ⟨h₁ σ.2, h₂ σ.1⟩
+
 end OpenGame
 
 /-- A utility-maximising decision `(X, 1) → (Y, R)` (Definition 4): a strategy is a function from

@@ -141,6 +141,19 @@ const ADDITIONS = [
       { file: "excerpts/arxiv-1603.04641.txt", quote: "k1(y1) = π1(k(y1, PG2 (σ2, x2)))\nk2(y2) = π2(k(PG1 (σ1, x1), y2))" },
       { file: "excerpts/arxiv-1603.04641.txt", quote: "Possibly the most important part of the deﬁnition is the best\nresponse relation, which is deﬁned relative to an arbitrary context" },
     ] },
+  { id: "D7-X05", name: "Nash implementation (Maskin)", kind: "Correspondence", tags: ["composition", "construction"],
+    description: "A mechanism (a message space for each agent and an outcome function) implements a social choice correspondence in Nash equilibrium when, at every state, the outcomes of its Nash equilibria are exactly the chosen outcomes. Maskin: every Nash-implementable correspondence is Maskin monotonic; with no veto power and three or more agents, Maskin monotonic correspondences are Nash-implementable. Complete information: every agent knows the state.",
+    input: "A social choice correspondence f from states to sets of outcomes, and a mechanism (message spaces and an outcome function)",
+    output: "Whether the mechanism's Nash equilibrium outcomes coincide with f at every state",
+    preserved: "Maskin monotonicity: an outcome chosen at one state stays chosen at any state where it has not fallen in any agent's ranking",
+    broken: "The complete-information assumption: under incomplete information the conditions are Bayesian (closure, incentive compatibility, Bayesian monotonicity)",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/wikipedia-maskin-monotonicity.txt", quote: "Maskin monotonicity is a necessary condition for implementability in [[Nash equilibrium]]." },
+      { file: "excerpts/wikipedia-maskin-monotonicity.txt", quote: 'any social choice rule that satisfies Maskin monotonicity and another property called "no veto power" can be implemented in Nash equilibrium form if there are three or more voters.' },
+      { file: "excerpts/econometrica-jackson-1991.txt", quote: "if and only if closure, incentive compatibility, and Bayesian monotonicity conditions are satisfied." },
+    ] },
 ];
 
 module.exports = { ADDITIONS };

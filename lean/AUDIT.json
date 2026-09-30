@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "2c73cd0bafdb5b8df73a7d25b6e05bbc448aaa085170073b1a1f898595a3877e",
+ "sources": "d2a065edc1153fa0c6b10a2418f33a69e793a7216292b0ea972a61f6a9e7c771",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -297,6 +297,39 @@
    "axioms": [],
    "deps": [
     "MathMap.OpenGame"
+   ]
+  },
+  "MathMap.Environment": {
+   "status": "proved",
+   "axioms": [],
+   "deps": []
+  },
+  "MathMap.Mechanism": {
+   "status": "proved",
+   "axioms": [],
+   "deps": []
+  },
+  "MathMap.Mechanism.IsNash": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.Environment",
+    "MathMap.Mechanism"
+   ]
+  },
+  "MathMap.Mechanism.Implements": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.Environment",
+    "MathMap.Mechanism"
+   ]
+  },
+  "MathMap.MaskinMonotonic": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.Environment"
    ]
   },
   "MathMap.AntitoneGC": {
@@ -712,6 +745,25 @@
     "MathMap.OpenGame",
     "MathMap.OpenGame.tensor",
     "MathMap.decision"
+   ]
+  },
+  "MathMap.OpenGame.tensor_best_of_dominant": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.OpenGame",
+    "MathMap.OpenGame.tensor"
+   ]
+  },
+  "MathMap.Mechanism.maskinMonotonic_of_implements": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.Environment",
+    "MathMap.MaskinMonotonic",
+    "MathMap.Mechanism",
+    "MathMap.Mechanism.Implements",
+    "MathMap.Mechanism.IsNash"
    ]
   },
   "MathMap.Cone.contractible": {

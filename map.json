@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "448d3c5a0fcb39ffe394e789084336f614e48cfc"
+  "commit": "c88dfa1ab3936c5dab598a5cf1979f8a43da6420"
  },
  "domains": {
   "D1": {
@@ -400,19 +400,19 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1964,
-  "anchorable": 1962,
+  "entries": 1965,
+  "anchorable": 1963,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 10
+   "added": 11
   },
   "byTier": {
    "landed": 1338,
    "audited": 116,
    "authored": 494,
-   "receipted": 16
+   "receipted": 17
   },
   "withConditions": 9,
   "corrected": 22,
@@ -421,15 +421,15 @@
    "unsupported": 100,
    "unchecked": 10992,
    "imprecise": 20,
-   "sourced": 621,
-   "formal": 51
+   "sourced": 626,
+   "formal": 52
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 43,
-   "entries": 11,
-   "definitions": 31,
-   "proved": 43,
+   "claims": 45,
+   "entries": 12,
+   "definitions": 36,
+   "proved": 45,
    "stated": 0
   },
   "claimEvidence": {
@@ -57569,6 +57569,67 @@
      "whole": true,
      "note": "With a coordination continuation, the same player-1 strategy is a best response beside one partner strategy and not beside another.",
      "file": "lean/MathMap/OpenGames.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MathMap.OpenGame.tensor_best_of_dominant",
+     "match": "special",
+     "status": "proved",
+     "note": "A component whose strategy is a best response against every partner strategy stays verified in the product, with no separability assumption: dominance is the other route to verification that composes.",
+     "file": "lean/MathMap/OpenGames.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X05",
+   "domain": "D7",
+   "name": "Nash implementation (Maskin)",
+   "kind": "Correspondence",
+   "tags": [
+    "composition",
+    "construction"
+   ],
+   "description": "A mechanism (a message space for each agent and an outcome function) implements a social choice correspondence in Nash equilibrium when, at every state, the outcomes of its Nash equilibria are exactly the chosen outcomes. Maskin: every Nash-implementable correspondence is Maskin monotonic; with no veto power and three or more agents, Maskin monotonic correspondences are Nash-implementable. Complete information: every agent knows the state.",
+   "input": "A social choice correspondence f from states to sets of outcomes, and a mechanism (message spaces and an outcome function)",
+   "output": "Whether the mechanism's Nash equilibrium outcomes coincide with f at every state",
+   "preserved": "Maskin monotonicity: an outcome chosen at one state stays chosen at any state where it has not fallen in any agent's ranking",
+   "broken": "The complete-information assumption: under incomplete information the conditions are Bayesian (closure, incentive compatibility, Bayesian monotonicity)",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-maskin-monotonicity.txt",
+     "quote": "Maskin monotonicity is a necessary condition for implementability in [[Nash equilibrium]]."
+    },
+    {
+     "file": "excerpts/wikipedia-maskin-monotonicity.txt",
+     "quote": "any social choice rule that satisfies Maskin monotonicity and another property called \"no veto power\" can be implemented in Nash equilibrium form if there are three or more voters."
+    },
+    {
+     "file": "excerpts/econometrica-jackson-1991.txt",
+     "quote": "if and only if closure, incentive compatibility, and Bayesian monotonicity conditions are satisfied."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "sourced"
+   },
+   "lean": [
+    {
+     "field": "preserved",
+     "decl": "MathMap.Mechanism.maskinMonotonic_of_implements",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "Maskin's necessity theorem: any correspondence implemented in Nash equilibrium is Maskin monotonic.",
+     "file": "lean/MathMap/Implementation.lean"
     }
    ],
    "tier": "receipted"

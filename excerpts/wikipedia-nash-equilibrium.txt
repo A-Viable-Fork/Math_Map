@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Nash equilibrium (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364609145
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: aa6ad4bfcb3a951f09b3c9e1d5e65b7f3dcb32202f7a395a282a88cefd5605ad
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+no player can do better by unilaterally changing their strategy.
