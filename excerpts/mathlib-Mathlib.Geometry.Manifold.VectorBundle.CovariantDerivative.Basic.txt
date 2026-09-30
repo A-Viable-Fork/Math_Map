@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 9e4dcdf65ee9406d58be57d566f6a1464d6dd8eece35c6cd82cef22ee6758be5
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- IsCovariantDerivativeOn (line 91)
+structure IsCovariantDerivativeOn
+    (cov : (Π x : M, V x) → (Π x : M, TangentSpace I x →L[𝕜] V x))
+    (s : Set M := Set.univ) : Prop where
+  add {σ σ' : Π x : M, V x} {x}
+    (hσ : MDiffAt (T% σ) x) (hσ' : MDiffAt (T% σ') x) (hx : x ∈ s := by trivial) :
+    cov (σ + σ') x = cov σ x + cov σ' x
+  leibniz {σ : Π x : M, V x} {g : M → 𝕜} {x}
+    (hσ : MDiffAt (T% σ) x) (hg : MDiffAt g x) (hx : x ∈ s := by trivial) :
+    cov (g • σ) x = g x • cov σ x + (d% g x).smulRight (σ x)

@@ -198,6 +198,14 @@ const TARGETED = [
     broken: I("k", "embeds a space as a subspace of a contractible space",
       "X's topology is not lost (X embeds as a subspace); one end of the cylinder collapses to the vertex, and what is lost is X's homotopy type."),
   }),
+  t("D4-086", CHAIN, { c: W("Covariant_derivative") }, {
+    name: C("c", "is a way of specifying a derivative along tangent vectors of a manifold"),
+    description: C("c", "can be used to define parallel transport of a vector"),
+    input: C("c", "the covariant derivative is a way of introducing and working with a connection on a manifold"),
+    output: C("c", "is a generalization of the directional derivative from vector calculus"),
+    preserved: C("c", "obeys the product rule", "The product (Leibniz) rule is stated. Tensoriality in X is built into Mathlib's definition: the derivative of a section is a section of Hom(TM, V) (mapfill/formal.js)."),
+    broken: C("c", "In general, covariant derivatives do not commute.", "\"Broken\" in general only: a flat connection is one whose covariant derivatives commute; curvature measures the failure."),
+  }),
   t("D8-107", CITE, { j: W("Jordan_normal_form") }, {
     name: C("j", "its Jordan normal form is also called the Jordan normal form of"),
     description: C("j", "This condition is always satisfied if K is algebraically closed"),

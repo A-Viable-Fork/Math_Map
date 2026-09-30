@@ -969,6 +969,17 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
 
   k: https://en.wikipedia.org/w/index.php?action=raw&title=Cone_(topology)
 
+### D4-086 Covariant derivative (confirmed; for Weakest link: a composite rests on this entry's unchecked claims (scripts/compose.mjs).)
+
+- name: **confirmed** [c] "is a way of specifying a derivative along tangent vectors of a manifold"
+- description: **confirmed** [c] "can be used to define parallel transport of a vector"
+- input: **confirmed** [c] "the covariant derivative is a way of introducing and working with a connection on a manifold"
+- output: **confirmed** [c] "is a generalization of the directional derivative from vector calculus"
+- preserved: **confirmed** [c] "obeys the product rule" *The product (Leibniz) rule is stated. Tensoriality in X is built into Mathlib's definition: the derivative of a section is a section of Hom(TM, V) (mapfill/formal.js).*
+- broken: **confirmed** [c] "In general, covariant derivatives do not commute." *"Broken" in general only: a flat connection is one whose covariant derivatives commute; curvature measures the failure.*
+
+  c: https://en.wikipedia.org/w/index.php?action=raw&title=Covariant_derivative
+
 ### D8-107 Jordan decomposition (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
 
 - name: **confirmed** [j] "its Jordan normal form is also called the Jordan normal form of"

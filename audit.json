@@ -3035,6 +3035,47 @@
    }
   },
   {
+   "id": "D4-086",
+   "why": "Weakest link: a composite rests on this entry's unchecked claims (scripts/compose.mjs).",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Covariant_derivative"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is a way of specifying a derivative along tangent vectors of a manifold"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "can be used to define parallel transport of a vector"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the covariant derivative is a way of introducing and working with a connection on a manifold"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is a generalization of the directional derivative from vector calculus"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "obeys the product rule",
+     "note": "The product (Leibniz) rule is stated. Tensoriality in X is built into Mathlib's definition: the derivative of a section is a section of Hom(TM, V) (mapfill/formal.js)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "In general, covariant derivatives do not commute.",
+     "note": "\"Broken\" in general only: a flat connection is one whose covariant derivatives commute; curvature measures the failure."
+    }
+   }
+  },
+  {
    "id": "D8-107",
    "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
    "sources": {

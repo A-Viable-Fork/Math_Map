@@ -15,7 +15,7 @@ Every entry states where its content comes from:
 
 ## Trust tiers
 
-Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Counts: landed 1376, audited 77, authored 495, receipted 14.
+Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Counts: landed 1375, audited 78, authored 495, receipted 14.
 
 Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 7 entries have conditions so far.
 
@@ -25,7 +25,7 @@ Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js`
 
 ## Evidence per claim
 
-Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and Mathlib links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest. Fields by level: contradicted 0, unsupported 76, unchecked 11226, imprecise 20, sourced 432, formal 18. Invariant claims by level: contradicted 0, unsupported 0, unchecked 3, imprecise 0, sourced 26, formal 12.
+Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and Mathlib links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest. Fields by level: contradicted 0, unsupported 76, unchecked 11220, imprecise 20, sourced 438, formal 18. Invariant claims by level: contradicted 0, unsupported 0, unchecked 0, imprecise 0, sourced 27, formal 14.
 
 ## Corrections
 
@@ -33,7 +33,7 @@ Every field of every entry, and every named-invariant claim, carries an evidence
 
 ## Formal links (Lean and Mathlib)
 
-`mapfill/formal.js` links entries to declarations in [Mathlib](https://github.com/leanprover-community/mathlib4), pinned at commit `380f2aafb622cb2c1c93dac545b6389083c68c51`: 36 links on 17 entries. Each link names the field it bears on and grades the match: **exact** (Mathlib states the claim), **general** (Mathlib states something that implies it), **special** (a special case), **related** (a weaker or neighbouring result; the claim itself is not formalized), **ingredient** (the objects, not the claim), or **conflicts** (Mathlib's statement conflicts with the claim as written; the note says how). Counts: exact 21, conflicts 1, special 3, general 9, ingredient 1, related 1. The declaration statements are quoted in `excerpts/mathlib-*.txt` with the hash of each file at the pin; `node scripts/formal.mjs --verify` refetches them. A link says Mathlib proves the quoted statement, which its CI type-checked at that commit; the grade of how it bears on the entry is a judgment, like an audit grade. `reports/FORMAL-QUEUE.md` lists unreviewed name matches still to be read.
+`mapfill/formal.js` links entries to declarations in [Mathlib](https://github.com/leanprover-community/mathlib4), pinned at commit `380f2aafb622cb2c1c93dac545b6389083c68c51`: 38 links on 18 entries. Each link names the field it bears on and grades the match: **exact** (Mathlib states the claim), **general** (Mathlib states something that implies it), **special** (a special case), **related** (a weaker or neighbouring result; the claim itself is not formalized), **ingredient** (the objects, not the claim), or **conflicts** (Mathlib's statement conflicts with the claim as written; the note says how). Counts: exact 23, conflicts 1, special 3, general 9, ingredient 1, related 1. The declaration statements are quoted in `excerpts/mathlib-*.txt` with the hash of each file at the pin; `node scripts/formal.mjs --verify` refetches them. A link says Mathlib proves the quoted statement, which its CI type-checked at that commit; the grade of how it bears on the entry is a judgment, like an audit grade. `reports/FORMAL-QUEUE.md` lists unreviewed name matches still to be read.
 
 ## Lean
 

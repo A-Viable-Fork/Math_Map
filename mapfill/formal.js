@@ -81,6 +81,11 @@ const FORMAL = [
     "In the triple i_! left of i^* left of i_*, the middle functor i^* is a right adjoint, so it preserves limits.", { invariant: "limits", premise: "input" }),
   K("D7-X03", "preserved", "CategoryTheory.Adjunction.leftAdjoint_preservesColimits", ADJ, "general",
     "The middle functor i^* is also a left adjoint, so it preserves colimits.", { invariant: "colimits", premise: "input" }),
+  // D4-086: Mathlib's covariant derivative (a Koszul connection on a vector bundle).
+  K("D4-086", "preserved", "IsCovariantDerivativeOn", "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean", "exact",
+    "The Leibniz rule is a field of Mathlib's definition: cov (g • σ) = g • cov σ + dg ⊗ σ.", { invariant: "leibniz-rule" }),
+  K("D4-086", "preserved", "IsCovariantDerivativeOn", "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean", "exact",
+    "Tensoriality in X is built into the type: the covariant derivative of a section is, at each point, a continuous linear map from the tangent space.", { invariant: "tensoriality" }),
   // D8 Computation
   K("D8-125", "preserved", "Real.strictMonoOn_log", "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean", "exact", "The logarithm is strictly increasing on the positive reals, so the transform preserves order (the corrected field).", { whole: true }),
   K("D8-125", "description", "Real.log_mul", "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean", "exact", "log(xy) = log x + log y: products become sums (the corrected field)."),

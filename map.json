@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "c5f75a1ea9bc463fec2291f29c5ad9522552487e"
+  "commit": "3582eb1d7fa225182a4b2e5c31515030265f9a5f"
  },
  "domains": {
   "D1": {
@@ -364,8 +364,8 @@
    "added": 8
   },
   "byTier": {
-   "landed": 1376,
-   "audited": 77,
+   "landed": 1375,
+   "audited": 78,
    "authored": 495,
    "receipted": 14
   },
@@ -374,9 +374,9 @@
   "fieldEvidence": {
    "contradicted": 0,
    "unsupported": 76,
-   "unchecked": 11226,
+   "unchecked": 11220,
    "imprecise": 20,
-   "sourced": 432,
+   "sourced": 438,
    "formal": 18
   },
   "lean": {
@@ -390,17 +390,17 @@
   "claimEvidence": {
    "contradicted": 0,
    "unsupported": 0,
-   "unchecked": 3,
+   "unchecked": 0,
    "imprecise": 0,
-   "sourced": 26,
-   "formal": 12
+   "sourced": 27,
+   "formal": 14
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 17,
-   "links": 36,
+   "entries": 18,
+   "links": 38,
    "byMatch": {
-    "exact": 21,
+    "exact": 23,
     "conflicts": 1,
     "special": 3,
     "general": 9,
@@ -17322,40 +17322,61 @@
     ]
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "claims": [
     {
      "field": "preserved",
      "invariant": "leibniz-rule",
-     "level": "unchecked",
+     "level": "formal",
      "basis": [
-      "field preserved: unchecked"
+      "field preserved: sourced",
+      "Mathlib IsCovariantDerivativeOn"
      ]
     },
     {
      "field": "preserved",
      "invariant": "tensoriality",
-     "level": "unchecked",
+     "level": "formal",
      "basis": [
-      "field preserved: unchecked"
+      "field preserved: sourced",
+      "Mathlib IsCovariantDerivativeOn"
      ]
     },
     {
      "field": "broken",
      "invariant": "flatness",
-     "level": "unchecked",
+     "level": "sourced",
      "basis": [
-      "field broken: unchecked"
+      "field broken: sourced"
      ]
     }
    ],
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "IsCovariantDerivativeOn",
+     "file": "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean",
+     "match": "exact",
+     "note": "The Leibniz rule is a field of Mathlib's definition: cov (g • σ) = g • cov σ + dg ⊗ σ.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "IsCovariantDerivativeOn",
+     "file": "Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean",
+     "match": "exact",
+     "note": "Tensoriality in X is built into the type: the covariant derivative of a section is, at each point, a continuous linear map from the tangent space.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/VectorBundle/CovariantDerivative/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-087",

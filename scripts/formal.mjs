@@ -57,7 +57,7 @@ function declarations(text) {
       else if (depth === 0 && (s.startsWith(":=", c) || (!isDef && /^\swhere\b/.test(s.slice(c - 1, c + 6)) && /\s/.test(s[c - 1])))) { cut = c; break; }
     }
     if (!isDef || /^:=\s*by\b/.test(s.slice(cut))) s = s.slice(0, cut);
-    else s = s.split("\n").slice(0, 6).join("\n");
+    else if (!["structure", "class"].includes(m[1])) s = s.split("\n").slice(0, 6).join("\n");
     out.push({ full, line: i + 1, statement: s.split("\n").map((x) => x.trimEnd()).join("\n").trimEnd() });
   }
   return out;
@@ -103,7 +103,7 @@ export function check(entries) {
     if (k.premise && !FIELDS.includes(k.premise)) F.push(`${at}: premise must be a field`);
     if (k.premise && k.match !== "general") F.push(`${at}: a premise belongs to a general link`);
     if (k.match === "general" && k.invariant && !k.premise) F.push(`${at}: a general link on an invariant needs the premise field that makes the theorem apply`);
-    const key = `${k.entry}|${k.field}|${k.decl}`; if (seen.has(key)) F.push(`${at}: given twice`); seen.add(key);
+    const key = `${k.entry}|${k.field}|${k.decl}|${k.invariant || ""}`; if (seen.has(key)) F.push(`${at}: given twice`); seen.add(key);
     const ef = join(ROOT, excerptFile(k.file));
     if (!existsSync(ef)) { F.push(`${at}: no excerpt file ${excerptFile(k.file)} (run --excerpt)`); continue; }
     const t = readFileSync(ef, "utf8");
