@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/GroupTheory/Abelianization/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Abelianization/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 5143fde528dd619fc50e423cf2714940979fe9226109316f566f07d40eec4806
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Abelianization (line 39)
+def Abelianization : Type u :=
+  G ⧸ commutator G
+
+-- Abelianization.of (line 51)
+def of : G →* Abelianization G where
+  toFun := QuotientGroup.mk
+  map_one' := rfl
+  map_mul' _ _ := rfl

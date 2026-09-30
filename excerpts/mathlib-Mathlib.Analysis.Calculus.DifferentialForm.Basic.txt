@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: cab45addbcd324efe8d55e5521e351497e76ae8fee3bf9fa8f124202115e025c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- extDeriv_extDeriv (line 234)
+theorem extDeriv_extDeriv (h : ContDiff 𝕜 r ω) (hr : minSmoothness 𝕜 2 ≤ r) :
+    extDeriv (extDeriv ω) = 0

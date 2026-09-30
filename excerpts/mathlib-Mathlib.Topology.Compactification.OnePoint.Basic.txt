@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Compactification/OnePoint/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: ffd917296b3a335e44a71a9aeab12e22671be8efb56bbf752ccacf61bb37005e
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- OnePoint.isOpenEmbedding_coe (line 272)
+theorem isOpenEmbedding_coe : IsOpenEmbedding ((↑) : X → OnePoint X)
+
+-- OnePoint.denseRange_coe (line 446)
+theorem denseRange_coe [NoncompactSpace X] : DenseRange ((↑) : X → OnePoint X)

@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "f3a5835688f20ba76c08aae90aaf77c370171517"
+  "commit": "0006e6f6affce217943c003a8aed90a1962c6fec"
  },
  "domains": {
   "D1": {
@@ -364,27 +364,27 @@
    "added": 9
   },
   "byTier": {
-   "landed": 1354,
-   "audited": 99,
+   "landed": 1346,
+   "audited": 107,
    "authored": 495,
    "receipted": 15
   },
   "withConditions": 7,
-  "corrected": 20,
+  "corrected": 21,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 89,
-   "unchecked": 11094,
+   "unsupported": 92,
+   "unchecked": 11046,
    "imprecise": 20,
-   "sourced": 542,
-   "formal": 33
+   "sourced": 581,
+   "formal": 39
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 25,
-   "entries": 7,
+   "claims": 26,
+   "entries": 8,
    "definitions": 19,
-   "proved": 25,
+   "proved": 26,
    "stated": 0
   },
   "claimEvidence": {
@@ -397,15 +397,15 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 41,
-   "links": 81,
+   "entries": 49,
+   "links": 93,
    "byMatch": {
-    "exact": 56,
-    "conflicts": 3,
-    "special": 8,
+    "exact": 64,
+    "conflicts": 4,
+    "special": 9,
     "general": 9,
-    "ingredient": 4,
-    "related": 1
+    "ingredient": 5,
+    "related": 2
    }
   }
  },
@@ -15602,14 +15602,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Abelianization",
+     "file": "Mathlib/GroupTheory/Abelianization/Defs.lean",
+     "match": "exact",
+     "note": "G modulo its commutator subgroup.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Abelianization/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Abelianization.of",
+     "file": "Mathlib/GroupTheory/Abelianization/Defs.lean",
+     "match": "ingredient",
+     "note": "The quotient homomorphism G -> G^ab.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Abelianization/Defs.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-011",
@@ -17375,14 +17394,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "ContinuousMap.compactOpen",
+     "file": "Mathlib/Topology/CompactOpen.lean",
+     "match": "exact",
+     "note": "The compact-open topology on continuous maps.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/CompactOpen.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-073",
@@ -19077,14 +19107,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "extDeriv_extDeriv",
+     "file": "Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean",
+     "match": "special",
+     "note": "d∘d = 0 for sufficiently smooth forms on a normed space (Mathlib at the pin: forms on vector spaces, not yet on manifolds).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-128",
@@ -22512,14 +22553,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "formal",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "TopologicalSpace.metrizableSpace_of_t3_secondCountable",
+     "file": "Mathlib/Topology/Metrizable/Urysohn.lean",
+     "match": "exact",
+     "note": "Urysohn: a second-countable regular (T3) space is metrizable.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Metrizable/Urysohn.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-250",
@@ -23246,14 +23298,33 @@
    "anchorable": true,
    "landedAs": "Same as Alexandrov compactification (D4-017).",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "OnePoint.isOpenEmbedding_coe",
+     "file": "Mathlib/Topology/Compactification/OnePoint/Basic.lean",
+     "match": "exact",
+     "note": "X embeds as an open subspace: its local topology is kept.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "OnePoint.denseRange_coe",
+     "file": "Mathlib/Topology/Compactification/OnePoint/Basic.lean",
+     "match": "exact",
+     "note": "For noncompact X the image is dense: X is no longer the whole space, and is no longer closed.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-274",
@@ -25976,20 +26047,83 @@
    "input": "Completely regular space X",
    "output": "Compact Hausdorff βX with X dense",
    "preserved": "Universal property, continuous function extension",
-   "broken": "Metrizability, separability, cardinality",
+   "broken": "Not separability: X is dense in βX, so βX is separable when X is. (The landed metrizability and cardinality claims are dropped: no receipt here.)",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Metrizability, separability, cardinality"
+    },
+    "reason": "Graded wrong: the landed text lists separability as broken, the error D2-168 also makes. Proved in lean/MathMap/StoneCech.lean.",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-Mathlib.Topology.Bases.txt",
+      "quote": "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.Topology.Compactification.StoneCech.txt",
+      "quote": "theorem denseRange_stoneCechUnit : DenseRange (stoneCechUnit : α → StoneCech α)",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "lean": [
+    {
+     "field": "broken",
+     "decl": "MathMap.stoneCech_separableSpace",
+     "match": "refutes-landed",
+     "status": "proved",
+     "note": "The same theorem refutes D4-373's landed broken field, which repeats D2-168's error.",
+     "file": "lean/MathMap/StoneCech.lean"
+    }
+   ],
+   "formal": [
+    {
+     "field": "output",
+     "decl": "denseRange_stoneCechUnit",
+     "file": "Mathlib/Topology/Compactification/StoneCech.lean",
+     "match": "exact",
+     "note": "X has dense image in βX.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/StoneCech.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "stoneCechExtend_extends",
+     "file": "Mathlib/Topology/Compactification/StoneCech.lean",
+     "match": "exact",
+     "note": "Continuous maps to compact Hausdorff spaces extend.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/StoneCech.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "DenseRange.separableSpace",
+     "file": "Mathlib/Topology/Bases.lean",
+     "match": "conflicts",
+     "note": "The Stone-Cech compactification of a separable space is separable; the landed text lists separability as broken.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D4-374",
@@ -27466,14 +27600,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "SmoothBumpCovering.embeddingPiTangent_injective",
+     "file": "Mathlib/Geometry/Manifold/WhitneyEmbedding.lean",
+     "match": "related",
+     "note": "Mathlib has the weak Whitney theorem (a compact manifold embeds in some Euclidean space via bump functions), not the embedding in R^{2n}.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/WhitneyEmbedding.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-428",
@@ -27717,14 +27862,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "PrimeSpectrum.isClosed_iff_zeroLocus",
+     "file": "Mathlib/RingTheory/Spectrum/Prime/Topology.lean",
+     "match": "exact",
+     "note": "The closed sets of Spec R are the zero loci.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Spectrum/Prime/Topology.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-437",

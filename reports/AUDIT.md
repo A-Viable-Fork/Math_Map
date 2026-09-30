@@ -1215,6 +1215,96 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
 
   a: https://en.wikipedia.org/w/index.php?action=raw&title=Adjoint_functors
 
+### D4-010 Abelianization (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [c] "is an abelian group called the abelianization of G"
+- description: **confirmed** [c] "The quotient G/[G, G] is an abelian group called the abelianization of G"
+- input: **confirmed** [c] "Given a group G , a quotient group G/N is abelian if and only if"
+- output: **confirmed** [c] "The quotient G/[G, G] is an abelian group called the abelianization of G"
+- preserved: **confirmed** [c] "a quotient group G/N is abelian if and only if [G, G]\subseteq N" *Every abelian quotient factors through it; H_1 of a space is the abelianization of its fundamental group (Hurewicz), not stated on the lines checked.*
+- broken: **confirmed** [c] "The quotient G/[G, G] is an abelian group called the abelianization of G"
+
+  c: https://en.wikipedia.org/w/index.php?action=raw&title=Commutator_subgroup
+
+### D4-072 Compact-open topology construction (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [k] "is a topology defined on the set of continuous maps between two topological spaces"
+- description: **confirmed** [k] "is a topology defined on the set of continuous maps between two topological spaces"
+- input: **confirmed** [k] "is a topology defined on the set of continuous maps between two topological spaces"
+- output: **confirmed** [k] "is one of the commonly used topologies on function spaces"
+- preserved: **confirmed** [m] "instance [LocallyCompactPair X Y] : ContinuousEval C(X, Y) X Y where" *Evaluation is continuous under local compactness (Mathlib's condition is on the pair).*
+- broken: **unsupported** *"Pointwise topology": the compact-open topology is finer than the pointwise one, which the lines checked do not state.*
+
+  k: https://en.wikipedia.org/w/index.php?action=raw&title=Compact-open_topology
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/CompactOpen.lean
+
+### D4-127 Exterior derivative (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [e] "then d(d\alpha)=0"
+- description: **confirmed** [e] "then d(d\alpha)=0"
+- input: **confirmed** [e] "then d(d\alpha)=0"
+- output: **confirmed** [e] "then d(d\alpha)=0"
+- preserved: **confirmed** [e] "then d(d\alpha)=0" *d∘d = 0 is stated; Stokes' theorem and de Rham cohomology rest on it.*
+- broken: **unsupported** *"Non-exact forms" names no invariant.*
+
+  e: https://en.wikipedia.org/w/index.php?action=raw&title=Exterior_derivative
+
+### D4-249 Metrization (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [m] "Urysohn's metrization theorem"
+- description: **confirmed** [m] "This states that every Hausdorff second-countable regular space is metrizable."
+- input: **confirmed** [m] "This states that every Hausdorff second-countable regular space is metrizable."
+- output: **confirmed** [m] "This states that every Hausdorff second-countable regular space is metrizable."
+- preserved: **confirmed** [m] "This states that every Hausdorff second-countable regular space is metrizable."
+- broken: **confirmed** [m] "every second-countable manifold is metrizable" *The metric is not unique; any compatible metric will do.*
+
+  m: https://en.wikipedia.org/w/index.php?action=raw&title=Metrizable_space
+
+### D4-273 One-point compactification (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [a] "the Alexandroff compactification"
+- description: **confirmed** [a] "in a precise sense minimal among all compactific"
+- input: **confirmed** [a] "is Hausdorff if and only if" *For a Hausdorff compactification X must be locally compact Hausdorff.*
+- output: **confirmed** [a] "is compact."
+- preserved: **confirmed** [a] "it embeds X as an open subset of"
+- broken: **confirmed** [a] "is dense in X^* , if X is noncompact."
+
+  a: https://en.wikipedia.org/w/index.php?action=raw&title=Alexandroff_extension
+
+### D4-373 Stone-Cech compactification (wrong; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [s] "the Stone–Čech compactification is a technique for constructing a universal map"
+- description: **confirmed** [s] "factors uniquely through"
+- input: **confirmed** [s] "is a Tychonoff space, the map from"
+- output: **confirmed** [s] "can be identified as a dense subspace of"
+- preserved: **confirmed** [s] "factors uniquely through"
+- broken: **wrong** [b] "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]" *Separability is not broken (X is dense in βX; proved in lean/MathMap/StoneCech.lean). The same error as D2-168. Metrizability and cardinality do change (βℕ), which the lines checked do not state.*
+
+  s: https://en.wikipedia.org/w/index.php?action=raw&title=Stone%E2%80%93%C4%8Cech_compactification
+  b: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean
+
+### D4-427 Whitney embedding (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [w] "The strong Whitney embedding theorem states"
+- description: **confirmed** [w] "The strong Whitney embedding theorem states"
+- input: **confirmed** [w] "The strong Whitney embedding theorem states" *Compactness is not needed: any smooth m-manifold (Hausdorff, second countable) embeds in R^{2m}.*
+- output: **confirmed** [w] "The strong Whitney embedding theorem states"
+- preserved: **confirmed** [w] "The strong Whitney embedding theorem states"
+- broken: **unsupported** *"Specific embedding (non-unique)" is true but not stated on the lines checked.*
+
+  w: https://en.wikipedia.org/w/index.php?action=raw&title=Whitney_embedding_theorem
+
+### D4-436 Zariski topology construction (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [z] "the topology whose closed sets are the algebraic subsets of the variety"
+- description: **confirmed** [z] "the topology whose closed sets are the algebraic subsets of the variety"
+- input: **confirmed** [z] "the topology whose closed sets are the algebraic subsets of the variety"
+- output: **confirmed** [z] "the topology whose closed sets are the algebraic subsets of the variety"
+- preserved: **confirmed** [z] "the topology whose closed sets are the algebraic subsets of the variety"
+- broken: **confirmed** [z] "in particular, it is not Hausdorff."
+
+  z: https://en.wikipedia.org/w/index.php?action=raw&title=Zariski_topology
+
 ### D8-107 Jordan decomposition (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
 
 - name: **confirmed** [j] "its Jordan normal form is also called the Jordan normal form of"

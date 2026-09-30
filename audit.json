@@ -3913,6 +3913,324 @@
    }
   },
   {
+   "id": "D4-010",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Commutator_subgroup"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is an abelian group called the abelianization of G"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The quotient G/[G, G] is an abelian group called the abelianization of G"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Given a group G , a quotient group G/N is abelian if and only if"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The quotient G/[G, G] is an abelian group called the abelianization of G"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a quotient group G/N is abelian if and only if [G, G]\\subseteq N",
+     "note": "Every abelian quotient factors through it; H_1 of a space is the abelianization of its fundamental group (Hurewicz), not stated on the lines checked."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The quotient G/[G, G] is an abelian group called the abelianization of G"
+    }
+   }
+  },
+  {
+   "id": "D4-072",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&title=Compact-open_topology",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/CompactOpen.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is a topology defined on the set of continuous maps between two topological spaces"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is a topology defined on the set of continuous maps between two topological spaces"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is a topology defined on the set of continuous maps between two topological spaces"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is one of the commonly used topologies on function spaces"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "instance [LocallyCompactPair X Y] : ContinuousEval C(X, Y) X Y where",
+     "note": "Evaluation is continuous under local compactness (Mathlib's condition is on the pair)."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Pointwise topology\": the compact-open topology is finer than the pointwise one, which the lines checked do not state."
+    }
+   }
+  },
+  {
+   "id": "D4-127",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&title=Exterior_derivative"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then d(d\\alpha)=0"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then d(d\\alpha)=0"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then d(d\\alpha)=0"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then d(d\\alpha)=0"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then d(d\\alpha)=0",
+     "note": "d∘d = 0 is stated; Stokes' theorem and de Rham cohomology rest on it."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-exact forms\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D4-249",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Metrizable_space"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Urysohn's metrization theorem"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "This states that every Hausdorff second-countable regular space is metrizable."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "This states that every Hausdorff second-countable regular space is metrizable."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "This states that every Hausdorff second-countable regular space is metrizable."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "This states that every Hausdorff second-countable regular space is metrizable."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "every second-countable manifold is metrizable",
+     "note": "The metric is not unique; any compatible metric will do."
+    }
+   }
+  },
+  {
+   "id": "D4-273",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&title=Alexandroff_extension"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the Alexandroff compactification"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "in a precise sense minimal among all compactific"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is Hausdorff if and only if",
+     "note": "For a Hausdorff compactification X must be locally compact Hausdorff."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is compact."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "it embeds X as an open subset of"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is dense in X^* , if X is noncompact."
+    }
+   }
+  },
+  {
+   "id": "D4-373",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Stone%E2%80%93%C4%8Cech_compactification",
+    "b": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the Stone–Čech compactification is a technique for constructing a universal map"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "factors uniquely through"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is a Tychonoff space, the map from"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "can be identified as a dense subspace of"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "factors uniquely through"
+    },
+    "broken": {
+     "verdict": "wrong",
+     "src": "b",
+     "quote": "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]",
+     "note": "Separability is not broken (X is dense in βX; proved in lean/MathMap/StoneCech.lean). The same error as D2-168. Metrizability and cardinality do change (βℕ), which the lines checked do not state."
+    }
+   }
+  },
+  {
+   "id": "D4-427",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&title=Whitney_embedding_theorem"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The strong Whitney embedding theorem states"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The strong Whitney embedding theorem states"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The strong Whitney embedding theorem states",
+     "note": "Compactness is not needed: any smooth m-manifold (Hausdorff, second countable) embeds in R^{2m}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The strong Whitney embedding theorem states"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The strong Whitney embedding theorem states"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Specific embedding (non-unique)\" is true but not stated on the lines checked."
+    }
+   }
+  },
+  {
+   "id": "D4-436",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&title=Zariski_topology"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the topology whose closed sets are the algebraic subsets of the variety"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the topology whose closed sets are the algebraic subsets of the variety"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the topology whose closed sets are the algebraic subsets of the variety"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the topology whose closed sets are the algebraic subsets of the variety"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the topology whose closed sets are the algebraic subsets of the variety"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "in particular, it is not Hausdorff."
+    }
+   }
+  },
+  {
    "id": "D8-107",
    "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
    "sources": {
