@@ -21,7 +21,7 @@ Entries may also carry **conditions** (the hypotheses their claims need) and **c
 
 ## Named invariants and composition
 
-Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js` names those invariants (27 so far, with the relations between them) and links entries to them, each link justified by a phrase in the entry's own field. `node scripts/compose.mjs --chain D2-118,D2-117` then reports, for a chain of entries applied in order, which invariants survive, where each breaks, where one is restored, and where the map is silent. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers 14 entries now.
+Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js` names those invariants (27 so far, with the relations between them), gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. `node scripts/compose.mjs --chain D2-118,D2-117` then reports, for a chain of entries applied in order, whether each join fits (match, narrowing, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers 14 entries now.
 
 ## Audit
 

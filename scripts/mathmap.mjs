@@ -128,6 +128,7 @@ export function parse() {
   const outById2 = Object.fromEntries(out.map((e) => [e.id, e]));
   for (const c of CONDITIONS) { const e = outById2[c.id]; if (e) { e.conditions = c.conditions; e.counterexamples = c.counterexamples || []; e.conditionReceipts = c.receipts; } }
   const V = require("../mapfill/invariants.js");
+  for (const a of V.ACTS_ON) { const e = outById2[a.entry]; if (e) e.actsOn = { input: a.input, output: a.output }; }
   for (const l of V.LINKS) { const e = outById2[l.entry]; if (e) { e.invariants ||= { preserved: [], broken: [], output: [] }; if (e.invariants[l.field] && !e.invariants[l.field].includes(l.invariant)) e.invariants[l.field].push(l.invariant); } }
   return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, vocabulary: V, landed };
 }
@@ -190,12 +191,23 @@ export function check(P = parse()) {
     for (const k of c.counterexamples || []) { if (!k.case) F.push(`${c.id}: a counterexample needs a case`); if (k.receipt) { const x = inFile(k.receipt); if (x) F.push(`${c.id}: ${x}`); } }
   }
   const V = P.vocabulary, vids = new Set();
-  for (const v of V.INVARIANTS) { if (vids.has(v.id)) F.push(`invariant ${v.id}: defined twice`); vids.add(v.id); if (!v.name || !v.kind || !v.definition) F.push(`invariant ${v.id}: needs a name, kind and definition`); if (!/^[a-z0-9-]+$/.test(v.id)) F.push(`invariant ${v.id}: ids are lowercase words joined by hyphens`); }
+  const kinds = V.CARRIERS;
+  for (const [k, p] of Object.entries(kinds)) if (p !== null && !(p in kinds)) F.push(`carrier ${k}: unknown parent ${p}`);
+  for (const v of V.INVARIANTS) { if (vids.has(v.id)) F.push(`invariant ${v.id}: defined twice`); vids.add(v.id); if (!v.name || !v.kind || !v.definition) F.push(`invariant ${v.id}: needs a name, kind and definition`); if (!(v.carrier in kinds)) F.push(`invariant ${v.id}: unknown carrier ${v.carrier}`); if (!/^[a-z0-9-]+$/.test(v.id)) F.push(`invariant ${v.id}: ids are lowercase words joined by hyphens`); }
   for (const r of V.RELATIONS) {
     for (const k of [r.from, r.to]) if (!vids.has(k)) F.push(`relation ${r.from} to ${r.to}: unknown invariant ${k}`);
     if (!["implies", "equivalent"].includes(r.kind)) F.push(`relation ${r.from} to ${r.to}: bad kind ${r.kind}`);
     if (!(r.receipts || []).length && !r.basis) F.push(`relation ${r.from} to ${r.to}: needs receipts or a basis`);
     for (const x of r.receipts || []) { const m = inFile(x); if (m) F.push(`relation ${r.from} to ${r.to}: ${m}`); }
+  }
+  const nrm = (x) => String(x || "").replace(/\s+/g, " ").toLowerCase();
+  const acted = new Set();
+  for (const a of V.ACTS_ON) {
+    const e = byIdAll[a.entry], at = `acts-on ${a.entry}`;
+    if (!e) { F.push(`${at}: no such entry`); continue; }
+    if (acted.has(a.entry)) F.push(`${at}: given twice`); acted.add(a.entry);
+    for (const k of [...a.input, ...a.output]) if (!(k in kinds)) F.push(`${at}: unknown carrier ${k}`);
+    for (const [side, ph] of [["input", a.inputPhrase], ["output", a.outputPhrase]]) for (const x of [ph].flat()) if (!x || !nrm(e[side]).includes(nrm(x))) F.push(`${at}: phrase "${x}" is not in the entry's ${side} field`);
   }
   const used = new Set();
   for (const l of V.LINKS) {
@@ -203,8 +215,13 @@ export function check(P = parse()) {
     if (!e) { F.push(`${at}: no such entry`); continue; }
     if (!["preserved", "broken", "output"].includes(l.field)) { F.push(`${at}: field must be preserved, broken or output`); continue; }
     if (!vids.has(l.invariant)) F.push(`${at}: unknown invariant`);
-    const n = (x) => String(x || "").replace(/\s+/g, " ").toLowerCase();
-    if (!l.phrase || !n(e[l.field]).includes(n(l.phrase))) F.push(`${at}: phrase "${l.phrase}" is not in the entry's ${l.field} field`);
+    if (!acted.has(l.entry)) F.push(`${at}: the entry has no acts-on record`);
+    if (l.receipts) {
+      if (l.phrase) F.push(`${at}: give a phrase or receipts, not both`);
+      if (!l.note) F.push(`${at}: a receipted link needs a note saying how the receipt bears on the entry`);
+      if (!l.receipts.length) F.push(`${at}: empty receipts`);
+      for (const x of l.receipts) { const m = inFile(x); if (m) F.push(`${at}: ${m}`); }
+    } else if (!l.phrase || !nrm(e[l.field]).includes(nrm(l.phrase))) F.push(`${at}: phrase "${l.phrase}" is not in the entry's ${l.field} field`);
     used.add(l.invariant);
   }
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
@@ -248,7 +265,7 @@ function render(P) {
   L.push(`- **Fills with a stated reading: ${readings.length}.** The name is ambiguous or nonstandard; the fill says how it was read.`, "");
   if (readings.length) L.push("| Entry | Name | Reading |", "|---|---|---|", ...readings.map((e) => `| ${e.id} | ${e.name} | ${e.unknown ? "**Unidentified.** " : ""}${e.reading} |`), "");
   if (P.additions.length) L.push(`- **Additions: ${P.additions.length}** (\`mapfill/additions.js\`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. ${P.additions.map((a) => `${a.id} ${a.name}`).join("; ")}.`, "");
-  L.push(`- **Invariant vocabulary** (\`mapfill/invariants.js\`): ${P.vocabulary.INVARIANTS.length} named invariants, ${P.vocabulary.RELATIONS.length} relations between them, ${P.vocabulary.LINKS.length} links from entries (${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries), each justified by a phrase in the entry's own field. \`node scripts/compose.mjs --chain ID,ID,...\` reports what survives a chain.`, "");
+  L.push(`- **Invariant vocabulary** (\`mapfill/invariants.js\`): ${P.vocabulary.INVARIANTS.length} named invariants, ${P.vocabulary.RELATIONS.length} relations between them, ${P.vocabulary.LINKS.length} links from entries (${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries; ${P.vocabulary.LINKS.filter((l) => l.receipts).length} receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; ${P.vocabulary.ACTS_ON.length} entries record what kinds of object they take and return. \`node scripts/compose.mjs --chain ID,ID,...\` reports what survives a chain.`, "");
   L.push(`- **Conditions: ${P.conditions.length}** (\`mapfill/conditions.js\`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: ${P.conditions.reduce((n, c) => n + (c.counterexamples || []).length, 0)}.`, "");
   if (P.flags.length) L.push(`- **Flagged entries: ${P.flags.length}.** Landed content known to be wrong (\`mapfill/flags.js\`); withheld from anchoring until corrected.`, "", "| Entry | Name | Kind | Evidence |", "|---|---|---|---|", ...P.flags.map((f) => `| ${f.id} | ${f.name} | ${f.kind} | ${f.evidence} |`), "");
   L.push("## 3. Functional tags", "", "| Tag | Entries |", "|---|---|");

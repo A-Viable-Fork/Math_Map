@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "6b060be45313f490bef87270a3d10024e99e18d1"
+  "commit": "daee9c4ca2f881fbeabd5ce3e789a84d8c08f641"
  },
  "domains": {
   "D1": {
@@ -68,167 +68,213 @@
   "generative"
  ],
  "invariants": {
+  "carriers": {
+   "variety": null,
+   "surface": "variety",
+   "curve": "variety",
+   "space": null,
+   "point-cloud": null,
+   "simplicial-set": "space",
+   "category": null,
+   "functor": null,
+   "topos": "category",
+   "level": null,
+   "field": null,
+   "function": "field",
+   "form": "field",
+   "evolution": null,
+   "connection": null,
+   "vector-field": "form",
+   "operation": null
+  },
   "terms": [
    {
     "id": "birational-type",
     "name": "Birational type",
     "kind": "equivalence class",
+    "carrier": "variety",
     "definition": "The class of a variety up to birational equivalence: isomorphism of dense open subsets."
    },
    {
     "id": "function-field",
     "name": "Function field",
     "kind": "algebraic object",
+    "carrier": "variety",
     "definition": "The field of rational functions of an irreducible variety, as an extension of the base field."
    },
    {
     "id": "local-structure-at-center",
     "name": "Local structure at the center",
     "kind": "local structure",
+    "carrier": "variety",
     "definition": "The germ of the space along the locus a surgery is performed on."
    },
    {
     "id": "exceptional-divisor",
     "name": "Presence of the exceptional divisor",
     "kind": "configuration",
+    "carrier": "variety",
     "definition": "Whether the divisor created by a blow-up is present as a curve (or divisor) in the space."
    },
    {
     "id": "self-intersection",
     "name": "Self-intersection number",
     "kind": "numerical",
+    "carrier": "curve",
     "definition": "The intersection number of a curve with itself on a surface, C^2."
    },
    {
     "id": "curve-isomorphism-type",
     "name": "Isomorphism type of a curve",
     "kind": "equivalence class",
+    "carrier": "curve",
     "definition": "The curve up to isomorphism, as an abstract curve."
    },
    {
     "id": "homotopy-type",
     "name": "Homotopy type",
     "kind": "equivalence class",
+    "carrier": "space",
     "definition": "The space up to homotopy equivalence."
    },
    {
     "id": "contractibility",
     "name": "Contractibility",
     "kind": "property",
+    "carrier": "space",
     "definition": "Being homotopy equivalent to a point."
    },
    {
     "id": "topology-of-input",
     "name": "Topology of the input",
     "kind": "structure",
+    "carrier": "space",
     "definition": "The input space's topology as given, before any collapse or gluing."
    },
    {
     "id": "point-structure",
     "name": "Individual point structure",
     "kind": "structure",
+    "carrier": "point-cloud",
     "definition": "The identity and arrangement of individual input points."
    },
    {
     "id": "limits",
     "name": "Limits",
     "kind": "structure",
+    "carrier": "functor",
     "definition": "Limits of diagrams (all small limits, where stated), preserved when a functor carries limit cones to limit cones."
    },
    {
     "id": "finite-limits",
     "name": "Finite limits",
     "kind": "structure",
+    "carrier": "functor",
     "definition": "Limits of finite diagrams: the terminal object, pullbacks, equalizers."
    },
    {
     "id": "colimits",
     "name": "Colimits",
     "kind": "structure",
+    "carrier": "functor",
     "definition": "Colimits of diagrams, preserved when a functor carries colimit cocones to colimit cocones."
    },
    {
     "id": "category-structure",
     "name": "Category structure",
     "kind": "structure",
+    "carrier": "category",
     "definition": "The objects and morphisms of a category with their composition."
    },
    {
     "id": "truth-values",
     "name": "Truth values",
     "kind": "structure",
+    "carrier": "topos",
     "definition": "The subobject classifier's elements: the internal truth values of a topos."
    },
    {
     "id": "skeletal-objects",
     "name": "Skeletal objects of a level",
     "kind": "modal class",
+    "carrier": "level",
     "definition": "The objects fixed by a level's skeleton modality (i-skeleta)."
    },
    {
     "id": "level-opposition",
     "name": "Opposition at a level",
     "kind": "modal relation",
+    "carrier": "level",
     "definition": "The distinction, at one level, between its skeleta and its sheaves."
    },
    {
     "id": "l2-orthogonality",
     "name": "L^2 orthogonality",
     "kind": "analytic",
+    "carrier": "field",
     "definition": "Pieces of a decomposition are mutually orthogonal in the L^2 inner product."
    },
    {
     "id": "cohomology",
     "name": "Cohomology",
     "kind": "algebraic object",
+    "carrier": "form",
     "definition": "De Rham or singular cohomology groups."
    },
    {
     "id": "function-by-resummation",
     "name": "The function itself (by resummation)",
     "kind": "identity",
+    "carrier": "function",
     "definition": "The decomposed pieces sum back to the original function."
    },
    {
     "id": "spatial-locality",
     "name": "Spatial locality",
     "kind": "analytic",
+    "carrier": "field",
     "definition": "Support or concentration in physical space."
    },
    {
     "id": "instantaneous-locality",
     "name": "Instantaneous locality",
     "kind": "analytic",
+    "carrier": "evolution",
     "definition": "An effect at time t depends only on the source at time t."
    },
    {
     "id": "linearity",
     "name": "Linearity",
     "kind": "algebraic",
+    "carrier": "operation",
     "definition": "Superposition: the response to a sum is the sum of the responses."
    },
    {
     "id": "causality",
     "name": "Causality",
     "kind": "analytic",
+    "carrier": "evolution",
     "definition": "Only earlier times contribute to the state at a given time."
    },
    {
     "id": "leibniz-rule",
     "name": "Leibniz rule",
     "kind": "algebraic",
+    "carrier": "operation",
     "definition": "The product rule for derivations."
    },
    {
     "id": "tensoriality",
     "name": "Tensoriality",
     "kind": "algebraic",
+    "carrier": "operation",
     "definition": "Linearity over smooth functions (C-infinity linearity) in an argument."
    },
    {
     "id": "flatness",
     "name": "Flatness",
     "kind": "geometric",
+    "carrier": "connection",
     "definition": "Vanishing curvature: covariant derivatives commute."
    }
   ],
@@ -249,6 +295,56 @@
     "to": "finite-limits",
     "kind": "implies",
     "basis": "By definition: a finite limit is a limit."
+   }
+  ],
+  "receiptedLinks": [
+   {
+    "entry": "D2-X01",
+    "field": "preserved",
+    "invariant": "birational-type",
+    "note": "The strict transform maps to the curve isomorphically away from the blown-up point, so the two curves are birational.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-resolution-of-singularities.txt",
+      "quote": "is an isomorphism away from the singular points"
+     }
+    ]
+   },
+   {
+    "entry": "D6-X01",
+    "field": "preserved",
+    "invariant": "linearity",
+    "note": "Each band piece is a Fourier multiplier applied to f, hence linear in f.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-littlewood-paley-multiplier.txt",
+      "quote": "\\hat f_\\rho := \\chi_\\rho\\hat f"
+     }
+    ]
+   },
+   {
+    "entry": "D4-176",
+    "field": "preserved",
+    "invariant": "linearity",
+    "note": "The decomposition is given by orthogonal projections, which are linear.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-hodge-projection.txt",
+      "quote": "be the orthogonal projection"
+     }
+    ]
+   },
+   {
+    "entry": "D7-284",
+    "field": "output",
+    "invariant": "skeletal-objects",
+    "note": "An essential inclusion's adjoint triple yields the skeleton modality, whose fixed objects are the level's skeleta.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-aufhebung-modalities.txt",
+      "quote": "yields two [[adjoint modalities]]"
+     }
+    ]
    }
   ]
  },
@@ -4918,6 +5014,14 @@
      "exceptional-divisor"
     ]
    },
+   "actsOn": {
+    "input": [
+     "variety"
+    ],
+    "output": [
+     "variety"
+    ]
+   },
    "tier": "audited",
    "auditVerdict": "imprecise"
   },
@@ -4947,6 +5051,14 @@
      "exceptional-divisor"
     ],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "variety"
+    ],
+    "output": [
+     "variety"
+    ]
    },
    "conditions": "The curve contracted is a (-1)-curve (a smooth rational curve of self-intersection -1) on a smooth projective surface: then it contracts to a smooth point and the contraction is inverse to the blow-up (Castelnuovo). Other curves contract, when they do, to singular points.",
    "counterexamples": [],
@@ -11156,6 +11268,14 @@
     ],
     "output": []
    },
+   "actsOn": {
+    "input": [
+     "point-cloud"
+    ],
+    "output": [
+     "simplicial-set"
+    ]
+   },
    "tier": "landed"
   },
   {
@@ -11678,6 +11798,14 @@
     ],
     "output": []
    },
+   "actsOn": {
+    "input": [
+     "space"
+    ],
+    "output": [
+     "space"
+    ]
+   },
    "tier": "landed"
   },
   {
@@ -11898,6 +12026,15 @@
      "flatness"
     ],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "vector-field",
+     "connection"
+    ],
+    "output": [
+     "vector-field"
+    ]
    },
    "tier": "landed"
   },
@@ -13648,10 +13785,19 @@
    "invariants": {
     "preserved": [
      "cohomology",
-     "l2-orthogonality"
+     "l2-orthogonality",
+     "linearity"
     ],
     "broken": [],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "form"
+    ],
+    "output": [
+     "form"
+    ]
    },
    "conditions": "As stated, on a closed (compact, boundaryless) Riemannian manifold. The vector-field case used in fluid mechanics (the Helmholtz or Leray decomposition) holds for square-integrable fields on a bounded, simply-connected Lipschitz domain.",
    "counterexamples": [],
@@ -15371,6 +15517,14 @@
     ],
     "broken": [],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "category"
+    ],
+    "output": [
+     "simplicial-set"
+    ]
    },
    "tier": "landed"
   },
@@ -26020,6 +26174,14 @@
     "broken": [],
     "output": []
    },
+   "actsOn": {
+    "input": [
+     "category"
+    ],
+    "output": [
+     "functor"
+    ]
+   },
    "conditions": "A localization in the sense needed for subtoposes and levels requires the reflector to preserve finite limits (an exact reflection; between toposes, a geometric embedding). A bare reflective subcategory need not.",
    "counterexamples": [],
    "conditionReceipts": [
@@ -30186,7 +30348,17 @@
      "limits"
     ],
     "broken": [],
-    "output": []
+    "output": [
+     "skeletal-objects"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "functor"
+    ],
+    "output": [
+     "functor"
+    ]
    },
    "tier": "audited",
    "auditVerdict": "imprecise"
@@ -30274,6 +30446,14 @@
      "truth-values"
     ],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "topos"
+    ],
+    "output": [
+     "topos"
+    ]
    },
    "tier": "audited",
    "auditVerdict": "confirmed"
@@ -38390,12 +38570,22 @@
    ],
    "invariants": {
     "preserved": [
-     "curve-isomorphism-type"
+     "curve-isomorphism-type",
+     "birational-type"
     ],
     "broken": [
      "self-intersection"
     ],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "surface",
+     "curve"
+    ],
+    "output": [
+     "curve"
+    ]
    },
    "tier": "receipted"
   },
@@ -38452,6 +38642,14 @@
     ],
     "output": []
    },
+   "actsOn": {
+    "input": [
+     "level"
+    ],
+    "output": [
+     "level"
+    ]
+   },
    "tier": "receipted"
   },
   {
@@ -38489,12 +38687,23 @@
    "invariants": {
     "preserved": [
      "function-by-resummation",
-     "l2-orthogonality"
+     "l2-orthogonality",
+     "linearity"
     ],
     "broken": [
      "spatial-locality"
     ],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "function",
+     "field"
+    ],
+    "output": [
+     "function",
+     "field"
+    ]
    },
    "tier": "receipted"
   },
@@ -38535,6 +38744,15 @@
      "instantaneous-locality"
     ],
     "output": []
+   },
+   "actsOn": {
+    "input": [
+     "evolution",
+     "field"
+    ],
+    "output": [
+     "field"
+    ]
    },
    "tier": "receipted"
   },

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Resolution of singularities (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Resolution_of_singularities
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 9a18a38efa8472f88d96b8beff3c714b9c30342c638fc56c21638adb237b93a1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The map from the strict transform of ''X&prime;'' to ''X'' is an isomorphism away from the singular points of ''X''.
