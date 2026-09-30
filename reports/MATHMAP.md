@@ -13,12 +13,12 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D1 | COMBINATORICS AND GRAPH THEORY | 120 | 0 [0] | 120 [119] | 120 [119] |
 | D2 | ALGEBRA AND ALGEBRAIC GEOMETRY | 201 | 0 [0] | 201 [167] | 201 [167] |
 | D3 | LOGIC AND PROOF THEORY | 188 | 0 [0] | 188 [147] | 188 [147] |
-| D4 | TOPOLOGY AND GEOMETRIC METHODS | 437 | 0 [0] | 437 [385] | 437 [385] |
+| D4 | TOPOLOGY AND GEOMETRIC METHODS | 438 | 0 [0] | 438 [385] | 438 [385] |
 | D5 | PROBABILITY AND INFORMATION THEORY | 151 | 0 [0] | 151 [77] | 151 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 161 | 0 [0] | 161 [146] | 161 [146] |
 | D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 468 | 1 [416] | 468 [0] | 467 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 236 | 1 [0] | 236 [77] | 235 [77] |
-| **all** | | **1962** | **2** [416] | **1962** [1118] | **1960** [1118] |
+| **all** | | **1963** | **2** [416] | **1963** [1118] | **1961** [1118] |
 
 ## 2. The fill layer
 
@@ -51,9 +51,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D8-155 | Poisson-Mellin-Newton cycle | Recorded from memory of the analytic-combinatorics literature. |
 | D8-202 | Square transform | Generic reading as the power transform with exponent 2. |
 
-- **Additions: 8** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion.
+- **Additions: 9** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex.
 
-- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 41 links from entries (16 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 16 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 43 links from entries (17 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 17 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
 - **Mathlib links: 81** on 41 entries (`mapfill/formal.js`), pinned at 380f2aa; 3 record a conflict with the entry as written.
 
@@ -82,7 +82,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `compression` | 90 |
 | `completion` | 31 |
 | `construction` | 705 |
-| `representation-change` | 561 |
+| `representation-change` | 562 |
 | `basis-change` | 5 |
 | `bijection` | 14 |
 | `involution` | 25 |
@@ -97,7 +97,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `orientation` | 3 |
 | `parameterized` | 41 |
 | `algebra-bridge` | 45 |
-| `topology-bridge` | 7 |
+| `topology-bridge` | 8 |
 | `computation-bridge` | 56 |
 | `local` | 43 |
 | `spectral` | 20 |
@@ -107,7 +107,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 ## 4. Operation kinds
 
-- Transformer: 1612
+- Transformer: 1613
 - Constructor: 284
 - Correspondence: 66
 

@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "43cedba66bae1315bd8bc4da39524c0d3bdc7141"
+  "commit": "f3a5835688f20ba76c08aae90aaf77c370171517"
  },
  "domains": {
   "D1": {
@@ -355,19 +355,19 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1962,
-  "anchorable": 1960,
+  "entries": 1963,
+  "anchorable": 1961,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 8
+   "added": 9
   },
   "byTier": {
    "landed": 1354,
    "audited": 99,
    "authored": 495,
-   "receipted": 14
+   "receipted": 15
   },
   "withConditions": 7,
   "corrected": 20,
@@ -376,7 +376,7 @@
    "unsupported": 89,
    "unchecked": 11094,
    "imprecise": 20,
-   "sourced": 536,
+   "sourced": 542,
    "formal": 33
   },
   "lean": {
@@ -392,7 +392,7 @@
    "unsupported": 0,
    "unchecked": 0,
    "imprecise": 0,
-   "sourced": 25,
+   "sourced": 27,
    "formal": 16
   },
   "formal": {
@@ -56776,6 +56776,87 @@
      "match": "general",
      "note": "The middle functor i^* is also a left adjoint, so it preserves colimits.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D4-X01",
+   "domain": "D4",
+   "name": "Face poset of a simplicial complex",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "topology-bridge"
+   ],
+   "description": "Takes a simplicial complex to the poset of its simplices ordered by inclusion, regarded as a small category. The nerve of that category is the barycentric subdivision of the complex, whose geometric realization is homeomorphic to the complex's own: the conversion that lets a simplicial complex enter constructions on categories.",
+   "input": "Simplicial complex K (a simplicial set whose non-degenerate simplices are embedded)",
+   "output": "Poset of simplices of K, as a small category",
+   "preserved": "Homotopy type: the nerve of the poset is the barycentric subdivision of K, and |Sd K| is homeomorphic to |K|",
+   "broken": "The simplicial structure itself: the nerve returns the subdivision Sd K, not K",
+   "complexity": "Linear in the number of simplices",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/nlab-subdivision.txt",
+     "quote": "If every non-degenerate simplex in $X$ is given by a [[monomorphism]] $"
+    },
+    {
+     "file": "excerpts/nlab-subdivision.txt",
+     "quote": "then the barycentric subdivision of def. \\ref{ColimitFormulaForBarycentricSubdivision} is equivalently given by the [[nerve]] of the [[full subcategory]] of its [[category of simplices]] on the non-degenerate simplices."
+    },
+    {
+     "file": "excerpts/nlab-subdivision.txt",
+     "quote": "There is an isomorphism ${|X|} \\cong {|Sd(X)|}$, where $|-|$ is the usual [[geometric realization]] of simplicial complexes."
+    },
+    {
+     "file": "excerpts/nlab-subdivision.txt",
+     "quote": "has as its poset of simplices the partially ordered set of non-empty subsets of"
+    }
+   ],
+   "invariants": {
+    "preserved": [
+     "homotopy-type"
+    ],
+    "broken": [],
+    "output": [
+     "category-structure"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "simplicial-set"
+    ],
+    "output": [
+     "category"
+    ]
+   },
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "homotopy-type",
+     "level": "sourced",
+     "basis": [
+      "field preserved: sourced"
+     ]
+    },
+    {
+     "field": "output",
+     "invariant": "category-structure",
+     "level": "sourced",
+     "basis": [
+      "field output: sourced"
+     ]
     }
    ],
    "tier": "receipted"

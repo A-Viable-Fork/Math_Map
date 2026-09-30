@@ -112,6 +112,20 @@ const ADDITIONS = [
       { file: "excerpts/nlab-level-of-a-topos.txt", quote: "is called a _level_ of $\\mathbf{H}$. This is equivalently the inclusion of the [[right adjoint]] of an [[adjoint cylinder]]/[[adjoint modality]]." },
       { file: "excerpts/nlab-aufhebung-modalities.txt", quote: "yields two [[adjoint modalities]]" },
     ] },
+  { id: "D4-X01", name: "Face poset of a simplicial complex", kind: "Transformer", tags: ["representation-change", "topology-bridge"],
+    description: "Takes a simplicial complex to the poset of its simplices ordered by inclusion, regarded as a small category. The nerve of that category is the barycentric subdivision of the complex, whose geometric realization is homeomorphic to the complex's own: the conversion that lets a simplicial complex enter constructions on categories.",
+    input: "Simplicial complex K (a simplicial set whose non-degenerate simplices are embedded)",
+    output: "Poset of simplices of K, as a small category",
+    preserved: "Homotopy type: the nerve of the poset is the barycentric subdivision of K, and |Sd K| is homeomorphic to |K|",
+    broken: "The simplicial structure itself: the nerve returns the subdivision Sd K, not K",
+    complexity: "Linear in the number of simplices",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/nlab-subdivision.txt", quote: "If every non-degenerate simplex in $X$ is given by a [[monomorphism]] $" },
+      { file: "excerpts/nlab-subdivision.txt", quote: "then the barycentric subdivision of def. \\ref{ColimitFormulaForBarycentricSubdivision} is equivalently given by the [[nerve]] of the [[full subcategory]] of its [[category of simplices]] on the non-degenerate simplices." },
+      { file: "excerpts/nlab-subdivision.txt", quote: "There is an isomorphism ${|X|} \\cong {|Sd(X)|}$, where $|-|$ is the usual [[geometric realization]] of simplicial complexes." },
+      { file: "excerpts/nlab-subdivision.txt", quote: "has as its poset of simplices the partially ordered set of non-empty subsets of" },
+    ] },
 ];
 
 module.exports = { ADDITIONS };

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, subdivision (page source)
+URL: https://ncatlab.org/nlab/source/subdivision
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: effaa13caa046935b08d304eddabdec5d853abed68155d8a799d1b668b4ece7b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If every non-degenerate simplex in $X$ is given by a [[monomorphism]] $
+
+then the barycentric subdivision of def. \ref{ColimitFormulaForBarycentricSubdivision} is equivalently given by the [[nerve]] of the [[full subcategory]] of its [[category of simplices]] on the non-degenerate simplices.
+
+There is an isomorphism ${|X|} \cong {|Sd(X)|}$, where $|-|$ is the usual [[geometric realization]] of simplicial complexes.
+
+The simplicial complex which is the 2-simplex has as its poset of simplices the partially ordered set of non-empty subsets of $\{0,1,2\}$.
