@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "d476839270f58d3c7702b6800d4e7cd20a650365"
+  "commit": "a7bb2838e9c7ed33f5a3b15c22c6bc043993b389"
  },
  "domains": {
   "D1": {
@@ -376,8 +376,8 @@
    "unsupported": 100,
    "unchecked": 10998,
    "imprecise": 20,
-   "sourced": 615,
-   "formal": 45
+   "sourced": 616,
+   "formal": 44
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -400,12 +400,12 @@
    "entries": 57,
    "links": 104,
    "byMatch": {
-    "exact": 73,
+    "exact": 65,
     "conflicts": 4,
-    "special": 10,
-    "general": 9,
-    "ingredient": 6,
-    "related": 2
+    "related": 11,
+    "special": 9,
+    "general": 11,
+    "ingredient": 4
    }
   }
  },
@@ -2042,7 +2042,7 @@
      "field": "output",
      "decl": "Matroid.contract_ground",
      "file": "Mathlib/Combinatorics/Matroid/Minor/Contract.lean",
-     "match": "exact",
+     "match": "general",
      "note": "The contraction's ground set is E minus the contracted set.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Contract.lean"
     },
@@ -2050,7 +2050,7 @@
      "field": "description",
      "decl": "Matroid.dual_contract",
      "file": "Mathlib/Combinatorics/Matroid/Minor/Contract.lean",
-     "match": "exact",
+     "match": "general",
      "note": "Contraction is dual to deletion: (M / X)* = M* \\ X.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Contract.lean"
     },
@@ -2177,7 +2177,7 @@
      "field": "output",
      "decl": "Matroid.IsMinor",
      "file": "Mathlib/Combinatorics/Matroid/Minor/Order.lean",
-     "match": "ingredient",
+     "match": "exact",
      "note": "The minor relation.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Order.lean"
     },
@@ -2185,7 +2185,7 @@
      "field": "description",
      "decl": "Matroid.IsMinor.trans",
      "file": "Mathlib/Combinatorics/Matroid/Minor/Order.lean",
-     "match": "exact",
+     "match": "related",
      "note": "A minor of a minor is a minor: any sequence of deletions and contractions gives a minor.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Order.lean"
     }
@@ -3352,7 +3352,7 @@
      "field": "description",
      "decl": "GaloisConnection.le_u_l",
      "file": "Mathlib/Order/GaloisConnection/Defs.lean",
-     "match": "exact",
+     "match": "related",
      "note": "The unit inequality a <= g(f(a)), which holds in both conventions.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean"
     },
@@ -4806,7 +4806,7 @@
      "field": "preserved",
      "decl": "mellin_comp_mul_left",
      "file": "Mathlib/Analysis/MellinTransform.lean",
-     "match": "general",
+     "match": "related",
      "note": "Mathlib gives the exact law: dilating f by a multiplies the transform by a^(-s). \"Scale invariance\" holds only for the modulus on the line Re s = 0. The convolution-to-product rule the entry also claims is not in Mathlib at the pin.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/MellinTransform.lean"
     }
@@ -6038,7 +6038,7 @@
      "field": "output",
      "decl": "IsLocalization.AtPrime.isLocalRing",
      "file": "Mathlib/RingTheory/Localization/AtPrime/Basic.lean",
-     "match": "special",
+     "match": "exact",
      "note": "The localization is a local ring when S is the complement of a prime: the hypothesis the landed output omits.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/AtPrime/Basic.lean"
     },
@@ -6118,7 +6118,7 @@
      "field": "description",
      "decl": "AdicCompletion.of_injective_iff",
      "file": "Mathlib/RingTheory/AdicCompletion/Basic.lean",
-     "match": "special",
+     "match": "exact",
      "note": "The map into the completion is injective exactly when the module is I-adically Hausdorff: the condition under which completion extends R.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/AdicCompletion/Basic.lean"
     }
@@ -6201,7 +6201,7 @@
      "field": "description",
      "decl": "IsFractionRing.lift",
      "file": "Mathlib/RingTheory/Localization/FractionRing.lean",
-     "match": "exact",
+     "match": "related",
      "note": "Any injective map to a field factors through Frac(R): it is the smallest field containing R.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/FractionRing.lean"
     }
@@ -6985,7 +6985,7 @@
      "field": "description",
      "decl": "TensorProduct.lift.unique",
      "file": "Mathlib/LinearAlgebra/TensorProduct/Basic.lean",
-     "match": "exact",
+     "match": "related",
      "note": "The universal property: a linear map out of the tensor product is determined by its values on pure tensors, and lift realizes each bilinear map.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/TensorProduct/Basic.lean"
     },
@@ -8345,7 +8345,7 @@
      "field": "preserved",
      "decl": "MulAction.quotient",
      "file": "Mathlib/GroupTheory/GroupAction/Quotient.lean",
-     "match": "exact",
+     "match": "general",
      "note": "G acts on G/H.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/GroupAction/Quotient.lean"
     },
@@ -8353,7 +8353,7 @@
      "field": "preserved",
      "decl": "Subgroup.index",
      "file": "Mathlib/GroupTheory/Index.lean",
-     "match": "ingredient",
+     "match": "exact",
      "note": "The index [G : H] is the cardinality of G/H.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Index.lean"
     }
@@ -8620,7 +8620,7 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "formal",
+    "output": "sourced",
     "preserved": "sourced",
     "broken": "unsupported"
    },
@@ -8629,15 +8629,15 @@
      "field": "output",
      "decl": "CategoryTheory.Kleisli",
      "file": "Mathlib/CategoryTheory/Monad/Kleisli.lean",
-     "match": "exact",
-     "note": "The Kleisli category of a monad.",
+     "match": "ingredient",
+     "note": "The object type of the Kleisli category (morphisms and composition are separate declarations).",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Kleisli.lean"
     },
     {
      "field": "preserved",
      "decl": "CategoryTheory.Kleisli.Adjunction.adj",
      "file": "Mathlib/CategoryTheory/Monad/Kleisli.lean",
-     "match": "exact",
+     "match": "related",
      "note": "The Kleisli adjunction, whose monad is T.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Kleisli.lean"
     }
@@ -9437,7 +9437,7 @@
      "field": "broken",
      "decl": "Algebra.GrothendieckGroup.of_injective",
      "file": "Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean",
-     "match": "special",
+     "match": "related",
      "note": "The map is injective when M is cancellative; without cancellation, elements are identified.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean"
     }
@@ -9886,7 +9886,7 @@
      "field": "preserved",
      "decl": "CategoryTheory.ShortComplex.SnakeInput.δ",
      "file": "Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean",
-     "match": "ingredient",
+     "match": "exact",
      "note": "The connecting map.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean"
     }
@@ -9945,7 +9945,7 @@
      "field": "description",
      "decl": "MonoidHom.bijective_of_surjective_of_bijective_of_bijective_of_injective",
      "file": "Mathlib/Algebra/FiveLemma.lean",
-     "match": "general",
+     "match": "special",
      "note": "The sharp five lemma for groups (with exact rows and commuting squares): surjective, bijective, bijective, injective outer maps make the middle one bijective. Four isomorphisms is a special case.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/FiveLemma.lean"
     }
@@ -11071,7 +11071,7 @@
      "field": "input",
      "decl": "FirstOrder.Language.IsFraisse",
      "file": "Mathlib/ModelTheory/Fraisse.lean",
-     "match": "exact",
+     "match": "general",
      "note": "A Fraisse class: nonempty, finitely generated, essentially countable, hereditary, joint embedding, amalgamation.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean"
     },
@@ -23066,7 +23066,7 @@
      "field": "output",
      "decl": "CategoryTheory.nerveFunctor",
      "file": "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean",
-     "match": "ingredient",
+     "match": "exact",
      "note": "The nerve functor from categories to simplicial sets.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean"
     },
@@ -23340,7 +23340,7 @@
      "field": "broken",
      "decl": "OnePoint.denseRange_coe",
      "file": "Mathlib/Topology/Compactification/OnePoint/Basic.lean",
-     "match": "exact",
+     "match": "related",
      "note": "For noncompact X the image is dense: X is no longer the whole space, and is no longer closed.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
     }
@@ -27278,7 +27278,7 @@
      "field": "description",
      "decl": "VectorBundleCore",
      "file": "Mathlib/Topology/VectorBundle/Basic.lean",
-     "match": "exact",
+     "match": "ingredient",
      "note": "A vector bundle given by base sets and transition functions (coordinate changes) satisfying the cocycle condition.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/VectorBundle/Basic.lean"
     }
@@ -35332,7 +35332,7 @@
      "field": "input",
      "decl": "MeasureTheory.Measure.haveLebesgueDecomposition_of_sigmaFinite",
      "file": "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean",
-     "match": "exact",
+     "match": "special",
      "note": "The decomposition exists when mu is s-finite and nu is sigma-finite. The entry's input (\"measures mu, nu\") omits this hypothesis.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean"
     }
@@ -40829,7 +40829,7 @@
      "field": "description",
      "decl": "Subgroup.normalClosure_le_normal",
      "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
-     "match": "exact",
+     "match": "related",
      "note": "It is the smallest normal subgroup containing the set. The field-extension reading is a separate construction (IntermediateField.normalClosure), not linked here.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
     },
