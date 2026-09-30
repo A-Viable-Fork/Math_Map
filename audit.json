@@ -2534,6 +2534,460 @@
      "note": "A decomposition breaks nothing: it is an isomorphism onto the direct sum. What loses information is projecting onto one part (as the Leray projection discards the gradient part)."
     }
    }
+  },
+  {
+   "id": "D1-003",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&title=Line_graph"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the line graph of an undirected graph"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "only four behaviors are possible for this sequence",
+     "note": "Every claim checks: edges become vertices, adjacency is sharing an endpoint, an Euler cycle gives a Hamiltonian line graph, iteration has four behaviours, and Whitney's theorem with the K_3 and K_{1,3} exception."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the line graph of an undirected graph"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "their corresponding edges share a common endpoint"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "not all Hamiltonian cycles in line graphs come from Euler cycles in this way",
+     "note": "Edge count becoming vertex count is right. \"Eulerian translates to Hamiltonian\" holds one way only: an Eulerian graph has a Hamiltonian line graph, but a Hamiltonian line graph need not come from an Eulerian graph."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "and the number of edges of",
+     "note": "The source gives the line graph's vertex and edge counts from the original's, which change as the entry says."
+    }
+   }
+  },
+  {
+   "id": "D1-059",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&title=Dual_matroid"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the dual of a matroid"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "These two operations are dual",
+     "note": "The complement description of bases, the deletion and contraction duality, and the planar-graph statement all check."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the dual of a matroid"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "its basis sets are the complements of the basis sets of"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the matroids representable over any other field, and the regular matroids, are all self-dual families",
+     "note": "Same ground set and the matroid axioms are stated in the same article; representability over a field passes to the dual."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "then the rank function of the dual matroid is",
+     "note": "r*(E) = |E| - r(E), the entry's rank formula, at S = E."
+    }
+   }
+  },
+  {
+   "id": "D1-099",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&title=Galois_connection"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "we will refer to them as (monotone) Galois connections and antitone Galois connections"
+    },
+    "description": {
+     "verdict": "wrong",
+     "src": "g",
+     "quote": "are the associated closure operators; they are monotone idempotent maps with the property",
+     "note": "The entry states antitone maps but gives the monotone convention's second inequality, f(g(b)) <= b. For an antitone connection the source gives b <= FG(b). As written the definition is neither convention. The claim about matroid flats is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "be two partially ordered sets."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "monotone Galois connections are special cases of pairs of adjoint functors",
+     "note": "Adjunction is the monotone reading; an antitone connection is an adjunction between one poset and the other's opposite."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "are the associated closure operators; they are monotone idempotent maps with the property",
+     "note": "Right for the antitone convention the entry names: both composites are closure operators. In the monotone convention one is a kernel operator."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "every Galois connection gives rise to an isomorphism of certain sub-posets",
+     "note": "Only the closed elements correspond; the rest of the order is not preserved."
+    }
+   }
+  },
+  {
+   "id": "D2-031",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Mellin_transform"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "the Mellin transform is an integral transform"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "may be regarded as the multiplicative version of the two-sided Laplace transform"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "the Mellin transform is an integral transform",
+     "note": "The transform takes a function on the positive reals; Mathlib's definition integrates over (0, infinity)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is defined to be the largest open strip on which it is defined"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "which is invariant under dilation",
+     "note": "Multiplicative convolution to product is right. \"Scale invariance\" is loose: the measure dx/x is dilation invariant, but the transform is not; dilating f by a multiplies the transform by a^(-s) (the source's scaling row; Mathlib's mellin_comp_mul_left)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "which is translation invariant",
+     "note": "The two-sided Laplace transform is adapted to additive translation; the Mellin transform to dilation."
+    }
+   }
+  },
+  {
+   "id": "D2-103",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&title=Tensor_product_of_modules"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "the tensor product of modules is a construction"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The universal property of a tensor product has the following important consequence"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "can be carried out for a pair of modules over a commutative ring",
+     "note": "Over a noncommutative ring the construction pairs a right and a left module and yields an abelian group."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "the tensor product of modules is a construction"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "are always right exact functors",
+     "note": "Right exactness is stated; bilinear maps out of M x N become linear maps out of the product."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "can be written, non-uniquely,",
+     "note": "\"Individual presentations\" is loose. What is lost is uniqueness: an element is a sum of pure tensors in many ways."
+    }
+   }
+  },
+  {
+   "id": "D3-033",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&title=Ultraproduct"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "ultraproducts uses an index set"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "any first-order formula is true in the ultraproduct if and only if the set of indices"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "and an ultrafilter"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "which compares components only relative to the ultrafilter"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "any first-order formula is true in the ultraproduct if and only if the set of indices"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "then the ultraproduct will again be well-founded",
+     "note": "The source's example shows a property that is not first-order, well-foundedness, surviving only under an extra hypothesis (sigma-completeness)."
+    }
+   }
+  },
+  {
+   "id": "D3-116",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Sheaf_(mathematics)"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "called the sheafification or sheaf associated to the presheaf"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is the left adjoint functor to the inclusion functor"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "It takes a presheaf"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "produces a new sheaf"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "there is a unique morphism of sheaves",
+     "note": "The universal property is right. The sheaf condition is not preserved but produced: the input is a presheaf. On a presheaf that is already a sheaf, sheafification changes nothing (up to isomorphism)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "It turns out that there is a best possible way to do this",
+     "note": "Sheafification identifies sections that agree locally and adds sections glued from compatible local ones."
+    }
+   }
+  },
+  {
+   "id": "D4-153",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&title=Gelfand%E2%80%93Naimark%E2%80%93Segal_construction"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "construction establishes a correspondence between cyclic"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "construction establishes a correspondence between cyclic"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Given a state"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "with distinguished unit cyclic vector"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "with distinguished unit cyclic vector",
+     "note": "The state is recovered as the vector state of the cyclic vector. Mathlib's GNS file lists this recovery as future work at the pinned commit."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Abstract algebra\" names no invariant. What a single state's representation can lose is faithfulness (it may have a kernel); the source does not say so on the lines checked."
+    }
+   }
+  },
+  {
+   "id": "D4-264",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&title=Nerve_(category_theory)",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "of a small category C is a simplicial set"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "consists of the k-tuples of composable morphisms"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "of a small category C is a simplicial set"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "of a small category C is a simplicial set"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "is fully faithful, demonstrating that",
+     "note": "The category is recoverable for every small category, not only for groupoids: the nerve functor is fully faithful (Mathlib, CategoryTheory.nerveFunctor.fullyfaithful)."
+    },
+    "broken": {
+     "verdict": "wrong",
+     "src": "n",
+     "quote": "does not erase or otherwise disregard morphisms obtained by composition",
+     "note": "Nothing is broken: composition is recorded by the 2-simplices, and the nerve functor is fully faithful. What the nerve adds is higher simplices, which are determined by the 2-simplices."
+    }
+   }
+  },
+  {
+   "id": "D7-157",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&title=Normal_closure_(group_theory)"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "the normal closure of a subset"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is the smallest normal subgroup of G containing S",
+     "note": "The field-extension reading is a separate construction with its own article."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "the normal closure of a subset"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is the smallest normal subgroup of G containing S"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is the smallest normal subgroup of G containing S"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is the subgroup generated by the set",
+     "note": "It is generated by all conjugates of elements of S, so S and its conjugates are not told apart."
+    }
+   }
+  },
+  {
+   "id": "D8-107",
+   "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&title=Jordan_normal_form"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "its Jordan normal form is also called the Jordan normal form of"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "This condition is always satisfied if K is algebraically closed"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "Any square matrix has a Jordan normal form if the field of"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "The Jordan normal form is obtained by some similarity transformation"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "is called the algebraic multiplicity of",
+     "note": "Similar matrices share eigenvalues with their multiplicities, and the form is a similarity invariant."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "its Jordan normal form is very sensitive to perturbations"
+    }
+   }
   }
  ]
 }

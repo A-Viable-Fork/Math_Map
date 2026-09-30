@@ -31,8 +31,9 @@ const TOOLS = [
       kind: str("Operation kind, e.g. Transformer."), tier: { type: "string", enum: ["flagged", "audited", "receipted", "landed", "authored"] },
       anchorable: { type: "boolean", description: "Only entries with input, output and at least one invariant field." },
       invariant: str("A named invariant id (see list_invariants) the entry preserves, breaks or produces."),
+      formal: { type: "boolean", description: "Only entries linked to Mathlib declarations (get_entry shows the links and their match grades)." },
       limit: { type: "integer", minimum: 1, maximum: 100, description: "Default 20." } } } },
-  { name: "get_entry", description: "One entry in full: fields, origin, trust tier, audit verdict, receipts, conditions, counterexamples, named invariants and the kinds of object it acts on.",
+  { name: "get_entry", description: "One entry in full: fields, origin, trust tier, audit verdict, receipts, conditions, counterexamples, Mathlib links with match grades, named invariants and the kinds of object it acts on.",
     inputSchema: { type: "object", properties: { id: str("Entry id, e.g. D2-117 or D7-X01.") }, required: ["id"] } },
   { name: "list_invariants", description: "The named-invariant vocabulary used by compose_chain: carriers (kinds of object, with parents), invariants with definitions, and the relations between them. Optionally filtered to one carrier and its sub-kinds.",
     inputSchema: { type: "object", properties: { carrier: str("e.g. variety, functor, field.") } } },
@@ -40,7 +41,7 @@ const TOOLS = [
     inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." } }, required: ["chain"] } },
 ];
 
-const short = (e) => ({ id: e.id, name: e.name, domain: e.domain, kind: e.kind, tier: e.tier, ...(e.auditVerdict ? { auditVerdict: e.auditVerdict } : {}), input: e.input, output: e.output, description: e.description });
+const short = (e) => ({ id: e.id, name: e.name, domain: e.domain, kind: e.kind, tier: e.tier, ...(e.auditVerdict ? { auditVerdict: e.auditVerdict } : {}), ...(e.formal ? { mathlib: e.formal.map((k) => `${k.decl} (${k.match})`) } : {}), input: e.input, output: e.output, description: e.description });
 const sub = (k, c, C) => { for (let x = k; x; x = C[x]) if (x === c) return true; return false; };
 
 const HANDLERS = {
@@ -52,6 +53,7 @@ const HANDLERS = {
     if (a.kind) es = es.filter((e) => e.kind.toLowerCase() === String(a.kind).toLowerCase());
     if (a.tier) es = es.filter((e) => e.tier === a.tier);
     if (a.anchorable !== undefined) es = es.filter((e) => e.anchorable === a.anchorable);
+    if (a.formal !== undefined) es = es.filter((e) => !!e.formal === a.formal);
     if (a.invariant) es = es.filter((e) => e.invariants && ["preserved", "broken", "output"].some((f) => e.invariants[f].includes(a.invariant)));
     if (a.text) { const q = String(a.text).toLowerCase(); es = es.filter((e) => [e.name, e.description, e.input, e.output, e.preserved, e.broken].filter(Boolean).join(" ").toLowerCase().includes(q)); }
     const lim = Math.min(Math.max(Number(a.limit) || 20, 1), 100);
@@ -110,6 +112,8 @@ function selftest() {
   if (!call("get_entry", { id: "D9-999" }).err) F.push("get_entry accepted a missing id");
   const v = call("list_invariants", { carrier: "curve" });
   if (v.err || !JSON.parse(v.text).invariants.some((t) => t.id === "birational-type")) F.push("list_invariants(curve) misses the parent carrier's invariants");
+  const fm = call("search_entries", { formal: true, limit: 100 });
+  if (fm.err || !JSON.parse(fm.text).entries.some((e) => e.id === "D1-099" && e.mathlib.length)) F.push("search_entries(formal) misses D1-099");
   const c = call("compose_chain", { chain: ["D2-118", "D2-117"] });
   if (c.err || !JSON.parse(c.text).result.invariants.length) F.push("compose_chain returned nothing");
   if (!call("compose_chain", { chain: ["D2-118", "nope"] }).err) F.push("compose_chain accepted a missing id");

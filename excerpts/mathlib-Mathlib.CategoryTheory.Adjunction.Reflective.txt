@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Adjunction/Reflective.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Reflective.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 06669d0b6fb6cf9a288bfcf9f6a0444f9784bf2ce2df4d1d76ff3c5b504e0e4c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Reflective (line 38)
+class Reflective (R : D ⥤ C) extends R.Full, R.Faithful where
+  /-- a choice of a left adjoint to `R` -/
+  L : C ⥤ D
+  /-- `R` is a right adjoint -/
+  adj : L ⊣ R

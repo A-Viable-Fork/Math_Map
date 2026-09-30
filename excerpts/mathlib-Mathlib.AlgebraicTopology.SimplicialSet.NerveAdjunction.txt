@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 621906050a639475e0d2c02689f9d184c85476aaf6f35353ea605d361ad4e4ec
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.nerveFunctor.fullyfaithful (line 401)
+noncomputable def nerveFunctor.fullyfaithful : nerveFunctor.FullyFaithful :=
+  Functor.FullyFaithful.ofFullyFaithful _

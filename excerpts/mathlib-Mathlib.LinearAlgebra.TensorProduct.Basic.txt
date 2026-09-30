@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/TensorProduct/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/TensorProduct/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2835262160d22af5658a05b53b6e119d249b8c7ca1ee17a1cc2ca440de040ae4
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- TensorProduct.lift.unique (line 138)
+theorem lift.unique {g : M ⊗[R] N →ₛₗ[σ₁₂] P₂} (H : ∀ x y, g (x ⊗ₜ y) = f' x y) : g = lift f'

@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Combinatorics/Matroid/Rank/ENat.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Rank/ENat.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2b97d60c9e2b8623b009dc45000c86ff2acc146c34a294d71b20dd51258dea2c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matroid.eRank_add_eRank_dual (line 657)
+lemma eRank_add_eRank_dual (M : Matroid α) : M.eRank + M✶.eRank = M.E.encard

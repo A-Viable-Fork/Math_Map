@@ -835,3 +835,125 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
   h: https://en.wikipedia.org/w/index.php?action=raw&title=Hodge_theory
   z: https://en.wikipedia.org/w/index.php?action=raw&title=Helmholtz_decomposition
 
+### D1-003 Line graph (imprecise; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [l] "the line graph of an undirected graph"
+- description: **confirmed** [l] "only four behaviors are possible for this sequence" *Every claim checks: edges become vertices, adjacency is sharing an endpoint, an Euler cycle gives a Hamiltonian line graph, iteration has four behaviours, and Whitney's theorem with the K_3 and K_{1,3} exception.*
+- input: **confirmed** [l] "the line graph of an undirected graph"
+- output: **confirmed** [l] "their corresponding edges share a common endpoint"
+- preserved: **imprecise** [l] "not all Hamiltonian cycles in line graphs come from Euler cycles in this way" *Edge count becoming vertex count is right. "Eulerian translates to Hamiltonian" holds one way only: an Eulerian graph has a Hamiltonian line graph, but a Hamiltonian line graph need not come from an Eulerian graph.*
+- broken: **confirmed** [l] "and the number of edges of" *The source gives the line graph's vertex and edge counts from the original's, which change as the entry says.*
+
+  l: https://en.wikipedia.org/w/index.php?action=raw&title=Line_graph
+
+### D1-059 Matroid dual (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [d] "the dual of a matroid"
+- description: **confirmed** [d] "These two operations are dual" *The complement description of bases, the deletion and contraction duality, and the planar-graph statement all check.*
+- input: **confirmed** [d] "the dual of a matroid"
+- output: **confirmed** [d] "its basis sets are the complements of the basis sets of"
+- preserved: **confirmed** [d] "the matroids representable over any other field, and the regular matroids, are all self-dual families" *Same ground set and the matroid axioms are stated in the same article; representability over a field passes to the dual.*
+- broken: **confirmed** [d] "then the rank function of the dual matroid is" *r*(E) = |E| - r(E), the entry's rank formula, at S = E.*
+
+  d: https://en.wikipedia.org/w/index.php?action=raw&title=Dual_matroid
+
+### D1-099 Galois connection (wrong; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [g] "we will refer to them as (monotone) Galois connections and antitone Galois connections"
+- description: **wrong** [g] "are the associated closure operators; they are monotone idempotent maps with the property" *The entry states antitone maps but gives the monotone convention's second inequality, f(g(b)) <= b. For an antitone connection the source gives b <= FG(b). As written the definition is neither convention. The claim about matroid flats is not checked.*
+- input: **confirmed** [g] "be two partially ordered sets."
+- output: **confirmed** [g] "monotone Galois connections are special cases of pairs of adjoint functors" *Adjunction is the monotone reading; an antitone connection is an adjunction between one poset and the other's opposite.*
+- preserved: **confirmed** [g] "are the associated closure operators; they are monotone idempotent maps with the property" *Right for the antitone convention the entry names: both composites are closure operators. In the monotone convention one is a kernel operator.*
+- broken: **confirmed** [g] "every Galois connection gives rise to an isomorphism of certain sub-posets" *Only the closed elements correspond; the rest of the order is not preserved.*
+
+  g: https://en.wikipedia.org/w/index.php?action=raw&title=Galois_connection
+
+### D2-031 Mellin Transform (imprecise; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [m] "the Mellin transform is an integral transform"
+- description: **confirmed** [m] "may be regarded as the multiplicative version of the two-sided Laplace transform"
+- input: **confirmed** [m] "the Mellin transform is an integral transform" *The transform takes a function on the positive reals; Mathlib's definition integrates over (0, infinity).*
+- output: **confirmed** [m] "is defined to be the largest open strip on which it is defined"
+- preserved: **imprecise** [m] "which is invariant under dilation" *Multiplicative convolution to product is right. "Scale invariance" is loose: the measure dx/x is dilation invariant, but the transform is not; dilating f by a multiplies the transform by a^(-s) (the source's scaling row; Mathlib's mellin_comp_mul_left).*
+- broken: **confirmed** [m] "which is translation invariant" *The two-sided Laplace transform is adapted to additive translation; the Mellin transform to dilation.*
+
+  m: https://en.wikipedia.org/w/index.php?action=raw&title=Mellin_transform
+
+### D2-103 Tensor Product (imprecise; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [t] "the tensor product of modules is a construction"
+- description: **confirmed** [t] "The universal property of a tensor product has the following important consequence"
+- input: **confirmed** [t] "can be carried out for a pair of modules over a commutative ring" *Over a noncommutative ring the construction pairs a right and a left module and yields an abelian group.*
+- output: **confirmed** [t] "the tensor product of modules is a construction"
+- preserved: **confirmed** [t] "are always right exact functors" *Right exactness is stated; bilinear maps out of M x N become linear maps out of the product.*
+- broken: **imprecise** [t] "can be written, non-uniquely," *"Individual presentations" is loose. What is lost is uniqueness: an element is a sum of pure tensors in many ways.*
+
+  t: https://en.wikipedia.org/w/index.php?action=raw&title=Tensor_product_of_modules
+
+### D3-033 Ultraproduct construction (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [u] "ultraproducts uses an index set"
+- description: **confirmed** [u] "any first-order formula is true in the ultraproduct if and only if the set of indices"
+- input: **confirmed** [u] "and an ultrafilter"
+- output: **confirmed** [u] "which compares components only relative to the ultrafilter"
+- preserved: **confirmed** [u] "any first-order formula is true in the ultraproduct if and only if the set of indices"
+- broken: **confirmed** [u] "then the ultraproduct will again be well-founded" *The source's example shows a property that is not first-order, well-foundedness, surviving only under an extra hypothesis (sigma-completeness).*
+
+  u: https://en.wikipedia.org/w/index.php?action=raw&title=Ultraproduct
+
+### D3-116 Sheafification (imprecise; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [s] "called the sheafification or sheaf associated to the presheaf"
+- description: **confirmed** [s] "is the left adjoint functor to the inclusion functor"
+- input: **confirmed** [s] "It takes a presheaf"
+- output: **confirmed** [s] "produces a new sheaf"
+- preserved: **imprecise** [s] "there is a unique morphism of sheaves" *The universal property is right. The sheaf condition is not preserved but produced: the input is a presheaf. On a presheaf that is already a sheaf, sheafification changes nothing (up to isomorphism).*
+- broken: **confirmed** [s] "It turns out that there is a best possible way to do this" *Sheafification identifies sections that agree locally and adds sections glued from compatible local ones.*
+
+  s: https://en.wikipedia.org/w/index.php?action=raw&title=Sheaf_(mathematics)
+
+### D4-153 GNS construction (partly unsupported; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [g] "construction establishes a correspondence between cyclic"
+- description: **confirmed** [g] "construction establishes a correspondence between cyclic"
+- input: **confirmed** [g] "Given a state"
+- output: **confirmed** [g] "with distinguished unit cyclic vector"
+- preserved: **confirmed** [g] "with distinguished unit cyclic vector" *The state is recovered as the vector state of the cyclic vector. Mathlib's GNS file lists this recovery as future work at the pinned commit.*
+- broken: **unsupported** *"Abstract algebra" names no invariant. What a single state's representation can lose is faithfulness (it may have a kernel); the source does not say so on the lines checked.*
+
+  g: https://en.wikipedia.org/w/index.php?action=raw&title=Gelfand%E2%80%93Naimark%E2%80%93Segal_construction
+
+### D4-264 Nerve functor (wrong; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [n] "of a small category C is a simplicial set"
+- description: **confirmed** [n] "consists of the k-tuples of composable morphisms"
+- input: **confirmed** [n] "of a small category C is a simplicial set"
+- output: **confirmed** [n] "of a small category C is a simplicial set"
+- preserved: **imprecise** [m] "is fully faithful, demonstrating that" *The category is recoverable for every small category, not only for groupoids: the nerve functor is fully faithful (Mathlib, CategoryTheory.nerveFunctor.fullyfaithful).*
+- broken: **wrong** [n] "does not erase or otherwise disregard morphisms obtained by composition" *Nothing is broken: composition is recorded by the 2-simplices, and the nerve functor is fully faithful. What the nerve adds is higher simplices, which are determined by the 2-simplices.*
+
+  n: https://en.wikipedia.org/w/index.php?action=raw&title=Nerve_(category_theory)
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean
+
+### D7-157 Normal Closure Construction (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [n] "the normal closure of a subset"
+- description: **confirmed** [n] "is the smallest normal subgroup of G containing S" *The field-extension reading is a separate construction with its own article.*
+- input: **confirmed** [n] "the normal closure of a subset"
+- output: **confirmed** [n] "is the smallest normal subgroup of G containing S"
+- preserved: **confirmed** [n] "is the smallest normal subgroup of G containing S"
+- broken: **confirmed** [n] "is the subgroup generated by the set" *It is generated by all conjugates of elements of S, so S and its conjugates are not told apart.*
+
+  n: https://en.wikipedia.org/w/index.php?action=raw&title=Normal_closure_(group_theory)
+
+### D8-107 Jordan decomposition (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
+
+- name: **confirmed** [j] "its Jordan normal form is also called the Jordan normal form of"
+- description: **confirmed** [j] "This condition is always satisfied if K is algebraically closed"
+- input: **confirmed** [j] "Any square matrix has a Jordan normal form if the field of"
+- output: **confirmed** [j] "The Jordan normal form is obtained by some similarity transformation"
+- preserved: **confirmed** [j] "is called the algebraic multiplicity of" *Similar matrices share eigenvalues with their multiplicities, and the form is a similarity invariant.*
+- broken: **confirmed** [j] "its Jordan normal form is very sensitive to perturbations"
+
+  j: https://en.wikipedia.org/w/index.php?action=raw&title=Jordan_normal_form
+

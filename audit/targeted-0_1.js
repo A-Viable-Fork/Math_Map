@@ -12,7 +12,11 @@ const I = (src, quote, note) => ({ verdict: "imprecise", src, quote, note });
 const t = (id, why, sources, fields) => ({ id, why, sources, fields });
 const W = (x) => `https://en.wikipedia.org/w/index.php?action=raw&title=${x}`;
 const N = (x) => `https://ncatlab.org/nlab/source/${x}`;
+const X = (src, quote, note) => ({ verdict: "wrong", src, quote, note });
+const U = (note) => ({ verdict: "unsupported", note });
+const M = (path) => `https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/${path}`;
 const USE = "Requested by a composite; receipted.";
+const CITE = "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.";
 
 const TARGETED = [
   t("D2-117", USE, { b: W("Blowing_up") }, {
@@ -73,6 +77,111 @@ const TARGETED = [
     preserved: C("z", "has an orthogonal decomposition", "The L^2 orthogonality of gradient and curl parts is the invariant the PDE program uses: a pressure gradient pairs to zero with any curl."),
     broken: I("h", "there is a unique decomposition of any differential form",
       "A decomposition breaks nothing: it is an isomorphism onto the direct sum. What loses information is projecting onto one part (as the Leray projection discards the gradient part)."),
+  }),
+  // Citation pass 1.
+  t("D1-003", CITE, { l: W("Line_graph") }, {
+    name: C("l", "the line graph of an undirected graph"),
+    description: C("l", "only four behaviors are possible for this sequence",
+      "Every claim checks: edges become vertices, adjacency is sharing an endpoint, an Euler cycle gives a Hamiltonian line graph, iteration has four behaviours, and Whitney's theorem with the K_3 and K_{1,3} exception."),
+    input: C("l", "the line graph of an undirected graph"),
+    output: C("l", "their corresponding edges share a common endpoint"),
+    preserved: I("l", "not all Hamiltonian cycles in line graphs come from Euler cycles in this way",
+      "Edge count becoming vertex count is right. \"Eulerian translates to Hamiltonian\" holds one way only: an Eulerian graph has a Hamiltonian line graph, but a Hamiltonian line graph need not come from an Eulerian graph."),
+    broken: C("l", "and the number of edges of", "The source gives the line graph's vertex and edge counts from the original's, which change as the entry says."),
+  }),
+  t("D1-059", CITE, { d: W("Dual_matroid") }, {
+    name: C("d", "the dual of a matroid"),
+    description: C("d", "These two operations are dual", "The complement description of bases, the deletion and contraction duality, and the planar-graph statement all check."),
+    input: C("d", "the dual of a matroid"),
+    output: C("d", "its basis sets are the complements of the basis sets of"),
+    preserved: C("d", "the matroids representable over any other field, and the regular matroids, are all self-dual families",
+      "Same ground set and the matroid axioms are stated in the same article; representability over a field passes to the dual."),
+    broken: C("d", "then the rank function of the dual matroid is", "r*(E) = |E| - r(E), the entry's rank formula, at S = E."),
+  }),
+  t("D1-099", CITE, { g: W("Galois_connection") }, {
+    name: C("g", "we will refer to them as (monotone) Galois connections and antitone Galois connections"),
+    description: X("g", "are the associated closure operators; they are monotone idempotent maps with the property",
+      "The entry states antitone maps but gives the monotone convention's second inequality, f(g(b)) <= b. For an antitone connection the source gives b <= FG(b). As written the definition is neither convention. The claim about matroid flats is not checked."),
+    input: C("g", "be two partially ordered sets."),
+    output: C("g", "monotone Galois connections are special cases of pairs of adjoint functors",
+      "Adjunction is the monotone reading; an antitone connection is an adjunction between one poset and the other's opposite."),
+    preserved: C("g", "are the associated closure operators; they are monotone idempotent maps with the property",
+      "Right for the antitone convention the entry names: both composites are closure operators. In the monotone convention one is a kernel operator."),
+    broken: C("g", "every Galois connection gives rise to an isomorphism of certain sub-posets",
+      "Only the closed elements correspond; the rest of the order is not preserved."),
+  }),
+  t("D2-031", CITE, { m: W("Mellin_transform") }, {
+    name: C("m", "the Mellin transform is an integral transform"),
+    description: C("m", "may be regarded as the multiplicative version of the two-sided Laplace transform"),
+    input: C("m", "the Mellin transform is an integral transform", "The transform takes a function on the positive reals; Mathlib's definition integrates over (0, infinity)."),
+    output: C("m", "is defined to be the largest open strip on which it is defined"),
+    preserved: I("m", "which is invariant under dilation",
+      "Multiplicative convolution to product is right. \"Scale invariance\" is loose: the measure dx/x is dilation invariant, but the transform is not; dilating f by a multiplies the transform by a^(-s) (the source's scaling row; Mathlib's mellin_comp_mul_left)."),
+    broken: C("m", "which is translation invariant", "The two-sided Laplace transform is adapted to additive translation; the Mellin transform to dilation."),
+  }),
+  t("D2-103", CITE, { t: W("Tensor_product_of_modules") }, {
+    name: C("t", "the tensor product of modules is a construction"),
+    description: C("t", "The universal property of a tensor product has the following important consequence"),
+    input: C("t", "can be carried out for a pair of modules over a commutative ring",
+      "Over a noncommutative ring the construction pairs a right and a left module and yields an abelian group."),
+    output: C("t", "the tensor product of modules is a construction"),
+    preserved: C("t", "are always right exact functors", "Right exactness is stated; bilinear maps out of M x N become linear maps out of the product."),
+    broken: I("t", "can be written, non-uniquely,",
+      "\"Individual presentations\" is loose. What is lost is uniqueness: an element is a sum of pure tensors in many ways."),
+  }),
+  t("D3-033", CITE, { u: W("Ultraproduct") }, {
+    name: C("u", "ultraproducts uses an index set"),
+    description: C("u", "any first-order formula is true in the ultraproduct if and only if the set of indices"),
+    input: C("u", "and an ultrafilter"),
+    output: C("u", "which compares components only relative to the ultrafilter"),
+    preserved: C("u", "any first-order formula is true in the ultraproduct if and only if the set of indices"),
+    broken: C("u", "then the ultraproduct will again be well-founded",
+      "The source's example shows a property that is not first-order, well-foundedness, surviving only under an extra hypothesis (sigma-completeness)."),
+  }),
+  t("D3-116", CITE, { s: W("Sheaf_(mathematics)") }, {
+    name: C("s", "called the sheafification or sheaf associated to the presheaf"),
+    description: C("s", "is the left adjoint functor to the inclusion functor"),
+    input: C("s", "It takes a presheaf"),
+    output: C("s", "produces a new sheaf"),
+    preserved: I("s", "there is a unique morphism of sheaves",
+      "The universal property is right. The sheaf condition is not preserved but produced: the input is a presheaf. On a presheaf that is already a sheaf, sheafification changes nothing (up to isomorphism)."),
+    broken: C("s", "It turns out that there is a best possible way to do this",
+      "Sheafification identifies sections that agree locally and adds sections glued from compatible local ones."),
+  }),
+  t("D4-153", CITE, { g: W("Gelfand%E2%80%93Naimark%E2%80%93Segal_construction") }, {
+    name: C("g", "construction establishes a correspondence between cyclic"),
+    description: C("g", "construction establishes a correspondence between cyclic"),
+    input: C("g", "Given a state"),
+    output: C("g", "with distinguished unit cyclic vector"),
+    preserved: C("g", "with distinguished unit cyclic vector",
+      "The state is recovered as the vector state of the cyclic vector. Mathlib's GNS file lists this recovery as future work at the pinned commit."),
+    broken: U("\"Abstract algebra\" names no invariant. What a single state's representation can lose is faithfulness (it may have a kernel); the source does not say so on the lines checked."),
+  }),
+  t("D4-264", CITE, { n: W("Nerve_(category_theory)"), m: M("Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean") }, {
+    name: C("n", "of a small category C is a simplicial set"),
+    description: C("n", "consists of the k-tuples of composable morphisms"),
+    input: C("n", "of a small category C is a simplicial set"),
+    output: C("n", "of a small category C is a simplicial set"),
+    preserved: I("m", "is fully faithful, demonstrating that",
+      "The category is recoverable for every small category, not only for groupoids: the nerve functor is fully faithful (Mathlib, CategoryTheory.nerveFunctor.fullyfaithful)."),
+    broken: X("n", "does not erase or otherwise disregard morphisms obtained by composition",
+      "Nothing is broken: composition is recorded by the 2-simplices, and the nerve functor is fully faithful. What the nerve adds is higher simplices, which are determined by the 2-simplices."),
+  }),
+  t("D7-157", CITE, { n: W("Normal_closure_(group_theory)") }, {
+    name: C("n", "the normal closure of a subset"),
+    description: C("n", "is the smallest normal subgroup of G containing S", "The field-extension reading is a separate construction with its own article."),
+    input: C("n", "the normal closure of a subset"),
+    output: C("n", "is the smallest normal subgroup of G containing S"),
+    preserved: C("n", "is the smallest normal subgroup of G containing S"),
+    broken: C("n", "is the subgroup generated by the set", "It is generated by all conjugates of elements of S, so S and its conjugates are not told apart."),
+  }),
+  t("D8-107", CITE, { j: W("Jordan_normal_form") }, {
+    name: C("j", "its Jordan normal form is also called the Jordan normal form of"),
+    description: C("j", "This condition is always satisfied if K is algebraically closed"),
+    input: C("j", "Any square matrix has a Jordan normal form if the field of"),
+    output: C("j", "The Jordan normal form is obtained by some similarity transformation"),
+    preserved: C("j", "is called the algebraic multiplicity of", "Similar matrices share eigenvalues with their multiplicities, and the form is a similarity invariant."),
+    broken: C("j", "its Jordan normal form is very sensitive to perturbations"),
   }),
 ];
 

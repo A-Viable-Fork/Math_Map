@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "333482496d3f19279ac5a8c1b0d5d3a6994ef57a"
+  "commit": "75f2a109a024e738e3bf7698bc3cd6408e9bc497"
  },
  "domains": {
   "D1": {
@@ -364,13 +364,26 @@
    "added": 8
   },
   "byTier": {
-   "landed": 1387,
-   "audited": 64,
-   "authored": 497,
+   "landed": 1378,
+   "audited": 75,
+   "authored": 495,
    "flagged": 6,
    "receipted": 8
   },
-  "withConditions": 3
+  "withConditions": 3,
+  "formal": {
+   "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
+   "entries": 14,
+   "links": 29,
+   "byMatch": {
+    "exact": 19,
+    "conflicts": 1,
+    "special": 3,
+    "general": 4,
+    "ingredient": 1,
+    "related": 1
+   }
+  }
  },
  "entries": [
   {
@@ -431,7 +444,26 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "SimpleGraph.lineGraph",
+     "file": "Mathlib/Combinatorics/SimpleGraph/LineGraph.lean",
+     "match": "exact",
+     "note": "The line graph is a simple graph on G.edgeSet: its vertices are the edges of G, so edge count becomes vertex count by definition.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/SimpleGraph/LineGraph.lean"
+    },
+    {
+     "field": "description",
+     "decl": "SimpleGraph.lineGraph_adj_iff_exists",
+     "file": "Mathlib/Combinatorics/SimpleGraph/LineGraph.lean",
+     "match": "exact",
+     "note": "Two edges are adjacent in L(G) iff they are distinct and share a vertex. The entry's further claims (Eulerian to Hamiltonian, Whitney's theorem) are not in Mathlib at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/SimpleGraph/LineGraph.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D1-004",
@@ -1537,7 +1569,34 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Matroid.dual_isBase_iff'",
+     "file": "Mathlib/Combinatorics/Matroid/Dual.lean",
+     "match": "exact",
+     "note": "Bases of the dual are the complements, within the ground set, of bases of M.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Dual.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Matroid.dual_ground",
+     "file": "Mathlib/Combinatorics/Matroid/Dual.lean",
+     "match": "exact",
+     "note": "The dual has the same ground set.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Dual.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Matroid.eRank_add_eRank_dual",
+     "file": "Mathlib/Combinatorics/Matroid/Rank/ENat.lean",
+     "match": "exact",
+     "note": "r + r* = |E|, the entry's rank formula, stated in extended naturals so it covers infinite ground sets.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Rank/ENat.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D1-060",
@@ -2313,7 +2372,34 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "GaloisConnection",
+     "file": "Mathlib/Order/GaloisConnection/Defs.lean",
+     "match": "conflicts",
+     "note": "Mathlib's Galois connection is the monotone convention: l a <= b iff a <= u b, giving a <= u(l a) and l(u b) <= b. The entry states antitone maps but gives the monotone pair of inequalities. For antitone maps the second must read b <= f(g(b)); with that correction both composites are closure operators, as the entry's preserved field says (in Mathlib, an antitone connection is a monotone one into the order dual).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean"
+    },
+    {
+     "field": "description",
+     "decl": "GaloisConnection.le_u_l",
+     "file": "Mathlib/Order/GaloisConnection/Defs.lean",
+     "match": "exact",
+     "note": "The unit inequality a <= g(f(a)), which holds in both conventions.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "GaloisConnection.closureOperator",
+     "file": "Mathlib/Order/Closure.lean",
+     "match": "special",
+     "note": "In the monotone convention only u after l is a closure operator (l after u is an interior operator). The entry's claim that both composites are closure operators is the antitone case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Closure.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "wrong"
   },
   {
    "id": "D1-100",
@@ -3323,7 +3409,26 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "clone:D6-100",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "mellin",
+     "file": "Mathlib/Analysis/MellinTransform.lean",
+     "match": "exact",
+     "note": "The integral of t^(s-1) f(t) over (0, infinity): the entry's kernel.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/MellinTransform.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "mellin_comp_mul_left",
+     "file": "Mathlib/Analysis/MellinTransform.lean",
+     "match": "general",
+     "note": "Mathlib gives the exact law: dilating f by a multiplies the transform by a^(-s). \"Scale invariance\" holds only for the modulus on the line Re s = 0. The convolution-to-product rule the entry also claims is not in Mathlib at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/MellinTransform.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D2-032",
@@ -4728,7 +4833,26 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "TensorProduct.lift.unique",
+     "file": "Mathlib/LinearAlgebra/TensorProduct/Basic.lean",
+     "match": "exact",
+     "note": "The universal property: a linear map out of the tensor product is determined by its values on pure tensors, and lift realizes each bilinear map.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/TensorProduct/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "rTensor_exact",
+     "file": "Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean",
+     "match": "exact",
+     "note": "Right exactness: tensoring an exact sequence ending in a surjection gives an exact sequence.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D2-104",
@@ -7302,7 +7426,18 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "FirstOrder.Language.Ultraproduct.sentence_realize",
+     "file": "Mathlib/ModelTheory/Ultraproducts.lean",
+     "match": "exact",
+     "note": "Los's theorem: the ultraproduct satisfies a sentence iff U-almost every factor does.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Ultraproducts.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D3-034",
@@ -8915,7 +9050,18 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.sheafificationAdjunction",
+     "file": "Mathlib/CategoryTheory/Sites/Sheafification.lean",
+     "match": "exact",
+     "note": "Sheafification is left adjoint to the inclusion of sheaves into presheaves, given that sheafification exists for the coefficient category (HasWeakSheafify), a hypothesis the entry leaves implicit.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D3-117",
@@ -13336,7 +13482,18 @@
    "origin": "clone:D2-137",
    "anchorable": true,
    "landedAs": "See Domain 2 (D2-137). State -> cyclic representation.",
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "PositiveLinearMap.gnsStarAlgHom",
+     "file": "Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean",
+     "match": "exact",
+     "note": "The GNS representation of the algebra on the completion of A with the inner product given by the positive functional. State recovery through a cyclic vector, the entry's preserved claim, is listed as future work in the file at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-154",
@@ -15526,7 +15683,26 @@
      "simplicial-set"
     ]
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.nerveFunctor",
+     "file": "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean",
+     "match": "ingredient",
+     "note": "The nerve functor from categories to simplicial sets.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.nerveFunctor.fullyfaithful",
+     "file": "Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean",
+     "match": "general",
+     "note": "The nerve functor is fully faithful on all small categories, so functors between categories are exactly maps of their nerves. The entry's restriction to groupoids is unnecessary.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/NerveAdjunction.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "wrong"
   },
   {
    "id": "D4-265",
@@ -24058,6 +24234,32 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "formal": [
+    {
+     "field": "output",
+     "decl": "MeasureTheory.Measure.haveLebesgueDecomposition_add",
+     "file": "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean",
+     "match": "exact",
+     "note": "mu = singular part + nu.withDensity (Radon-Nikodym derivative), given that a Lebesgue decomposition exists.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean"
+    },
+    {
+     "field": "description",
+     "decl": "MeasureTheory.Measure.mutuallySingular_singularPart",
+     "file": "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean",
+     "match": "exact",
+     "note": "The singular part is mutually singular with nu.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean"
+    },
+    {
+     "field": "input",
+     "decl": "MeasureTheory.Measure.haveLebesgueDecomposition_of_sigmaFinite",
+     "file": "Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean",
+     "match": "exact",
+     "note": "The decomposition exists when mu is s-finite and nu is sigma-finite. The entry's input (\"measures mu, nu\") omits this hypothesis.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "imprecise"
   },
@@ -26182,6 +26384,32 @@
      "functor"
     ]
    },
+   "formal": [
+    {
+     "field": "input",
+     "decl": "CategoryTheory.Reflective",
+     "file": "Mathlib/CategoryTheory/Adjunction/Reflective.lean",
+     "match": "exact",
+     "note": "A reflective subcategory: a fully faithful functor with a left adjoint.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Reflective.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.monadicOfReflective",
+     "file": "Mathlib/CategoryTheory/Monad/Adjunction.lean",
+     "match": "general",
+     "note": "A reflective inclusion is monadic, and monadic functors create limits (monadicCreatesLimits): limits in R are computed in C.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Adjunction.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.monadicCreatesLimits",
+     "file": "Mathlib/CategoryTheory/Monad/Limits.lean",
+     "match": "general",
+     "note": "With monadicOfReflective, the inclusion creates limits.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Limits.lean"
+    }
+   ],
    "conditions": "A localization in the sense needed for subtoposes and levels requires the reflector to preserve finite limits (an exact reflection; between toposes, a geometric embedding). A bare reflective subcategory need not.",
    "counterexamples": [],
    "conditionReceipts": [
@@ -27896,7 +28124,34 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "Subgroup.normalClosure_normal",
+     "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
+     "match": "exact",
+     "note": "The normal closure is normal.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Subgroup.normalClosure_le_normal",
+     "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
+     "match": "exact",
+     "note": "It is the smallest normal subgroup containing the set. The field-extension reading is a separate construction (IntermediateField.normalClosure), not linked here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Subgroup.normalClosure",
+     "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
+     "match": "exact",
+     "note": "Defined as the subgroup generated by all conjugates of the set.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-158",
@@ -37988,7 +38243,18 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Module.End.exists_isNilpotent_isSemisimple",
+     "file": "Mathlib/LinearAlgebra/JordanChevalley.lean",
+     "match": "related",
+     "note": "Mathlib has the Jordan-Chevalley decomposition (f = nilpotent + semisimple, over a perfect field), which the Jordan normal form implies. The normal form itself is not in Mathlib at the pin. The name also matches Mathlib's Jordan decomposition of signed measures, a different theorem.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-110",
@@ -38867,6 +39133,24 @@
      "functor"
     ]
    },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Sheaf.createsLimits",
+     "file": "Mathlib/CategoryTheory/Sites/Limits.lean",
+     "match": "special",
+     "note": "For a Grothendieck topology, the inclusion of sheaves into presheaves creates limits. Grothendieck topologies give the subtoposes of presheaf toposes; the general Lawvere-Tierney case is not in Mathlib at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Limits.lean"
+    },
+    {
+     "field": "description",
+     "decl": "CategoryTheory.preservesFiniteLimits_presheafToSheaf",
+     "file": "Mathlib/CategoryTheory/Sites/LeftExact.lean",
+     "match": "special",
+     "note": "Sheafification is left exact, for Grothendieck topologies and coefficient categories meeting the stated hypotheses.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/LeftExact.lean"
+    }
+   ],
    "tier": "receipted"
   },
   {

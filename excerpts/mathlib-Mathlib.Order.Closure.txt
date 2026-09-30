@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Order/Closure.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Closure.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: b4add921abe7ce3e4c7af48c65055731a61b36019d86533a2b7df94c88f29b33
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- GaloisConnection.closureOperator (line 545)
+def GaloisConnection.closureOperator [PartialOrder α] [Preorder β] {l : α → β} {u : β → α}
+    (gc : GaloisConnection l u) : ClosureOperator α :=
+  gc.lowerAdjoint.closureOperator

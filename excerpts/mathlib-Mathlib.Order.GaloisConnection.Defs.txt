@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Order/GaloisConnection/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 42458be39678c2e9dbd2c4ac38a7bff9950dc56f92b4e6998d84628cc277cc0b
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- GaloisConnection (line 40)
+def GaloisConnection [Preorder α] [Preorder β] (l : α → β) (u : β → α) :=
+  ∀ a b, l a ≤ b ↔ a ≤ u b
+
+-- GaloisConnection.le_u_l (line 77)
+theorem le_u_l (a) : a ≤ u (l a)

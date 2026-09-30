@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Monad/Adjunction.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Adjunction.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d57c911153df8264ea87246c011d6a180785c7811e178c46e7bcc5a910ecb345
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.monadicOfReflective (line 405)
+instance (priority := 100) monadicOfReflective [Reflective R] :
+    MonadicRightAdjoint R

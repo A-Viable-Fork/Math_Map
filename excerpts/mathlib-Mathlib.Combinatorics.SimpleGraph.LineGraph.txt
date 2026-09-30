@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Combinatorics/SimpleGraph/LineGraph.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/SimpleGraph/LineGraph.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 5a4913997ad6a1383097f731a06fdc7522c4c7a00db7f9cf3626b2595a2ae5b9
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- SimpleGraph.lineGraph (line 34)
+def lineGraph : SimpleGraph G.edgeSet where
+  Adj e₁ e₂ := e₁ ≠ e₂ ∧ (e₁ ∩ e₂ : Set V).Nonempty
+  symm.symm e₁ e₂ hadj := by rwa [ne_comm, Set.inter_comm]
+
+-- SimpleGraph.lineGraph_adj_iff_exists (line 38)
+lemma lineGraph_adj_iff_exists {e₁ e₂ : G.edgeSet} :
+    (G.lineGraph).Adj e₁ e₂ ↔ e₁ ≠ e₂ ∧ ∃ v, v ∈ (e₁ : Sym2 V) ∧ v ∈ (e₂ : Sym2 V)

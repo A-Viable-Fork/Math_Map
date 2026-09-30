@@ -130,7 +130,9 @@ export function parse() {
   const V = require("../mapfill/invariants.js");
   for (const a of V.ACTS_ON) { const e = outById2[a.entry]; if (e) e.actsOn = { input: a.input, output: a.output }; }
   for (const l of V.LINKS) { const e = outById2[l.entry]; if (e) { e.invariants ||= { preserved: [], broken: [], output: [] }; if (e.invariants[l.field] && !e.invariants[l.field].includes(l.invariant)) e.invariants[l.field].push(l.invariant); } }
-  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, vocabulary: V, landed };
+  const { MATHLIB, FORMAL } = require("../mapfill/formal.js");
+  for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note }); }
+  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
 }
 
 export function check(P = parse()) {
@@ -225,7 +227,7 @@ export function check(P = parse()) {
     used.add(l.invariant);
   }
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
-  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
+  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
   return F;
 }
@@ -266,6 +268,7 @@ function render(P) {
   if (readings.length) L.push("| Entry | Name | Reading |", "|---|---|---|", ...readings.map((e) => `| ${e.id} | ${e.name} | ${e.unknown ? "**Unidentified.** " : ""}${e.reading} |`), "");
   if (P.additions.length) L.push(`- **Additions: ${P.additions.length}** (\`mapfill/additions.js\`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. ${P.additions.map((a) => `${a.id} ${a.name}`).join("; ")}.`, "");
   L.push(`- **Invariant vocabulary** (\`mapfill/invariants.js\`): ${P.vocabulary.INVARIANTS.length} named invariants, ${P.vocabulary.RELATIONS.length} relations between them, ${P.vocabulary.LINKS.length} links from entries (${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries; ${P.vocabulary.LINKS.filter((l) => l.receipts).length} receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; ${P.vocabulary.ACTS_ON.length} entries record what kinds of object they take and return. \`node scripts/compose.mjs --chain ID,ID,...\` reports what survives a chain.`, "");
+  L.push(`- **Mathlib links: ${P.formal.links.length}** on ${new Set(P.formal.links.map((k) => k.entry)).size} entries (\`mapfill/formal.js\`), pinned at ${P.formal.mathlib.commit.slice(0, 7)}; ${P.formal.links.filter((k) => k.match === "conflicts").length} record a conflict with the entry as written.`, "");
   L.push(`- **Conditions: ${P.conditions.length}** (\`mapfill/conditions.js\`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: ${P.conditions.reduce((n, c) => n + (c.counterexamples || []).length, 0)}.`, "");
   if (P.flags.length) L.push(`- **Flagged entries: ${P.flags.length}.** Landed content known to be wrong (\`mapfill/flags.js\`); withheld from anchoring until corrected.`, "", "| Entry | Name | Kind | Evidence |", "|---|---|---|---|", ...P.flags.map((f) => `| ${f.id} | ${f.name} | ${f.kind} | ${f.evidence} |`), "");
   L.push("## 3. Functional tags", "", "| Tag | Entries |", "|---|---|");
@@ -291,6 +294,7 @@ function show(e, full) {
   const lines = [head, `  ${e.description}`, `  input: ${e.input ?? "-"}`, `  output: ${e.output ?? "-"}`, `  preserved: ${e.preserved ?? "-"}`, `  broken: ${e.broken ?? "-"}`, `  complexity: ${e.complexity}`, `  status: ${e.status}`];
   if (e.invariants) lines.push(`  invariants: preserved [${e.invariants.preserved.join(", ")}]; broken [${e.invariants.broken.join(", ")}]${e.invariants.output.length ? `; output [${e.invariants.output.join(", ")}]` : ""}`);
   if (e.conditions) lines.push(`  conditions: ${e.conditions}`);
+  for (const k of e.formal || []) lines.push(`  mathlib (${k.match}, ${k.field}): ${k.decl}`);
   for (const k of e.counterexamples || []) lines.push(`  counterexample: ${k.case}`);
   if (e.reading) lines.push(`  reading: ${e.reading}`);
   if (e.pointer) lines.push(`  landed as: ${e.pointer}`);

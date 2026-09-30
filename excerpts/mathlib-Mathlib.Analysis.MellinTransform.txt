@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/MellinTransform.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/MellinTransform.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d583e4162ae8ed273b4df6c23dd770c902dd1f2e04923a40a76ac307e2c5fc18
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- mellin (line 90)
+def mellin (f : ℝ → E) (s : ℂ) : E :=
+  ∫ t : ℝ in Ioi 0, (t : ℂ) ^ (s - 1) • f t
+
+-- mellin_comp_mul_left (line 132)
+theorem mellin_comp_mul_left (f : ℝ → E) (s : ℂ) {a : ℝ} (ha : 0 < a) :
+    mellin (fun t => f (a * t)) s = (a : ℂ) ^ (-s) • mellin f s

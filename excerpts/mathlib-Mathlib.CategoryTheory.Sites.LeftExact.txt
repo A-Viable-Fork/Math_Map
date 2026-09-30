@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Sites/LeftExact.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/LeftExact.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: a305eb4bce175e06cd13c4feaa3f3ffb56c25d773d6e3ff17ba463afd6fbe948
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.preservesFiniteLimits_presheafToSheaf (line 275)
+instance preservesFiniteLimits_presheafToSheaf [PreservesLimits (forget D)]
+    [∀ X : C, Small.{t, max u v} (J.Cover X)ᵒᵖ] [HasFiniteLimits D] :
+    PreservesFiniteLimits (plusPlusSheaf J D)

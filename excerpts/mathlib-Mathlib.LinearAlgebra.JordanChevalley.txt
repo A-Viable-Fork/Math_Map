@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/JordanChevalley.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: c1ab3246a84e14e2f5caf8dccd4d9d807f83656950143b1b97c2d7797871e2b9
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Module.End.exists_isNilpotent_isSemisimple (line 76)
+theorem exists_isNilpotent_isSemisimple [PerfectField K] :
+    ∃ᵉ (n ∈ adjoin K {f}) (s ∈ adjoin K {f}), IsNilpotent n ∧ IsSemisimple s ∧ f = n + s

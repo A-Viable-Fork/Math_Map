@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Combinatorics/Matroid/Dual.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Dual.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: aff6c92b0364734ed53ecfc440998c96f4c2eb3c47ee35a48e4e572716ed580f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matroid.dual_isBase_iff' (line 141)
+theorem dual_isBase_iff' : M✶.IsBase B ↔ M.IsBase (M.E \ B) ∧ B ⊆ M.E
+
+-- Matroid.dual_ground (line 118)
+@[simp] theorem dual_ground : M✶.E = M.E

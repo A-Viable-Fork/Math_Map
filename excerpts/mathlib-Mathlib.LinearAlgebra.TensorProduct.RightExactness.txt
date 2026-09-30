@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/TensorProduct/RightExactness.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 1590482e308d9d111693e7d0a5b8d6394026730514439b891da14b9dde706cec
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- rTensor_exact (line 397)
+theorem rTensor_exact : Exact (rTensor Q f) (rTensor Q g)

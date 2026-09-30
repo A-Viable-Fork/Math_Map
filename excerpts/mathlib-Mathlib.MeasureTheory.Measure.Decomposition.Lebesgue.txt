@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 439cb48002b06e6531b03d3e0122af5c7b6a2f0c86db5d73ab87c2de2449593a
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- MeasureTheory.Measure.haveLebesgueDecomposition_add (line 115)
+theorem haveLebesgueDecomposition_add (μ ν : Measure α) [HaveLebesgueDecomposition μ ν] :
+    μ = μ.singularPart ν + ν.withDensity (μ.rnDeriv ν)
+
+-- MeasureTheory.Measure.mutuallySingular_singularPart (line 106)
+theorem mutuallySingular_singularPart (μ ν : Measure α) : μ.singularPart ν ⟂ₘ ν
+
+-- MeasureTheory.Measure.haveLebesgueDecomposition_of_sigmaFinite (line 952)
+nonrec instance (priority := 100) haveLebesgueDecomposition_of_sigmaFinite
+    [SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν

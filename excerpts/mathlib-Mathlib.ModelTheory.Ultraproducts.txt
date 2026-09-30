@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/ModelTheory/Ultraproducts.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Ultraproducts.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: dde5737b224ac0d35229e521acd7e70643a08d42299d59ec3d3b50a7fa6e2f30
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- FirstOrder.Language.Ultraproduct.sentence_realize (line 154)
+theorem sentence_realize (φ : L.Sentence) :
+    (u : Filter α).Product M ⊨ φ ↔ ∀ᶠ a : α in u, M a ⊨ φ

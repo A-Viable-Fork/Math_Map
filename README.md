@@ -15,7 +15,7 @@ Every entry states where its content comes from:
 
 ## Trust tiers
 
-Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Formal verification would sit above audited; no entry has it yet. Counts: landed 1387, audited 64, authored 497, flagged 6, receipted 8.
+Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Counts: landed 1378, audited 75, authored 495, flagged 6, receipted 8.
 
 Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 3 entries have conditions so far.
 
@@ -23,19 +23,23 @@ Entries may also carry **conditions** (the hypotheses their claims need) and **c
 
 Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js` names those invariants (27 so far, with the relations between them), gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. `node scripts/compose.mjs --chain D2-118,D2-117` then reports, for a chain of entries applied in order, whether each join fits (match, narrowing, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers 16 entries now.
 
+## Formal links (Lean and Mathlib)
+
+`mapfill/formal.js` links entries to declarations in [Mathlib](https://github.com/leanprover-community/mathlib4), pinned at commit `380f2aafb622cb2c1c93dac545b6389083c68c51`: 29 links on 14 entries. Each link names the field it bears on and grades the match: **exact** (Mathlib states the claim), **general** (Mathlib states something that implies it), **special** (a special case), **related** (a weaker or neighbouring result; the claim itself is not formalized), **ingredient** (the objects, not the claim), or **conflicts** (Mathlib's statement conflicts with the claim as written; the note says how). Counts: exact 19, conflicts 1, special 3, general 4, ingredient 1, related 1. The declaration statements are quoted in `excerpts/mathlib-*.txt` with the hash of each file at the pin; `node scripts/formal.mjs --verify` refetches them. A link says Mathlib proves the quoted statement, which its CI type-checked at that commit; the grade of how it bears on the entry is a judgment, like an audit grade. `reports/FORMAL-QUEUE.md` lists unreviewed name matches still to be read.
+
 ## Audit
 
-`audit.json` holds field-by-field grades (confirmed, imprecise, wrong, unsupported) against cited sources: a fixed random sample of 60 entries, and targeted receipts for entries that were needed. Six landed entries are flagged as misaligned and carry their evidence.
+`audit.json` holds field-by-field grades (confirmed, imprecise, wrong, unsupported) against cited sources: a fixed random sample of 60 entries, kept for unbiased error rates, and targeted grades for entries chosen for use (composites) or for citation (entries with a Mathlib counterpart), kept out of the estimates. Six landed entries are flagged as misaligned and carry their evidence.
 
 ## Layout
 
 Sources, edited by hand and checked:
 
 - `source/math_map.md`: the map as landed, verbatim. `source/Category_Theory_Transformation_Enumeration.pdf`: the report the D7 names come from.
-- `mapfill/`: the fill layer (clone resolution, authored fills, missing homes, flags) and the additions (`mapfill/additions.js`). See `mapfill/README.md`.
+- `mapfill/`: the fill layer (clone resolution, authored fills, missing homes, flags), the additions (`mapfill/additions.js`), conditions, the invariant vocabulary, and the Mathlib links (`mapfill/formal.js`). See `mapfill/README.md`.
 - `audit/`: the fixed sample, its grades, and the targeted receipts.
 - `excerpts/`: the verbatim windows that receipt the additions, each with its source URL and the hash of the page or PDF as fetched. Quoted for reference; the sources keep their own licences.
-- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the MCP server (`mcp.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.
+- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the Mathlib links (`formal.mjs`), the MCP server (`mcp.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.
 
 Generated by `node scripts/build.mjs`, never edited by hand:
 

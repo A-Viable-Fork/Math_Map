@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Group/Subgroup/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 4363501249fb78aeb9b05f46392b19859ad9d1ccf6d74bc6416b61305e7798af
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Subgroup.normalClosure_normal (line 645)
+instance normalClosure_normal : (normalClosure s).Normal
+
+-- Subgroup.normalClosure_le_normal (line 659)
+theorem normalClosure_le_normal {N : Subgroup G} [N.Normal] (h : s ⊆ N) : normalClosure s ≤ N
+
+-- Subgroup.normalClosure (line 628)
+def normalClosure (s : Set G) : Subgroup G :=
+  closure (conjugatesOfSet s)
