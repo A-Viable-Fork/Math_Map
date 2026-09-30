@@ -73,6 +73,8 @@ const ACTS_ON = [
   A("D7-288", ["topos"], ["topos"], "Topos E", "Subtopos"),
   A("D7-284", ["functor"], ["functor"], "Geometric morphism", "Triple"),
   A("D7-X01", ["level"], ["level"], "a level i", "The least level j"),
+  A("D7-X02", ["topos"], ["functor"], "Subtopos", "Geometric embedding"),
+  A("D7-X03", ["functor"], ["level"], "Essential geometric embedding", "Level (essential subtopos)"),
   A("D6-X01", ["function", "field"], ["function", "field"], ["Function f", "a field on a domain"], "Band pieces"),
   A("D4-176", ["form"], ["form"], "k-forms", "Orthogonal decomposition"),
   A("D6-X02", ["evolution", "field"], ["field"], ["Linear evolution operator", "source f(s)"], "The solution u(t)"),
@@ -105,6 +107,9 @@ const LINKS = [
   L("D6-X02", "broken", "instantaneous-locality", "Instantaneous locality"),
   L("D4-086", "preserved", "leibniz-rule", "Leibniz rule"), L("D4-086", "preserved", "tensoriality", "tensoriality"),
   L("D4-086", "broken", "flatness", "Flat derivative"),
+  L("D7-X02", "preserved", "limits", "Limits (the inclusion is a right adjoint)"),
+  L("D7-X03", "preserved", "limits", "The adjoint triple"), L("D7-X03", "preserved", "colimits", "The adjoint triple"),
+  L("D7-X03", "output", "skeletal-objects", "modalities: skeleton left of sheaf"), L("D7-X03", "output", "level-opposition", "skeleton left of sheaf"),
   // Links where the entry's own field is silent, justified by receipts.
   { entry: "D2-X01", field: "preserved", invariant: "birational-type", note: "The strict transform maps to the curve isomorphically away from the blown-up point, so the two curves are birational.",
     receipts: [{ file: "excerpts/wikipedia-resolution-of-singularities.txt", quote: "is an isomorphism away from the singular points" }] },

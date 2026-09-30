@@ -4,7 +4,8 @@
 // Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--json]`. Exports compose(chain, P?). An
 //   invariant's status: survives (every step preserves it), broken (at the first step that breaks it), or
 //   unknown (no step breaks it, but some step says nothing about it; the silent steps are listed); a step
-//   whose output produces the invariant after an earlier step broke it restores it. Steps'
+//   whose output produces the invariant after an earlier step broke it restores it; one that produces it
+//   before a later step breaks it is reported as created then broken. Steps'
 //   claims are closed under the vocabulary's relations: preserving an invariant preserves what it implies,
 //   and breaking an invariant breaks what implies it.
 //   An invariant is judged only at the steps that act on its carrier (a step on surfaces is not asked
@@ -58,6 +59,8 @@ export function compose(chain, P = parse()) {
     const c = steps.findIndex((s, k) => k > b && s.output.has(v));
     if (b >= 0 && c > b && !steps.slice(c + 1).some((s) => s.broken.has(v))) return { invariant: v, name: names[v], status: "restored", brokenAt: b + 1, restoredAt: c + 1, by: steps[c].id };
     if (b < 0 && c >= 0) return { invariant: v, name: names[v], status: "created", at: c + 1, by: steps[c].id };
+    const c0 = steps.findIndex((s) => s.output.has(v));
+    if (b >= 0 && c0 >= 0 && c0 < b) return { invariant: v, name: names[v], status: "created then broken", createdAt: c0 + 1, createdBy: steps[c0].id, at: b + 1, by: steps[b].id, silentBefore: steps.slice(c0 + 1, b).filter((s) => applies(s, v) && !s.preserved.has(v)).map((s) => s.id) };
     if (b >= 0) return { invariant: v, name: names[v], status: "broken", at: b + 1, by: steps[b].id, silentBefore: steps.slice(0, b).filter((s) => applies(s, v) && !s.preserved.has(v)).map((s) => s.id) };
     const na = steps.filter((s) => !applies(s, v)).map((s) => s.id);
     const silent = steps.filter((s) => applies(s, v) && !s.preserved.has(v)).map((s) => s.id);
@@ -76,6 +79,7 @@ export function describe(r) {
     if (x.status === "survives") L.push(`  survives${x.notApplicable?.length ? " where it applies" : ""}: ${x.name}${na}`);
     else if (x.status === "restored") L.push(`  restored: ${x.name} (broken at step ${x.brokenAt}, produced again at step ${x.restoredAt} by ${x.by})`);
     else if (x.status === "created") L.push(`  created at step ${x.at} (${x.by}): ${x.name}`);
+    else if (x.status === "created then broken") L.push(`  created at step ${x.createdAt} (${x.createdBy}), broken at step ${x.at} (${x.by}): ${x.name}${x.silentBefore.length ? `; the map is silent on it in between at ${x.silentBefore.join(", ")}` : ""}`);
     else if (x.status === "broken") L.push(`  broken at step ${x.at} (${x.by}): ${x.name}${x.silentBefore.length ? `; the map is silent on it before that at ${x.silentBefore.join(", ")}` : ""}`);
     else L.push(`  unknown: ${x.name} (the map is silent at ${x.silentAt.join(", ")})${na}`);
   }

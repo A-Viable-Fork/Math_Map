@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, level of a topos (page source)
+URL: https://ncatlab.org/nlab/source/level+of+a+topos
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: bea52b7141dbb05d1a5436da12e80176f6ced8d28f78267cecfe62c442e8f5b9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an [[essential subtopos]]  $\mathbf{H}_l \hookrightarrow \mathbf{H}$ is called a _level_ of $\mathbf{H}$. This is equivalently the inclusion of the [[right adjoint]] of an [[adjoint cylinder]]/[[adjoint modality]].

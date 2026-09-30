@@ -88,6 +88,30 @@ const ADDITIONS = [
       { file: "excerpts/wikipedia-inverse-gaussian.txt", quote: "the inverse Gaussian describes the distribution of the time a Brownian motion with positive drift takes to reach a fixed positive level." },
       { file: "excerpts/wikipedia-inverse-gaussian.txt", quote: "\\sim \\operatorname{IG} \\left(\\frac\\alpha\\nu" },
     ] },
+  { id: "D7-X02", name: "Inclusion of a subtopos", kind: "Transformer", tags: ["embedding", "construction"],
+    description: "Takes a subtopos, such as the j-sheaves of a Lawvere-Tierney topology, to its inclusion into the ambient topos: a geometric embedding, whose direct image is fully faithful and whose inverse image (sheafification) is a left exact left adjoint.",
+    input: "Subtopos Sh_j(E) of a topos E",
+    output: "Geometric embedding i: Sh_j(E) into E (a geometric morphism with fully faithful direct image)",
+    preserved: "Limits (the inclusion is a right adjoint); the subtopos's objects, unchanged",
+    broken: "Nothing; it names the morphism implicit in the subtopos",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/nlab-lawvere-tierney.txt", quote: "of [j-sheaves](#JSheaf) is a [[geometric embedding]]." },
+      { file: "excerpts/nlab-lawvere-tierney.txt", quote: "the embedding is a [[full and faithful functor]] which has a [[exact functor|left exact]] [[left adjoint]] functor" },
+    ] },
+  { id: "D7-X03", name: "Level of an essential inclusion", kind: "Correspondence", tags: ["construction", "duality"],
+    description: "Takes an essential geometric embedding (an adjoint triple whose right end is fully faithful) to the level it defines: an essential subtopos, carrying the adjoint pair of modalities skeleton left of sheaf.",
+    input: "Essential geometric embedding i_! left of i^* left of i_*",
+    output: "Level (essential subtopos) with modalities: skeleton left of sheaf",
+    preserved: "The adjoint triple (the level is its image); the subtopos",
+    broken: "Nothing; it reads the triple as a level",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/nlab-level-of-a-topos.txt", quote: "is called a _level_ of $\\mathbf{H}$. This is equivalently the inclusion of the [[right adjoint]] of an [[adjoint cylinder]]/[[adjoint modality]]." },
+      { file: "excerpts/nlab-aufhebung-modalities.txt", quote: "yields two [[adjoint modalities]]" },
+    ] },
 ];
 
 module.exports = { ADDITIONS };

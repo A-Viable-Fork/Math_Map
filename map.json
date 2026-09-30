@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "daee9c4ca2f881fbeabd5ce3e789a84d8c08f641"
+  "commit": "a3cae8af911e0457089d662cf4fc539ac971e6b5"
  },
  "domains": {
   "D1": {
@@ -355,20 +355,20 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1960,
-  "anchorable": 1952,
+  "entries": 1962,
+  "anchorable": 1954,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 6
+   "added": 8
   },
   "byTier": {
    "landed": 1387,
    "audited": 64,
    "authored": 497,
    "flagged": 6,
-   "receipted": 6
+   "receipted": 8
   },
   "withConditions": 3
  },
@@ -38822,6 +38822,100 @@
      "quote": "\\sim \\operatorname{IG} \\left(\\frac\\alpha\\nu"
     }
    ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X02",
+   "domain": "D7",
+   "name": "Inclusion of a subtopos",
+   "kind": "Transformer",
+   "tags": [
+    "embedding",
+    "construction"
+   ],
+   "description": "Takes a subtopos, such as the j-sheaves of a Lawvere-Tierney topology, to its inclusion into the ambient topos: a geometric embedding, whose direct image is fully faithful and whose inverse image (sheafification) is a left exact left adjoint.",
+   "input": "Subtopos Sh_j(E) of a topos E",
+   "output": "Geometric embedding i: Sh_j(E) into E (a geometric morphism with fully faithful direct image)",
+   "preserved": "Limits (the inclusion is a right adjoint); the subtopos's objects, unchanged",
+   "broken": "Nothing; it names the morphism implicit in the subtopos",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/nlab-lawvere-tierney.txt",
+     "quote": "of [j-sheaves](#JSheaf) is a [[geometric embedding]]."
+    },
+    {
+     "file": "excerpts/nlab-lawvere-tierney.txt",
+     "quote": "the embedding is a [[full and faithful functor]] which has a [[exact functor|left exact]] [[left adjoint]] functor"
+    }
+   ],
+   "invariants": {
+    "preserved": [
+     "limits"
+    ],
+    "broken": [],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "topos"
+    ],
+    "output": [
+     "functor"
+    ]
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X03",
+   "domain": "D7",
+   "name": "Level of an essential inclusion",
+   "kind": "Correspondence",
+   "tags": [
+    "construction",
+    "duality"
+   ],
+   "description": "Takes an essential geometric embedding (an adjoint triple whose right end is fully faithful) to the level it defines: an essential subtopos, carrying the adjoint pair of modalities skeleton left of sheaf.",
+   "input": "Essential geometric embedding i_! left of i^* left of i_*",
+   "output": "Level (essential subtopos) with modalities: skeleton left of sheaf",
+   "preserved": "The adjoint triple (the level is its image); the subtopos",
+   "broken": "Nothing; it reads the triple as a level",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/nlab-level-of-a-topos.txt",
+     "quote": "is called a _level_ of $\\mathbf{H}$. This is equivalently the inclusion of the [[right adjoint]] of an [[adjoint cylinder]]/[[adjoint modality]]."
+    },
+    {
+     "file": "excerpts/nlab-aufhebung-modalities.txt",
+     "quote": "yields two [[adjoint modalities]]"
+    }
+   ],
+   "invariants": {
+    "preserved": [
+     "limits",
+     "colimits"
+    ],
+    "broken": [],
+    "output": [
+     "skeletal-objects",
+     "level-opposition"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "functor"
+    ],
+    "output": [
+     "level"
+    ]
+   },
    "tier": "receipted"
   }
  ]

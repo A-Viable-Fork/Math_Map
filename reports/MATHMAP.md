@@ -16,9 +16,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D4 | TOPOLOGY AND GEOMETRIC METHODS | 437 | 0 [0] | 437 [385] | 437 [385] |
 | D5 | PROBABILITY AND INFORMATION THEORY | 151 | 0 [0] | 151 [77] | 151 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 161 | 0 [0] | 161 [146] | 161 [146] |
-| D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 466 | 1 [416] | 466 [0] | 465 [0] |
+| D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 468 | 1 [416] | 468 [0] | 467 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 236 | 1 [0] | 236 [77] | 229 [77] |
-| **all** | | **1960** | **2** [416] | **1960** [1118] | **1952** [1118] |
+| **all** | | **1962** | **2** [416] | **1962** [1118] | **1954** [1118] |
 
 ## 2. The fill layer
 
@@ -51,9 +51,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D8-155 | Poisson-Mellin-Newton cycle | Recorded from memory of the analytic-combinatorics literature. |
 | D8-202 | Square transform | Generic reading as the power transform with exponent 2. |
 
-- **Additions: 6** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion.
+- **Additions: 8** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion.
 
-- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 35 links from entries (14 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 14 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 40 links from entries (16 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 16 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
 - **Conditions: 3** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 0.
 
@@ -77,15 +77,15 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `decomposition` | 161 |
 | `compression` | 90 |
 | `completion` | 31 |
-| `construction` | 703 |
+| `construction` | 705 |
 | `representation-change` | 561 |
 | `basis-change` | 5 |
 | `bijection` | 14 |
 | `involution` | 25 |
 | `projection` | 101 |
-| `embedding` | 15 |
+| `embedding` | 16 |
 | `closure` | 11 |
-| `duality` | 29 |
+| `duality` | 30 |
 | `densification` | 3 |
 | `sparsification` | 2 |
 | `coarsening` | 7 |
@@ -103,9 +103,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 ## 4. Operation kinds
 
-- Transformer: 1611
+- Transformer: 1612
 - Constructor: 284
-- Correspondence: 65
+- Correspondence: 66
 
 ## 5. Upward corrections still open
 
