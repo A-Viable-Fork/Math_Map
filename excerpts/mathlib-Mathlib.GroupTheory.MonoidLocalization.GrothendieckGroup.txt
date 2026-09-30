@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 9896512427b9c895355b0d2397d663606433f9d7836e9514fdd0523b4e1ae013
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Algebra.GrothendieckGroup.instCommGroup (line 63)
+instance instCommGroup : CommGroup (GrothendieckGroup M)
+
+-- Algebra.GrothendieckGroup.of (line 47)
+abbrev of : M →* GrothendieckGroup M := (monoidOf ⊤).toMonoidHom
+
+-- Algebra.GrothendieckGroup.of_injective (line 50)
+lemma of_injective [IsCancelMul M] : Injective (of (M := M))

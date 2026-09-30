@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Combinatorics/Matroid/Minor/Contract.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Contract.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 997c5d846479f2be707b9efe512a81cc137a77f123b654716181a3d598dacac6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matroid.contract_ground (line 66)
+@[simp] lemma contract_ground (M : Matroid α) (C : Set α) : (M ／ C).E = M.E \ C
+
+-- Matroid.dual_contract (line 75)
+lemma dual_contract (M : Matroid α) (X : Set α) : (M ／ X)✶ = M✶ ＼ X
+
+-- Matroid.IsNonloop.contractElem_indep_iff (line 151)
+lemma IsNonloop.contractElem_indep_iff (he : M.IsNonloop e) :
+    (M ／ {e}).Indep I ↔ e ∉ I ∧ M.Indep (insert e I)

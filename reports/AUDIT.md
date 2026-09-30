@@ -980,6 +980,131 @@ Entries outside the sample, receipted because a composite anchors on them. Chose
 
   c: https://en.wikipedia.org/w/index.php?action=raw&title=Covariant_derivative
 
+### D1-058 Matroid contraction (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [m] "the contraction of M by T, written M/T"
+- description: **confirmed** [m] "The rank function of the contraction is" *The source contracts an independent set T; the entry's single element e is the case T = {e}.*
+- input: **confirmed** [m] "the contraction of M by T, written M/T"
+- output: **confirmed** [m] "is the matroid on the underlying set"
+- preserved: **confirmed** [m] "to be independent in the contraction if its union with this basis remains independent in M"
+- broken: **confirmed** [m] "The rank function of the contraction is" *r'(E - e) = r(E) - r({e}): the rank drops by one unless e is a loop.*
+
+  m: https://en.wikipedia.org/w/index.php?action=raw&title=Matroid_minor
+
+### D2-071 Gram-Schmidt Orthogonalization (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [g] "the Gram–Schmidt process"
+- description: **confirmed** [g] "a method of constructing an orthonormal basis from a set of vectors in an inner product space"
+- input: **confirmed** [g] "takes a finite, linearly independent set of vectors"
+- output: **confirmed** [g] "a method of constructing an orthonormal basis from a set of vectors in an inner product space"
+- preserved: **confirmed** [g] "that spans the same"
+- broken: **unsupported** *True (orthogonalizing changes angles, normalizing changes lengths), but the lines checked do not state it.*
+
+  g: https://en.wikipedia.org/w/index.php?action=raw&title=Gram%E2%80%93Schmidt_process
+
+### D2-072 Localization (imprecise; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [l] "The localization of a commutative ring"
+- description: **confirmed** [l] "The localization of a commutative ring"
+- input: **confirmed** [l] "The localization of a commutative ring"
+- output: **imprecise** [l] "is a local ring that is generally denoted" *S^{-1}R is a local ring when S is the complement of a prime ideal p (then it is R_p), not in general: localizing at S = {1} gives R back.*
+- preserved: **confirmed** [m] "p.IsPrime ∧ Disjoint (M : Set R) ↑p" *Primes of S^{-1}R correspond to primes of R disjoint from S (Mathlib's IsLocalization.orderIsoOfPrime).*
+- broken: **unsupported** *"Global structure" names no invariant. What is lost is the primes meeting S, and the elements S kills.*
+
+  l: https://en.wikipedia.org/w/index.php?action=raw&title=Localization_(commutative_algebra)
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/Ideal.lean
+
+### D2-080 Noether Normalization (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [n] "Noether normalization"
+- description: **confirmed** [n] "is a finitely generated module over the polynomial ring"
+- input: **confirmed** [n] "is a finitely generated module over the polynomial ring" *The input is a finitely generated algebra over a field k.*
+- output: **confirmed** [n] "is a finitely generated module over the polynomial ring"
+- preserved: **confirmed** [n] "is equal to the Krull dimension of the ring"
+- broken: **unsupported** *"Specific generators" is vague: the polynomial subring is chosen, not canonical, which the lines checked do not discuss.*
+
+  n: https://en.wikipedia.org/w/index.php?action=raw&title=Noether_normalization_lemma
+
+### D2-145 Coset Construction (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [c] "Together they partition the entire group"
+- description: **confirmed** [c] "Together they partition the entire group"
+- input: **confirmed** [c] "Together they partition the entire group"
+- output: **confirmed** [c] "Together they partition the entire group"
+- preserved: **confirmed** [c] "This common value is called the index of" *The index is quoted; G acting on G/H by left multiplication is Mathlib's MulAction.quotient (mapfill/formal.js).*
+- broken: **confirmed** [c] "into equal-size, non-overlapping sets" *Elements of one coset are identified.*
+
+  c: https://en.wikipedia.org/w/index.php?action=raw&title=Coset
+
+### D2-168 Stone-Cech Compactification (wrong; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [s] "the Stone–Čech compactification is a technique for constructing a universal map"
+- description: **confirmed** [s] "factors uniquely through"
+- input: **confirmed** [s] "is a Tychonoff space, the map from" *For a Tychonoff (completely regular Hausdorff) space X embeds; otherwise the map need not be injective.*
+- output: **confirmed** [s] "can be identified as a dense subspace of"
+- preserved: **confirmed** [s] "factors uniquely through"
+- broken: **wrong** [b] "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]" *Separability is not broken: X has dense image in βX, so βX is separable when X is (proved in lean/MathMap/StoneCech.lean). Metrizability is lost (βℕ is not metrizable), which the lines checked do not state.*
+
+  s: https://en.wikipedia.org/w/index.php?action=raw&title=Stone%E2%80%93%C4%8Cech_compactification
+  b: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean
+
+### D2-180 Grothendieck Group Construction (confirmed; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [g] "it is called the Grothendieck group of"
+- description: **confirmed** [g] "Such an abelian group K always exists"
+- input: **confirmed** [g] "it is called the Grothendieck group of"
+- output: **confirmed** [g] "Such an abelian group K always exists"
+- preserved: **confirmed** [g] "It is characterized by a certain universal property"
+- broken: **confirmed** [g] "does not have the cancellation property" *The map M -> K(M) is injective exactly when M is cancellative.*
+
+  g: https://en.wikipedia.org/w/index.php?action=raw&title=Grothendieck_group
+
+### D2-195 Snake Lemma Construction (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [s] "The snake lemma is a tool used in mathematics"
+- description: **confirmed** [s] "to construct long exact sequences"
+- input: **confirmed** [s] "In an abelian category"
+- output: **confirmed** [s] "to construct long exact sequences"
+- preserved: **confirmed** [s] "Homomorphisms constructed with its help are generally called connecting homomorphisms"
+- broken: **unsupported** *"Diagram structure" names no invariant.*
+
+  s: https://en.wikipedia.org/w/index.php?action=raw&title=Snake_lemma
+
+### D2-196 Five Lemma Construction (imprecise; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [f] "The five lemma states that"
+- description: **imprecise** [f] "if the rows are exact, m and p are isomorphisms, l is an epimorphism, and q is a monomorphism, then n is also an isomorphism." *The rows must be exact and the diagram commutative, which the entry omits; and less than four isomorphisms suffices: the outer maps need only be epi and mono.*
+- input: **imprecise** [f] "if the rows are exact" *Needs a commutative diagram with exact rows.*
+- output: **confirmed** [f] "then n is also an isomorphism."
+- preserved: **confirmed** [f] "then n is also an isomorphism."
+- broken: **unsupported** *"Explicit construction" names no invariant.*
+
+  f: https://en.wikipedia.org/w/index.php?action=raw&title=Five_lemma
+
+### D3-035 Fraïssé limit construction (imprecise; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [f] "approximate a (countable) structure by its finitely generated substructures"
+- description: **imprecise** [f] "is ω-categorical if and only if" *The limit is unique up to isomorphism, but ω-categorical only under a condition: for a finite language, exactly when the class is uniformly locally finite. The entry says it always is.*
+- input: **confirmed** [m] "amalgamation : Amalgamation K" *Mathlib's IsFraisse: nonempty, finitely generated, essentially countable, hereditary, joint embedding, amalgamation.*
+- output: **confirmed** [m] "protected ultrahomogeneous : IsUltrahomogeneous L M"
+- preserved: **confirmed** [m] "protected ultrahomogeneous : IsUltrahomogeneous L M"
+- broken: **confirmed** [f] "approximate a (countable) structure by its finitely generated substructures"
+
+  f: https://en.wikipedia.org/w/index.php?action=raw&title=Fra%C3%AFss%C3%A9_limit
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean
+
+### D3-114 Yoneda embedding (partly unsupported; for Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.)
+
+- name: **confirmed** [y] "It allows the embedding of any locally small category into a category of functors"
+- description: **confirmed** [y] "It allows the embedding of any locally small category into a category of functors"
+- input: **confirmed** [y] "It allows the embedding of any locally small category into a category of functors" *Locally small suffices; the entry's small category is a special case.*
+- output: **confirmed** [m] "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"
+- preserved: **confirmed** [m] "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"
+- broken: **unsupported** *"Small category size" names no invariant.*
+
+  y: https://en.wikipedia.org/w/index.php?action=raw&title=Yoneda_lemma
+  m: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean
+
 ### D8-107 Jordan decomposition (confirmed; for Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.)
 
 - name: **confirmed** [j] "its Jordan normal form is also called the Jordan normal form of"

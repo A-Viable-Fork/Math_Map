@@ -1,0 +1,21 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/ModelTheory/Fraisse.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: e3e3c210796304c0e70a1b14f1e79b62dbc2c95c158bf5980fefdf50db7cbeb9
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- FirstOrder.Language.IsFraisse (line 117)
+class IsFraisse : Prop where
+  is_nonempty : K.Nonempty
+  FG : ∀ M : Bundled.{w} L.Structure, M ∈ K → Structure.FG L M
+  is_essentially_countable : (Quotient.mk' '' K).Countable
+  hereditary : Hereditary K
+  jointEmbedding : JointEmbedding K
+  amalgamation : Amalgamation K
+
+-- FirstOrder.Language.IsFraisseLimit (line 279)
+structure IsFraisseLimit [Countable (Σ l, L.Functions l)] [Countable M] : Prop where
+  protected ultrahomogeneous : IsUltrahomogeneous L M
+  protected age : L.age M = K
+
+-- FirstOrder.Language.IsFraisseLimit.nonempty_equiv (line 388)
+theorem nonempty_equiv : Nonempty (M ≃[L] N)

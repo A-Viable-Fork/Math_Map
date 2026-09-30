@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/FiveLemma.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/FiveLemma.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 55d59b4aaa0f4d55927ca939542c50824e1109a5e5eb50741f1a8b5811279c60
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- MonoidHom.bijective_of_surjective_of_bijective_of_bijective_of_injective (line 131)
+lemma bijective_of_surjective_of_bijective_of_bijective_of_injective (hi₁ : Function.Surjective i₁)
+    (hi₂ : Function.Bijective i₂) (hi₄ : Function.Bijective i₄) (hi₅ : Function.Injective i₅) :
+    Function.Bijective i₃

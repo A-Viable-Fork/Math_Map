@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Localization/AtPrime/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/AtPrime/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 51b514f00343dad9636b991ea0ce4b2d8af67259a6c78e7ef3e3f43cc0b26612
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- IsLocalization.AtPrime.isLocalRing (line 67)
+theorem AtPrime.isLocalRing [IsLocalization.AtPrime S P] : IsLocalRing S

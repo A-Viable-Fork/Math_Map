@@ -3076,6 +3076,448 @@
    }
   },
   {
+   "id": "D1-058",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&title=Matroid_minor"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "the contraction of M by T, written M/T"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The rank function of the contraction is",
+     "note": "The source contracts an independent set T; the entry's single element e is the case T = {e}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "the contraction of M by T, written M/T"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is the matroid on the underlying set"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "to be independent in the contraction if its union with this basis remains independent in M"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The rank function of the contraction is",
+     "note": "r'(E - e) = r(E) - r({e}): the rank drops by one unless e is a loop."
+    }
+   }
+  },
+  {
+   "id": "D2-071",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&title=Gram%E2%80%93Schmidt_process"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the Gram–Schmidt process"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "a method of constructing an orthonormal basis from a set of vectors in an inner product space"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "takes a finite, linearly independent set of vectors"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "a method of constructing an orthonormal basis from a set of vectors in an inner product space"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "that spans the same"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "True (orthogonalizing changes angles, normalizing changes lengths), but the lines checked do not state it."
+    }
+   }
+  },
+  {
+   "id": "D2-072",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&title=Localization_(commutative_algebra)",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/Ideal.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The localization of a commutative ring"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The localization of a commutative ring"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The localization of a commutative ring"
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "is a local ring that is generally denoted",
+     "note": "S^{-1}R is a local ring when S is the complement of a prime ideal p (then it is R_p), not in general: localizing at S = {1} gives R back."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "p.IsPrime ∧ Disjoint (M : Set R) ↑p",
+     "note": "Primes of S^{-1}R correspond to primes of R disjoint from S (Mathlib's IsLocalization.orderIsoOfPrime)."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Global structure\" names no invariant. What is lost is the primes meeting S, and the elements S kills."
+    }
+   }
+  },
+  {
+   "id": "D2-080",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&title=Noether_normalization_lemma"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Noether normalization"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is a finitely generated module over the polynomial ring"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is a finitely generated module over the polynomial ring",
+     "note": "The input is a finitely generated algebra over a field k."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is a finitely generated module over the polynomial ring"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is equal to the Krull dimension of the ring"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Specific generators\" is vague: the polynomial subring is chosen, not canonical, which the lines checked do not discuss."
+    }
+   }
+  },
+  {
+   "id": "D2-145",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&title=Coset"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Together they partition the entire group"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Together they partition the entire group"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Together they partition the entire group"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Together they partition the entire group"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "This common value is called the index of",
+     "note": "The index is quoted; G acting on G/H by left multiplication is Mathlib's MulAction.quotient (mapfill/formal.js)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "into equal-size, non-overlapping sets",
+     "note": "Elements of one coset are identified."
+    }
+   }
+  },
+  {
+   "id": "D2-168",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Stone%E2%80%93%C4%8Cech_compactification",
+    "b": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the Stone–Čech compactification is a technique for constructing a universal map"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "factors uniquely through"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is a Tychonoff space, the map from",
+     "note": "For a Tychonoff (completely regular Hausdorff) space X embeds; otherwise the map need not be injective."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "can be identified as a dense subspace of"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "factors uniquely through"
+    },
+    "broken": {
+     "verdict": "wrong",
+     "src": "b",
+     "quote": "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]",
+     "note": "Separability is not broken: X has dense image in βX, so βX is separable when X is (proved in lean/MathMap/StoneCech.lean). Metrizability is lost (βℕ is not metrizable), which the lines checked do not state."
+    }
+   }
+  },
+  {
+   "id": "D2-180",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&title=Grothendieck_group"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "it is called the Grothendieck group of"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Such an abelian group K always exists"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "it is called the Grothendieck group of"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Such an abelian group K always exists"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "It is characterized by a certain universal property"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "does not have the cancellation property",
+     "note": "The map M -> K(M) is injective exactly when M is cancellative."
+    }
+   }
+  },
+  {
+   "id": "D2-195",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&title=Snake_lemma"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The snake lemma is a tool used in mathematics"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "to construct long exact sequences"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In an abelian category"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "to construct long exact sequences"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Homomorphisms constructed with its help are generally called connecting homomorphisms"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Diagram structure\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D2-196",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&title=Five_lemma"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The five lemma states that"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "if the rows are exact, m and p are isomorphisms, l is an epimorphism, and q is a monomorphism, then n is also an isomorphism.",
+     "note": "The rows must be exact and the diagram commutative, which the entry omits; and less than four isomorphisms suffices: the outer maps need only be epi and mono."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "if the rows are exact",
+     "note": "Needs a commutative diagram with exact rows."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "then n is also an isomorphism."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "then n is also an isomorphism."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Explicit construction\" names no invariant."
+    }
+   }
+  },
+  {
+   "id": "D3-035",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&title=Fra%C3%AFss%C3%A9_limit",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "approximate a (countable) structure by its finitely generated substructures"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "is ω-categorical if and only if",
+     "note": "The limit is unique up to isomorphism, but ω-categorical only under a condition: for a finite language, exactly when the class is uniformly locally finite. The entry says it always is."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "amalgamation : Amalgamation K",
+     "note": "Mathlib's IsFraisse: nonempty, finitely generated, essentially countable, hereditary, joint embedding, amalgamation."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "protected ultrahomogeneous : IsUltrahomogeneous L M"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "protected ultrahomogeneous : IsUltrahomogeneous L M"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "approximate a (countable) structure by its finitely generated substructures"
+    }
+   }
+  },
+  {
+   "id": "D3-114",
+   "why": "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.",
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&title=Yoneda_lemma",
+    "m": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "It allows the embedding of any locally small category into a category of functors"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "It allows the embedding of any locally small category into a category of functors"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "It allows the embedding of any locally small category into a category of functors",
+     "note": "Locally small suffices; the entry's small category is a special case."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Small category size\" names no invariant."
+    }
+   }
+  },
+  {
    "id": "D8-107",
    "why": "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.",
    "sources": {

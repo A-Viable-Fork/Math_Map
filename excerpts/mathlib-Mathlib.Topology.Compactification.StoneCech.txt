@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Compactification/StoneCech.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/StoneCech.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: c9373b7dd9bd3ad41b8f28d5aa8f5fe49bb877fc9f1c82db245a3c46a611c581
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- denseRange_stoneCechUnit (line 348)
+theorem denseRange_stoneCechUnit : DenseRange (stoneCechUnit : α → StoneCech α)
+
+-- stoneCechExtend_extends (line 375)
+lemma stoneCechExtend_extends : stoneCechExtend hg ∘ stoneCechUnit = g

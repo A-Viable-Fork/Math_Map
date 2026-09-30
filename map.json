@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "692630342ee11e666d8c3a90dfd79ff36e3a4c06"
+  "commit": "90b47359f1ca38df3a5f104f9b462dca835cf224"
  },
  "domains": {
   "D1": {
@@ -364,27 +364,27 @@
    "added": 8
   },
   "byTier": {
-   "landed": 1375,
-   "audited": 78,
+   "landed": 1364,
+   "audited": 89,
    "authored": 495,
    "receipted": 14
   },
   "withConditions": 7,
-  "corrected": 13,
+  "corrected": 17,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 76,
-   "unchecked": 11220,
+   "unsupported": 82,
+   "unchecked": 11154,
    "imprecise": 20,
-   "sourced": 437,
-   "formal": 19
+   "sourced": 489,
+   "formal": 27
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 24,
-   "entries": 6,
+   "claims": 25,
+   "entries": 7,
    "definitions": 19,
-   "proved": 24,
+   "proved": 25,
    "stated": 0
   },
   "claimEvidence": {
@@ -397,14 +397,14 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 18,
-   "links": 38,
+   "entries": 30,
+   "links": 65,
    "byMatch": {
-    "exact": 24,
-    "conflicts": 1,
-    "special": 3,
-    "general": 8,
-    "ingredient": 1,
+    "exact": 44,
+    "conflicts": 2,
+    "special": 6,
+    "general": 9,
+    "ingredient": 3,
     "related": 1
    }
   }
@@ -2030,14 +2030,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Matroid.contract_ground",
+     "file": "Mathlib/Combinatorics/Matroid/Minor/Contract.lean",
+     "match": "exact",
+     "note": "The contraction's ground set is E minus the contracted set.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Contract.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Matroid.dual_contract",
+     "file": "Mathlib/Combinatorics/Matroid/Minor/Contract.lean",
+     "match": "exact",
+     "note": "Contraction is dual to deletion: (M / X)* = M* \\ X.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Contract.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Matroid.IsNonloop.contractElem_indep_iff",
+     "file": "Mathlib/Combinatorics/Matroid/Minor/Contract.lean",
+     "match": "special",
+     "note": "For a non-loop e, I is independent in M / e iff e is not in I and I + e is independent in M: independence relative to e.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Matroid/Minor/Contract.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D1-059",
@@ -5830,14 +5857,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "InnerProductSpace.gramSchmidtNormed_orthonormal",
+     "file": "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean",
+     "match": "exact",
+     "note": "The normalized Gram-Schmidt vectors of a linearly independent family are orthonormal.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "InnerProductSpace.span_gramSchmidt",
+     "file": "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean",
+     "match": "exact",
+     "note": "The span is preserved.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-072",
@@ -5850,7 +5896,7 @@
    ],
    "description": "Introduces denominators from multiplicative set S. Geometrically: zooms to local behavior.",
    "input": "Commutative ring R + multiplicative set S",
-   "output": "Local ring S^{-1}R",
+   "output": "Ring S^{-1}R; a local ring (R_p) when S is the complement of a prime ideal p",
    "preserved": "Ring axioms, prime structure (localized)",
    "broken": "Global structure",
    "complexity": "N/A (algebraic)",
@@ -5858,14 +5904,59 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "output"
+    ],
+    "landed": {
+     "output": "Local ring S^{-1}R"
+    },
+    "reason": "Graded imprecise: the landed output says local ring, which holds only when S is the complement of a prime.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-localization.txt",
+      "quote": "is a [[local ring]] that is generally denoted <math>R_\\mathfrak p,</math>",
+      "fields": [
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.RingTheory.Localization.AtPrime.Basic.txt",
+      "quote": "theorem AtPrime.isLocalRing [IsLocalization.AtPrime S P] : IsLocalRing S",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "IsLocalization.AtPrime.isLocalRing",
+     "file": "Mathlib/RingTheory/Localization/AtPrime/Basic.lean",
+     "match": "special",
+     "note": "The localization is a local ring when S is the complement of a prime: the hypothesis the landed output omits.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/AtPrime/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "IsLocalization.orderIsoOfPrime",
+     "file": "Mathlib/RingTheory/Localization/Ideal.lean",
+     "match": "exact",
+     "note": "Prime ideals of S^{-1}R correspond, order-preservingly, to primes of R disjoint from S.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/Ideal.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-073",
@@ -5944,10 +6035,36 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "sourced",
+    "output": "formal",
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "FractionRing.field",
+     "file": "Mathlib/RingTheory/Localization/FractionRing.lean",
+     "match": "exact",
+     "note": "The field of fractions is a field.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/FractionRing.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "IsFractionRing.injective",
+     "file": "Mathlib/RingTheory/Localization/FractionRing.lean",
+     "match": "exact",
+     "note": "R -> Frac(R) is injective.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/FractionRing.lean"
+    },
+    {
+     "field": "description",
+     "decl": "IsFractionRing.lift",
+     "file": "Mathlib/RingTheory/Localization/FractionRing.lean",
+     "match": "exact",
+     "note": "Any injective map to a field factors through Frac(R): it is the smallest field containing R.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/FractionRing.lean"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -6080,14 +6197,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "exists_finite_inj_algHom_of_fg",
+     "file": "Mathlib/RingTheory/NoetherNormalization.lean",
+     "match": "exact",
+     "note": "A finitely generated algebra over a field contains a polynomial ring in s variables (an injective algebra map) over which it is finite.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/NoetherNormalization.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-081",
@@ -8033,14 +8161,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "MulAction.quotient",
+     "file": "Mathlib/GroupTheory/GroupAction/Quotient.lean",
+     "match": "exact",
+     "note": "G acts on G/H.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/GroupAction/Quotient.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Subgroup.index",
+     "file": "Mathlib/GroupTheory/Index.lean",
+     "match": "ingredient",
+     "note": "The index [G : H] is the cardinality of G/H.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Index.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-146",
@@ -8658,20 +8805,83 @@
    "input": "Completely regular X",
    "output": "Compact Hausdorff βX with X dense",
    "preserved": "Continuous function extension",
-   "broken": "Separability, metrizability",
+   "broken": "Not separability: X is dense in βX, so βX is separable when X is. (The landed metrizability claim is dropped: no receipt here.)",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Separability, metrizability"
+    },
+    "reason": "Graded wrong: the landed text lists separability as broken. Proved in lean/MathMap/StoneCech.lean.",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-Mathlib.Topology.Bases.txt",
+      "quote": "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.Topology.Compactification.StoneCech.txt",
+      "quote": "theorem denseRange_stoneCechUnit : DenseRange (stoneCechUnit : α → StoneCech α)",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "lean": [
+    {
+     "field": "broken",
+     "decl": "MathMap.stoneCech_separableSpace",
+     "match": "refutes-landed",
+     "status": "proved",
+     "note": "The Stone-Cech compactification of a separable space is separable: the landed text lists separability as broken.",
+     "file": "lean/MathMap/StoneCech.lean"
+    }
+   ],
+   "formal": [
+    {
+     "field": "output",
+     "decl": "denseRange_stoneCechUnit",
+     "file": "Mathlib/Topology/Compactification/StoneCech.lean",
+     "match": "exact",
+     "note": "X has dense image in its Stone-Cech compactification.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/StoneCech.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "stoneCechExtend_extends",
+     "file": "Mathlib/Topology/Compactification/StoneCech.lean",
+     "match": "exact",
+     "note": "Continuous maps to compact Hausdorff spaces extend.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/StoneCech.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "DenseRange.separableSpace",
+     "file": "Mathlib/Topology/Bases.lean",
+     "match": "conflicts",
+     "note": "A space with a dense image of a separable space is separable, so the Stone-Cech compactification of a separable space is separable: the landed text lists separability as broken.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D2-169",
@@ -8989,14 +9199,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Algebra.GrothendieckGroup.instCommGroup",
+     "file": "Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean",
+     "match": "exact",
+     "note": "K(M) is an abelian group.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Algebra.GrothendieckGroup.of",
+     "file": "Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean",
+     "match": "exact",
+     "note": "M maps to K(M) by a monoid homomorphism.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Algebra.GrothendieckGroup.of_injective",
+     "file": "Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean",
+     "match": "special",
+     "note": "The map is injective when M is cancellative; without cancellation, elements are identified.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/MonoidLocalization/GrothendieckGroup.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-181",
@@ -9397,14 +9634,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.ShortComplex.SnakeInput.snake_lemma",
+     "file": "Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean",
+     "match": "exact",
+     "note": "The snake sequence is exact.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.ShortComplex.SnakeInput.δ",
+     "file": "Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean",
+     "match": "ingredient",
+     "note": "The connecting map.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-196",
@@ -9414,8 +9670,8 @@
    "tags": [
     "construction"
    ],
-   "description": "4 of 5 maps are isos -> fifth is too.",
-   "input": "Diagram with 4 known isos",
+   "description": "In a commutative diagram with exact rows, if the four outer maps are epi, iso, iso, mono (in particular, four isomorphisms), the middle map is an isomorphism.",
+   "input": "Commutative diagram with exact rows; outer maps epi, iso, iso, mono",
    "output": "Fifth iso deduced",
    "preserved": "Iso at fifth position",
    "broken": "Explicit construction",
@@ -9424,14 +9680,47 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "input"
+    ],
+    "landed": {
+     "description": "4 of 5 maps are isos -> fifth is too.",
+     "input": "Diagram with 4 known isos"
+    },
+    "reason": "Description and input graded imprecise: the landed text omits exact rows and a commutative diagram, and asks for four isomorphisms where less suffices.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-five-lemma.txt",
+      "quote": "if the rows are [[exact sequence|exact]], ''m'' and ''p'' are [[isomorphism]]s, ''l'' is an [[epimorphism]], and ''q'' is a [[monomorphism]], then ''n'' is also an isomorphism.",
+      "fields": [
+       "description",
+       "input"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "MonoidHom.bijective_of_surjective_of_bijective_of_bijective_of_injective",
+     "file": "Mathlib/Algebra/FiveLemma.lean",
+     "match": "general",
+     "note": "The sharp five lemma for groups (with exact rows and commuting squares): surjective, bijective, bijective, injective outer maps make the middle one bijective. Four isomorphisms is a special case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/FiveLemma.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-197",
@@ -10496,7 +10785,7 @@
    "tags": [
     "construction"
    ],
-   "description": "From countable class with amalgamation property, constructs unique countably categorical structure (e.g., random graph, rational linear order).",
+   "description": "From a countable class of finitely generated structures with the hereditary, joint embedding and amalgamation properties, constructs a countable ultrahomogeneous structure whose age is the class, unique up to isomorphism (e.g., the random graph, the rational order). For a finite language it is ω-categorical exactly when the class is uniformly locally finite.",
    "input": "Countable class of finite structures with HP, JEP, AP",
    "output": "Fraïssé limit: countable, ultrahomogeneous",
    "preserved": "Amalgamation property, ultrahomogeneity, universality",
@@ -10506,14 +10795,74 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "From countable class with amalgamation property, constructs unique countably categorical structure (e.g., random graph, rational linear order)."
+    },
+    "reason": "Graded imprecise: the landed text says the limit is always countably categorical.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-fraisse-limit.txt",
+      "quote": "is [[Omega-categorical theory|ω-categorical]] if and only if <math>\\mathbf{K}</math> is uniformly locally finite.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.ModelTheory.Fraisse.txt",
+      "quote": "theorem nonempty_equiv : Nonempty (M ≃[L] N)",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.ModelTheory.Fraisse.txt",
+      "quote": "protected ultrahomogeneous : IsUltrahomogeneous L M",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "input",
+     "decl": "FirstOrder.Language.IsFraisse",
+     "file": "Mathlib/ModelTheory/Fraisse.lean",
+     "match": "exact",
+     "note": "A Fraisse class: nonempty, finitely generated, essentially countable, hereditary, joint embedding, amalgamation.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean"
+    },
+    {
+     "field": "output",
+     "decl": "FirstOrder.Language.IsFraisseLimit",
+     "file": "Mathlib/ModelTheory/Fraisse.lean",
+     "match": "exact",
+     "note": "A countable ultrahomogeneous structure with age K.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean"
+    },
+    {
+     "field": "description",
+     "decl": "FirstOrder.Language.IsFraisseLimit.nonempty_equiv",
+     "file": "Mathlib/ModelTheory/Fraisse.lean",
+     "match": "exact",
+     "note": "Two Fraisse limits of the same class are isomorphic: uniqueness.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/ModelTheory/Fraisse.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D3-036",
@@ -12673,14 +13022,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Yoneda.fullyFaithful",
+     "file": "Mathlib/CategoryTheory/Yoneda.lean",
+     "match": "exact",
+     "note": "The Yoneda embedding is fully faithful.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Yoneda.fullyFaithful",
+     "file": "Mathlib/CategoryTheory/Yoneda.lean",
+     "match": "exact",
+     "note": "Full faithfulness, the preserved claim's first part.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D3-115",

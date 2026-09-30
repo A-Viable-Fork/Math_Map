@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: e5289024024d8f5400919c186461b0c85ffd99b036a916068e7a5fc8f0f77a7b
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- InnerProductSpace.gramSchmidtNormed_orthonormal (line 261)
+theorem gramSchmidtNormed_orthonormal {f : ι → E} (h₀ : LinearIndependent 𝕜 f) :
+    Orthonormal 𝕜 (gramSchmidtNormed 𝕜 f)
+
+-- InnerProductSpace.span_gramSchmidt (line 162)
+theorem span_gramSchmidt (f : ι → E) : span 𝕜 (range (gramSchmidt 𝕜 f)) = span 𝕜 (range f)

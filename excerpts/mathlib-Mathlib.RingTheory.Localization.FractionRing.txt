@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Localization/FractionRing.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/FractionRing.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: fa647da3e161fb8e9f88f47d87364d12ba5ea19eaa14b5b2aac76c18c3de0bc2
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- FractionRing.field (line 750)
+noncomputable instance field : Field (FractionRing A)
+
+-- IsFractionRing.injective (line 136)
+protected theorem injective : Function.Injective (algebraMap R K)
+
+-- IsFractionRing.lift (line 348)
+noncomputable def lift (hg : Injective g) : K →+* L :=
+  IsLocalization.lift fun y : nonZeroDivisors A => isUnit_map_of_injective hg y

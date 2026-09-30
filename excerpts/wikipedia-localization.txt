@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Localization (commutative algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371034380
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: b7feb7e296174f7cdb73f4c3486274b3fab80f23fca21deff49f21f905a9ca7a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The ring <math>S^{-1}R</math> is a [[local ring]] that is generally denoted <math>R_\mathfrak p,</math> and called ''the local ring of {{mvar|R}} at'' <math>\mathfrak p.

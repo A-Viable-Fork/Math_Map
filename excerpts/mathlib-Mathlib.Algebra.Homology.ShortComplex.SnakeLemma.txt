@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/SnakeLemma.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: ee6681d8db0c4bb0e7b60086862777bcd2f2f28613410d08b2d76c220b8b4614
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.ShortComplex.SnakeInput.snake_lemma (line 384)
+lemma snake_lemma : S.composableArrows.Exact
+
+-- CategoryTheory.ShortComplex.SnakeInput.δ (line 278)
+noncomputable def δ : S.L₀.X₃ ⟶ S.L₃.X₁ :=
+  S.L₀'_exact.desc (S.φ₁ ≫ S.v₂₃.τ₁) (by simp only [L₁_f_φ₁_assoc, w₁₃_τ₁])

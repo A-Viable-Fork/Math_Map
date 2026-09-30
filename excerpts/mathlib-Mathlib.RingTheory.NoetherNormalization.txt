@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/NoetherNormalization.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/NoetherNormalization.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 25d41f8573cadd13561d35d6b807515e4b25c26d8a9a5c603c2d827321b6d7ae
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- exists_finite_inj_algHom_of_fg (line 287)
+theorem exists_finite_inj_algHom_of_fg : ∃ s, ∃ g : (MvPolynomial (Fin s) k) →ₐ[k] R,
+    Function.Injective g ∧ g.Finite

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Five lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376671102
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 44db54f83275ccbdc417ed3c3a92ba040b35ef87878b3610d539a0b314e50974
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The five lemma states that, if the rows are [[exact sequence|exact]], ''m'' and ''p'' are [[isomorphism]]s, ''l'' is an [[epimorphism]], and ''q'' is a [[monomorphism]], then ''n'' is also an isomorphism.

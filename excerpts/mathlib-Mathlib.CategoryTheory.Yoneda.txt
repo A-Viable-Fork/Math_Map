@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Yoneda.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 63ba5635e23700bf978c0f86e7392c04b42b309d9aaafb33026154c612231c0f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Yoneda.fullyFaithful (line 134)
+def fullyFaithful : (yoneda (C := C)).FullyFaithful where
+  preimage f := f.app _ (𝟙 _)
+  map_preimage := by -- this was automatic
+    intro Z W f
+    ext X x
+    have := f.naturality_apply x.op (𝟙 Z)

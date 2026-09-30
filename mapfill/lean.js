@@ -79,6 +79,8 @@ const CLAIMS = [
   C("D4-075", "preserved", "Cone.isEmbedding_base", "exact", "X embeds in its cone as the base.", { invariant: "topology-of-input", whole: true }),
   C("D4-075", "broken", "Cone.homotopyEquiv_iff", "exact", "The cone keeps X's homotopy type exactly when X is already contractible.", { invariant: "homotopy-type", whole: true }),
   C("D4-075", "broken", "Cone.not_homotopyEquiv_bool", "special", "The instance: the cone on two points is not homotopy equivalent to them."),
+  // D2-168.
+  C("D2-168", "broken", "stoneCech_separableSpace", "refutes-landed", "The Stone-Cech compactification of a separable space is separable: the landed text lists separability as broken."),
   // D1-099.
   C("D1-099", "description", "antitoneGC_iff", "exact", "The corrected definition is equivalent to b ≤ f(a) iff a ≤ g(b)."),
   C("D1-099", "output", "antitoneGC_iff_galoisConnection", "exact", "An antitone Galois connection is exactly a Galois connection in Mathlib's sense into the order dual: an adjunction.", { whole: true }),

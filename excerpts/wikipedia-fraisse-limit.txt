@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Fraïssé limit (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1278629610
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 810636d36b2a5786f0b8ff6e92cda05131af4ed3fa0d2cfe13646322216d881f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If the language of <math>\mathbf{K}</math> is finite the Fraïssé limit of <math>\mathbf{K}</math> is [[Omega-categorical theory|ω-categorical]] if and only if <math>\mathbf{K}</math> is uniformly locally finite.

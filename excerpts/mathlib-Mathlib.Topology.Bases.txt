@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Bases.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Bases.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 81cf4154034f0d92b50291a638a305f61eba8a97eb4cb13ee063a91dab745a1d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- DenseRange.separableSpace (line 396)
+protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]
+    {f : α → β} (h : DenseRange f) (h' : Continuous f) : SeparableSpace β

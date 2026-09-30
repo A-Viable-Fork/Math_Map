@@ -17,6 +17,7 @@ const U = (note) => ({ verdict: "unsupported", note });
 const M = (path) => `https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/${path}`;
 const USE = "Requested by a composite; receipted.";
 const CITE = "Citation pass 1: entries with a Mathlib counterpart, graded against a source and linked in mapfill/formal.js.";
+const CITE2 = "Citation pass 2: the formal queue (reports/FORMAL-QUEUE.md), graded against a source and linked to Mathlib.";
 const CHAIN = "Weakest link: a composite rests on this entry's unchecked claims (scripts/compose.mjs).";
 
 const TARGETED = [
@@ -205,6 +206,99 @@ const TARGETED = [
     output: C("c", "is a generalization of the directional derivative from vector calculus"),
     preserved: C("c", "obeys the product rule", "The product (Leibniz) rule is stated. Tensoriality in X is built into Mathlib's definition: the derivative of a section is a section of Hom(TM, V) (mapfill/formal.js)."),
     broken: C("c", "In general, covariant derivatives do not commute.", "\"Broken\" in general only: a flat connection is one whose covariant derivatives commute; curvature measures the failure."),
+  }),
+  // Citation pass 2.
+  t("D1-058", CITE2, { m: W("Matroid_minor") }, {
+    name: C("m", "the contraction of M by T, written M/T"),
+    description: C("m", "The rank function of the contraction is", "The source contracts an independent set T; the entry's single element e is the case T = {e}."),
+    input: C("m", "the contraction of M by T, written M/T"),
+    output: C("m", "is the matroid on the underlying set"),
+    preserved: C("m", "to be independent in the contraction if its union with this basis remains independent in M"),
+    broken: C("m", "The rank function of the contraction is", "r'(E - e) = r(E) - r({e}): the rank drops by one unless e is a loop."),
+  }),
+  t("D2-071", CITE2, { g: W("Gram%E2%80%93Schmidt_process") }, {
+    name: C("g", "the Gram–Schmidt process"),
+    description: C("g", "a method of constructing an orthonormal basis from a set of vectors in an inner product space"),
+    input: C("g", "takes a finite, linearly independent set of vectors"),
+    output: C("g", "a method of constructing an orthonormal basis from a set of vectors in an inner product space"),
+    preserved: C("g", "that spans the same"),
+    broken: U("True (orthogonalizing changes angles, normalizing changes lengths), but the lines checked do not state it."),
+  }),
+  t("D2-072", CITE2, { l: W("Localization_(commutative_algebra)"), m: M("Mathlib/RingTheory/Localization/Ideal.lean") }, {
+    name: C("l", "The localization of a commutative ring"),
+    description: C("l", "The localization of a commutative ring"),
+    input: C("l", "The localization of a commutative ring"),
+    output: I("l", "is a local ring that is generally denoted",
+      "S^{-1}R is a local ring when S is the complement of a prime ideal p (then it is R_p), not in general: localizing at S = {1} gives R back."),
+    preserved: C("m", "p.IsPrime ∧ Disjoint (M : Set R) ↑p", "Primes of S^{-1}R correspond to primes of R disjoint from S (Mathlib's IsLocalization.orderIsoOfPrime)."),
+    broken: U("\"Global structure\" names no invariant. What is lost is the primes meeting S, and the elements S kills."),
+  }),
+  t("D2-080", CITE2, { n: W("Noether_normalization_lemma") }, {
+    name: C("n", "Noether normalization"),
+    description: C("n", "is a finitely generated module over the polynomial ring"),
+    input: C("n", "is a finitely generated module over the polynomial ring", "The input is a finitely generated algebra over a field k."),
+    output: C("n", "is a finitely generated module over the polynomial ring"),
+    preserved: C("n", "is equal to the Krull dimension of the ring"),
+    broken: U("\"Specific generators\" is vague: the polynomial subring is chosen, not canonical, which the lines checked do not discuss."),
+  }),
+  t("D2-145", CITE2, { c: W("Coset") }, {
+    name: C("c", "Together they partition the entire group"),
+    description: C("c", "Together they partition the entire group"),
+    input: C("c", "Together they partition the entire group"),
+    output: C("c", "Together they partition the entire group"),
+    preserved: C("c", "This common value is called the index of", "The index is quoted; G acting on G/H by left multiplication is Mathlib's MulAction.quotient (mapfill/formal.js)."),
+    broken: C("c", "into equal-size, non-overlapping sets", "Elements of one coset are identified."),
+  }),
+  t("D2-168", CITE2, { s: W("Stone%E2%80%93%C4%8Cech_compactification"), b: M("Mathlib/Topology/Bases.lean") }, {
+    name: C("s", "the Stone–Čech compactification is a technique for constructing a universal map"),
+    description: C("s", "factors uniquely through"),
+    input: C("s", "is a Tychonoff space, the map from", "For a Tychonoff (completely regular Hausdorff) space X embeds; otherwise the map need not be injective."),
+    output: C("s", "can be identified as a dense subspace of"),
+    preserved: C("s", "factors uniquely through"),
+    broken: X("b", "protected theorem _root_.DenseRange.separableSpace [SeparableSpace α] [TopologicalSpace β]",
+      "Separability is not broken: X has dense image in βX, so βX is separable when X is (proved in lean/MathMap/StoneCech.lean). Metrizability is lost (βℕ is not metrizable), which the lines checked do not state."),
+  }),
+  t("D2-180", CITE2, { g: W("Grothendieck_group") }, {
+    name: C("g", "it is called the Grothendieck group of"),
+    description: C("g", "Such an abelian group K always exists"),
+    input: C("g", "it is called the Grothendieck group of"),
+    output: C("g", "Such an abelian group K always exists"),
+    preserved: C("g", "It is characterized by a certain universal property"),
+    broken: C("g", "does not have the cancellation property", "The map M -> K(M) is injective exactly when M is cancellative."),
+  }),
+  t("D2-195", CITE2, { s: W("Snake_lemma") }, {
+    name: C("s", "The snake lemma is a tool used in mathematics"),
+    description: C("s", "to construct long exact sequences"),
+    input: C("s", "In an abelian category"),
+    output: C("s", "to construct long exact sequences"),
+    preserved: C("s", "Homomorphisms constructed with its help are generally called connecting homomorphisms"),
+    broken: U("\"Diagram structure\" names no invariant."),
+  }),
+  t("D2-196", CITE2, { f: W("Five_lemma") }, {
+    name: C("f", "The five lemma states that"),
+    description: I("f", "if the rows are exact, m and p are isomorphisms, l is an epimorphism, and q is a monomorphism, then n is also an isomorphism.",
+      "The rows must be exact and the diagram commutative, which the entry omits; and less than four isomorphisms suffices: the outer maps need only be epi and mono."),
+    input: I("f", "if the rows are exact", "Needs a commutative diagram with exact rows."),
+    output: C("f", "then n is also an isomorphism."),
+    preserved: C("f", "then n is also an isomorphism."),
+    broken: U("\"Explicit construction\" names no invariant."),
+  }),
+  t("D3-035", CITE2, { f: W("Fra%C3%AFss%C3%A9_limit"), m: M("Mathlib/ModelTheory/Fraisse.lean") }, {
+    name: C("f", "approximate a (countable) structure by its finitely generated substructures"),
+    description: I("f", "is ω-categorical if and only if",
+      "The limit is unique up to isomorphism, but ω-categorical only under a condition: for a finite language, exactly when the class is uniformly locally finite. The entry says it always is."),
+    input: C("m", "amalgamation : Amalgamation K", "Mathlib's IsFraisse: nonempty, finitely generated, essentially countable, hereditary, joint embedding, amalgamation."),
+    output: C("m", "protected ultrahomogeneous : IsUltrahomogeneous L M"),
+    preserved: C("m", "protected ultrahomogeneous : IsUltrahomogeneous L M"),
+    broken: C("f", "approximate a (countable) structure by its finitely generated substructures"),
+  }),
+  t("D3-114", CITE2, { y: W("Yoneda_lemma"), m: M("Mathlib/CategoryTheory/Yoneda.lean") }, {
+    name: C("y", "It allows the embedding of any locally small category into a category of functors"),
+    description: C("y", "It allows the embedding of any locally small category into a category of functors"),
+    input: C("y", "It allows the embedding of any locally small category into a category of functors", "Locally small suffices; the entry's small category is a special case."),
+    output: C("m", "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"),
+    preserved: C("m", "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"),
+    broken: U("\"Small category size\" names no invariant."),
   }),
   t("D8-107", CITE, { j: W("Jordan_normal_form") }, {
     name: C("j", "its Jordan normal form is also called the Jordan normal form of"),

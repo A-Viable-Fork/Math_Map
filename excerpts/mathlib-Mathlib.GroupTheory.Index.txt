@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/GroupTheory/Index.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Index.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 98a22666f1c0f04063224a40e68b4c303c95f66a5026d858c4081a5b9a07f3d7
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Subgroup.index (line 55)
+noncomputable def index : ℕ :=
+  Nat.card (G ⧸ H)
