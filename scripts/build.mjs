@@ -10,6 +10,7 @@ import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse, anchorable } from "./mathmap.mjs";
+import { evidence, LEVELS } from "./evidence.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -23,7 +24,9 @@ const worst = (g) => { const vs = FIELDS6.map((f) => g.fields[f].verdict); retur
 
 export function build() {
   const P = parse();
-  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, worst(g)]));
+  const gradeOf = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
+  const grades = Object.fromEntries(Object.entries(gradeOf).map(([id, g]) => [id, worst(g)]));
+  const E = evidence(P);
   const commit = (() => { try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
   const entries = P.entries.map((e) => {
     const o = { id: e.id, domain: e.domain, name: e.name, kind: e.kind, tags: e.tags, description: e.description,
@@ -36,11 +39,15 @@ export function build() {
     if (e.receipts) o.receipts = e.receipts.map((r) => ({ file: r.file, quote: r.quote }));
     if (e.invariants) o.invariants = e.invariants;
     if (e.actsOn) o.actsOn = e.actsOn;
+    o.evidence = Object.fromEntries(FIELDS6.map((f) => [f, E.field(e, f).level]));
+    if (e.invariants) o.claims = ["preserved", "broken", "output"].flatMap((f) => e.invariants[f].map((v) => ({ field: f, invariant: v, ...E.claim(e, f, v) })));
+    if (e.corrected) o.corrected = { fields: e.corrected, landed: e.landedFields, reason: e.correction.reason, receipts: e.correction.receipts };
+    if (e.flagResolved) o.flagResolved = { kind: e.flagResolved.kind, evidence: e.flagResolved.evidence };
     if (e.formal) o.formal = e.formal.map((k) => ({ ...k, url: `https://github.com/leanprover-community/mathlib4/blob/${P.formal.mathlib.commit}/${k.file}` }));
     if (e.conditions) { o.conditions = e.conditions; o.counterexamples = e.counterexamples; o.conditionReceipts = e.conditionReceipts; }
     const g = grades[e.id];
-    o.tier = e.flag ? "flagged" : g ? "audited" : e.origin === "added" ? "receipted" : e.origin === "fill" ? "authored" : "landed";
-    if (g) o.auditVerdict = g;
+    o.tier = e.flag ? "flagged" : e.flagResolved ? "receipted" : g ? "audited" : e.origin === "added" ? "receipted" : e.origin === "fill" ? "authored" : "landed";
+    if (g) { o.auditVerdict = e.corrected ? worst({ fields: Object.fromEntries(FIELDS6.map((f) => [f, e.corrected.includes(f) || (f === "name" && e.flagResolved) ? { verdict: "confirmed" } : gradeOf[e.id].fields[f]])) }) : g; if (e.corrected) o.landedAuditVerdict = g; }
     return o;
   });
   const { GRADES } = require("../audit/grades-0_1.js");
@@ -52,7 +59,9 @@ export function build() {
     builtFrom: { commit }, domains: P.declared, vocabulary: P.vocab, invariants: { carriers: P.vocabulary.CARRIERS, terms: P.vocabulary.INVARIANTS, relations: P.vocabulary.RELATIONS, receiptedLinks: P.vocabulary.LINKS.filter((l) => l.receipts) },
     origins: { map: "as landed", fill: "authored from standard mathematics, not reviewed against sources", "clone:<id>": "a pointer resolved to its home entry", added: "an entry the map lacked, each claim receipted by a verbatim quote (receipts)" },
     counts: { entries: entries.length, anchorable: entries.filter((e) => e.anchorable).length, byOrigin: entries.reduce((a, e) => { const k = e.origin.startsWith("clone:") ? "clone" : e.origin; a[k] = (a[k] || 0) + 1; return a; }, {}),
-      byTier: entries.reduce((a, e) => { a[e.tier] = (a[e.tier] || 0) + 1; return a; }, {}), withConditions: entries.filter((e) => e.conditions).length,
+      byTier: entries.reduce((a, e) => { a[e.tier] = (a[e.tier] || 0) + 1; return a; }, {}), withConditions: entries.filter((e) => e.conditions).length, corrected: entries.filter((e) => e.corrected).length,
+      fieldEvidence: Object.fromEntries(LEVELS.map((l) => [l, entries.reduce((n, e) => n + FIELDS6.filter((f) => e.evidence[f] === l).length, 0)])),
+      claimEvidence: Object.fromEntries(LEVELS.map((l) => [l, entries.reduce((n, e) => n + (e.claims || []).filter((c) => c.level === l).length, 0)])),
       formal: { mathlibCommit: P.formal.mathlib.commit, entries: entries.filter((e) => e.formal).length, links: P.formal.links.length,
         byMatch: P.formal.links.reduce((a, k) => { a[k.match] = (a[k.match] || 0) + 1; return a; }, {}) } },
     entries: entries.map((e) => e.receipts ? e : e) };
@@ -65,6 +74,8 @@ export function build() {
         `- input: ${e.input ?? "-"}`, `- output: ${e.output ?? "-"}`, `- preserved: ${e.preserved ?? "-"}`, `- broken: ${e.broken ?? "-"}`, `- complexity: ${e.complexity ?? "-"}`);
       if (e.actsOn) L.push(`- acts on: ${e.actsOn.input.join(", ")} to ${e.actsOn.output.join(", ")}`);
       if (e.invariants) L.push(`- named invariants: preserved ${e.invariants.preserved.join(", ") || "none"}; broken ${e.invariants.broken.join(", ") || "none"}${e.invariants.output.length ? `; produced ${e.invariants.output.join(", ")}` : ""}`);
+      L.push(`- evidence: ${FIELDS6.map((f) => `${f} ${e.evidence[f]}`).join(", ")}`);
+      if (e.corrected) L.push(`- corrected: ${e.corrected.fields.join(", ")}. ${e.corrected.reason} Landed: ${e.corrected.fields.map((f) => `${f} "${e.corrected.landed[f]}"`).join("; ")}.`);
       if (e.conditions) L.push(`- conditions: ${e.conditions}`);
       for (const k of e.formal || []) L.push(`- Mathlib (${k.match}, on ${k.field}): [\`${k.decl}\`](${k.url}). ${k.note}`);
       for (const k of e.counterexamples || []) L.push(`- counterexample: ${k.case}`);
@@ -89,6 +100,10 @@ export function build() {
     `Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (\`mapfill/conditions.js\`). ${map.counts.withConditions} entries have conditions so far.`, "",
     "## Named invariants and composition", "",
     `Free-text fields say what an entry preserves and breaks; \`mapfill/invariants.js\` names those invariants (${P.vocabulary.INVARIANTS.length} so far, with the relations between them), gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. \`node scripts/compose.mjs --chain D2-118,D2-117\` then reports, for a chain of entries applied in order, whether each join fits (match, narrowing, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries now.`, "",
+    "## Evidence per claim", "",
+    `Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib states it). \`scripts/evidence.mjs\` computes them from the audit grades, receipts, corrections and Mathlib links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest. Fields by level: ${LEVELS.map((l) => `${l} ${map.counts.fieldEvidence[l]}`).join(", ")}. Invariant claims by level: ${LEVELS.map((l) => `${l} ${map.counts.claimEvidence[l]}`).join(", ")}.`, "",
+    "## Corrections", "",
+    `\`mapfill/corrections.js\` replaces landed fields that a check found wrong or imprecise with receipted text; the landed text is kept on the entry (\`corrected.landed\`). A correction needs a prior finding (an audit grade, a flag, or a Mathlib conflict) and a receipt for every field it changes. ${map.counts.corrected} entries are corrected so far; correcting every field of a flagged entry resolves the flag. The audit's error rates still describe the map as landed.`, "",
     "## Formal links (Lean and Mathlib)", "",
     `\`mapfill/formal.js\` links entries to declarations in [Mathlib](https://github.com/leanprover-community/mathlib4), pinned at commit \`${P.formal.mathlib.commit}\`: ${map.counts.formal.links} links on ${map.counts.formal.entries} entries. Each link names the field it bears on and grades the match: **exact** (Mathlib states the claim), **general** (Mathlib states something that implies it), **special** (a special case), **related** (a weaker or neighbouring result; the claim itself is not formalized), **ingredient** (the objects, not the claim), or **conflicts** (Mathlib's statement conflicts with the claim as written; the note says how). Counts: ${Object.entries(map.counts.formal.byMatch).map(([k, v]) => k + " " + v).join(", ")}. The declaration statements are quoted in \`excerpts/mathlib-*.txt\` with the hash of each file at the pin; \`node scripts/formal.mjs --verify\` refetches them. A link says Mathlib proves the quoted statement, which its CI type-checked at that commit; the grade of how it bears on the entry is a judgment, like an audit grade. \`reports/FORMAL-QUEUE.md\` lists unreviewed name matches still to be read.`, "",
     "## Audit", "",
@@ -99,7 +114,7 @@ export function build() {
     "- `mapfill/`: the fill layer (clone resolution, authored fills, missing homes, flags), the additions (`mapfill/additions.js`), conditions, the invariant vocabulary, and the Mathlib links (`mapfill/formal.js`). See `mapfill/README.md`.",
     "- `audit/`: the fixed sample, its grades, and the targeted receipts.",
     "- `excerpts/`: the verbatim windows that receipt the additions, each with its source URL and the hash of the page or PDF as fetched. Quoted for reference; the sources keep their own licences.",
-    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the Mathlib links (`formal.mjs`), the MCP server (`mcp.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.", "",
+    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the evidence levels (`evidence.mjs`), the Mathlib links (`formal.mjs`), the excerpt maker (`excerpt.mjs`), the MCP server (`mcp.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.", "",
     "Generated by `node scripts/build.mjs`, never edited by hand:", "",
     "- `map.json`: every entry, machine-readable. `domains/D1.md` to `domains/D8.md`: the same, readable. `audit.json`: the grades with their quotes and sources.",
     "- `reports/MATHMAP.md` and `reports/AUDIT.md`: data quality and error rates (written by `mathmap.mjs` and `audit.mjs`).",

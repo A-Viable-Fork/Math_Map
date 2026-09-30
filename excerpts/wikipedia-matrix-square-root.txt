@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Square root of a matrix (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374888581
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: d633334e4dd0fa5408d1c27679193b4b6ed2bd234637a99f091709081c7ff2e6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A matrix {{mvar|B}} is said to be a square root of {{mvar|A}} if the [[matrix product]] {{math|''BB''}} is equal to {{mvar|A}}.
+
+has infinitely many square roots
+
+But some matrices have no square root.
+
+This unique matrix is called the '''principal''', '''non-negative''', or '''positive square root''' (the latter in the case of a [[positive definite matrix]]).
+
+Another way to find the square root of an {{tmath|n \times n}} matrix {{tmath|A}} is the Denman–Beavers square root iteration.

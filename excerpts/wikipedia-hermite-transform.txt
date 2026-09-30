@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Hermite transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375254425
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 161c1b89965ec143662e33f83aa6a09e40623744285b33f4ee30e0ab125c058d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is an [[integral transform]] named after the mathematician [[Charles Hermite]] that uses [[Hermite polynomials]] <math>H_n(x)</math> as kernels of the transform.
+
+The Hermite transform <math>H\{F(x)\} \equiv f_H (n)</math> of a function <math>F(x)</math> is
+
+The inverse Hermite transform <math>H^{-1}\{f_H(n)\}</math> is given by
+
+Direct evaluation of a discrete Hermite transform with <math>N</math> coefficients and <math>O(N)</math> sample points requires <math>O(N^2)</math> arithmetic operations.

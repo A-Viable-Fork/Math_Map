@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Data transformation (statistics) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1315639516
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 241c8a2867397ae04c0796213424a5a71934f153f911f67eed92138f20722494
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''[[logarithm]] transformation''' and '''[[square root]] transformation''' are commonly used for positive data
+
+Y increases on an average by a multiplicative factor of <math>e^{b}\!</math>
+
+However, following [[logarithm]]ic transformations of both area and population, the points will be spread more uniformly in the graph.

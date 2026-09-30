@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Blowing up (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374097899
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 5cfa1bb89be88f7082c9a66ad4bc9274cd16168559f468a72e687d9dd9d3ab03
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+which replaces a subspace of a given space with the space of all directions pointing out of that subspace.
+
+s are the most fundamental transformation in [[birational geometry]], because every [[birational morphism]] between [[projective varieties]] is a blowup.

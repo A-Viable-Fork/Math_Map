@@ -29,3 +29,8 @@ The D7 mapper report (`source/Category_Theory_Transformation_Enumeration.pdf`) g
 ## Additions
 
 `additions.js` holds entries the map lacks, written because a composite needs them (ids in a series the map never uses: `D<n>-X<nn>`). Unlike fills, each addition is receipted: every claim that carries weight has a verbatim window in `excerpts/`, and `scripts/mathmap.mjs` checks that each quote occurs in its file. Additions carry origin `added` and are counted in the domain totals; the audit's sample never draws them.
+
+## Corrections
+
+`corrections.js` replaces landed fields that a check found wrong or imprecise: an audit grade, a flag, or a Mathlib link graded conflicts. Every corrected field is supported by a receipt in `excerpts/` (Wikipedia windows are taken from a pinned revision with `scripts/excerpt.mjs`), claims that cannot be receipted are dropped and the reason says so, and the landed text stays on the entry. Correcting all five content fields of a flagged entry resolves its flag. Hypotheses an entry leaves out go in `conditions.js` instead.
+

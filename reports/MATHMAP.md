@@ -17,8 +17,8 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D5 | PROBABILITY AND INFORMATION THEORY | 151 | 0 [0] | 151 [77] | 151 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 161 | 0 [0] | 161 [146] | 161 [146] |
 | D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 468 | 1 [416] | 468 [0] | 467 [0] |
-| D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 236 | 1 [0] | 236 [77] | 229 [77] |
-| **all** | | **1962** | **2** [416] | **1962** [1118] | **1954** [1118] |
+| D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 236 | 1 [0] | 236 [77] | 235 [77] |
+| **all** | | **1962** | **2** [416] | **1962** [1118] | **1960** [1118] |
 
 ## 2. The fill layer
 
@@ -55,20 +55,22 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 40 links from entries (16 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 16 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
-- **Mathlib links: 29** on 14 entries (`mapfill/formal.js`), pinned at 380f2aa; 1 record a conflict with the entry as written.
+- **Mathlib links: 36** on 17 entries (`mapfill/formal.js`), pinned at 380f2aa; 1 record a conflict with the entry as written.
 
-- **Conditions: 3** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 0.
+- **Conditions: 5** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 0.
+
+- **Corrections: 10** (`mapfill/corrections.js`): landed fields a check found wrong or imprecise, replaced by receipted text (the landed text is kept on the entry). 35 fields in D1-099, D4-264, D2-117, D4-176, D8-089, D8-125, D8-132, D8-133, D8-185, D8-186; 6 flags resolved.
 
 - **Flagged entries: 6.** Landed content known to be wrong (`mapfill/flags.js`); withheld from anchoring until corrected.
 
-| Entry | Name | Kind | Evidence |
-|---|---|---|---|
-| D8-089 | Hermite transform | misaligned | The content describes lattice basis reduction (LLL), the subject of D8-115. |
-| D8-125 | Log transform | misaligned | The content describes PCA ("PCA on data matrix"). Audit: wrong on every field. |
-| D8-132 | Marching triangles transformation | misaligned | The content describes a point cloud to Vietoris-Rips or Cech to barcode pipeline (Mapper-like), not marching triangles. |
-| D8-133 | Matrix square root decomposition | misaligned | The content describes marching triangles, the subject of D8-132. Audit: wrong on every field. |
-| D8-185 | Robust PCA transformation | misaligned | The content is the square root transform, the subject of D8-201. |
-| D8-186 | Rotation transformation | misaligned | The content is the square transform, the subject of D8-202. |
+| Entry | Name | Kind | Evidence | Status |
+|---|---|---|---|---|
+| D8-089 | Hermite transform | misaligned | The content describes lattice basis reduction (LLL), the subject of D8-115. | corrected |
+| D8-125 | Log transform | misaligned | The content describes PCA ("PCA on data matrix"). Audit: wrong on every field. | corrected |
+| D8-132 | Marching triangles transformation | misaligned | The content describes a point cloud to Vietoris-Rips or Cech to barcode pipeline (Mapper-like), not marching triangles. | corrected |
+| D8-133 | Matrix square root decomposition | misaligned | The content describes marching triangles, the subject of D8-132. Audit: wrong on every field. | corrected |
+| D8-185 | Robust PCA transformation | misaligned | The content is the square root transform, the subject of D8-201. | corrected |
+| D8-186 | Rotation transformation | misaligned | The content is the square transform, the subject of D8-202. | corrected |
 
 ## 3. Functional tags
 

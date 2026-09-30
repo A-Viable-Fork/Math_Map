@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Galois connection (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364444923
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 5f7756362cbb6914d560165d8028bb8045d33b669d99cfc2503dd51fcf8629c9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+=== Antitone Galois connection ===
+
+The compositions {{math|''GF'' : ''A'' → ''A''}} and {{math|''FG'' : ''B'' → ''B''}} are the associated closure operators; they are monotone idempotent maps with the property {{math|''a'' ≤ ''GF''(''a'')}} for all {{mvar|a}} in {{mvar|A}} and {{math|''b'' ≤ ''FG''(''b'')}} for all {{mvar|b}} in {{mvar|B}}.

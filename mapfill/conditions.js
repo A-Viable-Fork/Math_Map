@@ -28,6 +28,19 @@ const CONDITIONS = [
       { file: "excerpts/wikipedia-hodge-theory.txt", quote: "on a closed Riemannian manifold as a sum of three parts in the form" },
       { file: "excerpts/wikipedia-helmholtz-decomposition.txt", quote: "is a bounded, simply-connected, [[Lipschitz domain]]. Every [[square-integrable]] vector field" },
     ] },
+  { id: "D6-117", name: "Radon-Nikodym decomposition",
+    conditions: "The decomposition mu = mu_ac + mu_s with a density for mu_ac exists when mu is s-finite and nu is sigma-finite (in Mathlib, these hypotheses supply the Lebesgue decomposition instance). Without them it can fail.",
+    counterexamples: [],
+    receipts: [
+      { file: "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt", quote: "[SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν" },
+      { file: "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt", quote: "(μ ν : Measure α) [HaveLebesgueDecomposition μ ν] :" },
+    ] },
+  { id: "D3-116", name: "Sheafification",
+    conditions: "Sheafification must exist for the coefficient category (Mathlib's HasWeakSheafify): it does for sets and for many concrete categories, and then it is left adjoint to the inclusion of sheaves.",
+    counterexamples: [],
+    receipts: [
+      { file: "excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt", quote: "def sheafificationAdjunction [HasWeakSheafify J A] :" },
+    ] },
 ];
 
 module.exports = { CONDITIONS };

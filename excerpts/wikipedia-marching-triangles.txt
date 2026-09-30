@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Marching triangles (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1342916107
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 2aa0e2d5c90199065f1412d9d12ef0658f242e3925efdea7fecba2bac4e3343e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the problem of transforming a cloud of points on the surface of a three-dimensional object into a [[polygon mesh]] for the object can be solved by a technique called '''marching triangles'''. This provides a faster alternative to other methods for the same problem of surface reconstruction, based on [[Delaunay triangulation]].

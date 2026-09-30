@@ -6,6 +6,7 @@
 //   fails on any it cannot find, and writes the excerpt files. `--candidates --mathlib DIR` writes
 //   reports/FORMAL-QUEUE.md: entries whose name matches a Mathlib module title, unreviewed. `--verify`
 //   (network) refetches each excerpted file at the pinned commit and checks its hash.
+//   Links may carry whole, invariant and premise (see mapfill/formal.js); scripts/evidence.mjs reads them.
 // Invariant: a link says Mathlib proves (or defines) the quoted statement; the match grade saying how that
 //   statement bears on the entry is a judgment, recorded with a note, like an audit grade. No Lean is
 //   compiled here: the pinned commit is one Mathlib's CI built, so a declaration present at it type-checks.
@@ -89,6 +90,7 @@ function excerpt(dir) {
 
 export function check(entries) {
   const F = [], ids = new Set(entries.map((e) => e.id)), seen = new Set();
+  const invariantIds = new Set(require("../mapfill/invariants.js").INVARIANTS.map((v) => v.id));
   if (!/^[0-9a-f]{40}$/.test(MATHLIB.commit)) F.push("MATHLIB.commit must be a 40-hex commit");
   for (const k of FORMAL) {
     const at = `formal ${k.entry} ${k.decl}`;
@@ -96,6 +98,11 @@ export function check(entries) {
     if (!FIELDS.includes(k.field)) F.push(`${at}: field must be one of ${FIELDS.join(", ")}`);
     if (!(k.match in MATCHES)) F.push(`${at}: match must be one of ${Object.keys(MATCHES).join(", ")}`);
     if (!k.note || !k.note.trim()) F.push(`${at}: a link needs a note saying how the statement bears on the entry`);
+    if (k.whole && k.match !== "exact") F.push(`${at}: only an exact link can state the whole field`);
+    if (k.invariant && !invariantIds.has(k.invariant)) F.push(`${at}: unknown invariant ${k.invariant}`);
+    if (k.premise && !FIELDS.includes(k.premise)) F.push(`${at}: premise must be a field`);
+    if (k.premise && k.match !== "general") F.push(`${at}: a premise belongs to a general link`);
+    if (k.match === "general" && k.invariant && !k.premise) F.push(`${at}: a general link on an invariant needs the premise field that makes the theorem apply`);
     const key = `${k.entry}|${k.field}|${k.decl}`; if (seen.has(key)) F.push(`${at}: given twice`); seen.add(key);
     const ef = join(ROOT, excerptFile(k.file));
     if (!existsSync(ef)) { F.push(`${at}: no excerpt file ${excerptFile(k.file)} (run --excerpt)`); continue; }

@@ -33,11 +33,11 @@ const TOOLS = [
       invariant: str("A named invariant id (see list_invariants) the entry preserves, breaks or produces."),
       formal: { type: "boolean", description: "Only entries linked to Mathlib declarations (get_entry shows the links and their match grades)." },
       limit: { type: "integer", minimum: 1, maximum: 100, description: "Default 20." } } } },
-  { name: "get_entry", description: "One entry in full: fields, origin, trust tier, audit verdict, receipts, conditions, counterexamples, Mathlib links with match grades, named invariants and the kinds of object it acts on.",
+  { name: "get_entry", description: "One entry in full: fields, origin, trust tier, evidence level per field and per invariant claim, audit verdict, receipts, corrections (with the landed text), conditions, counterexamples, Mathlib links with match grades, named invariants and the kinds of object it acts on.",
     inputSchema: { type: "object", properties: { id: str("Entry id, e.g. D2-117 or D7-X01.") }, required: ["id"] } },
   { name: "list_invariants", description: "The named-invariant vocabulary used by compose_chain: carriers (kinds of object, with parents), invariants with definitions, and the relations between them. Optionally filtered to one carrier and its sub-kinds.",
     inputSchema: { type: "object", properties: { carrier: str("e.g. variety, functor, field.") } } },
-  { name: "compose_chain", description: "Apply entries in order and report whether each join fits (match, narrowing, mismatch) and what happens to each named invariant: survives, broken, unknown (the map is silent), restored, created, or created then broken. Unknown means the map does not say, not that the invariant is lost.",
+  { name: "compose_chain", description: "Apply entries in order and report whether each join fits (match, narrowing, mismatch) and what happens to each named invariant: survives, broken, unknown (the map is silent), restored, created, or created then broken. Each result, join and the chain as a whole carries the weakest evidence level it rests on (contradicted, unsupported, unchecked, imprecise, sourced, formal) and where that claim is. Unknown means the map does not say, not that the invariant is lost.",
     inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." } }, required: ["chain"] } },
 ];
 
@@ -116,6 +116,9 @@ function selftest() {
   if (fm.err || !JSON.parse(fm.text).entries.some((e) => e.id === "D1-099" && e.mathlib.length)) F.push("search_entries(formal) misses D1-099");
   const c = call("compose_chain", { chain: ["D2-118", "D2-117"] });
   if (c.err || !JSON.parse(c.text).result.invariants.length) F.push("compose_chain returned nothing");
+  if (!c.err && !JSON.parse(c.text).result.evidence?.level) F.push("compose_chain carries no evidence");
+  const g2 = call("get_entry", { id: "D8-133" });
+  if (g2.err || !JSON.parse(g2.text).entry.corrected || JSON.parse(g2.text).entry.tier === "flagged") F.push("get_entry D8-133 does not show its correction");
   if (!call("compose_chain", { chain: ["D2-118", "nope"] }).err) F.push("compose_chain accepted a missing id");
   for (const f of F) console.log("FAIL", f);
   if (F.length) { console.log(`mcp: ${F.length} failure(s)`); process.exit(1); }

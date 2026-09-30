@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Rotation matrix (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361426283
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 08c91986af95026e5969b96b55e28902e7db1ab8467ea1376789ddb00767bd25
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+rotation matrices describe rotations about the origin
+
+they can be characterized as [[orthogonal matrix|orthogonal matrices]] with [[determinant]] 1
+
+a rotation is an example of an [[isometry]], a transformation that moves points without changing the distances between them.

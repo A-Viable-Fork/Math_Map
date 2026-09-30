@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Nerve (category theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373483518
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 079edd9256aeb3fd3c00079cc6c073df40808bc816e001f03917e30ba0edba1a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The addition of these 2-simplices does not erase or otherwise disregard morphisms obtained by composition, it merely remembers that this is how they arise.
+
+A simplicial set is the nerve of a category if and only if it satisfies the Segal conditions.

@@ -1,0 +1,90 @@
+// Role: receipted corrections. Replaces landed fields that a check found wrong or imprecise, so the entry can
+//   carry weight in a chain, while the landed text stays in source/math_map.md and in the entry's record.
+// Contract: exports CORRECTIONS = [{ id, name, fields: { description?, input?, output?, preserved?, broken? },
+//   clear?: [field], reason, receipts: [{ file, quote, fields: [field] }] }]. id and name must match a landed
+//   entry. Each corrected field needs a prior finding: an audit grade other than confirmed on that field, a
+//   flag on the entry, or a Mathlib link on that field graded conflicts or general. Each corrected field is
+//   supported by at least one receipt naming it; quotes occur in excerpts/. clear empties a field whose
+//   landed value belongs to other content (the complexity of a misaligned entry). Correcting all five
+//   content fields of a flagged entry resolves its flag. Checked by scripts/mathmap.mjs.
+// Invariant: data only. A correction states only what its receipts support; claims it cannot receipt are
+//   dropped and the reason says so. The landed text is kept on the entry (landedFields).
+"use strict";
+
+const R = (file, quote, ...fields) => ({ file, quote, fields });
+const WHOLE = "Flagged as misaligned: the landed content describes a different operation. Rewritten for the entry's name from the receipts; the landed complexity belonged to the other content and is cleared.";
+
+const CORRECTIONS = [
+  { id: "D1-099", name: "Galois connection",
+    fields: { description: "A pair of order-reversing (antitone) maps f: P -> Q and g: Q -> P with a ≤ g(f(a)) for all a in P and b ≤ f(g(b)) for all b in Q. Both composites g∘f and f∘g are closure operators. Captures dual relationships between posets without a bijection. (The monotone convention instead has f(a) ≤ b iff a ≤ g(b), giving a ≤ g(f(a)) and f(g(b)) ≤ b.)" },
+    reason: "Graded wrong: the landed text states antitone maps with the monotone convention's second inequality. The claim about matroid flats was not checked and is dropped.",
+    receipts: [R("excerpts/wikipedia-galois-connection.txt", "are the associated closure operators; they are monotone idempotent maps with the property", "description"),
+      R("excerpts/mathlib-Mathlib.Order.GaloisConnection.Defs.txt", "∀ a b, l a ≤ b ↔ a ≤ u b", "description")] },
+  { id: "D4-264", name: "Nerve functor",
+    fields: { preserved: "Category structure: the nerve functor is fully faithful, so functors between small categories are exactly the maps of their nerves", broken: "Nothing: composition is recorded by the 2-simplices. Not every simplicial set is a nerve; the nerves are those satisfying the Segal conditions." },
+    reason: "Preserved graded imprecise (the recovery holds for all small categories, not only groupoids); broken graded wrong (nothing is lost).",
+    receipts: [R("excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt", "nerveFunctor.fullyfaithful : nerveFunctor.FullyFaithful", "preserved"),
+      R("excerpts/wikipedia-nerve.txt", "does not erase or otherwise disregard morphisms obtained by composition", "broken"),
+      R("excerpts/wikipedia-nerve.txt", "A simplicial set is the nerve of a category if and only if it satisfies the Segal conditions.", "broken")] },
+  { id: "D2-117", name: "Blow-up",
+    fields: { description: "Replaces a closed subvariety Z (singular or not) by the space of directions pointing out of it, the exceptional divisor. The fundamental birational surgery." },
+    reason: "Graded imprecise: the landed text says the singular locus, but any closed subvariety can be blown up.",
+    receipts: [R("excerpts/wikipedia-blowing-up.txt", "which replaces a subspace of a given space with the space of all directions pointing out of that subspace.", "description"),
+      R("excerpts/wikipedia-blowing-up.txt", "are the most fundamental transformation in [[birational geometry]]", "description")] },
+  { id: "D4-176", name: "Hodge decomposition",
+    fields: { broken: "Nothing: the decomposition is unique, an isomorphism onto the direct sum. Projecting onto one summand (as the Leray projection does) discards the others." },
+    reason: "Graded imprecise: the landed text says non-harmonic details are broken, but a decomposition loses nothing; only a projection does.",
+    receipts: [R("excerpts/wikipedia-hodge-theory.txt", "there is a unique decomposition of any differential form", "broken"),
+      R("excerpts/wikipedia-hodge-projection.txt", "be the orthogonal projection", "broken")] },
+  { id: "D8-089", name: "Hermite transform",
+    fields: { description: "An integral transform with Hermite polynomials H_n(x) as kernels: f_H(n) = integral of exp(-x^2) H_n(x) F(x) dx over the real line. The inverse transform recovers F as a series in Hermite polynomials.",
+      input: "Function F(x) on the real line", output: "Coefficient sequence f_H(n), n = 0, 1, 2, ...",
+      preserved: "The function, recoverable by the inverse transform", broken: "Pointwise representation (the function becomes a sequence of coefficients)" },
+    clear: ["complexity"], reason: `${WHOLE} Direct evaluation of the discrete transform is quadratic in the number of coefficients.`,
+    receipts: [R("excerpts/wikipedia-hermite-transform.txt", "that uses [[Hermite polynomials]] <math>H_n(x)</math> as kernels of the transform.", "description", "broken"),
+      R("excerpts/wikipedia-hermite-transform.txt", "The Hermite transform <math>H\\{F(x)\\} \\equiv f_H (n)</math> of a function <math>F(x)</math> is", "input", "output"),
+      R("excerpts/wikipedia-hermite-transform.txt", "The inverse Hermite transform <math>H^{-1}\\{f_H(n)\\}</math> is given by", "description", "preserved")] },
+  { id: "D8-125", name: "Log transform",
+    fields: { description: "Applies y = log x to positive data. Multiplicative relations become additive, and large values are compressed, spreading skewed data more evenly.",
+      input: "Positive data", output: "Log-scaled data", preserved: "Order (log is strictly increasing on the positive reals)", broken: "Additive structure and the original scale (products become sums)" },
+    clear: ["complexity"], reason: WHOLE,
+    receipts: [R("excerpts/wikipedia-data-transformation.txt", "are commonly used for positive data", "input", "output"),
+      R("excerpts/wikipedia-data-transformation.txt", "the points will be spread more uniformly in the graph", "description"),
+      R("excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt", "theorem strictMonoOn_log : StrictMonoOn log (Set.Ioi 0)", "preserved"),
+      R("excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt", "log (x * y) = log x + log y", "description", "broken")] },
+  { id: "D8-132", name: "Marching triangles transformation",
+    fields: { description: "Surface reconstruction: turns a cloud of points on the surface of a three-dimensional object into a polygon mesh for the object; a faster alternative to reconstruction based on Delaunay triangulation.",
+      input: "Point cloud sampled from the surface of a three-dimensional object", output: "Polygon mesh of the object's surface",
+      preserved: "The sampled surface, approximated by the mesh", broken: "The individual points (replaced by mesh faces)" },
+    clear: ["complexity"], reason: WHOLE,
+    receipts: [R("excerpts/wikipedia-marching-triangles.txt", "the problem of transforming a cloud of points on the surface of a three-dimensional object into a [[polygon mesh]] for the object", "description", "input", "output", "preserved", "broken"),
+      R("excerpts/wikipedia-marching-triangles.txt", "This provides a faster alternative to other methods for the same problem of surface reconstruction, based on [[Delaunay triangulation]].", "description")] },
+  { id: "D8-133", name: "Matrix square root decomposition",
+    fields: { description: "Finds a matrix B with BB = A. A matrix may have no square root or infinitely many; a positive semidefinite matrix has exactly one positive semidefinite square root, the principal square root. Computed by eigendecomposition, Schur decomposition, or iterations such as Denman-Beavers.",
+      input: "Square matrix A (positive semidefinite, for the principal root)", output: "Matrix B with BB = A",
+      preserved: "A itself, as B squared; positive semidefiniteness, for the principal root", broken: "Uniqueness in general: a matrix may have many square roots or none" },
+    clear: ["complexity"], reason: WHOLE,
+    receipts: [R("excerpts/wikipedia-matrix-square-root.txt", "is said to be a square root of {{mvar|A}} if the [[matrix product]] {{math|''BB''}} is equal to {{mvar|A}}.", "description", "input", "output", "preserved"),
+      R("excerpts/wikipedia-matrix-square-root.txt", "has infinitely many square roots", "description", "broken"),
+      R("excerpts/wikipedia-matrix-square-root.txt", "But some matrices have no square root.", "description", "broken"),
+      R("excerpts/wikipedia-matrix-square-root.txt", "This unique matrix is called the '''principal''', '''non-negative''', or '''positive square root'''", "description", "input", "preserved"),
+      R("excerpts/wikipedia-matrix-square-root.txt", "Another way to find the square root of an {{tmath|n \\times n}} matrix {{tmath|A}} is the", "description")] },
+  { id: "D8-185", name: "Robust PCA transformation",
+    fields: { description: "A version of PCA robust to grossly corrupted observations: recovers a low-rank matrix L from measurements M = L + S with S sparse. The convex version relaxes rank to the nuclear norm and sparsity to the l1 norm.",
+      input: "Data matrix M (low-rank plus sparse corruption)", output: "Low-rank component L and sparse component S with M = L + S",
+      preserved: "The data, as the sum L + S; the low-rank structure, recovered despite gross corruption", broken: "The corrupted entries, separated out into S" },
+    clear: ["complexity"], reason: WHOLE,
+    receipts: [R("excerpts/wikipedia-robust-pca.txt", "which works well with respect to ''grossly'' corrupted observations.", "description"),
+      R("excerpts/wikipedia-robust-pca.txt", "which aims to recover a low-rank matrix L<sub>0</sub> from highly corrupted measurements M = L<sub>0</sub> +S<sub>0</sub>.", "description", "input", "output", "preserved", "broken"),
+      R("excerpts/wikipedia-robust-pca.txt", "relaxing the rank constraint <math>rank(L)</math> in the optimization problem to the [[nuclear norm]]", "description")] },
+  { id: "D8-186", name: "Rotation transformation",
+    fields: { description: "Applies a rotation matrix: an orthogonal matrix with determinant 1, rotating vectors about the origin.",
+      input: "Vectors (points as displacements from the origin) and a rotation matrix R", output: "Rotated vectors R x",
+      preserved: "Distances and the origin (a rotation is an isometry fixing the origin); orientation (determinant 1)", broken: "Direction of each vector (coordinates change)" },
+    clear: ["complexity"], reason: WHOLE,
+    receipts: [R("excerpts/wikipedia-rotation-matrix.txt", "rotation matrices describe rotations about the origin", "description", "input", "output", "preserved", "broken"),
+      R("excerpts/wikipedia-rotation-matrix.txt", "they can be characterized as [[orthogonal matrix|orthogonal matrices]] with [[determinant]] 1", "description", "preserved"),
+      R("excerpts/wikipedia-rotation-matrix.txt", "a transformation that moves points without changing the distances between them.", "preserved")] },
+];
+
+module.exports = { CORRECTIONS };

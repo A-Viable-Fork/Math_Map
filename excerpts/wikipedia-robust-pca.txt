@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Robust principal component analysis (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1329533351
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: ac28f1383b7268d22d1facf40540ebc838ed631571fb2766559398bf5e23db60
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a modification of the widely used statistical procedure of [[principal component analysis]] (PCA) which works well with respect to ''grossly'' corrupted observations.
+
+which aims to recover a low-rank matrix L<sub>0</sub> from highly corrupted measurements M = L<sub>0</sub> +S<sub>0</sub>.
+
+This method consists of relaxing the rank constraint <math>rank(L)</math> in the optimization problem to the [[nuclear norm]] <math>\|L\|_*</math> and the sparsity constraint <math>\|S\|_0</math> to <math>\ell_1</math>-norm <math>\|S\|_1</math>.

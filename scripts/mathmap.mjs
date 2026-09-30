@@ -122,6 +122,17 @@ export function parse() {
   }
   const { FLAGS } = require("../mapfill/flags.js");
   for (const fl of FLAGS) { const e = outById[fl.id]; if (e && e.origin === "map") e.flag = fl; }
+  const { CORRECTIONS } = require("../mapfill/corrections.js");
+  for (const c of CORRECTIONS) {
+    const e = outById[c.id];
+    if (!e) continue;
+    e.landedFields = {};
+    for (const [k, v] of Object.entries(c.fields)) { e.landedFields[k] = e[k]; e[k] = v; }
+    for (const k of c.clear || []) { e.landedFields[k] = e[k]; e[k] = ""; }
+    e.corrected = Object.keys(c.fields);
+    e.correction = { reason: c.reason, receipts: c.receipts };
+    if (e.flag && FIELDS.concat("description").every((k) => c.fields[k])) { e.flagResolved = e.flag; delete e.flag; }
+  }
   const { ADDITIONS } = require("../mapfill/additions.js");
   for (const a of ADDITIONS) out.push({ ...a, domain: a.id.slice(0, 2), heading: a.name, status: "Added / receipted (mapfill/additions.js)", iso: "", origin: "added", reading: null, unknown: false, ptr: {} });
   const { CONDITIONS } = require("../mapfill/conditions.js");
@@ -132,7 +143,7 @@ export function parse() {
   for (const l of V.LINKS) { const e = outById2[l.entry]; if (e) { e.invariants ||= { preserved: [], broken: [], output: [] }; if (e.invariants[l.field] && !e.invariants[l.field].includes(l.invariant)) e.invariants[l.field].push(l.invariant); } }
   const { MATHLIB, FORMAL } = require("../mapfill/formal.js");
   for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note }); }
-  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
+  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, corrections: CORRECTIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
 }
 
 export function check(P = parse()) {
@@ -192,6 +203,26 @@ export function check(P = parse()) {
     for (const r of c.receipts || []) { const x = inFile(r); if (x) F.push(`${c.id}: ${x}`); }
     for (const k of c.counterexamples || []) { if (!k.case) F.push(`${c.id}: a counterexample needs a case`); if (k.receipt) { const x = inFile(k.receipt); if (x) F.push(`${c.id}: ${x}`); } }
   }
+  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
+  const CF = ["description", "input", "output", "preserved", "broken"], xids = new Set();
+  for (const c of P.corrections) {
+    const e = landedById[c.id], at = `correction ${c.id}`;
+    if (!e) { F.push(`${at}: no such landed entry`); continue; }
+    if (xids.has(c.id)) F.push(`${at}: given twice`); xids.add(c.id);
+    if (e.name !== c.name) F.push(`${at}: names "${c.name}", the map says "${e.name}"`);
+    if (!c.reason || !c.reason.trim()) F.push(`${at}: needs a reason`);
+    const flagged = P.flags.some((f) => f.id === c.id);
+    for (const [k, v] of Object.entries(c.fields)) {
+      if (!CF.includes(k)) { F.push(`${at}: cannot correct ${k}`); continue; }
+      if (!v || !String(v).trim()) F.push(`${at}: empty ${k}`);
+      const g = grades[c.id]?.fields?.[k], fl = P.formal.links.some((l) => l.entry === c.id && l.field === k && ["conflicts", "general"].includes(l.match));
+      if (!flagged && !(g && g.verdict !== "confirmed") && !fl) F.push(`${at}.${k}: no prior finding (an audit grade other than confirmed, a flag, or a Mathlib conflict)`);
+      if (!(c.receipts || []).some((r) => (r.fields || []).includes(k))) F.push(`${at}.${k}: no receipt supports the corrected field`);
+    }
+    for (const k of c.clear || []) if (!["complexity"].includes(k)) F.push(`${at}: can only clear complexity`);
+    if (!(c.receipts || []).length) F.push(`${at}: needs receipts`);
+    for (const r of c.receipts || []) { const x = inFile(r); if (x) F.push(`${at}: ${x}`); for (const k of r.fields || []) if (!(k in c.fields)) F.push(`${at}: a receipt supports ${k}, which is not corrected`); }
+  }
   const V = P.vocabulary, vids = new Set();
   const kinds = V.CARRIERS;
   for (const [k, p] of Object.entries(kinds)) if (p !== null && !(p in kinds)) F.push(`carrier ${k}: unknown parent ${p}`);
@@ -227,7 +258,7 @@ export function check(P = parse()) {
     used.add(l.invariant);
   }
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
-  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
+  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
   return F;
 }
@@ -270,7 +301,8 @@ function render(P) {
   L.push(`- **Invariant vocabulary** (\`mapfill/invariants.js\`): ${P.vocabulary.INVARIANTS.length} named invariants, ${P.vocabulary.RELATIONS.length} relations between them, ${P.vocabulary.LINKS.length} links from entries (${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries; ${P.vocabulary.LINKS.filter((l) => l.receipts).length} receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; ${P.vocabulary.ACTS_ON.length} entries record what kinds of object they take and return. \`node scripts/compose.mjs --chain ID,ID,...\` reports what survives a chain.`, "");
   L.push(`- **Mathlib links: ${P.formal.links.length}** on ${new Set(P.formal.links.map((k) => k.entry)).size} entries (\`mapfill/formal.js\`), pinned at ${P.formal.mathlib.commit.slice(0, 7)}; ${P.formal.links.filter((k) => k.match === "conflicts").length} record a conflict with the entry as written.`, "");
   L.push(`- **Conditions: ${P.conditions.length}** (\`mapfill/conditions.js\`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: ${P.conditions.reduce((n, c) => n + (c.counterexamples || []).length, 0)}.`, "");
-  if (P.flags.length) L.push(`- **Flagged entries: ${P.flags.length}.** Landed content known to be wrong (\`mapfill/flags.js\`); withheld from anchoring until corrected.`, "", "| Entry | Name | Kind | Evidence |", "|---|---|---|---|", ...P.flags.map((f) => `| ${f.id} | ${f.name} | ${f.kind} | ${f.evidence} |`), "");
+  if (P.corrections.length) L.push(`- **Corrections: ${P.corrections.length}** (\`mapfill/corrections.js\`): landed fields a check found wrong or imprecise, replaced by receipted text (the landed text is kept on the entry). ${P.corrections.reduce((n, c) => n + Object.keys(c.fields).length, 0)} fields in ${P.corrections.map((c) => c.id).join(", ")}; ${P.entries.filter((e) => e.flagResolved).length} flags resolved.`, "");
+  if (P.flags.length) L.push(`- **Flagged entries: ${P.flags.length}.** Landed content known to be wrong (\`mapfill/flags.js\`); withheld from anchoring until corrected.`, "", "| Entry | Name | Kind | Evidence | Status |", "|---|---|---|---|---|", ...P.flags.map((f) => `| ${f.id} | ${f.name} | ${f.kind} | ${f.evidence} | ${P.entries.find((e) => e.id === f.id)?.flagResolved ? "corrected" : "open"} |`), "");
   L.push("## 3. Functional tags", "", "| Tag | Entries |", "|---|---|");
   for (const t of P.vocab) L.push(`| \`${t}\` | ${P.entries.filter((e) => e.tags.includes(t)).length} |`);
   L.push("");
@@ -298,6 +330,8 @@ function show(e, full) {
   for (const k of e.counterexamples || []) lines.push(`  counterexample: ${k.case}`);
   if (e.reading) lines.push(`  reading: ${e.reading}`);
   if (e.pointer) lines.push(`  landed as: ${e.pointer}`);
+  if (e.corrected) lines.push(`  corrected: ${e.corrected.join(", ")} (landed: ${e.corrected.map((k) => `${k} "${e.landedFields[k]}"`).join("; ")})`);
+  if (e.flagResolved) lines.push(`  flag resolved: ${e.flagResolved.evidence}`);
   return lines.join("\n");
 }
 

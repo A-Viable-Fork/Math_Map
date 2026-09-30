@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/SpecialFunctions/Log/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 7919a6da040c639127aa91dd0ac74b00af77528543b890843f5229df527edfd4
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Real.strictMonoOn_log (line 248)
+theorem strictMonoOn_log : StrictMonoOn log (Set.Ioi 0)
+
+-- Real.log_mul (line 132)
+theorem log_mul (hx : x ≠ 0) (hy : y ≠ 0) : log (x * y) = log x + log y
