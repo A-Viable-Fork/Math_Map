@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "4128dda28c2ed995f62ab05dceb0b65302a509fcbac1e296db3c9006384e9806",
+ "sources": "eae1753007df4dc7367ce19ad3005cac3a281bf37e64d390fb8d8765714c75f9",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -283,6 +283,17 @@
     "MathMap.Subtopos"
    ]
   },
+  "MathMap.Subtopos.inclusion_not_preservesColimits": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Subtopos"
+   ]
+  },
   "MathMap.Subtopos.embedding": {
    "status": "proved",
    "axioms": [
@@ -501,6 +512,21 @@
     "MathMap.Level.Resolves",
     "MathMap.Level.sheaf",
     "MathMap.Level.skeleton",
+    "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.Level.below_preorder": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.Level",
+    "MathMap.Level.Below",
+    "MathMap.Level.IsSheaf",
+    "MathMap.Level.sheaf",
     "MathMap.Subtopos"
    ]
   },

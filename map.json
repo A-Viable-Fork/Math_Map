@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "be886228f66bf2611e98181e810cfe008add85c9"
+  "commit": "7413cb6385035ac4679e846c669cadbb37f8c82b"
  },
  "domains": {
   "D1": {
@@ -376,15 +376,15 @@
    "unsupported": 100,
    "unchecked": 10998,
    "imprecise": 20,
-   "sourced": 613,
-   "formal": 47
+   "sourced": 611,
+   "formal": 49
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 38,
+   "claims": 40,
    "entries": 9,
    "definitions": 26,
-   "proved": 38,
+   "proved": 40,
    "stated": 0
   },
   "claimEvidence": {
@@ -393,17 +393,17 @@
    "unchecked": 0,
    "imprecise": 0,
    "sourced": 25,
-   "formal": 18
+   "formal": 19
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 57,
-   "links": 104,
+   "entries": 58,
+   "links": 105,
    "byMatch": {
     "exact": 65,
     "conflicts": 4,
     "related": 11,
-    "special": 9,
+    "special": 10,
     "general": 11,
     "ingredient": 4
    }
@@ -44666,6 +44666,16 @@
      "file": "lean/MathMap/LawvereTierney.lean"
     }
    ],
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.sheafificationAdjunction",
+     "file": "Mathlib/CategoryTheory/Sites/Sheafification.lean",
+     "match": "special",
+     "note": "For a Grothendieck topology on a small category (a Lawvere-Tierney topology on a presheaf topos), sheaves are reflective in presheaves; with preservesFiniteLimits_presheafToSheaf the reflector is left exact, so Sh_j is a subtopos. The elementary-topos case is not in Mathlib at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -56501,7 +56511,7 @@
     "expansion"
    ],
    "description": "For a level i of a topos (an essential subtopos, with its adjoint modality, skeleton left of sheaf), the least level j above i at which every i-skeleton is a j-sheaf (Lawvere). In the colloquial form: the least k such that n-skeletal implies k-coskeletal. It need not exist.",
-   "input": "Topos with its lattice of levels; a level i",
+   "input": "Topos with its levels, ordered by subtopos inclusion; a level i",
    "output": "The least level j resolving the opposite of i (every i-skeleton a j-sheaf), when it exists",
    "preserved": "The lower level's objects: i-skeleta survive as j-sheaves",
    "broken": "The opposition at level i: the skeleton side is absorbed into the higher level's sheaf side. The step depends on the shape category: n to n+1 for reflexive globular sets, n to 2n-1 for simplicial sets (n > 1), n to 2n for cubical sets",
@@ -56513,6 +56523,10 @@
     {
      "file": "excerpts/nlab-aufhebung.txt",
      "quote": "iff it is a minimal level which resolves the opposites of level $i$"
+    },
+    {
+     "file": "excerpts/nlab-aufhebung-definition.txt",
+     "quote": "in the order relation (by subtopos inclusion) between levels."
     },
     {
      "file": "excerpts/nlab-aufhebung.txt",
@@ -56555,7 +56569,7 @@
    "evidence": {
     "name": "sourced",
     "description": "sourced",
-    "input": "sourced",
+    "input": "formal",
     "output": "formal",
     "preserved": "formal",
     "broken": "sourced"
@@ -56607,6 +56621,15 @@
      "status": "proved",
      "invariant": "level-opposition",
      "note": "Both sides of the opposition at level i, its skeleta and its sheaves, become j-sheaves. The step sizes the field also gives (n to n+1, 2n-1, 2n) are not formalized.",
+     "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "input",
+     "decl": "MathMap.Level.below_preorder",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "The levels ordered by subtopos inclusion form a preorder, the order the Aufhebung is least in.",
      "file": "lean/MathMap/Topos.lean"
     },
     {
@@ -56898,7 +56921,7 @@
    "input": "Subtopos Sh_j(E) of a topos E",
    "output": "Geometric embedding i: Sh_j(E) into E (a geometric morphism with fully faithful direct image)",
    "preserved": "Limits (the inclusion is a right adjoint); the subtopos's objects, unchanged",
-   "broken": "Nothing; it names the morphism implicit in the subtopos",
+   "broken": "Colimits: the inclusion is a right adjoint and need not preserve them; colimits of sheaves are the reflector applied to colimits taken in E",
    "complexity": "N/A",
    "status": "Added / receipted (mapfill/additions.js)",
    "origin": "added",
@@ -56911,13 +56934,19 @@
     {
      "file": "excerpts/nlab-lawvere-tierney.txt",
      "quote": "the embedding is a [[full and faithful functor]] which has a [[exact functor|left exact]] [[left adjoint]] functor"
+    },
+    {
+     "file": "excerpts/nlab-reflective-subcategory-colimits.txt",
+     "quote": "and inherits [[colimit|colimits]] from the larger category by application of the reflector"
     }
    ],
    "invariants": {
     "preserved": [
      "limits"
     ],
-    "broken": [],
+    "broken": [
+     "colimits"
+    ],
     "output": []
    },
    "actsOn": {
@@ -56934,7 +56963,7 @@
     "input": "sourced",
     "output": "formal",
     "preserved": "sourced",
-    "broken": "sourced"
+    "broken": "formal"
    },
    "claims": [
     {
@@ -56945,6 +56974,15 @@
       "field preserved: sourced",
       "Mathlib CategoryTheory.Adjunction.rightAdjoint_preservesLimits given description (sourced)",
       "Lean MathMap.Subtopos.inclusion_preservesLimits"
+     ]
+    },
+    {
+     "field": "broken",
+     "invariant": "colimits",
+     "level": "formal",
+     "basis": [
+      "field broken: formal",
+      "Lean MathMap.Subtopos.inclusion_not_preservesColimits"
      ]
     }
    ],
@@ -56957,6 +56995,16 @@
      "invariant": "limits",
      "note": "The inclusion of a subtopos preserves limits.",
      "file": "lean/MathMap/Topos.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.Subtopos.inclusion_not_preservesColimits",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "colimits",
+     "whole": true,
+     "note": "The inclusion need not preserve colimits: in the degenerate subtopos of Type it does not preserve the initial object.",
+     "file": "lean/MathMap/SubtoposColimits.lean"
     },
     {
      "field": "output",

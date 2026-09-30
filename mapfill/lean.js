@@ -80,6 +80,7 @@ const DEFS = [
 const CLAIMS = [
   // The categorical chain.
   C("D7-X02", "preserved", "Subtopos.inclusion_preservesLimits", "exact", "The inclusion of a subtopos preserves limits.", { invariant: "limits" }),
+  C("D7-X02", "broken", "Subtopos.inclusion_not_preservesColimits", "exact", "The inclusion need not preserve colimits: in the degenerate subtopos of Type it does not preserve the initial object.", { invariant: "colimits", whole: true }),
   C("D7-X02", "output", "Subtopos.embedding", "exact", "The inclusion is a geometric morphism with the reflector as inverse image.", { whole: true }),
   C("D7-X02", "output", "Subtopos.embedding_direct_full_faithful", "exact", "Its direct image is fully faithful: a geometric embedding.", { whole: true }),
   C("D7-284", "preserved", "EssentialGeometricMorphism.inverse_preservesLimits", "exact", "f^* preserves limits.", { invariant: "limits", whole: true }),
@@ -97,6 +98,7 @@ const CLAIMS = [
   C("D7-X01", "preserved", "Level.IsAufhebung.skeleta_are_sheaves", "exact", "i-skeleta survive as j-sheaves: the entry's field, true by the nLab's definition.", { invariant: "skeletal-objects", whole: true }),
   C("D7-X01", "preserved", "Level.IsAufhebung.sheaves_are_sheaves", "exact", "i-sheaves survive as j-sheaves: the Aufhebung lies above i.", { whole: true }),
   C("D7-X01", "broken", "Level.IsAufhebung.opposition_resolved", "exact", "Both sides of the opposition at level i, its skeleta and its sheaves, become j-sheaves. The step sizes the field also gives (n to n+1, 2n-1, 2n) are not formalized.", { invariant: "level-opposition" }),
+  C("D7-X01", "input", "Level.below_preorder", "exact", "The levels ordered by subtopos inclusion form a preorder, the order the Aufhebung is least in.", { whole: true }),
   C("D7-X01", "output", "Level.IsAufhebung.unique", "exact", "The least resolving level, when it exists, is unique up to having the same sheaves.", { whole: true }),
   // D7-288, internally: in any category with a subobject classifier and the finite limits used (so in any topos).
   C("D7-288", "broken", "LawvereTierney.mono_close_iff", "exact", "The retraction of Omega onto the j-fixed truth values identifies truth values (is not mono) unless j is the identity: the collapse the entry names, stated internally.", { invariant: "truth-values", whole: true }),

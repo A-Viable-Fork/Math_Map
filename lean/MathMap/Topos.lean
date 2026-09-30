@@ -215,4 +215,10 @@ theorem Level.IsAufhebung.unique {i j j' : Level E} (h : i.IsAufhebung j) (h' : 
     j.Below j' ∧ j'.Below j :=
   ⟨h.2 j' h'.1, h'.2 j h.1⟩
 
+/-- D7-X01, input: the levels of `E`, ordered by subtopos inclusion, form a preorder (reflexive and
+transitive), the order in which the Aufhebung is least. -/
+theorem Level.below_preorder :
+    (∀ j : Level E, j.Below j) ∧ ∀ j k l : Level E, j.Below k → k.Below l → j.Below l :=
+  ⟨fun _ _ h => h, fun _ _ _ h₁ h₂ X h => h₂ X (h₁ X h)⟩
+
 end MathMap

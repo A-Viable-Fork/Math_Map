@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, reflective subcategory, limits and colimits (page source)
+URL: https://ncatlab.org/nlab/source/reflective+subcategory
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 1aa342531c23a7079a024cad5c9578073d51e154a4ed7220c69948a3776a12b1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+and inherits [[colimit|colimits]] from the larger category by application of the reflector

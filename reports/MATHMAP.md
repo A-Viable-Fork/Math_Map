@@ -53,9 +53,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Additions: 9** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex.
 
-- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 43 links from entries (17 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 17 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 44 links from entries (17 entries; 4 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 17 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
-- **Mathlib links: 104** on 57 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
+- **Mathlib links: 105** on 58 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
 
 - **Conditions: 8** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 2.
 

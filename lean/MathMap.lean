@@ -4,4 +4,5 @@ import MathMap.Cone
 import MathMap.StoneCech
 import MathMap.LawvereTierney
 import MathMap.LawvereTierneyInternal
+import MathMap.SubtoposColimits
 import MathMap.Meta

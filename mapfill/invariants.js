@@ -110,7 +110,7 @@ const LINKS = [
   L("D6-X02", "broken", "instantaneous-locality", "Instantaneous locality"),
   L("D4-086", "preserved", "leibniz-rule", "Leibniz rule"), L("D4-086", "preserved", "tensoriality", "tensoriality"),
   L("D4-086", "broken", "flatness", "Flat derivative"),
-  L("D7-X02", "preserved", "limits", "Limits (the inclusion is a right adjoint)"),
+  L("D7-X02", "preserved", "limits", "Limits (the inclusion is a right adjoint)"), L("D7-X02", "broken", "colimits", "Colimits"),
   L("D7-X03", "preserved", "limits", "The adjoint triple"), L("D7-X03", "preserved", "colimits", "The adjoint triple"),
   L("D7-X03", "output", "skeletal-objects", "modalities: skeleton left of sheaf"), L("D7-X03", "output", "level-opposition", "skeleton left of sheaf"),
   // Links where the entry's own field is silent, justified by receipts.
