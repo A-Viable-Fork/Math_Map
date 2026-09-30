@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Birational geometry (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&title=Birational_geometry
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 33324fd0a923b62ac0ba81c0d809fac259e902208783c34a4c6c2fd2cd800f1d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+two varieties over a field ''k'' are birational if and only if their [[Function field of an algebraic variety|function fields]] are isomorphic as extension fields of ''k''.

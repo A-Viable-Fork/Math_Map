@@ -53,6 +53,8 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Additions: 6** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion.
 
+- **Invariant vocabulary** (`mapfill/invariants.js`): 27 named invariants, 2 relations between them, 31 links from entries (14 entries), each justified by a phrase in the entry's own field. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+
 - **Conditions: 3** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 0.
 
 - **Flagged entries: 6.** Landed content known to be wrong (`mapfill/flags.js`); withheld from anchoring until corrected.

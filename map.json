@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "9e97339c9369e06b0f61b04f6122407d43f393d9"
+  "commit": "6b060be45313f490bef87270a3d10024e99e18d1"
  },
  "domains": {
   "D1": {
@@ -67,6 +67,191 @@
   "heuristic",
   "generative"
  ],
+ "invariants": {
+  "terms": [
+   {
+    "id": "birational-type",
+    "name": "Birational type",
+    "kind": "equivalence class",
+    "definition": "The class of a variety up to birational equivalence: isomorphism of dense open subsets."
+   },
+   {
+    "id": "function-field",
+    "name": "Function field",
+    "kind": "algebraic object",
+    "definition": "The field of rational functions of an irreducible variety, as an extension of the base field."
+   },
+   {
+    "id": "local-structure-at-center",
+    "name": "Local structure at the center",
+    "kind": "local structure",
+    "definition": "The germ of the space along the locus a surgery is performed on."
+   },
+   {
+    "id": "exceptional-divisor",
+    "name": "Presence of the exceptional divisor",
+    "kind": "configuration",
+    "definition": "Whether the divisor created by a blow-up is present as a curve (or divisor) in the space."
+   },
+   {
+    "id": "self-intersection",
+    "name": "Self-intersection number",
+    "kind": "numerical",
+    "definition": "The intersection number of a curve with itself on a surface, C^2."
+   },
+   {
+    "id": "curve-isomorphism-type",
+    "name": "Isomorphism type of a curve",
+    "kind": "equivalence class",
+    "definition": "The curve up to isomorphism, as an abstract curve."
+   },
+   {
+    "id": "homotopy-type",
+    "name": "Homotopy type",
+    "kind": "equivalence class",
+    "definition": "The space up to homotopy equivalence."
+   },
+   {
+    "id": "contractibility",
+    "name": "Contractibility",
+    "kind": "property",
+    "definition": "Being homotopy equivalent to a point."
+   },
+   {
+    "id": "topology-of-input",
+    "name": "Topology of the input",
+    "kind": "structure",
+    "definition": "The input space's topology as given, before any collapse or gluing."
+   },
+   {
+    "id": "point-structure",
+    "name": "Individual point structure",
+    "kind": "structure",
+    "definition": "The identity and arrangement of individual input points."
+   },
+   {
+    "id": "limits",
+    "name": "Limits",
+    "kind": "structure",
+    "definition": "Limits of diagrams (all small limits, where stated), preserved when a functor carries limit cones to limit cones."
+   },
+   {
+    "id": "finite-limits",
+    "name": "Finite limits",
+    "kind": "structure",
+    "definition": "Limits of finite diagrams: the terminal object, pullbacks, equalizers."
+   },
+   {
+    "id": "colimits",
+    "name": "Colimits",
+    "kind": "structure",
+    "definition": "Colimits of diagrams, preserved when a functor carries colimit cocones to colimit cocones."
+   },
+   {
+    "id": "category-structure",
+    "name": "Category structure",
+    "kind": "structure",
+    "definition": "The objects and morphisms of a category with their composition."
+   },
+   {
+    "id": "truth-values",
+    "name": "Truth values",
+    "kind": "structure",
+    "definition": "The subobject classifier's elements: the internal truth values of a topos."
+   },
+   {
+    "id": "skeletal-objects",
+    "name": "Skeletal objects of a level",
+    "kind": "modal class",
+    "definition": "The objects fixed by a level's skeleton modality (i-skeleta)."
+   },
+   {
+    "id": "level-opposition",
+    "name": "Opposition at a level",
+    "kind": "modal relation",
+    "definition": "The distinction, at one level, between its skeleta and its sheaves."
+   },
+   {
+    "id": "l2-orthogonality",
+    "name": "L^2 orthogonality",
+    "kind": "analytic",
+    "definition": "Pieces of a decomposition are mutually orthogonal in the L^2 inner product."
+   },
+   {
+    "id": "cohomology",
+    "name": "Cohomology",
+    "kind": "algebraic object",
+    "definition": "De Rham or singular cohomology groups."
+   },
+   {
+    "id": "function-by-resummation",
+    "name": "The function itself (by resummation)",
+    "kind": "identity",
+    "definition": "The decomposed pieces sum back to the original function."
+   },
+   {
+    "id": "spatial-locality",
+    "name": "Spatial locality",
+    "kind": "analytic",
+    "definition": "Support or concentration in physical space."
+   },
+   {
+    "id": "instantaneous-locality",
+    "name": "Instantaneous locality",
+    "kind": "analytic",
+    "definition": "An effect at time t depends only on the source at time t."
+   },
+   {
+    "id": "linearity",
+    "name": "Linearity",
+    "kind": "algebraic",
+    "definition": "Superposition: the response to a sum is the sum of the responses."
+   },
+   {
+    "id": "causality",
+    "name": "Causality",
+    "kind": "analytic",
+    "definition": "Only earlier times contribute to the state at a given time."
+   },
+   {
+    "id": "leibniz-rule",
+    "name": "Leibniz rule",
+    "kind": "algebraic",
+    "definition": "The product rule for derivations."
+   },
+   {
+    "id": "tensoriality",
+    "name": "Tensoriality",
+    "kind": "algebraic",
+    "definition": "Linearity over smooth functions (C-infinity linearity) in an argument."
+   },
+   {
+    "id": "flatness",
+    "name": "Flatness",
+    "kind": "geometric",
+    "definition": "Vanishing curvature: covariant derivatives commute."
+   }
+  ],
+  "relations": [
+   {
+    "from": "birational-type",
+    "to": "function-field",
+    "kind": "equivalent",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-birational-geometry.txt",
+      "quote": "are birational if and only if their [[Function field of an algebraic variety|function fields]] are isomorphic"
+     }
+    ]
+   },
+   {
+    "from": "limits",
+    "to": "finite-limits",
+    "kind": "implies",
+    "basis": "By definition: a finite limit is a limit."
+   }
+  ]
+ },
  "origins": {
   "map": "as landed",
   "fill": "authored from standard mathematics, not reviewed against sources",
@@ -4721,6 +4906,18 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "birational-type",
+     "function-field"
+    ],
+    "broken": [
+     "local-structure-at-center"
+    ],
+    "output": [
+     "exceptional-divisor"
+    ]
+   },
    "tier": "audited",
    "auditVerdict": "imprecise"
   },
@@ -4742,6 +4939,15 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "birational-type"
+    ],
+    "broken": [
+     "exceptional-divisor"
+    ],
+    "output": []
+   },
    "conditions": "The curve contracted is a (-1)-curve (a smooth rational curve of self-intersection -1) on a smooth projective surface: then it contracts to a smooth point and the contraction is inverse to the blow-up (Castelnuovo). Other curves contract, when they do, to singular points.",
    "counterexamples": [],
    "conditionReceipts": [
@@ -10941,6 +11147,15 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "homotopy-type"
+    ],
+    "broken": [
+     "point-structure"
+    ],
+    "output": []
+   },
    "tier": "landed"
   },
   {
@@ -11454,6 +11669,15 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "contractibility"
+    ],
+    "broken": [
+     "topology-of-input"
+    ],
+    "output": []
+   },
    "tier": "landed"
   },
   {
@@ -11665,6 +11889,16 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "leibniz-rule",
+     "tensoriality"
+    ],
+    "broken": [
+     "flatness"
+    ],
+    "output": []
+   },
    "tier": "landed"
   },
   {
@@ -13411,6 +13645,14 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "cohomology",
+     "l2-orthogonality"
+    ],
+    "broken": [],
+    "output": []
+   },
    "conditions": "As stated, on a closed (compact, boundaryless) Riemannian manifold. The vector-field case used in fluid mechanics (the Helmholtz or Leray decomposition) holds for square-integrable fields on a bounded, simply-connected Lipschitz domain.",
    "counterexamples": [],
    "conditionReceipts": [
@@ -15123,6 +15365,13 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "category-structure"
+    ],
+    "broken": [],
+    "output": []
+   },
    "tier": "landed"
   },
   {
@@ -25764,6 +26013,13 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "limits"
+    ],
+    "broken": [],
+    "output": []
+   },
    "conditions": "A localization in the sense needed for subtoposes and levels requires the reflector to preserve finite limits (an exact reflection; between toposes, a geometric embedding). A bare reflective subcategory need not.",
    "counterexamples": [],
    "conditionReceipts": [
@@ -29924,6 +30180,14 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "colimits",
+     "limits"
+    ],
+    "broken": [],
+    "output": []
+   },
    "tier": "audited",
    "auditVerdict": "imprecise"
   },
@@ -30002,6 +30266,15 @@
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "finite-limits"
+    ],
+    "broken": [
+     "truth-values"
+    ],
+    "output": []
+   },
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -38115,6 +38388,15 @@
      "quote": "blowing up that point leads to a strict transform with self-intersection e−m2."
     }
    ],
+   "invariants": {
+    "preserved": [
+     "curve-isomorphism-type"
+    ],
+    "broken": [
+     "self-intersection"
+    ],
+    "output": []
+   },
    "tier": "receipted"
   },
   {
@@ -38161,6 +38443,15 @@
      "quote": "The Aufhebung relation for the topos of cubical sets is 2n."
     }
    ],
+   "invariants": {
+    "preserved": [
+     "skeletal-objects"
+    ],
+    "broken": [
+     "level-opposition"
+    ],
+    "output": []
+   },
    "tier": "receipted"
   },
   {
@@ -38195,6 +38486,16 @@
      "quote": "It is typically used as a substitute for orthogonality arguments"
     }
    ],
+   "invariants": {
+    "preserved": [
+     "function-by-resummation",
+     "l2-orthogonality"
+    ],
+    "broken": [
+     "spatial-locality"
+    ],
+    "output": []
+   },
    "tier": "receipted"
   },
   {
@@ -38225,6 +38526,16 @@
      "quote": "superposing homogeneous evolutions started at all earlier times"
     }
    ],
+   "invariants": {
+    "preserved": [
+     "linearity",
+     "causality"
+    ],
+    "broken": [
+     "instantaneous-locality"
+    ],
+    "output": []
+   },
    "tier": "receipted"
   },
   {

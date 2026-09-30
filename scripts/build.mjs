@@ -34,6 +34,7 @@ export function build() {
     if (e.flag) o.flag = { kind: e.flag.kind, evidence: e.flag.evidence };
     if (e.pointer) o.landedAs = e.pointer;
     if (e.receipts) o.receipts = e.receipts.map((r) => ({ file: r.file, quote: r.quote }));
+    if (e.invariants) o.invariants = e.invariants;
     if (e.conditions) { o.conditions = e.conditions; o.counterexamples = e.counterexamples; o.conditionReceipts = e.conditionReceipts; }
     const g = grades[e.id];
     o.tier = e.flag ? "flagged" : g ? "audited" : e.origin === "added" ? "receipted" : e.origin === "fill" ? "authored" : "landed";
@@ -46,7 +47,7 @@ export function build() {
     targeted: TARGETED };
   const files = {};
   const map = { about: "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
-    builtFrom: { commit }, domains: P.declared, vocabulary: P.vocab,
+    builtFrom: { commit }, domains: P.declared, vocabulary: P.vocab, invariants: { terms: P.vocabulary.INVARIANTS, relations: P.vocabulary.RELATIONS },
     origins: { map: "as landed", fill: "authored from standard mathematics, not reviewed against sources", "clone:<id>": "a pointer resolved to its home entry", added: "an entry the map lacked, each claim receipted by a verbatim quote (receipts)" },
     counts: { entries: entries.length, anchorable: entries.filter((e) => e.anchorable).length, byOrigin: entries.reduce((a, e) => { const k = e.origin.startsWith("clone:") ? "clone" : e.origin; a[k] = (a[k] || 0) + 1; return a; }, {}),
       byTier: entries.reduce((a, e) => { a[e.tier] = (a[e.tier] || 0) + 1; return a; }, {}), withConditions: entries.filter((e) => e.conditions).length },
@@ -58,6 +59,7 @@ export function build() {
     for (const e of entries.filter((x) => x.domain === d)) {
       L.push(`## ${e.id} ${e.name}`, "", `*${e.kind}; ${e.tags.join(", ")}; origin: ${e.origin}; tier: ${e.tier}${e.auditVerdict ? ` (${e.auditVerdict})` : ""}${e.flag ? `; flagged: ${e.flag.kind}` : ""}*`, "", e.description, "",
         `- input: ${e.input ?? "-"}`, `- output: ${e.output ?? "-"}`, `- preserved: ${e.preserved ?? "-"}`, `- broken: ${e.broken ?? "-"}`, `- complexity: ${e.complexity ?? "-"}`);
+      if (e.invariants) L.push(`- named invariants: preserved ${e.invariants.preserved.join(", ") || "none"}; broken ${e.invariants.broken.join(", ") || "none"}${e.invariants.output.length ? `; produced ${e.invariants.output.join(", ")}` : ""}`);
       if (e.conditions) L.push(`- conditions: ${e.conditions}`);
       for (const k of e.counterexamples || []) L.push(`- counterexample: ${k.case}`);
       if (e.reading) L.push(`- reading: ${e.reading}`);
@@ -79,6 +81,8 @@ export function build() {
     "## Trust tiers", "",
     `Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Formal verification would sit above audited; no entry has it yet. Counts: ${Object.entries(map.counts.byTier).map(([k, v]) => `${k} ${v}`).join(", ")}.`, "",
     `Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (\`mapfill/conditions.js\`). ${map.counts.withConditions} entries have conditions so far.`, "",
+    "## Named invariants and composition", "",
+    `Free-text fields say what an entry preserves and breaks; \`mapfill/invariants.js\` names those invariants (${P.vocabulary.INVARIANTS.length} so far, with the relations between them) and links entries to them, each link justified by a phrase in the entry's own field. \`node scripts/compose.mjs --chain D2-118,D2-117\` then reports, for a chain of entries applied in order, which invariants survive, where each breaks, where one is restored, and where the map is silent. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries now.`, "",
     "## Audit", "",
     "`audit.json` holds field-by-field grades (confirmed, imprecise, wrong, unsupported) against cited sources: a fixed random sample of 60 entries, and targeted receipts for entries that were needed. Six landed entries are flagged as misaligned and carry their evidence.", "",
     "## Layout", "",
@@ -87,13 +91,15 @@ export function build() {
     "- `mapfill/`: the fill layer (clone resolution, authored fills, missing homes, flags) and the additions (`mapfill/additions.js`). See `mapfill/README.md`.",
     "- `audit/`: the fixed sample, its grades, and the targeted receipts.",
     "- `excerpts/`: the verbatim windows that receipt the additions, each with its source URL and the hash of the page or PDF as fetched. Quoted for reference; the sources keep their own licences.",
-    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.", "",
+    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.", "",
     "Generated by `node scripts/build.mjs`, never edited by hand:", "",
     "- `map.json`: every entry, machine-readable. `domains/D1.md` to `domains/D8.md`: the same, readable. `audit.json`: the grades with their quotes and sources.",
     "- `reports/MATHMAP.md` and `reports/AUDIT.md`: data quality and error rates (written by `mathmap.mjs` and `audit.mjs`).",
     "- `MANIFEST.json` and `SHA256SUMS`: the source commit and file hashes, so an answer that cites this map can cite the exact version.", "",
     "## Querying", "",
     "`node scripts/mathmap.mjs --text quotient --domain D4 --full` prints matching entries. Flags: `--id`, `--domain`, `--tag`, `--kind`, `--text`, `--origin`, `--stubs`, `--limit`, `--full`, `--landed`.", "",
+    "## Licence", "",
+    "The map's data (the landed map, the fill layer, additions, conditions, invariants, audit grades and generated files) is licensed under CC BY 4.0; the scripts are under the MIT licence. See `LICENSE`. The excerpts in `excerpts/` are short quotations from their sources, which keep their own licences (Wikipedia text is CC BY-SA; arXiv papers and the nLab under their authors' terms).", "",
     "## Contributing", "",
     "A change to a field needs evidence: an addition or a correction carries receipts (verbatim quotes in `excerpts/`), and a grade carries a quote from its cited source. `node scripts/check-all.mjs` must pass.", "",
   ].join("\n");

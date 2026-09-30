@@ -8,7 +8,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const CHECKS = [["scripts/mathmap.mjs", "--check"], ["scripts/audit.mjs", "--check"], ["scripts/build.mjs", "--check"]];
+const CHECKS = [["scripts/mathmap.mjs", "--check"], ["scripts/audit.mjs", "--check"], ["scripts/build.mjs", "--check"], ["scripts/compose.mjs", "--chain", "D2-118,D2-117"]];
 const REPORTS = [["scripts/mathmap.mjs", "reports/MATHMAP.md"], ["scripts/audit.mjs", "reports/AUDIT.md"]];
 let fail = 0;
 for (const [s, ...a] of CHECKS) {
