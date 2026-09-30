@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "e909e87f734d93d28dc039ee754abcb182ba2008"
+  "commit": "448d3c5a0fcb39ffe394e789084336f614e48cfc"
  },
  "domains": {
   "D1": {
@@ -400,19 +400,19 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1963,
-  "anchorable": 1961,
+  "entries": 1964,
+  "anchorable": 1962,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 9
+   "added": 10
   },
   "byTier": {
    "landed": 1338,
    "audited": 116,
    "authored": 494,
-   "receipted": 15
+   "receipted": 16
   },
   "withConditions": 9,
   "corrected": 22,
@@ -421,15 +421,15 @@
    "unsupported": 100,
    "unchecked": 10992,
    "imprecise": 20,
-   "sourced": 617,
-   "formal": 49
+   "sourced": 621,
+   "formal": 51
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 41,
-   "entries": 10,
-   "definitions": 28,
-   "proved": 41,
+   "claims": 43,
+   "entries": 11,
+   "definitions": 31,
+   "proved": 43,
    "stated": 0
   },
   "claimEvidence": {
@@ -57507,6 +57507,68 @@
      "basis": [
       "field output: sourced"
      ]
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X04",
+   "domain": "D7",
+   "name": "Monoidal product of open games",
+   "kind": "Transformer",
+   "tags": [
+    "composition",
+    "construction"
+   ],
+   "description": "Composes two open games side by side (simultaneous play): strategy profiles pair up, and each component's best response is taken in a context whose continuation fixes the other component's play. Open games are the morphisms of a symmetric monoidal category.",
+   "input": "Two open games G1 : (X1, S1) -> (Y1, R1) and G2 : (X2, S2) -> (Y2, R2)",
+   "output": "The open game G1 (x) G2 : (X1 x X2, S1 x S2) -> (Y1 x Y2, R1 x R2)",
+   "preserved": "Component best responses when the joint continuation separates across the boundary: a component verified in its own context stays verified",
+   "broken": "Context-free verification when the continuation couples the components: a component's best response depends on the other component's play",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/arxiv-1603.04641.txt",
+     "quote": "We deﬁne an open game G1 ⊗ G2 : (X1 ×\nX2, S1 × S2) → (Y1 × Y2, R1 × R2) as follows:"
+    },
+    {
+     "file": "excerpts/arxiv-1603.04641.txt",
+     "quote": "k1(y1) = π1(k(y1, PG2 (σ2, x2)))\nk2(y2) = π2(k(PG1 (σ1, x1), y2))"
+    },
+    {
+     "file": "excerpts/arxiv-1603.04641.txt",
+     "quote": "Possibly the most important part of the deﬁnition is the best\nresponse relation, which is deﬁned relative to an arbitrary context"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "formal"
+   },
+   "lean": [
+    {
+     "field": "preserved",
+     "decl": "MathMap.OpenGame.tensor_best_separable",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "With a separable continuation, the product's best responses are exactly pairs of component best responses in contexts that do not mention the other component.",
+     "file": "lean/MathMap/OpenGames.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.tensor_context_dependent",
+     "match": "exact",
+     "status": "proved",
+     "whole": true,
+     "note": "With a coordination continuation, the same player-1 strategy is a best response beside one partner strategy and not beside another.",
+     "file": "lean/MathMap/OpenGames.lean"
     }
    ],
    "tier": "receipted"

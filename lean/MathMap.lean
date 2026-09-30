@@ -6,4 +6,5 @@ import MathMap.LawvereTierney
 import MathMap.LawvereTierneyInternal
 import MathMap.SubtoposColimits
 import MathMap.HTransform
+import MathMap.OpenGames
 import MathMap.Meta

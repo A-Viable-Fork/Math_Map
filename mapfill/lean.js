@@ -74,6 +74,14 @@ const DEFS = [
     Q("excerpts/wikipedia-wiener-generator.txt", "whose generator is <math>A=\\frac{1}{2}\\Delta</math>")),
   D("hTransformGenerator", "The generator of an h-transformed process: A^h f = (1/h) A (h f).",
     Q("excerpts/wikipedia-doob-h-transform.txt", "&=\\frac{1}{h(x)}A(fh)(x)")),
+  D("OpenGame", "An open game (Ghani, Hedges, Winschel and Zahn, Definition 3): strategy profiles, play, coplay, and a best response relation relative to a context.",
+    Q("excerpts/arxiv-1603.04641.txt", "• BG : X × (Y → R) → Rel(ΣG) is called the best response"),
+    Q("excerpts/arxiv-1603.04641.txt", "Possibly the most important part of the deﬁnition is the best\nresponse relation, which is deﬁned relative to an arbitrary context")),
+  D("OpenGame.tensor", "The monoidal product (Definition 12): each component's best response is taken in a context that fixes the other component's play.",
+    Q("excerpts/arxiv-1603.04641.txt", "We deﬁne an open game G1 ⊗ G2 : (X1 ×\nX2, S1 × S2) → (Y1 × Y2, R1 × R2) as follows:"),
+    Q("excerpts/arxiv-1603.04641.txt", "k1(y1) = π1(k(y1, PG2 (σ2, x2)))\nk2(y2) = π2(k(PG1 (σ1, x1), y2))")),
+  D("decision", "A utility-maximising decision (Definition 4): a best response chooses a maximum of the continuation.",
+    Q("excerpts/arxiv-1603.04641.txt", "• (σ, σ′) ∈ BD(x, k) iff σ′(x) ∈ arg max k")),
   D("AntitoneGC", "The corrected D1-099: antitone maps with a ≤ g(f(a)) and b ≤ f(g(b)).",
     Q("excerpts/wikipedia-galois-connection.txt", "=== Antitone Galois connection ==="),
     Q("excerpts/wikipedia-galois-connection.txt", "{{math|''a'' ≤ ''GF''(''a'')}} for all {{mvar|a}} in {{mvar|A}} and {{math|''b'' ≤ ''FG''(''b'')}} for all {{mvar|b}} in {{mvar|B}}.")),
@@ -116,6 +124,9 @@ const CLAIMS = [
   C("D7-288", "broken", "LTTopology.retract", "special", "The truth values retract onto the surviving ones (a Galois insertion)."),
   // D5-037.
   C("D5-037", "output", "hTransform_bm_id", "exact", "The h-transform of Brownian motion with h(x) = x has generator f''/2 + f'/x: drift 1/x away from the threshold, the Bessel-3 generator.", { invariant: "drift-from-threshold" }),
+  // D7-X04.
+  C("D7-X04", "preserved", "OpenGame.tensor_best_separable", "exact", "With a separable continuation, the product's best responses are exactly pairs of component best responses in contexts that do not mention the other component.", { whole: true }),
+  C("D7-X04", "broken", "tensor_context_dependent", "exact", "With a coordination continuation, the same player-1 strategy is a best response beside one partner strategy and not beside another.", { whole: true }),
   // D4-075.
   C("D4-075", "output", "Cone.contractible", "exact", "The cone on a nonempty space is contractible (for empty X the landed formula gives the empty space: conditions.js).", { invariant: "contractibility", whole: true }),
   C("D4-075", "preserved", "Cone.isEmbedding_base", "exact", "X embeds in its cone as the base.", { invariant: "topology-of-input", whole: true }),

@@ -128,6 +128,19 @@ const ADDITIONS = [
       { file: "excerpts/nlab-subdivision.txt", quote: "There is an isomorphism ${|X|} \\cong {|Sd(X)|}$, where $|-|$ is the usual [[geometric realization]] of simplicial complexes." },
       { file: "excerpts/nlab-subdivision.txt", quote: "has as its poset of simplices the partially ordered set of non-empty subsets of" },
     ] },
+  { id: "D7-X04", name: "Monoidal product of open games", kind: "Transformer", tags: ["composition", "construction"],
+    description: "Composes two open games side by side (simultaneous play): strategy profiles pair up, and each component's best response is taken in a context whose continuation fixes the other component's play. Open games are the morphisms of a symmetric monoidal category.",
+    input: "Two open games G1 : (X1, S1) -> (Y1, R1) and G2 : (X2, S2) -> (Y2, R2)",
+    output: "The open game G1 (x) G2 : (X1 x X2, S1 x S2) -> (Y1 x Y2, R1 x R2)",
+    preserved: "Component best responses when the joint continuation separates across the boundary: a component verified in its own context stays verified",
+    broken: "Context-free verification when the continuation couples the components: a component's best response depends on the other component's play",
+    complexity: "N/A",
+    requestedBy: "Requested by a composite; receipted.",
+    receipts: [
+      { file: "excerpts/arxiv-1603.04641.txt", quote: "We deﬁne an open game G1 ⊗ G2 : (X1 ×\nX2, S1 × S2) → (Y1 × Y2, R1 × R2) as follows:" },
+      { file: "excerpts/arxiv-1603.04641.txt", quote: "k1(y1) = π1(k(y1, PG2 (σ2, x2)))\nk2(y2) = π2(k(PG1 (σ1, x1), y2))" },
+      { file: "excerpts/arxiv-1603.04641.txt", quote: "Possibly the most important part of the deﬁnition is the best\nresponse relation, which is deﬁned relative to an arbitrary context" },
+    ] },
 ];
 
 module.exports = { ADDITIONS };

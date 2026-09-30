@@ -1,0 +1,24 @@
+Excerpts, verbatim as extracted, from: Neil Ghani, Jules Hedges, Viktor Winschel, Philipp Zahn, Compositional Game Theory, arXiv:1603.04641v3 (2018); LICS 2018
+URL: https://arxiv.org/pdf/1603.04641
+Fetched: 2026-09-30. SHA-256 of the PDF as fetched: e9fa2be8d010bbba12c75de9b5ff8af0007bbade0927569ba8edbf3e78d6d351
+Text extracted with pypdf, which keeps ligatures ("deﬁned") and splits some subscripts from their symbols ("Σ G" is Σ_G). Only the windows below are kept; each was checked to occur in the extracted text.
+
+An open game G : (X, S) →
+(Y, R) is deﬁned to be a 4-tuple G = (Σ G, PG , CG, BG), where
+
+• BG : X × (Y → R) → Rel(ΣG) is called the best response
+
+• (σ, σ′) ∈ BD(x, k) iff σ′(x) ∈ arg max k
+
+We deﬁne an open game G1 ⊗ G2 : (X1 ×
+X2, S1 × S2) → (Y1 × Y2, R1 × R2) as follows:
+
+k1(y1) = π1(k(y1, PG2 (σ2, x2)))
+k2(y2) = π2(k(PG1 (σ1, x1), y2))
+
+A selection equilibrium is a pure strategy proﬁle σ with (σ, σ) ∈ B.
+
+Possibly the most important part of the deﬁnition is the best
+response relation, which is deﬁned relative to an arbitrary context
+
+k′(y) = CH(τ, y, k(PH(τ, y)))

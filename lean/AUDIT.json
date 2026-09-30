@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "9e2beca1d505ed716cfd17421cd5f38d6312a58771e63720dc3a98ec21a43e36",
+ "sources": "2c73cd0bafdb5b8df73a7d25b6e05bbc448aaa085170073b1a1f898595a3877e",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -279,6 +279,25 @@
     "Quot.sound"
    ],
    "deps": []
+  },
+  "MathMap.OpenGame": {
+   "status": "proved",
+   "axioms": [],
+   "deps": []
+  },
+  "MathMap.OpenGame.tensor": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.OpenGame"
+   ]
+  },
+  "MathMap.decision": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.OpenGame"
+   ]
   },
   "MathMap.AntitoneGC": {
    "status": "proved",
@@ -676,6 +695,23 @@
    "deps": [
     "MathMap.bmGenerator",
     "MathMap.hTransformGenerator"
+   ]
+  },
+  "MathMap.OpenGame.tensor_best_separable": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.OpenGame",
+    "MathMap.OpenGame.tensor"
+   ]
+  },
+  "MathMap.tensor_context_dependent": {
+   "status": "proved",
+   "axioms": [],
+   "deps": [
+    "MathMap.OpenGame",
+    "MathMap.OpenGame.tensor",
+    "MathMap.decision"
    ]
   },
   "MathMap.Cone.contractible": {
