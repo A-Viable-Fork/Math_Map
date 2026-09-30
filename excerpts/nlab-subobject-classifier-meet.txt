@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, subobject classifier, the internal meet (page source)
+URL: https://ncatlab.org/nlab/source/subobject+classifier
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 9d3fb14063c90c3acfd67040bee121ac1a5dffd83f48e40abe654619483f42df
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+each subobject poset $Sub(X)$ has intersections (gotten as pullbacks or [[fiber products]] of pairs of monics
+
+is natural in $X$. Hence we have a family of maps
+
+natural in $X$; by the [[Yoneda lemma]], we infer the presence of an internal intersection map
+
+making $\Omega$ an internal [[meet-semilattice]].

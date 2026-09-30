@@ -1,7 +1,7 @@
 {
  "toolchain": "leanprover/lean4:v4.35.0-rc3",
  "mathlib": "380f2aafb622cb2c1c93dac545b6389083c68c51",
- "sources": "35609d44a14382f7a41974e6841ae9d88de1a81c46c9ab3ad7e9014ed1b7cda2",
+ "sources": "9fd887cab07718e294982d5b3893185d62f74d23eed893d7a9fbc8b1ecec0da9",
  "decls": {
   "MathMap.GeometricMorphism": {
    "status": "proved",
@@ -193,6 +193,74 @@
    "status": "proved",
    "axioms": [],
    "deps": []
+  },
+  "MathMap.internalAnd": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.truthPair_mono": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.LawvereTierney": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": []
+  },
+  "MathMap.LawvereTierney.Ωj": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LawvereTierney",
+    "MathMap.internalAnd",
+    "MathMap.truthPair_mono"
+   ]
+  },
+  "MathMap.LawvereTierney.incl": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LawvereTierney",
+    "MathMap.LawvereTierney.Ωj",
+    "MathMap.internalAnd",
+    "MathMap.truthPair_mono"
+   ]
+  },
+  "MathMap.LawvereTierney.close": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LawvereTierney",
+    "MathMap.LawvereTierney.Ωj",
+    "MathMap.internalAnd",
+    "MathMap.truthPair_mono"
+   ]
   },
   "MathMap.AntitoneGC": {
    "status": "proved",
@@ -406,6 +474,49 @@
     "MathMap.Level.sheaf",
     "MathMap.Level.skeleton",
     "MathMap.Subtopos"
+   ]
+  },
+  "MathMap.LawvereTierney.mono_close_iff": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LawvereTierney",
+    "MathMap.LawvereTierney.close",
+    "MathMap.LawvereTierney.Ωj",
+    "MathMap.internalAnd",
+    "MathMap.truthPair_mono"
+   ]
+  },
+  "MathMap.LawvereTierney.incl_close": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.LawvereTierney",
+    "MathMap.LawvereTierney.close",
+    "MathMap.LawvereTierney.incl",
+    "MathMap.LawvereTierney.Ωj",
+    "MathMap.internalAnd",
+    "MathMap.truthPair_mono"
+   ]
+  },
+  "MathMap.internalAnd_classifies": {
+   "status": "proved",
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ],
+   "deps": [
+    "MathMap.internalAnd",
+    "MathMap.truthPair_mono"
    ]
   },
   "MathMap.LTTopology.axioms": {

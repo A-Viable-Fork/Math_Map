@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, closure operator (page source)
+URL: https://ncatlab.org/nlab/source/closure+operator
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 375019bca1cb3ca7012259e66c579386a84f4e64dadfae2a927110a4c80a6283
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The elements of the poset that are fixed by the closure operator are called _closed_

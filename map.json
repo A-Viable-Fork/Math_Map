@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "a7bb2838e9c7ed33f5a3b15c22c6bc043993b389"
+  "commit": "5e1cfa76099377b0a325f5c1f56e8b53a9fb34b3"
  },
  "domains": {
   "D1": {
@@ -376,15 +376,15 @@
    "unsupported": 100,
    "unchecked": 10998,
    "imprecise": 20,
-   "sourced": 616,
-   "formal": 44
+   "sourced": 615,
+   "formal": 45
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
-   "claims": 31,
+   "claims": 34,
    "entries": 9,
-   "definitions": 20,
-   "proved": 31,
+   "definitions": 26,
+   "proved": 34,
    "stated": 0
   },
   "claimEvidence": {
@@ -392,8 +392,8 @@
    "unsupported": 0,
    "unchecked": 0,
    "imprecise": 0,
-   "sourced": 27,
-   "formal": 16
+   "sourced": 26,
+   "formal": 17
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
@@ -44538,7 +44538,7 @@
     "input": "sourced",
     "output": "sourced",
     "preserved": "sourced",
-    "broken": "sourced"
+    "broken": "formal"
    },
    "claims": [
     {
@@ -44552,13 +44552,40 @@
     {
      "field": "broken",
      "invariant": "truth-values",
-     "level": "sourced",
+     "level": "formal",
      "basis": [
-      "field broken: sourced"
+      "field broken: formal",
+      "Lean MathMap.LawvereTierney.mono_close_iff"
      ]
     }
    ],
    "lean": [
+    {
+     "field": "broken",
+     "decl": "MathMap.LawvereTierney.mono_close_iff",
+     "match": "exact",
+     "status": "proved",
+     "invariant": "truth-values",
+     "whole": true,
+     "note": "The retraction of Omega onto the j-fixed truth values identifies truth values (is not mono) unless j is the identity: the collapse the entry names, stated internally.",
+     "file": "lean/MathMap/LawvereTierneyInternal.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "MathMap.LawvereTierney.incl_close",
+     "match": "exact",
+     "status": "proved",
+     "note": "Omega retracts onto the surviving truth values.",
+     "file": "lean/MathMap/LawvereTierneyInternal.lean"
+    },
+    {
+     "field": "description",
+     "decl": "MathMap.internalAnd_classifies",
+     "match": "special",
+     "status": "proved",
+     "note": "The meet j must preserve is the internal intersection map; the description's other clauses (closure on subobjects, the subtopos) are not formalized.",
+     "file": "lean/MathMap/LawvereTierneyInternal.lean"
+    },
     {
      "field": "description",
      "decl": "MathMap.LTTopology.axioms",

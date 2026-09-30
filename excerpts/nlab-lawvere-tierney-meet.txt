@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, Lawvere-Tierney topology, the meet axiom (page source)
+URL: https://ncatlab.org/nlab/source/Lawvere-Tierney+topology
+Fetched: 2026-09-30. SHA-256 of the page source as fetched: 648cad66ab04a4aff0c99258010ae7a48f1e4ec51db267f1372e1ede6addda0f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+1. $j \circ \wedge = \wedge \circ (j \times j)$
+
+and $\wedge: \Omega \times \Omega \to \Omega$ is the internal [[meet]].
