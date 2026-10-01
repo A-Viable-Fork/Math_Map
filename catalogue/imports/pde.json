@@ -1,0 +1,36 @@
+{
+ "name": "pde",
+ "kind": "ids",
+ "commit": "76d130222d7a74d7d1f52dc2ad2822da24c9bf50",
+ "imported": "2026-10-01",
+ "papers": [
+  {
+   "id": "arxiv:2601.00089",
+   "status": "queued",
+   "title": "Little Red Dots: The Assembly of Early Supermassive Black Holes in the JWST Era",
+   "authors": "David D Vaida, Ryan Jeffrey Farber",
+   "year": 2025
+  },
+  {
+   "id": "arxiv:2603.08446",
+   "status": "queued",
+   "title": "Cancellative sparse domination",
+   "authors": "José M. Conde Alonso, Emiel Lorist, Guillermo Rey",
+   "year": 2026
+  },
+  {
+   "id": "arxiv:2605.13827",
+   "status": "queued",
+   "title": "Finite-time blow-up in an elementary model of the 3D Navier-Stokes equations",
+   "authors": "Stan Palasek",
+   "year": 2026
+  },
+  {
+   "id": "arxiv:2609.35406",
+   "status": "queued",
+   "title": "Finite-Time Blowup for Navier-Stokes with Smooth Forcing, Part I: Construction of Self-Similar Solutions with Admissible Stress and Flat Remainder",
+   "authors": "Zhen Lei, Xiao Ren",
+   "year": 2026
+  }
+ ]
+}
