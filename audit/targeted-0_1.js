@@ -39,7 +39,7 @@ const TARGETED = [
     output: C("c", "has been contracted to one point"),
     preserved: C("c", "this morphism is an isomorphism outside"),
     broken: C("i", "-curve is the exceptional curve of some blow-up",
-      "What is lost is recoverable: the contracted curve is the exceptional curve of the blow-up at its image point. The Stacks Project defines a contraction exactly so (Tag 0C5J: X is the blowing up of X' at x)."),
+      "What is lost is recoverable: the contracted curve is the exceptional curve of the blow-up at its image point. The Stacks Project defines a contraction exactly so (Section 54.16, Tag 0C2I: X is the blowing up of X' at x); Tag 0C5J, Lemma 54.16.1, is the contraction's universal property, and existence under hypotheses is Lemma 54.16.8, Tag 0C2M."),
   }),
   t("D7-068", USE, { r: N("reflective+subcategory"), a: N("Aufhebung") }, {
     name: I("a", "whose reflection preserves finite limits",
