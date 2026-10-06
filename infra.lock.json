@@ -1,0 +1,44 @@
+{
+  "_comment": "Pins the shared kit this repository vendors in .infra/. Shape of the epistack substrate lock (A-Viable-Fork/physics upstream/lock.json); verified by the kit check on every run. Written by Repo-Infrastructure tools/vendor.mjs.",
+  "upstream": {
+    "owner": "A-Viable-Fork",
+    "repo": "Repo-Infrastructure",
+    "url": "https://github.com/A-Viable-Fork/Repo-Infrastructure.git"
+  },
+  "version": "0.5.0",
+  "commit_hash": "3b57af80277237b36b1b542e5a8959161dde258b",
+  "acquisition_date": "2026-10-06",
+  "provisional": false,
+  "repin_obligation": "None standing.",
+  "extraction": {
+    "method": "vendored copy of kit/ by tools/vendor.mjs",
+    "vendor_root": ".infra/"
+  },
+  "extracted_files": {
+    "VERSION": "a0ad50640139a524f86591157145bf1d4674ea9c065bfea21558f0f7b04430c8",
+    "checks/corrections.mjs": "42eef3f586ac3955a17c93029ec1614449b8013eb61f58d45eeb9aa450bf088a",
+    "checks/dashes.mjs": "3dfea1b47fcd417777e34a7740516844033bb7283905dd33e38c7bca9ba38321",
+    "checks/docgraph.mjs": "edbb25e2df2bd61469b46abad2de38ffe46befa303e147c03419e298291cbf12",
+    "checks/freshness.mjs": "6bd18fd0ad0b1c7704f2e14553f539644e0ec873fe67dbbda547644785057db9",
+    "checks/headers.mjs": "65144aeeb245372e9dd553e15ef7fd97f620c85ae09011dee88e31ed62def944",
+    "checks/kit.mjs": "0c3e76a4840c0ffe18a0dad7f001e446f2d10e21bca40192fb5fb0daa4485684",
+    "checks/leak.mjs": "2cd59be026eeb45d109ed2b87af764e8a478533e15c91db31a8c7f0791d0bc39",
+    "checks/lean-audit.mjs": "1d656e3bb85c3913935dabe108611dd9d2e31a6d3b83731dbb476c6ada868038",
+    "checks/provenance.mjs": "2478eaa04e7d3634586640bc7477dcfb9e5798cd1ec72db6463e49e06a7095a7",
+    "checks/receipts.mjs": "cf8ff011a162b1ad3b6d4ccb575eb65f8af9fea130aad45cb248a140181d2325",
+    "checks/repomap.mjs": "70e4eb187c2c3af88faa991ee9dca35ffc3d9b48aa356e692249b2fc1415133a",
+    "lib/anchor.mjs": "0b45fd3f5e08bf7f1d41326b1c75dabf6152dd783acd9833542f1f921698f906",
+    "lib/core.mjs": "c22d4dbf30c9028fc9d9a85c197c1245f0e00d1aa68eeba3bdd0cfb7368e105f",
+    "lib/headers.mjs": "011d94fb90d02bd3654d1f5305f0f89a03a61fa4c1c5d2e008f76426c7cd88e3",
+    "lib/lean.mjs": "1b65a4994c899e6d5aef6bcf761ccca454c291efb1de9f72b1276add5e93c97e",
+    "lib/repomap.mjs": "c1a13949f44185be4ccc69f343c7eb8fad1eaccde973e6f68f6648f2b4f4b6ef",
+    "run.mjs": "ba3872642a9768844561a2af0f2413253adab98ab5ef91113ed4cf15dc27833d",
+    "tools/corrections-report.mjs": "72fd6896952bf1dc777df212671964eb57cdfe84b4f88c703d28872789d9a79a",
+    "tools/land.mjs": "795b6e9c64510f34bfb480a42e023dd99558f248c51df57130e8842bc3365c5e",
+    "tools/leak-add.mjs": "379ac2579fd55aefebf2b60be1efe8cd0784d276471b9e291074b0bd352236f7",
+    "tools/lean-audit.mjs": "438c6098ba9d385537ae9ee7bce33d1fdfb360a5cd3a10d4d81be339d2634a49",
+    "tools/receipt.mjs": "3fd7e8feba00096452418701cc2759040810d42f54309b4ceeb5487a3b3966bf",
+    "tools/repo-map.mjs": "baa2c4bb412b2714fc0e95051b42c41bf3aa672678dab25542032c6a5cbc502c"
+  },
+  "divergences": []
+}
