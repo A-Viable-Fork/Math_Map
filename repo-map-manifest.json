@@ -12,6 +12,7 @@
     "lean": "A Lean 4 project on the pinned Mathlib that states and proves claims Mathlib does not cover.",
     "lean/MathMap": "The Lean sources, one file per topic, each naming the entries it bears on.",
     "mapfill": "The fill layer the parser applies over the landed map: clone resolution, fills, additions, conditions, corrections, invariants and formal links.",
+    "prompts": "Research prompts sent out to generate candidate content; returned reports are leads, verified before anything lands.",
     "reports": "Generated reports on data quality, error rates, the catalogue and the formal queue.",
     "scripts": "The parser, query tool, checks, build and tool server. Node, no dependencies.",
     "source": "The map as landed, verbatim, and the report its D7 names come from."
@@ -65,6 +66,7 @@
     "excerpts/arxiv-*.txt": "Verbatim windows from an arXiv paper.",
     "excerpts/econometrica-*.txt": "Verbatim windows from a journal article.",
     "catalogue/imports/*.json": "One sibling repository's paper list.",
-    "audit/blind/reader-*.json": "One reader's blind grades, with a statement of the reader's independence."
+    "audit/blind/reader-*.json": "One reader's blind grades, with a statement of the reader's independence.",
+    "prompts/MM-DR-*.md": "One research prompt (MM-DR-NNN), in the shape of the PH-DR prompts in A-Viable-Fork/phone, with Scaffold Update Notes stripped before sending."
   }
 }
