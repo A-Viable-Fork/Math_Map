@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Nyquist–Shannon sampling theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375965961
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 345f4345756519f6e6f312f2a49105701fd9fff50c30cd70178638ffa182230a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+then it can be completely determined from its sampled values at a sequence of points spaced less than
+
+the reconstruction exhibits imperfections known as [[aliasing]]

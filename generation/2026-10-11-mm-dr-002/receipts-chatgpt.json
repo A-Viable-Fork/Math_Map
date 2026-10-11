@@ -1,0 +1,944 @@
+{
+  "promptId": "MM-DR-002",
+  "tag": "android-16.0.0_r4",
+  "buildId": "BP4A.251205.006",
+  "retrievedUtc": "2026-10-11",
+  "method": "Gitiles TEXT retrieval, base64 decoded; SHA-256 of decoded file bytes. Source inspection, not a built ROM/phone test.",
+  "inputs": {
+    "effect-invariants.json": "22fe72aada387fc2ecd0db645fb1ba1aeb31c59aca6f5715c160f2b1f635c93d",
+    "carrier-proposal.json": "9d08f48a352e1863a280e540cd6836b5b78bc35bad05b4dfbfc4c75d6bdd85e6",
+    "MM-DR-002-d9-android-bindings.md": "ff15f733f8bb9bc85ffee307093c67889a4630328b489419d86659c1310e0f70",
+    "invariant-relations.json": "8192db72cd4c7284225d7519fa87711e65e08de1a471862af12f42c3a1049b4c",
+    "d9-entries.json": "fde0b0fa5bb61b7460acfcc6e15b38a881de3521c37335cc88c7ac7d432c6255"
+  },
+  "sources": [
+    {
+      "repo": "platform/bionic",
+      "path": "libc/SYSCALLS.TXT",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/SYSCALLS.TXT",
+      "bytes": 16600,
+      "sha256": "ae8cc2b2d1d7badeb93c43bbaaacbdd61cea755e82f6a81318e061471fd30ec6",
+      "status": "fetched",
+      "aospPath": "bionic/libc/SYSCALLS.TXT"
+    },
+    {
+      "repo": "platform/bionic",
+      "path": "libc/bionic/open.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/bionic/open.cpp",
+      "bytes": 3235,
+      "sha256": "0e5bb93a2a5ab344716f8508e991f7e891f71042d0e601aa751e941d22cd780d",
+      "status": "fetched",
+      "aospPath": "bionic/libc/bionic/open.cpp"
+    },
+    {
+      "repo": "platform/frameworks/av",
+      "path": "services/audiopolicy/service/AudioPolicyInterfaceImpl.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/av/+/refs/tags/android-16.0.0_r4/services/audiopolicy/service/AudioPolicyInterfaceImpl.cpp",
+      "bytes": 128938,
+      "sha256": "a718dcc112d00812d8692815d6a480d18c7bf7a477c0580090051d3dac217541",
+      "status": "fetched",
+      "aospPath": "frameworks/av/services/audiopolicy/service/AudioPolicyInterfaceImpl.cpp"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/AppOpsManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/AppOpsManager.java",
+      "bytes": 497000,
+      "sha256": "91450d5a8ea6b332b6a52ee5954b3d51dd49b6f9c8abad5f4af798c1051ac175",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/AppOpsManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/ContextImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/ContextImpl.java",
+      "bytes": 163704,
+      "sha256": "8b18ea9dbe2aaea77c9c1a629b669c3e6a7b7c13f9a76408e0a6ccd5d2997b3d",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/ContextImpl.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/PendingIntent.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/PendingIntent.java",
+      "bytes": 72065,
+      "sha256": "fcadc2ef6063a115032632de5ae3f86ef9dc85c1061113d5c24f7a5bc28c4869",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/PendingIntent.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/admin/DevicePolicyManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/admin/DevicePolicyManager.java",
+      "bytes": 869413,
+      "sha256": "cf9f641c62d0e8286185e4e24ba7203d44d505bf5516b33b788b8ca09e650960",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/admin/DevicePolicyManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/appfunctions/AppFunctionManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/appfunctions/AppFunctionManager.java",
+      "bytes": 40077,
+      "sha256": "08f1f6df46878ac392c04b7cb39e624f217b774ec9b4358144933f524ba205fc",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/appfunctions/AppFunctionManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/appfunctions/AppFunctionService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/appfunctions/AppFunctionService.java",
+      "bytes": 10253,
+      "sha256": "cc6170fb6660e7e52b230e74dc541d5a636b2f3da3f1872bc7e460cd007ad1be",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/appfunctions/AppFunctionService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/appfunctions/AppFunctionStaticMetadataHelper.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/appfunctions/AppFunctionStaticMetadataHelper.java",
+      "bytes": 3139,
+      "sha256": "e73384090e6bf6c269de97f5a9cd748e53bc5042c1f6d4b6dc82720d142a4910",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/appfunctions/AppFunctionStaticMetadataHelper.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/app/appfunctions/ExecuteAppFunctionRequest.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/appfunctions/ExecuteAppFunctionRequest.java",
+      "bytes": 10356,
+      "sha256": "01d156d86807c9bba3bb05509fe497483aad0b163d28349288c67a4a9d51dc3c",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/app/appfunctions/ExecuteAppFunctionRequest.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/content/ClipboardManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ClipboardManager.java",
+      "bytes": 14586,
+      "sha256": "2324636e04ffca43c29cfda754cfd032ea8bcaeda35c717c5b87eba73e4184b3",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/content/ClipboardManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/content/ContentProvider.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+      "bytes": 138833,
+      "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/content/ContentProvider.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/content/ContentResolver.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentResolver.java",
+      "bytes": 180983,
+      "sha256": "68cb1833b33ca0098f13f62931c2aa27ff9bb277561dcb716fbec8ae17eaf95e",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/content/Context.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+      "bytes": 381014,
+      "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/content/Context.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/content/PermissionChecker.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/PermissionChecker.java",
+      "bytes": 45045,
+      "sha256": "0d16b4d502f59ffbccb8a439ca1ed9be7a7ba0f49022c0aaa475ede0a431c480",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/content/PermissionChecker.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/content/pm/PackageManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/pm/PackageManager.java",
+      "bytes": 509841,
+      "sha256": "1db56cfd640e5161ca97360657ffffb038c3a1b09893d0f90036002b56959a3a",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/content/pm/PackageManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/database/sqlite/SQLiteDatabase.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/database/sqlite/SQLiteDatabase.java",
+      "bytes": 145031,
+      "sha256": "8c2d6a7c73b79c7632d5fe26efe17b3ccf2331e42e88744eb7575050284b6d6b",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/hardware/SensorManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/hardware/SensorManager.java",
+      "bytes": 83442,
+      "sha256": "53288868107b0e82b5cb36a3c58e35bcdb1cc939d86e724ee346183f97e781bc",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/hardware/SensorManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/hardware/SystemSensorManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/hardware/SystemSensorManager.java",
+      "bytes": 52454,
+      "sha256": "33c00bf9d99b01fc3bd60e1672242a2f37883992b6dce7640525da4d5cfc4161",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/hardware/SystemSensorManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/net/VpnService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/net/VpnService.java",
+      "bytes": 43012,
+      "sha256": "7fe08025fdffa034f436e1687fba73e8cbae6be1b270b208f3178ff602661546",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/net/VpnService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/Binder.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/Binder.java",
+      "bytes": 59104,
+      "sha256": "4fa6c5cb2d5b3f7ff24355fc2757657ae7d5bc901ba64adb8250a0e2c355e560",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/Binder.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/BinderProxy.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/BinderProxy.java",
+      "bytes": 32918,
+      "sha256": "f9db07a560d0358d1c371d8d793d8fd0970f676f6ff8eec2fb1ee9e51a9e9db7",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/BinderProxy.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/IBinder.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/IBinder.java",
+      "bytes": 21084,
+      "sha256": "ae8e701f450f11481335a4276a3bcdaffadc592b391ba458a70d215dbe57cab1",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/IBinder.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/ParcelFileDescriptor.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/ParcelFileDescriptor.java",
+      "bytes": 46825,
+      "sha256": "dd76635b7ed062dac3d04f5941f39bf63c5680841292d1bc07c39845722d5cbf",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/ParcelFileDescriptor.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/SharedMemory.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/SharedMemory.java",
+      "bytes": 16214,
+      "sha256": "0b9c36194d108ec3a3f1ea74dc0bde268ebfbe0c63fa005ce8956edcc432ce8b",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/SharedMemory.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/UserHandle.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/UserHandle.java",
+      "bytes": 22914,
+      "sha256": "298a40e75588236934e592a643031f68f2f72c4381e60289e4724accfec180ba",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/UserHandle.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/os/UserManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/UserManager.java",
+      "bytes": 297835,
+      "sha256": "5189b7db5afdef7d4fe959a872c1b33ba325b2119c1a70b30f6d61947aba17a9",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/os/UserManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/view/accessibility/AccessibilityNodeInfo.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/view/accessibility/AccessibilityNodeInfo.java",
+      "bytes": 324327,
+      "sha256": "22fcb7f925d13f8025cc0d8837d15c40b97bce65258c6b5a8dc6d80caa892f39",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/java/android/view/accessibility/AccessibilityNodeInfo.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/res/AndroidManifest.xml",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/res/AndroidManifest.xml",
+      "bytes": 538879,
+      "sha256": "201d8390999de22fc6363a40ffdda84c2ed1a4cbd3c4f18cab6d721b505797a9",
+      "status": "fetched",
+      "aospPath": "frameworks/base/core/res/AndroidManifest.xml"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java",
+      "bytes": 41004,
+      "sha256": "1740ce55010879a08fb9987ad9dc95bfcc6c4ff6f955793c81d24f0786df1eed",
+      "status": "fetched",
+      "aospPath": "frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "keystore/java/android/security/keystore2/AndroidKeyStoreSignatureSpiBase.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/keystore/java/android/security/keystore2/AndroidKeyStoreSignatureSpiBase.java",
+      "bytes": 13665,
+      "sha256": "51e070af1486c450eaf90c4baa0b32a1cedf91a0ebac2d0dc42dac5ab00b9efc",
+      "status": "fetched",
+      "aospPath": "frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreSignatureSpiBase.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "location/java/android/location/LocationManager.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/location/java/android/location/LocationManager.java",
+      "bytes": 154415,
+      "sha256": "f5bf07d3c5cf72f5e9c2032d4243c25462cc11de449e017ac77f4f97b2b0df34",
+      "status": "fetched",
+      "aospPath": "frameworks/base/location/java/android/location/LocationManager.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "media/java/android/media/AudioRecord.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/media/java/android/media/AudioRecord.java",
+      "bytes": 118686,
+      "sha256": "1e403c0c443fd4db09cadcedf897964f4623f928a04b36d21fd48e1ef776c33c",
+      "status": "fetched",
+      "aospPath": "frameworks/base/media/java/android/media/AudioRecord.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/appfunctions/java/com/android/server/appfunctions/AppFunctionManagerServiceImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/appfunctions/java/com/android/server/appfunctions/AppFunctionManagerServiceImpl.java",
+      "bytes": 56118,
+      "sha256": "c5d666eb2d27d5ac5656c2459878d7cf2d42700938a3a110cbdcc6124d7e0a17",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/appfunctions/java/com/android/server/appfunctions/AppFunctionManagerServiceImpl.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/appfunctions/java/com/android/server/appfunctions/CallerValidatorImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/appfunctions/java/com/android/server/appfunctions/CallerValidatorImpl.java",
+      "bytes": 13122,
+      "sha256": "88111bfd1f27ef9fa20a9d9f6f78a750d79f232caaa2159d5d985a71852c6da1",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/appfunctions/java/com/android/server/appfunctions/CallerValidatorImpl.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/appfunctions/java/com/android/server/appfunctions/MetadataSyncAdapter.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/appfunctions/java/com/android/server/appfunctions/MetadataSyncAdapter.java",
+      "bytes": 29433,
+      "sha256": "f268915f3faa7ad8deea96e693866f483af8c1b33b053cf58f298944066291af",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/appfunctions/java/com/android/server/appfunctions/MetadataSyncAdapter.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/appfunctions/java/com/android/server/appfunctions/RemoteServiceCallerImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/appfunctions/java/com/android/server/appfunctions/RemoteServiceCallerImpl.java",
+      "bytes": 6828,
+      "sha256": "2bc24faab811ce98cc4ce7b0a0ec000eb2c8a5cc199fb9dc683cdcae8b1e8907",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/appfunctions/java/com/android/server/appfunctions/RemoteServiceCallerImpl.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/am/ActiveServices.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/ActiveServices.java",
+      "bytes": 481025,
+      "sha256": "47f1d84a31b4d873e1d7145678774d8d270ba637056cdb35aa993348c69fed5f",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/am/ActiveServices.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/am/ActivityManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/ActivityManagerService.java",
+      "bytes": 885701,
+      "sha256": "2df3c48c2e8769bf00193c70465e6b85d5208c48e23eac62820c9c083ae95601",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/am/BroadcastController.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/BroadcastController.java",
+      "bytes": 124116,
+      "sha256": "0cadffd17ff007554932858bf3935aee635ddefa4b9ef0ddf2956dd80dc6e1ed",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/am/BroadcastController.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/am/BroadcastSkipPolicy.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/BroadcastSkipPolicy.java",
+      "bytes": 40319,
+      "sha256": "cd1eb80720d399e2b960e43ef829b703a060d27bf38c3af4b658ef9502756c30",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/am/BroadcastSkipPolicy.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/am/PendingIntentRecord.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/PendingIntentRecord.java",
+      "bytes": 41283,
+      "sha256": "fc915b5b5ecfbbf3956aed2da390f34b6d6e997c4929f00db4739b77723b6ee8",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/appop/AppOpsService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/appop/AppOpsService.java",
+      "bytes": 366315,
+      "sha256": "4edaeb950af258ab505ad15bc4b5c260b5f1711065679be9b08d92f8c665f077",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/appop/AppOpsService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/clipboard/ClipboardService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/clipboard/ClipboardService.java",
+      "bytes": 78733,
+      "sha256": "544aabaa64f72970d281efbd343314e9a0a372a4d2efe855da072953a5d755bf",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/clipboard/ClipboardService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/location/LocationManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/location/LocationManagerService.java",
+      "bytes": 85608,
+      "sha256": "158161310fc865b75480b3ed303b23257f2a72bb75f362f47d78b90deaa640aa",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/location/LocationManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/net/NetworkPolicyManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/net/NetworkPolicyManagerService.java",
+      "bytes": 325227,
+      "sha256": "005e6023d204b422e418ee76bc0a20a00d8852b7a60a1cec61814359a974e4d4",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/net/NetworkPolicyManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/pm/UserManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/UserManagerService.java",
+      "bytes": 414910,
+      "sha256": "7244604b4e5544ba976ab0f4709a49001b871f29c7d6dfcb352767a1d674849e",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/pm/UserManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/pm/UserTypeFactory.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/UserTypeFactory.java",
+      "bytes": 45869,
+      "sha256": "f6e956edbccc3c826d663bef76db20c1df1ffd470c7caedd817f3cdfc6b1182f",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/pm/UserTypeFactory.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/pm/permission/PermissionManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/permission/PermissionManagerService.java",
+      "bytes": 86522,
+      "sha256": "3cdf1eb28b2071a800b2c2b56445f099257807fc4d0b6c83734de75acf85c26e",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/pm/permission/PermissionManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+      "bytes": 83300,
+      "sha256": "405b94f0b884721e70550da46fa84e9a185000c73dcc77eb20fb62b185e0d63d",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/devicepolicy/java/com/android/server/devicepolicy/DevicePolicyManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/devicepolicy/java/com/android/server/devicepolicy/DevicePolicyManagerService.java",
+      "bytes": 1131872,
+      "sha256": "9ae414c5f5daa54be98f1d308612c551293f0152fb298d754730f7eeffac491c",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/devicepolicy/java/com/android/server/devicepolicy/DevicePolicyManagerService.java"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+      "bytes": 115395,
+      "sha256": "5a33d8745287b25ddfa4464e839cb4db152fb32db536b3768eae383dfb1fbc1d",
+      "status": "fetched",
+      "aospPath": "frameworks/base/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt"
+    },
+    {
+      "repo": "platform/frameworks/native",
+      "path": "include/android/sensor.h",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/include/android/sensor.h",
+      "bytes": 39569,
+      "sha256": "ea98cd1e7a92fae33d3457b66e05e654318c751399cee01fca45c3526f26704c",
+      "status": "fetched",
+      "aospPath": "frameworks/native/include/android/sensor.h"
+    },
+    {
+      "repo": "platform/frameworks/native",
+      "path": "libs/binder/IPCThreadState.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/binder/IPCThreadState.cpp",
+      "bytes": 62063,
+      "sha256": "7d9bd8ce38d37d4e7a1f004ab2144fe69ff95799e0db24b7bdb5d0681af065a8",
+      "status": "fetched",
+      "aospPath": "frameworks/native/libs/binder/IPCThreadState.cpp"
+    },
+    {
+      "repo": "platform/frameworks/native",
+      "path": "libs/binder/Parcel.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/binder/Parcel.cpp",
+      "bytes": 130772,
+      "sha256": "1fa251f995b6ed3e0e670ed145268888ae4aa34a6c8e34958fdc294f10b511f1",
+      "status": "fetched",
+      "aospPath": "frameworks/native/libs/binder/Parcel.cpp"
+    },
+    {
+      "repo": "platform/frameworks/native",
+      "path": "services/sensorservice/SensorEventConnection.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/services/sensorservice/SensorEventConnection.cpp",
+      "bytes": 39196,
+      "sha256": "73921078f52f26a6174b9fc808b64e7eccabba6824c980bb11f0f1706bcf81f3",
+      "status": "fetched",
+      "aospPath": "frameworks/native/services/sensorservice/SensorEventConnection.cpp"
+    },
+    {
+      "repo": "platform/frameworks/native",
+      "path": "services/sensorservice/SensorService.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/services/sensorservice/SensorService.cpp",
+      "bytes": 112270,
+      "sha256": "6690bfd0857ca5af323ee66b272e82e44e3bb79f19a6e0757a70c4aad2622349",
+      "status": "fetched",
+      "aospPath": "frameworks/native/services/sensorservice/SensorService.cpp"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/java/lang/Thread.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/lang/Thread.java",
+      "bytes": 142564,
+      "sha256": "b1252bf93b6706ec1bb0894923a2bfe4218ae15d06f41421cebbe60827427d7d",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/java/lang/Thread.java"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/java/net/DatagramSocket.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/net/DatagramSocket.java",
+      "bytes": 57000,
+      "sha256": "00a8c6489b51c476c3cf886c13588756691102fbd80ed3d559c193308ea583fa",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/java/net/DatagramSocket.java"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/java/net/Socket.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/net/Socket.java",
+      "bytes": 74580,
+      "sha256": "267a69ae40a94c6d898cf27ebac106d285c969ba40da99c8f75caf78005843ee",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/java/net/Socket.java"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/java/security/SecureRandom.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/security/SecureRandom.java",
+      "bytes": 43180,
+      "sha256": "10d3d0a88354b245d000ca1172847e3fbff31e87fb0291f62e6fa6b2a2b95a7b",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/java/security/SecureRandom.java"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/java/security/Signature.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/security/Signature.java",
+      "bytes": 59124,
+      "sha256": "518438af5ecdb0879008476d581e5a0aef30e7c557a45561b33502513776194a",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/java/security/Signature.java"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/java/util/concurrent/atomic/AtomicReference.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/util/concurrent/atomic/AtomicReference.java",
+      "bytes": 15494,
+      "sha256": "5c3dd523115fd5c7711ed590e43987545a6299a1f49e6e5310ecfe0e99a9ae1d",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/java/util/concurrent/atomic/AtomicReference.java"
+    },
+    {
+      "repo": "platform/libcore",
+      "path": "ojluni/src/main/java/javax/crypto/Cipher.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/javax/crypto/Cipher.java",
+      "bytes": 129458,
+      "sha256": "ade0446fd23282fcbcd81eded2b15aaf4ea61f6d533f8be2400355ebcab54290",
+      "status": "fetched",
+      "aospPath": "libcore/ojluni/src/main/java/javax/crypto/Cipher.java"
+    },
+    {
+      "repo": "platform/manifest",
+      "path": "default.xml",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/manifest/+/refs/tags/android-16.0.0_r4/default.xml",
+      "bytes": 102803,
+      "sha256": "19db4af44aa74ea4ed07bf602f5805476bab1c821d59ba818031022280ae055f",
+      "status": "fetched",
+      "aospPath": "manifest/default.xml"
+    },
+    {
+      "repo": "platform/packages/modules/AppSearch",
+      "path": "service/java/com/android/server/appsearch/appsindexer/AppFunctionDocumentParserImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/AppSearch/+/refs/tags/android-16.0.0_r4/service/java/com/android/server/appsearch/appsindexer/AppFunctionDocumentParserImpl.java",
+      "bytes": 24069,
+      "sha256": "671d0b5770136a626d2ce10223fc5f147f185ac5803042380c92c2b986cf1ea5",
+      "status": "fetched",
+      "aospPath": "packages/modules/AppSearch/service/java/com/android/server/appsearch/appsindexer/AppFunctionDocumentParserImpl.java"
+    },
+    {
+      "repo": "platform/packages/modules/AppSearch",
+      "path": "service/java/com/android/server/appsearch/appsindexer/AppFunctionSchemaParser.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/AppSearch/+/refs/tags/android-16.0.0_r4/service/java/com/android/server/appsearch/appsindexer/AppFunctionSchemaParser.java",
+      "bytes": 18459,
+      "sha256": "2e98faa8e636df496fa558f9e700f814e1b05570ceb865b83060ae8fb2fb7ffb",
+      "status": "fetched",
+      "aospPath": "packages/modules/AppSearch/service/java/com/android/server/appsearch/appsindexer/AppFunctionSchemaParser.java"
+    },
+    {
+      "repo": "platform/packages/modules/AppSearch",
+      "path": "service/java/com/android/server/appsearch/appsindexer/appsearchtypes/AppFunctionStaticMetadata.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/AppSearch/+/refs/tags/android-16.0.0_r4/service/java/com/android/server/appsearch/appsindexer/appsearchtypes/AppFunctionStaticMetadata.java",
+      "bytes": 15643,
+      "sha256": "737148c7e1560b019132ab20737369cf913d7234d732fa3a0e945cb24b28b812",
+      "status": "fetched",
+      "aospPath": "packages/modules/AppSearch/service/java/com/android/server/appsearch/appsindexer/appsearchtypes/AppFunctionStaticMetadata.java"
+    },
+    {
+      "repo": "platform/packages/modules/Connectivity",
+      "path": "service/src/com/android/server/BpfNetMaps.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/Connectivity/+/refs/tags/android-16.0.0_r4/service/src/com/android/server/BpfNetMaps.java",
+      "bytes": 55792,
+      "sha256": "c6c88800cf78a3288e81949a73ae439b434e2626c2fcbdcbca5e4426cde5e5f9",
+      "status": "fetched",
+      "aospPath": "packages/modules/Connectivity/service/src/com/android/server/BpfNetMaps.java"
+    },
+    {
+      "repo": "platform/packages/modules/Connectivity",
+      "path": "service/src/com/android/server/ConnectivityService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/Connectivity/+/refs/tags/android-16.0.0_r4/service/src/com/android/server/ConnectivityService.java",
+      "bytes": 765376,
+      "sha256": "bdd34f251c439f80410d44d2722aaaf1d671c7b9e29d3c61b9bd2f3a0b1aed7d",
+      "status": "fetched",
+      "aospPath": "packages/modules/Connectivity/service/src/com/android/server/ConnectivityService.java"
+    },
+    {
+      "repo": "platform/packages/providers/MediaProvider",
+      "path": "src/com/android/providers/media/MediaGrants.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/providers/MediaProvider/+/refs/tags/android-16.0.0_r4/src/com/android/providers/media/MediaGrants.java",
+      "bytes": 26579,
+      "sha256": "ac6bc75132014bd01dd5b2aad133a312870d06ff2ca684e1d0b34a82e0cf45d4",
+      "status": "fetched",
+      "aospPath": "packages/providers/MediaProvider/src/com/android/providers/media/MediaGrants.java"
+    },
+    {
+      "repo": "platform/packages/providers/MediaProvider",
+      "path": "src/com/android/providers/media/MediaProvider.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/providers/MediaProvider/+/refs/tags/android-16.0.0_r4/src/com/android/providers/media/MediaProvider.java",
+      "bytes": 590134,
+      "sha256": "61330440c7d4a1c3e2b64833bcfc218f0ebf3c7ca614496d02d2d82fa0c2c5ed",
+      "status": "fetched",
+      "aospPath": "packages/providers/MediaProvider/src/com/android/providers/media/MediaProvider.java"
+    },
+    {
+      "repo": "platform/system/netd",
+      "path": "server/FirewallController.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/netd/+/refs/tags/android-16.0.0_r4/server/FirewallController.cpp",
+      "bytes": 5038,
+      "sha256": "474841d25d4f3cdba1042690fcac54f6bf77ca4e5c56ce68d6c8cbe917376b04",
+      "status": "fetched",
+      "aospPath": "system/netd/server/FirewallController.cpp"
+    },
+    {
+      "repo": "platform/system/netd",
+      "path": "server/NetdNativeService.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/netd/+/refs/tags/android-16.0.0_r4/server/NetdNativeService.cpp",
+      "bytes": 51032,
+      "sha256": "b2d41dec1a79e02012fe74665de28dfd89c0799bba0598f43d7442619602f8b4",
+      "status": "fetched",
+      "aospPath": "system/netd/server/NetdNativeService.cpp"
+    },
+    {
+      "repo": "platform/system/security",
+      "path": "keystore2/src/security_level.rs",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/security/+/refs/tags/android-16.0.0_r4/keystore2/src/security_level.rs",
+      "bytes": 50608,
+      "sha256": "8c1c9c587254c88da920684f4e7aa5bff490aae7bc130a3dd936d5aa0689e4cd",
+      "status": "fetched",
+      "aospPath": "system/security/keystore2/src/security_level.rs"
+    },
+    {
+      "repo": "platform/system/security",
+      "path": "keystore2/src/service.rs",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/security/+/refs/tags/android-16.0.0_r4/keystore2/src/service.rs",
+      "bytes": 18704,
+      "sha256": "6e7109516b0ba7502caf174ab32bc7e96091bad45068c12f9a2630015bb0f944",
+      "status": "fetched",
+      "aospPath": "system/security/keystore2/src/service.rs"
+    },
+    {
+      "repo": "platform/system/sepolicy",
+      "path": "private/app.te",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+      "bytes": 34243,
+      "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc",
+      "status": "fetched",
+      "aospPath": "system/sepolicy/private/app.te"
+    },
+    {
+      "repo": "platform/system/sepolicy",
+      "path": "private/domain.te",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/domain.te",
+      "bytes": 81350,
+      "sha256": "698041ba5162c4c92e62069cc6c471a10e64cff727f5f45e3ac8cc13792a53b6",
+      "status": "fetched",
+      "aospPath": "system/sepolicy/private/domain.te"
+    },
+    {
+      "repo": "platform/system/sepolicy",
+      "path": "private/seapp_contexts",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/seapp_contexts",
+      "bytes": 12441,
+      "sha256": "e0c8f6d9f32040bfd4bb358c16cda902ed9f1ebe9b27721b6d7278b56c687821",
+      "status": "fetched",
+      "aospPath": "system/sepolicy/private/seapp_contexts"
+    },
+    {
+      "repo": "platform/system/sepolicy",
+      "path": "private/untrusted_app_all.te",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/untrusted_app_all.te",
+      "bytes": 7634,
+      "sha256": "565f19cf87297ec0b2bd500653ae86b3927ecbbe69a11445334a8587c3f2d000",
+      "status": "fetched",
+      "aospPath": "system/sepolicy/private/untrusted_app_all.te"
+    }
+  ],
+  "failedLookups": [
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/pm/permission/PermissionManagerServiceImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/permission/PermissionManagerServiceImpl.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/am/BroadcastQueueModernImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/BroadcastQueueModernImpl.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "core/java/android/permission/PermissionChecker.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/permission/PermissionChecker.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/core/java/com/android/server/accessibility/AccessibilityManagerService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/accessibility/AccessibilityManagerService.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/frameworks/base",
+      "path": "services/permission/java/com/android/server/permission/PermissionManagerServiceImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/permission/java/com/android/server/permission/PermissionManagerServiceImpl.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/frameworks/native",
+      "path": "libs/sensor/include/android/sensor.h",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/sensor/include/android/sensor.h?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/system/netd",
+      "path": "server/TrafficController.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/system/netd/+/refs/tags/android-16.0.0_r4/server/TrafficController.cpp?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/packages/modules/Permission",
+      "path": "service/java/com/android/server/permission/PermissionManagerServiceImpl.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/Permission/+/refs/tags/android-16.0.0_r4/service/java/com/android/server/permission/PermissionManagerServiceImpl.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/packages/modules/Connectivity",
+      "path": "framework/src/android/net/VpnService.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/Connectivity/+/refs/tags/android-16.0.0_r4/framework/src/android/net/VpnService.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/packages/modules/Connectivity",
+      "path": "service/native/TrafficController.cpp",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/Connectivity/+/refs/tags/android-16.0.0_r4/service/native/TrafficController.cpp?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/external/sqlite",
+      "path": "dist/sqlite3.c",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/external/sqlite/+/refs/tags/android-16.0.0_r4/dist/sqlite3.c?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "platform/packages/modules/AppSearch",
+      "path": "service/java/com/android/server/appsearch/appsindexer/AppFunctionMetadataParser.java",
+      "tag": "android-16.0.0_r4",
+      "url": "https://android.googlesource.com/platform/packages/modules/AppSearch/+/refs/tags/android-16.0.0_r4/service/java/com/android/server/appsearch/appsindexer/AppFunctionMetadataParser.java?format=TEXT",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "downstreamObservation": {
+    "project": "LineageOS/android_build",
+    "ref": "lineage-23.2",
+    "path": "core/build_id.mk",
+    "url": "https://raw.githubusercontent.com/LineageOS/android_build/lineage-23.2/core/build_id.mk",
+    "sha256": "fa5bd5f0d6a680810212d8a26841625c541e8fcf561ca7668c686bfe73d9f930",
+    "buildId": "BP4A.251205.006",
+    "scope": "Mutable branch inspected on 2026-10-11; not an immutable complete device manifest."
+  },
+  "deliverableValidation": {
+    "bindings": 51,
+    "operationCoverage": 27,
+    "invariantVocabulary": 19,
+    "sourceFiles": 81,
+    "API_signatures_checked": 47,
+    "signatureGaps": [],
+    "checks": "JSON/schema/enums, all 27 operation IDs, invariant references, permission/AppOps identifiers, source presence and SHA-256",
+    "embeddedReportArrayMatchesStandalone": true,
+    "deviceTestsRun": false
+  }
+}

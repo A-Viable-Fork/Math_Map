@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Random walk (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379390558
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: d01842cbd1ea03b45462f90dec6c5cf1249e028a4ce1593acdc7ca990bd90ac8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a vertex chosen uniformly at random from the neighbors of
+
+A random walk on a graph is a very special case of a [[Markov chain]].
+
+random walk on a graph enjoys a property called ''time symmetry'' or ''reversibility''

@@ -19,7 +19,8 @@ const sha = (t) => createHash("sha256").update(t).digest("hex");
 
 // Trust tiers, strongest evidence first: flagged (known wrong), audited (graded field by field against
 // sources; its worst verdict is given), receipted (an addition, every claim quoted), landed (as written),
-// authored (a fill, unreviewed). Links to Mathlib (mapfill/formal.js) are a separate axis, reported per claim.
+// authored (a fill, unreviewed), generated (a graded generation round's design contract, unreviewed field by
+// field). Links to Mathlib (mapfill/formal.js) are a separate axis, reported per claim.
 const FIELDS6 = ["name", "description", "input", "output", "preserved", "broken"];
 const worst = (g) => { const vs = FIELDS6.map((f) => g.fields[f].verdict); return vs.includes("wrong") ? "wrong" : vs.includes("imprecise") ? "imprecise" : vs.every((v) => v === "confirmed") ? "confirmed" : "partly unsupported"; };
 
@@ -32,6 +33,8 @@ export function build() {
   const leanSrc = readdirSync(join(ROOT, "lean/MathMap")).filter((f) => f.endsWith(".lean")).map((f) => [`lean/MathMap/${f}`, readFileSync(join(ROOT, "lean/MathMap", f), "utf8")]);
   const leanFile = (decl) => { const short = decl.split(".").pop(); return leanSrc.find(([, t]) => new RegExp(`^(theorem|def|structure|abbrev)\\s+(\\S+\\.)?${short.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "m").test(t))?.[0] ?? null; };
   const commit = (() => { try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
+  const ANDROID = require("../mapfill/android.js");
+  const NIXOS = require("../mapfill/nixos.js");
   const entries = P.entries.map((e) => {
     const o = { id: e.id, domain: e.domain, name: e.name, kind: e.kind, tags: e.tags, description: e.description,
       input: e.input, output: e.output, preserved: e.preserved, broken: e.broken, complexity: e.complexity || null,
@@ -43,6 +46,11 @@ export function build() {
     if (e.receipts) o.receipts = e.receipts.map((r) => ({ file: r.file, quote: r.quote }));
     if (e.invariants) o.invariants = e.invariants;
     if (e.actsOn) o.actsOn = e.actsOn;
+    if (e.facets?.length > 1) o.facets = e.facets;
+    const ab = ANDROID.BINDINGS.filter((b) => b.entry === e.id);
+    if (ab.length) o.android = { tag: ANDROID.PIN.tag, bindings: ab.map((b) => ({ api: b.api, path: b.path, platformAssurance: b.platformAssurance, contractAssurance: b.contractAssurance, breaks: b.breaks, note: b.note })) };
+    const nb = NIXOS.BINDINGS.filter((b) => b.entry === e.id);
+    if (nb.length) o.nixos = { nixpkgs: NIXOS.PIN.nixpkgs, bindings: nb.map((b) => ({ variant: b.variant, mechanism: b.mechanism, options: b.nixosOptions, path: b.path, platformAssurance: b.platformAssurance, contractAssurance: b.contractAssurance, breaks: b.breaks, verdict: b.verdict, note: b.note })) };
     o.evidence = Object.fromEntries(FIELDS6.map((f) => [f, E.field(e, f).level]));
     if (e.invariants) o.claims = ["preserved", "broken", "output"].flatMap((f) => e.invariants[f].map((v) => ({ field: f, invariant: v, ...E.claim(e, f, v) })));
     if (e.corrected) o.corrected = { fields: e.corrected, landed: e.landedFields, reason: e.correction.reason, receipts: e.correction.receipts };
@@ -52,7 +60,7 @@ export function build() {
     if (e.formal) o.formal = e.formal.map((k) => ({ ...k, url: `https://github.com/leanprover-community/mathlib4/blob/${P.formal.mathlib.commit}/${k.file}` }));
     if (e.conditions) { o.conditions = e.conditions; o.counterexamples = e.counterexamples; o.conditionReceipts = e.conditionReceipts; }
     const g = grades[e.id];
-    o.tier = e.flag ? "flagged" : e.flagResolved ? "receipted" : g ? "audited" : e.origin === "added" ? "receipted" : e.origin === "fill" ? "authored" : "landed";
+    o.tier = e.flag ? "flagged" : e.flagResolved ? "receipted" : g ? "audited" : e.origin === "added" ? "receipted" : e.origin === "fill" ? "authored" : e.origin === "generated" ? "generated" : "landed";
     if (g) { o.auditVerdict = e.corrected ? worst({ fields: Object.fromEntries(FIELDS6.map((f) => [f, e.corrected.includes(f) || (f === "name" && e.flagResolved) ? { verdict: "confirmed" } : gradeOf[e.id].fields[f]])) }) : g; if (e.corrected) o.landedAuditVerdict = g; }
     return o;
   });
@@ -62,7 +70,7 @@ export function build() {
     targeted: TARGETED };
   const files = {};
   const map = { about: "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
-    builtFrom: { commit }, domains: P.declared, vocabulary: P.vocab, invariants: { carriers: P.vocabulary.CARRIERS, terms: P.vocabulary.INVARIANTS, relations: P.vocabulary.RELATIONS, receiptedLinks: P.vocabulary.LINKS.filter((l) => l.receipts) },
+    builtFrom: { commit }, domains: P.domains, vocabulary: P.vocab, invariants: { carriers: P.vocabulary.CARRIERS, terms: P.vocabulary.INVARIANTS, relations: P.vocabulary.RELATIONS, receiptedLinks: P.vocabulary.LINKS.filter((l) => l.receipts) },
     origins: { map: "as landed", fill: "authored from standard mathematics, not reviewed against sources", "clone:<id>": "a pointer resolved to its home entry", added: "an entry the map lacked, each claim receipted by a verbatim quote (receipts)" },
     counts: { entries: entries.length, anchorable: entries.filter((e) => e.anchorable).length, byOrigin: entries.reduce((a, e) => { const k = e.origin.startsWith("clone:") ? "clone" : e.origin; a[k] = (a[k] || 0) + 1; return a; }, {}),
       byTier: entries.reduce((a, e) => { a[e.tier] = (a[e.tier] || 0) + 1; return a; }, {}), withConditions: entries.filter((e) => e.conditions).length, corrected: entries.filter((e) => e.corrected).length,
@@ -75,8 +83,8 @@ export function build() {
     entries: entries.map((e) => e.receipts ? e : e) };
   files["map.json"] = JSON.stringify(map, null, 1) + "\n";
   files["audit.json"] = JSON.stringify(audit, null, 1) + "\n";
-  for (const d of Object.keys(P.declared)) {
-    const L = [`# ${d}: ${P.declared[d].name}`, "", `Built from commit ${commit}. Origins: map (as landed), fill (authored, unreviewed), clone:<id> (resolved pointer), added (receipted).`, ""];
+  for (const d of Object.keys(P.domains)) {
+    const L = [`# ${d}: ${P.domains[d].name}`, "", `Built from commit ${commit}. Origins: map (as landed), fill (authored, unreviewed), clone:<id> (resolved pointer), added (receipted), generated (a graded generation round's design contract).`, ""];
     for (const e of entries.filter((x) => x.domain === d)) {
       L.push(`## ${e.id} ${e.name}`, "", `*${e.kind}; ${e.tags.join(", ")}; origin: ${e.origin}; tier: ${e.tier}${e.auditVerdict ? ` (${e.auditVerdict})` : ""}${e.flag ? `; flagged: ${e.flag.kind}` : ""}*`, "", e.description, "",
         `- input: ${e.input ?? "-"}`, `- output: ${e.output ?? "-"}`, `- preserved: ${e.preserved ?? "-"}`, `- broken: ${e.broken ?? "-"}`, `- complexity: ${e.complexity ?? "-"}`);
@@ -96,7 +104,7 @@ export function build() {
   }
   files["README.md"] = [
     "# Math map", "",
-    "A typed map of mathematical transformations across eight domains. Each entry gives an operation's input, output, preserved invariants and broken invariants, with functional tags from a controlled vocabulary.", "",
+    `A typed map of mathematical transformations across ${Object.keys(P.domains).length} domains: the ${Object.keys(P.declared).length} the landed map declares, and ${P.addedDomains.map((d) => `${d.id}, ${d.name.toLowerCase()}`).join("; ")}, added in \`mapfill/domains.js\`. Each entry gives an operation's input, output, preserved invariants and broken invariants, with functional tags from a controlled vocabulary.`, "",
     `${map.counts.entries} entries, ${map.counts.anchorable} with full types and invariants. The files in this list are generated by \`scripts/build.mjs\` from the sources; \`node scripts/check-all.mjs\` checks the sources and that the generated files are fresh.`, "",
     "## Origins", "",
     "Every entry states where its content comes from:", "",
@@ -105,10 +113,13 @@ export function build() {
     "- **clone:<id>**: the landed entry pointed at another entry; the pointer is resolved.",
     "- **added**: an entry the landed map lacked. Every weight-bearing claim is receipted by a verbatim quote in `excerpts/`.", "",
     "## Trust tiers", "",
-    `Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed). Counts: ${Object.entries(map.counts.byTier).map(([k, v]) => `${k} ${v}`).join(", ")}.`, "",
+    `Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed), **generated** (a design contract from a graded generation round, \`mapfill/generated.js\`, not reviewed field by field; its claims start unchecked). Counts: ${Object.entries(map.counts.byTier).map(([k, v]) => `${k} ${v}`).join(", ")}.`, "",
+    `**Android bindings** (\`mapfill/android.js\`): ${require("../mapfill/android.js").BINDINGS.length} bindings of the D9 entries to Android APIs at AOSP \`${require("../mapfill/android.js").PIN.tag}\` (build ${require("../mapfill/android.js").PIN.buildId}, the base of LineageOS 23.2), each grading the platform primitive and the whole contract separately (enforced, monitored, unknown, not observable), over ${require("../mapfill/android.js").SOURCES.length} hashed source files. Generated in the MM-DR-002 round and graded there; none is a device test.`, "",
+    `**NixOS bindings** (\`mapfill/nixos.js\`): ${require("../mapfill/nixos.js").BINDINGS.length} bindings of the D9 entries to NixOS options, systemd unit settings and kernel features at nixpkgs \`${require("../mapfill/nixos.js").PIN.nixpkgs.slice(0, 7)}\` (${require("../mapfill/nixos.js").PIN.branch}, kernel ${require("../mapfill/nixos.js").PIN.kernel}, systemd ${require("../mapfill/nixos.js").PIN.systemd}), graded the same way, over ${require("../mapfill/nixos.js").SOURCES.length} hashed source files. Generated in the MM-DR-004 round and graded there; none is a host test.`, "",
+    "**Guardians export** (`scripts/export-guardians.mjs`): the D9 entries as tool specifications for Guardians (github.com/metareflection/guardians, MIT), and a personal policy (`--source D9-X07=label --forbid label`) as its taint rules, so an existing checker verifies agent workflows against the map's contracts. Relational and hyperproperty invariants and flows through branching stay outside it; the trial is in `generation/2026-10-11-mm-dr-003/trial-guardians.md`.", "",
     `Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (\`mapfill/conditions.js\`). ${map.counts.withConditions} entries have conditions so far.`, "",
     "## Named invariants and composition", "",
-    `Free-text fields say what an entry preserves and breaks; \`mapfill/invariants.js\` names those invariants (${P.vocabulary.INVARIANTS.length} so far, with the relations between them), gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. \`node scripts/compose.mjs --chain D2-118,D2-117\` then reports, for a chain of entries applied in order, whether each join fits (match, narrowing, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries now.`, "",
+    `Free-text fields say what an entry preserves and breaks; \`mapfill/invariants.js\` names those invariants (${P.vocabulary.INVARIANTS.length} so far, with the relations between them), gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. \`node scripts/compose.mjs --chain D2-118,D2-117\` then reports, for a chain of entries applied in order, whether each join fits (match, narrowing, partial: an input the previous step does not supply, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. A step's input kinds are joint operands, and an implication between invariants carries claims only when it relates preservation itself. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries now.`, "",
     "## Evidence per claim", "",
     `Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib states it). \`scripts/evidence.mjs\` computes them from the audit grades, receipts, corrections and Mathlib links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest. Fields by level: ${LEVELS.map((l) => `${l} ${map.counts.fieldEvidence[l]}`).join(", ")}. Invariant claims by level: ${LEVELS.map((l) => `${l} ${map.counts.claimEvidence[l]}`).join(", ")}.`, "",
     "## Corrections", "",
@@ -125,10 +136,10 @@ export function build() {
     "- `mapfill/`: the fill layer (clone resolution, authored fills, missing homes, flags), the additions (`mapfill/additions.js`), conditions, the invariant vocabulary, and the Mathlib links (`mapfill/formal.js`). See `mapfill/README.md`.",
     "- `audit/`: the fixed sample, its grades, and the targeted receipts.",
     "- `excerpts/`: the verbatim windows that receipt the additions, each with its source URL and the hash of the page or PDF as fetched. Quoted for reference; the sources keep their own licences.",
-    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the evidence levels (`evidence.mjs`), the Mathlib links (`formal.mjs`), the excerpt maker (`excerpt.mjs`), the MCP server (`mcp.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.",
+    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the evidence levels (`evidence.mjs`), the Mathlib links (`formal.mjs`), the excerpt maker (`excerpt.mjs`), the MCP server (`mcp.mjs`), the Guardians export (`export-guardians.mjs`), the topology of the typed map (`topology.mjs`), the free typing pass (`type-lexicon.mjs`), the gap finder (`gaps.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.",
     "- `.infra/`: the vendored [Repo-Infrastructure](https://github.com/A-Viable-Fork/Repo-Infrastructure) kit, pinned by `infra.lock.json` and configured by `infra.json`. `node .infra/run.mjs` runs its checks, and `check-all.mjs` runs it. `repo-map-manifest.json` describes every directory and every file that has no Role header.", "",
     "Generated by `node scripts/build.mjs`, never edited by hand:", "",
-    "- `map.json`: every entry, machine-readable. `domains/D1.md` to `domains/D8.md`: the same, readable. `audit.json`: the grades with their quotes and sources.",
+    `- \`map.json\`: every entry, machine-readable. \`domains/D1.md\` to \`domains/${Object.keys(P.domains).at(-1)}.md\`: the same, readable. \`audit.json\`: the grades with their quotes and sources.`,
     "- `reports/MATHMAP.md` and `reports/AUDIT.md`: data quality and error rates (written by `mathmap.mjs` and `audit.mjs`).",
     "- `MANIFEST.json` and `SHA256SUMS`: the source commit and file hashes, so an answer that cites this map can cite the exact version.", "",
     "Generated by `node .infra/tools/repo-map.mjs`: `REPO-MAP.md`, every directory and file with a one-line description, and the edges between files (imports, and paths a file names). The kit's `repomap` check fails when a file is undescribed or the map is stale.", "",

@@ -1,0 +1,165 @@
+Subject: [PATCH] Track implicit flows through conditionals with a
+ program-counter value
+
+---
+ src/guardians/verify.py          | 35 +++++++++++++--
+ tests/core/test_implicit_flow.py | 75 ++++++++++++++++++++++++++++++++
+ 2 files changed, 106 insertions(+), 4 deletions(-)
+ create mode 100644 tests/core/test_implicit_flow.py
+
+diff --git a/src/guardians/verify.py b/src/guardians/verify.py
+index b0c8142..b202184 100644
+--- a/src/guardians/verify.py
++++ b/src/guardians/verify.py
+@@ -26,6 +26,11 @@ from .workflow import Workflow, WorkflowStep, SymRef
+ 
+ # --- Abstract values ---
+ 
++# Reserved env key for the program-counter value: the join of every condition
++# value the current step is control-dependent on.  '@' cannot start a binding
++# name, so it never collides with a workflow variable.
++PC = "@pc"
++
+ @dataclass
+ class AbstractValue:
+     """A symbolic value carrying taint labels during verification.
+@@ -388,9 +393,16 @@ def _verify_tool_call(
+ 
+     # 3. Resolve arguments
+     resolved = _resolve_abstract(tc.arguments, env)
++    pc = env.get(PC)
+ 
+-    # 4. Taint checks
+-    _check_taint_rules(tc.tool_name, resolved, step.label, spec, policy, registry, result)
++    # 4. Taint checks.  A call made under a condition reveals the condition
++    # whatever its arguments (an implicit flow), so the pc value reaches
++    # every parameter for taint purposes.
++    taint_view = resolved
++    if pc is not None and (pc.labels or pc.provenance):
++        names = set(resolved) | ({p.name for p in spec.params} if spec else set())
++        taint_view = {n: [resolved.get(n), pc] for n in names}
++    _check_taint_rules(tc.tool_name, taint_view, step.label, spec, policy, registry, result)
+ 
+     # 5. Preconditions (Z3)
+     constants = _collect_policy_constants(policy)
+@@ -405,8 +417,8 @@ def _verify_tool_call(
+     _check_automata(policy, tc.tool_name, resolved, step.label, automaton_states, result)
+ 
+     # 7. Build abstract result with provenance tracking
+-    input_labels = _collect_labels(resolved)
+-    input_provenance = _collect_provenance(resolved)
++    input_labels = _collect_labels(resolved) | (pc.labels if pc else set())
++    input_provenance = _collect_provenance(resolved) | (pc.provenance if pc else set())
+     spec_labels = set(spec.source_labels) if spec else set()
+     abstract_result = AbstractValue(
+         labels=spec_labels | input_labels,
+@@ -459,6 +471,17 @@ def _verify_conditional(
+     # created in only one branch does not escape the conditional.
+     entry = AbstractState(env=_copy_env(env), automata=_copy_auto(automaton_states))
+ 
++    # Raise the pc by the values the condition reads, for both branches.
++    # Start from the outer pc, not from an empty value: sanitized_for joins
++    # by intersection, so an empty start would erase every sanitization.
++    outer_pc = entry.env.get(PC)
++    pc = outer_pc
++    for name in expr_names(c.condition):
++        if name in env and name != PC:
++            pc = env[name] if pc is None else join_value(pc, env[name])
++    if pc is not None:
++        entry.env[PC] = pc
++
+     then_state = entry.copy()
+     _verify_steps(c.then_steps, policy, registry, then_state.env, then_state.automata, result)
+ 
+@@ -466,6 +489,10 @@ def _verify_conditional(
+     _verify_steps(c.else_steps, policy, registry, else_state.env, else_state.automata, result)
+ 
+     joined = join_state(then_state, else_state)
++    if outer_pc is None:
++        joined.env.pop(PC, None)
++    else:
++        joined.env[PC] = outer_pc
+     _install_state(joined, env, automaton_states)
+ 
+ 
+diff --git a/tests/core/test_implicit_flow.py b/tests/core/test_implicit_flow.py
+new file mode 100644
+index 0000000..e6c09fb
+--- /dev/null
++++ b/tests/core/test_implicit_flow.py
+@@ -0,0 +1,75 @@
++"""Tests for implicit flows: a call made under a condition reveals the condition."""
++
++from guardians.workflow import Workflow
++from guardians.tools import ToolSpec, ParamSpec, ToolRegistry
++from guardians.policy import Policy, TaintRule
++from guardians.verify import verify
++
++
++def _registry() -> ToolRegistry:
++    r = ToolRegistry()
++    r.register(ToolSpec(name="read_secret", source_labels=["secret"]), lambda: "s")
++    r.register(ToolSpec(name="read_public"), lambda: "p")
++    r.register(ToolSpec(name="declassify", params=[ParamSpec(name="v")]), lambda v=None: v)
++    r.register(ToolSpec(name="send", params=[ParamSpec(name="body", is_taint_sink=True)]), lambda body=None: None)
++    return r
++
++
++def _policy() -> Policy:
++    return Policy(
++        name="p",
++        allowed_tools=["read_secret", "read_public", "declassify", "send"],
++        taint_rules=[TaintRule(name="no-secret-out", source_tool="read_secret",
++                               sink_tool="send", sink_param="*", sanitizers=["declassify"])],
++    )
++
++
++def _call(label, tool, args=None, bind=None):
++    return {"label": label, "tool_call": {"tool_name": tool, "arguments": args or {}, "result_binding": bind}}
++
++
++def _if(label, cond, then, els=()):
++    return {"label": label, "conditional": {"condition": cond, "then_steps": list(then), "else_steps": list(els)}}
++
++
++def _run(steps):
++    return verify(Workflow(goal="t", steps=steps), _policy(), _registry())
++
++
++def test_constant_sent_under_secret_condition_is_flagged():
++    r = _run([_call("r", "read_secret", bind="s"),
++              _if("b", "s == 'x'", [_call("y", "send", {"body": "yes"})], [_call("n", "send", {"body": "no"})])])
++    assert not r.ok
++    assert {v.step_label for v in r.violations} == {"y", "n"}
++
++
++def test_condition_on_public_value_is_clean():
++    r = _run([_call("r", "read_public", bind="p"),
++              _if("b", "p == 'x'", [_call("y", "send", {"body": "yes"})])])
++    assert r.ok
++
++
++def test_condition_on_declassified_value_is_clean():
++    r = _run([_call("r", "read_secret", bind="s"), _call("d", "declassify", {"v": {"ref": "s"}}, bind="pub"),
++              _if("b", "pub == 'x'", [_call("y", "send", {"body": "yes"})])])
++    assert r.ok
++
++
++def test_value_bound_in_both_branches_carries_the_condition():
++    r = _run([_call("r", "read_secret", bind="s"),
++              _if("b", "s == 'x'", [_call("p1", "read_public", bind="v")], [_call("p2", "read_public", bind="v")]),
++              _call("out", "send", {"body": {"ref": "v"}})])
++    assert [v.step_label for v in r.violations] == ["out"]
++
++
++def test_pc_is_restored_after_the_conditional():
++    r = _run([_call("r", "read_secret", bind="s"),
++              _if("b", "s == 'x'", [_call("p", "read_public", bind="unused")]),
++              _call("out", "send", {"body": "constant"})])
++    assert r.ok
++
++
++def test_nested_conditionals_accumulate():
++    r = _run([_call("r", "read_secret", bind="s"), _call("q", "read_public", bind="p"),
++              _if("outer", "s == 'x'", [_if("inner", "p == 'y'", [_call("y", "send", {"body": "c"})])])])
++    assert [v.step_label for v in r.violations] == ["y"]

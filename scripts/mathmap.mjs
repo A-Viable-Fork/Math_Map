@@ -2,7 +2,7 @@
 //   entries, applies the fill layer (mapfill/: clone resolution and authored fills), checks the parse and
 //   the fills, reports data quality, and answers queries.
 // Contract: `node scripts/mathmap.mjs` checks and writes reports/MATHMAP.md; `--check` only checks;
-//   query flags print matching entries: --id D1-004, --domain D4, --tag compression (repeatable, all must
+//   query flags print matching entries: --id D1-004, --domain D4 (where the entry was minted), --facet D4 (any domain it belongs to), --tag compression (repeatable, all must
 //   match), --kind Transformer, --text quotient (searches name, description, types and invariants),
 //   --stubs, --origin fill|clone|map|dangling, --limit N, --full. --landed queries the map as landed,
 //   without the fill layer. Exit 1 if the parse disagrees with the map's declared counts or a fill is bad.
@@ -135,15 +135,24 @@ export function parse() {
   }
   const { ADDITIONS } = require("../mapfill/additions.js");
   for (const a of ADDITIONS) out.push({ ...a, domain: a.id.slice(0, 2), heading: a.name, status: "Added / receipted (mapfill/additions.js)", iso: "", origin: "added", reading: null, unknown: false, ptr: {} });
+  // Generated entries: a graded generation round's design contracts, at their own tier (mapfill/generated.js).
+  const { ROUNDS, GENERATED } = require("../mapfill/generated.js");
+  for (const g of GENERATED) out.push({ ...g, domain: g.id.slice(0, 2), heading: g.name, status: `Generated / graded (mapfill/generated.js, round ${g.round})`, iso: "", origin: "generated", reading: null, unknown: false, ptr: {} });
   const { CONDITIONS } = require("../mapfill/conditions.js");
   const outById2 = Object.fromEntries(out.map((e) => [e.id, e]));
   for (const c of CONDITIONS) { const e = outById2[c.id]; if (e) { e.conditions = c.conditions; e.counterexamples = c.counterexamples || []; e.conditionReceipts = c.receipts; } }
   const V = require("../mapfill/invariants.js");
   for (const a of V.ACTS_ON) { const e = outById2[a.entry]; if (e) e.actsOn = { input: a.input, output: a.output }; }
   for (const l of V.LINKS) { const e = outById2[l.entry]; if (e) { e.invariants ||= { preserved: [], broken: [], output: [] }; if (e.invariants[l.field] && !e.invariants[l.field].includes(l.invariant)) e.invariants[l.field].push(l.invariant); } }
+  const { FACETS } = require("../mapfill/facets.js");
+  for (const e of out) e.facets = [e.domain];
+  for (const f of FACETS) { const e = outById2[f.entry]; if (e && !e.facets.includes(f.facet)) e.facets.push(f.facet); }
   const { MATHLIB, FORMAL } = require("../mapfill/formal.js");
   for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note }); }
-  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, corrections: CORRECTIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
+  // The landed map's eight domains, plus the domains added in mapfill/domains.js.
+  const { DOMAINS, TAGS } = require("../mapfill/domains.js");
+  const domains = { ...P.declared, ...Object.fromEntries(DOMAINS.map((d) => [d.id, { name: d.name, added: true }])) };
+  return { ...P, domains, addedDomains: DOMAINS, addedTags: TAGS, rounds: ROUNDS, generated: GENERATED, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, corrections: CORRECTIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
 }
 
 export function check(P = parse()) {
@@ -154,7 +163,61 @@ export function check(P = parse()) {
     const n = P.landed.filter((e) => e.domain === d).length;
     if (n !== v.count) F.push(`${d}: parsed ${n} entries, the map declares ${v.count}`);
   }
-  if (Object.keys(P.declared).length !== 8) F.push(`expected 8 declared domains, found ${Object.keys(P.declared).length}`);
+  if (Object.keys(P.declared).length !== 8) F.push(`expected the landed map to declare 8 domains, found ${Object.keys(P.declared).length}`);
+  for (const d of P.addedDomains) {
+    if (!/^D\d+$/.test(d.id) || P.declared[d.id]) F.push(`added domain ${d.id}: must be a new D<n>`);
+    if (!d.name || !d.basis) F.push(`added domain ${d.id}: needs a name and a basis`);
+  }
+  for (const t of P.addedTags) { if (P.vocab.includes(t.tag)) F.push(`added tag ${t.tag}: already in the map's vocabulary`); if (!P.domains[t.domain] || !t.definition) F.push(`added tag ${t.tag}: needs a known domain and a definition`); }
+  // Generated entries: well-formed, traceable to a landed round, and typed only in the vocabulary.
+  const rounds = Object.fromEntries(P.rounds.map((r) => [r.id, r])), gids = new Set();
+  const vocIds = new Set(P.vocabulary.INVARIANTS.map((v) => v.id));
+  // The Android binding layer (mapfill/android.js): pinned, hashed, and typed only in the vocabulary.
+  const A = require("../mapfill/android.js"), ASSURANCE = ["enforced", "monitored", "unknown", "not observable"];
+  const apaths = new Set();
+  if (!/^android-[\d.]+_r\d+$/.test(A.PIN.tag) || !A.PIN.buildId) F.push(`android: the pin needs an AOSP tag and build id`);
+  for (const x of A.SOURCES) { if (apaths.has(x.path)) F.push(`android source ${x.path}: listed twice`); apaths.add(x.path); if (!/^[0-9a-f]{64}$/.test(x.sha256)) F.push(`android source ${x.path}: sha256 malformed`); }
+  for (const b of A.BINDINGS) {
+    const at = `android ${b.entry} ${b.api || "(no realization)"}`;
+    if (!P.generated.some((g) => g.id === b.entry)) F.push(`${at}: no such D9 entry`);
+    for (const k of ["platformAssurance", "contractAssurance"]) if (!ASSURANCE.includes(b[k])) F.push(`${at}: ${k} must be one of ${ASSURANCE.join(", ")}`);
+    for (const v of Object.values(b.invariantAssurance || {})) if (!ASSURANCE.includes(v)) F.push(`${at}: invariant assurance ${v} is not a level`);
+    if (b.api === null) { if (b.path !== null || b.platformAssurance !== "not observable" || !b.note) F.push(`${at}: a binding with no realization needs no path, "not observable" and a note`); }
+    else if (!b.path) F.push(`${at}: needs a path`);
+    for (const x of b.sources || []) if (!apaths.has(x)) F.push(`${at}: source ${x} is not a hashed source`);
+    for (const v of [...Object.keys(b.invariantAssurance || {}), ...(b.breaks || []), ...(b.unestablished || [])]) if (!vocIds.has(v)) F.push(`${at}: unknown invariant ${v}`);
+  }
+  // The NixOS binding layer (mapfill/nixos.js): pinned, hashed, and typed only in the vocabulary.
+  const NX = require("../mapfill/nixos.js"), nkeys = new Set();
+  if (!/^[0-9a-f]{40}$/.test(NX.PIN.nixpkgs || "")) F.push(`nixos: the pin needs a full nixpkgs commit`);
+  for (const x of NX.SOURCES) { const k = `${x.repo}:${x.path}`; if (nkeys.has(k)) F.push(`nixos source ${k}: listed twice`); nkeys.add(k); if (!/^[0-9a-f]{64}$/.test(x.sha256)) F.push(`nixos source ${k}: sha256 malformed`); }
+  for (const b of NX.BINDINGS) {
+    const at = `nixos ${b.entry} ${b.variant}`;
+    if (!P.generated.some((g) => g.id === b.entry)) F.push(`${at}: no such D9 entry`);
+    for (const k of ["platformAssurance", "contractAssurance"]) if (!ASSURANCE.includes(b[k])) F.push(`${at}: ${k} must be one of ${ASSURANCE.join(", ")}`);
+    for (const v of Object.values(b.invariantAssurance || {})) if (!ASSURANCE.includes(v)) F.push(`${at}: invariant assurance ${v} is not a level`);
+    if (b.mechanism === null) { if (b.path !== null || b.platformAssurance !== "not observable" || !b.note) F.push(`${at}: a binding with no mechanism needs no path, "not observable" and a note`); }
+    else if (!b.path && !b.kernel?.source) F.push(`${at}: needs a nixpkgs path or a kernel source`);
+    for (const x of b.sources || []) if (!nkeys.has(x)) F.push(`${at}: source ${x} is not a hashed source`);
+    for (const v of [...Object.keys(b.invariantAssurance || {}), ...(b.breaks || []), ...(b.unestablished || [])]) if (!vocIds.has(v)) F.push(`${at}: unknown invariant ${v}`);
+  }
+  for (const g of P.generated) {
+    const at = `generated ${g.id}`;
+    if (!/^D\d+-X\d{2}$/.test(g.id)) F.push(`${at}: id must be D<n>-X<nn>`);
+    if (gids.has(g.id) || P.landed.some((e) => e.id === g.id) || P.additions.some((a) => a.id === g.id)) F.push(`${at}: id is not unique`); gids.add(g.id);
+    if (!P.domains[g.id.slice(0, 2)]?.added) F.push(`${at}: must belong to an added domain`);
+    for (const k of ["name", "kind", "description", ...FIELDS]) if (!g[k] || !String(g[k]).trim()) F.push(`${at}: lacks ${k}`);
+    const ok = new Set([...P.vocab, ...P.addedTags.filter((t) => t.domain === g.id.slice(0, 2)).map((t) => t.tag)]);
+    if (!(g.tags || []).length) F.push(`${at}: needs tags`);
+    for (const t of g.tags || []) if (!ok.has(t)) F.push(`${at}: tag ${t} is in neither the map's vocabulary nor its domain's tags`);
+    const r = rounds[g.round];
+    if (!r) F.push(`${at}: unknown round ${g.round}`);
+    else { try { readFileSync(join(ROOT, r.dir, "grading.md"), "utf8"); } catch { F.push(`${at}: round ${g.round} has no grading.md in ${r.dir}`); } }
+    const inv = g.invariants || {};
+    for (const f of ["preserved", "broken", "output"]) for (const v of inv[f] || []) if (!vocIds.has(v)) F.push(`${at}: ${f} names unknown invariant ${v}`);
+    for (const v of inv.preserved || []) if ((inv.broken || []).includes(v)) F.push(`${at}: ${v} is both preserved and broken`);
+    for (const k of [...(g.actsOn?.input || []), ...(g.actsOn?.output || [])]) if (!(k in P.vocabulary.CARRIERS)) F.push(`${at}: unknown carrier ${k}`);
+  }
   if (P.vocab.length < 20) F.push(`the controlled vocabulary parsed to only ${P.vocab.length} tags`);
   for (const e of P.landed) if (!e.name || !e.kind) F.push(`${e.id}: missing name or operation kind`);
   const landedById = Object.fromEntries(P.landed.map((e) => [e.id, e]));
@@ -226,10 +289,11 @@ export function check(P = parse()) {
   const V = P.vocabulary, vids = new Set();
   const kinds = V.CARRIERS;
   for (const [k, p] of Object.entries(kinds)) if (p !== null && !(p in kinds)) F.push(`carrier ${k}: unknown parent ${p}`);
-  for (const v of V.INVARIANTS) { if (vids.has(v.id)) F.push(`invariant ${v.id}: defined twice`); vids.add(v.id); if (!v.name || !v.kind || !v.definition) F.push(`invariant ${v.id}: needs a name, kind and definition`); if (!(v.carrier in kinds)) F.push(`invariant ${v.id}: unknown carrier ${v.carrier}`); if (!/^[a-z0-9-]+$/.test(v.id)) F.push(`invariant ${v.id}: ids are lowercase words joined by hyphens`); }
+  for (const v of V.INVARIANTS) { if (vids.has(v.id)) F.push(`invariant ${v.id}: defined twice`); vids.add(v.id); if (!v.name || !v.kind || !v.definition) F.push(`invariant ${v.id}: needs a name, kind and definition`); if (!(v.carrier in kinds)) F.push(`invariant ${v.id}: unknown carrier ${v.carrier}`); if (!/^[a-z0-9-]+$/.test(v.id)) F.push(`invariant ${v.id}: ids are lowercase words joined by hyphens`); if (!["state", "step", "trace", "relational", "hyperproperty"].includes(v.class)) F.push(`invariant ${v.id}: class must be state, step, trace, relational or hyperproperty`); }
   for (const r of V.RELATIONS) {
     for (const k of [r.from, r.to]) if (!vids.has(k)) F.push(`relation ${r.from} to ${r.to}: unknown invariant ${k}`);
     if (!["implies", "equivalent"].includes(r.kind)) F.push(`relation ${r.from} to ${r.to}: bad kind ${r.kind}`);
+    if (r.kind === "implies" && !["preservation", "state"].includes(r.over)) F.push(`relation ${r.from} to ${r.to}: an implication must say whether it is over preservation or state`);
     if (!(r.receipts || []).length && !r.basis) F.push(`relation ${r.from} to ${r.to}: needs receipts or a basis`);
     for (const x of r.receipts || []) { const m = inFile(x); if (m) F.push(`relation ${r.from} to ${r.to}: ${m}`); }
   }
@@ -243,6 +307,21 @@ export function check(P = parse()) {
     for (const [side, ph] of [["input", a.inputPhrase], ["output", a.outputPhrase]]) for (const x of [ph].flat()) if (!x || !nrm(e[side]).includes(nrm(x))) F.push(`${at}: phrase "${x}" is not in the entry's ${side} field`);
   }
   const used = new Set();
+  for (const f of require("../mapfill/facets.js").FACETS) {
+    const at = `facet ${f.entry} in ${f.facet}`;
+    if (!byIdAll[f.entry]) F.push(`${at}: no such entry`);
+    else if (byIdAll[f.entry].domain === f.facet) F.push(`${at}: an entry is already in its own domain`);
+    if (!P.domains[f.facet]) F.push(`${at}: no such domain`);
+    if (!f.basis) F.push(`${at}: needs a basis`);
+  }
+  for (const c of V.CONTEXT || []) {
+    const at = `context ${c.entry}`;
+    if (!byIdAll[c.entry]) F.push(`${at}: no such entry`);
+    if (!c.basis) F.push(`${at}: needs a basis`);
+    const labels = [...(c.raises || []), ...(c.clears || []), ...(c.forbids || [])];
+    if (!labels.length) F.push(`${at}: raises, clears or forbids nothing`);
+    for (const k of labels) if (!/^[a-z0-9-]+$/.test(k)) F.push(`${at}: label ${k} must be lowercase words joined by hyphens`);
+  }
   for (const l of V.LINKS) {
     const e = byIdAll[l.entry], at = `link ${l.entry}.${l.field} to ${l.invariant}`;
     if (!e) { F.push(`${at}: no such entry`); continue; }
@@ -257,8 +336,9 @@ export function check(P = parse()) {
     } else if (!l.phrase || !nrm(e[l.field]).includes(nrm(l.phrase))) F.push(`${at}: phrase "${l.phrase}" is not in the entry's ${l.field} field`);
     used.add(l.invariant);
   }
+  for (const g of P.generated) for (const f of ["preserved", "broken", "output"]) for (const v of g.invariants?.[f] || []) used.add(v);
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
-  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/lean.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
+  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/lean.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/facets.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
   return F;
 }
@@ -279,7 +359,7 @@ function render(P) {
   L.push("The structural layer: typed mathematical transformations (input, output, preserved and broken invariants, functional tags). Query with `node scripts/mathmap.mjs --tag compression --domain D4` and similar; `--landed` queries the map without the fill layer. See the script header.", "");
   L.push("## 1. Entries by domain", "", "Counts after the fill layer, with the landed count in brackets. *Anchorable*: has input, output and at least one invariant field, so it can anchor a composite (a chain of entries whose types meet).", "", "| Domain | Name | Entries | Name-only stubs | With invariants | Anchorable |", "|---|---|---|---|---|---|");
   const cnt = (es, d, fn) => es.filter((e) => e.domain === d && fn(e)).length;
-  for (const [d, v] of Object.entries(P.declared)) {
+  for (const [d, v] of Object.entries(P.domains)) {
     L.push(`| ${d} | ${v.name} | ${cnt(P.entries, d, () => true)} | ${cnt(P.entries, d, isStub)} [${cnt(P.landed, d, isStub)}] | ${cnt(P.entries, d, (e) => e.preserved || e.broken)} [${cnt(P.landed, d, (e) => e.preserved || e.broken)}] | ${cnt(P.entries, d, anchorable)} [${cnt(P.landed, d, anchorable)}] |`);
   }
   L.push(`| **all** | | **${P.entries.length}** | **${Q.stubs.length}** [${L0.stubs.length}] | **${P.entries.length - Q.noInvariants.length}** [${P.landed.length - L0.noInvariants.length}] | **${Q.anchorable.length}** [${L0.anchorable.length}] |`, "");
@@ -342,11 +422,12 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const a = process.argv.slice(2);
   const all = (k) => a.flatMap((x, i) => (x === k ? [a[i + 1]] : []));
   const one = (k) => all(k)[0];
-  const query = ["--id", "--domain", "--tag", "--kind", "--text", "--stubs", "--origin"].some((k) => a.includes(k));
+  const query = ["--id", "--domain", "--facet", "--tag", "--kind", "--text", "--stubs", "--origin"].some((k) => a.includes(k));
   if (query) {
     let es = a.includes("--landed") ? P.landed : P.entries;
     if (one("--id")) es = es.filter((e) => e.id === one("--id"));
     if (one("--domain")) es = es.filter((e) => e.domain === one("--domain"));
+    if (one("--facet")) es = es.filter((e) => (e.facets || [e.domain]).includes(one("--facet")));
     for (const t of all("--tag")) es = es.filter((e) => e.tags.includes(t));
     if (one("--kind")) es = es.filter((e) => e.kind.toLowerCase() === one("--kind").toLowerCase());
     if (one("--text")) { const q = one("--text").toLowerCase(); es = es.filter((e) => [e.name, e.description, e.preserved, e.broken, e.input, e.output].filter(Boolean).join(" ").toLowerCase().includes(q)); }
@@ -359,5 +440,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   }
   if (!a.includes("--check")) { writeFileSync(join(ROOT, "reports/MATHMAP.md"), render(P) + "\n"); console.log("wrote reports/MATHMAP.md"); }
   const Q = quality(P.entries, P.vocab);
-  console.log(`mathmap: PASS (${P.entries.length} entries in ${Object.keys(P.declared).length} domains; ${P.fills.length} fills; ${Q.stubs.length} stubs left; ${Q.anchorable.length} anchorable)`);
+  console.log(`mathmap: PASS (${P.entries.length} entries in ${Object.keys(P.domains).length} domains; ${P.fills.length} fills; ${Q.stubs.length} stubs left; ${Q.anchorable.length} anchorable)`);
 }

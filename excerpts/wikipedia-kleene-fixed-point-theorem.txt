@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Kleene fixed-point theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1289692885
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 73b045f95c942fd9ab26d2080ec9214b4d5bbcab73de4bc6a36077583586b3a0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Then <math>f</math> has a [[least fixed point]], which is the [[supremum]] of the ascending Kleene chain of <math>f.</math>
+
+obtained by [[iterated function|iterating]] ''f'' on the [[least element]] ⊥ of ''L''.
+
+Suppose <math>(L, \sqsubseteq)</math> is a [[complete partial order|directed-complete partial order]] (dcpo) with a least element, and let <math>f: L \to L</math> be a [[Scott continuity|Scott-continuous]] (and therefore [[monotone function|monotone]]) [[function (mathematics)|function]].

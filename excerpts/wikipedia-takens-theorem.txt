@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Takens's theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1367526951
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 88212fead321ffeb57af398b98ffedb09c3df420ae29264d13a187dcfcb9b9be
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The reconstruction preserves the properties of the dynamical system that do not change under smooth
+
+but it does not preserve the [[geometric shape]] of structures in [[phase space]].
+
+reconstruction is possible once you reach dimension <math>2d+1</math>

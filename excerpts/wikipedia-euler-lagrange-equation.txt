@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Euler–Lagrange equation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377262229
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 9d8fa31c41c6a7015af97bc636a74119dca54c7199fe59edf50a1d2ee17456fa
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+are a system of second-order [[ordinary differential equation]]s whose solutions are [[stationary point]]s of the given [[action (physics)|action functional]].
+
+it takes the same form in any system of [[generalized coordinate]]s
