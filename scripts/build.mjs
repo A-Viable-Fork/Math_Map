@@ -34,6 +34,7 @@ export function build() {
   const leanFile = (decl) => { const short = decl.split(".").pop(); return leanSrc.find(([, t]) => new RegExp(`^(theorem|def|structure|abbrev)\\s+(\\S+\\.)?${short.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "m").test(t))?.[0] ?? null; };
   const commit = (() => { try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
   const ANDROID = require("../mapfill/android.js");
+  const NIXOS = require("../mapfill/nixos.js");
   const entries = P.entries.map((e) => {
     const o = { id: e.id, domain: e.domain, name: e.name, kind: e.kind, tags: e.tags, description: e.description,
       input: e.input, output: e.output, preserved: e.preserved, broken: e.broken, complexity: e.complexity || null,
@@ -48,6 +49,8 @@ export function build() {
     if (e.facets?.length > 1) o.facets = e.facets;
     const ab = ANDROID.BINDINGS.filter((b) => b.entry === e.id);
     if (ab.length) o.android = { tag: ANDROID.PIN.tag, bindings: ab.map((b) => ({ api: b.api, path: b.path, platformAssurance: b.platformAssurance, contractAssurance: b.contractAssurance, breaks: b.breaks, note: b.note })) };
+    const nb = NIXOS.BINDINGS.filter((b) => b.entry === e.id);
+    if (nb.length) o.nixos = { nixpkgs: NIXOS.PIN.nixpkgs, bindings: nb.map((b) => ({ variant: b.variant, mechanism: b.mechanism, options: b.nixosOptions, path: b.path, platformAssurance: b.platformAssurance, contractAssurance: b.contractAssurance, breaks: b.breaks, verdict: b.verdict, note: b.note })) };
     o.evidence = Object.fromEntries(FIELDS6.map((f) => [f, E.field(e, f).level]));
     if (e.invariants) o.claims = ["preserved", "broken", "output"].flatMap((f) => e.invariants[f].map((v) => ({ field: f, invariant: v, ...E.claim(e, f, v) })));
     if (e.corrected) o.corrected = { fields: e.corrected, landed: e.landedFields, reason: e.correction.reason, receipts: e.correction.receipts };
@@ -112,6 +115,7 @@ export function build() {
     "## Trust tiers", "",
     `Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed), **generated** (a design contract from a graded generation round, \`mapfill/generated.js\`, not reviewed field by field; its claims start unchecked). Counts: ${Object.entries(map.counts.byTier).map(([k, v]) => `${k} ${v}`).join(", ")}.`, "",
     `**Android bindings** (\`mapfill/android.js\`): ${require("../mapfill/android.js").BINDINGS.length} bindings of the D9 entries to Android APIs at AOSP \`${require("../mapfill/android.js").PIN.tag}\` (build ${require("../mapfill/android.js").PIN.buildId}, the base of LineageOS 23.2), each grading the platform primitive and the whole contract separately (enforced, monitored, unknown, not observable), over ${require("../mapfill/android.js").SOURCES.length} hashed source files. Generated in the MM-DR-002 round and graded there; none is a device test.`, "",
+    `**NixOS bindings** (\`mapfill/nixos.js\`): ${require("../mapfill/nixos.js").BINDINGS.length} bindings of the D9 entries to NixOS options, systemd unit settings and kernel features at nixpkgs \`${require("../mapfill/nixos.js").PIN.nixpkgs.slice(0, 7)}\` (${require("../mapfill/nixos.js").PIN.branch}, kernel ${require("../mapfill/nixos.js").PIN.kernel}, systemd ${require("../mapfill/nixos.js").PIN.systemd}), graded the same way, over ${require("../mapfill/nixos.js").SOURCES.length} hashed source files. Generated in the MM-DR-004 round and graded there; none is a host test.`, "",
     "**Guardians export** (`scripts/export-guardians.mjs`): the D9 entries as tool specifications for Guardians (github.com/metareflection/guardians, MIT), and a personal policy (`--source D9-X07=label --forbid label`) as its taint rules, so an existing checker verifies agent workflows against the map's contracts. Relational and hyperproperty invariants and flows through branching stay outside it; the trial is in `generation/2026-10-11-mm-dr-003/trial-guardians.md`.", "",
     `Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (\`mapfill/conditions.js\`). ${map.counts.withConditions} entries have conditions so far.`, "",
     "## Named invariants and composition", "",

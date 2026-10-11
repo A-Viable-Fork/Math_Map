@@ -85,6 +85,7 @@
 | `mapfill/index.js` | the fill layer's index. |
 | `mapfill/invariants.js` | the invariant vocabulary. |
 | `mapfill/lean.js` | the Lean layer's registry. |
+| `mapfill/nixos.js` | the NixOS binding layer. |
 | `scripts/audit.mjs` | the math map audit. |
 | `scripts/blind.mjs` | second readings of the Mathlib match grades. |
 | `scripts/build.mjs` | the build. |
@@ -484,6 +485,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/lean.js` | names | `lean/AUDIT.json` |
 | `mapfill/lean.js` | names | `scripts/lean.mjs` |
 | `mapfill/lean.js` | names | `source/math_map.md` |
+| `mapfill/nixos.js` | names | `generation/2026-10-11-mm-dr-004/grading.md` |
+| `mapfill/nixos.js` | names | `mapfill/android.js` |
+| `mapfill/nixos.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/README.md` | names | `scripts/excerpt.mjs` |
 | `mapfill/README.md` | names | `scripts/mathmap.mjs` |
 | `mapfill/README.md` | names | `source/Category_Theory_Transformation_Enumeration.pdf` |
@@ -509,6 +513,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `README.md` | names | `mapfill/generated.js` |
 | `README.md` | names | `mapfill/invariants.js` |
 | `README.md` | names | `mapfill/lean.js` |
+| `README.md` | names | `mapfill/nixos.js` |
 | `README.md` | names | `mapfill/README.md` |
 | `README.md` | names | `repo-map-manifest.json` |
 | `README.md` | names | `reports/AUDIT.md` |
@@ -580,6 +585,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | imports | `audit/targeted-0_1.js` |
 | `scripts/build.mjs` | imports | `mapfill/android.js` |
 | `scripts/build.mjs` | imports | `mapfill/lean.js` |
+| `scripts/build.mjs` | imports | `mapfill/nixos.js` |
 | `scripts/build.mjs` | imports | `scripts/evidence.mjs` |
 | `scripts/build.mjs` | imports | `scripts/lean.mjs` |
 | `scripts/build.mjs` | imports | `scripts/mathmap.mjs` |
@@ -603,6 +609,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | names | `mapfill/generated.js` |
 | `scripts/build.mjs` | names | `mapfill/invariants.js` |
 | `scripts/build.mjs` | names | `mapfill/lean.js` |
+| `scripts/build.mjs` | names | `mapfill/nixos.js` |
 | `scripts/build.mjs` | names | `mapfill/README.md` |
 | `scripts/build.mjs` | names | `README.md` |
 | `scripts/build.mjs` | names | `repo-map-manifest.json` |
@@ -685,6 +692,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/mathmap.mjs` | imports | `mapfill/generated.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/index.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/invariants.js` |
+| `scripts/mathmap.mjs` | imports | `mapfill/nixos.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/additions.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/android.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/conditions.js` |
@@ -704,6 +712,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/mathmap.mjs` | names | `mapfill/index.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/invariants.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/lean.js` |
+| `scripts/mathmap.mjs` | names | `mapfill/nixos.js` |
 | `scripts/mathmap.mjs` | names | `reports/MATHMAP.md` |
 | `scripts/mathmap.mjs` | names | `scripts/compose.mjs` |
 | `scripts/mathmap.mjs` | names | `source/math_map.md` |

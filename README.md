@@ -19,6 +19,8 @@ Each entry carries a tier, strongest evidence first: **flagged** (known wrong, w
 
 **Android bindings** (`mapfill/android.js`): 51 bindings of the D9 entries to Android APIs at AOSP `android-16.0.0_r4` (build BP4A.251205.006, the base of LineageOS 23.2), each grading the platform primitive and the whole contract separately (enforced, monitored, unknown, not observable), over 81 hashed source files. Generated in the MM-DR-002 round and graded there; none is a device test.
 
+**NixOS bindings** (`mapfill/nixos.js`): 38 bindings of the D9 entries to NixOS options, systemd unit settings and kernel features at nixpkgs `7c8764b` (nixos-26.05, kernel 6.18.55, systemd 260.5), graded the same way, over 60 hashed source files. Generated in the MM-DR-004 round and graded there; none is a host test.
+
 **Guardians export** (`scripts/export-guardians.mjs`): the D9 entries as tool specifications for Guardians (github.com/metareflection/guardians, MIT), and a personal policy (`--source D9-X07=label --forbid label`) as its taint rules, so an existing checker verifies agent workflows against the map's contracts. Relational and hyperproperty invariants and flows through branching stay outside it; the trial is in `generation/2026-10-11-mm-dr-003/trial-guardians.md`.
 
 Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 9 entries have conditions so far.

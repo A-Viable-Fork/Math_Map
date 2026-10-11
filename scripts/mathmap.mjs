@@ -187,6 +187,20 @@ export function check(P = parse()) {
     for (const x of b.sources || []) if (!apaths.has(x)) F.push(`${at}: source ${x} is not a hashed source`);
     for (const v of [...Object.keys(b.invariantAssurance || {}), ...(b.breaks || []), ...(b.unestablished || [])]) if (!vocIds.has(v)) F.push(`${at}: unknown invariant ${v}`);
   }
+  // The NixOS binding layer (mapfill/nixos.js): pinned, hashed, and typed only in the vocabulary.
+  const NX = require("../mapfill/nixos.js"), nkeys = new Set();
+  if (!/^[0-9a-f]{40}$/.test(NX.PIN.nixpkgs || "")) F.push(`nixos: the pin needs a full nixpkgs commit`);
+  for (const x of NX.SOURCES) { const k = `${x.repo}:${x.path}`; if (nkeys.has(k)) F.push(`nixos source ${k}: listed twice`); nkeys.add(k); if (!/^[0-9a-f]{64}$/.test(x.sha256)) F.push(`nixos source ${k}: sha256 malformed`); }
+  for (const b of NX.BINDINGS) {
+    const at = `nixos ${b.entry} ${b.variant}`;
+    if (!P.generated.some((g) => g.id === b.entry)) F.push(`${at}: no such D9 entry`);
+    for (const k of ["platformAssurance", "contractAssurance"]) if (!ASSURANCE.includes(b[k])) F.push(`${at}: ${k} must be one of ${ASSURANCE.join(", ")}`);
+    for (const v of Object.values(b.invariantAssurance || {})) if (!ASSURANCE.includes(v)) F.push(`${at}: invariant assurance ${v} is not a level`);
+    if (b.mechanism === null) { if (b.path !== null || b.platformAssurance !== "not observable" || !b.note) F.push(`${at}: a binding with no mechanism needs no path, "not observable" and a note`); }
+    else if (!b.path && !b.kernel?.source) F.push(`${at}: needs a nixpkgs path or a kernel source`);
+    for (const x of b.sources || []) if (!nkeys.has(x)) F.push(`${at}: source ${x} is not a hashed source`);
+    for (const v of [...Object.keys(b.invariantAssurance || {}), ...(b.breaks || []), ...(b.unestablished || [])]) if (!vocIds.has(v)) F.push(`${at}: unknown invariant ${v}`);
+  }
   for (const g of P.generated) {
     const at = `generated ${g.id}`;
     if (!/^D\d+-X\d{2}$/.test(g.id)) F.push(`${at}: id must be D<n>-X<nn>`);

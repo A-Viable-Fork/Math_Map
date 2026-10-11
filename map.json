@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "2fa9ac8c8b17b6fec0c7a85c71a2a2f14e472e90"
+  "commit": "29c73b609b92c639ec3f852de779a9313d83ea88"
  },
  "domains": {
   "D1": {
@@ -58244,6 +58244,102 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "private-network",
+      "mechanism": "sendto/sendmsg, confined by systemd network namespace and address-family filter",
+      "options": [
+       "systemd.services.<name>.serviceConfig.PrivateNetwork",
+       "systemd.services.<name>.serviceConfig.RestrictAddressFamilies",
+       "systemd.services.<name>.serviceConfig.SystemCallFilter",
+       "systemd.services.<name>.serviceConfig.SystemCallArchitectures"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] PrivateNetwork=true supplies only loopback in a new netns; an already supplied socket can reach another netns. RestrictAddressFamilies only filters socket(), not passed sockets/socketpair/io_uring. A local broker can relay outside B; successful sends may be partial and are not rolled back."
+     },
+     {
+      "variant": "socket-uid",
+      "mechanism": "nftables meta skuid output filtering",
+      "options": [
+       "networking.nftables.enable",
+       "networking.nftables.ruleset"
+      ],
+      "path": "nixos/modules/services/networking/nftables.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] An explicit output-chain rule can drop the agent socket UID; NixOS incoming firewall options alone do not do this. UID matching reads socket->file->f_cred->fsuid. FD delegation, proxies and separately created sockets defeat the equation of socket owner with causal source."
+     },
+     {
+      "variant": "socket-cgroup",
+      "mechanism": "systemd IPAddressDeny and nftables socket cgroupv2",
+      "options": [
+       "systemd.services.<name>.serviceConfig.IPAddressDeny",
+       "systemd.services.<name>.serviceConfig.IPAddressAllow",
+       "systemd.services.<name>.serviceConfig.Delegate"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] systemd 260.5 documents socket-creation ownership and separately configured socket activation. It can continue without the BPF filter if unsupported. A correctly installed rule enforces that network predicate, not W provenance."
+     },
+     {
+      "variant": "dbus-message",
+      "mechanism": "system/session D-Bus send with bus policy",
+      "options": [
+       "services.dbus.enable",
+       "services.dbus.implementation",
+       "services.dbus.packages"
+      ],
+      "path": "nixos/modules/services/system/dbus.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] At this pin the default implementation is dbus-broker 37; dbus-daemon 1.16.2 is available. Configuration installs policy XML. Upstream reference daemon policy documentation is not a complete broker source audit; access semantics are scoped. Sharing another account session socket shares a capability boundary. Broker action authorization is separate."
+     },
+     {
+      "variant": "nix-daemon-forwarding",
+      "mechanism": "Nix daemon request followed by fixed-output fetch, filtered optionally by nix.firewall",
+      "options": [
+       "nix.firewall.enable",
+       "nix.firewall.extraNftablesRules",
+       "nix.firewall.allowedTCPPorts",
+       "nix.firewall.allowedUDPPorts"
+      ],
+      "path": "nixos/modules/services/system/nix-daemon-firewall.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] A private-network agent can still ask a reachable daemon to perform network work. The native module uses systemd NFTSet and cgroupv2 matching; enabling it alone is not no-egress. This gate does not preserve the original client origin through a broker. A worker that must never export W should not have a host daemon socket unless the daemon and all build/substitution routes enforce that policy."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58443,6 +58539,54 @@
        "e9-erase"
       ],
       "note": "Opening checks access; later fd I/O is not a new provider transaction. Scoped storage constrains accessible objects, not transitive recipients, sync or permanent erasure."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "filesystem-write",
+      "mechanism": "openat/write with DAC and optional service mount confinement",
+      "options": [
+       "users.users.<name>.uid",
+       "users.users.<name>.group",
+       "systemd.services.<name>.serviceConfig.ProtectSystem",
+       "systemd.services.<name>.serviceConfig.ProtectHome",
+       "systemd.services.<name>.serviceConfig.ReadOnlyPaths",
+       "systemd.services.<name>.serviceConfig.ReadWritePaths",
+       "systemd.services.<name>.serviceConfig.BindPaths"
+      ],
+      "path": "nixos/modules/config/users-groups.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-erase",
+       "e9-audit"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Local permitted write can stay inside B; network-backed mounts, remote logging or replicas can leave B. chmod and read-only mount views do not retract all prior writable descriptors. No native complete origin envelope is recorded."
+     },
+     {
+      "variant": "shared-mapping",
+      "mechanism": "mmap(MAP_SHARED) after initial VFS/LSM admission",
+      "options": [
+       "systemd.services.<name>.serviceConfig.RootDirectory",
+       "systemd.services.<name>.serviceConfig.BindPaths",
+       "systemd.services.<name>.serviceConfig.TemporaryFileSystem"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-mediated"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] A process can write W into an already admitted shared mapping and another process can read it and send. The kernel controls initial mapping and PTE permissions; there is no new syscall for each payload write. This refutes a strengthened exact per-effect software-gate claim, not the broader existence of kernel-controlled access."
      }
     ]
    },
@@ -58650,6 +58794,52 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "raw-device",
+      "mechanism": "device file open/ioctl/read under DAC, systemd device policy",
+      "options": [
+       "systemd.services.<name>.serviceConfig.PrivateDevices",
+       "systemd.services.<name>.serviceConfig.DevicePolicy",
+       "systemd.services.<name>.serviceConfig.DeviceAllow",
+       "users.users.<name>.extraGroups"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Raw device access may bypass a portal if devices/groups are granted. Driver-specific checks are not audited here. PrivateDevices/closed policy can deny raw device access; no uniform Android AppOps-equivalent sensor identity/idle/rate rule is supplied by these options."
+     },
+     {
+      "variant": "portal-pipewire",
+      "mechanism": "xdg-desktop-portal Camera/ScreenCast and PipeWire permissions",
+      "options": [
+       "xdg.portal.enable",
+       "xdg.portal.extraPortals",
+       "xdg.portal.config",
+       "services.pipewire.enable",
+       "services.pipewire.extraConfig",
+       "services.pipewire.wireplumber.enable",
+       "services.pipewire.wireplumber.extraConfig"
+      ],
+      "path": "nixos/modules/config/xdg/portal.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Pinned versions: portal 1.20.4, PipeWire 1.6.6, WirePlumber 0.5.14. The inspected access-portal.lua handles devices/camera, not a universal microphone/screen store. Its missing-store fallback is permissive. module-access.c gives unrestricted access to legacy non-Flatpak clients, or a manager socket. Enable options alone do not force every agent through a portal."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58808,6 +58998,105 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "service-namespaces",
+      "mechanism": "systemd service sandbox; NixOS container namespaces",
+      "options": [
+       "systemd.services.<name>.serviceConfig.User",
+       "systemd.services.<name>.serviceConfig.Group",
+       "systemd.services.<name>.serviceConfig.PrivateNetwork",
+       "systemd.services.<name>.serviceConfig.PrivateIPC",
+       "systemd.services.<name>.serviceConfig.PrivateTmp",
+       "systemd.services.<name>.serviceConfig.PrivateDevices",
+       "systemd.services.<name>.serviceConfig.RootDirectory",
+       "systemd.services.<name>.serviceConfig.ProtectHome",
+       "systemd.services.<name>.serviceConfig.RestrictNamespaces",
+       "systemd.services.<name>.serviceConfig.NoNewPrivileges",
+       "containers.<name>.privateNetwork",
+       "containers.<name>.privateUsers",
+       "containers.<name>.bindMounts"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] A separate account partitions DAC ownership; a service adds enforceable inherited boundaries. PrivateIPC does not isolate /dev/shm. NixOS containers share the host kernel and require explicit network and bind-mount policy. No whole-program noninterference or universal origin labeling follows."
+     },
+     {
+      "variant": "seccomp",
+      "mechanism": "systemd seccomp SystemCallFilter and architecture/family restrictions",
+      "options": [
+       "systemd.services.<name>.serviceConfig.SystemCallFilter",
+       "systemd.services.<name>.serviceConfig.SystemCallArchitectures",
+       "systemd.services.<name>.serviceConfig.RestrictAddressFamilies",
+       "systemd.services.<name>.serviceConfig.NoNewPrivileges"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Linux 6.18.55 seccomp filters inherit across fork/exec and cannot dereference pointers. A pathname, whole payload ancestry or future descriptor destination cannot be inferred from scalar syscall arguments. Existing network/file descriptors and io_uring need separate treatment."
+     },
+     {
+      "variant": "landlock",
+      "mechanism": "Landlock self-restriction called by a trusted launcher",
+      "options": [
+       "security.lsm"
+      ],
+      "path": "nixos/modules/security/default.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] NixOS includes Landlock in security.lsm and the default kernel config. This enables the LSM, not a W policy for every account. A launcher must call the API and fail closed on unsupported rights. ABI 4 TCP rules are present from 6.7; ABI 6 scopes from 6.12; ABI 7 logging present from 6.15. Nix 2.34.8 itself applies best-effort abstract-socket scoping for builds when ABI>=6."
+     },
+     {
+      "variant": "apparmor",
+      "mechanism": "AppArmor enforce-mode profile",
+      "options": [
+       "security.apparmor.enable",
+       "security.apparmor.policies.<name>.profile",
+       "security.apparmor.policies.<name>.state"
+      ],
+      "path": "nixos/modules/security/apparmor.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Packaged AppArmor parser/library version is 4.1.7; AppArmor is disabled by default in this module. Profile loading alone does not prove every relevant process has the profile. Enforce rejects denied modeled operations; complain logs rather than denies. No general W contamination latch is provided."
+     },
+     {
+      "variant": "cgroup-resource",
+      "mechanism": "cgroups v2 resource controls and delegation",
+      "options": [
+       "systemd.services.<name>.serviceConfig.MemoryMax",
+       "systemd.services.<name>.serviceConfig.CPUQuota",
+       "systemd.services.<name>.serviceConfig.TasksMax",
+       "systemd.services.<name>.serviceConfig.Delegate",
+       "systemd.services.<name>.serviceConfig.ProtectControlGroups"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Resource containment is enforceable under available controllers but is not an information-flow barrier. No identity should be reduced to a cgroup path that can be reused or changed. CPU/memory limits do not establish timing secrecy; timing is excluded."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58942,6 +59231,29 @@
        "e9-audit"
       ],
       "note": "Does not issue an application-defined object capability carrying target/version/expiry or atomically record every later use."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "dac-or-polkit-issuance",
+      "mechanism": "authorized owner/root creates file access or service-issued grant via polkit",
+      "options": [
+       "users.users.<name>.extraGroups",
+       "security.polkit.enable",
+       "security.polkit.extraConfig"
+      ],
+      "path": "nixos/modules/security/polkit.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] polkit authorizes named actions for participating privileged services; it does not automatically mediate every syscall or manufacture D9 revocable capabilities. Separate accounts confine access but a granted fd/group is not a protected generation/lifetime token."
      }
     ]
    },
@@ -59110,6 +59422,40 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "key-revocation",
+      "mechanism": "KEYCTL_REVOKE on a shared kernel key object",
+      "options": [
+       "security.tpm2.enable"
+      ],
+      "path": "nixos/modules/security/tpm2.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] KEYCTL_REVOKE makes later key operations encounter a revoked object, and is not key-payload erasure. It is a useful narrow revocation primitive. It does not implement the full generation cell/version/history/audit protocol for arbitrary D9 capabilities. TPM enable is deployment support, not the gate for this syscall."
+     },
+     {
+      "variant": "chmod-is-not-revoke",
+      "mechanism": "chmod/ACL removal on a file with existing open descriptions",
+      "options": [
+       "users.users.<name>.group"
+      ],
+      "path": "nixos/modules/config/users-groups.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-revoke",
+       "e9-mediated"
+      ],
+      "verdict": "DEAD",
+      "note": "[RESULT] Removing mode bits does not invalidate an already open file description or mapping. Thus chmod alone as D9-X06 is DEAD; later effect commits can still succeed with retained fd authority."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59270,6 +59616,31 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "read-file",
+      "mechanism": "openat/read or mmap read under DAC/mount/AppArmor restrictions",
+      "options": [
+       "users.users.<name>.uid",
+       "users.users.<name>.extraGroups",
+       "systemd.services.<name>.serviceConfig.ProtectHome",
+       "systemd.services.<name>.serviceConfig.BindReadOnlyPaths",
+       "systemd.services.<name>.serviceConfig.RootDirectory"
+      ],
+      "path": "nixos/modules/config/users-groups.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Read access is enforced; bytes have no mandatory protected origin DAG. A separate adapter can copy a signed envelope but historical source, PC dependencies and post-read process contamination are not kernel file metadata. Reads may also notify a FUSE/network service."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59417,6 +59788,22 @@
       "contractAssurance": "not observable",
       "breaks": [],
       "note": "Ordinary Kotlin/Java/native evaluation does not supply purity, totality or dependency-union proofs. Build a restricted interpreter; Thread/Handler is not its replacement."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "no-stock-pure-labeled-runtime",
+      "mechanism": null,
+      "options": [],
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "UNVERIFIED",
+      "note": "[GENERATED] No stock NixOS mechanism was verified to implement the full pure, total, dependency-labeling D9 expression operation. Nix pure-eval restricts inputs but can fetch or trigger import-from-derivation, and Nix evaluation can diverge. An audited language interpreter/type-and-effect checker is a separately generated adapter."
      }
     ]
    },
@@ -59633,6 +60020,29 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "exclusive-file",
+      "mechanism": "openat(O_CREAT|O_EXCL) or kernel fresh object allocation",
+      "options": [
+       "systemd.services.<name>.serviceConfig.RootDirectory",
+       "systemd.services.<name>.serviceConfig.ReadWritePaths",
+       "systemd.services.<name>.serviceConfig.UMask"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase",
+       "e9-audit"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] O_EXCL supplies atomic freshness relative to an existing directory entry (with filesystem/symlink rules), not initialization+labeling+all monitor updates in one transaction. Locality requires the resource to be in B and no replication/export."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59793,6 +60203,22 @@
       "contractAssurance": "not observable",
       "breaks": [],
       "note": "No audited Android API implements historical-origin-preserving IFC declassification. URI grants and sharing export authority/data rather than merely constructing the attached released-label view."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "no-stock-declassification",
+      "mechanism": null,
+      "options": [],
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "UNVERIFIED",
+      "note": "[GENERATED] chmod, polkit and permission grants change access. They do not create a protected weaker confidentiality view while retaining mandatory historical labels. A labeled runtime with authorized release metadata is required."
      }
     ]
    },
@@ -59963,6 +60389,22 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "no-stock-endorsement",
+      "mechanism": null,
+      "options": [],
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "UNVERIFIED",
+      "note": "[GENERATED] A signature or successful polkit action is not scoped integrity endorsement with preserved guest origins. No stock protected endorsement carrier was verified; this is a trusted-runtime operation."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -60116,6 +60558,25 @@
        "e9-tni"
       ],
       "note": "Restricted authority reduction for a memory region. It does not reduce all aliases/ambient authority or supply explicit expiry. No E9-ATTEN certificate is emitted; a wrapper must define the input/output pair precisely."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "readonly-descriptor-subset",
+      "mechanism": "open a read-only descriptor to the same protected file object",
+      "options": [
+       "systemd.services.<name>.serviceConfig.ReadOnlyPaths",
+       "systemd.services.<name>.serviceConfig.NoNewPrivileges"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] A verified same-object read-only fd is a rights reduction for ordinary file read/write, but dup() preserves flags and rights. It does not reduce all ambient rights or introduce an expected generation/lifetime witness. Full D9 attenuation needs a guarded broker constructor."
      }
     ]
    },
@@ -60284,6 +60745,30 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "fd-delegation",
+      "mechanism": "sendmsg(SCM_RIGHTS) over AF_UNIX",
+      "options": [
+       "systemd.services.<name>.serviceConfig.PrivateNetwork",
+       "systemd.services.<name>.serviceConfig.RootDirectory",
+       "systemd.services.<name>.serviceConfig.RestrictAddressFamilies"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-atten"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] SCM_RIGHTS delegates existing fd authority; it does not itself attenuate it. Unix DAC/LSM and namespaces control admission but may not bind a stable intended callee or downstream effects. Labels and root/generation are absent from ordinary descriptors."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -60441,6 +60926,34 @@
        "e9-tni"
       ],
       "note": "Thread creation supplies scheduling, not D9 attenuated authority or child trace/origin accounting."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "fork-exec-service",
+      "mechanism": "clone/fork/exec or privileged systemd service launch",
+      "options": [
+       "systemd.services.<name>.serviceConfig.User",
+       "systemd.services.<name>.serviceConfig.Group",
+       "systemd.services.<name>.serviceConfig.NoNewPrivileges",
+       "systemd.services.<name>.serviceConfig.RestrictNamespaces",
+       "systemd.services.<name>.serviceConfig.CapabilityBoundingSet",
+       "systemd.services.<name>.serviceConfig.AmbientCapabilities",
+       "systemd.services.<name>.serviceConfig.KillMode"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-gfree"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Forked children inherit many restrictions but also open authority and secret memory. exec replaces memory without establishing a clean origin context. New systemd units can use different credentials and brokers, so policy must authorize launch and inheritance. No whole child effect trace is authenticated."
      }
     ]
    },
@@ -60604,6 +61117,27 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "wait-is-not-labeled-join",
+      "mechanism": "waitid/waitpid plus explicit result IPC",
+      "options": [
+       "systemd.services.<name>.serviceConfig.KillMode"
+      ],
+      "path": "nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Waiting reports exit state and reaps a child; it neither imports an authenticated execution trace nor reconstructs complete origins of result bytes. Cancellation/error and divergence remain distinct. Provenance-aware join needs runtime accounting."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -60733,6 +61267,22 @@
       "contractAssurance": "not observable",
       "breaks": [],
       "note": "No audited Android service registration/Looper API supplies lexical algebraic-effect handlers with the attached gate contract. A trusted effect runtime must define and validate forwarding."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "no-stock-algebraic-handler",
+      "mechanism": null,
+      "options": [],
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "UNVERIFIED",
+      "note": "[GENERATED] A syscall filter or D-Bus routing policy is not a lexical effect-handler installation operation. An application interpreter can implement it, but no source-audited stock NixOS runtime for the attached semantics was identified."
      }
     ]
    },
@@ -60906,6 +61456,26 @@
        "e9-pni"
       ],
       "note": "Key use is mediated by keystore2/KeyMint and key authorization. Ciphertext keeps the same origins in the D9 model, but Android attaches no such labels; encryption does not establish exact E9-PNI or permission to send."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "kernel-pkey",
+      "mechanism": "KEYCTL_PKEY_ENCRYPT with a supported asymmetric key type",
+      "options": [
+       "security.tpm2.enable",
+       "security.tpm2.abrmd.enable",
+       "security.tpm2.pkcs11.enable"
+      ],
+      "path": "nixos/modules/security/tpm2.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Linux 6.18.55 implements this operation only if the installed key type supports it. A TPM route and key policy are additional deployment prerequisites, not consequences of security.tpm2.enable. Trusted/encrypted keyring documentation does not promise every authorized reader sees no key bytes. Native crypto accepts bytes without protecting D9 ancestry; ciphertext retains W origins. A key file under the human account enforces DAC separation, not an opaque signing service or current owner approval."
      }
     ]
    },
@@ -61084,6 +61654,29 @@
        "e9-tni"
       ],
       "note": "Authorized decryption creates a recoverable plaintext copy. Android does not propagate ciphertext/key-service origins or attest factual integrity beyond the chosen authentication check."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "kernel-pkey",
+      "mechanism": "KEYCTL_PKEY_DECRYPT with a supported asymmetric key type",
+      "options": [
+       "security.tpm2.enable",
+       "security.tpm2.abrmd.enable",
+       "security.tpm2.pkcs11.enable"
+      ],
+      "path": "nixos/modules/security/tpm2.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase",
+       "e9-gfree"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Linux 6.18.55 implements this operation only if the installed key type supports it. A TPM route and key policy are additional deployment prerequisites, not consequences of security.tpm2.enable. Trusted/encrypted keyring documentation does not promise every authorized reader sees no key bytes. Native crypto accepts bytes without protecting D9 ancestry; ciphertext retains W origins. A key file under the human account enforces DAC separation, not an opaque signing service or current owner approval."
      }
     ]
    },
@@ -61275,6 +61868,26 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "kernel-pkey",
+      "mechanism": "KEYCTL_PKEY_SIGN with a supported asymmetric key type",
+      "options": [
+       "security.tpm2.enable",
+       "security.tpm2.abrmd.enable",
+       "security.tpm2.pkcs11.enable"
+      ],
+      "path": "nixos/modules/security/tpm2.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Linux 6.18.55 implements this operation only if the installed key type supports it. A TPM route and key policy are additional deployment prerequisites, not consequences of security.tpm2.enable. Trusted/encrypted keyring documentation does not promise every authorized reader sees no key bytes. Native crypto accepts bytes without protecting D9 ancestry; ciphertext retains W origins. A key file under the human account enforces DAC separation, not an opaque signing service or current owner approval."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -61423,6 +62036,26 @@
       "contractAssurance": "unknown",
       "breaks": [],
       "note": "Conditional verification predicate for exact bound bytes is available. Full effect-free/total verification and protected witness storage are adapter obligations; true is not owner authorization."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "verification-predicate",
+      "mechanism": "KEYCTL_PKEY_VERIFY over exact input and declared public key",
+      "options": [
+       "security.tpm2.enable"
+      ],
+      "path": "nixos/modules/security/tpm2.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-ini"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] The supported crypto operation enforces the signature acceptance predicate. This can establish e9-sig for the exact tuple under protected adapter assumptions; it is not total effect-free Evaluate, a current owner decision, provenance or replay protection. The standalone full D9-X20 contract remains unknown."
      }
     ]
    },
@@ -61589,6 +62222,31 @@
        "e9-audit"
       ],
       "note": "SQLite transaction can atomically update local record and log, but is not an authenticated append API. It cannot atomically commit an ordinary external send and a log append; logging afterward fails E9-AUDIT."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "ordinary-audit-not-atomic-chain",
+      "mechanism": "Linux audit/auditd or journald event logging",
+      "options": [
+       "security.audit.enable",
+       "security.audit.rules",
+       "security.auditd.enable",
+       "security.auditd.settings"
+      ],
+      "path": "nixos/modules/security/audit.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "monitored",
+      "contractAssurance": "not observable",
+      "breaks": [
+       "e9-audit",
+       "e9-local",
+       "e9-noegress"
+      ],
+      "verdict": "DEAD",
+      "note": "[RESULT] Monitoring is real but ordinary Linux audit/auditd does not implement the attached signed chain plus atomic effect/log/history commit. Locking audit rules constrains changes, not lost records or crash atomicity. A separate transactional broker/log is required; remote logs can themselves export W."
      }
     ]
    },
@@ -61764,6 +62422,27 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "unlink-not-inventory-erase",
+      "mechanism": "unlink/remove file or nix-store garbage collection",
+      "options": [
+       "nix.gc.automatic",
+       "nix.gc.options"
+      ],
+      "path": "nixos/modules/services/misc/nix-gc.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "not observable",
+      "breaks": [
+       "e9-audit"
+      ],
+      "verdict": "DEAD",
+      "note": "[RESULT] Unlink removes a directory reference, not an open descriptor/mapping or backup. Nix GC removes unreachable store objects and does not establish e9-erase. Physical remnants are excluded; even the modeled digital-copy inventory is unestablished. Whole inventory erasure needs an explicit managed copy/key service."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -61912,6 +62591,22 @@
        "e9-audit"
       ],
       "note": "Android supplies entropy APIs, not the attached protected nonce-registry transition. Replay consumption must happen separately at actual acceptance, including across restarts/rollback assumptions."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "randomness-without-registry",
+      "mechanism": "getrandom syscall plus an unimplemented protected nonce registry",
+      "options": [],
+      "path": null,
+      "platformAssurance": "enforced",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "NEEDS REFINEMENT",
+      "note": "[RESULT] The kernel exposes getrandom; a random source does not reserve a nonce or enforce single acceptance across all gates. I was unable to verify a stock service implementing the full attached nonce registry contract. A monotone/random allocator plus transactional replay database is a separately generated component."
      }
     ]
    },
@@ -62078,6 +62773,25 @@
      }
     ]
    },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "polkit-advisory-gate",
+      "mechanism": "polkit authorization check by a participating trusted service",
+      "options": [
+       "security.polkit.enable",
+       "security.polkit.extraConfig"
+      ],
+      "path": "nixos/modules/security/polkit.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] A positive action result can be a preliminary policy ticket. Full e9-auth/e9-mediated requires the service to bind and atomically recheck the actual arguments/current epoch. polkit enable and rule text alone do not install this protocol into arbitrary services."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -62223,6 +62937,22 @@
        "e9-tni"
       ],
       "note": "GENERATED adapter construction. SQLite plus Signature provides ingredients but no stock owner-approved merge API. Omitted joint operand invalidates binding; network/different-provider replicas cannot simply join the local atomic commit."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "no-stock-owner-merge",
+      "mechanism": null,
+      "options": [],
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "UNVERIFIED",
+      "note": "[GENERATED] Nix generation switch, a signed Git commit, or permission grant does not implement the complete current-owner merge contract. An explicitly configured transactional application service can, but its implementation and witness are absent. No fabricated NixOS merge option is supplied."
      }
     ]
    },
@@ -62409,6 +63139,22 @@
        "e9-audit"
       ],
       "note": "Versioned database update is a candidate backend. SQL alone provides no root authority predicate and no atomic external-effect/log commit. No E9-AUTH/E9-FRESH preservation is inferred."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "no-stock-guarded-cas",
+      "mechanism": null,
+      "options": [],
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "verdict": "UNVERIFIED",
+      "note": "[GENERATED] CPU atomic instructions and atomic rename cover narrower objects. They do not atomically bind the attached policy/owner/history/log state for arbitrary effects. A database/broker transaction adapter is required; generic filesystem writes plus a later audit record are insufficient."
      }
     ]
    },
@@ -62602,6 +63348,32 @@
        "e9-ini"
       ],
       "note": "Binder transport supplies identity and configured service access. It does not automatically attenuate all callee authority, retain child provenance or certify every child effect."
+     }
+    ]
+   },
+   "nixos": {
+    "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+    "bindings": [
+     {
+      "variant": "local-bus-rpc",
+      "mechanism": "AF_UNIX/D-Bus component RPC or systemd-dispatched local worker",
+      "options": [
+       "services.dbus.enable",
+       "services.dbus.packages",
+       "systemd.services.<name>.serviceConfig.User",
+       "systemd.services.<name>.serviceConfig.RootDirectory",
+       "systemd.services.<name>.serviceConfig.PrivateNetwork"
+      ],
+      "path": "nixos/modules/services/system/dbus.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-gfree"
+      ],
+      "verdict": "MARGINAL",
+      "note": "[RESULT] Locality of a call endpoint does not imply locality of callee effects. A network-enabled service can relay W using its own credentials. RPC replies do not supply the complete accounted child trace or origins required by Dispatch."
      }
     ]
    },
