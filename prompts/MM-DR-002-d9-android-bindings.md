@@ -6,7 +6,7 @@
 **Direction:** For each abstract operation, find the Android APIs that realize it, where the platform enforces the operation's effects, and where effects escape every enforcement point.
 **Date:** 2026-10-11
 
-*Attach: the D9 entries and invariant vocabulary from MM-DR-001. Before sending: strip the Scaffold Update Notes at the end.*
+*Attach: `d9-entries.json`, `effect-invariants.json`, `invariant-relations.json` and `carrier-proposal.json` (the base list from the MM-DR-001 round: 27 operations, 19 invariants; GENERATED, not yet audited entry by entry). Before sending: strip the Scaffold Update Notes at the end.*
 
 ---
 
@@ -30,6 +30,13 @@ Treat these as proposals to test. Do not assume any is correct unless independen
 
 Claim 1 is the load-bearing one.
 
+### Lessons carried from MM-DR-001 (settled in verification, apply them here)
+
+- **An operation name does not fix its effect.** Whether `send` breaks locality depends on its destination; whether a merge is authorized depends on the current owner and version. Every binding must name the **parameters** that decide its effect, and the deviations must be stated per parameter value where they differ.
+- **Absence of a break is not a proof.** For each binding, say which of these the platform can supply: *enforced* (a check the app cannot bypass), *monitored* (observable after the fact), *unknown*, or *not observable*. Do not report silence as enforcement.
+- **Inputs are joint operands.** When an API needs several inputs (a value and a destination, a payload and a signature), list all of them; matching one does not satisfy the others.
+- **Trace violations are absorbing.** An effect that crossed a boundary is not undone by deleting a copy later.
+
 ---
 
 ## Research Questions
@@ -47,7 +54,9 @@ For each entry, list the realizing APIs across these layers: Java and Kotlin fra
   "permissions": ["android.permission.X"],
   "appOps": ["OP_X"],
   "enforcementPoint": "where the platform checks it, with path",
-  "deviations": { "preserves": ["invariant-id"], "breaks": ["invariant-id"], "note": "how this API differs from the abstract entry" },
+  "parameters": { "name": "what it decides, e.g. destination inside or outside the boundary" },
+  "deviations": { "preserves": ["invariant-id"], "breaks": ["invariant-id"], "note": "how this API differs from the abstract entry, per parameter value where it matters" },
+  "assurance": "enforced | monitored | unknown | not observable",
   "verdict": "CONFIRMED | MARGINAL | PLAUSIBLE | NEEDS REFINEMENT | DEAD | UNVERIFIED"
 }
 ```
