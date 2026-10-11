@@ -258,6 +258,7 @@
 | `generation/2026-10-11-mm-dr-002/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-002/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
+| `generation/2026-10-11-mm-dr-003/guardians-pc-labels.patch` | A draft patch to an external tool, written and tested here; held until the operator signs off on sending it upstream. |
 | `generation/2026-10-11-mm-dr-003/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `generation/2026-10-11-mm-dr-003/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
