@@ -241,6 +241,7 @@
 | `excerpts/wikipedia-infinitesimal-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-inverse-gaussian.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-jordan-chevalley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-kleene-fixed-point-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lebesgue-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley-multiplier.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -249,6 +250,7 @@
 | `excerpts/wikipedia-maskin-monotonicity.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-matrix-square-root.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-matroid-minor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-merkle-tree.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nash-equilibrium.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -258,6 +260,7 @@
 | `excerpts/wikipedia-robust-pca.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-rotation-matrix.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-takens-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-topological-sorting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-transition-state-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-wiener-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `generation/2026-10-11-gen-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
@@ -361,11 +364,14 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/wikipedia-first-passage.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-infinitesimal-generator.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-inverse-gaussian.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-kleene-fixed-point-theorem.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-littlewood-paley.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-maskin-monotonicity.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-merkle-tree.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-nyquist-shannon-sampling.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-random-walk.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-takens-theorem.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-topological-sorting.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-transition-state-theory.txt` |
 | `mapfill/additions.js` | names | `mapfill/README.md` |
 | `mapfill/additions.js` | names | `scripts/mathmap.mjs` |

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Topological sorting (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1328053597
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: f4d83c40467423859ff5528df28baabc609b18f49f718469f2b7880c0da68785
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[total order|linear ordering]] of its [[vertex (graph theory)|vertices]] such that for every directed edge ''(u,v)'' from vertex ''u'' to vertex ''v'', ''u'' comes before ''v'' in the ordering.
+
+A topological ordering is possible if and only if the graph has no [[directed cycle]]s, that is, if it is a [[directed acyclic graph]] (DAG).
+
+If a Hamiltonian path exists, the topological sort order is unique
+
+this algorithm takes {{math|Θ(''n'' + ''m'')}}, i.e., [[Linear time|linear]], time.

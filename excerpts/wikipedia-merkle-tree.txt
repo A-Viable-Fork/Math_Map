@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Merkle tree (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375083916
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 08f539da6875e142c9d4970694f43fcdc59a1082e74822e0237f0fcaaff07bdd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+every node that is not a leaf (called a ''branch'', ''inner node'', or ''inode'') is labelled with the cryptographic hash of the labels of its child nodes.
+
+A hash tree allows efficient and secure verification of the contents of a large [[data structure]].
+
+(although, strictly speaking, they use [[directed acyclic graph]]s, not trees)
+
+the [[Nix package manager]] and descendants like [[GNU Guix]]
+
+The Merkle hash root does not indicate the tree depth, enabling a [[second-preimage attack]]

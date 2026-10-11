@@ -16,6 +16,7 @@ const FLAGS = [
   M("D8-133", "Matrix square root decomposition", "The content describes marching triangles, the subject of D8-132. Audit: wrong on every field."),
   M("D8-185", "Robust PCA transformation", "The content is the square root transform, the subject of D8-201."),
   M("D8-186", "Rotation transformation", "The content is the square transform, the subject of D8-202."),
+  M("D8-215", "Topological sort transformation", "The content describes a Vietoris-Rips filtration of a point cloud (\"See D4-416\"), not a topological sort; the operation is D8-X02. Found by the NixOS decomposition, 2026-10-11."),
 ];
 
 module.exports = { FLAGS };
