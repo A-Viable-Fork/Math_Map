@@ -4,11 +4,16 @@
 //   and how many classes they give; whether a deformation integrates (exact Jacobi of the deformed brackets,
 //   order by order, solving away each obstruction that is a coboundary); the Killing signature; whether the
 //   commutant of ad is one-dimensional; and diagonal contraction weights that return the old algebra as a
-//   limit (Inonu-Wigner, generalized). Sublation read as deformation: generation/2026-10-11-deform-001.
+//   limit (Inonu-Wigner, generalized). Sublation read as deformation: generation/2026-10-11-deform-001. Also
+//   H^2(g; R) with trivial coefficients and the central extensions it classifies; a fingerprint of invariants
+//   that tells algebras apart; four constraint forms on families of generators (an invariant form of given
+//   signature, the sign of tr(ad^2), a central bracket, a Killing signature); selection and ranking of
+//   candidates under a constraint; algebras spanned by complex rational matrices (generation/2026-10-11-history-001).
 // Contract: `node scripts/deform.mjs --algebra NAME [--invariant A,B,..] [--full]` (NAME from
 //   scripts/deform-algebras.mjs) or `--spec FILE` (JSON {names, brackets: [[a, b, {c: coef}]]}, coef a number
 //   or "p/q"); `--round calibration|seed [--out FILE]` runs a round and prints (or writes) its report;
-//   `--selftest` runs the tests (2-dim abelian H^2 = 2, so(3) H^2 = 0, and the rules below). Exports the
+//   `--selftest` runs the tests (2-dim abelian H^2 = 2, so(3) H^2 = 0, Heisenberg as the central extension
+//   of the abelian plane, H^2(so(3); R) = 0, H^2(h_3; R) = 2, and the rules below). Exports the
 //   engine. Every rank is computed three ways and asserted equal: exact rational elimination, and modulo
 //   the Mersenne primes 2^61-1 and 2^89-1. Every kernel vector is verified by exact multiplication.
 // Invariant: read-only on the repository except --out. Exact arithmetic throughout (BigInt rationals); no
@@ -358,6 +363,161 @@ export function terms(g, phi) {
 }
 export function fromSpec(spec) { return algebra(spec.names, spec.brackets.flatMap(([a, b, rhs]) => Object.entries(rhs).map(([c, s]) => [a, b, c, s]))); }
 
+// ---------- central extensions: cohomology with trivial coefficients ----------
+// A trivial-coefficient 2-cochain omega is a sparse vector over the pair coordinates of coords(n): omega(e_i, e_j)
+// for i < j. A 1-cochain f is a sparse vector over the generators.
+const omegaAt = (n, C, w, i, j) => (i === j ? ZERO : i < j ? w.get(C.pi.get(i * n + j)) ?? ZERO : (w.get(C.pi.get(j * n + i)) ?? ZERO).neg());
+// The cocycle condition, as a vector over triples: omega([a,b],c) + omega([b,c],a) + omega([c,a],b).
+function dTriv2(g, w, C) {
+  const n = g.n, v = new Map();
+  C.T.forEach(([a, b, c], t) => { let s = ZERO; for (const [x, y, z] of [[a, b, c], [b, c, a], [c, a, b]]) for (const [k, f] of at(g.br, n, x, y)) s = s.add(f.mul(omegaAt(n, C, w, k, z))); if (!s.isZero()) v.set(t, s); });
+  return v;
+}
+// (df)(a, b) = -f([a, b]).
+function dTriv1(g, f, C) { const n = g.n, v = new Map(); C.P.forEach(([a, b], x) => { let s = ZERO; for (const [k, c] of at(g.br, n, a, b)) s = s.add(c.mul(f.get(k) ?? ZERO)); if (!s.isZero()) v.set(x, s.neg()); }); return v; }
+// Invariance under X: (X.omega)(a,b) = -omega([X,a],b) - omega(a,[X,b]); (X.f)(a) = -f([X,a]).
+function trivialInvariant(g, H, C) {
+  const n = g.n, units2 = C.P.map((_, x) => new Map([[x, ONE]])), units1 = [...Array(n).keys()].map((a) => new Map([[a, ONE]]));
+  if (!H) return { B1: units1, B2: units2 };
+  const col2 = (w) => { const v = new Map(); H.forEach((X, h) => C.P.forEach(([a, b], x) => { let s = ZERO; for (const [k, f] of at(g.br, n, X, a)) s = s.add(f.mul(omegaAt(n, C, w, k, b))); for (const [k, f] of at(g.br, n, X, b)) s = s.add(f.mul(omegaAt(n, C, w, a, k))); if (!s.isZero()) v.set(h * C.P.length + x, s.neg()); })); return v; };
+  const col1 = (f) => { const v = new Map(); H.forEach((X, h) => { for (let a = 0; a < n; a++) { let s = ZERO; for (const [k, c] of at(g.br, n, X, a)) s = s.add(c.mul(f.get(k) ?? ZERO)); if (!s.isZero()) v.set(h * n + a, s.neg()); } }); return v; };
+  const comb = (basis, x) => { const v = new Map(); for (const [j, c] of x) axpy(v, c, basis[j]); return v; };
+  return { B1: eliminate(units1.map(col1)).kernel.map((x) => comb(units1, x)), B2: eliminate(units2.map(col2)).kernel.map((x) => comb(units2, x)) };
+}
+// H^2(g; R): the central extensions of g up to isomorphism. With H, on the cochains invariant under H.
+export function centralH2(g, H = null) {
+  const C = coords(g.n), { B1, B2 } = trivialInvariant(g, H, C);
+  const E = eliminate(B2.map((w) => dTriv2(g, w, C)));
+  const cocycles = E.kernel.map((x) => { const v = new Map(); for (const [j, c] of x) axpy(v, c, B2[j]); return v; });
+  const coboundaries = B1.map((f) => dTriv1(g, f, C)), rB = rank(coboundaries);
+  return { dimC2: B2.length, dimZ2: cocycles.length, dimB2: rB, dimH2: cocycles.length - rB, cocycles, coboundaries, C };
+}
+// Representatives of a basis of classes: walk the cocycles in order, keeping each that raises the rank modulo
+// the coboundaries. Works for adjoint cocycles (as vec2 vectors) and trivial ones alike.
+export function classBasis(cocycleVecs, coboundaryVecs) {
+  const kept = [], base = rank(coboundaryVecs); let r = base;
+  cocycleVecs.forEach((v, i) => { const s = rank([...coboundaryVecs, ...kept.map((k) => cocycleVecs[k]), v]); if (s > r) { kept.push(i); r = s; } });
+  return kept;
+}
+// The structure constants as terms [a, b, c, coef], a < b.
+export function termsOf(g) { const out = []; for (const [key, v] of g.br) { const i = Math.floor(key / g.n), j = key % g.n; if (i < j) for (const [k, f] of v) out.push([g.names[i], g.names[j], g.names[k], f]); } return out; }
+// g + R z with [a, b] + omega(a, b) z.
+export function centralExtension(g, w, z = "z") {
+  const C = coords(g.n), ext = termsOf(g);
+  for (const [x, f] of w) { const [i, j] = C.P[x]; ext.push([g.names[i], g.names[j], z, f]); }
+  return algebra([...g.names, z], ext);
+}
+
+// ---------- invariants that tell algebras apart ----------
+function bracketV(g, u, v) { const out = new Map(); for (const [i, a] of u) for (const [j, b] of v) if (i !== j) axpy(out, a.mul(b), at(g.br, g.n, i, j)); return out; }
+function spanOf(vecs) { // an independent subset spanning the same space, by exact echelon reduction
+  const piv = new Map(), keep = [];
+  for (const w of vecs) {
+    const v = new Map(w);
+    for (const k of [...v.keys()].sort((a, b) => a - b)) { const r = piv.get(k); if (r && v.has(k)) axpy(v, v.get(k).neg(), r); }
+    if (!v.size) continue;
+    let c = Infinity; for (const k of v.keys()) if (k < c) c = k;
+    const nv = scaled(v, ONE.div(v.get(c)));
+    for (const r of piv.values()) if (r.has(c)) axpy(r, r.get(c).neg(), nv);
+    piv.set(c, nv); keep.push(w);
+  }
+  return keep;
+}
+const unitV = (n) => [...Array(n).keys()].map((a) => new Map([[a, ONE]]));
+function series(g, next) { const dims = [g.n]; let V = unitV(g.n); for (;;) { const W = spanOf(next(V)); if (W.length === V.length) return dims; dims.push(W.length); V = W; if (!W.length) return dims; } }
+export const derivedSeries = (g) => series(g, (V) => V.flatMap((u, i) => V.slice(i + 1).map((v) => bracketV(g, u, v))));
+export const lowerCentralSeries = (g) => series(g, (V) => unitV(g.n).flatMap((u) => V.map((v) => bracketV(g, u, v))));
+export function centerDim(g) { const n = g.n; return n - rank([...Array(n).keys()].map((x) => { const v = new Map(); for (let a = 0; a < n; a++) for (const [k, f] of at(g.br, n, x, a)) v.set(a * n + k, f); return v; })); }
+export function derivationDim(g) { const C = coords(g.n); return g.n * g.n - rank(basis1(g.n).map((f) => d1(g, f, C))); }
+// A fingerprint: equal for isomorphic algebras; different fingerprints mean different algebras. Equal ones may
+// still be non-isomorphic, so counting by fingerprint can undercount distinct algebras, never overcount.
+export function fingerprint(g) {
+  const s = signature(killing(g));
+  return `dim ${g.n}; Killing +${s.pos} -${s.neg} 0x${s.zero}; center ${centerDim(g)}; derived ${derivedSeries(g).join(">")}; lower central ${lowerCentralSeries(g).join(">")}; der ${derivationDim(g)}; commutant ${commutantDim(g)}`;
+}
+
+// ---------- constraints, stated on families of generators ----------
+// A family is a name without its trailing digits (J for J1, J2, J3; M01 is family M).
+export const family = (g, f) => g.names.map((x, i) => [x.replace(/\d+$/, ""), i]).filter(([x]) => x === f).map(([, i]) => i);
+const families = (g, fs) => fs.flatMap((f) => family(g, f));
+// The matrix of ad_a restricted to the span of S, or null when ad_a does not keep S: M[k][x] is the coefficient
+// of S[k] in [a, S[x]].
+function adOn(g, a, S) {
+  const pos = new Map(S.map((s, i) => [s, i])), M = S.map(() => S.map(() => ZERO));
+  for (let x = 0; x < S.length; x++) for (const [k, f] of at(g.br, g.n, a, S[x])) { if (!pos.has(k)) return null; M[pos.get(k)][x] = f; }
+  return M;
+}
+// F1. The symmetric bilinear forms on span(S) invariant under ad A, as a basis of matrices; null if A does not keep S.
+export function invariantForms(g, S, A) {
+  const m = S.length, ads = []; for (const a of A) { const M = adOn(g, a, S); if (!M) return null; ads.push(M); }
+  const U = []; for (let i = 0; i < m; i++) for (let j = i; j < m; j++) U.push([i, j]);
+  const uix = (i, j) => (i <= j ? i * m - (i * (i - 1)) / 2 + (j - i) : j * m - (j * (j - 1)) / 2 + (i - j));
+  // equation (a, x, y): sum_k M[k][x] B[k][y] + M[k][y] B[x][k] = 0
+  const cols = U.map(() => new Map());
+  ads.forEach((M, h) => { for (let x = 0; x < m; x++) for (let y = x; y < m; y++) { const e = (h * m + x) * m + y; for (let k = 0; k < m; k++) { if (!M[k][x].isZero()) addTo(cols[uix(k, y)], e, M[k][x]); if (!M[k][y].isZero()) addTo(cols[uix(x, k)], e, M[k][y]); } } });
+  return eliminate(cols).kernel.map((x) => { const B = S.map(() => S.map(() => ZERO)); for (const [u, c] of x) { const [i, j] = U[u]; B[i][j] = B[i][j].add(c); if (i !== j) B[j][i] = B[j][i].add(c); } return B; });
+}
+// The signatures {pos, neg} (nondegenerate only, unordered) reached by integer combinations of a basis of forms,
+// coefficients -2 to 2. Combinations c and -c give swapped signatures, so only those whose first nonzero
+// coefficient is positive are evaluated.
+export function formSignatures(basis) {
+  const out = new Set(), b = basis.length; if (!b) return out;
+  const m = basis[0].length, c = Array(b).fill(-2);
+  for (;;) {
+    const first = c.find((x) => x !== 0);
+    if (first > 0) {
+      const B = Array.from({ length: m }, (_, i) => Array.from({ length: m }, (_, j) => { let s = ZERO; for (let h = 0; h < b; h++) if (c[h]) s = s.add(basis[h][i][j].mul(Q.of(c[h]))); return s; }));
+      const s = signature(B); if (!s.zero) out.add(`${Math.max(s.pos, s.neg)},${Math.min(s.pos, s.neg)}`);
+    }
+    let h = 0; while (h < b && c[h] === 2) c[h++] = -2; if (h === b) break; c[h]++;
+  }
+  return out;
+}
+// F2. tr((ad X1 on span S)^2): null when ad X1 does not keep S.
+export function growth(g, x, S) { const M = adOn(g, x, S); if (!M) return null; let s = ZERO; for (let i = 0; i < S.length; i++) for (let k = 0; k < S.length; k++) s = s.add(M[i][k].mul(M[k][i])); return s; }
+// F3. Some [A_i, B_j] is nonzero, and every one of them is central.
+export function centralBracket(g, A, B) {
+  let any = false;
+  for (const i of A) for (const j of B) { if (i === j) continue; const v = at(g.br, g.n, i, j); if (!v.size) continue; any = true; for (let a = 0; a < g.n; a++) if (bracketV(g, v, new Map([[a, ONE]])).size) return false; }
+  return any;
+}
+// The constraint forms as predicates on an algebra. Parameters name families.
+export const CONSTRAINTS = {
+  F1: ({ S, A, sig }) => (g) => { const B = invariantForms(g, families(g, S), families(g, A)); return !!B && formSignatures(B).has(`${Math.max(...sig)},${Math.min(...sig)}`); },
+  F2: ({ X, S, sign }) => (g) => { const x = family(g, X)[0], r = x === undefined ? null : growth(g, x, families(g, S)); return !!r && r.sign() === sign; },
+  F3: ({ A, B }) => (g) => centralBracket(g, family(g, A), family(g, B)),
+  F4: ({ sig }) => (g) => { const s = signature(killing(g)); return !s.zero && s.pos === sig[0] && s.neg === sig[1]; },
+};
+
+// ---------- candidates and selection ----------
+// Select among candidates ({alg, order, support, label}): keep those the predicate passes, group them by
+// fingerprint, and rank the groups by their best (order, support). Equal keys share a rank.
+export function select(cands, pass, fp = (c) => c.fp) {
+  const groups = new Map();
+  for (const c of cands) { if (!pass(c.alg)) continue; const k = fp(c); const g = groups.get(k); if (!g) groups.set(k, { fp: k, best: [c.order, c.support], labels: [c.label] }); else { g.labels.push(c.label); if (c.order < g.best[0] || (c.order === g.best[0] && c.support < g.best[1])) g.best = [c.order, c.support]; } }
+  const list = [...groups.values()].sort((a, b) => a.best[0] - b.best[0] || a.best[1] - b.best[1]);
+  list.forEach((g) => { g.rank = 1 + list.filter((h) => h.best[0] < g.best[0] || (h.best[0] === g.best[0] && h.best[1] < g.best[1])).length; g.ties = list.filter((h) => h !== g && h.best[0] === g.best[0] && h.best[1] === g.best[1]).length; });
+  return list;
+}
+
+// ---------- algebras from matrices ----------
+// A real Lie algebra spanned by complex matrices with rational entries ([re, im] pairs): the brackets are the
+// matrix commutators, solved exactly in the span. Fails if the span is not closed or the matrices dependent.
+export function fromMatrices(names, mats) {
+  const N = mats[0].length, c = (x) => [Q.of(x[0]), Q.of(x[1])];
+  const M = mats.map((A) => A.map((r) => r.map(c)));
+  const mul = (A, B) => A.map((_, i) => B[0].map((_, j) => { let re = ZERO, im = ZERO; for (let k = 0; k < N; k++) { const [a, b] = A[i][k], [p, q] = B[k][j]; re = re.add(a.mul(p)).sub(b.mul(q)); im = im.add(a.mul(q)).add(b.mul(p)); } return [re, im]; }));
+  const flat = (A) => { const v = new Map(); A.forEach((r, i) => r.forEach(([re, im], j) => { if (!re.isZero()) v.set(2 * (i * N + j), re); if (!im.isZero()) v.set(2 * (i * N + j) + 1, im); })); return v; };
+  const E = eliminate(M.map(flat)); if (E.rank !== M.length) throw new Error("dependent matrices");
+  const terms = [];
+  for (let a = 0; a < M.length; a++) for (let b = a + 1; b < M.length; b++) {
+    const AB = mul(M[a], M[b]), BA = mul(M[b], M[a]), Cm = AB.map((r, i) => r.map(([x, y], j) => [x.sub(BA[i][j][0]), y.sub(BA[i][j][1])]));
+    const x = E.solve(flat(Cm)); if (!x) throw new Error(`span not closed under [${names[a]}, ${names[b]}]`);
+    for (const [k, f] of x) terms.push([names[a], names[b], names[k], f]);
+  }
+  return algebra(names, terms);
+}
+
 // ---------- tests ----------
 async function selftest() {
   const ok = [], fail = [];
@@ -391,6 +551,28 @@ async function selftest() {
   t("Galilei: rotation-invariant H^2 = 4 = full H^2", h2(gal, rot).dimH2 === 4 && h2(gal).dimH2 === 4);
   const ds = ALGEBRAS.deSitter();
   t("de Sitter: H^2 = 0, Killing +4 -6, commutant 1", h2(ds).dimH2 === 0 && (({ pos, neg }) => pos === 4 && neg === 6)(signature(killing(ds))) && commutantDim(ds) === 1);
+  // Central extensions (trivial coefficients): H^2(R^2; R) = 1 and its extension is the Heisenberg algebra;
+  // H^2(so(3); R) = 0 by Whitehead's second lemma; the 3-dimensional Heisenberg algebra has H^2(h; R) = 2.
+  const c2 = centralH2(ab2);
+  t("abelian 2-dim: H^2(g; R) = 1", c2.dimH2 === 1);
+  t("abelian 2-dim: its central extension is Heisenberg", fingerprint(centralExtension(ab2, c2.cocycles[0])) === fingerprint(algebra(["x", "y", "z"], [["x", "y", "z", 1]])));
+  t("so(3): H^2(g; R) = 0, invariant and full", centralH2(so3).dimH2 === 0 && centralH2(so3, [0, 1, 2]).dimH2 === 0);
+  t("Heisenberg: H^2(g; R) = 2", centralH2(heis).dimH2 === 2);
+  t("class basis keeps one of two proportional cocycles", classBasis([new Map([[0, ONE]]), new Map([[0, Q.of(2)]])], []).length === 1);
+  // Fingerprints: su(2) from the matrices i sigma / 2 is so(3); the 2-dim nonabelian algebra is not abelian.
+  const half = "1/2", su2 = fromMatrices(["J1", "J2", "J3"], [
+    [[[0, 0], [0, half]], [[0, half], [0, 0]]], [[[0, 0], [half, 0]], [["-1/2", 0], [0, 0]]], [[[0, half], [0, 0]], [[0, 0], [0, "-1/2"]]]]);
+  t("su(2) from matrices has the fingerprint of so(3)", fingerprint(su2) === fingerprint(so3));
+  const aff = algebra(["x", "p"], [["x", "p", "x", 1]]);
+  t("fingerprints tell the 2-dim algebras apart; derived series 2>1>0", fingerprint(aff) !== fingerprint(ab2) && derivedSeries(aff).join() === "2,1,0");
+  t("Heisenberg: center 1, lower central series 3>1>0", centerDim(heis) === 1 && lowerCentralSeries(heis).join() === "3,1,0");
+  // Constraint forms: so(3) carries one invariant form, definite; ad on a non-stable span gives null.
+  const F = invariantForms(so3, [0, 1, 2], [0, 1, 2]);
+  t("so(3): one invariant form, signature (3, 0)", F.length === 1 && formSignatures(F).has("3,0") && formSignatures(F).size === 1);
+  t("affine 2-dim: ad x on span(p) is not stable; on span(x) tr(ad^2) = 1", growth(aff, 0, [1]) === null && growth(aff, 1, [0]).sign() > 0);
+  t("central bracket: Heisenberg [x,y] yes, affine [x,p] no", centralBracket(heis, [0], [1]) && !centralBracket(aff, [0], [1]));
+  const sel = select([{ alg: ab2, order: 0, support: 0, label: "a", fp: "A" }, { alg: aff, order: 1, support: 1, label: "b", fp: "B" }, { alg: aff, order: 1, support: 2, label: "c", fp: "B" }, { alg: so3, order: 1, support: 1, label: "d", fp: "C" }], (g) => g.n === 2);
+  t("select: groups by fingerprint, ranks by best key, shares ties", sel.length === 2 && sel[0].fp === "A" && sel[1].rank === 2 && sel[1].labels.length === 2);
   for (const f of fail) console.log(`FAIL ${f}`);
   if (fail.length) { console.log(`deform selftest: ${fail.length} failure(s)`); process.exit(1); }
   console.log(`deform selftest: PASS (${ok.length} tests)`);
