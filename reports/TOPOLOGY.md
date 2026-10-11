@@ -8,16 +8,16 @@ Typed: 20 math entries and 27 generated D9 entries, of 1992 entries in the map.
 
 | | Kinds | Edges | Pieces | Loops | Of which self-loops |
 |---|---|---|---|---|---|
-| Operations | 17 | 27 | 7 | 17 | 13 |
-| With subtype links | 17 | 34 | 3 | 20 | 13 |
+| Operations | 57 | 27 | 47 | 17 | 13 |
+| With subtype links | 57 | 45 | 32 | 20 | 13 |
 
-Pieces with subtype links: {variety, surface, curve}; {space, point-cloud, simplicial-set, category, functor, topos, level}; {field, function, form, evolution, connection, vector-field, process}.
+Pieces with subtype links: {variety, surface, curve, scheme}; {space, point-cloud, simplicial-set, category, functor, topos, level, morphism, operator, sheaf, dataset}; {field, function, form, evolution, connection, vector-field, process, signal}; {ring, algebraic-field}; {module, ideal, vector-space}; {measure, distribution}; {problem, decision-problem}; alone: representation, graph, manifold, matrix, tensor, bundle, knot, matroid, group, algebra, operad, polynomial, number, relation, poset, set, element, sequence, chain-complex, spectral-sequence, model, formula, proof, equation, verdict.
 
 ## Ends (all typed entries)
 
 - Produced by no operation: surface, point-cloud, evolution, connection, key-handle.
 - Consumed by no operation: verified-signature.
-- Touched by no operation: operation.
+- Touched by no operation: operation, scheme, morphism, operator, sheaf, representation, graph, manifold, matrix, tensor, bundle, knot, matroid, group, ring, algebraic-field, module, ideal, vector-space, algebra, operad, polynomial, number, relation, poset, set, element, sequence, signal, chain-complex, spectral-sequence, measure, distribution, dataset, model, formula, proof, equation, problem, decision-problem, verdict.
 
 ## Parallel routes (one or two math operations between the same kinds)
 
@@ -57,4 +57,4 @@ One route says an invariant survives, another between the same kinds says it is 
 
 ## Relative to the formal region
 
-Typed math entries with a formal field: none. With that region collapsed to one point: 17 kinds, 7 pieces, 17 loops.
+Typed math entries with a formal field: none. With that region collapsed to one point: 57 kinds, 47 pieces, 17 loops.

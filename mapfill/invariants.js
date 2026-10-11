@@ -32,11 +32,21 @@
 "use strict";
 
 const CARRIERS = {
-  variety: null, surface: "variety", curve: "variety",
-  space: null, "point-cloud": null, "simplicial-set": "space",
-  category: null, functor: null, topos: "category", level: null,
+  variety: "scheme", surface: "variety", curve: "variety",
+  space: null, "point-cloud": "dataset", "simplicial-set": "space",
+  category: null, functor: "morphism", topos: "category", level: null,
   field: null, function: "field", form: "field", evolution: null, connection: null, "vector-field": "form",
   operation: null, process: null,
+  // Kinds from the free typing pass (scripts/type-lexicon.mjs, reports/TYPING.md), adopted with their parents and
+  // sense rules [ruling: operator, 2026-10-11]; the parents of variety, point-cloud and functor above changed by
+  // the same ruling. Held, not adopted: diagram, word, code, circuit, program, polytope, characteristic-class.
+  scheme: null, morphism: null, operator: "morphism", sheaf: "functor", representation: null,
+  graph: null, manifold: null, matrix: null, tensor: null, bundle: null, knot: null, matroid: null,
+  group: null, ring: null, "algebraic-field": "ring", module: null, ideal: "module", "vector-space": "module",
+  algebra: null, operad: null, polynomial: null, number: null, relation: null, poset: null, set: null, element: null,
+  sequence: null, signal: "function", "chain-complex": null, "spectral-sequence": null,
+  measure: null, distribution: "measure", dataset: null, model: null,
+  formula: null, proof: null, equation: null, problem: null, "decision-problem": "problem", verdict: null,
   // D9, systems and effects (generated, MM-DR-001; mapfill/generated.js)
   "system-state": null,
   "execution-trace": null,

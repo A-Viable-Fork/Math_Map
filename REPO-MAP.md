@@ -428,8 +428,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/invariants.js` | names | `generation/2026-10-11-mm-dr-002/grading.md` |
 | `mapfill/invariants.js` | names | `generation/2026-10-11-mm-dr-003/grading.md` |
 | `mapfill/invariants.js` | names | `mapfill/generated.js` |
+| `mapfill/invariants.js` | names | `reports/TYPING.md` |
 | `mapfill/invariants.js` | names | `scripts/compose.mjs` |
 | `mapfill/invariants.js` | names | `scripts/mathmap.mjs` |
+| `mapfill/invariants.js` | names | `scripts/type-lexicon.mjs` |
 | `mapfill/lean.js` | names | `excerpts/arxiv-1603.04641.txt` |
 | `mapfill/lean.js` | names | `excerpts/nlab-aufhebung-definition.txt` |
 | `mapfill/lean.js` | names | `excerpts/nlab-aufhebung-modalities.txt` |

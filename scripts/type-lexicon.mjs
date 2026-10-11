@@ -36,11 +36,11 @@ export const LEXICON = {
   process: ["(?:stochastic|markov|random|poisson|diffusion|gaussian|levy|lévy|point) process(?:es)?", "brownian motion", "markov chains?", "random walks?", "stochastic differential equations?"],
   // candidates
   graph: ["(?:directed |undirected |weighted |bipartite |planar )?(?:sub)?graphs?", "digraphs?", "networks?", "trees?"],
-  sequence: ["sequences?", "time series", "(?:[a-z]+ )?coefficients?", "(?:sine|cosine|fourier|frequency|power|real-valued) spectr(?:um|a)"],
-  series: ["(?:power|fourier|formal|taylor|dirichlet) series"],
+  // Numeric and term sequences only; exact sequences are chain complexes. Coefficient vectors and series merged here.
+  sequence: ["sequences?", "time series", "(?:[a-z]+ )?coefficients?", "(?:sine|cosine|fourier|frequency|power|real-valued) spectr(?:um|a)", "(?:power|fourier|formal|taylor|dirichlet) series", "(?:[a-z-]+ )?vectors?"],
   matrix: ["(?:square |symmetric |hermitian |sparse )?matri(?:x|ces)"],
   manifold: ["(?:smooth |riemannian |symplectic |complex |compact )?(?:sub)?manifolds?", "hypersurfaces?"],
-  group: ["(?:finite |abelian |lie |topological |cyclic )?(?:sub)?groups?", "group actions?"],
+  group: ["(?:finite |abelian |lie |topological |cyclic |braid )?(?:sub)?groups?", "group actions?", "braids?", "(?:integer |point |euclidean )lattices?", "lattices? in r"],
   ring: ["(?:commutative |polynomial )?(?:sub)?rings?", "integral domains?"],
   "algebraic-field": ["field extensions?", "number fields?", "finite fields?", "galois fields?", "fields? [a-z]\\b"],
   algebra: ["(?:lie |associative |boolean |c\\*-|von neumann |hopf |e_n-)?(?:co)?algebras?"],
@@ -51,7 +51,7 @@ export const LEXICON = {
   polynomial: ["polynomials?"],
   sheaf: ["sheaves", "sheaf", "presheaves", "presheaf"],
   "chain-complex": ["(?:long |short |snake )?exact sequences?", "(?:koszul|cech|čech|de rham|bar|cobar|cellular|singular) complex(?:es)?", "(?:co)?chain complex(?:es)?", "filtered complex(?:es)?", "complex(?:es)? of (?:modules|vector spaces|sheaves)"],
-  knot: ["knots?", "(?:pretzel |torus |hyperbolic )?links?", "braids?"],
+  knot: ["knots?", "(?:pretzel |torus |hyperbolic )?links?"],
   operator: ["(?:linear |bounded |self-adjoint |differential |integral )?operators?"],
   distribution: ["probability (?:distributions?|measures?|densit(?:y|ies))", "(?:initial |joint )?(?:probability )?densit(?:y|ies)", "random variables?", "distributions?"],
   measure: ["measures?"],
@@ -68,21 +68,19 @@ export const LEXICON = {
   number: ["integers?", "natural numbers?", "primes?", "real numbers?", "rationals?"],
   code: ["(?:linear |error-correcting )?codes?", "codewords?"],
   morphism: ["(?:homo|iso|endo|auto|diffeo|homeo)?morphisms?", "(?:chain |continuous |linear |smooth )?maps? [a-z]\\b", "maps? of", "maps?$", "homotopy equivalences?", "inclusions?", "epimorphisms?", "monomorphisms?", "natural transformations?", "homeomorphisms?", "symplectomorphisms?", "isometr(?:y|ies)", "embeddings?"],
-  element: ["elements?", "relative complements?", "points? of"],
+  element: ["elements?", "relative complements?", "points? of", "objects?"],
   scheme: ["schemes?", "stacks?"],
   diagram: ["(?:commutative |string |zx |zw )?diagrams?"],
   relation: ["(?:equivalence |binary )?relations?"],
   equation: ["(?:differential |partial differential |integral |linear |polynomial )?equations?", "odes?", "pdes?", "(?:linear |algebraic )systems?"],
   problem: ["(?:counting |optimization |search )?problems?", "instances? of"],
-  dataset: ["data(?:sets?)?", "samples?", "observations?"],
+  dataset: ["(?:empirical |observed |sample |discrete |poisson |statistical |time-series |raw |noisy )?data(?:sets?)?", "samples?", "observations?"],
   "spectral-sequence": ["spectral sequences?"],
   verdict: ["verdicts?", "yes/no", "decisions?"],
   model: ["(?:ground )?models? [a-z]\\b", "forcing extensions?"],
-  vector: ["(?:[a-z-]+ )?vectors?"],
   program: ["(?:linear|integer|semidefinite|convex|parametric) programs?"],
   polytope: ["polytopes?", "polyhedr(?:on|a)"],
   circuit: ["(?:quantum |boolean |ansatz )?circuits?"],
-  object: ["objects?"],
   "characteristic-class": ["(?:chern|pontryagin|stiefel-whitney|euler|characteristic) classes?"],
   "set": ["(?:finite |measurable |open |closed |convex )?sets?", "subsets?"],
 };
@@ -122,6 +120,10 @@ function kindOf(op, domain) {
     const end = m.index + m[0].length;
     if (!best || end > best.end || (end === best.end && m[0].length > best.size)) best = { kind: c.kind, end, size: m[0].length };
   }
+  // A set is the fallback: any more specific kind in the head wins.
+  if (best?.kind === "set") { const other = compiled.filter((c) => c.kind !== "set" && c.re.test(head)); if (other.length) return kindOf(op.replace(/\b(?:sub)?sets?\b/gi, ""), domain); }
+  // Data that is structure, not observation ("algebraic data", "descent data") is not a dataset.
+  if (best?.kind === "dataset" && /(?:algebraic|equivalence|descent|gluing|structure|homotopy|categorical) data/.test(head)) return null;
   // A bare "surface" is algebraic only in algebraic geometry (D2); elsewhere the carrier would mislead.
   if (best?.kind === "surface" && domain !== "D2" && !/(?:algebraic|projective|riemann|k3|del pezzo) surface/.test(head)) return null;
   return best?.kind || null;

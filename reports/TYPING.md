@@ -6,22 +6,22 @@ Entries: 1965.
 
 | Typed | Entries | Share |
 |---|---|---|
-| Every operand, with existing kinds only | 131 | 6.7% |
-| Every operand, using candidate kinds | 616 | 31.3% |
-| At least one input and one output kind | 138 | 7.0% |
-| Neither side | 1080 | 55.0% |
+| Every operand, with existing kinds only | 705 | 35.9% |
+| Every operand, using candidate kinds | 40 | 2.0% |
+| At least one input and one output kind | 139 | 7.1% |
+| Neither side | 1081 | 55.0% |
 
 ## By domain
 
 | Domain | Entries | Fully typed | Partly | Neither |
 |---|---|---|---|---|
 | D1 | 120 | 58 | 19 | 43 |
-| D2 | 201 | 54 | 13 | 134 |
+| D2 | 201 | 53 | 14 | 134 |
 | D3 | 188 | 57 | 8 | 123 |
 | D4 | 438 | 176 | 41 | 221 |
 | D5 | 151 | 49 | 10 | 92 |
 | D6 | 161 | 74 | 8 | 79 |
-| D7 | 470 | 203 | 27 | 240 |
+| D7 | 470 | 202 | 27 | 241 |
 | D8 | 236 | 76 | 12 | 148 |
 
 ## Kinds used
@@ -29,61 +29,59 @@ Entries: 1965.
 | Kind | Operands | Status |
 |---|---|---|
 | function | 421 | carrier |
-| sequence | 219 | candidate |
-| graph | 164 | candidate |
-| morphism | 131 | candidate |
+| sequence | 251 | carrier |
+| graph | 164 | carrier |
+| morphism | 131 | carrier |
 | space | 131 | carrier |
-| manifold | 112 | candidate |
+| manifold | 112 | carrier |
 | category | 108 | carrier |
-| set | 106 | candidate |
-| matrix | 95 | candidate |
-| group | 88 | candidate |
-| dataset | 83 | candidate |
-| algebra | 81 | candidate |
-| poset | 75 | candidate |
-| ring | 64 | candidate |
+| set | 96 | carrier |
+| matrix | 95 | carrier |
+| element | 92 | carrier |
+| group | 91 | carrier |
+| algebra | 81 | carrier |
+| dataset | 79 | carrier |
+| poset | 75 | carrier |
+| ring | 64 | carrier |
 | functor | 57 | carrier |
-| signal | 53 | candidate |
 | diagram | 53 | candidate |
-| object | 51 | candidate |
-| module | 45 | candidate |
-| chain-complex | 42 | candidate |
-| formula | 39 | candidate |
-| element | 38 | candidate |
-| operator | 33 | candidate |
-| representation | 28 | candidate |
-| matroid | 25 | candidate |
-| vector | 25 | candidate |
-| proof | 24 | candidate |
-| relation | 23 | candidate |
-| model | 23 | candidate |
-| knot | 22 | candidate |
+| signal | 47 | carrier |
+| module | 45 | carrier |
+| chain-complex | 42 | carrier |
+| formula | 39 | carrier |
+| operator | 33 | carrier |
+| representation | 28 | carrier |
+| matroid | 25 | carrier |
+| proof | 24 | carrier |
+| relation | 23 | carrier |
+| model | 23 | carrier |
 | curve | 21 | carrier |
-| sheaf | 20 | candidate |
-| bundle | 20 | candidate |
-| ideal | 19 | candidate |
+| sheaf | 20 | carrier |
+| knot | 20 | carrier |
+| bundle | 20 | carrier |
+| ideal | 19 | carrier |
 | variety | 19 | carrier |
-| decision-problem | 19 | candidate |
-| simplicial-set | 17 | carrier |
-| operad | 16 | candidate |
-| polynomial | 16 | candidate |
-| problem | 16 | candidate |
-| topos | 16 | carrier |
-| equation | 16 | candidate |
-| measure | 15 | candidate |
-| algebraic-field | 15 | candidate |
-| spectral-sequence | 15 | candidate |
-| tensor | 14 | candidate |
-| distribution | 13 | candidate |
-| number | 12 | candidate |
-| scheme | 11 | candidate |
+| decision-problem | 19 | carrier |
+| topos | 19 | carrier |
+| simplicial-set | 18 | carrier |
+| problem | 17 | carrier |
+| measure | 16 | carrier |
+| operad | 16 | carrier |
+| polynomial | 16 | carrier |
+| equation | 16 | carrier |
+| algebraic-field | 15 | carrier |
+| spectral-sequence | 15 | carrier |
+| tensor | 14 | carrier |
+| distribution | 13 | carrier |
+| number | 12 | carrier |
+| scheme | 11 | carrier |
 | point-cloud | 10 | carrier |
-| verdict | 9 | candidate |
+| verdict | 9 | carrier |
 | word | 7 | candidate |
 | connection | 7 | carrier |
 | form | 6 | carrier |
 | code | 6 | candidate |
-| vector-space | 5 | candidate |
+| vector-space | 5 | carrier |
 | circuit | 4 | candidate |
 | characteristic-class | 4 | candidate |
 | process | 4 | carrier |
@@ -92,11 +90,10 @@ Entries: 1965.
 | polytope | 2 | candidate |
 | field | 1 | carrier |
 | vector-field | 1 | carrier |
-| series | 1 | candidate |
 | evolution | 1 | carrier |
 
 ## Most frequent first words of untyped operands
 
 Where the word list is thinnest: the next kinds to add, or senses to split.
 
-geometric 23, transformed 21, family 15, original 14, continuous 13, angle 12, cohomology 12, class 11, figure 11, solution 11, center 10, normal 9, algorithm 8, complex 8, discrete 8, evolved 8, fibration 8, ground 8, region 8, standard 8, target 8, gaussian 7, modified 7, new 7, point 7, qubit 7, real 7, theta 7, unitary 7, algebraic 6, block 6, complete 6, dual 6, image 6, kernel 6, lambda 6, mapping 6, mother 6, pair 6, partition 6, permutation 6, scale 6, scaled 6, signature 6, upper 6, vertical 6, alpha 5, binary 5, chain 5, composite 5, finite 5, homology 5, hypersequent 5, join 5, linear 5, monad 5, open 5, process 5, product 5, quantum 5.
+geometric 23, transformed 21, family 15, original 14, continuous 13, angle 12, cohomology 12, class 11, figure 11, solution 11, center 10, normal 9, algorithm 8, complex 8, discrete 8, evolved 8, fibration 8, ground 8, region 8, standard 8, target 8, algebraic 7, gaussian 7, modified 7, new 7, point 7, qubit 7, real 7, theta 7, unitary 7, block 6, complete 6, dual 6, image 6, kernel 6, lambda 6, mapping 6, mother 6, pair 6, partition 6, permutation 6, scale 6, scaled 6, signature 6, upper 6, vertical 6, alpha 5, binary 5, chain 5, composite 5, finite 5, homology 5, hypersequent 5, join 5, linear 5, monad 5, open 5, process 5, product 5, quantum 5.
