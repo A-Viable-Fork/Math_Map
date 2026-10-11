@@ -2,7 +2,7 @@
 //   whole chain, where each one breaks, where the map is silent, and whether each step's output kind fits
 //   the next step's input.
 // Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--require ID,ID] [--json]`, or `--selftest`.
-//   Exports compose(chain, P?, opts?). An
+//   `--proof ID=citation` (repeatable). Exports compose(chain, P?, opts?). An
 //   invariant's status: survives (every step preserves it), broken (at the first step that breaks it), or
 //   unknown (no step breaks it, but some step says nothing about it; the silent steps are listed); a step
 //   whose output produces the invariant after an earlier step broke it restores it; one that produces it
@@ -30,10 +30,13 @@
 //   among the claims it rests on, and where that claim is.
 //   An invariant whose class is relational or hyperproperty (mapfill/invariants.js) is never reported as
 //   surviving: per-join claims cannot establish it, so unless a step states it broken it is reported as
-//   "whole-chain check required"; the per-step status and evidence it overrides are kept as claimedStatus
+//   "whole-chain check required" unless the chain cites an external whole-chain proof for it (`--proof
+//   ID=citation`, or opts.proofs), when the verdict is "holds by whole-chain proof", grounded as the chain's
+//   weakest link; the per-step status and evidence it overrides are kept as claimedStatus
 //   and claimedEvidence. With `--require ID,ID` (or opts.require) the chain is graded against
-//   a policy: each required invariant gets one of four verdicts, "holds under the map's claims",
-//   "violation stated", "unknown" or "whole-chain check required", and the chain gets the worst of them.
+//   a policy: each required invariant gets one of five verdicts, "holds under the map's claims",
+//   "holds by whole-chain proof", "violation stated", "unknown" or "whole-chain check required", and the
+//   chain gets the worst of them (order in VERDICTS; the operator saw no reason to change it, 2026-10-11).
 //   These grade what the map says; none is a proof about an implementation.
 //   Context labels (CONTEXT in mapfill/invariants.js) are carried along the chain: a label raised at a
 //   step stays on every later step until a step clears it, and a step that forbids a label present on
@@ -166,14 +169,20 @@ export function compose(chain, P = parse(), opts = {}) {
     if (x.evidence) { x.claimedEvidence = x.evidence; delete x.evidence; }
   }
   // The policy grade: four verdicts, worst first in VERDICTS.
-  const VERDICTS = ["violation stated", "whole-chain check required", "unknown", "holds under the map's claims"];
-  const verdictOf = (x) => !x ? "unknown" : x.status === "whole-chain check required" ? x.status
+  const VERDICTS = ["violation stated", "whole-chain check required", "unknown", "holds by whole-chain proof", "holds under the map's claims"];
+  // External whole-chain proofs (opts.proofs: { invariant: citation }) for relational and hyperproperty
+  // invariants. A cited proof establishes the invariant for the chain's model; the model rests on the steps'
+  // claims, so the verdict's grounding is the chain's weakest link [ruling: operator, 2026-10-11]. A step that
+  // states the invariant broken still makes it a violation: the proof does not overrule the map's own claim.
+  const proofs = opts.proofs || {};
+  const verdictOf = (x) => !x ? "unknown" : x.status === "whole-chain check required" ? (proofs[x.invariant] ? "holds by whole-chain proof" : x.status)
     : ["broken", "created then broken", "restored then broken"].includes(x.status) ? "violation stated"
     : ["survives", "restored", "created"].includes(x.status) ? "holds under the map's claims" : "unknown";
   const policy = opts.require ? (() => {
     const rows = opts.require.map((v) => { const x = result.find((y) => y.invariant === v);
-      return { invariant: v, name: names[v] || v, verdict: wide(v) && !x ? "whole-chain check required" : verdictOf(x), status: x ? x.status : "not mentioned by any step", evidence: x?.evidence || null }; });
-    return { required: rows, verdict: rows.reduce((w, r) => (VERDICTS.indexOf(r.verdict) < VERDICTS.indexOf(w) ? r.verdict : w), VERDICTS[3]) };
+      const verdict = wide(v) && !x ? (proofs[v] ? "holds by whole-chain proof" : "whole-chain check required") : verdictOf(x);
+      return { invariant: v, name: names[v] || v, verdict, status: x ? x.status : "not mentioned by any step", evidence: x?.evidence || null, ...(verdict === "holds by whole-chain proof" ? { proof: proofs[v] } : {}) }; });
+    return { required: rows, verdict: rows.reduce((w, r) => (VERDICTS.indexOf(r.verdict) < VERDICTS.indexOf(w) ? r.verdict : w), VERDICTS[VERDICTS.length - 1]) };
   })() : null;
   // Context labels: absorbing until cleared; a forbidden label present on entry to a step is a violation.
   const ctxOf = Object.fromEntries((P.vocabulary.CONTEXT || []).map((c) => [c.entry, c]));
@@ -189,6 +198,8 @@ export function compose(chain, P = parse(), opts = {}) {
   const unlinked = steps.filter((s) => !s.preserved.size && !s.broken.size && !s.output.size).map((s) => s.id);
   const asserted = [...result.filter((x) => x.evidence), ...joins.filter((j) => j.evidence)];
   const weakest = asserted.reduce((w, x) => (!w || rank(x.evidence.level) < rank(w.evidence.level) ? x : w), null);
+  if (policy) for (const r of policy.required) if (r.verdict === "holds by whole-chain proof")
+    r.evidence = weakest ? { level: weakest.evidence.level, weakest: { ...weakest.evidence.weakest }, inherited: "the chain's weakest link" } : null;
   return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked, context, ...(policy ? { policy } : {}),
     evidence: weakest ? { level: weakest.evidence.level, weakest: { ...weakest.evidence.weakest, on: weakest.invariant ? `${weakest.name}, ${weakest.status}` : `join ${weakest.from} to ${weakest.to}` } } : null };
 }
@@ -214,7 +225,7 @@ export function describe(r) {
   if (r.unlinked.length) L.push(`  no invariant links yet for: ${r.unlinked.join(", ")}`);
   for (const v of r.context?.violations || []) L.push(`  context violation at step ${v.at} (${v.by}): ${v.label}, raised at step ${v.raisedAt} (${v.raisedBy}) and not cleared`);
   for (const c of r.context?.cleared || []) L.push(`  context cleared at step ${c.at} (${c.by}): ${c.label}`);
-  if (r.policy) { L.push(`  policy: ${r.policy.verdict}`); for (const p of r.policy.required) L.push(`    ${p.verdict}: ${p.name} (${p.status})`); }
+  if (r.policy) { L.push(`  policy: ${r.policy.verdict}`); for (const p of r.policy.required) L.push(`    ${p.verdict}: ${p.name} (${p.status})${p.proof ? `, by ${p.proof}, grounded as the chain's weakest link${p.evidence ? ` (${p.evidence.level})` : ""}` : ""}`); }
   if (r.evidence) L.push(`  weakest link: ${r.evidence.level} (${r.evidence.weakest.on}; step ${r.evidence.weakest.step}, ${r.evidence.weakest.id} ${r.evidence.weakest.field})`);
   return L.join("\n");
 }
@@ -280,6 +291,15 @@ function selftest() {
   want("an id outside the vocabulary is unknown, never survival", st(run(["f"], [e("f", { preserved: ["Z"] })], ["X"]), "Z"), "unknown");
   const rel = runC(["a"], [e("a", { preserved: ["N"] })], [["N", "relational"]]).invariants[0];
   want("relational override keeps the claimed status and evidence", `${rel.claimedStatus},${typeof rel.claimedEvidence?.level}`, "survives,string");
+  const prf = (proofs, invs) => runC(["a", "b"], [e("a", { preserved: ["S", "N"] }), e("b", { preserved: ["S", "N"], broken: invs })], [["S", "state"], ["N", "relational"]], ["S", "N"]);
+  const withProof = compose(["a", "b"], { ...P0, entries: [e("a", { preserved: ["S", "N"] }), e("b", { preserved: ["S", "N"] })],
+    vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: [{ id: "S", name: "S", carrier: "t", class: "state" }, { id: "N", name: "N", carrier: "t", class: "relational" }], LINKS: [], ACTS_ON: [] } }, { require: ["S", "N"], proofs: { N: "Synthetic.proof" } }).policy;
+  want("a cited whole-chain proof gives its verdict", withProof.required[1].verdict, "holds by whole-chain proof");
+  want("the proof's grounding is the chain's weakest link", withProof.required[1].evidence?.inherited, "the chain's weakest link");
+  want("without the proof the verdict is unchanged", prf({}, []).policy.required[1].verdict, "whole-chain check required");
+  const brokenAnyway = compose(["a"], { ...P0, entries: [e("a", { broken: ["N"] })],
+    vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: [{ id: "N", name: "N", carrier: "t", class: "relational" }], LINKS: [], ACTS_ON: [] } }, { require: ["N"], proofs: { N: "Synthetic.proof" } }).policy.verdict;
+  want("a proof does not overrule a stated break", brokenAnyway, "violation stated");
   want("map chain still restores", st(compose(["D2-118", "D2-117"]), "exceptional-divisor"), "restored");
   if (F.length) { console.log(`compose selftest: FAIL\n  ${F.join("\n  ")}`); process.exit(1); }
   console.log(`compose selftest: PASS (${N} checks)`);
@@ -290,7 +310,9 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const a = process.argv.slice(2), i = a.indexOf("--chain");
   if (i < 0 || !a[i + 1]) { console.log("compose: needs --chain ID,ID,..."); process.exit(1); }
   const q = a.indexOf("--require");
-  const r = compose(a[i + 1].split(",").map((s) => s.trim()), parse(), q >= 0 && a[q + 1] ? { require: a[q + 1].split(",").map((s) => s.trim()) } : {});
+  const opts = q >= 0 && a[q + 1] ? { require: a[q + 1].split(",").map((s) => s.trim()) } : {};
+  for (let k = 0; k < a.length; k++) if (a[k] === "--proof" && a[k + 1]) { const [inv, ...cite] = a[k + 1].split("="); (opts.proofs ||= {})[inv] = cite.join("="); }
+  const r = compose(a[i + 1].split(",").map((s) => s.trim()), parse(), opts);
   console.log(a.includes("--json") ? JSON.stringify(r, null, 1) : describe(r));
   if (r.error) process.exit(1);
 }
