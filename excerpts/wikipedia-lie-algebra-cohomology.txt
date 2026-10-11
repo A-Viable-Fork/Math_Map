@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Lie algebra cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354572973
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 14b8febea86b1956da0fa8620772da9fbf036f4495cd4dd62ae5e8a81bb7ebe4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A homogeneous <math>n</math>-cochain from <math>\mathfrak{g}</math> to <math>M</math> is thus an alternating <math>k</math>-multilinear function <math>f\colon\Lambda^n\mathfrak{g}\to M</math>.
+
+the nilpotency condition <math>d^2 = 0</math> following from the Lie algebra homomorphism
+
+When <math>M = \mathfrak{g}</math>, the action is the [[adjoint action]]
+
+The first cohomology group is the space of [[automorphism of a Lie algebra#derivations|outer derivation]]s.

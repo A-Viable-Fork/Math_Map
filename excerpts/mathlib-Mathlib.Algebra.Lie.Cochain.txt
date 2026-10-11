@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Lie/Cochain.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Cochain.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2b2a5fb35702663d0e3e0bba4426ac095191e15e00c911ecf2bba2baab781e1e
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- LieModule.Cohomology.d₂₃ (line 123)
+def d₂₃ : twoCochain R L M →ₗ[R] L →ₗ[R] L →ₗ[R] L →ₗ[R] M where
+  toFun a := {
+    toFun x := {
+      toFun y := {
+        toFun z := ⁅x, a y z⁆ - ⁅y, a x z⁆ + ⁅z, a x y⁆ - a ⁅x, y⁆ z + a ⁅x, z⁆ y - a ⁅y, z⁆ x
+        map_add' _ _ := by simp; abel
+
+-- LieModule.Cohomology.d₂₃_comp_d₁₂ (line 143)
+lemma d₂₃_comp_d₁₂ : (d₂₃ R L M) ∘ₗ (d₁₂ R L M) = 0
+
+-- LieModule.Cohomology.twoCocycle (line 156)
+def twoCocycle : Submodule R (twoCochain R L M) := LinearMap.ker (d₂₃ R L M)

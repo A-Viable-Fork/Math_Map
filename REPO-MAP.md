@@ -139,11 +139,17 @@
 | `excerpts/arxiv-1003.5944.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1603.04641.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1608.02921.txt` | Verbatim windows from an arXiv paper. |
+| `excerpts/arxiv-1711.06111.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-2103.12179.txt` | Verbatim windows from an arXiv paper. |
+| `excerpts/arxiv-hep-th-0410212.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/econometrica-jackson-1991.txt` | Verbatim windows from a journal article. |
 | `excerpts/mathlib-Mathlib.Algebra.FiveLemma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.SnakeLemma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.CartanCriterion.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.Cochain.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.Killing.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.TraceForm.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.AlgebraicGeometry.Scheme.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.Nerve.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -222,6 +228,7 @@
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birational-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-blowing-up.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-cartans-criterion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-castelnuovo.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-completion-of-a-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -235,6 +242,7 @@
 | `excerpts/wikipedia-fraisse-limit.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galois-connection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-gibbard-satterthwaite.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-group-contraction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-helmholtz-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hermite-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hodge-projection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -243,8 +251,10 @@
 | `excerpts/wikipedia-infinitesimal-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-inverse-gaussian.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-jordan-chevalley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-killing-form.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-kleene-fixed-point-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lebesgue-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-lie-algebra-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley-multiplier.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-localization.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -264,6 +274,7 @@
 | `excerpts/wikipedia-takens-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-sorting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-transition-state-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-whitehead-lemma-lie.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-wiener-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `generation/2026-10-11-gen-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-11-gen-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
@@ -353,6 +364,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/arxiv-1003.5944.txt` |
 | `mapfill/additions.js` | names | `excerpts/arxiv-1603.04641.txt` |
 | `mapfill/additions.js` | names | `excerpts/arxiv-1608.02921.txt` |
+| `mapfill/additions.js` | names | `excerpts/arxiv-1711.06111.txt` |
 | `mapfill/additions.js` | names | `excerpts/econometrica-jackson-1991.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung-definition.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung-modalities.txt` |
@@ -361,12 +373,16 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/nlab-level-of-a-topos.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-reflective-subcategory-colimits.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-subdivision.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-cartans-criterion.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-duhamel.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-euler-lagrange-equation.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-first-passage.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-group-contraction.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-infinitesimal-generator.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-inverse-gaussian.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-killing-form.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-kleene-fixed-point-theorem.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-lie-algebra-cohomology.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-littlewood-paley.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-maskin-monotonicity.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-merkle-tree.txt` |
@@ -375,6 +391,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/wikipedia-takens-theorem.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-topological-sorting.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-transition-state-theory.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-whitehead-lemma-lie.txt` |
 | `mapfill/additions.js` | names | `mapfill/README.md` |
 | `mapfill/additions.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/android.js` | names | `generation/2026-10-11-mm-dr-002/grading.md` |
@@ -550,7 +567,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1003.5944.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1603.04641.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1608.02921.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/arxiv-1711.06111.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-2103.12179.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/arxiv-hep-th-0410212.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/econometrica-jackson-1991.txt` |
 | `reports/CATALOGUE.md` | names | `scripts/catalogue-import.mjs` |
 | `reports/CATALOGUE.md` | names | `scripts/catalogue.mjs` |
