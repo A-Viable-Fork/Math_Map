@@ -77,6 +77,7 @@
     "generation/*/report-*.md": "One generator's report for the round, landed verbatim; its hash is in the round's record.",
     "generation/*/package-*.zip": "A generator's companion package, landed verbatim; its hash is in the round's record.",
     "generation/*/bindings-*.json": "A generator's platform bindings for the round, landed verbatim; its hash is in the round's record.",
-    "generation/*/receipts-*.json": "A generator's source receipts (paths and hashes at a tag), landed verbatim; its hash is in the round's record."
+    "generation/*/receipts-*.json": "A generator's source receipts (paths and hashes at a tag), landed verbatim; its hash is in the round's record.",
+    "generation/*/trial-*.md": "A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned."
   }
 }

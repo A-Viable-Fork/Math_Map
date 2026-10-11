@@ -89,6 +89,7 @@
 | `scripts/compose.mjs` | composition. |
 | `scripts/evidence.mjs` | evidence per claim. |
 | `scripts/excerpt.mjs` | the excerpt maker. |
+| `scripts/export-guardians.mjs` | export to Guardians. |
 | `scripts/formal.mjs` | the formal layer. |
 | `scripts/lean.mjs` | the Lean layer's gate. |
 | `scripts/mathmap.mjs` | the math map, made queryable. |
@@ -260,6 +261,7 @@
 | `generation/2026-10-11-mm-dr-003/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `generation/2026-10-11-mm-dr-003/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
+| `generation/2026-10-11-mm-dr-003/trial-guardians.md` | A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned. |
 | `infra.json` | Configuration of the vendored Repo-Infrastructure kit: which checks run. |
 | `infra.lock.json` | Pins the vendored kit in .infra/: upstream commit and the hash of every file. |
 | `lean/.gitignore` | Keeps Lake's build directory out of git. |
@@ -452,6 +454,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `README.md` | names | `audit.json` |
 | `README.md` | names | `domains/D1.md` |
 | `README.md` | names | `domains/D9.md` |
+| `README.md` | names | `generation/2026-10-11-mm-dr-003/trial-guardians.md` |
 | `README.md` | names | `infra.json` |
 | `README.md` | names | `infra.lock.json` |
 | `README.md` | names | `lean/AUDIT.json` |
@@ -476,6 +479,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `README.md` | names | `scripts/check-all.mjs` |
 | `README.md` | names | `scripts/compose.mjs` |
 | `README.md` | names | `scripts/evidence.mjs` |
+| `README.md` | names | `scripts/export-guardians.mjs` |
 | `README.md` | names | `scripts/formal.mjs` |
 | `README.md` | names | `scripts/lean.mjs` |
 | `README.md` | names | `scripts/mathmap.mjs` |
@@ -540,6 +544,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | names | `.infra/tools/repo-map.mjs` |
 | `scripts/build.mjs` | names | `audit.json` |
 | `scripts/build.mjs` | names | `domains/D1.md` |
+| `scripts/build.mjs` | names | `generation/2026-10-11-mm-dr-003/trial-guardians.md` |
 | `scripts/build.mjs` | names | `infra.json` |
 | `scripts/build.mjs` | names | `infra.lock.json` |
 | `scripts/build.mjs` | names | `lean/AUDIT.json` |
@@ -564,6 +569,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | names | `scripts/check-all.mjs` |
 | `scripts/build.mjs` | names | `scripts/compose.mjs` |
 | `scripts/build.mjs` | names | `scripts/evidence.mjs` |
+| `scripts/build.mjs` | names | `scripts/export-guardians.mjs` |
 | `scripts/build.mjs` | names | `scripts/formal.mjs` |
 | `scripts/build.mjs` | names | `scripts/lean.mjs` |
 | `scripts/build.mjs` | names | `scripts/mathmap.mjs` |
@@ -597,6 +603,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/evidence.mjs` | imports | `scripts/lean.mjs` |
 | `scripts/evidence.mjs` | names | `lean/AUDIT.json` |
 | `scripts/evidence.mjs` | names | `mapfill/lean.js` |
+| `scripts/export-guardians.mjs` | imports | `scripts/mathmap.mjs` |
+| `scripts/export-guardians.mjs` | names | `generation/2026-10-11-mm-dr-003/grading.md` |
 | `scripts/formal.mjs` | imports | `mapfill/formal.js` |
 | `scripts/formal.mjs` | imports | `mapfill/invariants.js` |
 | `scripts/formal.mjs` | imports | `mapfill/lean.js` |
