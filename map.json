@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "9f6bb685a7226e333be1217ee3273c6fdc6e00f5"
+  "commit": "45aa0a252bcfd60651ec02fe16de3805e77870b0"
  },
  "domains": {
   "D1": {
@@ -94,217 +94,248 @@
     "name": "Birational type",
     "kind": "equivalence class",
     "carrier": "variety",
-    "definition": "The class of a variety up to birational equivalence: isomorphism of dense open subsets."
+    "definition": "The class of a variety up to birational equivalence: isomorphism of dense open subsets.",
+    "class": "state"
    },
    {
     "id": "function-field",
     "name": "Function field",
     "kind": "algebraic object",
     "carrier": "variety",
-    "definition": "The field of rational functions of an irreducible variety, as an extension of the base field."
+    "definition": "The field of rational functions of an irreducible variety, as an extension of the base field.",
+    "class": "state"
    },
    {
     "id": "local-structure-at-center",
     "name": "Local structure at the center",
     "kind": "local structure",
     "carrier": "variety",
-    "definition": "The germ of the space along the locus a surgery is performed on."
+    "definition": "The germ of the space along the locus a surgery is performed on.",
+    "class": "state"
    },
    {
     "id": "exceptional-divisor",
     "name": "Presence of the exceptional divisor",
     "kind": "configuration",
     "carrier": "variety",
-    "definition": "Whether the divisor created by a blow-up is present as a curve (or divisor) in the space."
+    "definition": "Whether the divisor created by a blow-up is present as a curve (or divisor) in the space.",
+    "class": "state"
    },
    {
     "id": "self-intersection",
     "name": "Self-intersection number",
     "kind": "numerical",
     "carrier": "curve",
-    "definition": "The intersection number of a curve with itself on a surface, C^2."
+    "definition": "The intersection number of a curve with itself on a surface, C^2.",
+    "class": "state"
    },
    {
     "id": "curve-isomorphism-type",
     "name": "Isomorphism type of a curve",
     "kind": "equivalence class",
     "carrier": "curve",
-    "definition": "The curve up to isomorphism, as an abstract curve."
+    "definition": "The curve up to isomorphism, as an abstract curve.",
+    "class": "state"
    },
    {
     "id": "homotopy-type",
     "name": "Homotopy type",
     "kind": "equivalence class",
     "carrier": "space",
-    "definition": "The space up to homotopy equivalence."
+    "definition": "The space up to homotopy equivalence.",
+    "class": "state"
    },
    {
     "id": "contractibility",
     "name": "Contractibility",
     "kind": "property",
     "carrier": "space",
-    "definition": "Being homotopy equivalent to a point."
+    "definition": "Being homotopy equivalent to a point.",
+    "class": "state"
    },
    {
     "id": "topology-of-input",
     "name": "Topology of the input",
     "kind": "structure",
     "carrier": "space",
-    "definition": "The input space's topology as given, before any collapse or gluing."
+    "definition": "The input space's topology as given, before any collapse or gluing.",
+    "class": "state"
    },
    {
     "id": "point-structure",
     "name": "Point positions and distances",
     "kind": "structure",
     "carrier": "point-cloud",
-    "definition": "The positions of the input points and the distances between them."
+    "definition": "The positions of the input points and the distances between them.",
+    "class": "state"
    },
    {
     "id": "limits",
     "name": "Limits",
     "kind": "structure",
     "carrier": "functor",
-    "definition": "Limits of diagrams (all small limits, where stated), preserved when a functor carries limit cones to limit cones."
+    "definition": "Limits of diagrams (all small limits, where stated), preserved when a functor carries limit cones to limit cones.",
+    "class": "state"
    },
    {
     "id": "finite-limits",
     "name": "Finite limits",
     "kind": "structure",
     "carrier": "functor",
-    "definition": "Limits of finite diagrams: the terminal object, pullbacks, equalizers."
+    "definition": "Limits of finite diagrams: the terminal object, pullbacks, equalizers.",
+    "class": "state"
    },
    {
     "id": "colimits",
     "name": "Colimits",
     "kind": "structure",
     "carrier": "functor",
-    "definition": "Colimits of diagrams, preserved when a functor carries colimit cocones to colimit cocones."
+    "definition": "Colimits of diagrams, preserved when a functor carries colimit cocones to colimit cocones.",
+    "class": "state"
    },
    {
     "id": "category-structure",
     "name": "Category structure",
     "kind": "structure",
     "carrier": "category",
-    "definition": "The objects and morphisms of a category with their composition."
+    "definition": "The objects and morphisms of a category with their composition.",
+    "class": "state"
    },
    {
     "id": "truth-values",
     "name": "Truth values",
     "kind": "structure",
     "carrier": "topos",
-    "definition": "The subobject classifier's elements: the internal truth values of a topos."
+    "definition": "The subobject classifier's elements: the internal truth values of a topos.",
+    "class": "state"
    },
    {
     "id": "skeletal-objects",
     "name": "Skeletal objects of a level",
     "kind": "modal class",
     "carrier": "level",
-    "definition": "The objects fixed by a level's skeleton modality (i-skeleta)."
+    "definition": "The objects fixed by a level's skeleton modality (i-skeleta).",
+    "class": "state"
    },
    {
     "id": "level-opposition",
     "name": "Opposition at a level",
     "kind": "modal relation",
     "carrier": "level",
-    "definition": "The distinction, at one level, between its skeleta and its sheaves."
+    "definition": "The distinction, at one level, between its skeleta and its sheaves.",
+    "class": "state"
    },
    {
     "id": "l2-orthogonality",
     "name": "L^2 orthogonality",
     "kind": "analytic",
     "carrier": "field",
-    "definition": "Pieces of a decomposition are mutually orthogonal in the L^2 inner product."
+    "definition": "Pieces of a decomposition are mutually orthogonal in the L^2 inner product.",
+    "class": "state"
    },
    {
     "id": "cohomology",
     "name": "Cohomology",
     "kind": "algebraic object",
     "carrier": "form",
-    "definition": "De Rham or singular cohomology groups."
+    "definition": "De Rham or singular cohomology groups.",
+    "class": "state"
    },
    {
     "id": "function-by-resummation",
     "name": "The function itself (by resummation)",
     "kind": "identity",
     "carrier": "function",
-    "definition": "The decomposed pieces sum back to the original function."
+    "definition": "The decomposed pieces sum back to the original function.",
+    "class": "state"
    },
    {
     "id": "spatial-locality",
     "name": "Spatial locality",
     "kind": "analytic",
     "carrier": "field",
-    "definition": "Support or concentration in physical space."
+    "definition": "Support or concentration in physical space.",
+    "class": "state"
    },
    {
     "id": "instantaneous-locality",
     "name": "Instantaneous locality",
     "kind": "analytic",
     "carrier": "evolution",
-    "definition": "An effect at time t depends only on the source at time t."
+    "definition": "An effect at time t depends only on the source at time t.",
+    "class": "state"
    },
    {
     "id": "linearity",
     "name": "Linearity",
     "kind": "algebraic",
     "carrier": "operation",
-    "definition": "Superposition: the response to a sum is the sum of the responses."
+    "definition": "Superposition: the response to a sum is the sum of the responses.",
+    "class": "step"
    },
    {
     "id": "causality",
     "name": "Causality",
     "kind": "analytic",
     "carrier": "evolution",
-    "definition": "Only earlier times contribute to the state at a given time."
+    "definition": "Only earlier times contribute to the state at a given time.",
+    "class": "state"
    },
    {
     "id": "leibniz-rule",
     "name": "Leibniz rule",
     "kind": "algebraic",
     "carrier": "operation",
-    "definition": "The product rule for derivations."
+    "definition": "The product rule for derivations.",
+    "class": "step"
    },
    {
     "id": "tensoriality",
     "name": "Tensoriality",
     "kind": "algebraic",
     "carrier": "operation",
-    "definition": "Linearity over smooth functions (C-infinity linearity) in an argument."
+    "definition": "Linearity over smooth functions (C-infinity linearity) in an argument.",
+    "class": "step"
    },
    {
     "id": "markov-property",
     "name": "Markov property",
     "kind": "property",
     "carrier": "process",
-    "definition": "The future depends on the past only through the present state."
+    "definition": "The future depends on the past only through the present state.",
+    "class": "state"
    },
    {
     "id": "transition-law",
     "name": "Transition law",
     "kind": "structure",
     "carrier": "process",
-    "definition": "The process's transition probabilities as given."
+    "definition": "The process's transition probabilities as given.",
+    "class": "state"
    },
    {
     "id": "drift-from-threshold",
     "name": "Drift away from the threshold",
     "kind": "analytic",
     "carrier": "process",
-    "definition": "A mean velocity away from an absorbing threshold: 1/x for Brownian motion conditioned to stay positive."
+    "definition": "A mean velocity away from an absorbing threshold: 1/x for Brownian motion conditioned to stay positive.",
+    "class": "state"
    },
    {
     "id": "exponential-lifetime",
     "name": "Exponential lifetime",
     "kind": "numerical",
     "carrier": "process",
-    "definition": "Mean lifetime growing exponentially in a depth (a barrier height over the noise)."
+    "definition": "Mean lifetime growing exponentially in a depth (a barrier height over the noise).",
+    "class": "state"
    },
    {
     "id": "flatness",
     "name": "Flatness",
     "kind": "geometric",
     "carrier": "connection",
-    "definition": "Vanishing curvature: covariant derivatives commute."
+    "definition": "Vanishing curvature: covariant derivatives commute.",
+    "class": "state"
    }
   ],
   "relations": [

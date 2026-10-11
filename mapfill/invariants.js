@@ -2,8 +2,14 @@
 //   can be checked for what survives it by machine rather than by reading free text.
 // Contract: exports CARRIERS, INVARIANTS, RELATIONS, ACTS_ON and LINKS.
 //   CARRIERS = { kind: parent|null }: the kinds of object an invariant can belong to (a curve is a variety).
-//   INVARIANTS = [{ id, name, kind, carrier, definition }]: carrier is the kind of object that has it;
+//   INVARIANTS = [{ id, name, kind, carrier, definition, class }]: carrier is the kind of object that has it;
 //     "operation" means a property of the step itself (linearity), which every step can have or lack.
+//     class is the logical kind of property, which decides what composition may say about it: "state"
+//     (holds of one object or state), "step" (holds of one step), "trace" (holds of one run's history),
+//     "relational" (relates pairs of runs, as noninterference does) or "hyperproperty" (any other
+//     property of sets of runs). The first three can be checked join by join; the last two cannot, and
+//     compose.mjs reports them as needing a whole-chain check. Where not given, an invariant of an
+//     operation is a step property and any other a state property, which covers the map so far.
 //   RELATIONS = [{ from, to, kind, over?, receipts?, basis? }]: implies (from holding gives to) or equivalent
 //     (both ways), with receipts (quotes in excerpts/) or a basis naming why it holds by definition. An
 //     implication says what it relates: over "preservation" (preserving from preserves to, so composition
@@ -27,7 +33,7 @@ const CARRIERS = {
   operation: null, process: null,
 };
 
-const I = (id, name, kind, carrier, definition) => ({ id, name, kind, carrier, definition });
+const I = (id, name, kind, carrier, definition, cls) => ({ id, name, kind, carrier, definition, class: cls || (carrier === "operation" ? "step" : "state") });
 const INVARIANTS = [
   // Algebraic geometry
   I("birational-type", "Birational type", "equivalence class", "variety", "The class of a variety up to birational equivalence: isomorphism of dense open subsets."),

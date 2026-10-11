@@ -226,7 +226,7 @@ export function check(P = parse()) {
   const V = P.vocabulary, vids = new Set();
   const kinds = V.CARRIERS;
   for (const [k, p] of Object.entries(kinds)) if (p !== null && !(p in kinds)) F.push(`carrier ${k}: unknown parent ${p}`);
-  for (const v of V.INVARIANTS) { if (vids.has(v.id)) F.push(`invariant ${v.id}: defined twice`); vids.add(v.id); if (!v.name || !v.kind || !v.definition) F.push(`invariant ${v.id}: needs a name, kind and definition`); if (!(v.carrier in kinds)) F.push(`invariant ${v.id}: unknown carrier ${v.carrier}`); if (!/^[a-z0-9-]+$/.test(v.id)) F.push(`invariant ${v.id}: ids are lowercase words joined by hyphens`); }
+  for (const v of V.INVARIANTS) { if (vids.has(v.id)) F.push(`invariant ${v.id}: defined twice`); vids.add(v.id); if (!v.name || !v.kind || !v.definition) F.push(`invariant ${v.id}: needs a name, kind and definition`); if (!(v.carrier in kinds)) F.push(`invariant ${v.id}: unknown carrier ${v.carrier}`); if (!/^[a-z0-9-]+$/.test(v.id)) F.push(`invariant ${v.id}: ids are lowercase words joined by hyphens`); if (!["state", "step", "trace", "relational", "hyperproperty"].includes(v.class)) F.push(`invariant ${v.id}: class must be state, step, trace, relational or hyperproperty`); }
   for (const r of V.RELATIONS) {
     for (const k of [r.from, r.to]) if (!vids.has(k)) F.push(`relation ${r.from} to ${r.to}: unknown invariant ${k}`);
     if (!["implies", "equivalent"].includes(r.kind)) F.push(`relation ${r.from} to ${r.to}: bad kind ${r.kind}`);

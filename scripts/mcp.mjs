@@ -37,8 +37,8 @@ const TOOLS = [
     inputSchema: { type: "object", properties: { id: str("Entry id, e.g. D2-117 or D7-X01.") }, required: ["id"] } },
   { name: "list_invariants", description: "The named-invariant vocabulary used by compose_chain: carriers (kinds of object, with parents), invariants with definitions, and the relations between them. Optionally filtered to one carrier and its sub-kinds.",
     inputSchema: { type: "object", properties: { carrier: str("e.g. variety, functor, field.") } } },
-  { name: "compose_chain", description: "Apply entries in order and report whether each join fits (match, narrowing, partial: an input the previous step does not supply, or mismatch) and what happens to each named invariant: survives, broken, unknown (the map is silent), restored, created, created then broken, or restored or created then unknown (a later step is silent on it). Each result, join and the chain as a whole carries the weakest evidence level it rests on (contradicted, unsupported, unchecked, imprecise, sourced, formal) and where that claim is. Unknown means the map does not say, not that the invariant is lost.",
-    inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." } }, required: ["chain"] } },
+  { name: "compose_chain", description: "Apply entries in order and report whether each join fits (match, narrowing, partial: an input the previous step does not supply, or mismatch) and what happens to each named invariant: survives, broken, unknown (the map is silent), restored, created, created then broken, restored or created then unknown (a later step is silent on it), or whole-chain check required (a relational or hyperproperty invariant, which per-join claims cannot establish). With require, each listed invariant is graded holds under the map's claims, violation stated, unknown, or whole-chain check required, and the chain takes the worst. Each result, join and the chain as a whole carries the weakest evidence level it rests on (contradicted, unsupported, unchecked, imprecise, sourced, formal) and where that claim is. Unknown means the map does not say, not that the invariant is lost.",
+    inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." }, require: { type: "array", items: { type: "string" }, description: "Invariant ids the chain must keep (a policy); each is graded." } }, required: ["chain"] } },
 ];
 
 const short = (e) => ({ id: e.id, name: e.name, domain: e.domain, kind: e.kind, tier: e.tier, ...(e.auditVerdict ? { auditVerdict: e.auditVerdict } : {}), ...(e.formal ? { mathlib: e.formal.map((k) => `${k.decl} (${k.match})`) } : {}), input: e.input, output: e.output, description: e.description });
@@ -69,7 +69,7 @@ const HANDLERS = {
   },
   compose_chain: (a) => {
     if (!Array.isArray(a.chain) || !a.chain.length) throw new Error("chain must be a non-empty array of entry ids");
-    const r = compose(a.chain.map(String));
+    const r = compose(a.chain.map(String), undefined, Array.isArray(a.require) ? { require: a.require.map(String) } : {});
     if (r.error) throw new Error(r.error);
     return { ...VERSION, summary: describe(r), result: r, note: "Unknown means the map is silent at those steps, not that the invariant is lost." };
   },
@@ -119,6 +119,8 @@ function selftest() {
   if (!c.err && !JSON.parse(c.text).result.evidence?.level) F.push("compose_chain carries no evidence");
   const g2 = call("get_entry", { id: "D8-133" });
   if (g2.err || !JSON.parse(g2.text).entry.corrected || JSON.parse(g2.text).entry.tier === "flagged") F.push("get_entry D8-133 does not show its correction");
+  const cp = call("compose_chain", { chain: ["D2-118", "D2-117"], require: ["local-structure-at-center"] });
+  if (cp.err || JSON.parse(cp.text).result.policy?.verdict !== "violation stated") F.push("compose_chain did not grade a required invariant");
   if (!call("compose_chain", { chain: ["D2-118", "nope"] }).err) F.push("compose_chain accepted a missing id");
   for (const f of F) console.log("FAIL", f);
   if (F.length) { console.log(`mcp: ${F.length} failure(s)`); process.exit(1); }

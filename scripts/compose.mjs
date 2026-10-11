@@ -1,7 +1,8 @@
 // Role: composition. For a chain of entries applied in order, reports which named invariants survive the
 //   whole chain, where each one breaks, where the map is silent, and whether each step's output kind fits
 //   the next step's input.
-// Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--json]`, or `--selftest`. Exports compose(chain, P?). An
+// Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--require ID,ID] [--json]`, or `--selftest`.
+//   Exports compose(chain, P?, opts?). An
 //   invariant's status: survives (every step preserves it), broken (at the first step that breaks it), or
 //   unknown (no step breaks it, but some step says nothing about it; the silent steps are listed); a step
 //   whose output produces the invariant after an earlier step broke it restores it; one that produces it
@@ -21,6 +22,12 @@
 //   come from outside the chain, named in the detail), or mismatch (no input kind is supplied).
 //   Each result, join and the chain as a whole carries evidence: the weakest level (scripts/evidence.mjs)
 //   among the claims it rests on, and where that claim is.
+//   An invariant whose class is relational or hyperproperty (mapfill/invariants.js) is never reported as
+//   surviving: per-join claims cannot establish it, so unless a step states it broken it is reported as
+//   "whole-chain check required". With `--require ID,ID` (or opts.require) the chain is graded against
+//   a policy: each required invariant gets one of four verdicts, "holds under the map's claims",
+//   "violation stated", "unknown" or "whole-chain check required", and the chain gets the worst of them.
+//   These grade what the map says; none is a proof about an implementation.
 // Invariant: read-only. The answer is only as good as the entries' fields and links: "unknown" means the
 //   map does not say, not that the invariant is lost. `--selftest` checks these rules on synthetic chains.
 import { fileURLToPath } from "node:url";
@@ -49,7 +56,7 @@ function closure(direct, R, dir, relEv) {
 
 const isa = (k, t, C) => { for (let x = k; x; x = C[x]) if (x === t) return true; return false; };
 
-export function compose(chain, P = parse()) {
+export function compose(chain, P = parse(), opts = {}) {
   const by = Object.fromEntries(P.entries.map((e) => [e.id, e]));
   const R = P.vocabulary.RELATIONS;
   const missing = chain.filter((id) => !by[id]);
@@ -100,10 +107,26 @@ export function compose(chain, P = parse()) {
     const kept = steps.map((s, k) => [k, s]).filter(([, s]) => applies(s, v) && s.preserved.has(v)).map(([k, s]) => [k, "preserved", s.preserved.get(v)]);
     return silent.length ? { invariant: v, name: names[v], status: "unknown", silentAt: silent, notApplicable: na } : { invariant: v, name: names[v], status: "survives", notApplicable: na, evidence: ev(kept) };
   });
+  // Relational and hyperproperty invariants: no per-join claim can make them survive.
+  const classOf = Object.fromEntries(P.vocabulary.INVARIANTS.map((v) => [v.id, v.class || "state"]));
+  const wide = (v) => ["relational", "hyperproperty"].includes(classOf[v]);
+  for (const x of result) if (wide(x.invariant) && !["broken", "created then broken"].includes(x.status)) {
+    x.claimedStatus = x.status; x.status = "whole-chain check required"; delete x.evidence;
+  }
+  // The policy grade: four verdicts, worst first in VERDICTS.
+  const VERDICTS = ["violation stated", "whole-chain check required", "unknown", "holds under the map's claims"];
+  const verdictOf = (x) => !x ? "unknown" : x.status === "whole-chain check required" ? x.status
+    : ["broken", "created then broken"].includes(x.status) ? "violation stated"
+    : ["survives", "restored", "created"].includes(x.status) ? "holds under the map's claims" : "unknown";
+  const policy = opts.require ? (() => {
+    const rows = opts.require.map((v) => { const x = result.find((y) => y.invariant === v);
+      return { invariant: v, name: names[v] || v, verdict: wide(v) && !x ? "whole-chain check required" : verdictOf(x), status: x ? x.status : "not mentioned by any step", evidence: x?.evidence || null }; });
+    return { required: rows, verdict: rows.reduce((w, r) => (VERDICTS.indexOf(r.verdict) < VERDICTS.indexOf(w) ? r.verdict : w), VERDICTS[3]) };
+  })() : null;
   const unlinked = steps.filter((s) => !s.preserved.size && !s.broken.size && !s.output.size).map((s) => s.id);
   const asserted = [...result.filter((x) => x.evidence), ...joins.filter((j) => j.evidence)];
   const weakest = asserted.reduce((w, x) => (!w || rank(x.evidence.level) < rank(w.evidence.level) ? x : w), null);
-  return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked,
+  return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked, ...(policy ? { policy } : {}),
     evidence: weakest ? { level: weakest.evidence.level, weakest: { ...weakest.evidence.weakest, on: weakest.invariant ? `${weakest.name}, ${weakest.status}` : `join ${weakest.from} to ${weakest.to}` } } : null };
 }
 
@@ -119,9 +142,11 @@ export function describe(r) {
     else if (x.status === "created" || x.status === "created then unknown") L.push(`  created at step ${x.at} (${x.by}): ${x.name}${x.silentAfter.length ? `; the map is silent on it after that at ${x.silentAfter.join(", ")}` : ""}${tag(x)}`);
     else if (x.status === "created then broken") L.push(`  created at step ${x.createdAt} (${x.createdBy}), broken at step ${x.at} (${x.by}): ${x.name}${x.silentBefore.length ? `; the map is silent on it in between at ${x.silentBefore.join(", ")}` : ""}${tag(x)}`);
     else if (x.status === "broken") L.push(`  broken at step ${x.at} (${x.by}): ${x.name}${x.silentBefore.length ? `; the map is silent on it before that at ${x.silentBefore.join(", ")}` : ""}${tag(x)}`);
+    else if (x.status === "whole-chain check required") L.push(`  whole-chain check required: ${x.name} (a property of sets of runs; per-join claims cannot establish it)`);
     else L.push(`  unknown: ${x.name} (the map is silent at ${x.silentAt.join(", ")})${na}`);
   }
   if (r.unlinked.length) L.push(`  no invariant links yet for: ${r.unlinked.join(", ")}`);
+  if (r.policy) { L.push(`  policy: ${r.policy.verdict}`); for (const p of r.policy.required) L.push(`    ${p.verdict}: ${p.name} (${p.status})`); }
   if (r.evidence) L.push(`  weakest link: ${r.evidence.level} (${r.evidence.weakest.on}; step ${r.evidence.weakest.step}, ${r.evidence.weakest.id} ${r.evidence.weakest.field})`);
   return L.join("\n");
 }
@@ -147,16 +172,27 @@ function selftest() {
   want("joint input fully supplied", j(["t", "v"], ["t", "v"]).status, "match");
   want("joint input by narrowing", j(["t", "v"], ["t", "w"]).status, "narrowing");
   want("no input supplied", j(["u"], ["t", "v"]).status, "mismatch");
+  const runC = (chain, entries, invs, req) => compose(chain, { ...P0, entries,
+    vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: invs.map(([id, cls]) => ({ id, name: id, carrier: "t", class: cls })), LINKS: [], ACTS_ON: [] } }, req ? { require: req } : {});
+  want("relational never survives per join", st(runC(["a"], [e("a", { preserved: ["N"] })], [["N", "relational"]]), "N"), "whole-chain check required");
+  want("relational stated broken stays broken", st(runC(["a"], [e("a", { broken: ["N"] })], [["N", "relational"]]), "N"), "broken");
+  const pol = runC(["a", "b"], [e("a", { preserved: ["S"], broken: ["B"] }), e("b", { preserved: ["S"] })], [["S", "state"], ["B", "trace"], ["N", "hyperproperty"], ["U", "state"]], ["S", "B", "N", "U"]).policy;
+  want("policy: holds", pol.required[0].verdict, "holds under the map's claims");
+  want("policy: violation", pol.required[1].verdict, "violation stated");
+  want("policy: whole chain", pol.required[2].verdict, "whole-chain check required");
+  want("policy: unmentioned is unknown", pol.required[3].verdict, "unknown");
+  want("policy: chain takes the worst", pol.verdict, "violation stated");
   want("map chain still restores", st(compose(["D2-118", "D2-117"]), "exceptional-divisor"), "restored");
   if (F.length) { console.log(`compose selftest: FAIL\n  ${F.join("\n  ")}`); process.exit(1); }
-  console.log("compose selftest: PASS (11 synthetic chains)");
+  console.log("compose selftest: PASS (18 synthetic chains)");
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (process.argv.includes("--selftest")) { selftest(); process.exit(0); }
   const a = process.argv.slice(2), i = a.indexOf("--chain");
   if (i < 0 || !a[i + 1]) { console.log("compose: needs --chain ID,ID,..."); process.exit(1); }
-  const r = compose(a[i + 1].split(",").map((s) => s.trim()));
+  const q = a.indexOf("--require");
+  const r = compose(a[i + 1].split(",").map((s) => s.trim()), parse(), q >= 0 && a[q + 1] ? { require: a[q + 1].split(",").map((s) => s.trim()) } : {});
   console.log(a.includes("--json") ? JSON.stringify(r, null, 1) : describe(r));
   if (r.error) process.exit(1);
 }

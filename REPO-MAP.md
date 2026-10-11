@@ -570,6 +570,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/check-all.mjs` | names | `scripts/mcp.mjs` |
 | `scripts/compose.mjs` | imports | `scripts/evidence.mjs` |
 | `scripts/compose.mjs` | imports | `scripts/mathmap.mjs` |
+| `scripts/compose.mjs` | names | `mapfill/invariants.js` |
 | `scripts/compose.mjs` | names | `scripts/evidence.mjs` |
 | `scripts/evidence.mjs` | imports | `audit/grades-0_1.js` |
 | `scripts/evidence.mjs` | imports | `audit/targeted-0_1.js` |
