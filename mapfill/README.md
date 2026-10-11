@@ -39,6 +39,8 @@ The D7 mapper report (`source/Category_Theory_Transformation_Enumeration.pdf`) g
 
 `domains.js` declares domains the landed map lacks (D9, systems and effects) with the tags their entries use. `generated.js` holds entries landed from a graded generation round (`generation/`): design contracts written by a generator, checked here for consistency (known invariants and carriers, nothing both kept and broken, tags in the vocabulary, a round with a grading) and carried at their own tier, **generated**, with every claim starting unchecked. A generated entry becomes an addition only when its claims are receipted.
 
+The D9 entries carry one context label in `invariants.js`, `compartment-context`, for the per-process contamination rule the operator ruled for the Phone (a process that has read a compartment's data emits as that compartment until reset): raised by the entries that bring labeled data in, forbidden at every entry that may break E9-NOEGRESS, cleared by none. It is coarse on purpose and catches what explicit-flow checkers miss, a decision taken on the data.
+
 ## Android bindings
 
 `android.js` binds the D9 entries to Android APIs at one pinned AOSP tag, from the MM-DR-002 round. Each binding grades the platform primitive and the whole D9 contract separately (enforced, monitored, unknown, not observable); its sources are hash-only rows of files read at the tag, five of whose hashes this repository's grading fetched and reproduced. Where the grading added a fact the generator missed, it sits in `gradingNote`, apart from the generator's text.

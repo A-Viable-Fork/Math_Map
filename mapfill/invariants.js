@@ -26,7 +26,7 @@
 //     later steps may depend on that data through control flow as well as through values; the mark persists
 //     until a step clears it (an explicit declassification). A step that forbids a label (an egress that W
 //     must not reach) is a stated violation when the label is present on entry to it. basis says why.
-//     Empty while the map has no systems domain; the mechanism is tested on synthetic chains.
+//     Populated for D9 below; the mechanism is also tested on synthetic chains.
 //   Checked by scripts/mathmap.mjs; used by scripts/compose.mjs.
 // Invariant: data only. The vocabulary is seeded from the fields that composites use and grows by use.
 "use strict";
@@ -189,6 +189,23 @@ const LINKS = [
     receipts: [{ file: "excerpts/arxiv-2103.12179.txt", quote: "[0,∞), using the harmonic function h(x) =x." }, { file: "excerpts/wikipedia-bessel-process.txt", quote: "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}" }] },
 ];
 
-const CONTEXT = [];
+// D9 (generated, MM-DR-001): one label, compartment-context, for the per-process contamination rule
+// [ruling: operator, 2026-10-11; the Phone trellis, F-45]: a process that has taken in a compartment's data
+// emits as that compartment until it is reset. Prior art: Weir (USENIX Security 2016, secondary;
+// generation/2026-10-11-mm-dr-003/grading.md). Raised by the steps whose output field says they bring
+// labeled data in; forbidden at every step whose broken field names E9-NOEGRESS. Nothing in D9 clears it:
+// D9-X10 releases one datum's label, and the decisions already taken on the data are not that datum, so a
+// reset (a fresh process) lies outside the chain. Coarse by design: a read of public data raises it too,
+// since a boundary monitor cannot tell the two apart (generation/2026-10-11-mm-dr-002/grading.md).
+const RAISE = (entry, phrase) => ({ entry, raises: ["compartment-context"], basis: `Its output field: "${phrase}".` });
+const FORBID = (entry) => ({ entry, forbids: ["compartment-context"], basis: "Its broken field names E9-NOEGRESS." });
+const CONTEXT = [
+  RAISE("D9-X03", "freshly labeled reading"),
+  RAISE("D9-X07", "a labeled snapshot of the actual version"),
+  RAISE("D9-X15", "result/failed/cancelled outcome"),
+  RAISE("D9-X18", "labeled plaintext"),
+  ...["D9-X01", "D9-X02", "D9-X05", "D9-X13", "D9-X14", "D9-X16", "D9-X26"].map(FORBID),
+  { entry: "D9-X27", raises: ["compartment-context"], forbids: ["compartment-context"], basis: "Its broken field names E9-NOEGRESS; its output field: \"component result\". It forbids on entry, before its own result raises." },
+];
 
 module.exports = { CARRIERS, INVARIANTS, RELATIONS, ACTS_ON, LINKS, CONTEXT };

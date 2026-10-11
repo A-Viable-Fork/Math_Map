@@ -419,6 +419,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/invariants.js` | names | `excerpts/wikipedia-hodge-projection.txt` |
 | `mapfill/invariants.js` | names | `excerpts/wikipedia-littlewood-paley-multiplier.txt` |
 | `mapfill/invariants.js` | names | `excerpts/wikipedia-resolution-of-singularities.txt` |
+| `mapfill/invariants.js` | names | `generation/2026-10-11-mm-dr-002/grading.md` |
+| `mapfill/invariants.js` | names | `generation/2026-10-11-mm-dr-003/grading.md` |
 | `mapfill/invariants.js` | names | `mapfill/generated.js` |
 | `mapfill/invariants.js` | names | `scripts/compose.mjs` |
 | `mapfill/invariants.js` | names | `scripts/mathmap.mjs` |
