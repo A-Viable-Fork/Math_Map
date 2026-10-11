@@ -1,0 +1,3424 @@
+[
+  {
+    "entry": "D9-X01",
+    "api": "sendto(int, const void*, size_t, int, const struct sockaddr*, socklen_t)",
+    "aospPath": "bionic/libc/SYSCALLS.TXT",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.INTERNET"
+    ],
+    "appOps": [],
+    "enforcementPoint": "packages/modules/Connectivity/service/src/com/android/server/BpfNetMaps.java; system/netd/server/NetdNativeService.cpp; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "payload bytes, socket, actual destination, actor credentials, current network policy",
+      "destination": "Outside B permits explicit egress; loopback or local peer can remain inside B. Connected socket routing, VPN/proxy and all replicas matter."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS"
+      ],
+      "note": "Bionic exposes the syscall; kernel and UID network rules govern access, not byte ancestry. No OP_INTERNET. Kernel/device implementation is separately pinned; failures can follow partial/earlier delivery and do not undo trace events."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/SYSCALLS.TXT",
+        "sha256": "ae8cc2b2d1d7badeb93c43bbaaacbdd61cea755e82f6a81318e061471fd30ec6"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/packages/modules/Connectivity/+/refs/tags/android-16.0.0_r4/service/src/com/android/server/BpfNetMaps.java",
+        "sha256": "c6c88800cf78a3288e81949a73ae439b434e2626c2fcbdcbca5e4426cde5e5f9"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/netd/+/refs/tags/android-16.0.0_r4/server/NetdNativeService.cpp",
+        "sha256": "b2d41dec1a79e02012fe74665de28dfd89c0799bba0598f43d7442619602f8b4"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X01",
+    "api": "java.net.DatagramSocket#send(java.net.DatagramPacket)",
+    "aospPath": "libcore/ojluni/src/main/java/java/net/DatagramSocket.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.INTERNET"
+    ],
+    "appOps": [],
+    "enforcementPoint": "packages/modules/Connectivity/service/src/com/android/server/BpfNetMaps.java; system/netd/server/NetdNativeService.cpp; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "DatagramPacket payload/address/port, socket/bound interface, actor and current network policy",
+      "destination": "An actual external peer permits egress; loopback or an audited local peer can stay inside B. A proxy changes the ultimate recipient."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS"
+      ],
+      "note": "Java network API is governed by the same UID/network permissions as native sockets. It adds neither complete payload labels nor an authenticated atomic effect log."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/net/DatagramSocket.java",
+        "sha256": "00a8c6489b51c476c3cf886c13588756691102fbd80ed3d559c193308ea583fa"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/packages/modules/Connectivity/+/refs/tags/android-16.0.0_r4/service/src/com/android/server/BpfNetMaps.java",
+        "sha256": "c6c88800cf78a3288e81949a73ae439b434e2626c2fcbdcbca5e4426cde5e5f9"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/netd/+/refs/tags/android-16.0.0_r4/server/NetdNativeService.cpp",
+        "sha256": "b2d41dec1a79e02012fe74665de28dfd89c0799bba0598f43d7442619602f8b4"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X01",
+    "api": "android.os.IBinder#transact(int, android.os.Parcel, android.os.Parcel, int)",
+    "aospPath": "frameworks/base/core/java/android/os/IBinder.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/os/BinderProxy.java; frameworks/native/libs/binder/IPCThreadState.cpp; frameworks/native/libs/binder/Parcel.cpp; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "transaction code, data Parcel, destination Binder object, flags, reply, caller",
+      "flags": "FLAG_ONEWAY queues asynchronous work; reply is not a transactional commit/audit certificate. Local-interface calls can execute in process."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-NOEGRESS",
+        "E9-INI"
+      ],
+      "note": "SELinux/Binder supplies immediate transport identity and object transfer. Target service supplies its own permission checks. Parcel bytes and Binder handles do not carry a complete derivation DAG; receivers can forward under their own UID."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/IBinder.java",
+        "sha256": "ae8e701f450f11481335a4276a3bcdaffadc592b391ba458a70d215dbe57cab1"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/BinderProxy.java",
+        "sha256": "f9db07a560d0358d1c371d8d793d8fd0970f676f6ff8eec2fb1ee9e51a9e9db7"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/binder/IPCThreadState.cpp",
+        "sha256": "7d9bd8ce38d37d4e7a1f004ab2144fe69ff95799e0db24b7bdb5d0681af065a8"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/binder/Parcel.cpp",
+        "sha256": "1fa251f995b6ed3e0e670ed145268888ae4aa34a6c8e34958fdc294f10b511f1"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X01",
+    "api": "android.content.Context#sendBroadcast(android.content.Intent, java.lang.String)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/app/ContextImpl.java; frameworks/base/services/core/java/com/android/server/am/BroadcastController.java; frameworks/base/services/core/java/com/android/server/am/BroadcastSkipPolicy.java",
+    "parameters": {
+      "jointOperands": "Intent, extras/ClipData/URI grants, user, receiverPermission, caller",
+      "destination": "Explicit component/package narrows recipients; implicit resolution admits multiple runtime receivers. receiverPermission filters receivers rather than certifying their future effects."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-INI"
+      ],
+      "note": "A broadcast may copy data into several apps. Android validates delivery eligibility and permission filters; it does not enforce a W-origin no-egress policy on receivers."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/ContextImpl.java",
+        "sha256": "8b18ea9dbe2aaea77c9c1a629b669c3e6a7b7c13f9a76408e0a6ccd5d2997b3d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/BroadcastController.java",
+        "sha256": "0cadffd17ff007554932858bf3935aee635ddefa4b9ef0ddf2956dd80dc6e1ed"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/BroadcastSkipPolicy.java",
+        "sha256": "cd1eb80720d399e2b960e43ef829b703a060d27bf38c3af4b658ef9502756c30"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X01",
+    "api": "android.content.ClipboardManager#setPrimaryClip(android.content.ClipData)",
+    "aospPath": "frameworks/base/core/java/android/content/ClipboardManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [
+      "OP_WRITE_CLIPBOARD"
+    ],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/clipboard/ClipboardService.java; frameworks/base/core/java/android/app/AppOpsManager.java",
+    "parameters": {
+      "jointOperands": "ClipData, writer package/UID, profile/device, clipboard policy",
+      "content": "Text, URI and Intent items differ. Cross-profile copying depends on restrictions; a reader can export a copied item."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-INI"
+      ],
+      "note": "OP_WRITE_CLIPBOARD and service policy govern the write. ClipboardService retains writer UID/package metadata, not the history of the text. URI items can introduce a later provider read. Setter does not identify all future recipients."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ClipboardManager.java",
+        "sha256": "2324636e04ffca43c29cfda754cfd032ea8bcaeda35c717c5b87eba73e4184b3"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/clipboard/ClipboardService.java",
+        "sha256": "544aabaa64f72970d281efbd343314e9a0a372a4d2efe855da072953a5d755bf"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/AppOpsManager.java",
+        "sha256": "91450d5a8ea6b332b6a52ee5954b3d51dd49b6f9c8abad5f4af798c1051ac175"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X01",
+    "api": "android.content.ContentResolver#call(android.net.Uri, java.lang.String, java.lang.String, android.os.Bundle)",
+    "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/content/ContentProvider.java",
+    "parameters": {
+      "jointOperands": "URI/provider, method, arg, extras, caller attribution",
+      "method": "Provider-defined method may read, write, export or change authority; normal query/insert permissions are not a proof for arbitrary call methods."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-AUTH"
+      ],
+      "note": "Provider custom call authorization is a provider obligation. Treat the method effect profile as unknown until its implementation is audited; permission re-delegation can make the provider the apparent actor."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "unknown",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentResolver.java",
+        "sha256": "68cb1833b33ca0098f13f62931c2aa27ff9bb277561dcb716fbec8ae17eaf95e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X02",
+    "api": "android.content.Context#openFileOutput(java.lang.String, int)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/app/ContextImpl.java; bionic/libc/bionic/open.cpp; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "name, mode, bytes subsequently written, owning UID/user, backup and replica configuration",
+      "mode": "MODE_PRIVATE targets app-private storage; append versus truncate changes history. This call obtains an output stream; its writes realize Store."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-ERASE",
+        "E9-AUDIT"
+      ],
+      "note": "Private placement is enforceable against ordinary apps; content labels, backup inventory and atomic effect-plus-log are absent. A local file does not prove every copy of W data remains local."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/ContextImpl.java",
+        "sha256": "8b18ea9dbe2aaea77c9c1a629b669c3e6a7b7c13f9a76408e0a6ccd5d2997b3d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/bionic/open.cpp",
+        "sha256": "0e5bb93a2a5ab344716f8508e991f7e891f71042d0e601aa751e941d22cd780d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X02",
+    "api": "write(int, const void*, size_t)",
+    "aospPath": "bionic/libc/SYSCALLS.TXT",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "fd, bytes, size, actual fd target, credentials",
+      "fd": "File, socket, pipe, device and shared-memory target have different effects. Short writes and asynchronous persistence are observable outcomes."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-ERASE"
+      ],
+      "note": "A syscall named write is not intrinsically local storage. Access to the fd was acquired earlier; an inherited/passed fd can bypass a fresh path permission decision. Payload origin and all replicas remain unknown."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/SYSCALLS.TXT",
+        "sha256": "ae8cc2b2d1d7badeb93c43bbaaacbdd61cea755e82f6a81318e061471fd30ec6"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X02",
+    "api": "android.content.ContentResolver#insert(android.net.Uri, android.content.ContentValues)",
+    "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/content/ContentProvider.java; packages/providers/MediaProvider/src/com/android/providers/media/MediaProvider.java",
+    "parameters": {
+      "jointOperands": "provider URI, ContentValues, caller, provider permission and replica behavior",
+      "provider": "Local MediaProvider, third-party provider and cloud-backed document data require different locality verdicts."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-ERASE"
+      ],
+      "note": "ContentProvider transport enforces configured permissions/URI grants/AppOps where applicable; a custom provider decides actual storage and sync. Provider UID attribution does not attest the caller data history."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentResolver.java",
+        "sha256": "68cb1833b33ca0098f13f62931c2aa27ff9bb277561dcb716fbec8ae17eaf95e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/packages/providers/MediaProvider/+/refs/tags/android-16.0.0_r4/src/com/android/providers/media/MediaProvider.java",
+        "sha256": "61330440c7d4a1c3e2b64833bcfc218f0ebf3c7ca614496d02d2d82fa0c2c5ed"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X02",
+    "api": "android.content.ContentResolver#openFileDescriptor(android.net.Uri, java.lang.String)",
+    "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/content/ContentProvider.java; frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java; packages/providers/MediaProvider/src/com/android/providers/media/MediaProvider.java",
+    "parameters": {
+      "jointOperands": "URI, mode, caller, grant, returned fd, later writes",
+      "mode": "r, w, rw and truncating modes differ; MediaStore ownership/permission checks depend on URI and target SDK."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-ERASE"
+      ],
+      "note": "Opening checks access; later fd I/O is not a new provider transaction. Scoped storage constrains accessible objects, not transitive recipients, sync or permanent erasure."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentResolver.java",
+        "sha256": "68cb1833b33ca0098f13f62931c2aa27ff9bb277561dcb716fbec8ae17eaf95e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+        "sha256": "405b94f0b884721e70550da46fa84e9a185000c73dcc77eb20fb62b185e0d63d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/packages/providers/MediaProvider/+/refs/tags/android-16.0.0_r4/src/com/android/providers/media/MediaProvider.java",
+        "sha256": "61330440c7d4a1c3e2b64833bcfc218f0ebf3c7ca614496d02d2d82fa0c2c5ed"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X03",
+    "api": "android.hardware.SensorManager#registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int)",
+    "aospPath": "frameworks/base/core/java/android/hardware/SensorManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.HIGH_SAMPLING_RATE_SENSORS"
+    ],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/hardware/SystemSensorManager.java; frameworks/native/services/sensorservice/SensorService.cpp; frameworks/native/services/sensorservice/SensorEventConnection.cpp",
+    "parameters": {
+      "jointOperands": "listener, concrete sensor, samplingPeriodUs, caller UID/package, targetSdk, sensor privacy state",
+      "sensor": "Ordinary accelerometer access has no RECORD_AUDIO permission or OP_RECORD_AUDIO. Protected sensor types use their own requiredPermission and requiredAppOp.",
+      "rate": "At targetSdk >=31 capped sensor set is rate-limited without HIGH_SAMPLING_RATE_SENSORS; privileged settings and microphone privacy also matter."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "SensorService controls admission/rates/UID activity, so zero permission is not zero mediation. Samples identify sensor hardware/type and time, not the compartment whose speech or computation physically caused them. HIGH_SAMPLING_RATE_SENSORS is conditional, not needed for an ordinary <=200 Hz accelerometer stream."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/hardware/SensorManager.java",
+        "sha256": "53288868107b0e82b5cb36a3c58e35bcdb1cc939d86e724ee346183f97e781bc"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/hardware/SystemSensorManager.java",
+        "sha256": "33c00bf9d99b01fc3bd60e1672242a2f37883992b6dce7640525da4d5cfc4161"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/services/sensorservice/SensorService.cpp",
+        "sha256": "6690bfd0857ca5af323ee66b272e82e44e3bb79f19a6e0757a70c4aad2622349"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/services/sensorservice/SensorEventConnection.cpp",
+        "sha256": "73921078f52f26a6174b9fc808b64e7eccabba6824c980bb11f0f1706bcf81f3"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X03",
+    "api": "ASensorEventQueue_enableSensor(ASensorEventQueue*, ASensor const*)",
+    "aospPath": "frameworks/native/include/android/sensor.h",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/native/services/sensorservice/SensorService.cpp; frameworks/native/services/sensorservice/SensorEventConnection.cpp",
+    "parameters": {
+      "jointOperands": "queue, concrete sensor, caller, event receiver, separate rate configuration",
+      "transport": "NDK queue enable/read accesses the same sensor service; events do not require one Binder transaction per sample."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "Native access does not escape SensorService admission. It also does not add ingress-origin authentication; event delivery uses a data channel rather than a universal per-reading Binder monitor."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/include/android/sensor.h",
+        "sha256": "ea98cd1e7a92fae33d3457b66e05e654318c751399cee01fca45c3526f26704c"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/services/sensorservice/SensorService.cpp",
+        "sha256": "6690bfd0857ca5af323ee66b272e82e44e3bb79f19a6e0757a70c4aad2622349"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/services/sensorservice/SensorEventConnection.cpp",
+        "sha256": "73921078f52f26a6174b9fc808b64e7eccabba6824c980bb11f0f1706bcf81f3"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X03",
+    "api": "android.location.LocationManager#requestLocationUpdates(java.lang.String, long, float, android.location.LocationListener)",
+    "aospPath": "frameworks/base/location/java/android/location/LocationManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.ACCESS_BACKGROUND_LOCATION"
+    ],
+    "appOps": [
+      "OP_COARSE_LOCATION",
+      "OP_FINE_LOCATION"
+    ],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/location/LocationManagerService.java; frameworks/base/core/java/android/content/PermissionChecker.java",
+    "parameters": {
+      "jointOperands": "provider, minTimeMs, minDistanceM, listener, caller, granted accuracy, foreground state",
+      "permissions": "ACCESS_COARSE_LOCATION or ACCESS_FINE_LOCATION by requested accuracy; ACCESS_BACKGROUND_LOCATION is conditional on background use."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI"
+      ],
+      "note": "Permission/accuracy and AppOps checks mediate location; provider/sample authenticity and complete origin labels remain different obligations."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/location/java/android/location/LocationManager.java",
+        "sha256": "f5bf07d3c5cf72f5e9c2032d4243c25462cc11de449e017ac77f4f97b2b0df34"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/location/LocationManagerService.java",
+        "sha256": "158161310fc865b75480b3ed303b23257f2a72bb75f362f47d78b90deaa640aa"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/PermissionChecker.java",
+        "sha256": "0d16b4d502f59ffbccb8a439ca1ed9be7a7ba0f49022c0aaa475ede0a431c480"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X03",
+    "api": "android.media.AudioRecord#read(byte[], int, int)",
+    "aospPath": "frameworks/base/media/java/android/media/AudioRecord.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.RECORD_AUDIO"
+    ],
+    "appOps": [
+      "OP_RECORD_AUDIO"
+    ],
+    "enforcementPoint": "frameworks/av/services/audiopolicy/service/AudioPolicyInterfaceImpl.cpp; frameworks/base/core/java/android/content/PermissionChecker.java",
+    "parameters": {
+      "jointOperands": "authorized initialized AudioRecord, active capture session, buffer/offset/size, audio source and attribution",
+      "delivery": "Permission and recording policy are evaluated during setup/start/data delivery; reading samples is not one independently interceptable Binder call per sample."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI"
+      ],
+      "note": "RECORD_AUDIO/OP_RECORD_AUDIO mediate normal microphone capture, unlike an ordinary accelerometer. Captured speech has no authenticated speaker/compartment provenance attached; special privileged capture sources need their own audit."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/media/java/android/media/AudioRecord.java",
+        "sha256": "1e403c0c443fd4db09cadcedf897964f4623f928a04b36d21fd48e1ef776c33c"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/av/+/refs/tags/android-16.0.0_r4/services/audiopolicy/service/AudioPolicyInterfaceImpl.cpp",
+        "sha256": "a718dcc112d00812d8692815d6a480d18c7bf7a477c0580090051d3dac217541"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/PermissionChecker.java",
+        "sha256": "0d16b4d502f59ffbccb8a439ca1ed9be7a7ba0f49022c0aaa475ede0a431c480"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X04",
+    "api": "android.os.UserManager#createProfile(java.lang.String, java.lang.String, java.util.Set)",
+    "aospPath": "frameworks/base/core/java/android/os/UserManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.MANAGE_USERS",
+      "android.permission.CREATE_USERS"
+    ],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/pm/UserManagerService.java; frameworks/base/services/core/java/com/android/server/pm/UserTypeFactory.java; system/sepolicy/private/seapp_contexts",
+    "parameters": {
+      "jointOperands": "name, userType, disallowedPackages, parent user, creator authority, sharing restrictions",
+      "type": "USER_TYPE_PROFILE_MANAGED and USER_TYPE_PROFILE_PRIVATE differ in lifecycle/UI. Permission list is any-of subject to flags/system policy; user types and capacity may be disabled by product configuration."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-TNI"
+      ],
+      "note": "System API; UID/user and data-directory separation are structural confinement only. Profiles share hardware, scheduler and authorized cross-profile brokers. Creating a profile does not install the D9 gate or certify noninterference."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "compartment",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/UserManager.java",
+        "sha256": "5189b7db5afdef7d4fe959a872c1b33ba325b2119c1a70b30f6d61947aba17a9"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/UserManagerService.java",
+        "sha256": "7244604b4e5544ba976ab0f4709a49001b871f29c7d6dfcb352767a1d674849e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/UserTypeFactory.java",
+        "sha256": "f6e956edbccc3c826d663bef76db20c1df1ffd470c7caedd817f3cdfc6b1182f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/seapp_contexts",
+        "sha256": "e0c8f6d9f32040bfd4bb358c16cda902ed9f1ebe9b27721b6d7278b56c687821"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X04",
+    "api": "android.content.Context#bindIsolatedService(android.content.Intent, int, java.lang.String, java.util.concurrent.Executor, android.content.ServiceConnection)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/app/ContextImpl.java; frameworks/base/services/core/java/com/android/server/am/ActiveServices.java",
+    "parameters": {
+      "jointOperands": "explicit service, flags, instanceName, executor, connection, service declaration and data",
+      "service": "Requires an isolated-service configuration; Binder capabilities supplied by the client provide authority. Multiple components in a normal app process are not separate compartments."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-TNI"
+      ],
+      "note": "An isolated UID/process reduces ambient access; it is not a generic language sandbox. Shared devices and explicitly granted Binder/fd capabilities remain channels; labels and per-effect gate forwarding need the adapter."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "compartment",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/ContextImpl.java",
+        "sha256": "8b18ea9dbe2aaea77c9c1a629b669c3e6a7b7c13f9a76408e0a6ccd5d2997b3d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/ActiveServices.java",
+        "sha256": "47f1d84a31b4d873e1d7145678774d8d270ba637056cdb35aa993348c69fed5f"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X05",
+    "api": "android.app.PendingIntent#getBroadcast(android.content.Context, int, android.content.Intent, int)",
+    "aospPath": "frameworks/base/core/java/android/app/PendingIntent.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java; frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java",
+    "parameters": {
+      "jointOperands": "creator context, requestCode, Intent, flags, intended recipient and lifetime policy",
+      "flags": "Existing matching token may be returned; FLAG_CANCEL_CURRENT replaces a prior token. FLAG_IMMUTABLE limits holder mutation; FLAG_ONE_SHOT limits sends. Creator can still update under FLAG_UPDATE_CURRENT."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-INI"
+      ],
+      "note": "Creates an authentic system-held token for specified action identity, but not a generic fresh capability generation with explicit expiry and reduced ambient rights. Sending can execute with creator authority; extra bytes and URI grants require independent review."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/PendingIntent.java",
+        "sha256": "fcadc2ef6063a115032632de5ae3f86ef9dc85c1061113d5c24f7a5bc28c4869"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/ActivityManagerService.java",
+        "sha256": "2df3c48c2e8769bf00193c70465e6b85d5208c48e23eac62820c9c083ae95601"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/PendingIntentRecord.java",
+        "sha256": "fc915b5b5ecfbbf3956aed2da390f34b6d6e997c4929f00db4739b77723b6ee8"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X05",
+    "api": "android.app.admin.DevicePolicyManager#setPermissionGrantState(android.content.ComponentName, java.lang.String, java.lang.String, int)",
+    "aospPath": "frameworks/base/core/java/android/app/admin/DevicePolicyManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS"
+    ],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/devicepolicy/java/com/android/server/devicepolicy/DevicePolicyManagerService.java; frameworks/base/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+    "parameters": {
+      "jointOperands": "authorized admin/delegate or permission holder, target package, runtime permission, grantState, target user",
+      "authority": "Device/profile owner/delegation rules apply; MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS is conditional. Android runtime permission issuance is coarse resource-class authority."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-AUDIT"
+      ],
+      "note": "Does not issue an application-defined object capability carrying target/version/expiry or atomically record every later use."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/admin/DevicePolicyManager.java",
+        "sha256": "cf9f641c62d0e8286185e4e24ba7203d44d505bf5516b33b788b8ca09e650960"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/devicepolicy/java/com/android/server/devicepolicy/DevicePolicyManagerService.java",
+        "sha256": "9ae414c5f5daa54be98f1d308612c551293f0152fb298d754730f7eeffac491c"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+        "sha256": "5a33d8745287b25ddfa4464e839cb4db152fb32db536b3768eae383dfb1fbc1d"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X06",
+    "api": "android.app.PendingIntent#cancel()",
+    "aospPath": "frameworks/base/core/java/android/app/PendingIntent.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java; frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java",
+    "parameters": {
+      "jointOperands": "creator authority, exact PendingIntent token/record, current cancellation state",
+      "ordering": "Cancellation prevents later accepted sends through that record; already dispatched work and independent tokens are distinct."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-AUDIT"
+      ],
+      "note": "System record sharing is a useful restricted revocation mechanism. No expected-version CAS or authenticated atomic audit is supplied; cancellation is not rollback of past effects."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/PendingIntent.java",
+        "sha256": "fcadc2ef6063a115032632de5ae3f86ef9dc85c1061113d5c24f7a5bc28c4869"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/ActivityManagerService.java",
+        "sha256": "2df3c48c2e8769bf00193c70465e6b85d5208c48e23eac62820c9c083ae95601"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/PendingIntentRecord.java",
+        "sha256": "fc915b5b5ecfbbf3956aed2da390f34b6d6e997c4929f00db4739b77723b6ee8"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X06",
+    "api": "android.content.Context#revokeUriPermission(android.net.Uri, int)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java; frameworks/base/core/java/android/content/ContentProvider.java",
+    "parameters": {
+      "jointOperands": "revoker, URI/prefix, read/write mode flags, targeted grants",
+      "aliases": "Independent grants, copied bytes and already-open file descriptors must be considered separately."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-REVOKE"
+      ],
+      "note": "Removes applicable URI-grant authorization for future checked opens; it cannot implement revocation of all subsequent effects through an already-returned ordinary fd. No generic generation check at every write."
+    },
+    "assurance": "unknown",
+    "verdict": "DEAD",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+        "sha256": "405b94f0b884721e70550da46fa84e9a185000c73dcc77eb20fb62b185e0d63d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X06",
+    "api": "android.content.pm.PackageManager#revokeRuntimePermission(java.lang.String, java.lang.String, android.os.UserHandle)",
+    "aospPath": "frameworks/base/core/java/android/content/pm/PackageManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.REVOKE_RUNTIME_PERMISSIONS"
+    ],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/pm/permission/PermissionManagerService.java; frameworks/base/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+    "parameters": {
+      "jointOperands": "privileged revoker, target package, permission name, user, current grant state",
+      "effect": "Applies to future permission checks and may trigger process killing; behavior is resource-specific and not a user-specified versioned revocation transaction."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-AUDIT"
+      ],
+      "note": "Runtime revocation does not recover disclosed data and does not establish the D9 shared-generation/commit/audit protocol for all handles."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/pm/PackageManager.java",
+        "sha256": "1db56cfd640e5161ca97360657ffffb038c3a1b09893d0f90036002b56959a3a"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/pm/permission/PermissionManagerService.java",
+        "sha256": "3cdf1eb28b2071a800b2c2b56445f099257807fc4d0b6c83734de75acf85c26e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+        "sha256": "5a33d8745287b25ddfa4464e839cb4db152fb32db536b3768eae383dfb1fbc1d"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X07",
+    "api": "android.content.Context#openFileInput(java.lang.String)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/app/ContextImpl.java; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "file name, UID/user, actual stored version, subsequently read bytes",
+      "read": "Private storage access can be local; read timing and any earlier external ingress remain relevant."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-TNI"
+      ],
+      "note": "No protected provenance/signature envelope is compulsory. Hashing or parsing an envelope does not authenticate historical dependencies without a trusted writer."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/ContextImpl.java",
+        "sha256": "8b18ea9dbe2aaea77c9c1a629b669c3e6a7b7c13f9a76408e0a6ccd5d2997b3d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X07",
+    "api": "read(int, void*, size_t)",
+    "aospPath": "bionic/libc/SYSCALLS.TXT",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "fd, buffer, size, resource/version, credentials",
+      "fd": "An fd can refer to a file, pipe, socket or device; read can have resource/protocol side effects."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "Object access is controlled; input label completeness and a stable version require a trusted adapter. Dataflow inside the process is not observable at this gate."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/SYSCALLS.TXT",
+        "sha256": "ae8cc2b2d1d7badeb93c43bbaaacbdd61cea755e82f6a81318e061471fd30ec6"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X07",
+    "api": "android.content.ContentResolver#query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String)",
+    "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/content/ContentProvider.java; frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+    "parameters": {
+      "jointOperands": "URI, projection, selection, args, ordering, provider, attribution, read authority",
+      "provider": "Custom providers may notify, synchronize or perform network requests. Access grants do not attest effect-free reads."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "ContentProvider read access enforcement is present; provider-specific behavior and data origins remain unaudited until that provider is pinned."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentResolver.java",
+        "sha256": "68cb1833b33ca0098f13f62931c2aa27ff9bb277561dcb716fbec8ae17eaf95e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+        "sha256": "405b94f0b884721e70550da46fa84e9a185000c73dcc77eb20fb62b185e0d63d"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X07",
+    "api": "android.content.ClipboardManager#getPrimaryClip()",
+    "aospPath": "frameworks/base/core/java/android/content/ClipboardManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [
+      "OP_READ_CLIPBOARD"
+    ],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/clipboard/ClipboardService.java",
+    "parameters": {
+      "jointOperands": "reader UID/package/profile/device, focus/IME/system role, current clip",
+      "origin": "Protected getPrimaryClipSource needs SET_CLIP_SOURCE; last writer package is still not the text derivation DAG."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI"
+      ],
+      "note": "OP_READ_CLIPBOARD, focus/IME exceptions and lock/profile policy mediate reads. An allowed foreground agent may read guest-origin text. Automatic clearing cannot remove copies held by readers."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ClipboardManager.java",
+        "sha256": "2324636e04ffca43c29cfda754cfd032ea8bcaeda35c717c5b87eba73e4184b3"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/clipboard/ClipboardService.java",
+        "sha256": "544aabaa64f72970d281efbd343314e9a0a372a4d2efe855da072953a5d755bf"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X08",
+    "api": null,
+    "aospPath": null,
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "typed total expression, every data operand, PC-origin set, protected runtime, declared observation model"
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [],
+      "note": "Ordinary Kotlin/Java/native evaluation does not supply purity, totality or dependency-union proofs. Build a restricted interpreter; Thread/Handler is not its replacement."
+    },
+    "assurance": "not observable",
+    "verdict": "UNVERIFIED",
+    "evidenceLabel": "GENERATED",
+    "apiVerdict": "UNVERIFIED",
+    "bindingKind": "no platform binding",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "not observable",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-EBND",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": []
+  },
+  {
+    "entry": "D9-X09",
+    "api": "android.os.SharedMemory#create(java.lang.String, int)",
+    "aospPath": "frameworks/base/core/java/android/os/SharedMemory.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "name, size, creator, initial contents, B, allowed future fd exports",
+      "scope": "A fresh shared-memory region can start local, then be mapped or passed into another process. Mappings and exports need separate policy."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-ERASE",
+        "E9-TNI"
+      ],
+      "note": "Region creation is concrete, but protected origin labels, allocator budget and fresh approval history are not implied."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/SharedMemory.java",
+        "sha256": "0b9c36194d108ec3a3f1ea74dc0bde268ebfbe0c63fa005ce8956edcc432ce8b"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X09",
+    "api": "openat(int, const char*, int, mode_t)",
+    "aospPath": "bionic/libc/SYSCALLS.TXT",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "bionic/libc/bionic/open.cpp; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "dirfd, path, O_CREAT|O_EXCL flags, mode, creator UID, filesystem and B",
+      "freshness": "O_EXCL tests namespace nonexistence; it is not global identity/nonce uniqueness. Parent symlinks/mounts and backups matter."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-ERASE",
+        "E9-TNI"
+      ],
+      "note": "Exclusive file creation is a component primitive. It does not establish fresh protected origin metadata or the resource inventory."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/SYSCALLS.TXT",
+        "sha256": "ae8cc2b2d1d7badeb93c43bbaaacbdd61cea755e82f6a81318e061471fd30ec6"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/bionic/open.cpp",
+        "sha256": "0e5bb93a2a5ab344716f8508e991f7e891f71042d0e601aa751e941d22cd780d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X10",
+    "api": null,
+    "aospPath": null,
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "datum, protected label, releaser, what/who/where/when policy, target label, current epoch"
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [],
+      "note": "No audited Android API implements historical-origin-preserving IFC declassification. URI grants and sharing export authority/data rather than merely constructing the attached released-label view."
+    },
+    "assurance": "not observable",
+    "verdict": "UNVERIFIED",
+    "evidenceLabel": "GENERATED",
+    "apiVerdict": "UNVERIFIED",
+    "bindingKind": "no platform binding",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "not observable",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-GFREE",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": []
+  },
+  {
+    "entry": "D9-X11",
+    "api": null,
+    "aospPath": null,
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "exact datum bytes, endorser authority, validation predicate, decision scope, historical origins"
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [],
+      "note": "Package signing and Signature.verify are not a scoped integrity-endorsement service; validation must be implemented inside a trusted application gate without rewriting guest ancestry."
+    },
+    "assurance": "not observable",
+    "verdict": "UNVERIFIED",
+    "evidenceLabel": "GENERATED",
+    "apiVerdict": "UNVERIFIED",
+    "bindingKind": "no platform binding",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "not observable",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-GFREE",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": []
+  },
+  {
+    "entry": "D9-X12",
+    "api": "android.os.SharedMemory#setProtect(int)",
+    "aospPath": "frameworks/base/core/java/android/os/SharedMemory.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "exact backing region/handle, requested PROT mask, existing protections and mappings",
+      "protection": "May only remove future mapping permissions on the region; preexisting writable mappings remain writable."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-TNI"
+      ],
+      "note": "Restricted authority reduction for a memory region. It does not reduce all aliases/ambient authority or supply explicit expiry. No E9-ATTEN certificate is emitted; a wrapper must define the input/output pair precisely."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-ATTEN",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/SharedMemory.java",
+        "sha256": "0b9c36194d108ec3a3f1ea74dc0bde268ebfbe0c63fa005ce8956edcc432ce8b"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X13",
+    "api": "android.content.Context#grantUriPermission(java.lang.String, android.net.Uri, int)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/uri/UriGrantsManagerService.java; frameworks/base/core/java/android/content/ContentProvider.java",
+    "parameters": {
+      "jointOperands": "live grantor authority, recipient package/user, URI, read/write/prefix/persistable flags",
+      "rights": "Read-only exact URI may narrow declared delegated rights; provider ownership, URI-prefix coverage and persistability determine whether this is actual attenuation."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-INI"
+      ],
+      "note": "Restricted delegation with Android authorization checks. Recipient can already possess independent/ambient rights; lifetime/version and origin/log protocols are absent."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-ATTEN",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/uri/UriGrantsManagerService.java",
+        "sha256": "405b94f0b884721e70550da46fa84e9a185000c73dcc77eb20fb62b185e0d63d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X13",
+    "api": "android.os.ParcelFileDescriptor#writeToParcel(android.os.Parcel, int)",
+    "aospPath": "frameworks/base/core/java/android/os/ParcelFileDescriptor.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/native/libs/binder/Parcel.cpp; system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "existing fd, its access mode, destination Parcel/Binder peer, transfer flags",
+      "authority": "Duplication transfers existing fd authority; caller must first obtain a safely attenuated descriptor. Passing a writable fd does not make it read-only."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS"
+      ],
+      "note": "Descriptor transfer is delegation, not automatic attenuation. No general target/version/revocation witness accompanies the fd."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-ATTEN",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/os/ParcelFileDescriptor.java",
+        "sha256": "dd76635b7ed062dac3d04f5941f39bf63c5680841292d1bc07c39845722d5cbf"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/binder/Parcel.cpp",
+        "sha256": "1fa251f995b6ed3e0e670ed145268888ae4aa34a6c8e34958fdc294f10b511f1"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X14",
+    "api": "java.lang.Thread#start()",
+    "aospPath": "libcore/ojluni/src/main/java/java/lang/Thread.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "task code, arguments, inherited references/capabilities, process and scheduler",
+      "scope": "New thread shares process UID, memory and ambient permission set; native clone/thread creation has the same issue."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "Thread creation supplies scheduling, not D9 attenuated authority or child trace/origin accounting."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "not observable",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/lang/Thread.java",
+        "sha256": "b1252bf93b6706ec1bb0894923a2bfe4218ae15d06f41421cebbe60827427d7d"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X15",
+    "api": "java.lang.Thread#join()",
+    "aospPath": "libcore/ojluni/src/main/java/java/lang/Thread.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "task handle, task outcome store, scheduler and cancellation/interruption semantics",
+      "termination": "May block or be interrupted; join itself returns no labeled result or child effect trace."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "Waiting for termination does not certify confidentiality/integrity or audit completeness. A result channel and protected trace accounting need additional machinery."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "not observable",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "task-handle"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-FRESH",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/lang/Thread.java",
+        "sha256": "b1252bf93b6706ec1bb0894923a2bfe4218ae15d06f41421cebbe60827427d7d"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X16",
+    "api": null,
+    "aospPath": null,
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "effect signature, handler, installer authority, lexical scope, continuation/resumption semantics, gate forwarding"
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [],
+      "note": "No audited Android service registration/Looper API supplies lexical algebraic-effect handlers with the attached gate contract. A trusted effect runtime must define and validate forwarding."
+    },
+    "assurance": "not observable",
+    "verdict": "UNVERIFIED",
+    "evidenceLabel": "GENERATED",
+    "apiVerdict": "UNVERIFIED",
+    "bindingKind": "no platform binding",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "not observable",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "handler"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": []
+  },
+  {
+    "entry": "D9-X17",
+    "api": "javax.crypto.Cipher#doFinal(byte[])",
+    "aospPath": "libcore/ojluni/src/main/java/javax/crypto/Cipher.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java; system/security/keystore2/src/security_level.rs",
+    "parameters": {
+      "jointOperands": "data bytes, initialized Cipher, AndroidKeyStore opaque key handle, algorithm/mode/padding, IV/nonce, caller and provider",
+      "key": "Only AndroidKeyStore path is the opaque-key candidate; ordinary SecretKeySpec puts key bytes in process memory. KeyMint hardware/software backing is device-specific.",
+      "boundary": "Key service/HAL is outside an app process but may be inside a device-wide B; B must name the trusted service explicitly.",
+      "operation": "ENCRYPT_MODE; nonce uniqueness and authenticated-mode choice are separate obligations."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-TNI",
+        "E9-PNI"
+      ],
+      "note": "Key use is mediated by keystore2/KeyMint and key authorization. Ciphertext keeps the same origins in the D9 model, but Android attaches no such labels; encryption does not establish exact E9-PNI or permission to send."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "key-handle"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/javax/crypto/Cipher.java",
+        "sha256": "ade0446fd23282fcbcd81eded2b15aaf4ea61f6d533f8be2400355ebcab54290"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java",
+        "sha256": "1740ce55010879a08fb9987ad9dc95bfcc6c4ff6f955793c81d24f0786df1eed"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/security/+/refs/tags/android-16.0.0_r4/keystore2/src/security_level.rs",
+        "sha256": "8c1c9c587254c88da920684f4e7aa5bff490aae7bc130a3dd936d5aa0689e4cd"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X18",
+    "api": "javax.crypto.Cipher#doFinal(byte[])",
+    "aospPath": "libcore/ojluni/src/main/java/javax/crypto/Cipher.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java; system/security/keystore2/src/security_level.rs",
+    "parameters": {
+      "jointOperands": "data bytes, initialized Cipher, AndroidKeyStore opaque key handle, algorithm/mode/padding, IV/nonce, caller and provider",
+      "key": "Only AndroidKeyStore path is the opaque-key candidate; ordinary SecretKeySpec puts key bytes in process memory. KeyMint hardware/software backing is device-specific.",
+      "boundary": "Key service/HAL is outside an app process but may be inside a device-wide B; B must name the trusted service explicitly.",
+      "operation": "DECRYPT_MODE; include IV, authentication tag/AAD and failure observations."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-ERASE",
+        "E9-GFREE",
+        "E9-INI",
+        "E9-TNI"
+      ],
+      "note": "Authorized decryption creates a recoverable plaintext copy. Android does not propagate ciphertext/key-service origins or attest factual integrity beyond the chosen authentication check."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "key-handle"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/javax/crypto/Cipher.java",
+        "sha256": "ade0446fd23282fcbcd81eded2b15aaf4ea61f6d533f8be2400355ebcab54290"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/keystore/java/android/security/keystore2/AndroidKeyStoreCipherSpiBase.java",
+        "sha256": "1740ce55010879a08fb9987ad9dc95bfcc6c4ff6f955793c81d24f0786df1eed"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/security/+/refs/tags/android-16.0.0_r4/keystore2/src/security_level.rs",
+        "sha256": "8c1c9c587254c88da920684f4e7aa5bff490aae7bc130a3dd936d5aa0689e4cd"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X19",
+    "api": "java.security.Signature#sign()",
+    "aospPath": "libcore/ojluni/src/main/java/java/security/Signature.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreSignatureSpiBase.java; system/security/keystore2/src/security_level.rs",
+    "parameters": {
+      "jointOperands": "canonical immutable approval descriptor supplied by update, initialized signing scheme, opaque AndroidKeyStore private-key handle, caller",
+      "binding": "Descriptor must bind owner/record/action/destination/bytes/version/nonce/epoch; canonicalization and owner-key pinning are application responsibilities."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-TNI",
+        "E9-AUDIT"
+      ],
+      "note": "Signs accumulated bytes using the initialized provider. It does not know who currently owns a record, enforce replay history, or validate that the approval descriptor authorizes the intended effect."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "key-handle"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/security/Signature.java",
+        "sha256": "518438af5ecdb0879008476d581e5a0aef30e7c557a45561b33502513776194a"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/keystore/java/android/security/keystore2/AndroidKeyStoreSignatureSpiBase.java",
+        "sha256": "51e070af1486c450eaf90c4baa0b32a1cedf91a0ebac2d0dc42dac5ab00b9efc"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/security/+/refs/tags/android-16.0.0_r4/keystore2/src/security_level.rs",
+        "sha256": "8c1c9c587254c88da920684f4e7aa5bff490aae7bc130a3dd936d5aa0689e4cd"
+      }
+    ],
+    "outputWitnessNote": "E9-SIG needs successful paired verification on the same canonical descriptor and pinned public key; no unconditional witness is claimed."
+  },
+  {
+    "entry": "D9-X20",
+    "api": "java.security.Signature#verify(byte[])",
+    "aospPath": "libcore/ojluni/src/main/java/java/security/Signature.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "initialized trusted verifier/provider, pinned public key, exact canonical bytes supplied by update, signature",
+      "success": "Only a true return on this exact tuple supplies the signature predicate. Owner/epoch/nonce history remain separate; a self-supplied attacker key is not a pinned owner key."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [],
+      "note": "Conditional verification predicate for exact bound bytes is available. Full effect-free/total verification and protected witness storage are adapter obligations; true is not owner authorization."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "signed-value",
+      "data-value"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown",
+      "E9-SIG": "enforced"
+    },
+    "outputInvariantsConditional": [
+      "E9-SIG"
+    ],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-EBND",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/security/Signature.java",
+        "sha256": "518438af5ecdb0879008476d581e5a0aef30e7c557a45561b33502513776194a"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X21",
+    "api": "android.database.sqlite.SQLiteDatabase#beginTransaction()",
+    "aospPath": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "protected local database, signed chained record, expected head/version, all log/registry/guard updates, transaction completion",
+      "scope": "Combine application signing and conditional updates inside one trusted transaction; crash/durability/storage model must be declared."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-AUDIT"
+      ],
+      "note": "SQLite transaction can atomically update local record and log, but is not an authenticated append API. It cannot atomically commit an ordinary external send and a log append; logging afterward fails E9-AUDIT."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "unknown",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "key-handle",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE",
+      "E9-SIG"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/database/sqlite/SQLiteDatabase.java",
+        "sha256": "8c2d6a7c73b79c7632d5fe26efe17b3ccf2331e42e88744eb7575050284b6d6b"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X22",
+    "api": "unlinkat(int, const char*, int)",
+    "aospPath": "bionic/libc/SYSCALLS.TXT",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "system/sepolicy/private/app.te",
+    "parameters": {
+      "jointOperands": "erase authority, path/dirfd, complete copy/key/backup inventory, open fds and mappings",
+      "deletion": "Unlinks a namespace reference; open descriptors, backups, recipient copies and reconstructing keys may remain."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-ERASE"
+      ],
+      "note": "DEAD as a generic realization of the attached inventory-empty postcondition. May be one step in a bounded, independently audited erasure protocol. It cannot repair a violated egress trace."
+    },
+    "assurance": "unknown",
+    "verdict": "DEAD",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-ERASE",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/bionic/+/refs/tags/android-16.0.0_r4/libc/SYSCALLS.TXT",
+        "sha256": "ae8cc2b2d1d7badeb93c43bbaaacbdd61cea755e82f6a81318e061471fd30ec6"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/system/sepolicy/+/refs/tags/android-16.0.0_r4/private/app.te",
+        "sha256": "d600f5614e92dc2994f70651c6ecf03a50b3593ab020f31e25eb87e3518d5bfc"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X22",
+    "api": "android.content.ContentResolver#delete(android.net.Uri, java.lang.String, java.lang.String[])",
+    "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/content/ContentProvider.java; packages/providers/MediaProvider/src/com/android/providers/media/MediaProvider.java",
+    "parameters": {
+      "jointOperands": "URI, selection/args, provider, erase authority, replicas/inventory",
+      "provider": "A delete count reports provider behavior; trash/retention/sync/remote recipient policies are provider-specific."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-ERASE"
+      ],
+      "note": "Deletion is access-controlled but does not attest that the complete inventory is empty. Media/cloud variants require separate erasure audit."
+    },
+    "assurance": "unknown",
+    "verdict": "DEAD",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-ERASE",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentResolver.java",
+        "sha256": "68cb1833b33ca0098f13f62931c2aa27ff9bb277561dcb716fbec8ae17eaf95e"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/ContentProvider.java",
+        "sha256": "5f760fb17533f2717dd33a3fc42d39e0393bd53c692438d331d2da89a6b24e09"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/packages/providers/MediaProvider/+/refs/tags/android-16.0.0_r4/src/com/android/providers/media/MediaProvider.java",
+        "sha256": "61330440c7d4a1c3e2b64833bcfc218f0ebf3c7ca614496d02d2d82fa0c2c5ed"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X23",
+    "api": "java.security.SecureRandom#nextBytes(byte[])",
+    "aospPath": "libcore/ojluni/src/main/java/java/security/SecureRandom.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "trusted randomness provider, output buffer, issuer/scope, protected uniqueness registry and its write capability",
+      "collision": "Random sampling is not uniqueness registration. Atomically reserve the sampled nonce with UNIQUE(issuer,scope,nonce); fail on collision."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-AUDIT"
+      ],
+      "note": "Android supplies entropy APIs, not the attached protected nonce-registry transition. Replay consumption must happen separately at actual acceptance, including across restarts/rollback assumptions."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "unknown",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/security/SecureRandom.java",
+        "sha256": "10d3d0a88354b245d000ca1172847e3fbff31e87fb0291f62e6fa6b2a2b95a7b"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X24",
+    "api": "android.content.PermissionChecker#checkPermissionForDataDelivery(android.content.Context, java.lang.String, int, android.content.AttributionSource, java.lang.String)",
+    "aospPath": "frameworks/base/core/java/android/content/PermissionChecker.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt; frameworks/base/services/core/java/com/android/server/appop/AppOpsService.java",
+    "parameters": {
+      "jointOperands": "permission, pid, attributed UID/package chain, operation message, current service state",
+      "policy": "Android permission/AppOps state is distinct from Pi(W origins, target bytes, owner, epoch, nonce). A separate preflight check may become stale before commit."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-TNI"
+      ],
+      "note": "A useful permission gate component, not a general bound short-lived permit or an atomic full-policy commit. AttributionSource describes asserted/validated access attribution, not every data/PC dependency."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/PermissionChecker.java",
+        "sha256": "0d16b4d502f59ffbccb8a439ca1ed9be7a7ba0f49022c0aaa475ede0a431c480"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/permission/java/com/android/server/permission/access/permission/PermissionService.kt",
+        "sha256": "5a33d8745287b25ddfa4464e839cb4db152fb32db536b3768eae383dfb1fbc1d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/appop/AppOpsService.java",
+        "sha256": "4edaeb950af258ab505ad15bc4b5c260b5f1711065679be9b08d92f8c665f077"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X24",
+    "api": "android.app.AppOpsManager#noteOpNoThrow(int, int, java.lang.String, java.lang.String, java.lang.String)",
+    "aospPath": "frameworks/base/core/java/android/app/AppOpsManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/core/java/com/android/server/appop/AppOpsService.java",
+    "parameters": {
+      "jointOperands": "operation code, UID, verified package, attributionTag, message, service mode",
+      "client": "Client must enforce the returned mode; knowing the AppOp code or self-noting does not prove every effect was mediated."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [],
+      "note": "Checks/notes an operation and may provide accounting. No complete origin-sensitive gate and no guaranteed append exactly atomic with the external effect."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "primitive candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "monitored",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/AppOpsManager.java",
+        "sha256": "91450d5a8ea6b332b6a52ee5954b3d51dd49b6f9c8abad5f4af798c1051ac175"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/appop/AppOpsService.java",
+        "sha256": "4edaeb950af258ab505ad15bc4b5c260b5f1711065679be9b08d92f8c665f077"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X25",
+    "api": "android.database.sqlite.SQLiteDatabase#beginTransaction()",
+    "aospPath": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "libcore/ojluni/src/main/java/java/security/Signature.java",
+    "parameters": {
+      "jointOperands": "signed canonical update, pinned owner key, record/version, live merge authority, policy epoch, nonce/expiry, audit head and local replicas",
+      "protocol": "Verify exact descriptor; at commit recheck current owner/version/epoch and consume nonce; update record and chained log in the same trusted transaction."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-SIG",
+        "E9-TNI"
+      ],
+      "note": "GENERATED adapter construction. SQLite plus Signature provides ingredients but no stock owner-approved merge API. Omitted joint operand invalidates binding; network/different-provider replicas cannot simply join the local atomic commit."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "unknown",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "signed-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-LOCAL",
+      "E9-MEDIATED",
+      "E9-NOEGRESS",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/database/sqlite/SQLiteDatabase.java",
+        "sha256": "8c2d6a7c73b79c7632d5fe26efe17b3ccf2331e42e88744eb7575050284b6d6b"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/security/Signature.java",
+        "sha256": "518438af5ecdb0879008476d581e5a0aef30e7c557a45561b33502513776194a"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X26",
+    "api": "java.util.concurrent.atomic.AtomicReference#compareAndSet(java.lang.Object, java.lang.Object)",
+    "aospPath": "libcore/ojluni/src/main/java/java/util/concurrent/atomic/AtomicReference.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "one reference, expected reference identity, new value, trusted writer set, any immutable combined guard/history/log state",
+      "scope": "CAS compares reference identity in process memory; persistence and authority checks are not supplied. ABA/version handling requires an explicit discipline."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-SIG",
+        "E9-AUDIT",
+        "E9-TNI"
+      ],
+      "note": "A memory linearization primitive, not the attached guarded resource commit. All metadata would need a protected combined state and exclusive trusted writers; disk/network side effects are not part of the CAS."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "unknown",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "policy-ticket"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/libcore/+/refs/tags/android-16.0.0_r4/ojluni/src/main/java/java/util/concurrent/atomic/AtomicReference.java",
+        "sha256": "5c3dd523115fd5c7711ed590e43987545a6299a1f49e6e5310ecfe0e99a9ae1d"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X26",
+    "api": "android.database.sqlite.SQLiteDatabase#execSQL(java.lang.String, java.lang.Object[])",
+    "aospPath": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "No Android gate implements this abstract contract.",
+    "parameters": {
+      "jointOperands": "conditional UPDATE SQL, expected version, proposed bytes, owner/epoch/nonce predicates, transaction and every audit/history mutation",
+      "success": "Use a checked affected-row result via a suitable statement/update API; execSQL alone is not a success receipt. All writers must use the trusted transaction."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-SIG",
+        "E9-AUDIT"
+      ],
+      "note": "Versioned database update is a candidate backend. SQL alone provides no root authority predicate and no atomic external-effect/log commit. No E9-AUTH/E9-FRESH preservation is inferred."
+    },
+    "assurance": "unknown",
+    "verdict": "NEEDS REFINEMENT",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "unknown",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability",
+      "policy-ticket"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-AUDIT",
+      "E9-AUTH",
+      "E9-FRESH",
+      "E9-MEDIATED",
+      "E9-ORIG",
+      "E9-OWNER",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/database/sqlite/SQLiteDatabase.java",
+        "sha256": "8c2d6a7c73b79c7632d5fe26efe17b3ccf2331e42e88744eb7575050284b6d6b"
+      }
+    ]
+  },
+  {
+    "entry": "D9-X27",
+    "api": "android.app.appfunctions.AppFunctionManager#executeAppFunction(android.app.appfunctions.ExecuteAppFunctionRequest, java.util.concurrent.Executor, android.os.CancellationSignal, android.os.OutcomeReceiver)",
+    "aospPath": "frameworks/base/core/java/android/app/appfunctions/AppFunctionManager.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [
+      "android.permission.EXECUTE_APP_FUNCTIONS",
+      "android.permission.BIND_APP_FUNCTION_SERVICE"
+    ],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/services/appfunctions/java/com/android/server/appfunctions/AppFunctionManagerServiceImpl.java; frameworks/base/services/appfunctions/java/com/android/server/appfunctions/CallerValidatorImpl.java; frameworks/base/core/java/android/app/appfunctions/AppFunctionService.java",
+    "parameters": {
+      "jointOperands": "target package/function ID, GenericDocument parameters, extras, calling UID/package/user, executor/cancellation, callback, enabled state and feature flags",
+      "access": "Same-package/root exceptions exist. Cross-package EXECUTE_APP_FUNCTIONS protection and access-consent path depend on feature flags; enterprise policy and enabled state are checked.",
+      "completion": "Callback/cancellation does not bound subsequent target effects or roll back accepted effects; URI results can trigger temporary grants."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-GFREE",
+        "E9-INI",
+        "E9-AUDIT"
+      ],
+      "note": "Typed dispatch candidate, not automatic Attenuate/Spawn/Join conformance. Target executes with its own authority, and no platform checker compares a declared complete effect profile to behavior or propagates argument origins."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-ATTEN",
+      "E9-FRESH",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/appfunctions/AppFunctionManager.java",
+        "sha256": "08f1f6df46878ac392c04b7cb39e624f217b774ec9b4358144933f524ba205fc"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/appfunctions/java/com/android/server/appfunctions/AppFunctionManagerServiceImpl.java",
+        "sha256": "c5d666eb2d27d5ac5656c2459878d7cf2d42700938a3a110cbdcc6124d7e0a17"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/appfunctions/java/com/android/server/appfunctions/CallerValidatorImpl.java",
+        "sha256": "88111bfd1f27ef9fa20a9d9f6f78a750d79f232caaa2159d5d985a71852c6da1"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/appfunctions/AppFunctionService.java",
+        "sha256": "cc6170fb6660e7e52b230e74dc541d5a636b2f3da3f1872bc7e460cd007ad1be"
+      }
+    ],
+    "permissionRoles": "EXECUTE_APP_FUNCTIONS is caller-side and conditional; BIND_APP_FUNCTION_SERVICE protects the callee binding and is held by system, not required from every client."
+  },
+  {
+    "entry": "D9-X27",
+    "api": "android.content.Context#bindService(android.content.Intent, android.content.ServiceConnection, int)",
+    "aospPath": "frameworks/base/core/java/android/content/Context.java",
+    "tag": "android-16.0.0_r4",
+    "permissions": [],
+    "appOps": [],
+    "enforcementPoint": "frameworks/base/core/java/android/app/ContextImpl.java; frameworks/base/services/core/java/com/android/server/am/ActiveServices.java; frameworks/native/libs/binder/IPCThreadState.cpp",
+    "parameters": {
+      "jointOperands": "explicit component, service permission, flags, connection, arguments/capability protocol, result and scheduler",
+      "dispatch": "bindService obtains a service interface; application-defined RPC and result waiting implement the remaining steps. Receiver retains ambient authority."
+    },
+    "deviations": {
+      "preserves": [],
+      "breaks": [
+        "E9-LOCAL",
+        "E9-NOEGRESS",
+        "E9-GFREE",
+        "E9-INI"
+      ],
+      "note": "Binder transport supplies identity and configured service access. It does not automatically attenuate all callee authority, retain child provenance or certify every child effect."
+    },
+    "assurance": "unknown",
+    "verdict": "MARGINAL",
+    "evidenceLabel": "RESULT",
+    "apiVerdict": "CONFIRMED",
+    "bindingKind": "composite candidate",
+    "mappingLabel": "GENERATED",
+    "assuranceScope": "Full attached D9 contract; narrower platform checks are recorded separately.",
+    "platformAssurance": "enforced",
+    "inputCarriers": [
+      "system-state",
+      "execution-trace",
+      "agent-program",
+      "data-value",
+      "capability"
+    ],
+    "inputSemantics": "conjunctive operands",
+    "invariantAssurance": {
+      "E9-PROV": "not observable",
+      "E9-ORIG": "not observable",
+      "E9-GFREE": "unknown",
+      "E9-MEDIATED": "unknown",
+      "E9-AUDIT": "unknown"
+    },
+    "outputInvariantsConditional": [],
+    "unestablished": [
+      "E9-ATTEN",
+      "E9-FRESH",
+      "E9-ORIG",
+      "E9-PROV",
+      "E9-REVOKE"
+    ],
+    "evidence": [
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/content/Context.java",
+        "sha256": "248066782192a7e88e30d6d72c50445b78a41954f41bb3078312992fa20b997f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/core/java/android/app/ContextImpl.java",
+        "sha256": "8b18ea9dbe2aaea77c9c1a629b669c3e6a7b7c13f9a76408e0a6ccd5d2997b3d"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/tags/android-16.0.0_r4/services/core/java/com/android/server/am/ActiveServices.java",
+        "sha256": "47f1d84a31b4d873e1d7145678774d8d270ba637056cdb35aa993348c69fed5f"
+      },
+      {
+        "url": "https://android.googlesource.com/platform/frameworks/native/+/refs/tags/android-16.0.0_r4/libs/binder/IPCThreadState.cpp",
+        "sha256": "7d9bd8ce38d37d4e7a1f004ab2144fe69ff95799e0db24b7bdb5d0681af065a8"
+      }
+    ]
+  }
+]

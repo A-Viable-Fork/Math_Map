@@ -1,0 +1,1351 @@
+{
+ "pin": "android-16.0.0_r4",
+ "source": "MM-DR-002",
+ "date": "2026-10-10",
+ "bindings": [
+  {
+   "entry": "D9-X01",
+   "api": "java.net.Socket#connect(SocketAddress,int)",
+   "aospPath": "libcore/ojluni/src/main/java/java/net/Socket.java; accounting: system/netd/server/TrafficController.cpp (verified)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.INTERNET"
+   ],
+   "appOps": [],
+   "enforcementPoint": "SELinux untrusted_app domain (system/sepolicy) + per-UID eBPF accounting via TrafficController.cpp; socket-creation gate documented but exact point unverified",
+   "parameters": {
+    "destination d": "inside/outside B decides E9-LOCAL/E9-NOEGRESS",
+    "payload": "what egresses",
+    "handler h": "socket vs Binder vs intent decides visible point"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "No per-call policy gate on raw sockets; INTERNET is install-time normal permission; I was unable to verify the exact refusal point for a UID lacking it at r4"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X01",
+   "api": "android.telephony.SmsManager#sendTextMessage",
+   "aospPath": "frameworks/base/telephony/java/android/telephony/SmsManager.java",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.SEND_SMS"
+   ],
+   "appOps": [
+    "OP_SEND_SMS"
+   ],
+   "enforcementPoint": "ActivityManagerService.checkComponentPermission -> PermissionManagerService.checkPermission (both verified at r4) + AppOpsService.noteOp (verified)",
+   "parameters": {
+    "destination": "number outside B breaks E9-LOCAL/E9-NOEGRESS",
+    "text": "payload",
+    "sentIntent": "receipt binds endpoint+actor"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS"
+    ],
+    "note": "Fully mediated; op logged, content not; no epoch/anti-replay"
+   },
+   "assurance": "enforced",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X01",
+   "api": "android.content.Context#sendBroadcast(Intent)",
+   "aospPath": "frameworks/base/core/java/android/content/Context.java; dispatch: frameworks/base/services/core/java/com/android/server/am/BroadcastQueueImpl.java",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "Receiver-side permission resolution in ActivityManagerService via PermissionManagerService; Android 14+ implicit-broadcast restrictions",
+   "parameters": {
+    "extras": "payload",
+    "resolved receivers": "runtime-resolved destination set - deviates from 'explicitly bound endpoint'"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI"
+    ],
+    "note": "Implicit broadcast: destination not bound at send; exported/other-profile receivers may observe; breaks E9-LOCAL/E9-CNI in ways a socket write does not"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X02",
+   "api": "android.content.Context#openFileOutput(String,int)",
+   "aospPath": "frameworks/base/core/java/android/content/Context.java; kernel DAC + SELinux app_data_file (system/sepolicy)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "Kernel UID sandbox + SELinux; no system_server event for app-private files",
+   "parameters": {
+    "resource r": "app-private path",
+    "mode": "append vs truncate decides old-byte retention"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-ERASE",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "Overwrite destroys prior bytes with no snapshot/replica inventory (backups, caches) - deviates from 'old snapshots remain explicitly inventoried'"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X02",
+   "api": "ContentResolver#insert(Uri,ContentValues) into MediaStore",
+   "aospPath": "packages/providers/MediaProvider/src/com/android/providers/media/MediaProvider.java (verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [
+    "OP_WRITE_MEDIA_IMAGES",
+    "OP_WRITE_MEDIA_VIDEO",
+    "OP_WRITE_MEDIA_AUDIO"
+   ],
+   "enforcementPoint": "MediaProvider per-package DB + AppOpsService.noteOp; scoped storage (Android 10+, mandatory 11+)",
+   "parameters": {
+    "collection": "shared vs app-owned volume = visibility boundary",
+    "EXIF": "ACCESS_MEDIA_LOCATION for geotags"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-ERASE",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-AUDIT"
+    ],
+    "note": "MediaStore projections replicate metadata system-wide; in-place overwrite, no version inventory"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X03",
+   "api": "android.hardware.SensorManager#registerListener(SensorEventListener,Sensor,int)",
+   "aospPath": "frameworks/base/core/java/android/hardware/SensorManager.java; native: frameworks/native/services/sensorservice/SensorService.cpp (verified). Java-side service path moved; unverified at r4",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "(motion: none)",
+    "android.permission.BODY_SENSORS",
+    "android.permission.HIGH_SAMPLING_RATE_SENSORS (>200 Hz; normal, no prompt)"
+   ],
+   "appOps": [
+    "OP_BODY_SENSORS"
+   ],
+   "enforcementPoint": "SensorService.cpp permission check + AppOpsService.noteOp",
+   "parameters": {
+    "sensorType": "decides permission class; accelerometer = zero-permission audio channel (AccelEve, NDSS 2020)",
+    "samplingRate": ">200 Hz needs HIGH_SAMPLING_RATE_SENSORS (normal perm)"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-GFREE",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "HAL authenticity trusted not verified; ingress root device-global, not compartment-scoped; no per-use audit for motion sensors; guest-origin-free broken by design"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X04",
+   "api": "android.os.UserManager#createUser(String,String)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/pm/UserManagerService.java (verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.CREATE_USERS"
+   ],
+   "appOps": [],
+   "enforcementPoint": "UserManagerService + kernel per-user storage (SELinux profile_data_file); Private Space (Android 15+) = android.os.usertype.profile.PRIVATE",
+   "parameters": {
+    "userType": "PRIVATE (Private Space) vs MANAGED (work profile) = compartment semantics"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Profiles share kernel/scheduler/sensors/memory bus: no timing isolation; cross-profile channels (chooser, ACTION_SEND, clipboard) exist and are policy-gated"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X04",
+   "api": "android.os.Process#start (zygote fork, per-app UID)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/am/ProcessList.java (verify at sync); domains: system/sepolicy/private/untrusted_app.te",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "Kernel DAC (UID) + SELinux MAC at exec/fork",
+   "parameters": {
+    "uid": "per-app UID = sandbox boundary",
+    "seinfo": "SELinux domain from seapp_contexts"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI"
+    ],
+    "note": "Standard app isolation; timing/resource channels not covered"
+   },
+   "assurance": "enforced",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X05",
+   "api": "PermissionManagerService#grantRuntimePermission(String,String,boolean,int)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/pm/permission/PermissionManagerService.java (verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.GRANT_RUNTIME_PERMISSIONS (caller)"
+   ],
+   "appOps": [],
+   "enforcementPoint": "PMS grant policy (roles, allowlists); every access re-checked via checkPermission in serving service",
+   "parameters": {
+    "permName": "resource class",
+    "userId": "profile scope"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Root issuance realized, but no lifetime/generation/(root,generation) tuple - E9-REVOKE epoch semantics unrealized; grant state is the only epoch"
+   },
+   "assurance": "enforced",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X05",
+   "api": "AppOpsService#setMode(int,int,String,int)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/appop/AppOpsService.java (verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.MANAGE_APP_OPS (caller)"
+   ],
+   "appOps": [],
+   "enforcementPoint": "AppOpsService mode table; consulted by noteOp at each gated call",
+   "parameters": {
+    "op": "effect class",
+    "mode": "allowed/ignored/errored"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Fixed enumerated effect set; raw sockets and in-process effects have no appop"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X05",
+   "api": "Context#grantUriPermission(Uri,String,int)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java (verified; grant path -> UriGrantsManager)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "AMS grant table; provider per-call checkRead/WritePermission",
+   "parameters": {
+    "flags": "FLAG_GRANT_READ/WRITE_URI_PERMISSION",
+    "prefix": "FLAG_GRANT_PREFIX_URI_PERMISSION = subtree"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Object-grained issuance; package-bound; lifetime = until revoke/expiry"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X06",
+   "api": "PermissionManagerService#revokeRuntimePermission + AppOpsService#setMode(...,MODE_IGNORED)",
+   "aospPath": "PermissionManagerService.java + AppOpsService.java (both verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.REVOKE_RUNTIME_PERMISSIONS / MANAGE_APP_OPS (caller)"
+   ],
+   "appOps": [],
+   "enforcementPoint": "Live checks in serving services consult current grant/mode state per call",
+   "parameters": {
+    "alias coverage": "open FDs/active sensor streams already open are unaffected"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-FRESH",
+     "E9-AUDIT",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI"
+    ],
+    "note": "Best-effort, not a generation CAS; no atomic disable of in-flight effects; matches entry's 'earlier delivered data remains' but not its atomic epoch semantics"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X07",
+   "api": "Context#openFileInput(String)",
+   "aospPath": "frameworks/base/core/java/android/content/Context.java; kernel DAC + SELinux app_data_file",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "Kernel DAC + SELinux; no system_server event",
+   "parameters": {
+    "path": "inside own sandbox"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-GFREE",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "No platform-visible event: E9-AUDIT unsatisfiable for app-private reads"
+   },
+   "assurance": "not observable",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X07",
+   "api": "ContentResolver#query(Uri,...) on another app's provider",
+   "aospPath": "frameworks/base/core/java/android/content/ContentResolver.java; checks: ActivityManagerService.getContentProvider + ContentProvider.checkReadPermission",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "provider-defined, e.g. android.permission.READ_CONTACTS, READ_MEDIA_IMAGES"
+   ],
+   "appOps": [
+    "OP_READ_CONTACTS",
+    "OP_READ_MEDIA_IMAGES",
+    "OP_READ_MEDIA_VIDEO",
+    "OP_READ_MEDIA_AUDIO"
+   ],
+   "enforcementPoint": "AMS provider acquisition + per-call read check via PermissionManagerService; AppOpsService.noteOp",
+   "parameters": {
+    "uri": "row set",
+    "projection": "column subset = attenuation of what egresses"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-SIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-GFREE",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "ContentObserver callbacks notify the provider app on read - a hidden read-notification channel for derived-signal egress; unmodeled by the platform"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X08",
+   "api": "JVM/ART in-process evaluation",
+   "aospPath": "art/ (runtime repo); bionic/ for JNI",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "None: evaluation is in-process; no boundary crossed",
+   "parameters": {
+    "f": "purity/totality is a property of f, not platform-enforced",
+    "operands": "labels are in-app metadata"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-AUDIT",
+     "E9-MEDIATED",
+     "E9-EBND"
+    ],
+    "breaks": [
+     "E9-GFREE",
+     "E9-SIG",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI"
+    ],
+    "note": "No purity enforcement: reflection/JNI defeat blanket claims; E9-EBND must come from a certified analyzer, not Android"
+   },
+   "assurance": "not observable",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X09",
+   "api": "KeyPairGenerator#initialize(AlgorithmParameterSpec)+generateKeyPair (AndroidKeyStore)",
+   "aospPath": "libcore (JCA) + keystore2 daemon (system/security/keystore) + KeyMint HAL; verify exact service class at sync",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "keystore2 binder service (SELinux-gated) + KeyMint in TEE/StrongBox; key use authorized by key authorizations",
+   "parameters": {
+    "attestationChallenge": "caller nonce bound into attestation = freshness witness",
+    "purposes": "initial authority"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-ERASE",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Hardware-backed fresh identity; deletion = deleteEntry; TEE latencies leak size/timing (E9-TNI)"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X10",
+   "api": "Context#grantUriPermission to chosen package / photo-picker grant (declassify-by-grant)",
+   "aospPath": "ActivityManagerService.java (verified; grants); picker: packages/providers/MediaProvider (verified)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "AMS grant table + provider per-call check; picker grants time-boxed subset access",
+   "parameters": {
+    "target package": "who gets the weaker-confidentiality view",
+    "uri subset": "what is released (picker releases user-selected items only)"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-GFREE",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-SIG",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-CNI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "No declassify primitive exists; this is closest. User/system authorization via chooser; grant recorded (monitored); no release-policy metadata (what/who/where/when), no origin annotation"
+   },
+   "assurance": "enforced",
+   "verdict": "NEEDS REFINEMENT"
+  },
+  {
+   "entry": "D9-X11",
+   "api": "APK signature verification at install (PackageManagerService -> ApkSignatureVerifier; APK Sig Scheme v2/v3/v4)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/pm/PackageManagerService.java; frameworks/base/core/java/android/util/apk/ApkSignatureVerifier.java (verifier class: verify at sync)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "PMS SigningDetails persistence; verified at install and package scan",
+   "parameters": {
+    "signingCert": "pinned key per package; v3 rotation allows lineage",
+    "scheme": "v2/v3 full-file bytes; v4 fs-verity"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-GFREE",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-SIG",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-INI",
+     "E9-AUDIT"
+    ],
+    "note": "Endorsement binds package identity to signing key, not a datum to a validation predicate + decision scope; package granularity only"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X11",
+   "api": "IKeyMintDevice#attestKey (hardware attestation with caller challenge)",
+   "aospPath": "system/security/keystore (keystore2) + KeyMint HAL; verify at sync",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "TEE/StrongBox attestation signed with factory key; challenge bound into certificate",
+   "parameters": {
+    "challenge": "caller-supplied freshness nonce"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-GFREE",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-SIG",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-INI",
+     "E9-AUDIT"
+    ],
+    "note": "Hardware endorsement of key origin; decision scope absent"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X12",
+   "api": "Context#grantUriPermission(uri,pkg,FLAG_GRANT_READ_URI_PERMISSION|FLAG_GRANT_PREFIX_URI_PERMISSION)",
+   "aospPath": "ActivityManagerService.java (verified; UriGrantsManager; pruneUriPermissions on death/revoke)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "AMS grant table; provider per-call check enforces attenuated right",
+   "parameters": {
+    "prefix flag": "subtree bounding",
+    "recipient": "single named package"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Realizes E9-ATTEN for the URI target (read-only subset, revocable); cannot express effect-class rights - URI granularity only"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X12",
+   "api": "android.app.PendingIntent#getActivity(Context,int,Intent,int)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java (verify at sync)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "AMS PendingIntentRecord; fillIn restrictions; Android 12+ mutability required (FLAG_IMMUTABLE/FLAG_MUTABLE)",
+   "parameters": {
+    "fillIn": "mask decides which args recipient may modify",
+    "mutability": "IMMUTABLE bounds recipient authority"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Attenuation is opt-in; historically misused (StrandHogg class, e.g. CVE-2020-0096); mutability requirement fixes that vector at this tag"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X13",
+   "api": "Context#startActivity(chooserIntent with FLAG_GRANT_READ_URI_PERMISSION) - share-sheet delegation",
+   "aospPath": "ActivityManagerService.java (verified; grants); resolver UI: com/android/intentresolver (verify at sync)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "AMS grant lifetime-bound to started activity stack; provider checks enforce delegated read",
+   "parameters": {
+    "recipient": "resolved at user selection (not statically bound)",
+    "grant flags": "attenuated rights handed over"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Felt et al. (USENIX Security 2011): permission re-delegation is structural; recipient combines grant with its own ambient authority (e.g. its network access) and can forward; grant recorded, downstream disclosure not"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X14",
+   "api": "Context#startForegroundService(Intent)/startService",
+   "aospPath": "ActivityManagerService.java (verified) -> ActiveServices -> ProcessList.startProcess (verify); BAL gate: BackgroundActivityStartController.java (verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.FOREGROUND_SERVICE (9+); Android 14+ foregroundServiceType + type permission"
+   ],
+   "appOps": [],
+   "enforcementPoint": "AMS component/permission checks + BAL restrictions (12+) + FGS type enforcement (14+)",
+   "parameters": {
+    "component": "explicitly named (attenuated destination)",
+    "fgServiceType": "manifest-declared effect class, enforced at start"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-GFREE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "Spawn gate enforced; child (callee UID) runs with its own full grant graph - child authority is not an attenuation of the caller's set, and child effects attribute to the child"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X14",
+   "api": "android.app.job.JobScheduler#schedule(JobInfo)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/job/JobSchedulerService.java (verify at sync)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android.permission.RECEIVE_BOOT_COMPLETED (boot triggers)"
+   ],
+   "appOps": [],
+   "enforcementPoint": "JobSchedulerService quota buckets (12+); JobStatus tracking",
+   "parameters": {
+    "constraints": "when effects may run",
+    "persisted": "survives reboot"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-GFREE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "Deferred spawn in caller's own UID; quota is rate control, not authorization"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X15",
+   "api": "Thread#join()/ExecutorService await; Binder sync reply",
+   "aospPath": "art/ + libcore (in-process); Binder: frameworks/native/libs/binder/IPCThreadState.cpp (verified at r4)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "None in-process; Binder replies mediated by driver (UID-attributed)",
+   "parameters": {
+    "handle": "local object; no platform task identity",
+    "timeout": "blocking vs cancellation observation"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-REVOKE",
+     "E9-FRESH"
+    ],
+    "breaks": [
+     "E9-GFREE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Join is app-local: no boundary event, no accounted child history; trace incorporation must be built in-app"
+   },
+   "assurance": "not observable",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X16",
+   "api": "Context#bindService(Intent,ServiceConnection,int) -> Service#onBind (installed handler)",
+   "aospPath": "frameworks/base/services/core/java/com/android/server/am/ActiveServices.java (verify at sync)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "service-declared android:permission"
+   ],
+   "appOps": [],
+   "enforcementPoint": "AMS permission check on bind; per-call IPC checks by the service binder",
+   "parameters": {
+    "component": "handler identity (explicit intent binds statically)",
+    "exported": "who may install/replace the binding"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-ERASE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT",
+     "E9-EBND"
+    ],
+    "note": "Same request syntax, different effects under different handlers; no stored contract for handler semantics; replaced handler invalidates prior effect certificate (E9-EBND deviates)"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X16",
+   "api": "ContentProvider installed via AndroidManifest (manifest-registered interpreter)",
+   "aospPath": "PackageManagerService.java (verified; auth registration); mediation: ActivityManagerService.getContentProvider",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "android:readPermission/writePermission or per-uri-permission"
+   ],
+   "appOps": [],
+   "enforcementPoint": "AMS per-call mediation for every provider access",
+   "parameters": {
+    "authority": "typed effect namespace",
+    "exported": "handler exposure scope"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-ERASE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT",
+     "E9-EBND"
+    ],
+    "note": "Closest realization of an installed, platform-mediated effect interpreter; contract is permission-shaped only"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X17",
+   "api": "javax.crypto.Cipher#doFinal(byte[]) with AndroidKeyStore key",
+   "aospPath": "libcore (JCA) + keystore2 daemon (system/security/keystore) + KeyMint HAL; verify at sync",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "keystore2 enforces key authorization (PURPOSE_ENCRYPT, user-auth binding via Gatekeeper/biometric); SELinux gates keystore2 access",
+   "parameters": {
+    "algorithm/params": "strength assumptions not imported by the word encrypt",
+    "nonce": "freshness discipline is caller responsibility"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-CNI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "Opaque key service realized; output size/timing observable; ciphertext exported by a later send still breaks E9-LOCAL - encryption is not confinement"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X18",
+   "api": "javax.crypto.Cipher#doFinal(byte[]) decrypt path (AndroidKeyStore)",
+   "aospPath": "libcore (JCA) + keystore2 + KeyMint HAL; verify at sync",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "keystore2 authorization per operation; user-auth gate for auth-bound keys",
+   "parameters": {
+    "ciphertext envelope": "AEAD authentication decides integrity claims",
+    "error channel": "failure observability = modeled side channel"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-ERASE",
+     "E9-GFREE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "Plaintext inherits labels only if app models it; AEAD/padding error distinction is an oracle the app must neutralize"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X19",
+   "api": "java.security.Signature#sign(byte[]) with AndroidKeyStore key",
+   "aospPath": "libcore (JCA) + keystore2 + KeyMint HAL; verify at sync",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "keystore2 per-op authorization (PURPOSE_SIGN, digest/algorithm allowlist)",
+   "parameters": {
+    "descriptor": "canonical bytes chosen by app - platform binds no what/who/where/when policy",
+    "pinned verify key": "established out of band"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Signing oracle available to any code in the app UID; canonicalization and commit-context binding are entirely app obligations"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X20",
+   "api": "java.security.Signature#verify(byte[]) in-process / ApkSignatureVerifier at install",
+   "aospPath": "libcore (JCA); frameworks/base/core/java/android/util/apk/ApkSignatureVerifier.java (verify class at sync)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "None at runtime (pure); install-time verifier in PackageManagerService",
+   "parameters": {
+    "pinned public key bytes": "supplied by verifier, never from message",
+    "algorithm": "declared per scheme"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-AUDIT",
+     "E9-MEDIATED",
+     "E9-EBND"
+    ],
+    "breaks": [
+     "E9-INI"
+    ],
+    "note": "Witness binds exact bytes/algorithm/key but not current ownership or freshness - matches the entry's own caveat"
+   },
+   "assurance": "not observable",
+   "verdict": "CONFIRMED"
+  },
+  {
+   "entry": "D9-X21",
+   "api": "android.util.Log -> logd / AppOps logged-op history",
+   "aospPath": "system/core/logd (logd daemon); AppOpsService.java history (verified); SELinux audit via kernel",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [
+    "(AppOps logging for gated ops only)"
+   ],
+   "enforcementPoint": "logd per-UID tagging + SELinux on log read (READ_LOGS is signature); AppOpsService records noteOp events",
+   "parameters": {
+    "record content": "app-chosen; platform authenticates origin (uid) not truth",
+    "log head chaining": "absent"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI"
+    ],
+    "note": "No authenticated append-only chained log for apps; append never atomic with the recorded effect; deleting a log entry does not undo an egressed effect (absorbing)"
+   },
+   "assurance": "monitored",
+   "verdict": "NEEDS REFINEMENT"
+  },
+  {
+   "entry": "D9-X22",
+   "api": "File#delete() on app-private data / keystore deleteEntry / DevicePolicyManager#wipeData(int)",
+   "aospPath": "Context.java (deleteFile); DevicePolicyManagerService: frameworks/base/services/core/java/com/android/server/devicepolicy/DevicePolicyManagerService.java (verify); reset via RecoverySystem",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "(wipeData: device owner)"
+   ],
+   "appOps": [],
+   "enforcementPoint": "Kernel fs delete in UID sandbox; keystore2 deletion in TEE; wipeData -> RecoverySystem factory reset",
+   "parameters": {
+    "inventory completeness": "backups (allowBackup), cloud copies, recipient memory, flash wear-leveling outside platform inventory"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Deletion bounded to modeled copies only; E9-ERASE postcondition needs the complete-inventory discipline; past egress not undone"
+   },
+   "assurance": "monitored",
+   "verdict": "NEEDS REFINEMENT"
+  },
+  {
+   "entry": "D9-X23",
+   "api": "java.security.SecureRandom#generateSeed/nextBytes in-process / KeyMint attestKey with challenge",
+   "aospPath": "libcore (SecureRandom); keystore2 + KeyMint",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "None for app-local nonces; TEE binds challenge into signed certificate",
+   "parameters": {
+    "issuer scope": "app-chosen; platform has no shared nonce registry",
+    "registry capability": "absent - uniqueness checked only by the app's own store"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI",
+     "E9-AUDIT"
+    ],
+    "note": "Randomness provided; atomic reservation in a protected issuer/scope namespace is not a platform service - build per-app or per-Regulator"
+   },
+   "assurance": "not observable",
+   "verdict": "NEEDS REFINEMENT"
+  },
+  {
+   "entry": "D9-X24",
+   "api": "ActivityManagerService#checkComponentPermission + AppOpsService#noteOp + SELinux MAC",
+   "aospPath": "ActivityManagerService.java (verified); AppOpsService.java (verified); SELinux: system/sepolicy (kernel LSM)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "(the permission being checked)"
+   ],
+   "appOps": [
+    "(the op being noted)"
+   ],
+   "enforcementPoint": "Serving services re-evaluate grant state on every binder call; SELinux at kernel object access",
+   "parameters": {
+    "effect args": "bound by the API call itself",
+    "epoch": "no epoch object - grant state may change between check and use (TOCTOU)"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-AUDIT",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-TNI"
+    ],
+    "note": "Gate trusted/total for covered effects; issues no argument+epoch-bound ticket; sound pattern is re-check-at-commit inside one system_server call; native/SELinux-covered channels are outside the gate"
+   },
+   "assurance": "enforced",
+   "verdict": "MARGINAL"
+  },
+  {
+   "entry": "D9-X25",
+   "api": "No platform realization. Closest fragments: SQLiteDatabase transaction (in-process) + ContentProvider.call (non-transactional) + KeyMint attestation",
+   "aospPath": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java (in-process); frameworks/base/core/java/android/content/ContentProvider.java",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "None spans verify + policy + CAS + audit atomically; services have only internal locking",
+   "parameters": {
+    "owner-signed descriptor": "verification available (Signature#verify), commit integration absent",
+    "nonce/version CAS": "absent at platform level"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-AUDIT",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-SIG",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI"
+    ],
+    "note": "DEAD as a platform primitive; must be built as app/privileged-daemon service composing X20+X24+X26 with its own audit. Local specification gap, not structural impossibility"
+   },
+   "assurance": "unknown",
+   "verdict": "DEAD"
+  },
+  {
+   "entry": "D9-X26",
+   "api": "AtomicReference#compareAndSet / SQLite conditional UPDATE ... WHERE id=? AND version=?",
+   "aospPath": "libcore (java.util.concurrent.atomic); SQLite: external/sqlite + frameworks/base/core/java/android/database/sqlite/",
+   "tag": "android-16.0.0_r4",
+   "permissions": [],
+   "appOps": [],
+   "enforcementPoint": "In-process only; system_server has internal transactions but exposes no guarded CAS API to apps",
+   "parameters": {
+    "expected version": "app-supplied; no platform epoch object",
+    "guard spec": "policy re-eval not atomic with swap across binder"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-OWNER",
+     "E9-AUTH",
+     "E9-REVOKE",
+     "E9-FRESH",
+     "E9-AUDIT",
+     "E9-MEDIATED"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-SIG",
+     "E9-ERASE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI"
+    ],
+    "note": "CAS exists only inside one process; the trusted multi-party CAS with atomic log is exactly what a concrete binding must build"
+   },
+   "assurance": "not observable",
+   "verdict": "NEEDS REFINEMENT"
+  },
+  {
+   "entry": "D9-X27",
+   "api": "Context#startActivity(Intent) with explicit ComponentName (attenuate -> spawn -> join)",
+   "aospPath": "ActivityTaskManagerService.java (verified) + ActivityManagerService.java (verified); BAL gate: BackgroundActivityStartController.java (verified)",
+   "tag": "android-16.0.0_r4",
+   "permissions": [
+    "component-declared permissions; FOREGROUND_SERVICE family for FGS paths"
+   ],
+   "appOps": [],
+   "enforcementPoint": "ATMS/AMS explicit-component resolution, exported/permission checks, BAL restrictions (12+)",
+   "parameters": {
+    "component": "explicitly named local destination (bound at dispatch, unlike broadcast)",
+    "callback": "join channel (ActivityResult)"
+   },
+   "deviations": {
+    "preserves": [
+     "E9-PROV",
+     "E9-ORIG",
+     "E9-REVOKE",
+     "E9-FRESH"
+    ],
+    "breaks": [
+     "E9-LOCAL",
+     "E9-NOEGRESS",
+     "E9-GFREE",
+     "E9-CNI",
+     "E9-INI",
+     "E9-TNI",
+     "E9-PNI",
+     "E9-AUDIT"
+    ],
+    "note": "Explicit dispatch binds destination statically, but callee runs in its own UID with its own grants (ambient authority); callee side-effects attribute to the callee; preserved set holds only with separate callee monitoring"
+   },
+   "assurance": "monitored",
+   "verdict": "MARGINAL"
+  }
+ ],
+ "evidenceNote": "aospPath values verified against android.googlesource.com at refs/tags/android-16.0.0_r4 where no 'verify at sync' note is present; entries with 'verify at sync' were not independently opened."
+}
