@@ -34,3 +34,7 @@ The D7 mapper report (`source/Category_Theory_Transformation_Enumeration.pdf`) g
 
 `corrections.js` replaces landed fields that a check found wrong or imprecise: an audit grade, a flag, or a Mathlib link graded conflicts. Every corrected field is supported by a receipt in `excerpts/` (Wikipedia windows are taken from a pinned revision with `scripts/excerpt.mjs`), claims that cannot be receipted are dropped and the reason says so, and the landed text stays on the entry. Correcting all five content fields of a flagged entry resolves its flag. Hypotheses an entry leaves out go in `conditions.js` instead.
 
+
+## Added domains and generated entries
+
+`domains.js` declares domains the landed map lacks (D9, systems and effects) with the tags their entries use. `generated.js` holds entries landed from a graded generation round (`generation/`): design contracts written by a generator, checked here for consistency (known invariants and carriers, nothing both kept and broken, tags in the vocabulary, a round with a grading) and carried at their own tier, **generated**, with every claim starting unchecked. A generated entry becomes an addition only when its claims are receipted.

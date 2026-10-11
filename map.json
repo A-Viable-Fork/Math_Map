@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "befbd862f28fe2126110396e85515d116ed9eb28"
+  "commit": "48035d53912b626853733a4ad0f91b239ec357cd"
  },
  "domains": {
   "D1": {
@@ -35,6 +35,10 @@
   "D8": {
    "name": "COMPUTATIONAL AND ALGORITHMIC METHODS",
    "count": 236
+  },
+  "D9": {
+   "name": "SYSTEMS AND EFFECTS",
+   "added": true
   }
  },
  "vocabulary": [
@@ -86,7 +90,19 @@
    "connection": null,
    "vector-field": "form",
    "operation": null,
-   "process": null
+   "process": null,
+   "system-state": null,
+   "execution-trace": null,
+   "agent-program": null,
+   "data-value": null,
+   "signed-value": "data-value",
+   "verified-signature": "signed-value",
+   "capability": null,
+   "key-handle": "capability",
+   "task-handle": "capability",
+   "policy-ticket": null,
+   "handler": null,
+   "compartment": null
   },
   "terms": [
    {
@@ -336,6 +352,158 @@
     "carrier": "connection",
     "definition": "Vanishing curvature: covariant derivatives commute.",
     "class": "state"
+   },
+   {
+    "id": "e9-prov",
+    "name": "Complete modeled provenance",
+    "kind": "metadata correctness",
+    "carrier": "data-value",
+    "definition": "For datum v, a protected derivation DAG names every modeled data dependency and program-counter dependency that contributed to v; ingress roots are authenticated by the specified adapter. Completeness concerns the declared semantics, not unknown physical causes.",
+    "class": "state"
+   },
+   {
+    "id": "e9-orig",
+    "name": "Complete compartment-origin labels",
+    "kind": "metadata correctness",
+    "carrier": "data-value",
+    "definition": "For v, Origins(v) is the complete set of compartment and external-ingress identifiers at the roots of its modeled dependency DAG. Derivation unions roots and never rewrites historical origins.",
+    "class": "state"
+   },
+   {
+    "id": "e9-gfree",
+    "name": "Known absence of guest origin",
+    "kind": "integrity input classification",
+    "carrier": "data-value",
+    "definition": "Origins(v) is complete and intersects the policy GuestSet in the empty set. A missing or unknown origin is not a proof of this predicate. Endorsement does not change this historical fact.",
+    "class": "state"
+   },
+   {
+    "id": "e9-local",
+    "name": "Current explicit-payload locality",
+    "kind": "confidentiality placement",
+    "carrier": "system-state",
+    "definition": "For fixed boundary B and root compartment W, every live modeled digital copy of a W-derived payload is at a location in B. Ciphertexts retain origins. Previously transmitted or erased copies are not live, so this state predicate does not assert historical confinement.",
+    "class": "state"
+   },
+   {
+    "id": "e9-noegress",
+    "name": "No historical explicit egress",
+    "kind": "confidentiality trace safety",
+    "carrier": "execution-trace",
+    "definition": "For every event in the trace, no send/store/export of a payload whose complete origin set contains W targets a location outside B. Includes designated requests, logs and replicas, but excludes unmodeled timing/occurrence inference.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-sig",
+    "name": "Valid signature on exact bound bytes",
+    "kind": "cryptographic evidence predicate",
+    "carrier": "signed-value",
+    "definition": "Verify(pk, Canon(descriptor), sig)=true for the exact immutable descriptor, pinned public key and declared verification algorithm. The descriptor binding is part of the predicate. This does not identify the current owner or establish permission, freshness, or factual truth.",
+    "class": "state"
+   },
+   {
+    "id": "e9-owner",
+    "name": "Every accepted merge has current owner approval",
+    "kind": "integrity trace safety",
+    "carrier": "execution-trace",
+    "definition": "Every successful merge event contains a verified signature by the owner key for that record at the commit linearization point, covering action, destination/record identity, proposed bytes or their collision-resistant digest, expected version and approval nonce. It satisfies the declared current authorization predicate at commit. Reuse control is separately E9-FRESH.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-auth",
+    "name": "All modeled effects authorized",
+    "kind": "authority trace safety",
+    "carrier": "execution-trace",
+    "definition": "For every committed effect event e, Allow(Pi_at_commit, actor(e), target(e), action(e), cap(e), epoch(e)) is true. The fixed authorization predicate checks target binding, scope and live authority; possession of a label alone does not satisfy it.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-atten",
+    "name": "Declared capability-rights attenuation",
+    "kind": "authority step relation",
+    "carrier": "operation",
+    "definition": "For this transition and the specified input/output capability pair, the output names the same permitted target region, no larger declared rights/bounds, and no longer lifetime than the input. Its rights set is a subset of the input rights set. This is not a statement about all ambient or transitive authority.",
+    "class": "step"
+   },
+   {
+    "id": "e9-revoke",
+    "name": "No use of a revoked capability generation",
+    "kind": "authority trace safety",
+    "carrier": "execution-trace",
+    "definition": "After successful revocation of tuple (root, generation), every subsequent attempt to commit an effect through that generation is denied. All aliases of that generation consult the shared protected revocation state. A newly authorized grant has a different generation. In-flight commits are ordered at explicit linearization points.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-fresh",
+    "name": "No replay of an accepted approval",
+    "kind": "integrity trace safety",
+    "carrier": "execution-trace",
+    "definition": "No successful acceptance repeats a policy-defined approval identifier (issuer, scope, record/version, nonce), and each acceptance meets the modeled expiry rule. All verifiers share the relevant history or an equivalent serial version discipline. Fresh nonce generation alone does not imply this predicate.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-audit",
+    "name": "Complete authenticated committed-effect log",
+    "kind": "accountability trace safety",
+    "carrier": "execution-trace",
+    "definition": "Each committed modeled effect has one corresponding protected append record binding actor, effect, relevant parameters and prior log head. Effect commit and log append are one modeled atomic transition or the effect is not committed. Authentication does not make logged statements true or harmless to disclose.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-erase",
+    "name": "Absence of a designated secret in modeled recoverable storage",
+    "kind": "erasure state predicate",
+    "carrier": "system-state",
+    "definition": "At the current state, the complete declared inventory of recoverable digital copies, snapshots, backups and reconstructing key material for secret x is empty. This is a model-relative postcondition, not a physical disk, flash, forensic, recipient-memory or future-nonreintroduction guarantee.",
+    "class": "state"
+   },
+   {
+    "id": "e9-mediated",
+    "name": "Complete effect mediation",
+    "kind": "enforcement trace safety",
+    "carrier": "execution-trace",
+    "definition": "Every committed modeled effect crosses the designated trusted gate and commits using the same bound arguments and current policy epoch checked there. The gate cannot be bypassed through handlers, callbacks, retries or delegated tools. Correct mediation does not imply that the policy itself is correct.",
+    "class": "trace"
+   },
+   {
+    "id": "e9-cni",
+    "name": "Deterministic termination-insensitive confidentiality",
+    "kind": "confidentiality noninterference",
+    "carrier": "agent-program",
+    "definition": "For the declared deterministic model, observer and low-equivalence relation, any two runs from low-equivalent initial full states that both terminate have equal designated low observations at termination. Prior observations may be retained in the low state. Time and termination differences are excluded unless explicitly added.",
+    "class": "relational"
+   },
+   {
+    "id": "e9-ini",
+    "name": "Guest-input noninterference for trusted decisions",
+    "kind": "integrity noninterference",
+    "carrier": "agent-program",
+    "definition": "In the declared deterministic model, any two terminating runs agreeing on initial trusted inputs and differing only in guest/untrusted input have equal trusted action-decision observations. There is no endorsement exception unless a different policy is explicitly supplied. This states absence of influence, not just absence of guest bytes in code.",
+    "class": "relational"
+   },
+   {
+    "id": "e9-tni",
+    "name": "Confidentiality for timed and resource observations",
+    "kind": "confidentiality noninterference",
+    "carrier": "agent-program",
+    "definition": "For the same deterministic low-equivalence used by E9-CNI and an observation that includes its ordinary low outputs plus declared times, resource events and termination behavior, corresponding executions have identical full observer traces. The time/resource semantics and scheduler are explicitly part of the model.",
+    "class": "relational"
+   },
+   {
+    "id": "e9-ebnd",
+    "name": "Sound static effect upper bound",
+    "kind": "static-to-step soundness relation",
+    "carrier": "operation",
+    "definition": "For this instantiated expression, environment and handler semantics, every emitted modeled effect belongs to its certified effect upper bound epsilon. Hidden foreign effects, handler-introduced effects and all branch alternatives are included. An annotation without a conformance proof is not this predicate.",
+    "class": "step"
+   },
+   {
+    "id": "e9-pni",
+    "name": "Probabilistic noninterference of joint observations",
+    "kind": "probabilistic confidentiality",
+    "carrier": "agent-program",
+    "definition": "For fixed low inputs, declared scheduler/adversary class, probability model and any two secret inputs, the distributions of the complete joint low observation history are identical. Equality of the distribution of each release separately is insufficient. This is exact probabilistic secrecy, not computational indistinguishability.",
+    "class": "hyperproperty"
    }
   ],
   "relations": [
@@ -356,6 +524,27 @@
     "kind": "implies",
     "over": "preservation",
     "basis": "By definition: a finite limit is a limit, so a functor preserving all limits preserves the finite ones."
+   },
+   {
+    "from": "e9-prov",
+    "to": "e9-orig",
+    "kind": "implies",
+    "over": "state",
+    "basis": "Generated (MM-DR-001): Q3 definitions: extract the authenticated root identifiers from the complete protected dependency DAG. Same datum and same ingress/compartment model required."
+   },
+   {
+    "from": "e9-gfree",
+    "to": "e9-orig",
+    "kind": "implies",
+    "over": "state",
+    "basis": "Generated (MM-DR-001): Q3 definition of guest-free explicitly includes completeness of Origins(v). Same datum and GuestSet required."
+   },
+   {
+    "from": "e9-tni",
+    "to": "e9-cni",
+    "kind": "implies",
+    "over": "state",
+    "basis": "Generated (MM-DR-001): Q4 C3: equality of the full timed observation implies equality of its ordinary-output projection, when the model, initial low-equivalence and observers are aligned."
    }
   ],
   "receiptedLinks": [
@@ -432,26 +621,28 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1965,
-  "anchorable": 1963,
+  "entries": 1992,
+  "anchorable": 1990,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 11
+   "added": 11,
+   "generated": 27
   },
   "byTier": {
    "landed": 1338,
    "audited": 116,
    "authored": 494,
-   "receipted": 17
+   "receipted": 17,
+   "generated": 27
   },
   "withConditions": 9,
   "corrected": 22,
   "fieldEvidence": {
    "contradicted": 0,
    "unsupported": 100,
-   "unchecked": 10992,
+   "unchecked": 11154,
    "imprecise": 20,
    "sourced": 626,
    "formal": 52
@@ -467,7 +658,7 @@
   "claimEvidence": {
    "contradicted": 0,
    "unsupported": 0,
-   "unchecked": 0,
+   "unchecked": 358,
    "imprecise": 0,
    "sourced": 29,
    "formal": 20
@@ -57665,6 +57856,3897 @@
     }
    ],
    "tier": "receipted"
+  },
+  {
+   "id": "D9-X01",
+   "domain": "D9",
+   "name": "Send",
+   "kind": "Transformer",
+   "tags": [
+    "egress"
+   ],
+   "description": "Deliver an immutable envelope to the explicitly bound endpoint through a chosen handler; rejection has no external effect.",
+   "input": "State sigma, trace tau, program context, datum v, endpoint d, send capability c and handler h. The adapter preserves protected labels; current authority and gate checks are atomic with commit. No locality guard is assumed unless d is separately proved in B. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and delivery receipt or denied/error result. A successful event binds the actual endpoint, bytes, origins, actor and epoch; unchanged signature envelopes remain framed.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-SIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-CNI, E9-INI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-sig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability",
+     "handler"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X02",
+   "domain": "D9",
+   "name": "Store",
+   "kind": "Transformer",
+   "tags": [
+    "storage"
+   ],
+   "description": "Write an immutable labeled value to a named resource; this is an ordinary write, not an atomic compare-and-swap.",
+   "input": "State/trace/context, datum v, resource r, write capability and declared replica set. Write guards cover every replica and epoch; labels are copied and old snapshots remain explicitly inventoried. No B-local placement or append-only discipline is assumed. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and write receipt or failure. All actual destinations, replicas and retained old contents are represented.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-SIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-ERASE, E9-CNI, E9-INI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-sig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-erase",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-erase",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X03",
+   "domain": "D9",
+   "name": "Read sensor",
+   "kind": "Transformer",
+   "tags": [
+    "ingress"
+   ],
+   "description": "Capture a reading through an authenticated sensor adapter and introduce its modeled ingress provenance.",
+   "input": "State/trace/context, sensor identifier and live read capability. Adapter authenticates the sensor/ingress root, accounts for read side effects, and unions any program-counter origins. No assertion that the physical observation is true or confidential is made. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace, freshly labeled reading and adapter receipt, or rejection. Guest and compartment membership follow authenticated ingress metadata.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-GFREE, E9-INI, E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-gfree",
+     "e9-ini",
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-prov",
+     "e9-orig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X04",
+   "domain": "D9",
+   "name": "Isolate",
+   "kind": "Transformer",
+   "tags": [
+    "isolation",
+    "authority"
+   ],
+   "description": "Create an execution compartment with explicit memory, capability, handler and channel boundaries.",
+   "input": "State/trace/context, fresh compartment descriptor, resource partition and initial capability graph. A trusted allocator/configurator enforces the stated partition; shared devices, scheduler and allowed channels are listed. No whole-program noninterference certificate is supplied. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and compartment handle or failure, with enforced structural access boundaries in the declared model.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "compartment",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "compartment",
+     "capability"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X05",
+   "domain": "D9",
+   "name": "Grant capability",
+   "kind": "Transformer",
+   "tags": [
+    "authority"
+   ],
+   "description": "Issue fresh authority for an existing target from an explicitly authorized issuer root.",
+   "input": "State/trace/context, issuer root, recipient, target, rights, lifetime and fresh generation. Issuer policy authorizes exactly this issuance; capability construction is protected. This is root issuance, not merely sending an already held capability. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and new protected capability with issuer/target/generation binding, or denial.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-CNI, E9-INI, E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X06",
+   "domain": "D9",
+   "name": "Revoke capability generation",
+   "kind": "Transformer",
+   "tags": [
+    "authority"
+   ],
+   "description": "Attempt an atomic update that disables one shared capability generation for subsequent effect commits.",
+   "input": "State/trace/context, revoker authority, protected revocation cell, root/generation and expected cell version. Every alias and callee checks that cell at its commit point. The supplied expected version permits a single attempt; conflict returns failure. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. Any committed effect in this step and its required authenticated audit append share one atomic transition; pure steps commit no such effect.",
+   "output": "Updated state/trace and revoked or conflict/denied result. Successful revocation blocks later commits with the old generation; earlier delivered data and independent grants remain.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-audit",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X07",
+   "domain": "D9",
+   "name": "Read stored state",
+   "kind": "Transformer",
+   "tags": [
+    "storage"
+   ],
+   "description": "Read a named resource and its protected provenance/signature envelope without altering the underlying bytes.",
+   "input": "State/trace/context, read capability, resource/version and trusted storage adapter. Hidden read notifications are either excluded by contract or accounted for. The result copies labels and immutable signed bytes exactly. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and a labeled snapshot of the actual version, or denied/error result; no current authorization certificate for later use is inferred.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-SIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-GFREE, E9-INI, E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-sig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-gfree",
+     "e9-ini",
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X08",
+   "domain": "D9",
+   "name": "Evaluate pure expression",
+   "kind": "Transformer",
+   "tags": [
+    "information-flow"
+   ],
+   "description": "Run an effect-free total expression over explicit operands; derive new labels by union of data and program-counter dependencies.",
+   "input": "State/trace/context, typed total pure expression f, explicit operands and PC origin set. No foreign calls, capability construction, label mutation, key-service invocation or hidden effects are allowed. All new-value dependency labels are protected. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. Any committed effect in this step and its required authenticated audit append share one atomic transition; pure steps commit no such effect.",
+   "output": "Updated register state and labeled result f(operands); trace has no externally committed effect from evaluation. Original immutable envelopes are framed, but the derived result does not inherit their signatures.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED, E9-EBND. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-GFREE, E9-SIG, E9-CNI, E9-INI, E9-TNI, E9-PNI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-audit",
+     "e9-mediated",
+     "e9-ebnd"
+    ],
+    "broken": [
+     "e9-gfree",
+     "e9-sig",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni"
+    ],
+    "output": [
+     "e9-prov",
+     "e9-orig",
+     "e9-ebnd"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-ebnd",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-ebnd",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X09",
+   "domain": "D9",
+   "name": "Allocate fresh resource",
+   "kind": "Transformer",
+   "tags": [
+    "storage"
+   ],
+   "description": "Allocate a fresh local object identity and initialize its explicit authority and labels.",
+   "input": "State/trace/context, allocator capability, initial value, compartment B and a protected freshness allocator. Initialization uses correct dependency labels; new resource lies in B; allocator budget is authorized. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace, fresh resource identifier and access handle, or failure. Retained copies and resource accounting remain in the model.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-ERASE, E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-erase",
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-prov",
+     "e9-orig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-erase",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X10",
+   "domain": "D9",
+   "name": "Declassify confidentiality label",
+   "kind": "Transformer",
+   "tags": [
+    "information-flow"
+   ],
+   "description": "Create a value view with explicitly authorized weaker confidentiality restrictions while retaining historical origins.",
+   "input": "State/trace/context, labeled datum, authorized releaser, release policy specifying what/who/where/when, and target label. No actual send is bundled. Immutable signed payload descriptors are retained; release annotations are separate metadata. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. The guest-free preservation binding is to the same original datum, not a newly sampled datum or a rewritten origin annotation.",
+   "output": "Updated state/trace and released-label view of the same datum, or denial. The historical compartment/guest origin is unchanged.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-GFREE, E9-LOCAL, E9-NOEGRESS, E9-SIG, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-CNI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-gfree",
+     "e9-local",
+     "e9-noegress",
+     "e9-sig",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-cni",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X11",
+   "domain": "D9",
+   "name": "Endorse integrity label",
+   "kind": "Transformer",
+   "tags": [
+    "information-flow"
+   ],
+   "description": "Permit a value to influence a specified trusted decision after an explicit authorized validation, without rewriting its origin.",
+   "input": "State/trace/context, datum v, endorser authority, validation predicate and allowed decision scope. Validation succeeds over exact bound bytes; provenance is kept and endorsement is a separate annotation. No guest-free fact is fabricated. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. The guest-free preservation binding is to the same original datum, not a newly sampled datum or a rewritten origin annotation.",
+   "output": "Updated state/trace and scoped endorsement witness with the original labeled datum, or denial.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-GFREE, E9-LOCAL, E9-NOEGRESS, E9-SIG, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-INI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-gfree",
+     "e9-local",
+     "e9-noegress",
+     "e9-sig",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-ini",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X12",
+   "domain": "D9",
+   "name": "Attenuate capability",
+   "kind": "Transformer",
+   "tags": [
+    "authority"
+   ],
+   "description": "Derive a protected capability for the same target with reduced declared rights, bounds and lifetime.",
+   "input": "State/trace/context, live capability c and requested rights/bounds/lifetime contained in c. A guarded constructor prohibits forging tags, changing target identity or increasing permissions. It does not add ambient authority. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and attenuated capability c-prime, or rejection; a certificate binds this input/output pair.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-atten"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-atten",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X13",
+   "domain": "D9",
+   "name": "Delegate existing authority",
+   "kind": "Transformer",
+   "tags": [
+    "authority"
+   ],
+   "description": "Attenuate an existing capability and deliver it to an explicitly named recipient.",
+   "input": "State/trace/context, delegable live capability, recipient endpoint, restricted rights and send handler. Attenuation preconditions and Send adapter/gate preconditions both hold; recipient admission and channel are explicit. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and delegation receipt or rejection. The delegate receives exactly the attenuated capability, not issuer-root authority.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-CNI, E9-INI, E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-atten"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability",
+     "handler"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-atten",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X14",
+   "domain": "D9",
+   "name": "Spawn task",
+   "kind": "Transformer",
+   "tags": [
+    "concurrency"
+   ],
+   "description": "Start a task with explicitly inherited data, authority, compartment and handler environment.",
+   "input": "State/trace/context, task code, labeled arguments, attenuated initial capability graph and declared scheduler. Spawn itself is guarded; every child effect must obey the same gate/epoch protocol. Child code and behavior are otherwise unrestricted. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and task handle. Subsequent child effects are part of the program execution, not invisible to the parent policy monitor.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-GFREE, E9-CNI, E9-INI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-gfree",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "task-handle"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X15",
+   "domain": "D9",
+   "name": "Join task",
+   "kind": "Transformer",
+   "tags": [
+    "concurrency"
+   ],
+   "description": "Await a specified task and collect its labeled result and accounted execution history.",
+   "input": "State/trace/context, task handle and declared scheduler. The join blocks or returns a cancellation/error according to explicit semantics; child results and traces are incorporated without changing their authentic labels. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and result/failed/cancelled outcome, or divergence. No successful or secure termination is inferred from the join operation.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-REVOKE, E9-FRESH. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-GFREE, E9-CNI, E9-INI, E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-revoke",
+     "e9-fresh"
+    ],
+    "broken": [
+     "e9-gfree",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "task-handle"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X16",
+   "domain": "D9",
+   "name": "Install effect handler",
+   "kind": "Transformer",
+   "tags": [
+    "dispatch"
+   ],
+   "description": "Install an explicit interpreter for subsequent effect requests in a lexical scope.",
+   "input": "State/trace/context, effect signature, handler h and installer authority. Installer event is guarded; handler forwarding preserves the trusted gate requirement. No proof that h has the same destinations or confidentiality behavior as the old handler is assumed. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and scoped handler environment. Resumption multiplicity, introduced effects and forwarding behavior are recorded.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-ERASE, E9-CNI, E9-INI, E9-TNI, E9-PNI, E9-AUDIT, E9-EBND. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-erase",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit",
+     "e9-ebnd"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "handler"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "handler"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-erase",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ebnd",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X17",
+   "domain": "D9",
+   "name": "Encrypt with opaque key service",
+   "kind": "Transformer",
+   "tags": [
+    "cryptography"
+   ],
+   "description": "Use a declared encryption/key-service interface on labeled bytes and retain their origins on the ciphertext.",
+   "input": "State/trace/context, plaintext, protected key handle, algorithm parameters and nonce from the declared freshness discipline. Key bytes are opaque to Evaluate; service calls are local to B, gated and currently authorized. No cryptographic secrecy theorem is imported by the word encrypt. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and labeled ciphertext, nonce and algorithm identifier, or failure. Output size and service timing remain modeled observations.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-CNI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-cni",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-prov",
+     "e9-orig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "key-handle"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X18",
+   "domain": "D9",
+   "name": "Decrypt with opaque key service",
+   "kind": "Transformer",
+   "tags": [
+    "cryptography"
+   ],
+   "description": "Decrypt through the specified key service; reconstructed plaintext inherits the ciphertext and key-service dependency origins.",
+   "input": "State/trace/context, ciphertext envelope, protected key handle and declared algorithm. Service is local to B, gated and authorized. Successful plaintext is relabeled from all modeled dependencies; no claim of factual integrity beyond a stated authentication check is made. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and labeled plaintext or explicit error. Error observability and reconstructed copies enter the state/trace model.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-ERASE, E9-GFREE, E9-CNI, E9-INI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-erase",
+     "e9-gfree",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-prov",
+     "e9-orig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "key-handle"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-erase",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X19",
+   "domain": "D9",
+   "name": "Sign exact approval descriptor",
+   "kind": "Transformer",
+   "tags": [
+    "cryptography"
+   ],
+   "description": "Sign a canonical immutable descriptor through an opaque signing-key service.",
+   "input": "State/trace/context, canonical descriptor, authorized signing-key handle and declared signature scheme. The correct signing algorithm and pinned verification key are paired; the key service is local, gated and authorized. A digest-only approval additionally assumes collision resistance and canonical binding. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and exact signed envelope, or failure. Successful envelope satisfies mathematical verification under the paired pinned key; owner identity/permission and anti-replay remain separate.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-sig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "key-handle"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "signed-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X20",
+   "domain": "D9",
+   "name": "Verify signature",
+   "kind": "Transformer",
+   "tags": [
+    "cryptography"
+   ],
+   "description": "Evaluate the declared public verification algorithm over exact bytes and a trusted pinned public key.",
+   "input": "State/trace/context, immutable signed descriptor, signature, trusted pinned public-key bytes and verification algorithm. Public verification is a total pure expression available to Evaluate; public key lookup/ownership is supplied separately, not inferred from a key embedded in the message. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. Any committed effect in this step and its required authenticated audit append share one atomic transition; pure steps commit no such effect.",
+   "output": "Updated register state and verified-signature witness on success, or explicit false/error. The witness binds exact bytes, algorithm and pinned key; it is not current owner authorization.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED, E9-EBND. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-INI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-audit",
+     "e9-mediated",
+     "e9-ebnd"
+    ],
+    "broken": [
+     "e9-ini"
+    ],
+    "output": [
+     "e9-sig",
+     "e9-ebnd"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "signed-value",
+     "data-value"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "verified-signature"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-ebnd",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-ebnd",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X21",
+   "domain": "D9",
+   "name": "Append authenticated audit record",
+   "kind": "Transformer",
+   "tags": [
+    "audit"
+   ],
+   "description": "Sign a record chained to the current log head and atomically append it to an authorized local append-only resource.",
+   "input": "State/trace/context, audit descriptor, signing-key handle, protected local log and expected head/version. Sign then CAS preconditions hold; conflicts return failure without committing the associated effect. The log contains complete modeled commit metadata and an authenticated previous-head binding. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and authenticated appended record or conflict/error. This records an event but cannot make a separate prior unlogged effect retrospectively atomic.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-CNI, E9-INI, E9-TNI, E9-PNI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni"
+    ],
+    "output": [
+     "e9-sig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "key-handle",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "signed-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X22",
+   "domain": "D9",
+   "name": "Erase modeled recoverable copies",
+   "kind": "Transformer",
+   "tags": [
+    "erasure"
+   ],
+   "description": "Delete all members of a complete explicitly bounded recoverable-copy inventory for the designated secret.",
+   "input": "State/trace/context, erase authority and complete inventory of copies plus reconstructing keys/backups for x. The abstract erase primitive deletes those modeled resources; no unlisted recipient memory or physical medium state is promised erased. Histories remain protected. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and inventory-empty witness or failure. Past egress events remain in the trace; fresh ingress may later recreate x.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-erase"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-erase",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X23",
+   "domain": "D9",
+   "name": "Generate and register fresh approval nonce",
+   "kind": "Transformer",
+   "tags": [
+    "freshness"
+   ],
+   "description": "Sample or allocate a nonce and reserve it in a protected issuer/scope namespace.",
+   "input": "State/trace/context, issuer scope, nonce service and registry capability. Service uses an explicit random or monotone allocation model and atomically checks uniqueness in that namespace. Random unpredictability is a separate assumption; uniqueness does not authorize an action. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and labeled reserved nonce or collision/conflict error. Acceptance/replay history is not erased or reset.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-prov",
+     "e9-orig"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X24",
+   "domain": "D9",
+   "name": "Check policy at the trusted gate",
+   "kind": "Transformer",
+   "tags": [
+    "authority"
+   ],
+   "description": "Evaluate the current authorization predicate over exact intended effect arguments and return a bound, short-lived permit or denial.",
+   "input": "State/trace/context, intended effect descriptor, actor, target, capabilities, current policy epoch and relevant history. The gate is trusted and total on supported requests. Permit is bound to exact arguments and epoch; any later commit rechecks freshness/current state atomically. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. Any committed effect in this step and its required authenticated audit append share one atomic transition; pure steps commit no such effect.",
+   "output": "Updated state and bound policy ticket or rejection. The check alone commits no external effect and does not guarantee that the ticket will still authorize a later action.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-TNI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-audit",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-tni"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "policy-ticket"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X25",
+   "domain": "D9",
+   "name": "Merge with current owner authorization",
+   "kind": "Transformer",
+   "tags": [
+    "transaction"
+   ],
+   "description": "Verify an owner-signed descriptor and atomically commit its exact proposed record update under the current owner/version/nonce checks.",
+   "input": "State/trace/context, signed descriptor binding record/action/bytes/expected version/nonce, pinned owner-key candidate, merge capability and protected record. The record, all replicas and audit destinations are inside B. Verify, Check policy and CAS preconditions hold and are ordered; CAS rechecks current owner, epoch, version, nonce and ticket arguments and atomically logs and consumes the approval. Conflicts are explicit failures. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. Any committed effect in this step and its required authenticated audit append share one atomic transition; pure steps commit no such effect.",
+   "output": "Updated state/trace and accepted merge receipt or denial/conflict. A success creates the approved record version; old signatures on changed record bytes are not reused.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-SIG, E9-CNI, E9-INI, E9-TNI, E9-PNI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-local",
+     "e9-noegress",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-audit",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-sig",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "signed-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X26",
+   "domain": "D9",
+   "name": "Compare-and-swap guarded resource",
+   "kind": "Transformer",
+   "tags": [
+    "transaction"
+   ],
+   "description": "Attempt one atomic compare-and-swap with explicit resource/version, bound guards, and all required monitor/history/log updates.",
+   "input": "State/trace/context, target resource, expected version, proposed bytes, live authority and bound guard specification. Trusted CAS service checks current policy/owner/epoch/replay predicates at one linearization point; requested log/history updates commit atomically. No locality constraint is assumed for an arbitrary target. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged. Any committed effect in this step and its required authenticated audit append share one atomic transition; pure steps commit no such effect.",
+   "output": "Updated state/trace and success with new version or unchanged-data conflict/denial. All accepted-effect and monitor-state changes share a linearization point.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-SIG, E9-ERASE, E9-CNI, E9-INI, E9-TNI, E9-PNI. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-owner",
+     "e9-auth",
+     "e9-revoke",
+     "e9-fresh",
+     "e9-audit",
+     "e9-mediated"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-sig",
+     "e9-erase",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni"
+    ],
+    "output": []
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability",
+     "policy-ticket"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-owner",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-auth",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-mediated",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-sig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-erase",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
+  },
+  {
+   "id": "D9-X27",
+   "domain": "D9",
+   "name": "Dispatch local component task",
+   "kind": "Transformer",
+   "tags": [
+    "dispatch"
+   ],
+   "description": "Attenuate the component authority, spawn an explicitly named local component task and join its accounted result.",
+   "input": "State/trace/context, named local component code, arguments, initial delegable capabilities, compartment and scheduler. Attenuate/Spawn/Join preconditions hold; all callee effects use the same gate, origin and revocation model. Additional preservation conditions: If this step accepts a policy-scoped approval, it atomically checks and updates the shared anti-replay history; otherwise it leaves that history unchanged.",
+   "output": "Updated state/trace and component result, failure or divergence. Callee histories and dependencies remain available to policy checks.",
+   "preserved": "GENERATED conditional preservation: E9-PROV, E9-ORIG, E9-REVOKE, E9-FRESH. Exact-bound original objects may be framed; a newly derived value needs its own witness.",
+   "broken": "GENERATED may destroy: E9-LOCAL, E9-NOEGRESS, E9-GFREE, E9-CNI, E9-INI, E9-TNI, E9-PNI, E9-AUDIT. This is a conservative possibility claim, not actual loss on every invocation.",
+   "complexity": "N/A",
+   "status": "Generated / graded (mapfill/generated.js, round MM-DR-001)",
+   "origin": "generated",
+   "anchorable": true,
+   "invariants": {
+    "preserved": [
+     "e9-prov",
+     "e9-orig",
+     "e9-revoke",
+     "e9-fresh"
+    ],
+    "broken": [
+     "e9-local",
+     "e9-noegress",
+     "e9-gfree",
+     "e9-cni",
+     "e9-ini",
+     "e9-tni",
+     "e9-pni",
+     "e9-audit"
+    ],
+    "output": [
+     "e9-atten"
+    ]
+   },
+   "actsOn": {
+    "input": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value",
+     "capability"
+    ],
+    "output": [
+     "system-state",
+     "execution-trace",
+     "agent-program",
+     "data-value"
+    ]
+   },
+   "evidence": {
+    "name": "unchecked",
+    "description": "unchecked",
+    "input": "unchecked",
+    "output": "unchecked",
+    "preserved": "unchecked",
+    "broken": "unchecked"
+   },
+   "claims": [
+    {
+     "field": "preserved",
+     "invariant": "e9-prov",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-orig",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-revoke",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "preserved",
+     "invariant": "e9-fresh",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-local",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-noegress",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-gfree",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-cni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-ini",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-tni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-pni",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "broken",
+     "invariant": "e9-audit",
+     "level": "unchecked",
+     "basis": []
+    },
+    {
+     "field": "output",
+     "invariant": "e9-atten",
+     "level": "unchecked",
+     "basis": []
+    }
+   ],
+   "tier": "generated"
   }
  ]
 }

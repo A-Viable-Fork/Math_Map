@@ -135,6 +135,9 @@ export function parse() {
   }
   const { ADDITIONS } = require("../mapfill/additions.js");
   for (const a of ADDITIONS) out.push({ ...a, domain: a.id.slice(0, 2), heading: a.name, status: "Added / receipted (mapfill/additions.js)", iso: "", origin: "added", reading: null, unknown: false, ptr: {} });
+  // Generated entries: a graded generation round's design contracts, at their own tier (mapfill/generated.js).
+  const { ROUNDS, GENERATED } = require("../mapfill/generated.js");
+  for (const g of GENERATED) out.push({ ...g, domain: g.id.slice(0, 2), heading: g.name, status: `Generated / graded (mapfill/generated.js, round ${g.round})`, iso: "", origin: "generated", reading: null, unknown: false, ptr: {} });
   const { CONDITIONS } = require("../mapfill/conditions.js");
   const outById2 = Object.fromEntries(out.map((e) => [e.id, e]));
   for (const c of CONDITIONS) { const e = outById2[c.id]; if (e) { e.conditions = c.conditions; e.counterexamples = c.counterexamples || []; e.conditionReceipts = c.receipts; } }
@@ -146,7 +149,10 @@ export function parse() {
   for (const f of FACETS) { const e = outById2[f.entry]; if (e && !e.facets.includes(f.facet)) e.facets.push(f.facet); }
   const { MATHLIB, FORMAL } = require("../mapfill/formal.js");
   for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note }); }
-  return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, corrections: CORRECTIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
+  // The landed map's eight domains, plus the domains added in mapfill/domains.js.
+  const { DOMAINS, TAGS } = require("../mapfill/domains.js");
+  const domains = { ...P.declared, ...Object.fromEntries(DOMAINS.map((d) => [d.id, { name: d.name, added: true }])) };
+  return { ...P, domains, addedDomains: DOMAINS, addedTags: TAGS, rounds: ROUNDS, generated: GENERATED, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, corrections: CORRECTIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
 }
 
 export function check(P = parse()) {
@@ -157,7 +163,32 @@ export function check(P = parse()) {
     const n = P.landed.filter((e) => e.domain === d).length;
     if (n !== v.count) F.push(`${d}: parsed ${n} entries, the map declares ${v.count}`);
   }
-  if (Object.keys(P.declared).length !== 8) F.push(`expected 8 declared domains, found ${Object.keys(P.declared).length}`);
+  if (Object.keys(P.declared).length !== 8) F.push(`expected the landed map to declare 8 domains, found ${Object.keys(P.declared).length}`);
+  for (const d of P.addedDomains) {
+    if (!/^D\d+$/.test(d.id) || P.declared[d.id]) F.push(`added domain ${d.id}: must be a new D<n>`);
+    if (!d.name || !d.basis) F.push(`added domain ${d.id}: needs a name and a basis`);
+  }
+  for (const t of P.addedTags) { if (P.vocab.includes(t.tag)) F.push(`added tag ${t.tag}: already in the map's vocabulary`); if (!P.domains[t.domain] || !t.definition) F.push(`added tag ${t.tag}: needs a known domain and a definition`); }
+  // Generated entries: well-formed, traceable to a landed round, and typed only in the vocabulary.
+  const rounds = Object.fromEntries(P.rounds.map((r) => [r.id, r])), gids = new Set();
+  const vocIds = new Set(P.vocabulary.INVARIANTS.map((v) => v.id));
+  for (const g of P.generated) {
+    const at = `generated ${g.id}`;
+    if (!/^D\d+-X\d{2}$/.test(g.id)) F.push(`${at}: id must be D<n>-X<nn>`);
+    if (gids.has(g.id) || P.landed.some((e) => e.id === g.id) || P.additions.some((a) => a.id === g.id)) F.push(`${at}: id is not unique`); gids.add(g.id);
+    if (!P.domains[g.id.slice(0, 2)]?.added) F.push(`${at}: must belong to an added domain`);
+    for (const k of ["name", "kind", "description", ...FIELDS]) if (!g[k] || !String(g[k]).trim()) F.push(`${at}: lacks ${k}`);
+    const ok = new Set([...P.vocab, ...P.addedTags.filter((t) => t.domain === g.id.slice(0, 2)).map((t) => t.tag)]);
+    if (!(g.tags || []).length) F.push(`${at}: needs tags`);
+    for (const t of g.tags || []) if (!ok.has(t)) F.push(`${at}: tag ${t} is in neither the map's vocabulary nor its domain's tags`);
+    const r = rounds[g.round];
+    if (!r) F.push(`${at}: unknown round ${g.round}`);
+    else { try { readFileSync(join(ROOT, r.dir, "grading.md"), "utf8"); } catch { F.push(`${at}: round ${g.round} has no grading.md in ${r.dir}`); } }
+    const inv = g.invariants || {};
+    for (const f of ["preserved", "broken", "output"]) for (const v of inv[f] || []) if (!vocIds.has(v)) F.push(`${at}: ${f} names unknown invariant ${v}`);
+    for (const v of inv.preserved || []) if ((inv.broken || []).includes(v)) F.push(`${at}: ${v} is both preserved and broken`);
+    for (const k of [...(g.actsOn?.input || []), ...(g.actsOn?.output || [])]) if (!(k in P.vocabulary.CARRIERS)) F.push(`${at}: unknown carrier ${k}`);
+  }
   if (P.vocab.length < 20) F.push(`the controlled vocabulary parsed to only ${P.vocab.length} tags`);
   for (const e of P.landed) if (!e.name || !e.kind) F.push(`${e.id}: missing name or operation kind`);
   const landedById = Object.fromEntries(P.landed.map((e) => [e.id, e]));
@@ -251,7 +282,7 @@ export function check(P = parse()) {
     const at = `facet ${f.entry} in ${f.facet}`;
     if (!byIdAll[f.entry]) F.push(`${at}: no such entry`);
     else if (byIdAll[f.entry].domain === f.facet) F.push(`${at}: an entry is already in its own domain`);
-    if (!P.declared[f.facet]) F.push(`${at}: no such domain`);
+    if (!P.domains[f.facet]) F.push(`${at}: no such domain`);
     if (!f.basis) F.push(`${at}: needs a basis`);
   }
   for (const c of V.CONTEXT || []) {
@@ -276,6 +307,7 @@ export function check(P = parse()) {
     } else if (!l.phrase || !nrm(e[l.field]).includes(nrm(l.phrase))) F.push(`${at}: phrase "${l.phrase}" is not in the entry's ${l.field} field`);
     used.add(l.invariant);
   }
+  for (const g of P.generated) for (const f of ["preserved", "broken", "output"]) for (const v of g.invariants?.[f] || []) used.add(v);
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
   const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/lean.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/facets.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
@@ -298,7 +330,7 @@ function render(P) {
   L.push("The structural layer: typed mathematical transformations (input, output, preserved and broken invariants, functional tags). Query with `node scripts/mathmap.mjs --tag compression --domain D4` and similar; `--landed` queries the map without the fill layer. See the script header.", "");
   L.push("## 1. Entries by domain", "", "Counts after the fill layer, with the landed count in brackets. *Anchorable*: has input, output and at least one invariant field, so it can anchor a composite (a chain of entries whose types meet).", "", "| Domain | Name | Entries | Name-only stubs | With invariants | Anchorable |", "|---|---|---|---|---|---|");
   const cnt = (es, d, fn) => es.filter((e) => e.domain === d && fn(e)).length;
-  for (const [d, v] of Object.entries(P.declared)) {
+  for (const [d, v] of Object.entries(P.domains)) {
     L.push(`| ${d} | ${v.name} | ${cnt(P.entries, d, () => true)} | ${cnt(P.entries, d, isStub)} [${cnt(P.landed, d, isStub)}] | ${cnt(P.entries, d, (e) => e.preserved || e.broken)} [${cnt(P.landed, d, (e) => e.preserved || e.broken)}] | ${cnt(P.entries, d, anchorable)} [${cnt(P.landed, d, anchorable)}] |`);
   }
   L.push(`| **all** | | **${P.entries.length}** | **${Q.stubs.length}** [${L0.stubs.length}] | **${P.entries.length - Q.noInvariants.length}** [${P.landed.length - L0.noInvariants.length}] | **${Q.anchorable.length}** [${L0.anchorable.length}] |`, "");
@@ -379,5 +411,5 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   }
   if (!a.includes("--check")) { writeFileSync(join(ROOT, "reports/MATHMAP.md"), render(P) + "\n"); console.log("wrote reports/MATHMAP.md"); }
   const Q = quality(P.entries, P.vocab);
-  console.log(`mathmap: PASS (${P.entries.length} entries in ${Object.keys(P.declared).length} domains; ${P.fills.length} fills; ${Q.stubs.length} stubs left; ${Q.anchorable.length} anchorable)`);
+  console.log(`mathmap: PASS (${P.entries.length} entries in ${Object.keys(P.domains).length} domains; ${P.fills.length} fills; ${Q.stubs.length} stubs left; ${Q.anchorable.length} anchorable)`);
 }

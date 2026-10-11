@@ -18,7 +18,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const MAP = JSON.parse(readFileSync(join(ROOT, "map.json"), "utf8"));
 const BY_ID = Object.fromEntries(MAP.entries.map((e) => [e.id, e]));
 const VERSION = { builtFrom: MAP.builtFrom.commit, repo: "https://github.com/A-Viable-Fork/Math_Map" };
-const CAVEAT = "Tiers, strongest evidence first: flagged (known wrong; do not use), audited (graded against sources; auditVerdict is the worst field), receipted (every claim quoted), landed (as written, unreviewed), authored (a fill, unreviewed). Cite the entry id and builtFrom commit.";
+const CAVEAT = "Tiers, strongest evidence first: flagged (known wrong; do not use), audited (graded against sources; auditVerdict is the worst field), receipted (every claim quoted), landed (as written, unreviewed), authored (a fill, unreviewed), generated (a graded generation round's design contract; claims unchecked). Cite the entry id and builtFrom commit.";
 
 const str = (description) => ({ type: "string", description });
 const TOOLS = [
@@ -27,7 +27,7 @@ const TOOLS = [
   { name: "search_entries", description: "Find typed transformations (input, output, preserved and broken invariants). All filters are optional and combine with AND. Returns short records; use get_entry for the full entry.",
     inputSchema: { type: "object", properties: {
       text: str("Case-insensitive substring of name, description, input, output, preserved or broken."),
-      domain: str("Where the entry was minted, D1 to D8; see map_info for names."), facet: str("Any domain the entry belongs to (its own plus listed facets)."), tag: { type: "array", items: { type: "string" }, description: "Functional tags; every one must match." },
+      domain: str("Where the entry was minted, D1 to D9; see map_info for names."), facet: str("Any domain the entry belongs to (its own plus listed facets)."), tag: { type: "array", items: { type: "string" }, description: "Functional tags; every one must match." },
       kind: str("Operation kind, e.g. Transformer."), tier: { type: "string", enum: ["flagged", "audited", "receipted", "landed", "authored"] },
       anchorable: { type: "boolean", description: "Only entries with input, output and at least one invariant field." },
       invariant: str("A named invariant id (see list_invariants) the entry preserves, breaks or produces."),
