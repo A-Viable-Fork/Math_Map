@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "ffe5a5828d0be2db1684a649991e9d893737af83"
+  "commit": "5b6cf45201512bf3b31911f965211fadcae5bb04"
  },
  "domains": {
   "D1": {
@@ -678,20 +678,20 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 2002,
-  "anchorable": 1999,
+  "entries": 2003,
+  "anchorable": 2000,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 19,
+   "added": 20,
    "generated": 29
   },
   "byTier": {
    "landed": 1337,
    "audited": 116,
    "authored": 494,
-   "receipted": 25,
+   "receipted": 26,
    "flagged": 1,
    "generated": 29
   },
@@ -702,7 +702,7 @@
    "unsupported": 100,
    "unchecked": 11166,
    "imprecise": 20,
-   "sourced": 674,
+   "sourced": 680,
    "formal": 52
   },
   "lean": {
@@ -58243,6 +58243,60 @@
     {
      "file": "excerpts/wikipedia-topological-sorting.txt",
      "quote": "this algorithm takes {{math|Θ(''n'' + ''m'')}}, i.e., [[Linear time|linear]], time."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X07",
+   "domain": "D7",
+   "name": "Priority-filtered merge of definitions",
+   "kind": "Transformer",
+   "tags": [
+    "composition",
+    "projection"
+   ],
+   "description": "Combines several definitions of one value, each carrying a priority: keeps every definition at the numerically lowest priority present, discards the rest, and merges the survivors by the value's own rule (a list concatenates them in sort order, then in the order they came). The NixOS module system's mkOverride: option defaults at 1500, mkDefault at 1000, a plain definition at 100, mkForce at 50.",
+   "input": "A finite list of definitions, each a value with an override priority (and, for lists, an order priority); a merge rule for the value's type",
+   "output": "The merge of the definitions at the lowest priority present, with that priority",
+   "preserved": "Every definition at the winning priority: two definitions at the same priority both survive, so a forced list joins another forced list rather than replacing it",
+   "broken": "Every definition at another priority, discarded without a trace in the value; commutativity, where the merge rule is ordered: two lists at the same order priority concatenate in the order they came",
+   "complexity": "Linear in the number of definitions",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
+     "quote": "process the mkOverride properties,\n    that is, return the values that have the highest (that is,\n    numerically lowest) priority, and strip the mkOverride\n    properties."
+    },
+    {
+     "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
+     "quote": "values = concatMap (def: if getPrio def == highestPrio then [ (strip def) ] else [ ]) defs;"
+    },
+    {
+     "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
+     "quote": "  mkOptionDefault = mkOverride 1500; # priority of option defaults\n  mkDefault = mkOverride 1000; # used in config sections of non-user modules to set a default\n  defaultOverridePriority = 100;"
+    },
+    {
+     "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
+     "quote": "  mkForce = mkOverride 50;"
+    },
+    {
+     "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
+     "quote": "The sort priority of a property is\n    defaultOrderPriority by default, but can be overridden by wrapping the property\n    using mkOrder."
+    },
+    {
+     "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
+     "quote": "  mkBefore = mkOrder 500;\n  defaultOrderPriority = 1000;\n  mkAfter = mkOrder 1500;"
     }
    ],
    "evidence": {

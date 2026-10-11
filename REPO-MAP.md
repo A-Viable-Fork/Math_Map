@@ -203,6 +203,7 @@
 | `excerpts/mathlib-Mathlib.Topology.Instances.CantorSet.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Topology.Metrizable.Urysohn.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Topology.VectorBundle.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/nixpkgs-7c8764b-lib-modules.txt` |  |
 | `excerpts/nlab-aufhebung-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung-modalities.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung.txt` | Verbatim windows from an nLab page. |
@@ -352,6 +353,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/arxiv-1603.04641.txt` |
 | `mapfill/additions.js` | names | `excerpts/arxiv-1608.02921.txt` |
 | `mapfill/additions.js` | names | `excerpts/econometrica-jackson-1991.txt` |
+| `mapfill/additions.js` | names | `excerpts/nixpkgs-7c8764b-lib-modules.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung-definition.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung-modalities.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung.txt` |

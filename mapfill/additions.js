@@ -258,6 +258,22 @@ const ADDITIONS = [
       { file: "excerpts/wikipedia-topological-sorting.txt", quote: "If a Hamiltonian path exists, the topological sort order is unique" },
       { file: "excerpts/wikipedia-topological-sorting.txt", quote: "this algorithm takes {{math|Θ(''n'' + ''m'')}}, i.e., [[Linear time|linear]], time." },
     ] },
+  { id: "D7-X07", name: "Priority-filtered merge of definitions", kind: "Transformer", tags: ["composition", "projection"],
+    description: "Combines several definitions of one value, each carrying a priority: keeps every definition at the numerically lowest priority present, discards the rest, and merges the survivors by the value's own rule (a list concatenates them in sort order, then in the order they came). The NixOS module system's mkOverride: option defaults at 1500, mkDefault at 1000, a plain definition at 100, mkForce at 50.",
+    input: "A finite list of definitions, each a value with an override priority (and, for lists, an order priority); a merge rule for the value's type",
+    output: "The merge of the definitions at the lowest priority present, with that priority",
+    preserved: "Every definition at the winning priority: two definitions at the same priority both survive, so a forced list joins another forced list rather than replacing it",
+    broken: "Every definition at another priority, discarded without a trace in the value; commutativity, where the merge rule is ordered: two lists at the same order priority concatenate in the order they came",
+    complexity: "Linear in the number of definitions",
+    requestedBy: "Requested by the NixOS decomposition (Research_OS decompositions/nixos-configuration.md), whose predictions 2 to 6 rested on this merge from recall; the operator ruled it in 2026-10-11. Receipted at nixpkgs 7c8764b; the equal-priority join and the order dependence are tested there.",
+    receipts: [
+      { file: "excerpts/nixpkgs-7c8764b-lib-modules.txt", quote: "process the mkOverride properties,\n    that is, return the values that have the highest (that is,\n    numerically lowest) priority, and strip the mkOverride\n    properties." },
+      { file: "excerpts/nixpkgs-7c8764b-lib-modules.txt", quote: "values = concatMap (def: if getPrio def == highestPrio then [ (strip def) ] else [ ]) defs;" },
+      { file: "excerpts/nixpkgs-7c8764b-lib-modules.txt", quote: "  mkOptionDefault = mkOverride 1500; # priority of option defaults\n  mkDefault = mkOverride 1000; # used in config sections of non-user modules to set a default\n  defaultOverridePriority = 100;" },
+      { file: "excerpts/nixpkgs-7c8764b-lib-modules.txt", quote: "  mkForce = mkOverride 50;" },
+      { file: "excerpts/nixpkgs-7c8764b-lib-modules.txt", quote: "The sort priority of a property is\n    defaultOrderPriority by default, but can be overridden by wrapping the property\n    using mkOrder." },
+      { file: "excerpts/nixpkgs-7c8764b-lib-modules.txt", quote: "  mkBefore = mkOrder 500;\n  defaultOrderPriority = 1000;\n  mkAfter = mkOrder 1500;" }
+    ] },
 ];
 
 module.exports = { ADDITIONS };

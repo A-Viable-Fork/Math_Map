@@ -16,10 +16,10 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D4 | TOPOLOGY AND GEOMETRIC METHODS | 439 | 0 [0] | 439 [385] | 439 [385] |
 | D5 | PROBABILITY AND INFORMATION THEORY | 153 | 0 [0] | 153 [77] | 153 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 163 | 0 [0] | 163 [146] | 163 [146] |
-| D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 471 | 1 [416] | 471 [0] | 470 [0] |
+| D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 472 | 1 [416] | 472 [0] | 471 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 238 | 1 [0] | 238 [77] | 236 [77] |
 | D9 | SYSTEMS AND EFFECTS | 29 | 0 [0] | 29 [0] | 29 [0] |
-| **all** | | **2002** | **2** [416] | **2002** [1118] | **1999** [1118] |
+| **all** | | **2003** | **2** [416] | **2003** [1118] | **2000** [1118] |
 
 ## 2. The fill layer
 
@@ -52,7 +52,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D8-155 | Poisson-Mellin-Newton cycle | Recorded from memory of the analytic-combinatorics literature. |
 | D8-202 | Square transform | Generic reading as the power transform with exponent 2. |
 
-- **Additions: 19** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph.
+- **Additions: 20** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph; D7-X07 Priority-filtered merge of definitions.
 
 - **Invariant vocabulary** (`mapfill/invariants.js`): 52 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
@@ -79,7 +79,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | Tag | Entries |
 |---|---|
 | `surgery` | 235 |
-| `composition` | 68 |
+| `composition` | 69 |
 | `decomposition` | 161 |
 | `compression` | 91 |
 | `completion` | 31 |
@@ -88,7 +88,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `basis-change` | 5 |
 | `bijection` | 14 |
 | `involution` | 25 |
-| `projection` | 103 |
+| `projection` | 104 |
 | `embedding` | 17 |
 | `closure` | 12 |
 | `duality` | 31 |
@@ -109,7 +109,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 ## 4. Operation kinds
 
-- Transformer: 1649
+- Transformer: 1650
 - Constructor: 285
 - Correspondence: 68
 
