@@ -19,7 +19,9 @@
     "prompts": "Research prompts sent out to generate candidate content; returned reports are leads, verified before anything lands.",
     "reports": "Generated reports on data quality, error rates, the catalogue and the formal queue.",
     "scripts": "The parser, query tool, checks, build and tool server. Node, no dependencies.",
-    "source": "The map as landed, verbatim, and the report its D7 names come from."
+    "source": "The map as landed, verbatim, and the report its D7 names come from.",
+    "docs": "Notes about the map that are neither data nor generated.",
+    "docs/inbound": "Dated proposals from other repositories and sessions, to verify and then fold in or decline."
   },
   "docs": {
     ".github/workflows/check.yml": "CI: runs scripts/check-all.mjs, and builds the Lean project and verifies its audit.",
@@ -81,6 +83,7 @@
     "generation/*/bindings-*.json": "A generator's platform bindings for the round, landed verbatim; its hash is in the round's record.",
     "generation/*/receipts-*.json": "A generator's source receipts (paths and hashes at a tag), landed verbatim; its hash is in the round's record.",
     "generation/*/trial-*.md": "A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned.",
-    "generation/*/*.patch": "A draft patch to an external tool, written and tested here; held until the operator signs off on sending it upstream."
+    "generation/*/*.patch": "A draft patch to an external tool, written and tested here; held until the operator signs off on sending it upstream.",
+    "docs/inbound/*.md": "A dated proposal from another repository or session; a lead, not a change."
   }
 }
