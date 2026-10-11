@@ -93,6 +93,8 @@
 | `scripts/catalogue.mjs` | the paper catalogue. |
 | `scripts/check-all.mjs` | the gate. |
 | `scripts/compose.mjs` | composition. |
+| `scripts/deform-algebras.mjs` | the algebras and rounds of the deformation generator (scripts/deform.mjs). |
+| `scripts/deform.mjs` | the deformation generator. |
 | `scripts/evidence.mjs` | evidence per claim. |
 | `scripts/excerpt.mjs` | the excerpt maker. |
 | `scripts/export-guardians.mjs` | export to Guardians. |
@@ -648,6 +650,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/check-all.mjs` | names | `scripts/build.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/catalogue.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/compose.mjs` |
+| `scripts/check-all.mjs` | names | `scripts/deform.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/formal.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/gaps.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/lean.mjs` |
@@ -659,6 +662,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/compose.mjs` | imports | `scripts/mathmap.mjs` |
 | `scripts/compose.mjs` | names | `mapfill/invariants.js` |
 | `scripts/compose.mjs` | names | `scripts/evidence.mjs` |
+| `scripts/deform-algebras.mjs` | imports | `scripts/deform.mjs` |
+| `scripts/deform-algebras.mjs` | names | `scripts/deform.mjs` |
+| `scripts/deform.mjs` | imports | `scripts/deform-algebras.mjs` |
+| `scripts/deform.mjs` | names | `scripts/deform-algebras.mjs` |
 | `scripts/evidence.mjs` | imports | `audit/grades-0_1.js` |
 | `scripts/evidence.mjs` | imports | `audit/targeted-0_1.js` |
 | `scripts/evidence.mjs` | imports | `mapfill/lean.js` |
