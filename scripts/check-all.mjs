@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CHECKS = [["scripts/mathmap.mjs", "--check"], ["scripts/audit.mjs", "--check"], ["scripts/formal.mjs"], ["scripts/lean.mjs"], ["scripts/build.mjs", "--check"], ["scripts/compose.mjs", "--chain", "D2-118,D2-117"], ["scripts/compose.mjs", "--selftest"], ["scripts/mcp.mjs", "--selftest"], ["scripts/blind.mjs", "--check"], ["scripts/catalogue.mjs", "--check"], [".infra/run.mjs"]];
-const REPORTS = [["scripts/mathmap.mjs", "reports/MATHMAP.md"], ["scripts/audit.mjs", "reports/AUDIT.md"], ["scripts/topology.mjs", "reports/TOPOLOGY.md"], ["scripts/type-lexicon.mjs", "reports/TYPING.md"]];
+const REPORTS = [["scripts/mathmap.mjs", "reports/MATHMAP.md"], ["scripts/audit.mjs", "reports/AUDIT.md"], ["scripts/topology.mjs", "reports/TOPOLOGY.md"], ["scripts/type-lexicon.mjs", "reports/TYPING.md"], ["scripts/gaps.mjs", "reports/GAPS.md"]];
 let fail = 0;
 for (const [s, ...a] of CHECKS) {
   try { process.stdout.write(execFileSync("node", [join(ROOT, s), ...a], { cwd: ROOT }).toString()); }
