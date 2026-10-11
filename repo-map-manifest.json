@@ -28,6 +28,8 @@
     "generation/2026-10-11-gen-001": "The GEN-001 round: the first test of gap-driven generation, its candidates and composites, graded."
   },
   "docs": {
+    "CLAUDE.md": "Standing instructions for agents: the checks, the layout, and the rules for origins, receipts, flags, rounds and bindings; imports the kit's shared conventions.",
+    "AGENTS.md": "Points agents other than Claude Code to CLAUDE.md and the files it imports.",
     "generation/2026-10-11-mm-dr-004/grading-part-b.md": "The line-by-line grading of Part B, the Nix operations: claim counts, sampled citations re-read, what changed, the four invariants, and a held finding about Nix.",
     "generation/2026-10-11-mm-dr-004/part-b/grading-c01-c03.md": "Claims of D9-NIX-C01 to C03 (realize, fetch, pure evaluation), graded, with corrected entries.",
     "generation/2026-10-11-mm-dr-004/part-b/grading-c04-c06.md": "Claims of D9-NIX-C04 to C06 (impure evaluation, flake pin, overlay), graded, with corrected entries.",
