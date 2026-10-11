@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "78f526d83007304c8138018eedf5591e6f036a51"
+  "commit": "9f6bb685a7226e333be1217ee3273c6fdc6e00f5"
  },
  "domains": {
   "D1": {
@@ -323,7 +323,8 @@
     "from": "limits",
     "to": "finite-limits",
     "kind": "implies",
-    "basis": "By definition: a finite limit is a limit."
+    "over": "preservation",
+    "basis": "By definition: a finite limit is a limit, so a functor preserving all limits preserves the finite ones."
    }
   ],
   "receiptedLinks": [

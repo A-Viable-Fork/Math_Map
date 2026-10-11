@@ -230,6 +230,7 @@ export function check(P = parse()) {
   for (const r of V.RELATIONS) {
     for (const k of [r.from, r.to]) if (!vids.has(k)) F.push(`relation ${r.from} to ${r.to}: unknown invariant ${k}`);
     if (!["implies", "equivalent"].includes(r.kind)) F.push(`relation ${r.from} to ${r.to}: bad kind ${r.kind}`);
+    if (r.kind === "implies" && !["preservation", "state"].includes(r.over)) F.push(`relation ${r.from} to ${r.to}: an implication must say whether it is over preservation or state`);
     if (!(r.receipts || []).length && !r.basis) F.push(`relation ${r.from} to ${r.to}: needs receipts or a basis`);
     for (const x of r.receipts || []) { const m = inFile(x); if (m) F.push(`relation ${r.from} to ${r.to}: ${m}`); }
   }

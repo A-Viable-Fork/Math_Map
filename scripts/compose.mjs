@@ -1,21 +1,28 @@
 // Role: composition. For a chain of entries applied in order, reports which named invariants survive the
 //   whole chain, where each one breaks, where the map is silent, and whether each step's output kind fits
 //   the next step's input.
-// Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--json]`. Exports compose(chain, P?). An
+// Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--json]`, or `--selftest`. Exports compose(chain, P?). An
 //   invariant's status: survives (every step preserves it), broken (at the first step that breaks it), or
 //   unknown (no step breaks it, but some step says nothing about it; the silent steps are listed); a step
 //   whose output produces the invariant after an earlier step broke it restores it; one that produces it
-//   before a later step breaks it is reported as created then broken. Steps'
-//   claims are closed under the vocabulary's relations: preserving an invariant preserves what it implies,
-//   and breaking an invariant breaks what implies it.
+//   before a later step breaks it is reported as created then broken. A restoration or creation followed
+//   by a step that acts on the invariant's carrier and says nothing about it is reported as restored then
+//   unknown (or created then unknown): producing an invariant says nothing about a later silent step.
+//   Steps' claims are closed under the vocabulary's relations: an equivalence carries preservation and
+//   breaking both ways; an implication carries them only when it relates preservation itself (over:
+//   "preservation": a functor preserving limits preserves finite limits). An implication between state
+//   facts (over: "state") is not closed over: a step preserving P, with P implying Q, can still take a
+//   Q state outside Q, and a step breaking Q need not break P.
 //   An invariant is judged only at the steps that act on its carrier (a step on surfaces is not asked
-//   about a curve's invariants); the other steps are not applicable. Each join between steps is checked:
-//   match (a kind of the next step's input), narrowing (the output must be the more special kind the next
-//   step needs), or mismatch (an implicit conversion the chain does not state).
+//   about a curve's invariants); the other steps are not applicable. Each join between steps is checked,
+//   reading a step's input kinds as joint operands (a surface and a curve on it): match (every input kind
+//   is supplied by a kind of the previous output), narrowing (some input needs a more special kind than
+//   the output gives), partial (some input kinds are not supplied by the previous step at all; they must
+//   come from outside the chain, named in the detail), or mismatch (no input kind is supplied).
 //   Each result, join and the chain as a whole carries evidence: the weakest level (scripts/evidence.mjs)
 //   among the claims it rests on, and where that claim is.
 // Invariant: read-only. The answer is only as good as the entries' fields and links: "unknown" means the
-//   map does not say, not that the invariant is lost.
+//   map does not say, not that the invariant is lost. `--selftest` checks these rules on synthetic chains.
 import { fileURLToPath } from "node:url";
 import { parse } from "./mathmap.mjs";
 import { evidence, weaker, rank } from "./evidence.mjs";
@@ -28,6 +35,7 @@ function closure(direct, R, dir, relEv) {
   while (grew) {
     grew = false;
     for (const r of R) {
+      if (r.kind !== "equivalent" && r.over !== "preservation") continue;
       const pairs = r.kind === "equivalent" ? [[r.from, r.to], [r.to, r.from]] : dir === "down" ? [[r.from, r.to]] : [[r.to, r.from]];
       for (const [a, b] of pairs) {
         if (!out.has(a)) continue;
@@ -61,12 +69,18 @@ export function compose(chain, P = parse()) {
   const joins = steps.slice(1).map((st, i) => {
     const a = steps[i];
     if (!a.actsOn || !st.actsOn) return { from: a.id, to: st.id, status: "unknown" };
-    const pairs = a.actsOn.output.flatMap((o) => st.actsOn.input.map((n) => [o, n]));
     const jev = ev([[i, "output", a.outputEv], [i + 1, "input", st.inputEv]]);
-    if (pairs.some(([o, n]) => isa(o, n, C))) return { from: a.id, to: st.id, status: "match", evidence: jev };
-    const nar = pairs.find(([o, n]) => isa(n, o, C));
-    if (nar) return { from: a.id, to: st.id, status: "narrowing", detail: `${nar[0]} to ${nar[1]}`, evidence: jev };
-    return { from: a.id, to: st.id, status: "mismatch", detail: `${a.actsOn.output.join("/")} out, ${st.actsOn.input.join("/")} in`, evidence: jev };
+    // Each input kind is a required operand: supplied exactly, supplied by narrowing, or not supplied.
+    const need = st.actsOn.input.map((n) => {
+      if (a.actsOn.output.some((o) => isa(o, n, C))) return { n, by: "match" };
+      const o = a.actsOn.output.find((o) => isa(n, o, C));
+      return o ? { n, by: "narrowing", o } : { n, by: "none" };
+    });
+    const none = need.filter((x) => x.by === "none"), nar = need.filter((x) => x.by === "narrowing");
+    if (none.length === need.length) return { from: a.id, to: st.id, status: "mismatch", detail: `${a.actsOn.output.join("/")} out, ${st.actsOn.input.join("/")} in`, evidence: jev };
+    if (none.length) return { from: a.id, to: st.id, status: "partial", detail: `${none.map((x) => x.n).join(", ")} not supplied by ${a.id}`, evidence: jev };
+    if (nar.length) return { from: a.id, to: st.id, status: "narrowing", detail: nar.map((x) => `${x.o} to ${x.n}`).join(", "), evidence: jev };
+    return { from: a.id, to: st.id, status: "match", evidence: jev };
   });
   const all = new Set(steps.flatMap((s) => [...s.preserved.keys(), ...s.broken.keys(), ...s.output.keys()]));
   const names = Object.fromEntries(P.vocabulary.INVARIANTS.map((v) => [v.id, v.name]));
@@ -74,8 +88,10 @@ export function compose(chain, P = parse()) {
     const b = steps.findIndex((s) => s.broken.has(v));
     const c = steps.findIndex((s, k) => k > b && s.output.has(v));
     const B = (k) => [k, "broken", steps[k].broken.get(v)], O = (k) => [k, "output", steps[k].output.get(v)];
-    if (b >= 0 && c > b && !steps.slice(c + 1).some((s) => s.broken.has(v))) return { invariant: v, name: names[v], status: "restored", brokenAt: b + 1, restoredAt: c + 1, by: steps[c].id, evidence: ev([B(b), O(c)]) };
-    if (b < 0 && c >= 0) return { invariant: v, name: names[v], status: "created", at: c + 1, by: steps[c].id, evidence: ev([O(c)]) };
+    // Steps after a production that act on the invariant and neither preserve nor produce it again.
+    const silentAfter = (k) => steps.slice(k + 1).filter((s) => applies(s, v) && !s.preserved.has(v) && !s.output.has(v)).map((s) => s.id);
+    if (b >= 0 && c > b && !steps.slice(c + 1).some((s) => s.broken.has(v))) { const sa = silentAfter(c); return { invariant: v, name: names[v], status: sa.length ? "restored then unknown" : "restored", brokenAt: b + 1, restoredAt: c + 1, by: steps[c].id, silentAfter: sa, evidence: ev([B(b), O(c)]) }; }
+    if (b < 0 && c >= 0) { const sa = silentAfter(c); return { invariant: v, name: names[v], status: sa.length ? "created then unknown" : "created", at: c + 1, by: steps[c].id, silentAfter: sa, evidence: ev([O(c)]) }; }
     const c0 = steps.findIndex((s) => s.output.has(v));
     if (b >= 0 && c0 >= 0 && c0 < b) return { invariant: v, name: names[v], status: "created then broken", createdAt: c0 + 1, createdBy: steps[c0].id, at: b + 1, by: steps[b].id, silentBefore: steps.slice(c0 + 1, b).filter((s) => applies(s, v) && !s.preserved.has(v)).map((s) => s.id), evidence: ev([O(c0), B(b)]) };
     if (b >= 0) return { invariant: v, name: names[v], status: "broken", at: b + 1, by: steps[b].id, silentBefore: steps.slice(0, b).filter((s) => applies(s, v) && !s.preserved.has(v)).map((s) => s.id), evidence: ev([B(b)]) };
@@ -99,8 +115,8 @@ export function describe(r) {
   for (const x of r.invariants) {
     const na = x.notApplicable?.length ? ` (not applicable at ${x.notApplicable.join(", ")})` : "";
     if (x.status === "survives") L.push(`  survives${x.notApplicable?.length ? " where it applies" : ""}: ${x.name}${na}${tag(x)}`);
-    else if (x.status === "restored") L.push(`  restored: ${x.name} (broken at step ${x.brokenAt}, produced again at step ${x.restoredAt} by ${x.by})${tag(x)}`);
-    else if (x.status === "created") L.push(`  created at step ${x.at} (${x.by}): ${x.name}${tag(x)}`);
+    else if (x.status.startsWith("restored")) L.push(`  ${x.status}: ${x.name} (broken at step ${x.brokenAt}, produced again at step ${x.restoredAt} by ${x.by}${x.silentAfter.length ? `; the map is silent on it after that at ${x.silentAfter.join(", ")}` : ""})${tag(x)}`);
+    else if (x.status === "created" || x.status === "created then unknown") L.push(`  created at step ${x.at} (${x.by}): ${x.name}${x.silentAfter.length ? `; the map is silent on it after that at ${x.silentAfter.join(", ")}` : ""}${tag(x)}`);
     else if (x.status === "created then broken") L.push(`  created at step ${x.createdAt} (${x.createdBy}), broken at step ${x.at} (${x.by}): ${x.name}${x.silentBefore.length ? `; the map is silent on it in between at ${x.silentBefore.join(", ")}` : ""}${tag(x)}`);
     else if (x.status === "broken") L.push(`  broken at step ${x.at} (${x.by}): ${x.name}${x.silentBefore.length ? `; the map is silent on it before that at ${x.silentBefore.join(", ")}` : ""}${tag(x)}`);
     else L.push(`  unknown: ${x.name} (the map is silent at ${x.silentAt.join(", ")})${na}`);
@@ -110,7 +126,34 @@ export function describe(r) {
   return L.join("\n");
 }
 
+// Synthetic chains for the rules above, built over the parsed map so evidence resolves; none is a map entry.
+function selftest() {
+  const P0 = parse(), F = [];
+  const e = (id, inv = {}, input = ["t"], output = ["t"]) => ({ id, name: id, input: "-", output: "-", actsOn: { input, output }, invariants: { preserved: [], broken: [], output: [], ...inv } });
+  const run = (chain, entries, ids, RELATIONS = [], CARRIERS = { t: null }) => compose(chain, { ...P0, entries,
+    vocabulary: { ...P0.vocabulary, CARRIERS, RELATIONS, INVARIANTS: ids.map((id) => ({ id, name: id, carrier: "t" })), LINKS: [], ACTS_ON: [] } });
+  const st = (r, v) => r.invariants.find((x) => x.invariant === v)?.status;
+  const want = (label, got, exp) => { if (got !== exp) F.push(`${label}: got ${got}, expected ${exp}`); };
+  const imp = (over) => [{ from: "P", to: "Q", kind: "implies", basis: "synthetic", ...(over ? { over } : {}) }];
+  want("state implication does not carry preservation", st(run(["f"], [e("f", { preserved: ["P"] })], ["P", "Q"], imp("state")), "Q"), undefined);
+  want("state implication does not carry breaking", st(run(["f"], [e("f", { preserved: ["P"], broken: ["Q"] })], ["P", "Q"], imp("state")), "P"), "survives");
+  want("preservation implication carries preservation", st(run(["f"], [e("f", { preserved: ["P"] })], ["P", "Q"], imp("preservation")), "Q"), "survives");
+  want("restored then silent", st(run(["a", "b", "c"], [e("a", { broken: ["X"] }), e("b", { output: ["X"] }), e("c")], ["X"]), "X"), "restored then unknown");
+  want("restored then preserved", st(run(["a", "b", "c"], [e("a", { broken: ["X"] }), e("b", { output: ["X"] }), e("c", { preserved: ["X"] })], ["X"]), "X"), "restored");
+  want("created then silent", st(run(["a", "b"], [e("a", { output: ["X"] }), e("b")], ["X"]), "X"), "created then unknown");
+  const C3 = { t: null, u: null, v: null, w: "v" };
+  const j = (o, n) => run(["a", "b"], [e("a", {}, ["t"], o), e("b", {}, n, ["t"])], [], [], C3).joins[0];
+  want("joint input with an unsupplied operand", j(["t", "u"], ["t", "v"]).status, "partial");
+  want("joint input fully supplied", j(["t", "v"], ["t", "v"]).status, "match");
+  want("joint input by narrowing", j(["t", "v"], ["t", "w"]).status, "narrowing");
+  want("no input supplied", j(["u"], ["t", "v"]).status, "mismatch");
+  want("map chain still restores", st(compose(["D2-118", "D2-117"]), "exceptional-divisor"), "restored");
+  if (F.length) { console.log(`compose selftest: FAIL\n  ${F.join("\n  ")}`); process.exit(1); }
+  console.log("compose selftest: PASS (11 synthetic chains)");
+}
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  if (process.argv.includes("--selftest")) { selftest(); process.exit(0); }
   const a = process.argv.slice(2), i = a.indexOf("--chain");
   if (i < 0 || !a[i + 1]) { console.log("compose: needs --chain ID,ID,..."); process.exit(1); }
   const r = compose(a[i + 1].split(",").map((s) => s.trim()));

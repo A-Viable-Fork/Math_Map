@@ -4,8 +4,11 @@
 //   CARRIERS = { kind: parent|null }: the kinds of object an invariant can belong to (a curve is a variety).
 //   INVARIANTS = [{ id, name, kind, carrier, definition }]: carrier is the kind of object that has it;
 //     "operation" means a property of the step itself (linearity), which every step can have or lack.
-//   RELATIONS = [{ from, to, kind, receipts?, basis? }]: implies (from holding gives to) or equivalent
-//     (both ways), with receipts (quotes in excerpts/) or a basis naming why it holds by definition.
+//   RELATIONS = [{ from, to, kind, over?, receipts?, basis? }]: implies (from holding gives to) or equivalent
+//     (both ways), with receipts (quotes in excerpts/) or a basis naming why it holds by definition. An
+//     implication says what it relates: over "preservation" (preserving from preserves to, so composition
+//     may carry claims along it) or over "state" (from holding in a state gives to in that state, which
+//     composition must not carry: a step preserving from can still break to).
 //   ACTS_ON = [{ entry, input: [kinds], output: [kinds], inputPhrase, outputPhrase }]: what an entry takes and
 //     returns; each phrase (or each phrase in a list) must occur in the entry's input or output field.
 //   LINKS = [{ entry, field, invariant, phrase | receipts, note? }]: field is preserved, broken or output
@@ -93,7 +96,7 @@ const ACTS_ON = [
 const RELATIONS = [
   { from: "birational-type", to: "function-field", kind: "equivalent",
     receipts: [{ file: "excerpts/wikipedia-birational-geometry.txt", quote: "are birational if and only if their [[Function field of an algebraic variety|function fields]] are isomorphic" }] },
-  { from: "limits", to: "finite-limits", kind: "implies", basis: "By definition: a finite limit is a limit." },
+  { from: "limits", to: "finite-limits", kind: "implies", over: "preservation", basis: "By definition: a finite limit is a limit, so a functor preserving all limits preserves the finite ones." },
 ];
 
 const L = (entry, field, invariant, phrase) => ({ entry, field, invariant, phrase });
