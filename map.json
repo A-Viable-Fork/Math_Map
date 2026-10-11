@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "f186ac637098a812e1308e0efa350beb79135bb7"
+  "commit": "2fa9ac8c8b17b6fec0c7a85c71a2a2f14e472e90"
  },
  "domains": {
   "D1": {
@@ -678,20 +678,20 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1997,
-  "anchorable": 1995,
+  "entries": 1999,
+  "anchorable": 1997,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 14,
+   "added": 16,
    "generated": 29
   },
   "byTier": {
    "landed": 1338,
    "audited": 116,
    "authored": 494,
-   "receipted": 20,
+   "receipted": 22,
    "generated": 29
   },
   "withConditions": 9,
@@ -701,7 +701,7 @@
    "unsupported": 100,
    "unchecked": 11166,
    "imprecise": 20,
-   "sourced": 644,
+   "sourced": 656,
    "formal": 52
   },
   "lean": {
@@ -57912,6 +57912,86 @@
      "file": "lean/MathMap/Implementation.lean"
     }
    ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D6-X03",
+   "domain": "D6",
+   "name": "Sampling a band-limited function",
+   "kind": "Transformer",
+   "tags": [
+    "projection",
+    "representation-change"
+   ],
+   "description": "Samples a function that contains no frequencies above B at points spaced less than 1/(2B) apart; the samples determine the function completely (Nyquist-Shannon). Above the bandlimit the reconstruction aliases.",
+   "input": "Band-limited function x(t), bandlimit B, sample spacing T < 1/(2B)",
+   "output": "Discrete signal: the sequence of samples x(nT)",
+   "preserved": "The function itself: it is recoverable from the samples when the sample rate exceeds 2B",
+   "broken": "Frequencies above half the sample rate: they alias onto lower ones and are not recoverable",
+   "complexity": "Linear in the number of samples",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-nyquist-shannon-sampling.txt",
+     "quote": "then it can be completely determined from its sampled values at a sequence of points spaced less than"
+    },
+    {
+     "file": "excerpts/wikipedia-nyquist-shannon-sampling.txt",
+     "quote": "the reconstruction exhibits imperfections known as [[aliasing]]"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D4-X02",
+   "domain": "D4",
+   "name": "Delay embedding of a time series",
+   "kind": "Transformer",
+   "tags": [
+    "embedding",
+    "topology-bridge"
+   ],
+   "description": "Maps a time series of observations of a dynamical system to points (x(t), x(t-tau), ..., x(t-(k-1)tau)) in R^k; for k at least 2d+1, d the attractor's dimension, the image is diffeomorphic to the attractor (Takens).",
+   "input": "Time series: observations of a dynamical system with attractor of dimension d; delay tau; embedding dimension k",
+   "output": "Point cloud in R^k tracing the reconstructed attractor",
+   "preserved": "Properties invariant under smooth coordinate changes (diffeomorphism invariants) of the attractor, for k >= 2d+1",
+   "broken": "The geometric shape of the attractor in phase space",
+   "complexity": "Linear in the length of the series",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-takens-theorem.txt",
+     "quote": "The reconstruction preserves the properties of the dynamical system that do not change under smooth"
+    },
+    {
+     "file": "excerpts/wikipedia-takens-theorem.txt",
+     "quote": "but it does not preserve the [[geometric shape]] of structures in [[phase space]]."
+    },
+    {
+     "file": "excerpts/wikipedia-takens-theorem.txt",
+     "quote": "reconstruction is possible once you reach dimension <math>2d+1</math>"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
    "tier": "receipted"
   },
   {

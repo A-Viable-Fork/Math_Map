@@ -104,7 +104,7 @@ function operands(text) {
   return out.map((s) => s.trim()).filter((s) => /[A-Za-z]{3,}/.test(s));
 }
 
-const PARAM = /^(?:(?:window |step |filtration |twist |scale )?(?:length|size|parameters?|values?|thresholds?|tolerance|index|indices|order|degree|rank|level|grid|bounds?|weights?|depth|width|radius|time|budget|seed|requirements?)\b|(?:an? |the )?(?:integer|number|positive integer|natural number) [a-z]\b)/i;
+const PARAM = /^(?:(?:window |step |filtration |twist |scale )?(?:length|size|parameters?|values?|thresholds?|tolerance|index|indices|order|degree|rank|level|grid|bounds?|weights?|depth|width|radius|time(?! series)|budget|seed|requirements?|(?:sample )?spacing|delay|bandlimit|(?:embedding )?dimension)\b|(?:an? |the )?(?:integer|number|positive integer|natural number) [a-z]\b)/i;
 
 // The head phrase ends at the first symbol or linking word; in English its kind is its last noun
 // ("group ring" is a ring, "matrix representation" a representation), so the latest-ending match wins.

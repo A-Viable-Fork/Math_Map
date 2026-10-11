@@ -251,10 +251,12 @@
 | `excerpts/wikipedia-nash-equilibrium.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-resolution-of-singularities.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-robust-pca.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-rotation-matrix.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-takens-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-transition-state-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-wiener-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `generation/2026-10-11-gen-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
@@ -360,7 +362,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/wikipedia-inverse-gaussian.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-littlewood-paley.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-maskin-monotonicity.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-nyquist-shannon-sampling.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-random-walk.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-takens-theorem.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-transition-state-theory.txt` |
 | `mapfill/additions.js` | names | `mapfill/README.md` |
 | `mapfill/additions.js` | names | `scripts/mathmap.mjs` |
