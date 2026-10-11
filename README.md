@@ -17,6 +17,8 @@ Every entry states where its content comes from:
 
 Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed), **generated** (a design contract from a graded generation round, `mapfill/generated.js`, not reviewed field by field; its claims start unchecked). Counts: landed 1338, audited 116, authored 494, receipted 17, generated 27.
 
+**Android bindings** (`mapfill/android.js`): 51 bindings of the D9 entries to Android APIs at AOSP `android-16.0.0_r4` (build BP4A.251205.006, the base of LineageOS 23.2), each grading the platform primitive and the whole contract separately (enforced, monitored, unknown, not observable), over 81 hashed source files. Generated in the MM-DR-002 round and graded there; none is a device test.
+
 Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`). 9 entries have conditions so far.
 
 ## Named invariants and composition

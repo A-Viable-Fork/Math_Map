@@ -172,6 +172,21 @@ export function check(P = parse()) {
   // Generated entries: well-formed, traceable to a landed round, and typed only in the vocabulary.
   const rounds = Object.fromEntries(P.rounds.map((r) => [r.id, r])), gids = new Set();
   const vocIds = new Set(P.vocabulary.INVARIANTS.map((v) => v.id));
+  // The Android binding layer (mapfill/android.js): pinned, hashed, and typed only in the vocabulary.
+  const A = require("../mapfill/android.js"), ASSURANCE = ["enforced", "monitored", "unknown", "not observable"];
+  const apaths = new Set();
+  if (!/^android-[\d.]+_r\d+$/.test(A.PIN.tag) || !A.PIN.buildId) F.push(`android: the pin needs an AOSP tag and build id`);
+  for (const x of A.SOURCES) { if (apaths.has(x.path)) F.push(`android source ${x.path}: listed twice`); apaths.add(x.path); if (!/^[0-9a-f]{64}$/.test(x.sha256)) F.push(`android source ${x.path}: sha256 malformed`); }
+  for (const b of A.BINDINGS) {
+    const at = `android ${b.entry} ${b.api || "(no realization)"}`;
+    if (!P.generated.some((g) => g.id === b.entry)) F.push(`${at}: no such D9 entry`);
+    for (const k of ["platformAssurance", "contractAssurance"]) if (!ASSURANCE.includes(b[k])) F.push(`${at}: ${k} must be one of ${ASSURANCE.join(", ")}`);
+    for (const v of Object.values(b.invariantAssurance || {})) if (!ASSURANCE.includes(v)) F.push(`${at}: invariant assurance ${v} is not a level`);
+    if (b.api === null) { if (b.path !== null || b.platformAssurance !== "not observable" || !b.note) F.push(`${at}: a binding with no realization needs no path, "not observable" and a note`); }
+    else if (!b.path) F.push(`${at}: needs a path`);
+    for (const x of b.sources || []) if (!apaths.has(x)) F.push(`${at}: source ${x} is not a hashed source`);
+    for (const v of [...Object.keys(b.invariantAssurance || {}), ...(b.breaks || []), ...(b.unestablished || [])]) if (!vocIds.has(v)) F.push(`${at}: unknown invariant ${v}`);
+  }
   for (const g of P.generated) {
     const at = `generated ${g.id}`;
     if (!/^D\d+-X\d{2}$/.test(g.id)) F.push(`${at}: id must be D<n>-X<nn>`);

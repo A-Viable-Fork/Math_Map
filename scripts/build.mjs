@@ -33,6 +33,7 @@ export function build() {
   const leanSrc = readdirSync(join(ROOT, "lean/MathMap")).filter((f) => f.endsWith(".lean")).map((f) => [`lean/MathMap/${f}`, readFileSync(join(ROOT, "lean/MathMap", f), "utf8")]);
   const leanFile = (decl) => { const short = decl.split(".").pop(); return leanSrc.find(([, t]) => new RegExp(`^(theorem|def|structure|abbrev)\\s+(\\S+\\.)?${short.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "m").test(t))?.[0] ?? null; };
   const commit = (() => { try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
+  const ANDROID = require("../mapfill/android.js");
   const entries = P.entries.map((e) => {
     const o = { id: e.id, domain: e.domain, name: e.name, kind: e.kind, tags: e.tags, description: e.description,
       input: e.input, output: e.output, preserved: e.preserved, broken: e.broken, complexity: e.complexity || null,
@@ -45,6 +46,8 @@ export function build() {
     if (e.invariants) o.invariants = e.invariants;
     if (e.actsOn) o.actsOn = e.actsOn;
     if (e.facets?.length > 1) o.facets = e.facets;
+    const ab = ANDROID.BINDINGS.filter((b) => b.entry === e.id);
+    if (ab.length) o.android = { tag: ANDROID.PIN.tag, bindings: ab.map((b) => ({ api: b.api, path: b.path, platformAssurance: b.platformAssurance, contractAssurance: b.contractAssurance, breaks: b.breaks, note: b.note })) };
     o.evidence = Object.fromEntries(FIELDS6.map((f) => [f, E.field(e, f).level]));
     if (e.invariants) o.claims = ["preserved", "broken", "output"].flatMap((f) => e.invariants[f].map((v) => ({ field: f, invariant: v, ...E.claim(e, f, v) })));
     if (e.corrected) o.corrected = { fields: e.corrected, landed: e.landedFields, reason: e.correction.reason, receipts: e.correction.receipts };
@@ -108,6 +111,7 @@ export function build() {
     "- **added**: an entry the landed map lacked. Every weight-bearing claim is receipted by a verbatim quote in `excerpts/`.", "",
     "## Trust tiers", "",
     `Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed), **generated** (a design contract from a graded generation round, \`mapfill/generated.js\`, not reviewed field by field; its claims start unchecked). Counts: ${Object.entries(map.counts.byTier).map(([k, v]) => `${k} ${v}`).join(", ")}.`, "",
+    `**Android bindings** (\`mapfill/android.js\`): ${require("../mapfill/android.js").BINDINGS.length} bindings of the D9 entries to Android APIs at AOSP \`${require("../mapfill/android.js").PIN.tag}\` (build ${require("../mapfill/android.js").PIN.buildId}, the base of LineageOS 23.2), each grading the platform primitive and the whole contract separately (enforced, monitored, unknown, not observable), over ${require("../mapfill/android.js").SOURCES.length} hashed source files. Generated in the MM-DR-002 round and graded there; none is a device test.`, "",
     `Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (\`mapfill/conditions.js\`). ${map.counts.withConditions} entries have conditions so far.`, "",
     "## Named invariants and composition", "",
     `Free-text fields say what an entry preserves and breaks; \`mapfill/invariants.js\` names those invariants (${P.vocabulary.INVARIANTS.length} so far, with the relations between them), gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. \`node scripts/compose.mjs --chain D2-118,D2-117\` then reports, for a chain of entries applied in order, whether each join fits (match, narrowing, partial: an input the previous step does not supply, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. A step's input kinds are joint operands, and an implication between invariants carries claims only when it relates preservation itself. Silence means the map does not say, not that the invariant is lost. The vocabulary grows by use: it covers ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries now.`, "",

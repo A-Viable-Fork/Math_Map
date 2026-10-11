@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "48035d53912b626853733a4ad0f91b239ec357cd"
+  "commit": "55b423d703cada374c8a737bf1b444d630543f61"
  },
  "domains": {
   "D1": {
@@ -57911,6 +57911,80 @@
      "data-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "sendto(int, const void*, size_t, int, const struct sockaddr*, socklen_t)",
+      "path": "bionic/libc/SYSCALLS.TXT",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "note": "Bionic exposes the syscall; kernel and UID network rules govern access, not byte ancestry. No OP_INTERNET. Kernel/device implementation is separately pinned; failures can follow partial/earlier delivery and do not undo trace events."
+     },
+     {
+      "api": "java.net.DatagramSocket#send(java.net.DatagramPacket)",
+      "path": "libcore/ojluni/src/main/java/java/net/DatagramSocket.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "note": "Java network API is governed by the same UID/network permissions as native sockets. It adds neither complete payload labels nor an authenticated atomic effect log."
+     },
+     {
+      "api": "android.os.IBinder#transact(int, android.os.Parcel, android.os.Parcel, int)",
+      "path": "frameworks/base/core/java/android/os/IBinder.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-noegress",
+       "e9-ini"
+      ],
+      "note": "SELinux/Binder supplies immediate transport identity and object transfer. Target service supplies its own permission checks. Parcel bytes and Binder handles do not carry a complete derivation DAG; receivers can forward under their own UID."
+     },
+     {
+      "api": "android.content.Context#sendBroadcast(android.content.Intent, java.lang.String)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-ini"
+      ],
+      "note": "A broadcast may copy data into several apps. Android validates delivery eligibility and permission filters; it does not enforce a W-origin no-egress policy on receivers."
+     },
+     {
+      "api": "android.content.ClipboardManager#setPrimaryClip(android.content.ClipData)",
+      "path": "frameworks/base/core/java/android/content/ClipboardManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-ini"
+      ],
+      "note": "OP_WRITE_CLIPBOARD and service policy govern the write. ClipboardService retains writer UID/package metadata, not the history of the text. URI items can introduce a later provider read. Setter does not identify all future recipients."
+     },
+     {
+      "api": "android.content.ContentResolver#call(android.net.Uri, java.lang.String, java.lang.String, android.os.Bundle)",
+      "path": "frameworks/base/core/java/android/content/ContentResolver.java",
+      "platformAssurance": "unknown",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-auth"
+      ],
+      "note": "Provider custom call authorization is a provider obligation. Treat the method effect profile as unknown until its implementation is audited; permission re-delegation can make the provider the apparent actor."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58059,6 +58133,58 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.content.Context#openFileOutput(java.lang.String, int)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase",
+       "e9-audit"
+      ],
+      "note": "Private placement is enforceable against ordinary apps; content labels, backup inventory and atomic effect-plus-log are absent. A local file does not prove every copy of W data remains local."
+     },
+     {
+      "api": "write(int, const void*, size_t)",
+      "path": "bionic/libc/SYSCALLS.TXT",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-erase"
+      ],
+      "note": "A syscall named write is not intrinsically local storage. Access to the fd was acquired earlier; an inherited/passed fd can bypass a fresh path permission decision. Payload origin and all replicas remain unknown."
+     },
+     {
+      "api": "android.content.ContentResolver#insert(android.net.Uri, android.content.ContentValues)",
+      "path": "frameworks/base/core/java/android/content/ContentResolver.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-erase"
+      ],
+      "note": "ContentProvider transport enforces configured permissions/URI grants/AppOps where applicable; a custom provider decides actual storage and sync. Provider UID attribution does not attest the caller data history."
+     },
+     {
+      "api": "android.content.ContentResolver#openFileDescriptor(android.net.Uri, java.lang.String)",
+      "path": "frameworks/base/core/java/android/content/ContentResolver.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-erase"
+      ],
+      "note": "Opening checks access; later fd I/O is not a new provider transaction. Scoped storage constrains accessible objects, not transitive recipients, sync or permanent erasure."
+     }
     ]
    },
    "evidence": {
@@ -58214,6 +58340,57 @@
      "data-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.hardware.SensorManager#registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int)",
+      "path": "frameworks/base/core/java/android/hardware/SensorManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "SensorService controls admission/rates/UID activity, so zero permission is not zero mediation. Samples identify sensor hardware/type and time, not the compartment whose speech or computation physically caused them. HIGH_SAMPLING_RATE_SENSORS is conditional, not needed for an ordinary <=200 Hz accelerometer stream."
+     },
+     {
+      "api": "ASensorEventQueue_enableSensor(ASensorEventQueue*, ASensor const*)",
+      "path": "frameworks/native/include/android/sensor.h",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "Native access does not escape SensorService admission. It also does not add ingress-origin authentication; event delivery uses a data channel rather than a universal per-reading Binder monitor."
+     },
+     {
+      "api": "android.location.LocationManager#requestLocationUpdates(java.lang.String, long, float, android.location.LocationListener)",
+      "path": "frameworks/base/location/java/android/location/LocationManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "note": "Permission/accuracy and AppOps checks mediate location; provider/sample authenticity and complete origin labels remain different obligations."
+     },
+     {
+      "api": "android.media.AudioRecord#read(byte[], int, int)",
+      "path": "frameworks/base/media/java/android/media/AudioRecord.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "note": "RECORD_AUDIO/OP_RECORD_AUDIO mediate normal microphone capture, unlike an ordinary accelerometer. Captured speech has no authenticated speaker/compartment provenance attached; special privileged capture sources need their own audit."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58347,6 +58524,31 @@
      "capability"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.os.UserManager#createProfile(java.lang.String, java.lang.String, java.util.Set)",
+      "path": "frameworks/base/core/java/android/os/UserManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-tni"
+      ],
+      "note": "System API; UID/user and data-directory separation are structural confinement only. Profiles share hardware, scheduler and authorized cross-profile brokers. Creating a profile does not install the D9 gate or certify noninterference."
+     },
+     {
+      "api": "android.content.Context#bindIsolatedService(android.content.Intent, int, java.lang.String, java.util.concurrent.Executor, android.content.ServiceConnection)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-tni"
+      ],
+      "note": "An isolated UID/process reduces ambient access; it is not a generic language sandbox. Shared devices and explicitly granted Binder/fd capabilities remain channels; labels and per-effect gate forwarding need the adapter."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58455,6 +58657,33 @@
      "execution-trace",
      "agent-program",
      "capability"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.app.PendingIntent#getBroadcast(android.content.Context, int, android.content.Intent, int)",
+      "path": "frameworks/base/core/java/android/app/PendingIntent.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-ini"
+      ],
+      "note": "Creates an authentic system-held token for specified action identity, but not a generic fresh capability generation with explicit expiry and reduced ambient rights. Sending can execute with creator authority; extra bytes and URI grants require independent review."
+     },
+     {
+      "api": "android.app.admin.DevicePolicyManager#setPermissionGrantState(android.content.ComponentName, java.lang.String, java.lang.String, int)",
+      "path": "frameworks/base/core/java/android/app/admin/DevicePolicyManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "note": "Does not issue an application-defined object capability carrying target/version/expiry or atomically record every later use."
+     }
     ]
    },
    "evidence": {
@@ -58587,6 +58816,41 @@
      "data-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.app.PendingIntent#cancel()",
+      "path": "frameworks/base/core/java/android/app/PendingIntent.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "note": "System record sharing is a useful restricted revocation mechanism. No expected-version CAS or authenticated atomic audit is supplied; cancellation is not rollback of past effects."
+     },
+     {
+      "api": "android.content.Context#revokeUriPermission(android.net.Uri, int)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-revoke"
+      ],
+      "note": "Removes applicable URI-grant authorization for future checked opens; it cannot implement revocation of all subsequent effects through an already-returned ordinary fd. No generic generation check at every write."
+     },
+     {
+      "api": "android.content.pm.PackageManager#revokeRuntimePermission(java.lang.String, java.lang.String, android.os.UserHandle)",
+      "path": "frameworks/base/core/java/android/content/pm/PackageManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "note": "Runtime revocation does not recover disclosed data and does not establish the D9 shared-generation/commit/audit protocol for all handles."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -58694,6 +58958,57 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.content.Context#openFileInput(java.lang.String)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-tni"
+      ],
+      "note": "No protected provenance/signature envelope is compulsory. Hashing or parsing an envelope does not authenticate historical dependencies without a trusted writer."
+     },
+     {
+      "api": "read(int, void*, size_t)",
+      "path": "bionic/libc/SYSCALLS.TXT",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "Object access is controlled; input label completeness and a stable version require a trusted adapter. Dataflow inside the process is not observable at this gate."
+     },
+     {
+      "api": "android.content.ContentResolver#query(android.net.Uri, java.lang.String[], java.lang.String, java.lang.String[], java.lang.String)",
+      "path": "frameworks/base/core/java/android/content/ContentResolver.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "ContentProvider read access enforcement is present; provider-specific behavior and data origins remain unaudited until that provider is pinned."
+     },
+     {
+      "api": "android.content.ClipboardManager#getPrimaryClip()",
+      "path": "frameworks/base/core/java/android/content/ClipboardManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "note": "OP_READ_CLIPBOARD, focus/IME exceptions and lock/profile policy mediate reads. An allowed foreground agent may read guest-origin text. Automatic clearing cannot remove copies held by readers."
+     }
     ]
    },
    "evidence": {
@@ -58831,6 +59146,19 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": null,
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "note": "Ordinary Kotlin/Java/native evaluation does not supply purity, totality or dependency-union proofs. Build a restricted interpreter; Thread/Handler is not its replacement."
+     }
     ]
    },
    "evidence": {
@@ -59019,6 +59347,33 @@
      "capability"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.os.SharedMemory#create(java.lang.String, int)",
+      "path": "frameworks/base/core/java/android/os/SharedMemory.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase",
+       "e9-tni"
+      ],
+      "note": "Region creation is concrete, but protected origin labels, allocator budget and fresh approval history are not implied."
+     },
+     {
+      "api": "openat(int, const char*, int, mode_t)",
+      "path": "bionic/libc/SYSCALLS.TXT",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase",
+       "e9-tni"
+      ],
+      "note": "Exclusive file creation is a component primitive. It does not establish fresh protected origin metadata or the resource inventory."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59167,6 +59522,19 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": null,
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "note": "No audited Android API implements historical-origin-preserving IFC declassification. URI grants and sharing export authority/data rather than merely constructing the attached released-label view."
+     }
     ]
    },
    "evidence": {
@@ -59323,6 +59691,19 @@
      "data-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": null,
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "note": "Package signing and Signature.verify are not a scoped integrity-endorsement service; validation must be implemented inside a trusted application gate without rewriting guest ancestry."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59464,6 +59845,21 @@
      "capability"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.os.SharedMemory#setProtect(int)",
+      "path": "frameworks/base/core/java/android/os/SharedMemory.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-tni"
+      ],
+      "note": "Restricted authority reduction for a memory region. It does not reduce all aliases/ambient authority or supply explicit expiry. No E9-ATTEN certificate is emitted; a wrapper must define the input/output pair precisely."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59599,6 +59995,34 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.content.Context#grantUriPermission(java.lang.String, android.net.Uri, int)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-ini"
+      ],
+      "note": "Restricted delegation with Android authorization checks. Recipient can already possess independent/ambient rights; lifetime/version and origin/log protocols are absent."
+     },
+     {
+      "api": "android.os.ParcelFileDescriptor#writeToParcel(android.os.Parcel, int)",
+      "path": "frameworks/base/core/java/android/os/ParcelFileDescriptor.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress"
+      ],
+      "note": "Descriptor transfer is delegation, not automatic attenuation. No general target/version/revocation witness accompanies the fd."
+     }
     ]
    },
    "evidence": {
@@ -59744,6 +60168,23 @@
      "task-handle"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "java.lang.Thread#start()",
+      "path": "libcore/ojluni/src/main/java/java/lang/Thread.java",
+      "platformAssurance": "not observable",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "Thread creation supplies scheduling, not D9 attenuated authority or child trace/origin accounting."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -59887,6 +60328,23 @@
      "data-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "java.lang.Thread#join()",
+      "path": "libcore/ojluni/src/main/java/java/lang/Thread.java",
+      "platformAssurance": "not observable",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "Waiting for termination does not certify confidentiality/integrity or audit completeness. A result channel and protected trace accounting need additional machinery."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -60004,6 +60462,19 @@
      "execution-trace",
      "agent-program",
      "handler"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": null,
+      "path": null,
+      "platformAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "breaks": [],
+      "note": "No audited Android service registration/Looper API supplies lexical algebraic-effect handlers with the attached gate contract. A trusted effect runtime must define and validate forwarding."
+     }
     ]
    },
    "evidence": {
@@ -60161,6 +60632,22 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "javax.crypto.Cipher#doFinal(byte[])",
+      "path": "libcore/ojluni/src/main/java/javax/crypto/Cipher.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-tni",
+       "e9-pni"
+      ],
+      "note": "Key use is mediated by keystore2/KeyMint and key authorization. Ciphertext keeps the same origins in the D9 model, but Android attaches no such labels; encryption does not establish exact E9-PNI or permission to send."
+     }
     ]
    },
    "evidence": {
@@ -60321,6 +60808,24 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "javax.crypto.Cipher#doFinal(byte[])",
+      "path": "libcore/ojluni/src/main/java/javax/crypto/Cipher.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase",
+       "e9-gfree",
+       "e9-ini",
+       "e9-tni"
+      ],
+      "note": "Authorized decryption creates a recoverable plaintext copy. Android does not propagate ciphertext/key-service origins or attest factual integrity beyond the chosen authentication check."
+     }
     ]
    },
    "evidence": {
@@ -60495,6 +61000,22 @@
      "signed-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "java.security.Signature#sign()",
+      "path": "libcore/ojluni/src/main/java/java/security/Signature.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-tni",
+       "e9-audit"
+      ],
+      "note": "Signs accumulated bytes using the initialized provider. It does not know who currently owns a record, enforce replay history, or validate that the approval descriptor authorizes the intended effect."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -60631,6 +61152,19 @@
      "execution-trace",
      "agent-program",
      "verified-signature"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "java.security.Signature#verify(byte[])",
+      "path": "libcore/ojluni/src/main/java/java/security/Signature.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "note": "Conditional verification predicate for exact bound bytes is available. Full effect-free/total verification and protected witness storage are adapter obligations; true is not owner authorization."
+     }
     ]
    },
    "evidence": {
@@ -60784,6 +61318,21 @@
      "signed-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.database.sqlite.SQLiteDatabase#beginTransaction()",
+      "path": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java",
+      "platformAssurance": "unknown",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "note": "SQLite transaction can atomically update local record and log, but is not an authenticated append API. It cannot atomically commit an ordinary external send and a log append; logging afterward fails E9-AUDIT."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -60931,6 +61480,31 @@
      "data-value"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "unlinkat(int, const char*, int)",
+      "path": "bionic/libc/SYSCALLS.TXT",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase"
+      ],
+      "note": "DEAD as a generic realization of the attached inventory-empty postcondition. May be one step in a bounded, independently audited erasure protocol. It cannot repair a violated egress trace."
+     },
+     {
+      "api": "android.content.ContentResolver#delete(android.net.Uri, java.lang.String, java.lang.String[])",
+      "path": "frameworks/base/core/java/android/content/ContentResolver.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-erase"
+      ],
+      "note": "Deletion is access-controlled but does not attest that the complete inventory is empty. Media/cloud variants require separate erasure audit."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -61065,6 +61639,21 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "java.security.SecureRandom#nextBytes(byte[])",
+      "path": "libcore/ojluni/src/main/java/java/security/SecureRandom.java",
+      "platformAssurance": "unknown",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-audit"
+      ],
+      "note": "Android supplies entropy APIs, not the attached protected nonce-registry transition. Replay consumption must happen separately at actual acceptance, including across restarts/rollback assumptions."
+     }
     ]
    },
    "evidence": {
@@ -61207,6 +61796,29 @@
      "policy-ticket"
     ]
    },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.content.PermissionChecker#checkPermissionForDataDelivery(android.content.Context, java.lang.String, int, android.content.AttributionSource, java.lang.String)",
+      "path": "frameworks/base/core/java/android/content/PermissionChecker.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-tni"
+      ],
+      "note": "A useful permission gate component, not a general bound short-lived permit or an atomic full-policy commit. AttributionSource describes asserted/validated access attribution, not every data/PC dependency."
+     },
+     {
+      "api": "android.app.AppOpsManager#noteOpNoThrow(int, int, java.lang.String, java.lang.String, java.lang.String)",
+      "path": "frameworks/base/core/java/android/app/AppOpsManager.java",
+      "platformAssurance": "monitored",
+      "contractAssurance": "unknown",
+      "breaks": [],
+      "note": "Checks/notes an operation and may provide accounting. No complete origin-sensitive gate and no guaranteed append exactly atomic with the external effect."
+     }
+    ]
+   },
    "evidence": {
     "name": "unchecked",
     "description": "unchecked",
@@ -61337,6 +61949,22 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.database.sqlite.SQLiteDatabase#beginTransaction()",
+      "path": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java",
+      "platformAssurance": "unknown",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-sig",
+       "e9-tni"
+      ],
+      "note": "GENERATED adapter construction. SQLite plus Signature provides ingredients but no stock owner-approved merge API. Omitted joint operand invalidates binding; network/different-provider replicas cannot simply join the local atomic commit."
+     }
     ]
    },
    "evidence": {
@@ -61495,6 +62123,34 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "java.util.concurrent.atomic.AtomicReference#compareAndSet(java.lang.Object, java.lang.Object)",
+      "path": "libcore/ojluni/src/main/java/java/util/concurrent/atomic/AtomicReference.java",
+      "platformAssurance": "unknown",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-sig",
+       "e9-audit",
+       "e9-tni"
+      ],
+      "note": "A memory linearization primitive, not the attached guarded resource commit. All metadata would need a protected combined state and exclusive trusted writers; disk/network side effects are not part of the CAS."
+     },
+     {
+      "api": "android.database.sqlite.SQLiteDatabase#execSQL(java.lang.String, java.lang.Object[])",
+      "path": "frameworks/base/core/java/android/database/sqlite/SQLiteDatabase.java",
+      "platformAssurance": "unknown",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-sig",
+       "e9-audit"
+      ],
+      "note": "Versioned database update is a candidate backend. SQL alone provides no root authority predicate and no atomic external-effect/log commit. No E9-AUTH/E9-FRESH preservation is inferred."
+     }
     ]
    },
    "evidence": {
@@ -61656,6 +62312,38 @@
      "execution-trace",
      "agent-program",
      "data-value"
+    ]
+   },
+   "android": {
+    "tag": "android-16.0.0_r4",
+    "bindings": [
+     {
+      "api": "android.app.appfunctions.AppFunctionManager#executeAppFunction(android.app.appfunctions.ExecuteAppFunctionRequest, java.util.concurrent.Executor, android.os.CancellationSignal, android.os.OutcomeReceiver)",
+      "path": "frameworks/base/core/java/android/app/appfunctions/AppFunctionManager.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-gfree",
+       "e9-ini",
+       "e9-audit"
+      ],
+      "note": "Typed dispatch candidate, not automatic Attenuate/Spawn/Join conformance. Target executes with its own authority, and no platform checker compares a declared complete effect profile to behavior or propagates argument origins."
+     },
+     {
+      "api": "android.content.Context#bindService(android.content.Intent, android.content.ServiceConnection, int)",
+      "path": "frameworks/base/core/java/android/content/Context.java",
+      "platformAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "breaks": [
+       "e9-local",
+       "e9-noegress",
+       "e9-gfree",
+       "e9-ini"
+      ],
+      "note": "Binder transport supplies identity and configured service access. It does not automatically attenuate all callee authority, retain child provenance or certify every child effect."
+     }
     ]
    },
    "evidence": {

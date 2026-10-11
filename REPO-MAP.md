@@ -62,6 +62,7 @@
 | `audit/grades-0_1.js` | the audit grades for audit/sample-0_1.json. |
 | `audit/targeted-0_1.js` | targeted receipts. |
 | `mapfill/additions.js` | additions. |
+| `mapfill/android.js` | the Android binding layer. |
 | `mapfill/conditions.js` | conditions and counterexamples. |
 | `mapfill/corrections.js` | receipted corrections. |
 | `mapfill/d7-a.js` | authored fills for the math map's D7 stubs, part A (D7-001 to D7-090): the categorical core. |
@@ -331,6 +332,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/wikipedia-transition-state-theory.txt` |
 | `mapfill/additions.js` | names | `mapfill/README.md` |
 | `mapfill/additions.js` | names | `scripts/mathmap.mjs` |
+| `mapfill/android.js` | names | `generation/2026-10-11-mm-dr-002/grading.md` |
+| `mapfill/android.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/conditions.js` | names | `excerpts/arxiv-2103.12179.txt` |
 | `mapfill/conditions.js` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` |
 | `mapfill/conditions.js` | names | `excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt` |
@@ -456,6 +459,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `README.md` | names | `MANIFEST.json` |
 | `README.md` | names | `map.json` |
 | `README.md` | names | `mapfill/additions.js` |
+| `README.md` | names | `mapfill/android.js` |
 | `README.md` | names | `mapfill/conditions.js` |
 | `README.md` | names | `mapfill/corrections.js` |
 | `README.md` | names | `mapfill/domains.js` |
@@ -527,6 +531,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/blind.mjs` | names | `reports/SECOND-READING.md` |
 | `scripts/build.mjs` | imports | `audit/grades-0_1.js` |
 | `scripts/build.mjs` | imports | `audit/targeted-0_1.js` |
+| `scripts/build.mjs` | imports | `mapfill/android.js` |
 | `scripts/build.mjs` | imports | `mapfill/lean.js` |
 | `scripts/build.mjs` | imports | `scripts/evidence.mjs` |
 | `scripts/build.mjs` | imports | `scripts/lean.mjs` |
@@ -542,6 +547,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | names | `MANIFEST.json` |
 | `scripts/build.mjs` | names | `map.json` |
 | `scripts/build.mjs` | names | `mapfill/additions.js` |
+| `scripts/build.mjs` | names | `mapfill/android.js` |
 | `scripts/build.mjs` | names | `mapfill/conditions.js` |
 | `scripts/build.mjs` | names | `mapfill/corrections.js` |
 | `scripts/build.mjs` | names | `mapfill/domains.js` |
@@ -607,6 +613,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/mathmap.mjs` | imports | `audit/grades-0_1.js` |
 | `scripts/mathmap.mjs` | imports | `audit/targeted-0_1.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/additions.js` |
+| `scripts/mathmap.mjs` | imports | `mapfill/android.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/conditions.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/corrections.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/domains.js` |
@@ -617,6 +624,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/mathmap.mjs` | imports | `mapfill/index.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/invariants.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/additions.js` |
+| `scripts/mathmap.mjs` | names | `mapfill/android.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/conditions.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/corrections.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/d7-a.js` |
