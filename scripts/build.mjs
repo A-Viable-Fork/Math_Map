@@ -43,6 +43,7 @@ export function build() {
     if (e.receipts) o.receipts = e.receipts.map((r) => ({ file: r.file, quote: r.quote }));
     if (e.invariants) o.invariants = e.invariants;
     if (e.actsOn) o.actsOn = e.actsOn;
+    if (e.facets?.length > 1) o.facets = e.facets;
     o.evidence = Object.fromEntries(FIELDS6.map((f) => [f, E.field(e, f).level]));
     if (e.invariants) o.claims = ["preserved", "broken", "output"].flatMap((f) => e.invariants[f].map((v) => ({ field: f, invariant: v, ...E.claim(e, f, v) })));
     if (e.corrected) o.corrected = { fields: e.corrected, landed: e.landedFields, reason: e.correction.reason, receipts: e.correction.receipts };
