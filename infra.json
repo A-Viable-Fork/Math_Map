@@ -1,6 +1,7 @@
 {
   "checks": {
-    "repomap": {}
+    "repomap": {},
+    "instructions": {}
   },
   "local": []
 }

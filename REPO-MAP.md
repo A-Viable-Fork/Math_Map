@@ -12,6 +12,7 @@
 | `.infra` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `.infra/checks` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `.infra/lib` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
+| `.infra/templates` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `.infra/tools` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `audit` | The audit: the fixed random sample, its field-by-field grades, and the targeted grades. |
 | `audit/blind` | The blind second reading of the Mathlib match grades: the packet, the answer key, and each reader's grades. |
@@ -46,12 +47,14 @@
 | `.infra/checks/docgraph.mjs` | the document graph (FUNCTIONS.md F10). |
 | `.infra/checks/freshness.mjs` | generated files stay fresh (FUNCTIONS.md F8). |
 | `.infra/checks/headers.mjs` | self-description (FUNCTIONS.md F9). |
+| `.infra/checks/instructions.mjs` | shared instructions (FUNCTIONS.md F22). |
 | `.infra/checks/kit.mjs` | the kit's own integrity in a consuming repository (FUNCTIONS.md F6). |
 | `.infra/checks/leak.mjs` | the leak check. |
 | `.infra/checks/lean-audit.mjs` | the proof-assistant audit (FUNCTIONS.md F21). |
 | `.infra/checks/provenance.mjs` | keeps landed sources verbatim. |
 | `.infra/checks/receipts.mjs` | receipts (FUNCTIONS.md F5). |
 | `.infra/checks/repomap.mjs` | the repository map stays complete and current (FUNCTIONS.md F9). |
+| `.infra/checks/tokens.mjs` | interface tokens (FUNCTIONS.md F18, UI.md). |
 | `.infra/lib/anchor.mjs` | the kit pin's out-of-tree anchor (FUNCTIONS.md F19). |
 | `.infra/lib/core.mjs` | shared plumbing for every kit check: the consumer's config, its file list, glob matching, hashing. |
 | `.infra/lib/headers.mjs` | reads what a file says about itself. |
@@ -110,7 +113,10 @@
 | File | What it is |
 |---|---|
 | `.github/workflows/check.yml` | CI: runs scripts/check-all.mjs, and builds the Lean project and verifies its audit. |
+| `.infra/CONVENTIONS.md` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `.infra/VERSION` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
+| `.infra/templates/AGENTS.md` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
+| `.infra/templates/generation.md` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `AGENTS.md` | Points agents other than Claude Code to CLAUDE.md and the files it imports. |
 | `CLAUDE.md` | Standing instructions for agents: the checks, the layout, and the rules for origins, receipts, flags, rounds and bindings; imports the kit's shared conventions. |
 | `LICENSE` | CC BY 4.0 for the data, MIT for the scripts. |
@@ -343,6 +349,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 
 | From | Edge | To |
 |---|---|---|
+| `AGENTS.md` | names | `.infra/CONVENTIONS.md` |
 | `AGENTS.md` | names | `CLAUDE.md` |
 | `audit/blind/rulings-0_1.js` | names | `mapfill/formal.js` |
 | `audit/blind/rulings-0_1.js` | names | `reports/SECOND-READING.md` |
@@ -356,6 +363,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `audit/targeted-0_1.js` | names | `reports/FORMAL-QUEUE.md` |
 | `audit/targeted-0_1.js` | names | `scripts/audit.mjs` |
 | `audit/targeted-0_1.js` | names | `scripts/compose.mjs` |
+| `CLAUDE.md` | names | `.infra/CONVENTIONS.md` |
 | `CLAUDE.md` | names | `.infra/run.mjs` |
 | `CLAUDE.md` | names | `.infra/tools/repo-map.mjs` |
 | `CLAUDE.md` | names | `audit.json` |
