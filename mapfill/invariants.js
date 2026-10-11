@@ -60,6 +60,9 @@ const CARRIERS = {
   "policy-ticket": null,
   "handler": null,
   "compartment": null,
+  // Research_OS blueprint round (generation/2026-10-11-ro-bp-001): a journal is the trace of a journal-native system,
+  // so the trace invariants apply to it.
+  "journal": "execution-trace",
 };
 
 const I = (id, name, kind, carrier, definition, cls) => ({ id, name, kind, carrier, definition, class: cls || (carrier === "operation" ? "step" : "state") });
@@ -121,6 +124,8 @@ const INVARIANTS = [
   I("e9-ini", "Guest-input noninterference for trusted decisions", "integrity noninterference", "agent-program", "In the declared deterministic model, any two terminating runs agreeing on initial trusted inputs and differing only in guest/untrusted input have equal trusted action-decision observations. There is no endorsement exception unless a different policy is explicitly supplied. This states absence of influence, not just absence of guest bytes in code.", "relational"),
   I("e9-tni", "Confidentiality for timed and resource observations", "confidentiality noninterference", "agent-program", "For the same deterministic low-equivalence used by E9-CNI and an observation that includes its ordinary low outputs plus declared times, resource events and termination behavior, corresponding executions have identical full observer traces. The time/resource semantics and scheduler are explicitly part of the model.", "relational"),
   I("e9-ebnd", "Sound static effect upper bound", "static-to-step soundness relation", "operation", "For this instantiated expression, environment and handler semantics, every emitted modeled effect belongs to its certified effect upper bound epsilon. Hidden foreign effects, handler-introduced effects and all branch alternatives are included. An annotation without a conformance proof is not this predicate.", "step"),
+  I("e9-appendonly", "Append-only journal", "history preservation", "journal", "Every earlier state of the journal is a subset of every later one: entries are added and never removed, and each entry keeps the bytes first written.", "trace"),
+  I("e9-converge", "Convergence of replicas", "replica consistency", "journal", "Two replicas that have received the same entries, in any order and with any repetition, hold equal journals.", "relational"),
   I("e9-pni", "Probabilistic noninterference of joint observations", "probabilistic confidentiality", "agent-program", "For fixed low inputs, declared scheduler/adversary class, probability model and any two secret inputs, the distributions of the complete joint low observation history are identical. Equality of the distribution of each release separately is insufficient. This is exact probabilistic secrecy, not computational indistinguishability.", "hyperproperty"),
 ];
 

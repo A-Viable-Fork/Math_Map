@@ -18,8 +18,8 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 161 | 0 [0] | 161 [146] | 161 [146] |
 | D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 470 | 1 [416] | 470 [0] | 469 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 236 | 1 [0] | 236 [77] | 235 [77] |
-| D9 | SYSTEMS AND EFFECTS | 27 | 0 [0] | 27 [0] | 27 [0] |
-| **all** | | **1992** | **2** [416] | **1992** [1118] | **1990** [1118] |
+| D9 | SYSTEMS AND EFFECTS | 29 | 0 [0] | 29 [0] | 29 [0] |
+| **all** | | **1994** | **2** [416] | **1994** [1118] | **1992** [1118] |
 
 ## 2. The fill layer
 
@@ -54,7 +54,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Additions: 11** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin).
 
-- **Invariant vocabulary** (`mapfill/invariants.js`): 50 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+- **Invariant vocabulary** (`mapfill/invariants.js`): 52 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
 - **Mathlib links: 105** on 58 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
 
@@ -108,7 +108,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 ## 4. Operation kinds
 
-- Transformer: 1641
+- Transformer: 1643
 - Constructor: 284
 - Correspondence: 67
 
@@ -118,7 +118,7 @@ Findings for the map; the landed text is not repaired here.
 
 - **Name-only stubs after the fill layer: 2** (landed: 416).
 - **Entries without preserved or broken invariants: 0** (landed: 836).
-- **Off-vocabulary tags: 28.** egress, storage, ingress, isolation, authority, information-flow, concurrency, dispatch, cryptography, audit, erasure, freshness, transaction
+- **Off-vocabulary tags: 33.** egress, storage, ingress, isolation, authority, information-flow, concurrency, dispatch, cryptography, audit, erasure, freshness, transaction
 - **Entries outside the 2 to 4 tag rule: 1556.** Tags are the map's own and are not refilled here.
 - **Vocabulary count:** the map declares "14 primary + 6 effect + 3 bridge + 6 modifier = 29"; its tables list 28 tags (the modifier table has one fewer row than declared).
 

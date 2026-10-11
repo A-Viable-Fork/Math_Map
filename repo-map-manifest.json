@@ -21,7 +21,8 @@
     "scripts": "The parser, query tool, checks, build and tool server. Node, no dependencies.",
     "source": "The map as landed, verbatim, and the report its D7 names come from.",
     "docs": "Notes about the map that are neither data nor generated.",
-    "docs/inbound": "Dated proposals from other repositories and sessions, to verify and then fold in or decline."
+    "docs/inbound": "Dated proposals from other repositories and sessions, to verify and then fold in or decline.",
+    "generation/2026-10-11-ro-bp-001": "The RO-BP-001 round: two D9 operations for journal-native systems, written for the Research_OS blueprint, graded and ruled."
   },
   "docs": {
     ".github/workflows/check.yml": "CI: runs scripts/check-all.mjs, and builds the Lean project and verifies its audit.",

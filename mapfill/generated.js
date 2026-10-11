@@ -13,7 +13,10 @@
 
 // The round each entry came from, and the landed file its text was taken from.
 const ROUNDS = [{ id: "MM-DR-001", dir: "generation/2026-10-11-mm-dr-001", file: "package-chatgpt.zip (d9-entries.json)",
-  sha256: "3ba3a811de1d3c94089bc4f6b9644b70652d0874ad9dfe42413ace8a57cc6145", grading: "generation/2026-10-11-mm-dr-001/grading.md" }];
+  sha256: "3ba3a811de1d3c94089bc4f6b9644b70652d0874ad9dfe42413ace8a57cc6145", grading: "generation/2026-10-11-mm-dr-001/grading.md" },
+  // Authored in this repository's session for the Research_OS blueprint, not landed from an outside generator.
+  { id: "RO-BP-001", dir: "generation/2026-10-11-ro-bp-001", file: "record.md",
+    sha256: "619e11e80e87d906f4faece6fdd7a43b05b749dfa254dfd8d7436890e4b51c9b", grading: "generation/2026-10-11-ro-bp-001/grading.md" }];
 
 const GENERATED = [
   { id: "D9-X01", name: "Send", kind: "Transformer", tags: ["egress"], generatorTags: ["communication","egress"],
@@ -286,6 +289,28 @@ const GENERATED = [
     invariants: {"preserved":["e9-prov","e9-orig","e9-revoke","e9-fresh"],"broken":["e9-local","e9-noegress","e9-gfree","e9-cni","e9-ini","e9-tni","e9-pni","e9-audit"],"output":["e9-atten"]},
     actsOn: {"input":["system-state","execution-trace","agent-program","data-value","capability"],"output":["system-state","execution-trace","agent-program","data-value"]},
     generatorVerdict: "MARGINAL", obstacle: "Component callbacks, inherited ambient authority and interleaving must be modeled; a dispatch name is not an effect summary." },
-].map((e) => ({ ...e, round: "MM-DR-001" }));
+].map((e) => ({ ...e, round: "MM-DR-001" })).concat([
+  { id: "D9-X28", name: "Append a self-recording signed entry", kind: "Transformer", tags: ["audit", "cryptography", "storage"], generatorTags: [],
+    description: "Sign an entry whose content is the effect itself, together with its fresh nonce, and append it to the journal in one step; the entry is the record of its own effect. D9-X21 with one parameter fixed: nothing is committed outside the entry.",
+    input: "State/trace/context, the journal and its expected head, the entry's content (a ruling, a proposal, a result), a fresh nonce, and a signing-key handle. No effect is committed anywhere but in the appended entry.",
+    output: "Updated state/trace and the journal with one new signed entry chained to the previous head, or a conflict with nothing committed.",
+    preserved: "Authored conditional preservation: E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-MEDIATED, E9-APPENDONLY. The nonce is inside the signed entry, so a replay repeats an entry already present.",
+    broken: "Authored conservative possibility, as for D9-X21: E9-CNI, E9-INI, E9-TNI, E9-PNI.",
+    complexity: "N/A", primitive: false,
+    invariants: { preserved: ["e9-prov", "e9-orig", "e9-local", "e9-noegress", "e9-owner", "e9-auth", "e9-revoke", "e9-fresh", "e9-mediated", "e9-appendonly"], broken: ["e9-cni", "e9-ini", "e9-tni", "e9-pni"], output: ["e9-sig", "e9-audit"] },
+    actsOn: { input: ["system-state", "execution-trace", "journal", "data-value", "key-handle"], output: ["system-state", "execution-trace", "journal", "signed-value"] },
+    generatorVerdict: "PLAUSIBLE", obstacle: "Holds only where the system is journal-native: an effect committed outside the entry returns the case to D9-X21.", round: "RO-BP-001" },
+  { id: "D9-X29", name: "Union of append-only journals", kind: "Transformer", tags: ["storage", "transaction"], generatorTags: [],
+    description: "Merge two journals by taking the union of their entries, keeping every entry's bytes and signature as first written: the merge two replicas perform when they exchange entries.",
+    input: "Two journals, each a set of signed entries. Joint operands: both are needed.",
+    output: "One journal holding every entry of either, each byte-identical to its original.",
+    preserved: "Authored conditional preservation: E9-SIG (every entry keeps its signed bytes), E9-PROV, E9-ORIG, E9-LOCAL, E9-NOEGRESS, E9-OWNER, E9-AUTH, E9-REVOKE, E9-FRESH, E9-AUDIT, E9-MEDIATED, E9-APPENDONLY. The merge accepts nothing: a ruling in a merged entry takes effect only through the gate.",
+    broken: "Authored: none claimed. Transmission is a separate D9-X01 step and carries its own breaks.",
+    complexity: "Linear in the entries exchanged",
+    primitive: true,
+    invariants: { preserved: ["e9-sig", "e9-prov", "e9-orig", "e9-local", "e9-noegress", "e9-owner", "e9-auth", "e9-revoke", "e9-fresh", "e9-audit", "e9-mediated", "e9-appendonly"], broken: [], output: ["e9-converge"] },
+    actsOn: { input: ["journal"], output: ["journal"] },
+    generatorVerdict: "PLAUSIBLE", obstacle: "Convergence is proved for the set-union model; an implementation must store entries so that equal entries are one entry.", round: "RO-BP-001" },
+]);
 
 module.exports = { ROUNDS, GENERATED };

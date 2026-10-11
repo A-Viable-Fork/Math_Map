@@ -22,3 +22,7 @@ A proposal, not a change: verify, then fold in or decline, and say which. Found 
 ## Correction to a commit message
 
 Math_Map commit `cbc2a69` says 43 kinds were adopted; the count in `mapfill/invariants.js` is 40.
+
+## Decision, 2026-10-11
+
+Folded in, as ruled [ruling: operator, 2026-10-11], with one change. Proposal 1 is not a new primitive: D9-X21 already signs and appends atomically, and withholds e9-audit only for an effect committed elsewhere. It lands as D9-X28, D9-X21 with that parameter fixed. Proposal 2 lands as D9-X29. Both are in `mapfill/generated.js` under round RO-BP-001 (`generation/2026-10-11-ro-bp-001/`), with the carrier journal and the invariants e9-appendonly and e9-converge in `mapfill/invariants.js`. Convergence is proved in A-Viable-Fork/Research_OS `lean/ResearchOS/Journal.lean` (`ResearchOS.converge`, standard axioms only).

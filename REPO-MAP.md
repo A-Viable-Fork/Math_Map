@@ -25,6 +25,7 @@
 | `generation/2026-10-11-mm-dr-001` | The MM-DR-001 round: D9 operations and effect invariants from three generators, graded. |
 | `generation/2026-10-11-mm-dr-002` | The MM-DR-002 round: D9 bound to Android at android-16.0.0_r4 by three generators, graded against the tagged source. |
 | `generation/2026-10-11-mm-dr-003` | The MM-DR-003 round: prior art for D9 and its Android binding from two generators, graded against the cited repositories. |
+| `generation/2026-10-11-ro-bp-001` | The RO-BP-001 round: two D9 operations for journal-native systems, written for the Research_OS blueprint, graded and ruled. |
 | `lean` | A Lean 4 project on the pinned Mathlib that states and proves claims Mathlib does not cover. |
 | `lean/MathMap` | The Lean sources, one file per topic, each naming the entries it bears on. |
 | `mapfill` | The fill layer the parser applies over the landed map: clone resolution, fills, additions, conditions, corrections, invariants and formal links. |
@@ -268,6 +269,8 @@
 | `generation/2026-10-11-mm-dr-003/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/trial-guardians.md` | A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned. |
+| `generation/2026-10-11-ro-bp-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
+| `generation/2026-10-11-ro-bp-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `infra.json` | Configuration of the vendored Repo-Infrastructure kit: which checks run. |
 | `infra.lock.json` | Pins the vendored kit in .infra/: upstream commit and the hash of every file. |
 | `lean/.gitignore` | Keeps Lake's build directory out of git. |
@@ -409,6 +412,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/formal.js` | names | `mapfill/invariants.js` |
 | `mapfill/formal.js` | names | `scripts/formal.mjs` |
 | `mapfill/generated.js` | names | `generation/2026-10-11-mm-dr-001/grading.md` |
+| `mapfill/generated.js` | names | `generation/2026-10-11-ro-bp-001/grading.md` |
 | `mapfill/generated.js` | names | `mapfill/domains.js` |
 | `mapfill/generated.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/homes.js` | imports | `mapfill/fill.js` |
