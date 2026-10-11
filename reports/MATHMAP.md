@@ -18,8 +18,8 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 163 | 0 [0] | 163 [146] | 163 [146] |
 | D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 472 | 1 [416] | 472 [0] | 471 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 238 | 1 [0] | 238 [77] | 236 [77] |
-| D9 | SYSTEMS AND EFFECTS | 29 | 0 [0] | 29 [0] | 29 [0] |
-| **all** | | **2003** | **2** [416] | **2003** [1118] | **2000** [1118] |
+| D9 | SYSTEMS AND EFFECTS | 39 | 0 [0] | 39 [0] | 39 [0] |
+| **all** | | **2013** | **2** [416] | **2013** [1118] | **2010** [1118] |
 
 ## 2. The fill layer
 
@@ -54,7 +54,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Additions: 20** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph; D7-X07 Priority-filtered merge of definitions.
 
-- **Invariant vocabulary** (`mapfill/invariants.js`): 52 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
+- **Invariant vocabulary** (`mapfill/invariants.js`): 56 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
 - **Mathlib links: 105** on 58 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
 
@@ -79,7 +79,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | Tag | Entries |
 |---|---|
 | `surgery` | 235 |
-| `composition` | 69 |
+| `composition` | 70 |
 | `decomposition` | 161 |
 | `compression` | 91 |
 | `completion` | 31 |
@@ -90,7 +90,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `involution` | 25 |
 | `projection` | 104 |
 | `embedding` | 17 |
-| `closure` | 12 |
+| `closure` | 13 |
 | `duality` | 31 |
 | `densification` | 3 |
 | `sparsification` | 2 |
@@ -109,7 +109,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 ## 4. Operation kinds
 
-- Transformer: 1650
+- Transformer: 1660
 - Constructor: 285
 - Correspondence: 68
 
@@ -119,7 +119,7 @@ Findings for the map; the landed text is not repaired here.
 
 - **Name-only stubs after the fill layer: 2** (landed: 416).
 - **Entries without preserved or broken invariants: 0** (landed: 836).
-- **Off-vocabulary tags: 33.** egress, storage, ingress, isolation, authority, information-flow, concurrency, dispatch, cryptography, audit, erasure, freshness, transaction
+- **Off-vocabulary tags: 55.** egress, storage, ingress, isolation, authority, information-flow, concurrency, dispatch, cryptography, audit, erasure, freshness, transaction
 - **Entries outside the 2 to 4 tag rule: 1556.** Tags are the map's own and are not refilled here.
 - **Vocabulary count:** the map declares "14 primary + 6 effect + 3 bridge + 6 modifier = 29"; its tables list 28 tags (the modifier table has one fewer row than declared).
 

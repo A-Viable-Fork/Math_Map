@@ -27,6 +27,7 @@
 | `generation/2026-10-11-mm-dr-002` | The MM-DR-002 round: D9 bound to Android at android-16.0.0_r4 by three generators, graded against the tagged source. |
 | `generation/2026-10-11-mm-dr-003` | The MM-DR-003 round: prior art for D9 and its Android binding from two generators, graded against the cited repositories. |
 | `generation/2026-10-11-mm-dr-004` | The MM-DR-004 round: D9 bound to NixOS at nixpkgs 7c8764b, and the desktop vocabulary measurement, graded against the pinned source. |
+| `generation/2026-10-11-mm-dr-004/part-b` | The three graders' claim tables for Part B, every fact cited by path and line at the pins; model output, sampled and re-read in grading-part-b.md. |
 | `generation/2026-10-11-ro-bp-001` | The RO-BP-001 round: two D9 operations for journal-native systems, written for the Research_OS blueprint, graded and ruled. |
 | `lean` | A Lean 4 project on the pinned Mathlib that states and proves claims Mathlib does not cover. |
 | `lean/MathMap` | The Lean sources, one file per topic, each naming the entries it bears on. |
@@ -284,9 +285,13 @@
 | `generation/2026-10-11-mm-dr-003/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-003/trial-guardians.md` | A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned. |
+| `generation/2026-10-11-mm-dr-004/grading-part-b.md` | The line-by-line grading of Part B, the Nix operations: claim counts, sampled citations re-read, what changed, the four invariants, and a held finding about Nix. |
 | `generation/2026-10-11-mm-dr-004/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-11-mm-dr-004/package-chatgpt.zip` | A generator's companion package, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-004/package-kimi.zip` | A generator's companion package, landed verbatim; its hash is in the round's record. |
+| `generation/2026-10-11-mm-dr-004/part-b/grading-c01-c03.md` | Claims of D9-NIX-C01 to C03 (realize, fetch, pure evaluation), graded, with corrected entries. |
+| `generation/2026-10-11-mm-dr-004/part-b/grading-c04-c06.md` | Claims of D9-NIX-C04 to C06 (impure evaluation, flake pin, overlay), graded, with corrected entries. |
+| `generation/2026-10-11-mm-dr-004/part-b/grading-c07-c09.md` | Claims of D9-NIX-C07 to C09 (switch, rollback, garbage collection), graded, with corrected entries and the split into C10. |
 | `generation/2026-10-11-mm-dr-004/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `generation/2026-10-11-mm-dr-004/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-004/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
@@ -443,6 +448,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/formal.js` | names | `mapfill/invariants.js` |
 | `mapfill/formal.js` | names | `scripts/formal.mjs` |
 | `mapfill/generated.js` | names | `generation/2026-10-11-mm-dr-001/grading.md` |
+| `mapfill/generated.js` | names | `generation/2026-10-11-mm-dr-004/grading-part-b.md` |
+| `mapfill/generated.js` | names | `generation/2026-10-11-mm-dr-004/grading.md` |
 | `mapfill/generated.js` | names | `generation/2026-10-11-ro-bp-001/grading.md` |
 | `mapfill/generated.js` | names | `mapfill/domains.js` |
 | `mapfill/generated.js` | names | `scripts/mathmap.mjs` |
