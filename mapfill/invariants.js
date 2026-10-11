@@ -1,6 +1,6 @@
 // Role: the invariant vocabulary. Names the invariants that entries preserve or break, so a chain of entries
 //   can be checked for what survives it by machine rather than by reading free text.
-// Contract: exports CARRIERS, INVARIANTS, RELATIONS, ACTS_ON and LINKS.
+// Contract: exports CARRIERS, INVARIANTS, RELATIONS, ACTS_ON, LINKS and CONTEXT.
 //   CARRIERS = { kind: parent|null }: the kinds of object an invariant can belong to (a curve is a variety).
 //   INVARIANTS = [{ id, name, kind, carrier, definition, class }]: carrier is the kind of object that has it;
 //     "operation" means a property of the step itself (linearity), which every step can have or lack.
@@ -21,6 +21,12 @@
 //     (the step produces the invariant, as a blow-up produces an exceptional divisor). A link is justified
 //     either by a phrase in the entry's own field, or, where the entry is silent, by receipts (quotes in
 //     excerpts/) with a note saying how they bear on the entry.
+//   CONTEXT = [{ entry, raises?, clears?, forbids?, basis }]: context labels, for control flow. A step that
+//     raises a label (it reads data from compartment W, say) marks everything after it in the chain, since
+//     later steps may depend on that data through control flow as well as through values; the mark persists
+//     until a step clears it (an explicit declassification). A step that forbids a label (an egress that W
+//     must not reach) is a stated violation when the label is present on entry to it. basis says why.
+//     Empty while the map has no systems domain; the mechanism is tested on synthetic chains.
 //   Checked by scripts/mathmap.mjs; used by scripts/compose.mjs.
 // Invariant: data only. The vocabulary is seeded from the fields that composites use and grows by use.
 "use strict";
@@ -146,4 +152,6 @@ const LINKS = [
     receipts: [{ file: "excerpts/arxiv-2103.12179.txt", quote: "[0,∞), using the harmonic function h(x) =x." }, { file: "excerpts/wikipedia-bessel-process.txt", quote: "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}" }] },
 ];
 
-module.exports = { CARRIERS, INVARIANTS, RELATIONS, ACTS_ON, LINKS };
+const CONTEXT = [];
+
+module.exports = { CARRIERS, INVARIANTS, RELATIONS, ACTS_ON, LINKS, CONTEXT };

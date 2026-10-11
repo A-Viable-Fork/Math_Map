@@ -28,6 +28,10 @@
 //   a policy: each required invariant gets one of four verdicts, "holds under the map's claims",
 //   "violation stated", "unknown" or "whole-chain check required", and the chain gets the worst of them.
 //   These grade what the map says; none is a proof about an implementation.
+//   Context labels (CONTEXT in mapfill/invariants.js) are carried along the chain: a label raised at a
+//   step stays on every later step until a step clears it, and a step that forbids a label present on
+//   entry is a context violation. Under a policy, any context violation makes the chain's verdict
+//   "violation stated".
 // Invariant: read-only. The answer is only as good as the entries' fields and links: "unknown" means the
 //   map does not say, not that the invariant is lost. `--selftest` checks these rules on synthetic chains.
 import { fileURLToPath } from "node:url";
@@ -123,10 +127,21 @@ export function compose(chain, P = parse(), opts = {}) {
       return { invariant: v, name: names[v] || v, verdict: wide(v) && !x ? "whole-chain check required" : verdictOf(x), status: x ? x.status : "not mentioned by any step", evidence: x?.evidence || null }; });
     return { required: rows, verdict: rows.reduce((w, r) => (VERDICTS.indexOf(r.verdict) < VERDICTS.indexOf(w) ? r.verdict : w), VERDICTS[3]) };
   })() : null;
+  // Context labels: absorbing until cleared; a forbidden label present on entry to a step is a violation.
+  const ctxOf = Object.fromEntries((P.vocabulary.CONTEXT || []).map((c) => [c.entry, c]));
+  const live = new Map(), contextViolations = [], cleared = [];
+  steps.forEach((st, k) => {
+    const c = ctxOf[st.id]; if (!c) return;
+    for (const l of c.forbids || []) if (live.has(l)) contextViolations.push({ label: l, at: k + 1, by: st.id, raisedAt: live.get(l).at, raisedBy: live.get(l).by });
+    for (const l of c.clears || []) if (live.has(l)) { cleared.push({ label: l, at: k + 1, by: st.id }); live.delete(l); }
+    for (const l of c.raises || []) if (!live.has(l)) live.set(l, { at: k + 1, by: st.id });
+  });
+  const context = { live: [...live.entries()].map(([label, x]) => ({ label, raisedAt: x.at, raisedBy: x.by })), cleared, violations: contextViolations };
+  if (policy && contextViolations.length) policy.verdict = "violation stated";
   const unlinked = steps.filter((s) => !s.preserved.size && !s.broken.size && !s.output.size).map((s) => s.id);
   const asserted = [...result.filter((x) => x.evidence), ...joins.filter((j) => j.evidence)];
   const weakest = asserted.reduce((w, x) => (!w || rank(x.evidence.level) < rank(w.evidence.level) ? x : w), null);
-  return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked, ...(policy ? { policy } : {}),
+  return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked, context, ...(policy ? { policy } : {}),
     evidence: weakest ? { level: weakest.evidence.level, weakest: { ...weakest.evidence.weakest, on: weakest.invariant ? `${weakest.name}, ${weakest.status}` : `join ${weakest.from} to ${weakest.to}` } } : null };
 }
 
@@ -146,6 +161,8 @@ export function describe(r) {
     else L.push(`  unknown: ${x.name} (the map is silent at ${x.silentAt.join(", ")})${na}`);
   }
   if (r.unlinked.length) L.push(`  no invariant links yet for: ${r.unlinked.join(", ")}`);
+  for (const v of r.context?.violations || []) L.push(`  context violation at step ${v.at} (${v.by}): ${v.label}, raised at step ${v.raisedAt} (${v.raisedBy}) and not cleared`);
+  for (const c of r.context?.cleared || []) L.push(`  context cleared at step ${c.at} (${c.by}): ${c.label}`);
   if (r.policy) { L.push(`  policy: ${r.policy.verdict}`); for (const p of r.policy.required) L.push(`    ${p.verdict}: ${p.name} (${p.status})`); }
   if (r.evidence) L.push(`  weakest link: ${r.evidence.level} (${r.evidence.weakest.on}; step ${r.evidence.weakest.step}, ${r.evidence.weakest.id} ${r.evidence.weakest.field})`);
   return L.join("\n");
@@ -182,9 +199,17 @@ function selftest() {
   want("policy: whole chain", pol.required[2].verdict, "whole-chain check required");
   want("policy: unmentioned is unknown", pol.required[3].verdict, "unknown");
   want("policy: chain takes the worst", pol.verdict, "violation stated");
+  const runX = (chain, CONTEXT, req) => compose(chain, { ...P0, entries: chain.map((id) => e(id)),
+    vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: [], LINKS: [], ACTS_ON: [], CONTEXT } }, req ? { require: req } : {});
+  const cx = [{ entry: "r", raises: ["w"], basis: "s" }, { entry: "x", forbids: ["w"], basis: "s" }, { entry: "d", clears: ["w"], basis: "s" }];
+  const v1 = runX(["r", "m", "x"], cx, []);
+  want("context persists through a silent step to a forbidding one", v1.context.violations.length, 1);
+  want("context violation grades the policy", v1.policy.verdict, "violation stated");
+  want("cleared context is not a violation", runX(["r", "d", "x"], cx).context.violations.length, 0);
+  want("forbidding before raising is not a violation", runX(["x", "r"], cx).context.violations.length, 0);
   want("map chain still restores", st(compose(["D2-118", "D2-117"]), "exceptional-divisor"), "restored");
   if (F.length) { console.log(`compose selftest: FAIL\n  ${F.join("\n  ")}`); process.exit(1); }
-  console.log("compose selftest: PASS (18 synthetic chains)");
+  console.log("compose selftest: PASS (22 synthetic chains)");
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

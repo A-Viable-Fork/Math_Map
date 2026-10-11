@@ -244,6 +244,14 @@ export function check(P = parse()) {
     for (const [side, ph] of [["input", a.inputPhrase], ["output", a.outputPhrase]]) for (const x of [ph].flat()) if (!x || !nrm(e[side]).includes(nrm(x))) F.push(`${at}: phrase "${x}" is not in the entry's ${side} field`);
   }
   const used = new Set();
+  for (const c of V.CONTEXT || []) {
+    const at = `context ${c.entry}`;
+    if (!byIdAll[c.entry]) F.push(`${at}: no such entry`);
+    if (!c.basis) F.push(`${at}: needs a basis`);
+    const labels = [...(c.raises || []), ...(c.clears || []), ...(c.forbids || [])];
+    if (!labels.length) F.push(`${at}: raises, clears or forbids nothing`);
+    for (const k of labels) if (!/^[a-z0-9-]+$/.test(k)) F.push(`${at}: label ${k} must be lowercase words joined by hyphens`);
+  }
   for (const l of V.LINKS) {
     const e = byIdAll[l.entry], at = `link ${l.entry}.${l.field} to ${l.invariant}`;
     if (!e) { F.push(`${at}: no such entry`); continue; }
