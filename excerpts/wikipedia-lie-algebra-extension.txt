@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Lie algebra extension (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1347373404
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: e326984c128e81a9933e74f862525af412d298bec5ffe1a22e500937eb542a93
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In this case one has to pass to its central extension, the '''Bargmann group''',<ref>{{harvnb|Bargmann|1954}}</ref> which is the symmetry group of the [[Schrödinger equation]].
+
+If {{math|''ε''}} is a 2-cocycle ([[#Cohomology|background]]) on a Lie algebra {{math|'''g'''}} and {{math|'''h'''}} is any one-dimensional vector space, let {{math|'''e''' {{=}} '''h''' ⊕  '''g'''}} (vector space direct sum) and define a Lie bracket on {{math|'''e'''}} by
+
+Elements of {{math|H<sup>2</sup>('''g''', ''F'')}} are equivalence classes of 2-cocycles
+
+A cohomology class {{math|[''Φ''] ∈ ''H''<sup>2</sup>('''g''', ''F'')}} defines a central extension of {{math|'''g'''}} which is unique up to isomorphism.

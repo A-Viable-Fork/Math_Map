@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Galilean transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379492909
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 2784b9f542f5da80fdd67baa6366398702e5a7405bc3151e6557a255f7cc91e2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The so-called '''Bargmann algebra''' is obtained by imposing <math>[C'_i,P'_j]=i M\delta_{ij}</math>, such that {{math|''M''}} lies in the [[center (algebra)|center]]

@@ -242,6 +242,7 @@
 | `excerpts/wikipedia-first-passage.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-five-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-fraisse-limit.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-galilean-transformation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galois-connection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-gibbard-satterthwaite.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-contraction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -257,6 +258,7 @@
 | `excerpts/wikipedia-kleene-fixed-point-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lebesgue-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lie-algebra-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-lie-algebra-extension.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley-multiplier.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-localization.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -269,6 +271,7 @@
 | `excerpts/wikipedia-nerve-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-resolution-of-singularities.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-robust-pca.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -384,16 +387,19 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/wikipedia-duhamel.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-euler-lagrange-equation.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-first-passage.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-galilean-transformation-bargmann.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-group-contraction.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-infinitesimal-generator.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-inverse-gaussian.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-killing-form.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-kleene-fixed-point-theorem.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-lie-algebra-cohomology.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-lie-algebra-extension.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-littlewood-paley.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-maskin-monotonicity.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-merkle-tree.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-nyquist-shannon-sampling.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-projective-representation-bargmann.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-random-walk.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-takens-theorem.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-topological-sorting.txt` |

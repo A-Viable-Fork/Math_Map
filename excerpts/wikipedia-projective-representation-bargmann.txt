@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Projective representation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1350652513
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: eabc2a60153a982aeae2e19079cd4ce2233c9147a3b3bed89670a6f15123f529
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem states that if the second [[Lie algebra cohomology]] group <math>H^2(\mathfrak g; \mathbb R)</math> of <math>\mathfrak g</math> is trivial, then every projective unitary representation of <math>G</math> can be de-projectivized
