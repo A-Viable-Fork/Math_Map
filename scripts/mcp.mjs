@@ -27,7 +27,7 @@ const TOOLS = [
   { name: "search_entries", description: "Find typed transformations (input, output, preserved and broken invariants). All filters are optional and combine with AND. Returns short records; use get_entry for the full entry.",
     inputSchema: { type: "object", properties: {
       text: str("Case-insensitive substring of name, description, input, output, preserved or broken."),
-      domain: str("D1 to D8; see map_info for names."), tag: { type: "array", items: { type: "string" }, description: "Functional tags; every one must match." },
+      domain: str("Where the entry was minted, D1 to D8; see map_info for names."), facet: str("Any domain the entry belongs to (its own plus listed facets)."), tag: { type: "array", items: { type: "string" }, description: "Functional tags; every one must match." },
       kind: str("Operation kind, e.g. Transformer."), tier: { type: "string", enum: ["flagged", "audited", "receipted", "landed", "authored"] },
       anchorable: { type: "boolean", description: "Only entries with input, output and at least one invariant field." },
       invariant: str("A named invariant id (see list_invariants) the entry preserves, breaks or produces."),
@@ -41,7 +41,7 @@ const TOOLS = [
     inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." }, require: { type: "array", items: { type: "string" }, description: "Invariant ids the chain must keep (a policy); each is graded." } }, required: ["chain"] } },
 ];
 
-const short = (e) => ({ id: e.id, name: e.name, domain: e.domain, kind: e.kind, tier: e.tier, ...(e.auditVerdict ? { auditVerdict: e.auditVerdict } : {}), ...(e.formal ? { mathlib: e.formal.map((k) => `${k.decl} (${k.match})`) } : {}), input: e.input, output: e.output, description: e.description });
+const short = (e) => ({ id: e.id, name: e.name, domain: e.domain, ...(e.facets?.length > 1 ? { facets: e.facets } : {}), kind: e.kind, tier: e.tier, ...(e.auditVerdict ? { auditVerdict: e.auditVerdict } : {}), ...(e.formal ? { mathlib: e.formal.map((k) => `${k.decl} (${k.match})`) } : {}), input: e.input, output: e.output, description: e.description });
 const sub = (k, c, C) => { for (let x = k; x; x = C[x]) if (x === c) return true; return false; };
 
 const HANDLERS = {
@@ -49,6 +49,7 @@ const HANDLERS = {
   search_entries: (a) => {
     let es = MAP.entries;
     if (a.domain) es = es.filter((e) => e.domain === a.domain);
+    if (a.facet) es = es.filter((e) => (e.facets || [e.domain]).includes(a.facet));
     for (const t of a.tag || []) es = es.filter((e) => e.tags.includes(t));
     if (a.kind) es = es.filter((e) => e.kind.toLowerCase() === String(a.kind).toLowerCase());
     if (a.tier) es = es.filter((e) => e.tier === a.tier);

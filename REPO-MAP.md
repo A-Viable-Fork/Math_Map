@@ -69,6 +69,7 @@
 | `mapfill/d7-c.js` | authored fills for the math map's D7 stubs, part C (D7-175 to D7-278): order and lattices, homological algebra, spectral sequences, derived categories. |
 | `mapfill/d7-d.js` | authored fills for the math map's D7 stubs, part D (D7-279 to D7-366): topos theory, categorical logic, higher categories and operads. |
 | `mapfill/d7-e.js` | authored fills for the math map's D7 stubs, part E (D7-367 to D7-416, and D7-465): optics, categorical quantum mechanics, Lie theory. |
+| `mapfill/facets.js` | facets. |
 | `mapfill/fill.js` | the fill record constructor, shared by every mapfill/ part file. |
 | `mapfill/flags.js` | known-bad landed entries. |
 | `mapfill/formal.js` | the formal layer's data. |
@@ -385,6 +386,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/d7-d.js` | names | `mapfill/README.md` |
 | `mapfill/d7-e.js` | imports | `mapfill/fill.js` |
 | `mapfill/d7-e.js` | names | `mapfill/README.md` |
+| `mapfill/facets.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/flags.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/formal.js` | names | `mapfill/invariants.js` |
 | `mapfill/formal.js` | names | `scripts/formal.mjs` |
@@ -596,6 +598,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/mathmap.mjs` | imports | `mapfill/additions.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/conditions.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/corrections.js` |
+| `scripts/mathmap.mjs` | imports | `mapfill/facets.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/flags.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/formal.js` |
 | `scripts/mathmap.mjs` | imports | `mapfill/index.js` |
@@ -608,6 +611,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/mathmap.mjs` | names | `mapfill/d7-c.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/d7-d.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/d7-e.js` |
+| `scripts/mathmap.mjs` | names | `mapfill/facets.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/fill.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/flags.js` |
 | `scripts/mathmap.mjs` | names | `mapfill/formal.js` |

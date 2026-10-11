@@ -2,7 +2,7 @@
 //   entries, applies the fill layer (mapfill/: clone resolution and authored fills), checks the parse and
 //   the fills, reports data quality, and answers queries.
 // Contract: `node scripts/mathmap.mjs` checks and writes reports/MATHMAP.md; `--check` only checks;
-//   query flags print matching entries: --id D1-004, --domain D4, --tag compression (repeatable, all must
+//   query flags print matching entries: --id D1-004, --domain D4 (where the entry was minted), --facet D4 (any domain it belongs to), --tag compression (repeatable, all must
 //   match), --kind Transformer, --text quotient (searches name, description, types and invariants),
 //   --stubs, --origin fill|clone|map|dangling, --limit N, --full. --landed queries the map as landed,
 //   without the fill layer. Exit 1 if the parse disagrees with the map's declared counts or a fill is bad.
@@ -141,6 +141,9 @@ export function parse() {
   const V = require("../mapfill/invariants.js");
   for (const a of V.ACTS_ON) { const e = outById2[a.entry]; if (e) e.actsOn = { input: a.input, output: a.output }; }
   for (const l of V.LINKS) { const e = outById2[l.entry]; if (e) { e.invariants ||= { preserved: [], broken: [], output: [] }; if (e.invariants[l.field] && !e.invariants[l.field].includes(l.invariant)) e.invariants[l.field].push(l.invariant); } }
+  const { FACETS } = require("../mapfill/facets.js");
+  for (const e of out) e.facets = [e.domain];
+  for (const f of FACETS) { const e = outById2[f.entry]; if (e && !e.facets.includes(f.facet)) e.facets.push(f.facet); }
   const { MATHLIB, FORMAL } = require("../mapfill/formal.js");
   for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note }); }
   return { ...P, entries: out, fills: FILLS, flags: FLAGS, additions: ADDITIONS, conditions: CONDITIONS, corrections: CORRECTIONS, vocabulary: V, formal: { mathlib: MATHLIB, links: FORMAL }, landed };
@@ -244,6 +247,13 @@ export function check(P = parse()) {
     for (const [side, ph] of [["input", a.inputPhrase], ["output", a.outputPhrase]]) for (const x of [ph].flat()) if (!x || !nrm(e[side]).includes(nrm(x))) F.push(`${at}: phrase "${x}" is not in the entry's ${side} field`);
   }
   const used = new Set();
+  for (const f of require("../mapfill/facets.js").FACETS) {
+    const at = `facet ${f.entry} in ${f.facet}`;
+    if (!byIdAll[f.entry]) F.push(`${at}: no such entry`);
+    else if (byIdAll[f.entry].domain === f.facet) F.push(`${at}: an entry is already in its own domain`);
+    if (!P.declared[f.facet]) F.push(`${at}: no such domain`);
+    if (!f.basis) F.push(`${at}: needs a basis`);
+  }
   for (const c of V.CONTEXT || []) {
     const at = `context ${c.entry}`;
     if (!byIdAll[c.entry]) F.push(`${at}: no such entry`);
@@ -267,7 +277,7 @@ export function check(P = parse()) {
     used.add(l.invariant);
   }
   for (const v of V.INVARIANTS) if (!used.has(v.id)) F.push(`invariant ${v.id}: defined but linked to no entry`);
-  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/lean.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
+  const self = ["scripts/mathmap.mjs", "mapfill/invariants.js", "mapfill/formal.js", "mapfill/lean.js", "mapfill/corrections.js", "mapfill/conditions.js", "mapfill/additions.js", "mapfill/flags.js", "mapfill/facets.js", "mapfill/fill.js", "mapfill/index.js", "mapfill/d7-a.js", "mapfill/d7-b.js", "mapfill/d7-c.js", "mapfill/d7-d.js", "mapfill/d7-e.js", "mapfill/homes.js"].map((f) => readFileSync(join(ROOT, f), "utf8")).join("");
   if (/[\u2013\u2014]/.test(self)) F.push("an en or em dash in the math map layer's own files");
   return F;
 }
@@ -351,11 +361,12 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const a = process.argv.slice(2);
   const all = (k) => a.flatMap((x, i) => (x === k ? [a[i + 1]] : []));
   const one = (k) => all(k)[0];
-  const query = ["--id", "--domain", "--tag", "--kind", "--text", "--stubs", "--origin"].some((k) => a.includes(k));
+  const query = ["--id", "--domain", "--facet", "--tag", "--kind", "--text", "--stubs", "--origin"].some((k) => a.includes(k));
   if (query) {
     let es = a.includes("--landed") ? P.landed : P.entries;
     if (one("--id")) es = es.filter((e) => e.id === one("--id"));
     if (one("--domain")) es = es.filter((e) => e.domain === one("--domain"));
+    if (one("--facet")) es = es.filter((e) => (e.facets || [e.domain]).includes(one("--facet")));
     for (const t of all("--tag")) es = es.filter((e) => e.tags.includes(t));
     if (one("--kind")) es = es.filter((e) => e.kind.toLowerCase() === one("--kind").toLowerCase());
     if (one("--text")) { const q = one("--text").toLowerCase(); es = es.filter((e) => [e.name, e.description, e.preserved, e.broken, e.input, e.output].filter(Boolean).join(" ").toLowerCase().includes(q)); }
