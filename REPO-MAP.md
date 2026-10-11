@@ -254,6 +254,7 @@
 | `generation/2026-10-11-mm-dr-003/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-11-mm-dr-003/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `generation/2026-10-11-mm-dr-003/report-chatgpt.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
+| `generation/2026-10-11-mm-dr-003/report-kimi.md` | One generator's report for the round, landed verbatim; its hash is in the round's record. |
 | `infra.json` | Configuration of the vendored Repo-Infrastructure kit: which checks run. |
 | `infra.lock.json` | Pins the vendored kit in .infra/: upstream commit and the hash of every file. |
 | `lean/.gitignore` | Keeps Lake's build directory out of git. |
