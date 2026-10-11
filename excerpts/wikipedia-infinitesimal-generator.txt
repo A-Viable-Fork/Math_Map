@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Infinitesimal generator (stochastic processes) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1348929029
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: b6add8e0da9f234a56ad4729e3ff352bf3cf7026983d8b02e29a4683292d0b57
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''infinitesimal generator''' of a [[Feller process]]
+
+encodes a great deal of information about the process.
+
+the Feller generator is always closed and densely defined.

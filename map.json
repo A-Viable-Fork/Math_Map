@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "f748af215bc5c8bad3a32b363698066b10bd77da"
+  "commit": "f186ac637098a812e1308e0efa350beb79135bb7"
  },
  "domains": {
   "D1": {
@@ -678,20 +678,20 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 1994,
-  "anchorable": 1992,
+  "entries": 1997,
+  "anchorable": 1995,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 11,
+   "added": 14,
    "generated": 29
   },
   "byTier": {
    "landed": 1338,
    "audited": 116,
    "authored": 494,
-   "receipted": 17,
+   "receipted": 20,
    "generated": 29
   },
   "withConditions": 9,
@@ -701,7 +701,7 @@
    "unsupported": 100,
    "unchecked": 11166,
    "imprecise": 20,
-   "sourced": 626,
+   "sourced": 644,
    "formal": 52
   },
   "lean": {
@@ -57912,6 +57912,128 @@
      "file": "lean/MathMap/Implementation.lean"
     }
    ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X03",
+   "domain": "D5",
+   "name": "Random walk on a graph",
+   "kind": "Transformer",
+   "tags": [
+    "construction",
+    "generative"
+   ],
+   "description": "Turns a graph into a Markov chain on its vertices: from each vertex, step to a neighbor chosen uniformly at random. The chain is reversible (detailed balance).",
+   "input": "Graph G (locally finite)",
+   "output": "Markov chain on the vertices of G",
+   "preserved": "The graph's adjacency, as the chain's transitions; its symmetry, as reversibility of the chain",
+   "broken": "The graph's metric detail beyond adjacency: only neighbor counts enter the transition law",
+   "complexity": "Linear in the edges",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-random-walk.txt",
+     "quote": "is a vertex chosen uniformly at random from the neighbors of"
+    },
+    {
+     "file": "excerpts/wikipedia-random-walk.txt",
+     "quote": "A random walk on a graph is a very special case of a [[Markov chain]]."
+    },
+    {
+     "file": "excerpts/wikipedia-random-walk.txt",
+     "quote": "random walk on a graph enjoys a property called ''time symmetry'' or ''reversibility''"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X04",
+   "domain": "D5",
+   "name": "Markov process from its generator",
+   "kind": "Correspondence",
+   "tags": [
+    "construction",
+    "generative"
+   ],
+   "description": "Pairs a Feller process with its infinitesimal generator, the closed, densely defined operator that encodes the process's law; the generator drives the backward equation and its adjoint the forward (Fokker-Planck) equation.",
+   "input": "Linear operator A that is closed and densely defined and generates a Feller semigroup",
+   "output": "Markov process: the Feller process whose generator is A",
+   "preserved": "The law of the process: the generator encodes it",
+   "broken": "Pathwise detail: the generator fixes the law, not a particular construction of the paths",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-infinitesimal-generator.txt",
+     "quote": "the '''infinitesimal generator''' of a [[Feller process]]"
+    },
+    {
+     "file": "excerpts/wikipedia-infinitesimal-generator.txt",
+     "quote": "encodes a great deal of information about the process."
+    },
+    {
+     "file": "excerpts/wikipedia-infinitesimal-generator.txt",
+     "quote": "the Feller generator is always closed and densely defined."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D6-X04",
+   "domain": "D6",
+   "name": "Euler-Lagrange equations of an action",
+   "kind": "Transformer",
+   "tags": [
+    "construction",
+    "duality"
+   ],
+   "description": "From a Lagrangian function, the system of second-order ordinary differential equations whose solutions are the stationary points of the action; the same form in any generalized coordinates.",
+   "input": "Function L: the Lagrangian of an action functional on paths",
+   "output": "Second-order ordinary differential equations: the Euler-Lagrange equations",
+   "preserved": "The stationary paths of the action: they are exactly the solutions; coordinate invariance of the form",
+   "broken": "The distinction between minima, maxima and saddle points of the action: all stationary points solve the equations",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-euler-lagrange-equation.txt",
+     "quote": "are a system of second-order [[ordinary differential equation]]s whose solutions are [[stationary point]]s of the given [[action (physics)|action functional]]."
+    },
+    {
+     "file": "excerpts/wikipedia-euler-lagrange-equation.txt",
+     "quote": "it takes the same form in any system of [[generalized coordinate]]s"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
    "tier": "receipted"
   },
   {
