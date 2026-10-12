@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/TableKeysAddressGameLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/TableKeysAddressGameLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: c3afa6445d4d2d596d09c0acc2c0eb49cd619e43407a7a7bd3f2345c6e174073
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def tableOutput (S : Source) (k : Nat) {s d : Nat} (T : Integration.NoiseTables.Table s d) :
+    Instance (2^s) :=
+  outputInstance S k (Integration.TableReduction.tableSkeleton T)
+    (Integration.TableReduction.tableEnumeration T Prod.fst (fun _ _ => rfl))
+
+theorem tableOutput_translations (S : Source) (k : Nat) {s d : Nat}
+    (T : Integration.NoiseTables.Table s d) :
+    Integration.TranslationTarget.IsTranslationInstance (Encoding.alphabetEquiv s).symm
+      (tableOutput S k T)

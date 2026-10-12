@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Repetition/AnalyticRateLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Repetition/AnalyticRateLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 45661bbff5a4506ec27282cbbfc7e6b349ce378bb73c19e6003dad74f645983f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def IsProjection (G : Game Q₁ Q₂ A₁ A₂) : Prop :=
+  ∀ x y a b b', G.accepts x y a b = true →
+    G.accepts x y a b' = true → b = b'
+
+theorem IsProjection.of_accepts_iff (G : Game Q₁ Q₂ A₁ A₂)
+    (project : Q₁ → Q₂ → A₁ → A₂)
+    (h : ∀ x y a b, G.accepts x y a b = true ↔ project x y a = b) :
+    IsProjection G
+
+theorem IsProjection.repetition {G : Game Q₁ Q₂ A₁ A₂}
+    (hG : IsProjection G) (n : Nat) : IsProjection (G.repetition n)

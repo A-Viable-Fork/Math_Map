@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineProductRuntime.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineProductRuntime.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 7e700280ac0c12c36a5c61348965a18d059cfe552cc4af02424b4962e46ea687
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def compose (upstream : TM2ComputableInPolyTime encode gameBits f)
+    (presentation : ∀ a, MachineOutputContract.SimpleBipartite (f a))
+    (t : Nat) (ht : 0 < t) :
+    TM2ComputableInPolyTime encode gameBits
+      (fun a => ProductPaddedOutput.output (f a) (presentation a) t ht) :=
+  MachineSequential.composeBits (certify upstream presentation) (computation q t ht)

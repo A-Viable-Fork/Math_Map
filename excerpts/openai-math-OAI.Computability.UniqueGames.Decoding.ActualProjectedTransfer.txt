@@ -1,0 +1,17 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/ActualProjectedTransfer.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/ActualProjectedTransfer.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 0825d5d7f9dbb52942c81ad82a9b8cd17951854fe078a3bf5bf9b8755152235e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem actual_success_lower (S : Source)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))
+    (α g₀ β : ℝ) (hα : 0 < α)
+    (hsmall : 1 / (2 : ℝ) ^ (s - r) < α / 8)
+    (hβ : 0 ≤ β) (hβ' : β ≤ 1)
+    (hgood : g₀ ≤ ActualGoodRows.adviceMass S k s d r labeling α)
+    (hvariation : slopeVariation k s d β ≤ ConstantSelection.variationBudget α g₀ s r) :
+    ConstantSelection.decodingMass α g₀ s r ≤
+      (ActualSeedEvents.law S k s d r β hβ hβ').expectation
+        (fun seed => VisiblePolicies.observedAgreement S labeling
+          (SelectedPolicies.goodPredicate S labeling α hα hsmall)
+          (AdviceLaw.seedToActualDraw seed.1.1 seed.1.2 seed.2))

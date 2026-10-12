@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/SparseLawLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/SparseLawLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 98c9c60e84811fa9adeaa3a09c2084f13c5bc391f109b637e9c4a66148016cf6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem exists_cubeSlope_totalVariation_le (η : ℝ) (hη : 0 < η) (N : ℕ) :
+    ∃ m : ℕ, N ≤ m ∧ 0 < m ∧
+      totalVariation
+        (independentWeights (mixture (1 / (m : ℝ) ^ 2) (singletonPairWeights V)) (m ^ 3))
+        (uniformWeights (Fin (m ^ 3) → V × V)) ≤ η

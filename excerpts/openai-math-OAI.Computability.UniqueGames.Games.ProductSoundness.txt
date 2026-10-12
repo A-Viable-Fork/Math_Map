@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Games/ProductSoundness.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Games/ProductSoundness.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: b0b55b962b4a334f634341834277596e2d2a092c4492a8869e3b87a209740656
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem output_soundness (H : Instance q) (presentation : SimpleBipartite H)
+    (t : ℕ) (ht : 0 < t) {δ : ℝ}
+    (hcount : (1 - (1 : ℝ) / 10240000) ^ t ≤ δ)
+    (hvalue : Integration.InstanceValue.value H ≤ 1 - (1 : ℝ) / 800) :
+    Integration.InstanceValue.value (output H presentation t ht) ≤ δ

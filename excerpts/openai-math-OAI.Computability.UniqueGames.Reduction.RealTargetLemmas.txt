@@ -1,0 +1,21 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/RealTargetLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/RealTargetLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 7c7de6821aaaaefbf8f1b0a94c65e4640121f176f0ee1337f335a49df902025c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def maxSatisfied {q : Nat} (g : Instance q) : Nat :=
+  Finset.univ.sup (fun labeling : Fin g.vertices → Fin q =>
+    countSatisfied labeling g.constraints)
+
+noncomputable def value {q : Nat} (g : Instance q) : ℝ :=
+  (maxSatisfied g : ℝ) / g.constraints.length
+
+theorem exists_rate_ge_iff {q : Nat} (g : Instance q) (hq : 0 < q) (a : ℝ) :
+    (∃ labeling : Fin g.vertices → Fin q,
+      a ≤ (countSatisfied labeling g.constraints : ℝ) / g.constraints.length) ↔
+      a ≤ value g
+
+theorem forall_rate_le_iff {q : Nat} (g : Instance q) (hq : 0 < q) (b : ℝ) :
+    (∀ labeling : Fin g.vertices → Fin q,
+      (countSatisfied labeling g.constraints : ℝ) / g.constraints.length ≤ b) ↔
+      value g ≤ b

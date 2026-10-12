@@ -1,0 +1,23 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Computability/TuringMachine/Computable.lean at commit d13f23b723b8a846827a245b89c10fc7d3f11612, the Mathlib that openai/math at fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb builds against (Apache 2.0)
+URL: https://raw.githubusercontent.com/leanprover-community/mathlib4/d13f23b723b8a846827a245b89c10fc7d3f11612/Mathlib/Computability/TuringMachine/Computable.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 0a899f926c03406d29d3d07d0c1717ca91c239503d045dea5d8ea6b8e525a9d5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+  /-- type of stack elements -/
+  (Γ : K → Type)
+
+  /-- a TM2 machine has finitely many internal states. -/
+  [σFin : Fintype σ]
+  /-- Each internal stack is finite. -/
+  [Γk₀Fin : Fintype (Γ k₀)]
+
+structure TM2ComputableInPolyTime {α β αΓ βΓ : Type} (ea : α → List αΓ) (eb : β → List βΓ)
+  (f : α → β) extends TM2ComputableAux αΓ βΓ where
+  /-- a polynomial time function -/
+  time : Polynomial ℕ
+  /-- proof that this machine outputs `f` in at most `time(input.length)` steps -/
+  outputsFun :
+    ∀ a,
+      TM2OutputsInTime tm (List.map inputAlphabet.invFun (ea a))
+        (Option.some ((List.map outputAlphabet.invFun) (eb (f a))))
+        (time.eval (ea a).length)

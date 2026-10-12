@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/PCP/SourceGapLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/PCP/SourceGapLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 3e8b9e3cc9a4501e530d8dec62bbfb6924d9fabb2a7dcab7dcbad97ba8d9ccdc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def errorMap (η ξ : ℚ) (hη : 0 < η) (hη1 : η ≤ 1) (hξ : 0 < ξ)
+    (F : NonemptyFormula) : UniqueGamesTheorem.Reduction.SourceEncoding.Input :=
+  SourceGap.forError η ξ hη hη1 hξ F.val

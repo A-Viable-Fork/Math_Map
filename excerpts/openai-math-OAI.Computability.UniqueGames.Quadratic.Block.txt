@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Quadratic/Block.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Quadratic/Block.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 45f38673185388d73962e246d348f46ded4ed3afa6a1994a9e6d4c174c6f6155
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def U (v : Vec F) : Submodule (ZMod 2) (Vec F × Vec F) where
+  carrier := {p | p.1 ∈ line v ∧ dot v (p.2 + Q p.1) = 0}
+  zero_mem' := by simp [Q_zero]
+  add_mem' := by
+    intro p q hp hq
+    refine ⟨(line v).add_mem hp.1 hq.1, ?_⟩

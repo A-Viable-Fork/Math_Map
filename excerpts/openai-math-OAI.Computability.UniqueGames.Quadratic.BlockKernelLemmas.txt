@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Quadratic/BlockKernelLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Quadratic/BlockKernelLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: dd1710fee3099661c1b68f8a0638a8262715e94b45a77a37a349fb3b90f6a0c4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem blockAnnihilates_iff {g z v : Vec F} (hv : v ≠ 0) (hz : z ≠ 0) :
+    BlockAnnihilates g z v ↔
+      z ∈ line v ∧ dot g z = squareRoot (z 0 * z 1 * z 2)

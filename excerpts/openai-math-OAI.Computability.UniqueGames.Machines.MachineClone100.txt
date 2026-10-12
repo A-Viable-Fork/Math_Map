@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineClone100.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineClone100.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 30ac0254a0cf3bcc83f55e63cb65b480811bc9f503114e39537f9428f52c96fb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def computation : TM2ComputableInPolyTime SourceEncoding.inputBits
+    SourceEncoding.inputBits Outer.Clone100.clonedInput :=
+  MachineClone100Certified.certifiedFunction triples triples_nonempty
+    Outer.Clone100.clonedInput input_bits_eq size_bound

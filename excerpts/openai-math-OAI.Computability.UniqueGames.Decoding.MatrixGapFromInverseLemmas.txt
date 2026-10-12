@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/MatrixGapFromInverseLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/MatrixGapFromInverseLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 20765bca37184406ed8ebc4c3475bbb62a87486dedfc34a91c8d05cf10a1223c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem parameters_of_inverse (hinverse : Inverse.Shortcode.InversePrinciple)
+    (p : ℚ) (hp : 0 < p) : Nonempty (Parameters p)
+
+theorem exists_parameters (p : ℚ) (hp : 0 < p) : Nonempty (Parameters p)

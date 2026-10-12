@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Foundations/ValueLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Foundations/ValueLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: ee1bdc09884b1983572c3cc835802c1d131c157c8b42b9308c68327bcbd56bcc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def value (G : Game Q₁ Q₂ A₁ A₂) : ℝ
+
+theorem pow_value_le_repetition_value (G : Game Q₁ Q₂ A₁ A₂) (n : Nat) :
+    G.value ^ n ≤ (G.repetition n).value

@@ -1,0 +1,30 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Gadgets/QuotientLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Gadgets/QuotientLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: a4b232699f658f4682ac9d1183c0d84c0bd0d09f33a48f38765e7033f014eec8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure Stage (k : Type u) (B : Type v) [CommRing k]
+    [AddCommGroup B] [Module k B] where
+  Input : Type v
+  Shift : Type v
+  Noise : Type v
+  [inputAdd : AddCommGroup Input]
+  [inputModule : Module k Input]
+  [shiftAdd : AddCommGroup Shift]
+  [shiftModule : Module k Shift]
+  [inputFinite : Finite Input]
+  [shiftFinite : Finite Shift]
+  [noiseFinite : Finite Noise]
+  [noiseNonempty : Nonempty Noise]
+  embed : Shift →ₗ[k] Input
+  embed_injective : Function.Injective embed
+  logical : Shift →ₗ[k] B
+  logical_surjective : Function.Surjective logical
+  output : Input → B
+  equivariant : ∀ u h, output (u + embed h) = output u + logical h
+  noise : Noise → Input
+
+noncomputable def iterate (J : I → B →ₗ[k] X × B)
+    (hJ : Function.Surjective (aggregate J)) (Q : X → B) : ℕ → Stage k B
+  | 0 => base
+  | n + 1 => next J hJ Q (iterate J hJ Q n)

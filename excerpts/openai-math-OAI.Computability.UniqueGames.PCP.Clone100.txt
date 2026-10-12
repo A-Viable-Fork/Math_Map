@@ -1,0 +1,32 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/PCP/Clone100.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/PCP/Clone100.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: c11afe1c779208ac9e428ac478c2a76283344589fcd8e07b2c7cd488123fadd7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem equation_distinct {n : Nat} (e : Equation (Fin n)) (t : GoodTriple) :
+    (equation e t).first ≠ (equation e t).second ∧
+      (equation e t).first ≠ (equation e t).third ∧
+      (equation e t).second ≠ (equation e t).third
+
+theorem equations_length {n : Nat} (es : List (Equation (Fin n))) :
+    (equations es).length = es.length * 970200
+
+def clonedInput (input : SourceEncoding.Input) : SourceEncoding.Input where
+  «variables» := input.variables * 100
+  equations := equations input.equations
+  nonempty := equations_nonempty input.equations input.nonempty
+
+theorem completeness (input : SourceEncoding.Input)
+    (a : Fin input.variables → Bool) :
+    success (clonedInput input).equations (lift a) = success input.equations a
+
+theorem soundness (input : SourceEncoding.Input)
+    (a : Fin (clonedInput input).variables → Bool) :
+    success (clonedInput input).equations a ≤
+      (1 + success input.equations (majority a)) / 2 + 3 / 100
+
+theorem soundness_four_fifths (input : SourceEncoding.Input) (ξ : ℚ)
+    (hξ : ξ < 1 / 100)
+    (hsource : ∀ a, success input.equations a ≤ (1 + ξ) / 2)
+    (a : Fin (clonedInput input).variables → Bool) :
+    success (clonedInput input).equations a ≤ 4 / 5

@@ -1,0 +1,19 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Gadgets/Final.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Gadgets/Final.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: af7a00eff556bd7768528770ceaa52c66454190b2cde126cacc4e2eb04797aac
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem exists_actual_gadget (p : ℚ) (hp : 0 < p) :
+    ∃ r : ℕ, 1 ≤ r ∧ ∀ ℓ : ℕ, r ≤ ℓ →
+      ∃ g : UniqueGamesTheorem.Gadget.ActualGadget.Data (Vector ℓ),
+        UniqueGamesTheorem.Gadget.ActualGadget.Satisfies g p (7 / 8) r
+
+theorem exists_split_gadget (p : ℚ) (hp : 0 < p) :
+    ∃ r : ℕ, 1 ≤ r ∧ ∀ ℓ : ℕ, r ≤ ℓ →
+      ∃ d : ℕ, ∃ g : UniqueGamesTheorem.Reduction.ActualSource.SplitGadget ℓ d,
+        g.stabilityError ≤ p ∧
+        ∀ (P : Type) [AddCommGroup P] [Module F2 P]
+          (S : UniqueGamesTheorem.Reduction.ActualSource.Ambient ℓ d →ₗ[F2] P),
+          r ≤ Module.finrank F2
+            (S.comp (UniqueGamesTheorem.Reduction.ActualSource.alphabetEmbedding ℓ d)).range →
+          UniqueGamesTheorem.Integration.SplitGadget.kernelProbability g S ≤ 7 / 8

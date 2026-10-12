@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/AdviceFibersLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/AdviceFibersLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 5329f9626a8fa1e6531e1e081a1361decec50f1f071f37f732777df2b384fa74
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem matrix_spectral_comparison
+    (μ : Q → ℝ) (ν : V → ℝ) (ι : K →ₗ[F2] V)
+    (label : Q → (E →ₗ[F2] V) → C) (r : ℕ)
+    (hμ : ∀ q, 0 ≤ μ q) (hμsum : ∑ q, μ q = 1)
+    (hν : ∀ v, 0 ≤ ν v) (hνsum : ∑ v, ν v = 1)
+    (hdetect : ∀ S : V →ₗ[F2] E,
+      r ≤ Module.finrank F2 (S.comp ι).range → linearNoiseEigenvalue ν S ≤ 7 / 8)
+    (haccept : (99 : ℝ) / 100 ≤ ∑ q, μ q * equalityAcceptance ν (label q)) :
+    (9 : ℝ) / 10 * ((2 : ℝ) ^ r)⁻¹ ≤
+      ∑ q, μ q * equalityAcceptance (subspaceLaw ι) (label q)

@@ -1,0 +1,19 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineBinaryInputReductionLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineBinaryInputReductionLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 6e17e44283d03ef0eb55bb4d164f3f8f8356af9a8cfbf19734bcd9f826281e02
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+noncomputable def computation :
+    TM2ComputableInPolyTime (id : List Bool → List Bool) formulaBits BinaryLanguage.totalRename
+
+theorem computation_finiteAlphabet : MachineFiniteAlphabet.FiniteAlphabet computation.tm
+
+def toBipartiteGame : BipartiteGame
+    {v : Fin game.vertices // presentation.side v = false}
+    {v : Fin game.vertices // presentation.side v = true}
+    (Fin game.constraints.length) (Fin q) where
+  left i := ⟨game.constraints[i].source, presentation.sourceSide i⟩
+  right i := ⟨game.constraints[i].target, presentation.targetSide i⟩
+
+theorem toBipartiteGame_value :
+    presentation.toBipartiteGame.value = Integration.InstanceValue.value game

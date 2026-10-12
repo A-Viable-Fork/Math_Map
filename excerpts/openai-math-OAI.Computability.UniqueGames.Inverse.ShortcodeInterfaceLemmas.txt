@@ -1,0 +1,23 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Inverse/ShortcodeInterfaceLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Inverse/ShortcodeInterfaceLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 0aa803d25c07ca4fcd9635b43f11ba5a14481c0068e4d144a750d8ace2392ae2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure Slice (ell m : ℕ) where
+  rows : ℕ
+  columns : ℕ
+  rowCoefficient : Fin rows → Vector ell
+  rowValue : Fin rows → Vector m
+  columnCoefficient : Fin columns → Vector m
+  columnValue : Fin columns → Vector ell
+
+def HasAffineSlice {ell m : ℕ} (f : Mat ell m → Vector ell) (α : ℝ) (r : ℕ) : Prop :=
+  ∃ S : Slice ell m, S.rows ≤ r ∧ S.columns ≤ r ∧ S.points.Nonempty ∧
+    ∃ z : Vector m, ∃ u : Vector ell, α ≤ S.affineAgreement f z u
+
+def InversePrinciple : Prop :=
+  ∀ η : ℝ, 0 < η → η < 1 →
+    ∃ α : ℝ, 0 < α ∧ α ≤ 1 ∧ ∃ r : ℕ, 1 ≤ r ∧
+      ∃ ell₀ : ℕ, ∀ ell : ℕ, ell₀ ≤ ell →
+        ∃ m₀ : ℕ, ∀ m : ℕ, m₀ ≤ m →
+          ∀ f : Mat ell m → Vector ell,

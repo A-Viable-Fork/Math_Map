@@ -1,0 +1,19 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/VisiblePoliciesLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/VisiblePoliciesLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 26dc38b8e8cb48da07bc7f0c71b08729495f1d3150a4185904b00820a9883540
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem observedAgreement_lower (S : Source)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))
+    (α : ℝ) (hα : 0 < α) (hsmall : 1 / (2 : ℝ) ^ (s - r) < α / 8)
+    (draw : AdviceExperiment.Draw k (Fin S.occurrences) (Alphabet s) (Vector d) (Vector r))
+    (hgood : GoodAdvice S labeling α (AdviceExperiment.leftObservation (ActualGame.rhs S) draw))
+    (Mstar : RawPartnerTarget.RawPoint draw.singletons →ₗ[F2] Alphabet s)
+    (hstar : draw.rowMap.comp Mstar = draw.rowMap.comp draw.hiddenMatrix)
+    (hagreement : α / 4 ≤ transferredAgreement S labeling draw
+      (normalizedResponse S labeling α hα hsmall
+        (AdviceExperiment.leftObservation (ActualGame.rhs S) draw) hgood)
+      (normalizedDescription S labeling α hα hsmall
+        (AdviceExperiment.leftObservation (ActualGame.rhs S) draw) hgood).intercept Mstar) :
+    (α / 8) ^ 2 / (2 : ℝ) ^ (s * r) / (2 : ℝ) ^ r ≤
+      observedAgreement S labeling (goodPredicate S labeling α hα hsmall) draw

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Theorem.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Theorem.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 9d440290260c3fad2905780465be3a49f2cfa83445a28b1df8d33454ee4350ab
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem exists_binaryGapReduction (ε δ : ℝ)
+    (hε : 0 < ε) (_hεhalf : ε < 1 / 2)
+    (hδ : 0 < δ) (_hδhalf : δ < 1 / 2) :
+    Nonempty (Explicit.MachineOutputContract.BinaryGapReduction ε δ)
+
+theorem theorem11 (ε δ : ℝ)
+    (hε : 0 < ε) (hεhalf : ε < 1 / 2)
+    (hδ : 0 < δ) (hδhalf : δ < 1 / 2) :
+    Nonempty (Explicit.MachineOutputContract.BinaryGapReduction ε δ)

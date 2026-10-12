@@ -1,0 +1,33 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/ParameterSelection.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/ParameterSelection.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 9b63fa8072a256d11fdbccb5741031a0a259a1229742aac525b1948d5fe787c6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure OuterParameters (ε δ : ℝ) where
+  epsilon0 : ℚ
+  delta0 : ℚ
+  epsilon0_pos : 0 < epsilon0
+  delta0_pos : 0 < delta0
+  epsilon0_le : (epsilon0 : ℝ) ≤ ε
+  delta0_le : (delta0 : ℝ) ≤ δ
+  repetitions : ℕ
+  repetitions_pos : 0 < repetitions
+  soundness_rate : (1 - (1 : ℝ) / 10240000) ^ repetitions ≤ delta0
+  copies : ℕ
+  copies_large : 200 ≤ copies
+  reciprocal_pos : (0 : ℚ) < 1 / copies
+  reciprocal_small : 1 / (copies : ℚ) ≤ 1 / 200
+  reciprocal_budget : 1 / (copies : ℚ) ≤ epsilon0 / repetitions
+
+theorem exists_outerParameters (ε δ : ℝ) (hε : 0 < ε) (hδ : 0 < δ) :
+    Nonempty (OuterParameters ε δ)
+
+def pStar : ℚ := 1 / P.copies
+
+theorem exists_parity_error (k : ℕ) (hk : 0 < k) :
+    ∃ ξ : ℚ, 0 < ξ ∧ ξ < 1 / 100 ∧
+      ξ < P.epsilon0 / (2 * k * P.repetitions)
+
+theorem matrix_error_budget (k : ℕ) (hk : 0 < k) (ξ : ℚ)
+    (hξ : ξ ≤ P.epsilon0 / (2 * k * P.repetitions)) :
+    (k : ℚ) * ξ + P.pStar / 2 ≤ P.epsilon0 / P.repetitions

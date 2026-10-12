@@ -1,0 +1,19 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Foundations/FiniteTrialsLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Foundations/FiniteTrialsLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 3c0b5df78e2d367aa948406b3ed62db43e291bcaec75f39d95b6acb034a9a11b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure FiniteDistribution (Ω : Type*) [Fintype Ω] where
+  weight : Ω → ℝ
+  nonnegative : ∀ x, 0 ≤ weight x
+  normalized : ∑ x, weight x = 1
+
+abbrev Strategy (Q₁ Q₂ A₁ A₂ : Type*) := (Q₁ → A₁) × (Q₂ → A₂)
+
+structure Game (Q₁ Q₂ A₁ A₂ : Type*) [Fintype Q₁] [Fintype Q₂]
+    [Fintype A₁] [Fintype A₂] where
+  questions : FiniteDistribution (Q₁ × Q₂)
+  accepts : Q₁ → Q₂ → A₁ → A₂ → Bool
+
+def repetition (G : Game Q₁ Q₂ A₁ A₂) (n : Nat) :
+    Game (Fin n → Q₁) (Fin n → Q₂) (Fin n → A₁) (Fin n → A₂)

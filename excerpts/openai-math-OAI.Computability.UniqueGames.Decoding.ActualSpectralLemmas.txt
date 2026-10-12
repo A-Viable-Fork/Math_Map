@@ -1,0 +1,45 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/ActualSpectralLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/ActualSpectralLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: e33aae6ff1d59a57c5b1a071f78805cedd474a2f8e84f2e463ff96d1122322e0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem actual_fiber_mean_lower (S : Source) (k : Nat) {s d : Nat}
+    (g : SplitGadget s d) (label : Fin (vertexCount S k s d) → Fin (2 ^ s)) (r : Nat)
+    (hkernel : ∀ L : Ambient s d →ₗ[F2] ActualHomogeneous.E k,
+      r ≤ Module.finrank F2 (L.comp (alphabetEmbedding s d)).range →
+      Integration.SplitGadget.kernelProbability g L ≤ 7 / 8)
+    (haccept : (99 : ℚ) / 100 ≤ acceptanceProbability S k g label) :
+    (9 : ℝ) / 10 * ((2 : ℝ) ^ r)⁻¹ ≤
+      𝔼 U : Question S k, 𝔼 T, fiberAcceptance S k s d label U T
+
+def goodRowMass (rstar s r : ℕ) : ℝ :=
+  10 * ActualSpectral.eta rstar ^ 2 / (2 : ℝ) ^ (s * r)
+
+theorem exists_actual_advice_threshold (rstar : ℕ) (α : ℝ)
+    (hα : 0 < α) (hαone : α ≤ 1) (s r : ℕ)
+    (hr : r < s) (halphabet : 1 / (2 : ℝ) ^ s ≤ α / 8) :
+    ∃ k₀ : ℕ, ∀ k : ℕ, k₀ ≤ k →
+      (∀ f : Mat s (1 + 2 * k) → Vector s,
+        ActualSpectral.eta rstar ≤ Shortcode.equalityAcceptance f → HasAffineSlice f α r) →
+      ∀ (S : Source) (d : ℕ) (g : SplitGadget s d)
+        (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s)),
+        (∀ L : Ambient s d →ₗ[F2] ActualHomogeneous.E k,
+          rstar ≤ Module.finrank F2 (L.comp (alphabetEmbedding s d)).range →
+          Integration.SplitGadget.kernelProbability g L ≤ 7 / 8) →
+        (99 : ℚ) / 100 ≤ TableKeysGame.acceptanceProbability S k g labeling →
+        goodRowMass rstar s r ≤ adviceMass S k s d r labeling α
+
+theorem exists_inverse_parameters (hinverse : InversePrinciple) (rstar : ℕ) :
+    Nonempty (InverseParameters rstar)
+
+theorem exists_cube {rstar : ℕ} (P : InverseParameters rstar) (d : ℕ) :
+    ∃ m : ℕ, 0 < m ∧ P.tupleThreshold ≤ m ^ 3 ∧
+      0 ≤ 1 / (m : ℝ) ^ 2 ∧ 1 / (m : ℝ) ^ 2 ≤ 1 ∧
+      Foundations.Information.totalVariation
+        (SparseLaw.independentWeights
+          (SparseLaw.mixture (1 / (m : ℝ) ^ 2)
+            (SparseLaw.singletonPairWeights (Ambient P.s d))) (m ^ 3))
+        (SparseLaw.uniformWeights (Fin (m ^ 3) → Ambient P.s d × Ambient P.s d)) ≤
+          ConstantSelection.variationBudget P.α (ActualGoodRows.goodRowMass rstar P.s P.r) P.s P.r ∧
+      (1 - ((1 / (m : ℝ) ^ 2) / (2 : ℝ) ^ (d + P.r)) / 3600) ^ (m ^ 3) <
+        ConstantSelection.decodingMass P.α (ActualGoodRows.goodRowMass rstar P.s P.r) P.s P.r

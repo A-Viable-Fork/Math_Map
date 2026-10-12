@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineUniformRun.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineUniformRun.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: d9be87ea599e10bc5d7baf105c15ce6172d23667ec300d134076e51841f41189
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+noncomputable def computation {q : Nat} (C : Nat) (hC : 0 < C) :
+    TM2ComputableInPolyTime gameBits gameBits (UniformTarget.construct (q := q) C hC) where
+  tm := machine C
+  inputAlphabet := Equiv.refl Bool
+  outputAlphabet := Equiv.refl Bool
+  time := timePolynomial C

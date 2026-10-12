@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/ActualMatrixContradiction.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/ActualMatrixContradiction.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 19944ddeb43099e128367d31b0e1aeeae05128f6526800db13f4900f1be94095
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem contradiction (S : Source)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))
+    (α g₀ β : ℝ) (hα : 0 < α)
+    (hsmall : 1 / (2 : ℝ) ^ (s - r) < α / 8)
+    (hβ : 0 ≤ β) (hβ' : β ≤ 1)
+    (hgood : g₀ ≤ ActualGoodRows.adviceMass S k s d r labeling α)
+    (hvariation : ActualProjectedTransfer.slopeVariation k s d β ≤
+      ConstantSelection.variationBudget α g₀ s r)
+    (hrate : (1 - (β / (2 : ℝ) ^ (d + r)) / 3600) ^ k <
+      ConstantSelection.decodingMass α g₀ s r)
+    (hdistinct : S.DistinctNames)
+    (hopt : Clean.IncidenceGap.parityValue (ActualAdviceUpper.sourceIncidence S)
+      (FiniteDistribution.uniform (Fin S.occurrences)) ≤ (4 : ℝ) / 5) : False
