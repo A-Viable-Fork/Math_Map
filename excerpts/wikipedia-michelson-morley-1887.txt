@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Michelson-Morley experiment (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373171552
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 1dba95797acb0b086ccff36f59c77d04bab6d2ad559bf5d99c8d082de65bd808
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The experiment was performed between April and July 1887 by American physicists [[Albert A. Michelson]] and [[Edward W. Morley]]

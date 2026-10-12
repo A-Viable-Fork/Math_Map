@@ -1,0 +1,24 @@
+Excerpts, verbatim as extracted, from: R. Vilela Mendes, The deformation-stability fundamental length and deviations from c, arXiv:1112.3246 (2011); Phys. Lett. A 376 (2012)
+URL: https://arxiv.org/pdf/1112.3246
+Fetched: 2026-10-12. SHA-256 of the PDF as fetched: f986d7d222930815df7b75a6bc89495f01ce82ea0ca77c33d3f4be25899fb232
+Text extracted with pdftotext (poppler), which writes 1/c as "1c" and hbar as "h", and keeps line breaks. Only the windows below are kept; each was checked to occur in the extracted text.
+
+The stable-model point of view originated in the field of non-linear dynamics, where it led to the notion of structural stability [27] [28]. Later on, Flato
+[29] and Faddeev [30] have shown that the same pattern occurs in the fundamental theories of Nature, namely the transition from non-relativistic to
+relativistic and from classical to quantum mechanics, may be interpreted as
+the replacement of two unstable theories by two stable ones. The stabilizing
+
+deformations lead, in the first case, from the Galilean to the Lorentz algebra
+and, in the second one, from the algebra of commutative phase-space to the
+Moyal-Vey algebra (or equivalently to the Heisenberg algebra). The deformation parameters are 1c (the inverse of the speed of light) and h (the Planck
+
+quantum mechanics might have been derived from the conditions for stability
+of two mathematical structures, although the exact values of the deformation parameters cannot be fixed by purely algebraic considerations. Instead,
+the deformation parameters are fundamental constants to be obtained from
+
+The SPT principle is related to the idea that physical theories drift towards simple algebras [31] [32] [33], because all simple algebras are stable,
+although not all stable algebras are simple.
+
+[29] M. Flato; Czech J. Phys. B32 (1982) 472.
+
+[30] L. D. Faddeev; Asia-Pacific Physics News 3 (1988) 21 and in ”Frontiers in Physics, High Technology and Mathematics” (ed. Cerdeira and

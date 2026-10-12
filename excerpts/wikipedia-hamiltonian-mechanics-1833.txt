@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Hamiltonian mechanics (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379485691
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: b400648022f7396ee8f0e11197d2665170c33d34c34d0de4261435f97a596ed5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Hamiltonian mechanics''' is a reformulation of [[Lagrangian mechanics]] that emerged in 1833

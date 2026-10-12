@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Accelerating expansion of the universe (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377489475
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: a4812ee37dd6587f327395321cf61afdf4388c43250a1b5fd12c03c30638ace0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The accelerated expansion of the [[universe]] was discovered in 1998 by two independent projects, the [[Supernova Cosmology Project]] and the [[High-Z Supernova Search Team]], which used distant [[type Ia supernovae]] to measure the acceleration.

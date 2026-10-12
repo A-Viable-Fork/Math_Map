@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Poisson bracket (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1346655337
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 83e7df614a937ff6817639e73c45980ce1931ccd6e469c6bd1e5214e4948e9af
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+He introduced the Poisson bracket in his 1809 treatise on mechanics.

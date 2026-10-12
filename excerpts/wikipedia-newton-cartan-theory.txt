@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Newton-Cartan theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1306640702
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 893305592aa369e8d57d71d44c948ecdfeb6a9faae0c1ed6d8154b4af6195b7e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+first introduced by [[Élie Cartan]] in 1923
+
+it has been used by Cartan and Friedrichs to give a rigorous formulation of the way in which Newtonian gravity can be seen as a specific limit of general relativity

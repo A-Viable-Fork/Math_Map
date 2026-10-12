@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Killing form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369246472
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 04cd917328af63d79f13f970741e127ebf13dfcbf3b38114c34fb48b093c8f37
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The [[Cartan criterion]] states that a Lie algebra is [[semisimple Lie algebra|semisimple]] if and only if the Killing form is [[degenerate form|non-degenerate]].
+
+By [[Sylvester's law of inertia]], the number of positive entries is an invariant of the bilinear form
+
+The real forms of a given complex semisimple Lie algebra are frequently labeled by the positive index of inertia of their Killing form.

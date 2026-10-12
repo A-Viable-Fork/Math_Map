@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Killing form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369246472
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 04cd917328af63d79f13f970741e127ebf13dfcbf3b38114c34fb48b093c8f37
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Killing form was essentially introduced into Lie algebra theory by {{harvs|txt |author-link=Élie Cartan |first=Élie |last=Cartan |year=1894}} in his thesis.

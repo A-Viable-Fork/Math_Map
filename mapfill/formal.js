@@ -173,6 +173,22 @@ const FORMAL = [
   K("D8-125", "description", "Real.log_mul", "Mathlib/Analysis/SpecialFunctions/Log/Basic.lean", "exact", "log(xy) = log x + log y: products become sums (the corrected field)."),
   K("D8-107", "description", "Module.End.exists_isNilpotent_isSemisimple", "Mathlib/LinearAlgebra/JordanChevalley.lean", "related",
     "Mathlib has the Jordan-Chevalley decomposition (f = nilpotent + semisimple, over a perfect field), which the Jordan normal form implies. The normal form itself is not in Mathlib at the pin. The name also matches Mathlib's Jordan decomposition of signed measures, a different theorem."),
+  // Lie algebra deformation (generation/2026-10-11-deform-001). At the pin Mathlib has the low-degree
+  // Chevalley-Eilenberg cochains and both directions of Cartan's semisimplicity criterion; it has no
+  // coboundaries or cohomology groups (listed as TODO in Cochain.lean), no Whitehead lemma, no deformation
+  // theory and no contraction, so D7-X08, D7-X09 and D7-X10 carry no link.
+  K("D7-X07", "description", "LieModule.Cohomology.d₂₃", "Mathlib/Algebra/Lie/Cochain.lean", "ingredient",
+    "The coboundary from 2-cochains to 3-cochains with coefficients in any Lie module, the adjoint module included. Coboundaries, cohomology and the comparison with the full Chevalley-Eilenberg complex are TODO in the file at the pin."),
+  K("D7-X07", "preserved", "LieModule.Cohomology.d₂₃_comp_d₁₂", "Mathlib/Algebra/Lie/Cochain.lean", "special",
+    "d^2 = 0 in the lowest degree the file covers (1-cochains to 3-cochains); the entry claims it in every degree."),
+  K("D7-X07", "output", "LieModule.Cohomology.twoCocycle", "Mathlib/Algebra/Lie/Cochain.lean", "ingredient",
+    "The 2-cocycles, the kernel of d₂₃. With M the adjoint module these are the infinitesimal deformations; the quotient by coboundaries, H^2, is not defined at the pin."),
+  K("D7-X11", "description", "LieAlgebra.hasTrivialRadical_iff_isKilling", "Mathlib/Algebra/Lie/CartanCriterion.lean", "exact",
+    "Trivial solvable radical iff nondegenerate Killing form, for a Lie algebra that is free and Noetherian over a principal ideal domain of characteristic zero (the file's variables): Cartan's criterion with semisimplicity read as trivial radical, which over a field of characteristic zero is the classical notion."),
+  K("D7-X11", "description", "LieAlgebra.IsKilling.instSemisimple", "Mathlib/Algebra/Lie/Killing.lean", "special",
+    "One direction over a field: a finite-dimensional Lie algebra with nondegenerate Killing form is semisimple."),
+  K("D7-X11", "input", "killingForm", "Mathlib/Algebra/Lie/TraceForm.lean", "ingredient",
+    "The Killing form, the trace form of the adjoint representation: tr(ad x ad y). Real forms and the signature are not in Mathlib at the pin."),
 ];
 
 module.exports = { MATHLIB, FORMAL };

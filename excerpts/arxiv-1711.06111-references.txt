@@ -1,0 +1,10 @@
+Excerpts, verbatim as extracted, from: José M. Figueroa-O'Farrill, Kinematical Lie algebras via deformation theory, arXiv:1711.06111 (2017); J. Math. Phys. 59 (2018) 061701 (reference list)
+URL: https://arxiv.org/pdf/1711.06111
+Fetched: 2026-10-11. SHA-256 of the PDF as fetched: 8dc3ac349ec9bdbf3c6b6a04728f855a6f1bef1fe36228c168f526a5d3f1168c (the same bytes as excerpts/arxiv-1711.06111.txt)
+Text extracted with pdftotext (poppler), which keeps combining accents as separate characters. Only the windows below are kept; each was checked to occur in the extracted text.
+
+[3] H. Bacry and J.-M. Lévy-Leblond, “Possible kinematics,” J. Mathematical Phys. 9 (1968) 1605–1614.
+
+[8] A. Nijenhuis and R. W. Richardson, Jr., “Deformations of Lie algebra structures,” J. Math. Mech. 17 (1967) 89–105.
+
+real Lie algebras [1]. The classification for D = 3 is due to Bacry and Nuyts [2] who completed earlier
