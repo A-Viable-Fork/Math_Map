@@ -125,6 +125,11 @@ const RECEIPTS = [
   ["excerpts/arxiv-1711.06111-references.txt", "Deformations of Lie algebra structures,” J. Math. Mech. 17 (1967) 89–105."],
   ["excerpts/wikipedia-group-contraction-history.txt", "In theoretical physics, [[Eugene Wigner]] and [[Erdal İnönü]] have discussed<ref>{{harvnb|Inönü|Wigner|1953}}</ref>"],
   ["excerpts/wikipedia-killing-form-history.txt", "The Killing form was essentially introduced into Lie algebra theory by"],
+  // Prior art the grading quotes.
+  ["excerpts/arxiv-1112.3246.txt", "the replacement of two unstable theories by two stable ones. The stabilizing"],
+  ["excerpts/arxiv-1112.3246.txt", "The SPT principle is related to the idea that physical theories drift towards simple algebras"],
+  ["excerpts/pos-ffp14-210.txt", "as Inönü-Wigner extensions of the associated kinematical groups."],
+  ["excerpts/pos-ffp14-210.txt", "with hints at a logic of discovery."],
   // The rows out of reach and R10: the dates and readings their table entries state.
   ["excerpts/wikipedia-newton-cartan-theory.txt", "first introduced by [[Élie Cartan]] in 1923"],
   ["excerpts/wikipedia-newton-cartan-theory.txt", "Newtonian gravity can be seen as a specific limit of general relativity"],
