@@ -179,7 +179,7 @@ const OUT_OF_REACH = [
 // ---------- decoys ----------
 function mulberry32(a) { return () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
 const subsets = (xs) => { const out = []; for (let m = 1; m < 1 << xs.length; m++) out.push(xs.filter((_, i) => m & (1 << i))); return out; };
-function decoySpace(g0, form, real) {
+export function decoySpace(g0, form, real) {
   const fams = famList(g0), dim = (S) => families(g0, S).length, out = [];
   const unions = subsets(fams).filter((S) => dim(S) >= 2);
   if (form === "F1") for (const S of unions) for (const A of subsets(fams)) for (let p = Math.ceil(dim(S) / 2); p <= dim(S); p++) out.push({ S, A, sig: [p, dim(S) - p] });
@@ -190,7 +190,7 @@ function decoySpace(g0, form, real) {
   const norm = (x) => (form === "F1" ? { ...x, sig: [Math.max(...x.sig), Math.min(...x.sig)] } : form === "F3" ? (fams.indexOf(x.A) <= fams.indexOf(x.B) ? x : { A: x.B, B: x.A }) : x);
   return out.filter((x) => key(norm(x)) !== key(norm(real)));
 }
-function drawDecoys(space, seed) {
+export function drawDecoys(space, seed) {
   if (space.length <= 2000) return { decoys: space, exhaustive: true };
   const rnd = mulberry32(seed), idx = [...space.keys()];
   for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
@@ -198,7 +198,7 @@ function drawDecoys(space, seed) {
 }
 
 // ---------- running a row ----------
-const outcome = (list, succFp) => { const s = list.find((g) => g.fp === succFp); return { survivors: list.length, succ: s ? { rank: s.rank, ties: s.ties } : null, alts: list.length - (s ? 1 : 0), hit: !!s && s.rank === 1 && list.length - 1 <= 1 }; };
+export const outcome = (list, succFp) => { const s = list.find((g) => g.fp === succFp); return { survivors: list.length, succ: s ? { rank: s.rank, ties: s.ties } : null, alts: list.length - (s ? 1 : 0), hit: !!s && s.rank === 1 && list.length - 1 <= 1 }; };
 export function runRow(row, n) {
   const g0 = ALG[row.pred](), succ = ALG[row.succ](), succFp = fingerprint(succ);
   const cs = candidates(g0, row.sym), pass = CONSTRAINTS[row.form](row.params);

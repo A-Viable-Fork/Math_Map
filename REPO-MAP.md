@@ -98,6 +98,7 @@
 | `scripts/compose.mjs` | composition. |
 | `scripts/deform-algebras.mjs` | the algebras and rounds of the deformation generator (scripts/deform.mjs). |
 | `scripts/deform-history.mjs` | the HISTORY-001 round. |
+| `scripts/deform-select.mjs` | the SELECT-001 round. |
 | `scripts/deform.mjs` | the deformation generator. |
 | `scripts/evidence.mjs` | evidence per claim. |
 | `scripts/excerpt.mjs` | the excerpt maker. |
@@ -756,6 +757,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/deform-history.mjs` | names | `excerpts/wikipedia-sylvesters-law-history.txt` |
 | `scripts/deform-history.mjs` | names | `excerpts/wikipedia-xi-baryon-1959.txt` |
 | `scripts/deform-history.mjs` | names | `generation/2026-10-11-history-001/preregistration.md` |
+| `scripts/deform-select.mjs` | imports | `scripts/deform-history.mjs` |
+| `scripts/deform-select.mjs` | imports | `scripts/deform.mjs` |
+| `scripts/deform-select.mjs` | names | `generation/2026-10-12-select-001/preregistration.md` |
 | `scripts/deform.mjs` | imports | `scripts/deform-algebras.mjs` |
 | `scripts/deform.mjs` | names | `generation/2026-10-11-deform-001/calibration.md` |
 | `scripts/deform.mjs` | names | `scripts/deform-algebras.mjs` |
