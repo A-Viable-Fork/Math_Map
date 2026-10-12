@@ -38,4 +38,4 @@ The prompt seeded the suspicion that noninterference defeats per-step checking. 
 
 - **Base list for MM-DR-002:** ChatGPT's 27 operations and 19 invariants, as conjecture. The three-way merge of entries happens at landing, with Kimi's provenance granularity and added invariants considered there.
 - **Schema proposals for the operator** (none landed): an invariant `class` field (state, step, trace, relational, other hyperproperty); the five-valued verdict in `compose.mjs`; a context label threaded through chains; relational claims; Kimi's two relation kinds; domains as facets with the id prefix as birthplace (proposed in the session, not from the reports).
-- **For the Phone trellis:** the merge axiom ("nothing merges without the owner's signature") needs the transaction binding in section 3 before it is enforceable.
+- **For the Phone program:** the merge axiom ("nothing merges without the owner's signature") needs the transaction binding in section 3 before it is enforceable.

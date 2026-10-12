@@ -265,7 +265,7 @@ const ADDITIONS = [
     preserved: "The complex itself: d^2 = 0, by the Jacobi identity",
     broken: "Individual cochains: only classes modulo coboundaries survive, so inner derivations vanish in H^1 and deformations tangent to a change of basis vanish in H^2",
     complexity: "Polynomial: exact linear algebra on spaces of dimension n * C(n, k)",
-    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): sublation in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
+    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): theory change in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
     receipts: [
       { file: "excerpts/wikipedia-lie-algebra-cohomology.txt", quote: "A homogeneous <math>n</math>-cochain from <math>\\mathfrak{g}</math> to <math>M</math> is thus an alternating <math>k</math>-multilinear function <math>f\\colon\\Lambda^n\\mathfrak{g}\\to M</math>." },
       { file: "excerpts/wikipedia-lie-algebra-cohomology.txt", quote: "the nilpotency condition <math>d^2 = 0</math> following from the Lie algebra homomorphism" },
@@ -280,7 +280,7 @@ const ADDITIONS = [
     preserved: "The underlying vector space; mu_0 as the member at t = 0, of which the deformed algebra is a contraction",
     broken: "The isomorphism class, when phi_1 is not a coboundary; integrability, at the first order whose obstruction class is nonzero",
     complexity: "N/A",
-    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): sublation in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
+    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): theory change in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
     receipts: [
       { file: "excerpts/arxiv-1711.06111.txt", quote: "Conversely, every cocycle in C2 (g; g) defines a first-order (or infinitesimal) deformation." },
       { file: "excerpts/arxiv-1711.06111.txt", quote: "trivial infinitesimal deformations (i.e., coboundaries) and hence isomorphic to the cohomology H2 (g; g)." },
@@ -296,7 +296,7 @@ const ADDITIONS = [
     preserved: "The isomorphism class of g under every infinitesimal deformation of its bracket",
     broken: "Nothing; it certifies that no deformation leaves the algebra",
     complexity: "N/A",
-    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): sublation in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
+    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): theory change in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
     receipts: [
       { file: "excerpts/wikipedia-whitehead-lemma-lie.txt", quote: "Let <math>\\mathfrak{g}</math> be a finite-dimensional, semisimple Lie [[algebra over a field]] of characteristic zero, ''V'' a finite-dimensional" },
       { file: "excerpts/wikipedia-whitehead-lemma-lie.txt", quote: "Similarly, Whitehead's second lemma states that under the conditions of the first lemma, also <math>H^2(\\mathfrak{g},V) = 0</math>." },
@@ -310,7 +310,7 @@ const ADDITIONS = [
     preserved: "The dimension; the brackets the rescaling leaves unscaled (in so(3) to e(2), [Y2, Y3] = Y1 and [Y3, Y1] = Y2)",
     broken: "The brackets whose scaling vanishes in the limit; semisimplicity (so(3), semisimple, contracts to e(2), which is not)",
     complexity: "N/A",
-    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): sublation in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
+    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): theory change in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
     receipts: [
       { file: "excerpts/wikipedia-group-contraction.txt", quote: "That amounts to a limiting operation on a parameter of the [[Lie algebra]], altering the [[structure constant]]s of this Lie algebra in a nontrivial singular" },
       { file: "excerpts/wikipedia-group-contraction.txt", quote: "The contraction limit {{math|''ε'' → 0}} trivializes the first commutator and thus yields the non-isomorphic algebra of the plane [[Euclidean group]]" },
@@ -326,7 +326,7 @@ const ADDITIONS = [
     preserved: "The signature: it does not depend on the diagonalizing basis",
     broken: "Nothing",
     complexity: "Polynomial: n^2 traces of products of n x n matrices, then a congruence diagonalization",
-    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): sublation in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
+    requestedBy: "Requested by the deformation generator (generation/2026-10-11-deform-001): theory change in physics read as Lie algebra deformation needs the cohomology, the obstruction theory, rigidity, contraction and the Killing test; receipted.",
     receipts: [
       { file: "excerpts/wikipedia-cartans-criterion.txt", quote: "is semisimple if and only if the Killing form is [[degenerate form|non-degenerate]].''" },
       { file: "excerpts/wikipedia-killing-form.txt", quote: "The [[Cartan criterion]] states that a Lie algebra is [[semisimple Lie algebra|semisimple]] if and only if the Killing form is [[degenerate form|non-degenerate]]." },

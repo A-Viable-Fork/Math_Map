@@ -4,7 +4,7 @@
 //   and how many classes they give; whether a deformation integrates (exact Jacobi of the deformed brackets,
 //   order by order, solving away each obstruction that is a coboundary); the Killing signature; whether the
 //   commutant of ad is one-dimensional; and diagonal contraction weights that return the old algebra as a
-//   limit (Inonu-Wigner, generalized). Sublation read as deformation: generation/2026-10-11-deform-001. Also
+//   limit (Inonu-Wigner, generalized). Theory change read as deformation: generation/2026-10-11-deform-001. Also
 //   H^2(g; R) with trivial coefficients and the central extensions it classifies; a fingerprint of invariants
 //   that tells algebras apart; four constraint forms on families of generators (an invariant form of given
 //   signature, the sign of tr(ad^2), a central bracket, a Killing signature); selection and ranking of

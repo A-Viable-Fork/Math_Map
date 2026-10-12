@@ -41,4 +41,4 @@ The obvious version is a table of API to operation with a permission beside each
 |---|---|---|---|
 | 1, 2, 3 | grading | conjecture | done: see `grading.md` |
 | The bindings of 3 | the eventual `mapfill/android.js` | conjecture, receipted paths, not device-tested | a binding whose cited code does not do what it says at the tag, or a device test that contradicts it |
-| Regulator mechanisms found in grading | Phone trellis (F-52, F-03, F-45) | proposals for the operator | a device test on the bench phone |
+| Regulator mechanisms found in grading | Phone program (F-52, F-03, F-45) | proposals for the operator | a device test on the bench phone |

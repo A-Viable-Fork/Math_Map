@@ -1,11 +1,11 @@
 ---
 Kind: expression
 Author: an agent session, on the operator's commission
-Commission: a deformation generator: sublation in physics read as Lie algebra deformation, validated on history (the kinematical algebras) and then on one open seed (Poincare semidirect Heisenberg); the operator's request of 2026-10-11
+Commission: a deformation generator: theory change in physics read as Lie algebra deformation, validated on history (the kinematical algebras) and then on one open seed (Poincare semidirect Heisenberg); the operator's request of 2026-10-11
 Date: 2026-10-11
 ---
 
-# Generation: sublation as deformation (DEFORM-001)
+# Generation: theory change as deformation (DEFORM-001)
 
 ## Reaching for
 

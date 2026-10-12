@@ -30,7 +30,7 @@ Plausible, and compatible with section 1 once its claim is read exactly. Its "no
 
 ## 4. What follows for the build
 
-[ruling: operator, 2026-10-11] Express the Android contracts for an existing checker, Guardians most likely, rather than build a parallel security verifier. The same day the operator ruled the MM-DR-001 schema proposals (invariant class, graded policy verdicts, context labels, facets; landed as commits 0647f17, d3cc337, befbd86 and 79bd7d4) and the MM-DR-002 Phone proposals (recorded in the Phone trellis, F-45).
+[ruling: operator, 2026-10-11] Express the Android contracts for an existing checker, Guardians most likely, rather than build a parallel security verifier. The same day the operator ruled the MM-DR-001 schema proposals (invariant class, graded policy verdicts, context labels, facets; landed as commits 0647f17, d3cc337, befbd86 and 79bd7d4) and the MM-DR-002 Phone proposals (recorded in the Phone program, F-45).
 
 - **Do not build a security verifier from scratch in `compose.mjs`.** Guardians (MIT, Z3), CaMeLoT (nuXmv, CTL) and TACIT (capture checking) already verify compositions of tool contracts, each in a restricted model. `compose.mjs` stays what it is, an inventory of what the map says about a chain, and reports security properties as needing an external check.
 - **Contribute what is missing.** The Android contracts and bindings are the scarce part; the natural route is to express them in a form one of these checkers consumes (Guardians' `ToolSpec` is the closest shape), rather than a parallel checker.
