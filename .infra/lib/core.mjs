@@ -31,7 +31,7 @@ export function glob(pattern) {
 export const matcher = (patterns = []) => { const res = patterns.map(glob); return (f) => res.some((r) => r.test(f)); };
 
 export function listFiles(root, { ext = TEXT_EXT, include = [], exclude = [] } = {}) {
-  const all = execFileSync("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard"], { cwd: root })
+  const all = execFileSync("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard"], { cwd: root, maxBuffer: 1 << 30 })
     .toString().split("\0").filter(Boolean);
   const inc = include.length ? matcher(include) : () => true;
   const exc = matcher([".infra/**", ...exclude]);

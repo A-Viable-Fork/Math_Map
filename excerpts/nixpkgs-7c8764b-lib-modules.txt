@@ -1,0 +1,25 @@
+Excerpts, verbatim, from: nixpkgs lib/modules.nix at 7c8764b (MIT)
+URL: https://raw.githubusercontent.com/NixOS/nixpkgs/7c8764b7c7b09b34f632464276218ef9090eaa11/lib/modules.nix
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 11e4ba6d7bd9930bcf5e12a2544d44e3370977c4d39493e4906ec6aebc053c2e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+process the mkOverride properties,
+    that is, return the values that have the highest (that is,
+    numerically lowest) priority, and strip the mkOverride
+    properties.
+
+values = concatMap (def: if getPrio def == highestPrio then [ (strip def) ] else [ ]) defs;
+
+  mkOptionDefault = mkOverride 1500; # priority of option defaults
+  mkDefault = mkOverride 1000; # used in config sections of non-user modules to set a default
+  defaultOverridePriority = 100;
+
+  mkForce = mkOverride 50;
+
+The sort priority of a property is
+    defaultOrderPriority by default, but can be overridden by wrapping the property
+    using mkOrder.
+
+  mkBefore = mkOrder 500;
+  defaultOrderPriority = 1000;
+  mkAfter = mkOrder 1500;

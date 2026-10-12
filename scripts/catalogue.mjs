@@ -30,7 +30,7 @@ for (const p of C.entries) {
   if (/^inspected|out-of-scope|unretrievable/.test(p.status) && !p.note) F.push(`${p.id}: ${p.status} without a note`);
 }
 for (const f of readdirSync(join(ROOT, "excerpts"))) {
-  if (/^(mathlib|nlab|wikipedia)-/.test(f)) continue;
+  if (/^(mathlib|nixpkgs|nlab|wikipedia)-/.test(f)) continue; // source code and reference pages, not papers
   if (!owned.has(`excerpts/${f}`)) F.push(`excerpts/${f}: a paper excerpt with no catalogue entry`);
 }
 const IMPORTS = readdirSync(join(ROOT, "catalogue/imports")).filter((f) => f.endsWith(".json")).sort()

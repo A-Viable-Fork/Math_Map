@@ -29,9 +29,11 @@ import docgraph from "./checks/docgraph.mjs";
 import corrections from "./checks/corrections.mjs";
 import leanAudit from "./checks/lean-audit.mjs";
 import repomap from "./checks/repomap.mjs";
+import tokens from "./checks/tokens.mjs";
+import instructions from "./checks/instructions.mjs";
 import kit from "./checks/kit.mjs";
 
-export const CHECKS = { dashes, leak, provenance, receipts, freshness, headers, docgraph, corrections, "lean-audit": leanAudit, repomap };
+export const CHECKS = { dashes, leak, provenance, receipts, freshness, headers, docgraph, corrections, "lean-audit": leanAudit, repomap, tokens, instructions };
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const VERSION = readFileSync(join(HERE, "VERSION"), "utf8").trim();
 
