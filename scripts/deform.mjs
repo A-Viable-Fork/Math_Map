@@ -376,7 +376,7 @@ function dTriv2(g, w, C) {
 // (df)(a, b) = -f([a, b]).
 function dTriv1(g, f, C) { const n = g.n, v = new Map(); C.P.forEach(([a, b], x) => { let s = ZERO; for (const [k, c] of at(g.br, n, a, b)) s = s.add(c.mul(f.get(k) ?? ZERO)); if (!s.isZero()) v.set(x, s.neg()); }); return v; }
 // Invariance under X: (X.omega)(a,b) = -omega([X,a],b) - omega(a,[X,b]); (X.f)(a) = -f([X,a]).
-function trivialInvariant(g, H, C) {
+export function trivialInvariant(g, H, C = coords(g.n)) {
   const n = g.n, units2 = C.P.map((_, x) => new Map([[x, ONE]])), units1 = [...Array(n).keys()].map((a) => new Map([[a, ONE]]));
   if (!H) return { B1: units1, B2: units2 };
   const col2 = (w) => { const v = new Map(); H.forEach((X, h) => C.P.forEach(([a, b], x) => { let s = ZERO; for (const [k, f] of at(g.br, n, X, a)) s = s.add(f.mul(omegaAt(n, C, w, k, b))); for (const [k, f] of at(g.br, n, X, b)) s = s.add(f.mul(omegaAt(n, C, w, a, k))); if (!s.isZero()) v.set(h * C.P.length + x, s.neg()); })); return v; };
@@ -459,17 +459,24 @@ export function invariantForms(g, S, A) {
 }
 // The signatures {pos, neg} (nondegenerate only, unordered) reached by integer combinations of a basis of forms,
 // coefficients -2 to 2. Combinations c and -c give swapped signatures, so only those whose first nonzero
-// coefficient is positive are evaluated.
-export function formSignatures(basis) {
-  const out = new Set(), b = basis.length; if (!b) return out;
-  const m = basis[0].length, c = Array(b).fill(-2);
-  for (;;) {
-    const first = c.find((x) => x !== 0);
-    if (first > 0) {
-      const B = Array.from({ length: m }, (_, i) => Array.from({ length: m }, (_, j) => { let s = ZERO; for (let h = 0; h < b; h++) if (c[h]) s = s.add(basis[h][i][j].mul(Q.of(c[h]))); return s; }));
-      const s = signature(B); if (!s.zero) out.add(`${Math.max(s.pos, s.neg)},${Math.min(s.pos, s.neg)}`);
-    }
-    let h = 0; while (h < b && c[h] === 2) c[h++] = -2; if (h === b) break; c[h]++;
+// coefficient is positive are evaluated. Exhaustive up to `full` basis forms (5^7 combinations, a few seconds);
+// beyond that only combinations with at most two nonzero coefficients, and the result is marked partial (a
+// signature it lacks may still be reached). Results are cached by the basis, which candidates often share.
+const SIG_CACHE = new Map();
+export function formSignatures(basis, { full = 7 } = {}) {
+  const b = basis.length, key = basis.map((M) => M.map((r) => r.join(",")).join(";")).join("|") + `#${full}`;
+  if (SIG_CACHE.has(key)) return SIG_CACHE.get(key);
+  const out = new Set(); out.partial = b > full; SIG_CACHE.set(key, out); if (!b) return out;
+  const m = basis[0].length;
+  const test = (c) => {
+    const B = Array.from({ length: m }, (_, i) => Array.from({ length: m }, (_, j) => { let s = ZERO; for (let h = 0; h < b; h++) if (c[h]) s = s.add(basis[h][i][j].mul(Q.of(c[h]))); return s; }));
+    const s = signature(B); if (!s.zero) out.add(`${Math.max(s.pos, s.neg)},${Math.min(s.pos, s.neg)}`);
+  };
+  if (!out.partial) {
+    const c = Array(b).fill(-2);
+    for (;;) { if (c.find((x) => x !== 0) > 0) test(c); let h = 0; while (h < b && c[h] === 2) c[h++] = -2; if (h === b) break; c[h]++; }
+  } else {
+    for (let i = 0; i < b; i++) { const c = Array(b).fill(0); c[i] = 1; test(c); for (let j = i + 1; j < b; j++) for (const y of [-2, -1, 1, 2]) for (const x of [1, 2]) { const d = Array(b).fill(0); d[i] = x; d[j] = y; test(d); } }
   }
   return out;
 }
@@ -483,7 +490,8 @@ export function centralBracket(g, A, B) {
 }
 // The constraint forms as predicates on an algebra. Parameters name families.
 export const CONSTRAINTS = {
-  F1: ({ S, A, sig }) => (g) => { const B = invariantForms(g, families(g, S), families(g, A)); return !!B && formSignatures(B).has(`${Math.max(...sig)},${Math.min(...sig)}`); },
+  // F1 records on the predicate whether any answer it gave rested on a partial search (see formSignatures).
+  F1: ({ S, A, sig }) => { const f = (g) => { const B = invariantForms(g, families(g, S), families(g, A)); if (!B) return false; const r = formSignatures(B); if (r.partial) f.partial = true; return r.has(`${Math.max(...sig)},${Math.min(...sig)}`); }; f.partial = false; return f; },
   F2: ({ X, S, sign }) => (g) => { const x = family(g, X)[0], r = x === undefined ? null : growth(g, x, families(g, S)); return !!r && r.sign() === sign; },
   F3: ({ A, B }) => (g) => centralBracket(g, family(g, A), family(g, B)),
   F4: ({ sig }) => (g) => { const s = signature(killing(g)); return !s.zero && s.pos === sig[0] && s.neg === sig[1]; },
@@ -569,6 +577,9 @@ async function selftest() {
   // Constraint forms: so(3) carries one invariant form, definite; ad on a non-stable span gives null.
   const F = invariantForms(so3, [0, 1, 2], [0, 1, 2]);
   t("so(3): one invariant form, signature (3, 0)", F.length === 1 && formSignatures(F).has("3,0") && formSignatures(F).size === 1);
+  const diag = (i, m) => Array.from({ length: m }, (_, r) => Array.from({ length: m }, (_, c) => (r === c && r === i ? ONE : ZERO)));
+  const fs2 = formSignatures([0, 1].map((i) => diag(i, 2))), fs8 = formSignatures([...Array(8).keys()].map((i) => diag(i, 8)));
+  t("form search: exhaustive on 2 forms finds (2,0) and (1,1); on 8 forms it is partial and misses (8,0), which needs all 8", fs2.has("2,0") && fs2.has("1,1") && !fs2.partial && fs8.partial && !fs8.has("8,0"));
   t("affine 2-dim: ad x on span(p) is not stable; on span(x) tr(ad^2) = 1", growth(aff, 0, [1]) === null && growth(aff, 1, [0]).sign() > 0);
   t("central bracket: Heisenberg [x,y] yes, affine [x,p] no", centralBracket(heis, [0], [1]) && !centralBracket(aff, [0], [1]));
   const sel = select([{ alg: ab2, order: 0, support: 0, label: "a", fp: "A" }, { alg: aff, order: 1, support: 1, label: "b", fp: "B" }, { alg: aff, order: 1, support: 2, label: "c", fp: "B" }, { alg: so3, order: 1, support: 1, label: "d", fp: "C" }], (g) => g.n === 2);
