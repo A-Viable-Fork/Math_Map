@@ -1,0 +1,28 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Games/SubdivisionTarget.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Games/SubdivisionTarget.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 92a4d38fad266e969302e218d9b239ed39aa6f3b35f94addce32d80ef8fc5ddb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def subdivide {q : Nat} (H : Instance q) : Instance q :=
+  ProductTarget.render (Subdivision.game (ofInstance H))
+    (numericVertexEquiv H.vertices H.constraints.length)
+    (numericEdgeEquiv H.constraints.length) (tables H)
+    (by have h := H.constraintCount_positive; omega)
+
+@[simp] theorem subdivide_vertices {q : Nat} (H : Instance q) :
+    (subdivide H).vertices = H.vertices + 3 * H.constraints.length
+
+@[simp] theorem subdivide_length {q : Nat} (H : Instance q) :
+    (subdivide H).constraints.length = 4 * H.constraints.length
+
+theorem subdivide_translation {q s : Nat}
+    (coordinates : Fin q ≃ Integration.BinaryLinear.Vector s) (H : Instance q)
+    (hH : Integration.TranslationTarget.IsTranslationInstance coordinates H) :
+    Integration.TranslationTarget.IsTranslationInstance coordinates (subdivide H)
+
+def simpleBipartite {q : Nat} (H : Instance q) : SimpleBipartite (subdivide H) :=
+  ProductTarget.render_simpleBipartite _ _ _ _ _
+
+theorem value_eq {q : Nat} (H : Instance q) (hq : 0 < q) :
+    Integration.InstanceValue.value (subdivide H) =
+      1 - (1 - Integration.InstanceValue.value H) / 4

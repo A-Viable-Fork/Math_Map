@@ -1,0 +1,75 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/ActualSeedSamplingLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/ActualSeedSamplingLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 05a6be78349633fabd737852014ef3a21916992648d33b821c7bec2e8aca7085
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem fullSeedLaw_eq_sampledAgreement (S : Source)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))
+    (good : VisiblePolicies.LeftInput S k s d (Vector rs) →
+      VisiblePolicies.ResponseWitness k → Prop)
+    (β : ℝ) (hβ₀ : 0 ≤ β) (hβ₁ : β ≤ 1) :
+    (AdviceLaw.fullSeedLaw (V := Alphabet s × Vector d)
+      (FiniteDistribution.uniform (Fin k → Fin S.occurrences))
+      (FiniteDistribution.uniform (Alphabet s →ₗ[F2] Vector rs)) β hβ₀ hβ₁).expectation
+      (fun seed => VisiblePolicies.observedAgreement S labeling good
+        (AdviceLaw.seedToActualDraw seed.1.1 seed.1.2 seed.2)) =
+      (FiniteDistribution.uniform (Alphabet s →ₗ[F2] Vector rs)).expectation
+        (fun A => sampledAgreement S labeling good
+          (Clean.IncidenceGap.slotLaw (FiniteDistribution.uniform (Fin S.occurrences)))
+          A β hβ₀ hβ₁)
+
+theorem fullSeedLaw_upper (S : Source)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))
+    (good : VisiblePolicies.LeftInput S k s d (Vector rs) →
+      VisiblePolicies.ResponseWitness k → Prop)
+    (β : ℝ) (hβ₀ : 0 ≤ β) (hβ₁ : β ≤ 1)
+    (distinct : ∀ o i j, (sourceIncidence S).name o i =
+      (sourceIncidence S).name o j → i = j)
+    (hopt : Clean.IncidenceGap.parityValue (sourceIncidence S)
+      (FiniteDistribution.uniform (Fin S.occurrences)) ≤ (4 : ℝ) / 5) :
+    (AdviceLaw.fullSeedLaw (V := Alphabet s × Vector d)
+      (FiniteDistribution.uniform (Fin k → Fin S.occurrences))
+      (FiniteDistribution.uniform (Alphabet s →ₗ[F2] Vector rs)) β hβ₀ hβ₁).expectation
+      (fun seed => VisiblePolicies.observedAgreement S labeling good
+        (AdviceLaw.seedToActualDraw seed.1.1 seed.1.2 seed.2)) ≤
+      (1 - (β / (2 : ℝ) ^ (d + rs)) / 3600) ^ k
+
+theorem actual_totalVariation_le_slope (S : Source) (k s d r : ℕ)
+    (β : ℝ) (hβ : 0 ≤ β) (hβ' : β ≤ 1) :
+    (ActualEvents.unrestricted S k s d r).totalVariation
+      ((ActualSeedEvents.law S k s d r β hβ hβ').pushforward (ActualSeedEvents.pad S k s d r)) ≤
+        Foundations.Information.totalVariation
+          (SparseLaw.independentWeights
+            (SparseLaw.mixture β (SparseLaw.singletonPairWeights (Ambient s d))) k)
+          (SparseLaw.uniformWeights (Fin k → Ambient s d × Ambient s d))
+
+structure Parameters (p : ℚ) where
+  k : Nat
+  s : Nat
+  d : Nat
+  k_pos : 1 ≤ k
+  s_pos : 1 ≤ s
+  T : NoiseTables.Table s d
+  f : Ambient s d → Alphabet s
+  equivariant : ∀ x c, f (x + (c, 0)) = f x + c
+  stability : (T.gadget f equivariant).stabilityError ≤ p
+  sound : ∀ S : Source, S.DistinctNames →
+    Clean.IncidenceGap.parityValue (ActualAdviceUpper.sourceIncidence S)
+      (FiniteDistribution.uniform (Fin S.occurrences)) ≤ (4 : ℝ) / 5 →
+    InstanceValue.value (TableKeysAddressGame.tableOutput S k T) ≤ (99 : ℝ) / 100
+
+theorem semantic_rate_le_address_value (S : Source) (k : Nat) {s d : Nat}
+    (g : SplitGadget s d) (en : NoiseEnumeration g)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s)) :
+    (GapSemantics.satisfactionRate (TableKeysGame.outputInstance S k g) labeling : ℝ) ≤
+      InstanceValue.value (TableKeysAddressGame.outputInstance S k g en)
+
+theorem completeness (P : Parameters p) (S : Source)
+    (assignment : Fin S.variables → Bool) (ξ : ℚ)
+    (hfailure : S.failure assignment ≤ ξ) :
+    (1 : ℝ) - ((P.k : ℝ) * (ξ : ℝ) + (p : ℝ) / 2) ≤
+      InstanceValue.value (TableKeysAddressGame.tableOutput S P.k P.T)
+
+theorem output_translations (P : Parameters p) (S : Source) :
+    TranslationTarget.IsTranslationInstance (Encoding.alphabetEquiv P.s).symm
+      (P.output S)

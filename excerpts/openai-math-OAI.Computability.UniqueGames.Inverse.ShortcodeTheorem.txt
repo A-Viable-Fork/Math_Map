@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Inverse/ShortcodeTheorem.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Inverse/ShortcodeTheorem.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: de6a03f1f49d9302a2fe92caf857a4f6680dd6591b6f74b480b59444d7ebf649
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem inversePrinciple : Shortcode.InversePrinciple

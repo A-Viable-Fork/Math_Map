@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Repetition/TensorAlgebraLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Repetition/TensorAlgebraLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: fc67974023bc8cd2f26cdeedfddaca6f54468216f5f5cb5575c5d69868b854f1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem projection_repetition_value
+    (G : Game Q₁ Q₂ A₁ A₂) (hG : IsProjection G) (n : ℕ)
+    {gap : ℝ} (hgap₀ : 0 < gap) (hgap₁ : gap < 1)
+    (hvalue : G.value ≤ 1 - gap) :
+    (G.repetition n).value ≤ (1 - gap ^ 2 / 16) ^ n

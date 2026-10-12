@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/FromMatrixGap.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/FromMatrixGap.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 98bb100c39d3ebc4dc65ead310db9d46b6fe04ce8df029137cf0358cf8b4dc13
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def reduction {ε δ : ℝ} (P : ParameterSelection.OuterParameters ε δ)
+    (M : Decoder.MatrixGap.Parameters P.pStar) :
+    MachineOutputContract.BinaryGapReduction ε δ

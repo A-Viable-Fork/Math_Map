@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Quadratic/BlockNoise.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Quadratic/BlockNoise.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 3f36a13f500a2ed702b517b72ab0d57e325b2a42af391ff6b9ffcedb48850a74
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def blockObservable (p : Vec F × Vec F) : Vec F := p.2 + Q p.1

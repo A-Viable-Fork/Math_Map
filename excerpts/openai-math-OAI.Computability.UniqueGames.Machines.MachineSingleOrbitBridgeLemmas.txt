@@ -1,0 +1,23 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineSingleOrbitBridgeLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineSingleOrbitBridgeLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 75fca94b9db81573768c266bd65e7087de3cf02ca1209569e73c67b1fe7cc26d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def output (k : Nat) {s d : Nat} (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d)
+    (input : SourceEncoding.Input) : UniqueGamesTheorem.Foundations.Target.Instance (2 ^ s) :=
+  SingleAddress.tableOutput (Source.ofList input.equations input.nonempty) k T
+
+theorem old_output_eq_double (k : Nat) {s d : Nat}
+    (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d) (input : SourceEncoding.Input) :
+    MachineAddressGame.output k T input = doubleInstance (output k T input)
+
+def computableInPolyTime (k : Nat) {s d : Nat}
+    (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d) :
+    TM2ComputableInPolyTime SourceEncoding.inputBits gameBits (output k T) :=
+  MachineSequential.composeBits (f := output k T) (g := id) (doubledComputableInPolyTime k T)
+    (MachineSingleOrbitRuntime.computableInPolyTime (2 ^ s))
+
+theorem workAlphabetFinite (k : Nat) {s d : Nat}
+    (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d)
+    (tape : (computableInPolyTime k T).tm.K) :
+    Finite ((computableInPolyTime k T).tm.Γ tape)

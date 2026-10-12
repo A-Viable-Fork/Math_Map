@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Quadratic/BlockNoiseProbabilityLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Quadratic/BlockNoiseProbabilityLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 1ab913200dee0b6e1a8220dd35f761a817f93af22d219035fa979e77363da49e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem nonzeroBlockChangeProbability_eq (v : Vec F) (hv : v ≠ 0)
+    (p : Vec F × Vec F) :
+    nonzeroBlockChangeProbability v p =
+      1 - 1 / ((Nat.card F : ℚ) ^ 2 + (Nat.card F : ℚ) + 1)

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/ActualSourceLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/ActualSourceLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: c4afd459bb8a4ca1ddf285edf4a10e88174b72aa45c23cd1237d87ef1f3d7caf
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure SplitGadget (s d : Nat) where
+  f : Ambient s d → Alphabet s
+  equivariant : ∀ (x : Ambient s d) (c : Alphabet s), f (x + (c, 0)) = f x + c
+  NoiseIndex : Type
+  noiseFintype : Fintype NoiseIndex
+  noiseNonempty : Nonempty NoiseIndex
+  noise : NoiseIndex → Ambient s d

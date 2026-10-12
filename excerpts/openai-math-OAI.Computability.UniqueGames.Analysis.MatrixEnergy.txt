@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Analysis/MatrixEnergy.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Analysis/MatrixEnergy.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 823051d41e57851b1bccb91bfb56c303298e980c9d0be8730c54f352499552f6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem spectralEnergy_le_cutoff_add
+    (weight : Q → ℝ) (keep : (q : Q) → I q → Prop) (eigen a : (q : Q) → I q → ℝ) (η : ℝ)
+    (hw : ∀ q, 0 ≤ weight q) (hη : 0 ≤ η)
+    (hone : ∀ q i, eigen q i ≤ 1)
+    (hhigh : ∀ q i, ¬ keep q i → eigen q i ≤ η) :
+    spectralEnergy weight eigen a ≤ cutoffEnergy weight keep a + η * energy weight a

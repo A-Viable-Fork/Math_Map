@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/CanonicalBodyTemplateLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/CanonicalBodyTemplateLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 9f1ab77baed916b131e62103a010e456004ddbd3993dc088b3b76f2384390ae5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure Input where
+  «variables» : Nat
+  equations : List (CloneGap.Equation (Fin «variables»))
+  nonempty : equations ≠ []

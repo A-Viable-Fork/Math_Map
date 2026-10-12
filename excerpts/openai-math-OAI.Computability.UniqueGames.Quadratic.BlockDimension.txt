@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Quadratic/BlockDimension.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Quadratic/BlockDimension.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: dc1c99adb4f5ce73f515466155616c6f77a67fd6df2f3ba76a5246043b1b472a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem finrank_U (v : Vec F) (hv : v ≠ 0) :
+    Module.finrank (ZMod 2) (U v) = 3 * Module.finrank (ZMod 2) F

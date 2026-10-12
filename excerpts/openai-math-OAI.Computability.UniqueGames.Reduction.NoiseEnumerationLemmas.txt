@@ -1,0 +1,27 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/NoiseEnumerationLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/NoiseEnumerationLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: d1bbf9b5c953f6dd47fc641cbfd786d929ffd7cbd6f6ff98abfdeb14357ef675
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+noncomputable def ofFintype (g : SplitGadget s d) : NoiseEnumeration g where
+  indices := Finset.univ.toList
+  nodup := Finset.nodup_toList _
+  complete i := by simp
+
+structure Table (s d : Nat) where
+  vectors : List (Ambient s d)
+  nonempty : vectors ≠ []
+
+def ofEnumeration (g : SplitGadget s d) (en : NoiseEnumeration g) : Table s d where
+  vectors := en.indices.map g.noise
+  nonempty := by simpa using en.nonempty
+
+theorem stabilityError_ofEnumeration (g : SplitGadget s d) (en : NoiseEnumeration g) :
+    ((ofEnumeration g en).gadget g.f g.equivariant).stabilityError =
+      g.stabilityError
+
+theorem kernelProbability_ofEnumeration (g : SplitGadget s d)
+    (en : NoiseEnumeration g) {P : Type} [AddCommGroup P] [Module F2 P]
+    (S : Ambient s d →ₗ[F2] P) :
+    SplitGadget.kernelProbability ((ofEnumeration g en).gadget g.f g.equivariant) S =
+      SplitGadget.kernelProbability g S

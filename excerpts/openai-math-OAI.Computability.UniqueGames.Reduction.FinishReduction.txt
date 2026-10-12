@@ -1,0 +1,21 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Reduction/FinishReduction.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Reduction/FinishReduction.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 089188db3eff96c660b349dd602a7bcb66a94b1faa0a84c9db7a1e41fcefb93d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def of_matrix_reduction {ε δ : ℝ} (P : ParameterSelection.OuterParameters ε δ)
+    {q s : ℕ} (hq : 2 ≤ q) (hs : 1 ≤ s)
+    (coordinates : Fin q ≃ BinaryLinear.Vector s)
+    (matrix : List Bool → Instance q)
+    (translations : ∀ input, TranslationTarget.IsTranslationInstance coordinates (matrix input))
+    (computation : Turing.TM2ComputableInPolyTime (id : List Bool → List Bool)
+      gameBits matrix)
+    (finiteAlphabet : MachineFiniteAlphabet.FiniteAlphabet computation.tm)
+    (d : ℚ) (hd : d ≤ P.epsilon0 / P.repetitions)
+    (complete : ∀ input, BinaryLanguage.language input →
+      1 - (d : ℝ) ≤ InstanceValue.value (matrix input))
+    (sound : ∀ input, ¬BinaryLanguage.language input →
+      InstanceValue.value (matrix input) ≤ 99 / 100) :
+    MachineOutputContract.BinaryGapReduction ε δ
+
+  let rounded := fun input => UniformTarget.construct P.copies hC (matrix input)

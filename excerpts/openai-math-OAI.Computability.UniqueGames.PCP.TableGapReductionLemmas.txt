@@ -1,0 +1,52 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/PCP/TableGapReductionLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/PCP/TableGapReductionLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: fa173f78419f7643578d850b5db40bdbf9ba961902cc822cf5c21c04235332a8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem gapMap_satisfiable_iff (F : Formula) : (gapMap H F).Satisfiable ↔ F.Satisfiable
+
+theorem gapMap_clauseGap (F : Formula) (unsat : ¬ F.Satisfiable) :
+    Hastad.SourceGap.ClauseGap (gapMap H F) PCPIteration.finalClauseGap
+
+def asSource (input : SourceEncoding.Input) : Source :=
+  Source.ofList input.equations input.nonempty
+
+def gapInput (H : RoundTables.BaseTable) (F : Formula) :
+    Hastad.SourceGeneratorContract.NonemptyFormula :=
+  ⟨TableIteration.gapMap H F, TableIteration.gapMap_nonempty H F⟩
+
+def sourceMap (ξ : ℚ) (hξ : 0 < ξ) :=
+  Hastad.SourceGeneratorContract.errorMap PCPIteration.finalClauseGap ξ
+    PCPIteration.finalClauseGap_positive TableGapReduction.finalClauseGap_le_one hξ
+
+def output (H : RoundTables.BaseTable) (ξ : ℚ) (hξ : 0 < ξ)
+    (F : Formula) : SourceEncoding.Input :=
+  sourceMap ξ hξ (gapInput H F)
+
+theorem complete (H : RoundTables.BaseTable) (ξ : ℚ) (hξ : 0 < ξ)
+    (F : Formula) (hF : F.Satisfiable) :
+    ∃ bits, 1 - ξ ≤ success (output H ξ hξ F) bits
+
+theorem sound (H : RoundTables.BaseTable)
+    (certificate : SpectralReturn.SpectralCertificate (ExpanderTables.graph H) (1 / 100 : ℝ))
+    (ξ : ℚ) (hξ : 0 < ξ) (F : Formula) (hF : ¬ F.Satisfiable)
+    (bits : Fin (output H ξ hξ F).variables → Bool) :
+    success (output H ξ hξ F) bits ≤ (1 + ξ) / 2
+
+noncomputable def gapMachine (H : RoundTables.BaseTable) :
+    Turing.TM2ComputableInPolyTime formulaBits Hastad.SourceGeneratorContract.inputEncoding
+      (gapInput H) where
+  toTM2ComputableAux :=
+    (MachineTableIteration.gapMapCertificate H (roundMachine H)).toTM2ComputableAux
+  time := (MachineTableIteration.gapMapCertificate H (roundMachine H)).time
+
+noncomputable def sourceMachine (ξ : ℚ) (hξ : 0 < ξ) :
+    Turing.TM2ComputableInPolyTime Hastad.SourceGeneratorContract.inputEncoding
+      SourceEncoding.inputBits (sourceMap ξ hξ) :=
+  Hastad.SourceGenerator.forErrorComputableInPolyTime PCPIteration.finalClauseGap ξ
+    PCPIteration.finalClauseGap_positive TableGapReduction.finalClauseGap_le_one hξ
+
+noncomputable def computation (H : RoundTables.BaseTable) (ξ : ℚ) (hξ : 0 < ξ) :
+    Turing.TM2ComputableInPolyTime formulaBits SourceEncoding.inputBits (output H ξ hξ) :=
+  MachineSequential.composeBits (f := gapInput H) (g := sourceMap ξ hξ)
+    (gapMachine H) (sourceMachine ξ hξ)

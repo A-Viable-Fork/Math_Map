@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Gadgets/NonlinearRecurrenceLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Gadgets/NonlinearRecurrenceLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: dd5b94b16baadf8e40a85c650b4261745e48ac9ccd9b4bf8a4d1f5803e48f65c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem iterate_error (J : I → B →ₗ[k] X × B)
+    (hJ : Function.Surjective (aggregate J)) (Q : X → B) (ρ : ℚ)
+    (hk : ∀ d : B, d ≠ 0 →
+      (𝔼 i, 𝔼 z : X × B,
+        NonlinearRecurrence.change (fun p => p.2 + Q p.1) z (J i d)) = ρ)
+    (n : ℕ) : error (Stage.iterate J hJ Q n) =
+      (1 - 1 / (Fintype.card B : ℚ)) * ρ ^ n
+
+theorem quotient_error (s : Stage k B) : error (StageQuotient.toStage s) = error s

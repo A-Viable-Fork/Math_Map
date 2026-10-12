@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Games/UniformTarget.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Games/UniformTarget.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 3ef4f387980bf4adb2975272cefa4c2af4c275b62afe3b6b42d00af21205587c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def construct {q : Nat} (C : Nat) (hC : 0 < C) (g : Instance q) : Instance q where
+  vertices := g.vertices
+  constraints := copyMajor C g.constraints
+  nonempty := by
+    apply List.length_pos_iff.mp
+    rw [copy_length]
+
+@[simp] theorem edge_count {q : Nat} (C : Nat) (hC : 0 < C) (g : Instance q) :
+    (construct C hC g).constraints.length = C * g.constraints.length
+
+theorem value {q : Nat} (C : Nat) (hC : 0 < C) (g : Instance q) (hq : 0 < q) :
+    InstanceValue.value (construct C hC g) = InstanceValue.value g
+
+theorem translations {q s : Nat} (C : Nat) (hC : 0 < C) (g : Instance q)
+    (coordinates : Fin q ≃ BinaryLinear.Vector s)
+    (hg : TranslationTarget.IsTranslationInstance coordinates g) :
+    TranslationTarget.IsTranslationInstance coordinates (construct C hC g)

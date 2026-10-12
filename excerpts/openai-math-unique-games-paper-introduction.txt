@@ -1,0 +1,19 @@
+Excerpts, verbatim, from: OpenAI, The Unique Games Theorem (preprint, September 23, 2026), build/sections/00-introduction.tex at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/preprints/The-Unique-Games-Theorem-September-23-2026/build/sections/00-introduction.tex
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 500522d4bf64a2b4891cf8d9db872c0f3e0a116db9e707f2768f2f9023987879
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Unique Games Conjecture asserts that systems
+of such constraints can be hard to approximate even when almost all
+constraints can be satisfied.
+
+For every fixed \(\varepsilon,\delta\in(0,1/2)\), there are an integer
+\(s\ge1\) and a deterministic polynomial-time reduction from
+\(\mathrm{3SAT}\) to explicit unweighted Unique Games instances
+
+Thus the result resolves the Unique Games Conjecture positively in its
+usual edge-value formulation~\cite[Conjecture~2.5]{Khot10}.
+The two errors are prescribed independently, before the alphabet is chosen.
+
+Binary translation constraints are a known equivalent formulation of the
+conjecture~\cite[Corollary~13 and Section~11.1]{KKMO07}

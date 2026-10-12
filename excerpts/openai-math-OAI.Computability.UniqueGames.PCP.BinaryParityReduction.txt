@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/PCP/BinaryParityReduction.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/PCP/BinaryParityReduction.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: ca5c71122f23058f2c2bbae867b383b6b360cc7331004f213fb332b0a83799a8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+structure Reduction (ξ : ℚ) where
+  reduce : List Bool → SourceEncoding.Input
+  distinct : ∀ word, (HastadSource.asSource (reduce word)).DistinctNames
+  completeness : ∀ word, BinaryLanguage.language word →
+    ∃ a, 1 - ξ ≤ Clone100.success (reduce word).equations a
+  soundness : ∀ word, ¬ BinaryLanguage.language word →
+    ∀ a, Clone100.success (reduce word).equations a ≤ 4 / 5
+  computation : Turing.TM2ComputableInPolyTime (id : List Bool → List Bool)
+    SourceEncoding.inputBits reduce
+  finiteAlphabet : FiniteAlphabet computation.tm
+
+theorem exists_reduction (ξ : ℚ) (positive : 0 < ξ) (small : ξ < 1 / 100) :
+    Nonempty (Reduction ξ)

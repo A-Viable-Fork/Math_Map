@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineBinaryParsingLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineBinaryParsingLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: fd748296ada3050adccd1c834f467b0a580330cb8c6cfbb461e53f1cf682f926
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def totalParsed (input : List Bool) : BinaryFormula.Formula :=
+  (BinaryEncoding.decodeFormula input).getD rejectBinary
+
+def totalRename (input : List Bool) : Target.Formula :=
+  BinaryOccurrenceRename.renamed (totalParsed input)
+
+theorem totalRename_satisfiable_iff (input : List Bool) :
+    (totalRename input).Satisfiable ↔ language input

@@ -230,6 +230,7 @@
 | `excerpts/mathlib-Mathlib.Topology.Instances.CantorSet.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Topology.Metrizable.Urysohn.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Topology.VectorBundle.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt` | Mathlib declaration statements at a commit other than the formal layer's pin (named in the file), quoted verbatim with the file's hash. |
 | `excerpts/nixpkgs-7c8764b-lib-modules.txt` | Verbatim windows from a nixpkgs source file at a pinned commit (MIT), with the file's hash. |
 | `excerpts/nlab-aufhebung-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung-modalities.txt` | Verbatim windows from an nLab page. |
@@ -245,6 +246,62 @@
 | `excerpts/nlab-reflective-subcategory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subdivision.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subobject-classifier-meet.txt` | Verbatim windows from an nLab page. |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Analysis.MatrixEnergy.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualMatrixContradiction.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualProjectedTransfer.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.AdviceFibersLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.MatrixGapFromInverseLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.SparseLawLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysAddressGameLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysGame.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.VisiblePoliciesLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.FiniteTrialsLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.ValueLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.Final.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.NonlinearRecurrenceLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.QuotientLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductSoundness.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Games.UniformTarget.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeInterfaceLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeTheorem.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.GraphCounterStartLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryInputReductionLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryParsingLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineClone100.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineFiniteAlphabet.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineProductRuntime.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSingleOrbitBridgeLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSubdivisionBodySpecLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineUniformRun.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.BinaryParityReduction.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceGapLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceIncidence.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableIteration.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.Block.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockDimension.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockKernelLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockNoise.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockNoiseProbabilityLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ActualSourceLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.CanonicalBodyTemplateLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FinishReduction.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FromMatrixGap.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.RealTargetLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.AnalyticRateLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.TensorAlgebraLemmas.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
+| `excerpts/openai-math-unique-games-paper-introduction.txt` | Verbatim windows from the Unique Games preprint's TeX source in openai/math at commit fd4aeeb. |
 | `excerpts/pos-ffp14-210.txt` | Verbatim windows from a Proceedings of Science paper. |
 | `excerpts/wikipedia-accelerating-expansion-1998.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -456,6 +513,62 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/nlab-level-of-a-topos.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-reflective-subcategory-colimits.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-subdivision.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Analysis.MatrixEnergy.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualMatrixContradiction.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualProjectedTransfer.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.AdviceFibersLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.MatrixGapFromInverseLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.SparseLawLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysAddressGameLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysGame.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.VisiblePoliciesLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.FiniteTrialsLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.ValueLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.Final.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.NonlinearRecurrenceLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.QuotientLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductSoundness.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Games.UniformTarget.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeInterfaceLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeTheorem.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.GraphCounterStartLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryInputReductionLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryParsingLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineClone100.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineFiniteAlphabet.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineProductRuntime.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSingleOrbitBridgeLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSubdivisionBodySpecLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineUniformRun.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.BinaryParityReduction.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceGapLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceIncidence.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableIteration.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.Block.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockDimension.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockKernelLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockNoise.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockNoiseProbabilityLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ActualSourceLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.CanonicalBodyTemplateLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FinishReduction.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FromMatrixGap.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.RealTargetLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.AnalyticRateLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.TensorAlgebraLemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt` |
+| `mapfill/additions.js` | names | `excerpts/openai-math-unique-games-paper-introduction.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-cartans-criterion.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-duhamel.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-euler-lagrange-equation.txt` |
@@ -485,7 +598,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/conditions.js` | names | `excerpts/arxiv-2103.12179.txt` |
 | `mapfill/conditions.js` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` |
 | `mapfill/conditions.js` | names | `excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt` |
+| `mapfill/conditions.js` | names | `excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt` |
 | `mapfill/conditions.js` | names | `excerpts/nlab-reflective-subcategory.txt` |
+| `mapfill/conditions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt` |
+| `mapfill/conditions.js` | names | `excerpts/openai-math-unique-games-paper-introduction.txt` |
 | `mapfill/conditions.js` | names | `excerpts/wikipedia-bessel-process.txt` |
 | `mapfill/conditions.js` | names | `excerpts/wikipedia-castelnuovo.txt` |
 | `mapfill/conditions.js` | names | `excerpts/wikipedia-cone-topology.txt` |
@@ -661,6 +777,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-2103.12179.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-hep-th-0410212.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/econometrica-jackson-1991.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/openai-math-unique-games-paper-introduction.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/pos-ffp14-210.txt` |
 | `reports/CATALOGUE.md` | names | `scripts/catalogue-import.mjs` |
 | `reports/CATALOGUE.md` | names | `scripts/catalogue.mjs` |

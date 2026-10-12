@@ -71,6 +71,18 @@ const CONDITIONS = [
       { file: "excerpts/wikipedia-lebesgue-decomposition.txt", quote: "then there exist two uniquely determined σ-finite signed measures" },
       { file: "excerpts/wikipedia-lebesgue-decomposition.txt", quote: "An alternative refinement is that of the decomposition of a regular [[Borel measure]]" },
     ] },
+  { id: "D8-X09", name: "Gap reduction from binary 3SAT to translation Unique Games",
+    conditions: "theorem11 in the Lean (openai/math at fd4aeeb) states that this reduction exists for every 0 < eps, delta < 1/2, and the tree builds with only the standard axioms. That implies the Unique Games Conjecture in Khot's edge-value form, as a general link: hardness for simple bipartite translation games is hardness for the permutation games the conjecture names, since a translation is a permutation and the value is the same. Two premises sit outside the Lean: (i) 3SAT under this binary codec is NP-hard (Cook-Levin, not formalized there); (ii) a Mathlib TM2 machine with finite tape alphabets, halting within a polynomial in the input length, is a polynomial-time machine in the usual sense. Mathlib's FinTM2 requires only the input stack's alphabet to be finite, which is why the reduction carries its own finite-alphabet field.",
+    counterexamples: [],
+    receipts: [
+      { file: "excerpts/openai-math-unique-games-paper-introduction.txt", quote: "The Unique Games Conjecture asserts that systems\nof such constraints can be hard to approximate even when almost all\nconstraints can be satisfied." },
+      { file: "excerpts/openai-math-unique-games-paper-introduction.txt", quote: "Thus the result resolves the Unique Games Conjecture positively in its\nusual edge-value formulation~\\cite[Conjecture~2.5]{Khot10}." },
+      { file: "excerpts/openai-math-unique-games-paper-introduction.txt", quote: "Binary translation constraints are a known equivalent formulation of the\nconjecture~\\cite[Corollary~13 and Section~11.1]{KKMO07}" },
+      { file: "excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt", quote: "  (Γ : K → Type)" },
+      { file: "excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt", quote: "  [Γk₀Fin : Fintype (Γ k₀)]" },
+      { file: "excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt", quote: "  /-- proof that this machine outputs `f` in at most `time(input.length)` steps -/" },
+      { file: "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt", quote: "def FiniteAlphabet (M : FinTM2) : Prop := ∀ k, Finite (M.Γ k)" },
+    ] },
 ];
 
 module.exports = { CONDITIONS };

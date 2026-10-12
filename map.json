@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "3ef494a68c3cb188e79042ccc686bc15221d3a21"
+  "commit": "193f50214653ac38afd303fdebe9ee2bae93d8f7"
  },
  "domains": {
   "D1": {
@@ -710,31 +710,31 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 2019,
-  "anchorable": 2016,
+  "entries": 2052,
+  "anchorable": 2049,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 26,
+   "added": 59,
    "generated": 39
   },
   "byTier": {
    "landed": 1337,
    "audited": 116,
    "authored": 494,
-   "receipted": 32,
+   "receipted": 65,
    "flagged": 1,
    "generated": 39
   },
-  "withConditions": 9,
+  "withConditions": 10,
   "corrected": 22,
   "fieldEvidence": {
    "contradicted": 0,
    "unsupported": 100,
    "unchecked": 11226,
    "imprecise": 20,
-   "sourced": 716,
+   "sourced": 914,
    "formal": 52
   },
   "lean": {
@@ -58681,6 +58681,1690 @@
     {
      "file": "excerpts/nixpkgs-7c8764b-lib-modules.txt",
      "quote": "  mkBefore = mkOrder 500;\n  defaultOrderPriority = 1000;\n  mkAfter = mkOrder 1500;"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D3-X01",
+   "domain": "D3",
+   "name": "Binary 3SAT formula syntax",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "representation-change"
+   ],
+   "description": "Defines 3SAT as data: a literal is a natural-number variable name with a sign, a clause is a vector of three literals, a formula is a list of clauses, and a formula is satisfiable when some Boolean assignment to the names makes every clause true.",
+   "input": "Natural-number variable names, Boolean signs",
+   "output": "A formula (a list of three-literal clauses) and its satisfiability predicate",
+   "preserved": "Repeated names within a clause and repeated literals are allowed: the syntax imposes no distinctness",
+   "broken": "Nothing is transformed; the definition fixes the source problem the reduction starts from",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure Literal where\n  name : Nat\n  positive : Bool\n  deriving DecidableEq"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "abbrev Clause := Vector Literal 3"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure Formula where\n  clauses : List Clause"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def Formula.Satisfiable (F : Formula) : Prop :=\n  ∃ assignment : Nat → Bool, ∀ clause ∈ F.clauses, clause.eval assignment = true"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X03",
+   "domain": "D8",
+   "name": "Total parse and renaming of 3SAT bits",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "compression",
+    "computation-bridge"
+   ],
+   "description": "Reads a raw bit string as a 3SAT formula: decode it, send any string that fails to decode to a fixed unsatisfiable formula, then rename the occurring variables densely into a finite formula. The renamed formula is satisfiable exactly when the bits lie in the binary 3SAT language.",
+   "input": "A bit string, measured by its own length",
+   "output": "A formula over finitely many densely named variables",
+   "preserved": "Satisfiability: the renamed formula is satisfiable iff the input is in the language",
+   "broken": "The original variable names; a malformed string keeps no reading as a formula",
+   "complexity": "Polynomial (a TM2 machine with the identity codec on raw bits, every tape alphabet finite)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def decodeFormula (input : List Bool) : Option Formula := do\n  let (clauses, rest) ← parseClauses (input.length + 1) input\n  if rest = [] then some ⟨clauses⟩ else none"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryParsingLemmas.txt",
+     "quote": "def totalParsed (input : List Bool) : BinaryFormula.Formula :=\n  (BinaryEncoding.decodeFormula input).getD rejectBinary"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryParsingLemmas.txt",
+     "quote": "def totalRename (input : List Bool) : Target.Formula :=\n  BinaryOccurrenceRename.renamed (totalParsed input)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryParsingLemmas.txt",
+     "quote": "theorem totalRename_satisfiable_iff (input : List Bool) :\n    (totalRename input).Satisfiable ↔ language input"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryInputReductionLemmas.txt",
+     "quote": "noncomputable def computation :\n    TM2ComputableInPolyTime (id : List Bool → List Bool) formulaBits BinaryLanguage.totalRename"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryInputReductionLemmas.txt",
+     "quote": "theorem computation_finiteAlphabet : MachineFiniteAlphabet.FiniteAlphabet computation.tm"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X04",
+   "domain": "D8",
+   "name": "Table-driven PCP amplification to a clause gap",
+   "kind": "Transformer",
+   "tags": [
+    "iterative",
+    "construction",
+    "computation-bridge"
+   ],
+   "description": "Iterates a fixed amplification round, driven by a stored base table, a number of times set by the formula's size, and outputs a nonempty 3SAT formula. Satisfiable inputs stay satisfiable; an unsatisfiable input yields a formula with a fixed clause gap (every assignment violates a fixed fraction of clauses).",
+   "input": "A fixed base table, a 3SAT formula",
+   "output": "A nonempty formula with the clause-gap property when the input is unsatisfiable",
+   "preserved": "Satisfiability, in both directions",
+   "broken": "Size and clause list; perfect unsatisfiability becomes a quantitative gap",
+   "complexity": "Polynomial (a TM2 machine on the formula encoding)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableIteration.txt",
+     "quote": "def gapMap (H : BaseTable) (F : Formula) : Formula := FinalTableFormula.output (outputTable H F)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableIteration.txt",
+     "quote": "def iterationCount (F : Formula) : Nat := AmplificationIteration.rounds (size (initial F))"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "theorem gapMap_satisfiable_iff (F : Formula) : (gapMap H F).Satisfiable ↔ F.Satisfiable"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "theorem gapMap_clauseGap (F : Formula) (unsat : ¬ F.Satisfiable) :\n    Hastad.SourceGap.ClauseGap (gapMap H F) PCPIteration.finalClauseGap"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "def gapInput (H : RoundTables.BaseTable) (F : Formula) :\n    Hastad.SourceGeneratorContract.NonemptyFormula :=\n  ⟨TableIteration.gapMap H F, TableIteration.gapMap_nonempty H F⟩"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "noncomputable def gapMachine (H : RoundTables.BaseTable) :\n    Turing.TM2ComputableInPolyTime formulaBits Hastad.SourceGeneratorContract.inputEncoding\n      (gapInput H) where\n  toTM2ComputableAux :=\n    (MachineTableIteration.gapMapCertificate H (roundMachine H)).toTM2ComputableAux\n  time := (MachineTableIteration.gapMapCertificate H (roundMachine H)).time"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X05",
+   "domain": "D8",
+   "name": "Clause gap to near-satisfiable three-variable parity equations",
+   "kind": "Transformer",
+   "tags": [
+    "construction",
+    "representation-change",
+    "computation-bridge"
+   ],
+   "description": "Converts a clause-gap formula into a nonempty list of three-variable parity equations over the two-element field, with error parameter xi. A satisfiable formula gives an assignment satisfying at least 1 - xi of the equations; an unsatisfiable one caps every assignment at (1 + xi)/2, given a spectral certificate for the base table's expander.",
+   "input": "A clause-gap formula, a positive rational error xi",
+   "output": "A nonempty list of three-variable parity equations",
+   "preserved": "The gap, in new form: YES success at least 1 - xi, NO success at most (1 + xi)/2",
+   "broken": "Clauses become parity equations; perfect completeness becomes near completeness",
+   "complexity": "Polynomial (TM2 machines for each stage, composed)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceGapLemmas.txt",
+     "quote": "def errorMap (η ξ : ℚ) (hη : 0 < η) (hη1 : η ≤ 1) (hξ : 0 < ξ)\n    (F : NonemptyFormula) : UniqueGamesTheorem.Reduction.SourceEncoding.Input :=\n  SourceGap.forError η ξ hη hη1 hξ F.val"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "def sourceMap (ξ : ℚ) (hξ : 0 < ξ) :=\n  Hastad.SourceGeneratorContract.errorMap PCPIteration.finalClauseGap ξ\n    PCPIteration.finalClauseGap_positive TableGapReduction.finalClauseGap_le_one hξ"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "def output (H : RoundTables.BaseTable) (ξ : ℚ) (hξ : 0 < ξ)\n    (F : Formula) : SourceEncoding.Input :=\n  sourceMap ξ hξ (gapInput H F)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "theorem complete (H : RoundTables.BaseTable) (ξ : ℚ) (hξ : 0 < ξ)\n    (F : Formula) (hF : F.Satisfiable) :\n    ∃ bits, 1 - ξ ≤ success (output H ξ hξ F) bits"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "theorem sound (H : RoundTables.BaseTable)\n    (certificate : SpectralReturn.SpectralCertificate (ExpanderTables.graph H) (1 / 100 : ℝ))\n    (ξ : ℚ) (hξ : 0 < ξ) (F : Formula) (hF : ¬ F.Satisfiable)\n    (bits : Fin (output H ξ hξ F).variables → Bool) :\n    success (output H ξ hξ F) bits ≤ (1 + ξ) / 2"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "noncomputable def sourceMachine (ξ : ℚ) (hξ : 0 < ξ) :\n    Turing.TM2ComputableInPolyTime Hastad.SourceGeneratorContract.inputEncoding\n      SourceEncoding.inputBits (sourceMap ξ hξ) :=\n  Hastad.SourceGenerator.forErrorComputableInPolyTime PCPIteration.finalClauseGap ξ\n    PCPIteration.finalClauseGap_positive TableGapReduction.finalClauseGap_le_one hξ"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "noncomputable def computation (H : RoundTables.BaseTable) (ξ : ℚ) (hξ : 0 < ξ) :\n    Turing.TM2ComputableInPolyTime formulaBits SourceEncoding.inputBits (output H ξ hξ) :=\n  MachineSequential.composeBits (f := gapInput H) (g := sourceMap ξ hξ)\n    (gapMachine H) (sourceMachine ξ hξ)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X06",
+   "domain": "D8",
+   "name": "Hundredfold cloning of parity variables",
+   "kind": "Transformer",
+   "tags": [
+    "construction",
+    "expansion",
+    "local"
+   ],
+   "description": "Replaces each variable by 100 clones and each equation by its 970200 copies indexed by ordered triples of distinct clone indices, so that the three names in every equation are distinct. A lifted assignment keeps its success rate exactly; any assignment succeeds at most (1 + s)/2 + 3/100, with s the success of its majority decoding, which is at most 4/5 when every assignment of the source succeeds at most (1 + xi)/2 with xi < 1/100.",
+   "input": "A list of parity equations whose positions may repeat a variable",
+   "output": "A list with 100 times the variables and 970200 times the equations, three distinct names in each",
+   "preserved": "Success rate of lifted assignments, exactly",
+   "broken": "Soundness weakens to (1 + s)/2 + 3/100, at most 4/5 under the stated source bound",
+   "complexity": "Polynomial",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt",
+     "quote": "def clonedInput (input : SourceEncoding.Input) : SourceEncoding.Input where\n  «variables» := input.variables * 100\n  equations := equations input.equations\n  nonempty := equations_nonempty input.equations input.nonempty"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt",
+     "quote": "theorem equations_length {n : Nat} (es : List (Equation (Fin n))) :\n    (equations es).length = es.length * 970200"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt",
+     "quote": "theorem equation_distinct {n : Nat} (e : Equation (Fin n)) (t : GoodTriple) :\n    (equation e t).first ≠ (equation e t).second ∧\n      (equation e t).first ≠ (equation e t).third ∧\n      (equation e t).second ≠ (equation e t).third"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt",
+     "quote": "theorem completeness (input : SourceEncoding.Input)\n    (a : Fin input.variables → Bool) :\n    success (clonedInput input).equations (lift a) = success input.equations a"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt",
+     "quote": "theorem soundness (input : SourceEncoding.Input)\n    (a : Fin (clonedInput input).variables → Bool) :\n    success (clonedInput input).equations a ≤\n      (1 + success input.equations (majority a)) / 2 + 3 / 100"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.Clone100.txt",
+     "quote": "theorem soundness_four_fifths (input : SourceEncoding.Input) (ξ : ℚ)\n    (hξ : ξ < 1 / 100)\n    (hsource : ∀ a, success input.equations a ≤ (1 + ξ) / 2)\n    (a : Fin (clonedInput input).variables → Bool) :\n    success (clonedInput input).equations a ≤ 4 / 5"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineClone100.txt",
+     "quote": "def computation : TM2ComputableInPolyTime SourceEncoding.inputBits\n    SourceEncoding.inputBits Outer.Clone100.clonedInput :=\n  MachineClone100Certified.certifiedFunction triples triples_nonempty\n    Outer.Clone100.clonedInput input_bits_eq size_bound"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X07",
+   "domain": "D8",
+   "name": "Parity list as an incidence source",
+   "kind": "Correspondence",
+   "tags": [
+    "representation-change",
+    "projection"
+   ],
+   "description": "Reads a nonempty list of parity equations as a source of equation occurrences and exposes its occurrence-variable incidence without merging occurrences; the parity success of an assignment under the uniform law on occurrences equals its success on the list. Packaged as a reduction from binary 3SAT with distinct names, YES success at least 1 - xi and NO success at most 4/5, which exists for every 0 < xi < 1/100.",
+   "input": "A nonempty list of parity equations",
+   "output": "A source with its incidence relation; a binary parity reduction",
+   "preserved": "Parity success under the uniform occurrence law",
+   "broken": "The carrier: a serialized list becomes source and incidence data",
+   "complexity": "Polynomial for the packaged reduction (TM2, finite alphabets)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.CanonicalBodyTemplateLemmas.txt",
+     "quote": "structure Input where\n  «variables» : Nat\n  equations : List (CloneGap.Equation (Fin «variables»))\n  nonempty : equations ≠ []"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.TableGapReductionLemmas.txt",
+     "quote": "def asSource (input : SourceEncoding.Input) : Source :=\n  Source.ofList input.equations input.nonempty"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceIncidence.txt",
+     "quote": "def incidence (S : Source) : Incidence (Fin S.occurrences) (Fin S.variables) where\n  name := ActualGame.names S\n  rhs i := (S.equation i).rhs"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.SourceIncidence.txt",
+     "quote": "theorem paritySuccess_input (input : SourceEncoding.Input)\n    (a : Fin input.variables → Bool) :\n    paritySuccess (incidence (HastadSource.asSource input))\n      (FiniteDistribution.uniform (Fin (HastadSource.asSource input).occurrences)) a =\n      (Clone100.success input.equations a : ℝ)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.BinaryParityReduction.txt",
+     "quote": "structure Reduction (ξ : ℚ) where\n  reduce : List Bool → SourceEncoding.Input\n  distinct : ∀ word, (HastadSource.asSource (reduce word)).DistinctNames\n  completeness : ∀ word, BinaryLanguage.language word →\n    ∃ a, 1 - ξ ≤ Clone100.success (reduce word).equations a\n  soundness : ∀ word, ¬ BinaryLanguage.language word →\n    ∀ a, Clone100.success (reduce word).equations a ≤ 4 / 5\n  computation : Turing.TM2ComputableInPolyTime (id : List Bool → List Bool)\n    SourceEncoding.inputBits reduce\n  finiteAlphabet : FiniteAlphabet computation.tm"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.PCP.BinaryParityReduction.txt",
+     "quote": "theorem exists_reduction (ξ : ℚ) (positive : 0 < ξ) (small : ξ < 1 / 100) :\n    Nonempty (Reduction ξ)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D1-X01",
+   "domain": "D1",
+   "name": "Explicit permutation constraint game",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "local"
+   ],
+   "description": "A Unique Games instance as data: a vertex count and a nonempty list of directed constraints, each with source, target and a permutation of the alphabet stored as a forward table and an inverse table that are proved mutually inverse. A labeling satisfies a constraint when the permutation sends the source's label to the target's.",
+   "input": "Vertex and alphabet counts, forward and inverse tables",
+   "output": "A Unique Games instance over the alphabet",
+   "preserved": "Each constraint is a bijection of the alphabet; the constraint list is nonempty",
+   "broken": "Loops and parallel constraints are not excluded here; a separate presentation (simple bipartite) excludes them",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure PermutationTable (alphabet : Nat) where\n  images : Vector (Fin alphabet) alphabet\n  inverseImages : Vector (Fin alphabet) alphabet\n  leftInverse : ∀ label : Fin alphabet, inverseImages[images[label]] = label\n  rightInverse : ∀ label : Fin alphabet, images[inverseImages[label]] = label"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure Constraint (vertices alphabet : Nat) where\n  source : Fin vertices\n  target : Fin vertices\n  permutation : PermutationTable alphabet"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def Constraint.satisfied {n q : Nat} (constraint : Constraint n q)\n    (labeling : Fin n → Fin q) : Bool :=\n  decide (constraint.permutation.images[labeling constraint.source] = labeling constraint.target)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure Instance (alphabet : Nat) where\n  vertices : Nat\n  constraints : List (Constraint vertices alphabet)\n  nonempty : constraints ≠ []"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D1-X02",
+   "domain": "D1",
+   "name": "Occurrence value of a Unique Games instance",
+   "kind": "Constructor",
+   "tags": [
+    "parameterized",
+    "local"
+   ],
+   "description": "The value of an instance: the largest number of constraints a labeling satisfies, divided by the number of constraints. For a nonempty alphabet, some labeling reaches rate a iff a is at most the value, and every labeling stays at most b iff the value is at most b.",
+   "input": "A Unique Games instance; a nonempty alphabet for the threshold equivalences",
+   "output": "A real number in [0, 1]",
+   "preserved": "Threshold statements about labelings, which become statements about the value",
+   "broken": "The order of the constraints; multiplicity counts in the denominator",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def countSatisfied {n q : Nat} (labeling : Fin n → Fin q) :\n    List (Constraint n q) → Nat\n  | [] => 0\n  | constraint :: rest =>\n      (if constraint.satisfied labeling then 1 else 0) + countSatisfied labeling rest"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.RealTargetLemmas.txt",
+     "quote": "def maxSatisfied {q : Nat} (g : Instance q) : Nat :=\n  Finset.univ.sup (fun labeling : Fin g.vertices → Fin q =>\n    countSatisfied labeling g.constraints)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.RealTargetLemmas.txt",
+     "quote": "noncomputable def value {q : Nat} (g : Instance q) : ℝ :=\n  (maxSatisfied g : ℝ) / g.constraints.length"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.RealTargetLemmas.txt",
+     "quote": "theorem exists_rate_ge_iff {q : Nat} (g : Instance q) (hq : 0 < q) (a : ℝ) :\n    (∃ labeling : Fin g.vertices → Fin q,\n      a ≤ (countSatisfied labeling g.constraints : ℝ) / g.constraints.length) ↔\n      a ≤ value g"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.RealTargetLemmas.txt",
+     "quote": "theorem forall_rate_le_iff {q : Nat} (g : Instance q) (hq : 0 < q) (b : ℝ) :\n    (∀ labeling : Fin g.vertices → Fin q,\n      (countSatisfied labeling g.constraints : ℝ) / g.constraints.length ≤ b) ↔\n      value g ≤ b"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X08",
+   "domain": "D8",
+   "name": "Unary serialization of a Unique Games instance",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "computation-bridge"
+   ],
+   "description": "Writes an instance as bits: the vertex count, the alphabet size, the constraint count, then for each constraint its endpoints and its forward table, each number in unary followed by a 0. This is the output encoding the reduction's polynomial-time machine is certified against.",
+   "input": "A Unique Games instance",
+   "output": "A bit string",
+   "preserved": "Every forward-table image and every constraint, in order",
+   "broken": "Proof fields and inverse tables are not written",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def encodeWord (n : Nat) : List Bool := List.replicate n true ++ [false]"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def encodeWords : List Nat → List Bool\n  | [] => []\n  | n :: ns => encodeWord n ++ encodeWords ns"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def tableWords {q : Nat} (table : PermutationTable q) : List Nat :=\n  table.images.toList.map Fin.val"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def constraintWords {n q : Nat} (constraint : Constraint n q) : List Nat :=\n  [constraint.source.val, constraint.target.val] ++ tableWords constraint.permutation"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def gameWords {q : Nat} (game : Instance q) : List Nat :=\n  [game.vertices, q, game.constraints.length] ++ game.constraints.flatMap constraintWords"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def gameBits {q : Nat} (game : Instance q) : List Bool := encodeWords (gameWords game)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X09",
+   "domain": "D8",
+   "name": "Gap reduction from binary 3SAT to translation Unique Games",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "parameterized",
+    "computation-bridge"
+   ],
+   "description": "For real errors eps and delta, a bundle fixed before the input: an alphabet of size at least 2 identified with a binary vector space, a map from bit strings to instances, a polynomial-time TM2 machine computing it with finite tape alphabets, every output simple bipartite with translation constraints, and the gap: a string in binary 3SAT has a labeling satisfying at least 1 - eps of the constraints; a string outside it has none above delta. The Lean theorem theorem11 states that such a bundle exists for all 0 < eps, delta < 1/2.",
+   "input": "Real errors eps, delta with 0 < eps < 1/2 and 0 < delta < 1/2",
+   "output": "A gap reduction: alphabet, coordinates, construction, machine, and the completeness and soundness guarantees",
+   "preserved": "Membership in binary 3SAT, as a two-sided gap on the value",
+   "broken": "Arbitrary permutation constraints narrow to translations of the binary vector space",
+   "complexity": "Polynomial (TM2, polynomial fixed before the input, in the raw input length)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure BinaryGapReduction (ε δ : ℝ) where\n  alphabet : Nat\n  alphabetAtLeastTwo : 2 ≤ alphabet\n  dimension : Nat\n  dimensionPositive : 1 ≤ dimension\n  coordinates : Fin alphabet ≃ Integration.BinaryLinear.Vector dimension\n  construct : List Bool → Instance alphabet\n  simpleBipartite : ∀ input, SimpleBipartite (construct input)\n  translations : ∀ input,\n    Integration.TranslationTarget.IsTranslationInstance coordinates (construct input)\n  computation : Turing.TM2ComputableInPolyTime (id : List Bool → List Bool)\n    Complexity.gameBits construct\n  finiteAlphabet : Complexity.MachineFiniteAlphabet.FiniteAlphabet computation.tm\n  completeness : ∀ input, BinaryLanguage.language input →\n    ∃ labeling, 1 - ε ≤\n      (countSatisfied labeling (construct input).constraints : ℝ) /\n        (construct input).constraints.length\n  soundness : ∀ input, ¬BinaryLanguage.language input →\n    ∀ labeling, (countSatisfied labeling (construct input).constraints : ℝ) /\n      (construct input).constraints.length ≤ δ"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "structure SimpleBipartite {q : Nat} (game : Instance q) where\n  side : Fin game.vertices → Bool\n  sourceSide : ∀ i : Fin game.constraints.length,\n    side game.constraints[i].source = false\n  targetSide : ∀ i : Fin game.constraints.length,\n    side game.constraints[i].target = true\n  endpoints_injective : Function.Injective (fun i : Fin game.constraints.length =>\n    (game.constraints[i].source, game.constraints[i].target))"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def IsTranslationInstance {q s : Nat} (coordinates : Fin q ≃ BinaryLinear.Vector s)\n    (g : Instance q) : Prop :=\n  ∀ constraint ∈ g.constraints, ∃ shift : BinaryLinear.Vector s,\n    ∀ label : Fin q,\n      coordinates (constraint.permutation.images[label]) = coordinates label + shift"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def FiniteAlphabet (M : FinTM2) : Prop := ∀ k, Finite (M.Γ k)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt",
+     "quote": "theorem theorem11 (ε δ : ℝ)\n    (hε : 0 < ε) (hεhalf : ε < 1 / 2)\n    (hδ : 0 < δ) (hδhalf : δ < 1 / 2) :\n    Nonempty (Explicit.MachineOutputContract.BinaryGapReduction ε δ)"
+    },
+    {
+     "file": "excerpts/openai-math-unique-games-paper-introduction.txt",
+     "quote": "\\(\\mathrm{3SAT}\\) to explicit unweighted Unique Games instances"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "conditions": "theorem11 in the Lean (openai/math at fd4aeeb) states that this reduction exists for every 0 < eps, delta < 1/2, and the tree builds with only the standard axioms. That implies the Unique Games Conjecture in Khot's edge-value form, as a general link: hardness for simple bipartite translation games is hardness for the permutation games the conjecture names, since a translation is a permutation and the value is the same. Two premises sit outside the Lean: (i) 3SAT under this binary codec is NP-hard (Cook-Levin, not formalized there); (ii) a Mathlib TM2 machine with finite tape alphabets, halting within a polynomial in the input length, is a polynomial-time machine in the usual sense. Mathlib's FinTM2 requires only the input stack's alphabet to be finite, which is why the reduction carries its own finite-alphabet field.",
+   "counterexamples": [],
+   "conditionReceipts": [
+    {
+     "file": "excerpts/openai-math-unique-games-paper-introduction.txt",
+     "quote": "The Unique Games Conjecture asserts that systems\nof such constraints can be hard to approximate even when almost all\nconstraints can be satisfied."
+    },
+    {
+     "file": "excerpts/openai-math-unique-games-paper-introduction.txt",
+     "quote": "Thus the result resolves the Unique Games Conjecture positively in its\nusual edge-value formulation~\\cite[Conjecture~2.5]{Khot10}."
+    },
+    {
+     "file": "excerpts/openai-math-unique-games-paper-introduction.txt",
+     "quote": "Binary translation constraints are a known equivalent formulation of the\nconjecture~\\cite[Corollary~13 and Section~11.1]{KKMO07}"
+    },
+    {
+     "file": "excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt",
+     "quote": "  (Γ : K → Type)"
+    },
+    {
+     "file": "excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt",
+     "quote": "  [Γk₀Fin : Fintype (Γ k₀)]"
+    },
+    {
+     "file": "excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt",
+     "quote": "  /-- proof that this machine outputs `f` in at most `time(input.length)` steps -/"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Model.txt",
+     "quote": "def FiniteAlphabet (M : FinTM2) : Prop := ∀ k, Finite (M.Γ k)"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X05",
+   "domain": "D5",
+   "name": "Finite two-prover projection game",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "projection",
+    "local"
+   ],
+   "description": "A classical two-prover game on finite types: a normalized nonnegative law on question pairs and a Boolean acceptance predicate on questions and answers; a strategy is a pair of answer maps. It is a projection game when each left answer is accepted with at most one right answer; an acceptance given by a projection map makes it one.",
+   "input": "Finite question and answer types, a finite distribution on question pairs, an acceptance predicate",
+   "output": "A game with its value; the projection property",
+   "preserved": "Finite normalized question weights; the value of deterministic strategy pairs",
+   "broken": "General acceptance predicates narrow to projections",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.FiniteTrialsLemmas.txt",
+     "quote": "structure FiniteDistribution (Ω : Type*) [Fintype Ω] where\n  weight : Ω → ℝ\n  nonnegative : ∀ x, 0 ≤ weight x\n  normalized : ∑ x, weight x = 1"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.FiniteTrialsLemmas.txt",
+     "quote": "structure Game (Q₁ Q₂ A₁ A₂ : Type*) [Fintype Q₁] [Fintype Q₂]\n    [Fintype A₁] [Fintype A₂] where\n  questions : FiniteDistribution (Q₁ × Q₂)\n  accepts : Q₁ → Q₂ → A₁ → A₂ → Bool"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.FiniteTrialsLemmas.txt",
+     "quote": "abbrev Strategy (Q₁ Q₂ A₁ A₂ : Type*) := (Q₁ → A₁) × (Q₂ → A₂)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.ValueLemmas.txt",
+     "quote": "def value (G : Game Q₁ Q₂ A₁ A₂) : ℝ"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.AnalyticRateLemmas.txt",
+     "quote": "def IsProjection (G : Game Q₁ Q₂ A₁ A₂) : Prop :=\n  ∀ x y a b b', G.accepts x y a b = true →\n    G.accepts x y a b' = true → b = b'"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.AnalyticRateLemmas.txt",
+     "quote": "theorem IsProjection.of_accepts_iff (G : Game Q₁ Q₂ A₁ A₂)\n    (project : Q₁ → Q₂ → A₁ → A₂)\n    (h : ∀ x y a b, G.accepts x y a b = true ↔ project x y a = b) :\n    IsProjection G"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D2-X02",
+   "domain": "D2",
+   "name": "Quadratic block shift space over characteristic two",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "algebra-bridge",
+    "local"
+   ],
+   "description": "For a finite field F of characteristic two and a nonzero vector v, the subspace U(v) of pairs (x, y) with x on the line of v and v orthogonal to y + Q(x): a binary subspace of dimension three times the binary dimension of F. Shifting a block by a nonzero vector changes the observable y + Q(x) with probability 1 - 1/(|F|^2 + |F| + 1).",
+   "input": "A finite field of characteristic two, a nonzero vector v",
+   "output": "The subspace U(v) and its noise response",
+   "preserved": "Binary dimension: 3 times that of F",
+   "broken": "The block observable changes under nonzero shifts with probability 1 - 1/(|F|^2 + |F| + 1)",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.Block.txt",
+     "quote": "def U (v : Vec F) : Submodule (ZMod 2) (Vec F × Vec F) where\n  carrier := {p | p.1 ∈ line v ∧ dot v (p.2 + Q p.1) = 0}\n  zero_mem' := by simp [Q_zero]\n  add_mem' := by\n    intro p q hp hq\n    refine ⟨(line v).add_mem hp.1 hq.1, ?_⟩"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockDimension.txt",
+     "quote": "theorem finrank_U (v : Vec F) (hv : v ≠ 0) :\n    Module.finrank (ZMod 2) (U v) = 3 * Module.finrank (ZMod 2) F"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockNoise.txt",
+     "quote": "def blockObservable (p : Vec F × Vec F) : Vec F := p.2 + Q p.1"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockNoiseProbabilityLemmas.txt",
+     "quote": "theorem nonzeroBlockChangeProbability_eq (v : Vec F) (hv : v ≠ 0)\n    (p : Vec F × Vec F) :\n    nonzeroBlockChangeProbability v p =\n      1 - 1 / ((Nat.card F : ℚ) ^ 2 + (Nat.card F : ℚ) + 1)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Quadratic.BlockKernelLemmas.txt",
+     "quote": "theorem blockAnnihilates_iff {g z v : Vec F} (hv : v ≠ 0) (hz : z ≠ 0) :\n    BlockAnnihilates g z v ↔\n      z ∈ line v ∧ dot g z = squareRoot (z 0 * z 1 * z 2)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D2-X03",
+   "domain": "D2",
+   "name": "Recursive nonlinear stage iteration",
+   "kind": "Transformer",
+   "tags": [
+    "iterative",
+    "composition",
+    "algebra-bridge"
+   ],
+   "description": "Iterates a nonlinear stage n times: each stage carries finite input, shift and noise spaces, an injective embedding of shifts, a surjective logical map and an output equivariant under shifts. When each block responds to nonzero changes at the same rate rho, the n-th stage's error is (1 - 1/|B|) times rho^n.",
+   "input": "Block embeddings J with surjective aggregate, a map Q, a uniform response rate rho",
+   "output": "The n-th stage and its error",
+   "preserved": "The stage interface: equivariance of the output under embedded shifts; the error is invariant under passing to the quotient stage",
+   "broken": "The error, which scales by rho at each iteration",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.QuotientLemmas.txt",
+     "quote": "structure Stage (k : Type u) (B : Type v) [CommRing k]\n    [AddCommGroup B] [Module k B] where\n  Input : Type v\n  Shift : Type v\n  Noise : Type v\n  [inputAdd : AddCommGroup Input]\n  [inputModule : Module k Input]\n  [shiftAdd : AddCommGroup Shift]\n  [shiftModule : Module k Shift]\n  [inputFinite : Finite Input]\n  [shiftFinite : Finite Shift]\n  [noiseFinite : Finite Noise]\n  [noiseNonempty : Nonempty Noise]\n  embed : Shift →ₗ[k] Input\n  embed_injective : Function.Injective embed\n  logical : Shift →ₗ[k] B\n  logical_surjective : Function.Surjective logical\n  output : Input → B"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.QuotientLemmas.txt",
+     "quote": "noncomputable def iterate (J : I → B →ₗ[k] X × B)\n    (hJ : Function.Surjective (aggregate J)) (Q : X → B) : ℕ → Stage k B\n  | 0 => base\n  | n + 1 => next J hJ Q (iterate J hJ Q n)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.NonlinearRecurrenceLemmas.txt",
+     "quote": "theorem iterate_error (J : I → B →ₗ[k] X × B)\n    (hJ : Function.Surjective (aggregate J)) (Q : X → B) (ρ : ℚ)\n    (hk : ∀ d : B, d ≠ 0 →\n      (𝔼 i, 𝔼 z : X × B,\n        NonlinearRecurrence.change (fun p => p.2 + Q p.1) z (J i d)) = ρ)\n    (n : ℕ) : error (Stage.iterate J hJ Q n) =\n      (1 - 1 / (Fintype.card B : ℚ)) * ρ ^ n"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.NonlinearRecurrenceLemmas.txt",
+     "quote": "theorem quotient_error (s : Stage k B) : error (StageQuotient.toStage s) = error s"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D2-X04",
+   "domain": "D2",
+   "name": "Split gadget with a uniform rank threshold",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "parameterized",
+    "algebra-bridge"
+   ],
+   "description": "For a positive rational noise budget p, a rank threshold r exists such that for every alphabet dimension at least r there is a split gadget: a map from the ambient space to the alphabet, equivariant along the alphabet, with stability error at most p, and kernel probability at most 7/8 for every linear observation of rank at least r on the alphabet.",
+   "input": "A positive rational p; afterwards an alphabet dimension at least r",
+   "output": "A split gadget with stability error at most p",
+   "preserved": "Equivariance along the alphabet subspace",
+   "broken": "High-rank linear observations: their kernel probability is at most 7/8, so they respond to noise while the nonlinear output stays stable",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ActualSourceLemmas.txt",
+     "quote": "structure SplitGadget (s d : Nat) where\n  f : Ambient s d → Alphabet s\n  equivariant : ∀ (x : Ambient s d) (c : Alphabet s), f (x + (c, 0)) = f x + c\n  NoiseIndex : Type\n  noiseFintype : Fintype NoiseIndex\n  noiseNonempty : Nonempty NoiseIndex\n  noise : NoiseIndex → Ambient s d"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.Final.txt",
+     "quote": "theorem exists_actual_gadget (p : ℚ) (hp : 0 < p) :\n    ∃ r : ℕ, 1 ≤ r ∧ ∀ ℓ : ℕ, r ≤ ℓ →\n      ∃ g : UniqueGamesTheorem.Gadget.ActualGadget.Data (Vector ℓ),\n        UniqueGamesTheorem.Gadget.ActualGadget.Satisfies g p (7 / 8) r"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Gadgets.Final.txt",
+     "quote": "theorem exists_split_gadget (p : ℚ) (hp : 0 < p) :\n    ∃ r : ℕ, 1 ≤ r ∧ ∀ ℓ : ℕ, r ≤ ℓ →\n      ∃ d : ℕ, ∃ g : UniqueGamesTheorem.Reduction.ActualSource.SplitGadget ℓ d,\n        g.stabilityError ≤ p ∧\n        ∀ (P : Type) [AddCommGroup P] [Module F2 P]\n          (S : UniqueGamesTheorem.Reduction.ActualSource.Ambient ℓ d →ₗ[F2] P),\n          r ≤ Module.finrank F2\n            (S.comp (UniqueGamesTheorem.Reduction.ActualSource.alphabetEmbedding ℓ d)).range →\n          UniqueGamesTheorem.Integration.SplitGadget.kernelProbability g S ≤ 7 / 8"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X10",
+   "domain": "D8",
+   "name": "Enumerated noise table of a gadget",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "construction"
+   ],
+   "description": "Enumerates a gadget's finite noise indices and stores the noise vectors as a nonempty list, the table the matrix machine reads. The table's stability error and every kernel probability equal the gadget's.",
+   "input": "A split gadget and an enumeration of its noise",
+   "output": "A nonempty table of noise vectors",
+   "preserved": "Stability error and kernel probabilities, exactly",
+   "broken": "Abstract finite noise becomes an ordered list",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt",
+     "quote": "noncomputable def ofFintype (g : SplitGadget s d) : NoiseEnumeration g where\n  indices := Finset.univ.toList\n  nodup := Finset.nodup_toList _\n  complete i := by simp"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt",
+     "quote": "structure Table (s d : Nat) where\n  vectors : List (Ambient s d)\n  nonempty : vectors ≠ []"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt",
+     "quote": "def ofEnumeration (g : SplitGadget s d) (en : NoiseEnumeration g) : Table s d where\n  vectors := en.indices.map g.noise\n  nonempty := by simpa using en.nonempty"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt",
+     "quote": "theorem stabilityError_ofEnumeration (g : SplitGadget s d) (en : NoiseEnumeration g) :\n    ((ofEnumeration g en).gadget g.f g.equivariant).stabilityError =\n      g.stabilityError"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.NoiseEnumerationLemmas.txt",
+     "quote": "theorem kernelProbability_ofEnumeration (g : SplitGadget s d)\n    (en : NoiseEnumeration g) {P : Type} [AddCommGroup P] [Module F2 P]\n    (S : Ambient s d →ₗ[F2] P) :\n    SplitGadget.kernelProbability ((ofEnumeration g en).gadget g.f g.equivariant) S =\n      SplitGadget.kernelProbability g S"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X11",
+   "domain": "D8",
+   "name": "Table-key matrix game from a parity source",
+   "kind": "Transformer",
+   "tags": [
+    "construction",
+    "representation-change",
+    "local"
+   ],
+   "description": "Builds the matrix test as an explicit Unique Games instance over the alphabet of size 2^s: vertices are table keys, and the constraints are the test's outcomes. A labeling's satisfied fraction equals the test's acceptance probability.",
+   "input": "A parity source, a tuple length k, a split gadget",
+   "output": "A Unique Games instance with one constraint per outcome",
+   "preserved": "The acceptance probability, as the satisfied fraction",
+   "broken": "Parity equations become permutation constraints over a binary vector alphabet",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysGame.txt",
+     "quote": "noncomputable def outputInstance (S : Source) (k : Nat) {s d : Nat} (g : SplitGadget s d) :\n    Instance (2^s) where\n  vertices := vertexCount S k s d\n  constraints := (outcomes S k g).map (edge S k g)\n  nonempty := by\n    intro h"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysGame.txt",
+     "quote": "theorem acceptanceProbability_eq_count (S : Source) (k : Nat) {s d : Nat}\n    (g : SplitGadget s d) (labeling : Fin (vertexCount S k s d) → Fin (2^s)) :\n    acceptanceProbability S k g labeling =\n      (countSatisfied labeling (outputInstance S k g).constraints : ℚ) /\n        (outputInstance S k g).constraints.length"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysGame.txt",
+     "quote": "@[simp] theorem outputInstance_constraints_length (S : Source) (k : Nat)\n    {s d : Nat} (g : SplitGadget s d) :\n    (outputInstance S k g).constraints.length = Fintype.card (Outcome S k g)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X12",
+   "domain": "D8",
+   "name": "Addressed single-orbit matrix output",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "compression",
+    "computation-bridge"
+   ],
+   "description": "Renders the table-key game with numeric vertex addresses from a noise table; its constraints are translations, and the legacy machine's doubled output equals the doubled single-orbit output. Any semantic rate is bounded by the addressed game's value.",
+   "input": "A list of parity equations, a tuple length k, a noise table",
+   "output": "A Unique Games instance over the alphabet of size 2^s",
+   "preserved": "Translation constraints; acceptance transfers to the addressed value",
+   "broken": "Semantic key vertices become numeric addresses",
+   "complexity": "Polynomial (a TM2 machine computing the exact output bits, every work alphabet finite)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysAddressGameLemmas.txt",
+     "quote": "def tableOutput (S : Source) (k : Nat) {s d : Nat} (T : Integration.NoiseTables.Table s d) :\n    Instance (2^s) :=\n  outputInstance S k (Integration.TableReduction.tableSkeleton T)\n    (Integration.TableReduction.tableEnumeration T Prod.fst (fun _ _ => rfl))"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysAddressGameLemmas.txt",
+     "quote": "theorem tableOutput_translations (S : Source) (k : Nat) {s d : Nat}\n    (T : Integration.NoiseTables.Table s d) :\n    Integration.TranslationTarget.IsTranslationInstance (Encoding.alphabetEquiv s).symm\n      (tableOutput S k T)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSingleOrbitBridgeLemmas.txt",
+     "quote": "def output (k : Nat) {s d : Nat} (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d)\n    (input : SourceEncoding.Input) : UniqueGamesTheorem.Foundations.Target.Instance (2 ^ s) :=\n  SingleAddress.tableOutput (Source.ofList input.equations input.nonempty) k T"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSingleOrbitBridgeLemmas.txt",
+     "quote": "theorem old_output_eq_double (k : Nat) {s d : Nat}\n    (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d) (input : SourceEncoding.Input) :\n    MachineAddressGame.output k T input = doubleInstance (output k T input)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSingleOrbitBridgeLemmas.txt",
+     "quote": "def computableInPolyTime (k : Nat) {s d : Nat}\n    (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d) :\n    TM2ComputableInPolyTime SourceEncoding.inputBits gameBits (output k T) :=\n  MachineSequential.composeBits (f := output k T) (g := id) (doubledComputableInPolyTime k T)\n    (MachineSingleOrbitRuntime.computableInPolyTime (2 ^ s))"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSingleOrbitBridgeLemmas.txt",
+     "quote": "theorem workAlphabetFinite (k : Nat) {s d : Nat}\n    (T : UniqueGamesTheorem.Integration.NoiseTables.Table s d)\n    (tape : (computableInPolyTime k T).tm.K) :\n    Finite ((computableInPolyTime k T).tm.Γ tape)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "theorem semantic_rate_le_address_value (S : Source) (k : Nat) {s d : Nat}\n    (g : SplitGadget s d) (en : NoiseEnumeration g)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s)) :\n    (GapSemantics.satisfactionRate (TableKeysGame.outputInstance S k g) labeling : ℝ) ≤\n      InstanceValue.value (TableKeysAddressGame.outputInstance S k g en)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X13",
+   "domain": "D8",
+   "name": "Uniform copying of constraints",
+   "kind": "Transformer",
+   "tags": [
+    "expansion",
+    "representation-change"
+   ],
+   "description": "Copies the whole constraint list C times. Vertex count, translation constraints and, for a nonempty alphabet, the value are unchanged; the constraint count is multiplied by C.",
+   "input": "A Unique Games instance, a positive integer C",
+   "output": "An instance with C copies of every constraint",
+   "preserved": "Vertex count, value (for a nonempty alphabet), translation constraints",
+   "broken": "Constraint count, multiplied by C; parallel constraints remain",
+   "complexity": "Polynomial for fixed C (TM2 on the instance bits)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.UniformTarget.txt",
+     "quote": "def construct {q : Nat} (C : Nat) (hC : 0 < C) (g : Instance q) : Instance q where\n  vertices := g.vertices\n  constraints := copyMajor C g.constraints\n  nonempty := by\n    apply List.length_pos_iff.mp\n    rw [copy_length]"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.UniformTarget.txt",
+     "quote": "theorem value {q : Nat} (C : Nat) (hC : 0 < C) (g : Instance q) (hq : 0 < q) :\n    InstanceValue.value (construct C hC g) = InstanceValue.value g"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.UniformTarget.txt",
+     "quote": "@[simp] theorem edge_count {q : Nat} (C : Nat) (hC : 0 < C) (g : Instance q) :\n    (construct C hC g).constraints.length = C * g.constraints.length"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.UniformTarget.txt",
+     "quote": "theorem translations {q s : Nat} (C : Nat) (hC : 0 < C) (g : Instance q)\n    (coordinates : Fin q ≃ BinaryLinear.Vector s)\n    (hg : TranslationTarget.IsTranslationInstance coordinates g) :\n    TranslationTarget.IsTranslationInstance coordinates (construct C hC g)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineUniformRun.txt",
+     "quote": "noncomputable def computation {q : Nat} (C : Nat) (hC : 0 < C) :\n    TM2ComputableInPolyTime gameBits gameBits (UniformTarget.construct (q := q) C hC) where\n  tm := machine C\n  inputAlphabet := Equiv.refl Bool\n  outputAlphabet := Equiv.refl Bool\n  time := timePolynomial C"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D1-X03",
+   "domain": "D1",
+   "name": "Four-edge subdivision of a constraint game",
+   "kind": "Transformer",
+   "tags": [
+    "surgery",
+    "expansion",
+    "construction"
+   ],
+   "description": "Replaces each constraint by its own path of four constraints through three new vertices. The result is simple and bipartite, keeps the alphabet and translation constraints, and has value 1 - (1 - v)/4 where v is the original value.",
+   "input": "A Unique Games instance (nonempty alphabet for the value identity)",
+   "output": "A simple bipartite instance with value 1 - (1 - v)/4",
+   "preserved": "Alphabet; translation constraints",
+   "broken": "Vertex count grows by three per constraint, constraint count fourfold; the value gap shrinks by a factor of 4",
+   "complexity": "Polynomial, composed after a polynomial producer of translation instances",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt",
+     "quote": "def subdivide {q : Nat} (H : Instance q) : Instance q :=\n  ProductTarget.render (Subdivision.game (ofInstance H))\n    (numericVertexEquiv H.vertices H.constraints.length)\n    (numericEdgeEquiv H.constraints.length) (tables H)\n    (by have h := H.constraintCount_positive; omega)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt",
+     "quote": "@[simp] theorem subdivide_vertices {q : Nat} (H : Instance q) :\n    (subdivide H).vertices = H.vertices + 3 * H.constraints.length"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt",
+     "quote": "@[simp] theorem subdivide_length {q : Nat} (H : Instance q) :\n    (subdivide H).constraints.length = 4 * H.constraints.length"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt",
+     "quote": "def simpleBipartite {q : Nat} (H : Instance q) : SimpleBipartite (subdivide H) :=\n  ProductTarget.render_simpleBipartite _ _ _ _ _"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt",
+     "quote": "theorem subdivide_translation {q s : Nat}\n    (coordinates : Fin q ≃ Integration.BinaryLinear.Vector s) (H : Instance q)\n    (hH : Integration.TranslationTarget.IsTranslationInstance coordinates H) :\n    Integration.TranslationTarget.IsTranslationInstance coordinates (subdivide H)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.SubdivisionTarget.txt",
+     "quote": "theorem value_eq {q : Nat} (H : Instance q) (hq : 0 < q) :\n    Integration.InstanceValue.value (subdivide H) =\n      1 - (1 - Integration.InstanceValue.value H) / 4"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineSubdivisionBodySpecLemmas.txt",
+     "quote": "def translationComputableInPolyTime {s : Nat}\n    (coordinates : Fin q ≃ Integration.BinaryLinear.Vector s)\n    (upstream : TM2ComputableInPolyTime encode gameBits f)\n    (translations : ∀ a, Integration.TranslationTarget.IsTranslationInstance coordinates (f a)) :\n    TM2ComputableInPolyTime encode gameBits (fun a => SubdivisionTarget.subdivide (f a)) :=\n  computableInPolyTime upstream (fun a => translations_involutive coordinates (f a) (translations a))"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D1-X04",
+   "domain": "D1",
+   "name": "Simple bipartite instance as a two-prover game",
+   "kind": "Correspondence",
+   "tags": [
+    "representation-change",
+    "projection"
+   ],
+   "description": "Splits the vertices of a simple bipartite instance by side and reads each constraint as a question pair, left endpoint to one prover and right endpoint to the other. The two-prover game's value equals the instance's value.",
+   "input": "A Unique Games instance with a simple bipartite presentation",
+   "output": "A bipartite two-prover game",
+   "preserved": "The value, exactly",
+   "broken": "One labeling becomes two side labelings",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryInputReductionLemmas.txt",
+     "quote": "def toBipartiteGame : BipartiteGame\n    {v : Fin game.vertices // presentation.side v = false}\n    {v : Fin game.vertices // presentation.side v = true}\n    (Fin game.constraints.length) (Fin q) where\n  left i := ⟨game.constraints[i].source, presentation.sourceSide i⟩\n  right i := ⟨game.constraints[i].target, presentation.targetSide i⟩"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineBinaryInputReductionLemmas.txt",
+     "quote": "theorem toBipartiteGame_value :\n    presentation.toBipartiteGame.value = Integration.InstanceValue.value game"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X06",
+   "domain": "D5",
+   "name": "Parallel repetition of a projection game",
+   "kind": "Transformer",
+   "tags": [
+    "composition",
+    "expansion",
+    "parameterized"
+   ],
+   "description": "Plays n independent copies of a finite two-prover game at once: questions are tuples, answers are tuples, and the repeated game accepts when every coordinate does. A projection game stays a projection game, and if its value is at most 1 - gap the repeated value is at most (1 - gap^2/16)^n; the value of the repetition is at least the n-th power of the value.",
+   "input": "A finite projection game with value at most 1 - gap (0 < gap < 1), a count n",
+   "output": "The n-fold repeated game",
+   "preserved": "The projection property; product strategies give the lower bound value^n",
+   "broken": "The value decays: at most (1 - gap^2/16)^n",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.FiniteTrialsLemmas.txt",
+     "quote": "def repetition (G : Game Q₁ Q₂ A₁ A₂) (n : Nat) :\n    Game (Fin n → Q₁) (Fin n → Q₂) (Fin n → A₁) (Fin n → A₂)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.AnalyticRateLemmas.txt",
+     "quote": "theorem IsProjection.repetition {G : Game Q₁ Q₂ A₁ A₂}\n    (hG : IsProjection G) (n : Nat) : IsProjection (G.repetition n)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Repetition.TensorAlgebraLemmas.txt",
+     "quote": "theorem projection_repetition_value\n    (G : Game Q₁ Q₂ A₁ A₂) (hG : IsProjection G) (n : ℕ)\n    {gap : ℝ} (hgap₀ : 0 < gap) (hgap₁ : gap < 1)\n    (hvalue : G.value ≤ 1 - gap) :\n    (G.repetition n).value ≤ (1 - gap ^ 2 / 16) ^ n"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Foundations.ValueLemmas.txt",
+     "quote": "theorem pow_value_le_repetition_value (G : Game Q₁ Q₂ A₁ A₂) (n : Nat) :\n    G.value ^ n ≤ (G.repetition n).value"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X14",
+   "domain": "D8",
+   "name": "Padded tuple product of a simple bipartite game",
+   "kind": "Transformer",
+   "tags": [
+    "composition",
+    "expansion",
+    "computation-bridge"
+   ],
+   "description": "Renders the t-fold repetition of a simple bipartite instance as an explicit instance over alphabet q^t, with binary coordinates of dimension ell times t. Its value equals the repeated game's; completeness error grows at most t-fold; base value at most 1 - 1/800 gives value at most (1 - 1/10240000)^t.",
+   "input": "A simple bipartite instance, a repetition count t > 0, binary coordinates for translations",
+   "output": "A simple bipartite instance over alphabet q^t",
+   "preserved": "Simplicity, bipartition, translation constraints; the value is the repeated game's",
+   "broken": "Alphabet q to q^t; error at most t times the base error; soundness (1 - 1/10240000)^t from base 1 - 1/800",
+   "complexity": "Polynomial for each fixed t",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt",
+     "quote": "def output (t : ℕ) (ht : 0 < t) : Instance (q ^ t) :=\n  Embedded.render (graph H presentation t) (vertices H presentation t ht)\n    finFunctionFinEquiv.symm (pow_pos H.constraintCount_positive t)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt",
+     "quote": "theorem output_value_eq_repetition [Nonempty (Fin q)] (t : ℕ) (ht : 0 < t) :\n    Integration.InstanceValue.value (output H presentation t ht) =\n      (presentation.toBipartiteGame.toGame.repetition t).value"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt",
+     "quote": "theorem output_completeness [Nonempty (Fin q)] (t : ℕ) (ht : 0 < t) {error : ℝ}\n    (hcomplete : 1 - error ≤ Integration.InstanceValue.value H) :\n    1 - (t : ℝ) * error ≤ Integration.InstanceValue.value (output H presentation t ht)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductSoundness.txt",
+     "quote": "theorem output_soundness (H : Instance q) (presentation : SimpleBipartite H)\n    (t : ℕ) (ht : 0 < t) {δ : ℝ}\n    (hcount : (1 - (1 : ℝ) / 10240000) ^ t ≤ δ)\n    (hvalue : Integration.InstanceValue.value H ≤ 1 - (1 : ℝ) / 800) :\n    Integration.InstanceValue.value (output H presentation t ht) ≤ δ"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt",
+     "quote": "theorem output_translations {ell : ℕ}\n    (coordinates : Fin q ≃ (Fin ell → ZMod 2))\n    (hH : Integration.TranslationTarget.IsTranslationInstance coordinates H)\n    (t : ℕ) (ht : 0 < t) :\n    Integration.TranslationTarget.IsTranslationInstance (finalCoordinates coordinates t)\n      (output H presentation t ht)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt",
+     "quote": "def simpleBipartite (t : ℕ) (ht : 0 < t) : SimpleBipartite (output H presentation t ht) :=\n  Embedded.simpleBipartite _ _ _ _ (side H presentation t ht)\n    (side_left H presentation t ht) (side_right H presentation t ht)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.ProductLemmas.txt",
+     "quote": "def finalCoordinates {ell : ℕ} (coordinates : Fin q ≃ (Fin ell → ZMod 2)) (t : ℕ) :\n    Fin (q ^ t) ≃ (Fin (ell * t) → ZMod 2) :=\n  finFunctionFinEquiv.symm.trans\n    ((Equiv.piCongrRight (fun _ : Fin t => coordinates)).trans\n      (BipartiteGame.binaryProductEquiv ell t).toEquiv)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineProductRuntime.txt",
+     "quote": "def compose (upstream : TM2ComputableInPolyTime encode gameBits f)\n    (presentation : ∀ a, MachineOutputContract.SimpleBipartite (f a))\n    (t : Nat) (ht : 0 < t) :\n    TM2ComputableInPolyTime encode gameBits\n      (fun a => ProductPaddedOutput.output (f a) (presentation a) t ht) :=\n  MachineSequential.composeBits (certify upstream presentation) (computation q t ht)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X15",
+   "domain": "D8",
+   "name": "Sequential composition of polynomial-time TM2 machines",
+   "kind": "Transformer",
+   "tags": [
+    "composition",
+    "computation-bridge"
+   ],
+   "description": "Composes two polynomial-time TM2 certificates whose middle encodings agree into one certificate for the composite function; if both machines have finite tape alphabets, so does the composite.",
+   "input": "Polynomial-time TM2 certificates for f (encodings ea to eb) and g (eb to ec)",
+   "output": "A polynomial-time TM2 certificate for g after f (ea to ec)",
+   "preserved": "Exact output bits; finiteness of every tape alphabet",
+   "broken": "Two machines become one",
+   "complexity": "Polynomial",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.GraphCounterStartLemmas.txt",
+     "quote": "noncomputable def composeBits {α β γ : Type}\n    {ea : α → List Bool} {eb : β → List Bool} {ec : γ → List Bool}\n    {f : α → β} {g : β → γ}\n    (first : TM2ComputableInPolyTime ea eb f)\n    (second : TM2ComputableInPolyTime eb ec g) :\n    TM2ComputableInPolyTime ea ec (fun a => g (f a)) :="
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Machines.MachineFiniteAlphabet.txt",
+     "quote": "theorem composeBits {α β γ : Type}\n    {ea : α → List Bool} {eb : β → List Bool} {ec : γ → List Bool}\n    {f : α → β} {g : β → γ}\n    (first : TM2ComputableInPolyTime ea eb f)\n    (second : TM2ComputableInPolyTime eb ec g)\n    (hfirst : FiniteAlphabet first.tm) (hsecond : FiniteAlphabet second.tm) :\n    FiniteAlphabet (MachineSequential.composeBits first second).tm"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X16",
+   "domain": "D8",
+   "name": "Outer parameter selection before the matrix alphabet",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "parameterized"
+   ],
+   "description": "From real errors eps, delta > 0 chooses rational budgets eps0 <= eps and delta0 <= delta, a repetition count t with (1 - 1/10240000)^t <= delta0, and a copy count of at least 200 with reciprocal at most eps0/t. For each later tuple length k a parity error xi exists below 1/100 and below eps0/(2kt), and then k xi + 1/(2 copies) <= eps0/t.",
+   "input": "Real errors eps, delta > 0",
+   "output": "Outer parameters: eps0, delta0, t, copies; afterwards xi for each k",
+   "preserved": "The requested errors bound the chosen budgets",
+   "broken": "Real tolerances become fixed finite construction parameters, chosen before any input",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt",
+     "quote": "structure OuterParameters (ε δ : ℝ) where\n  epsilon0 : ℚ\n  delta0 : ℚ\n  epsilon0_pos : 0 < epsilon0\n  delta0_pos : 0 < delta0\n  epsilon0_le : (epsilon0 : ℝ) ≤ ε\n  delta0_le : (delta0 : ℝ) ≤ δ\n  repetitions : ℕ\n  repetitions_pos : 0 < repetitions\n  soundness_rate : (1 - (1 : ℝ) / 10240000) ^ repetitions ≤ delta0\n  copies : ℕ\n  copies_large : 200 ≤ copies\n  reciprocal_pos : (0 : ℚ) < 1 / copies\n  reciprocal_small : 1 / (copies : ℚ) ≤ 1 / 200\n  reciprocal_budget : 1 / (copies : ℚ) ≤ epsilon0 / repetitions"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt",
+     "quote": "theorem exists_outerParameters (ε δ : ℝ) (hε : 0 < ε) (hδ : 0 < δ) :\n    Nonempty (OuterParameters ε δ)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt",
+     "quote": "def pStar : ℚ := 1 / P.copies"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt",
+     "quote": "theorem exists_parity_error (k : ℕ) (hk : 0 < k) :\n    ∃ ξ : ℚ, 0 < ξ ∧ ξ < 1 / 100 ∧\n      ξ < P.epsilon0 / (2 * k * P.repetitions)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.ParameterSelection.txt",
+     "quote": "theorem matrix_error_budget (k : ℕ) (hk : 0 < k) (ξ : ℚ)\n    (hξ : ξ ≤ P.epsilon0 / (2 * k * P.repetitions)) :\n    (k : ℚ) * ξ + P.pStar / 2 ≤ P.epsilon0 / P.repetitions"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D2-X05",
+   "domain": "D2",
+   "name": "Shortcode inverse principle",
+   "kind": "Transformer",
+   "tags": [
+    "decomposition",
+    "spectral",
+    "algebra-bridge"
+   ],
+   "description": "For each 0 < eta < 1 there are alpha in (0, 1] and r >= 1 such that, for all large ell and then all large m, every function from ell-by-m binary matrices to vectors whose equality acceptance is at least eta has an affine slice: at most r row and r column constraints, a nonempty point set, and an affine function agreeing with it on fraction at least alpha. The Lean proves it as the theorem inversePrinciple.",
+   "input": "0 < eta < 1, then large ell, then large m, any function f",
+   "output": "An affine slice with at most r rows and columns and agreement at least alpha",
+   "preserved": "alpha and r depend only on eta",
+   "broken": "Global structure reduces to a bounded-description affine slice",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeInterfaceLemmas.txt",
+     "quote": "def InversePrinciple : Prop :=\n  ∀ η : ℝ, 0 < η → η < 1 →\n    ∃ α : ℝ, 0 < α ∧ α ≤ 1 ∧ ∃ r : ℕ, 1 ≤ r ∧\n      ∃ ell₀ : ℕ, ∀ ell : ℕ, ell₀ ≤ ell →\n        ∃ m₀ : ℕ, ∀ m : ℕ, m₀ ≤ m →\n          ∀ f : Mat ell m → Vector ell,"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeInterfaceLemmas.txt",
+     "quote": "def HasAffineSlice {ell m : ℕ} (f : Mat ell m → Vector ell) (α : ℝ) (r : ℕ) : Prop :=\n  ∃ S : Slice ell m, S.rows ≤ r ∧ S.columns ≤ r ∧ S.points.Nonempty ∧\n    ∃ z : Vector m, ∃ u : Vector ell, α ≤ S.affineAgreement f z u"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeInterfaceLemmas.txt",
+     "quote": "structure Slice (ell m : ℕ) where\n  rows : ℕ\n  columns : ℕ\n  rowCoefficient : Fin rows → Vector ell\n  rowValue : Fin rows → Vector m\n  columnCoefficient : Fin columns → Vector m\n  columnValue : Fin columns → Vector ell"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Inverse.ShortcodeTheorem.txt",
+     "quote": "theorem inversePrinciple : Shortcode.InversePrinciple"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X07",
+   "domain": "D5",
+   "name": "Matrix-noise acceptance to subspace acceptance",
+   "kind": "Transformer",
+   "tags": [
+    "spectral",
+    "algebra-bridge"
+   ],
+   "description": "If labels pass the equality test under a noise law with probability at least 99/100, and every observation of rank at least r on the alphabet has noise eigenvalue at most 7/8, then the mean equality acceptance under the alphabet-subspace law is at least (9/10) 2^(-r).",
+   "input": "Normalized nonnegative laws, an alphabet embedding, a rank threshold r, acceptance at least 99/100",
+   "output": "Subspace acceptance at least (9/10) 2^(-r)",
+   "preserved": "The labeling is the same in both laws",
+   "broken": "A bound for one noise law becomes a bound for another",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.AdviceFibersLemmas.txt",
+     "quote": "theorem matrix_spectral_comparison\n    (μ : Q → ℝ) (ν : V → ℝ) (ι : K →ₗ[F2] V)\n    (label : Q → (E →ₗ[F2] V) → C) (r : ℕ)\n    (hμ : ∀ q, 0 ≤ μ q) (hμsum : ∑ q, μ q = 1)\n    (hν : ∀ v, 0 ≤ ν v) (hνsum : ∑ v, ν v = 1)\n    (hdetect : ∀ S : V →ₗ[F2] E,\n      r ≤ Module.finrank F2 (S.comp ι).range → linearNoiseEigenvalue ν S ≤ 7 / 8)\n    (haccept : (99 : ℝ) / 100 ≤ ∑ q, μ q * equalityAcceptance ν (label q)) :\n    (9 : ℝ) / 10 * ((2 : ℝ) ^ r)⁻¹ ≤\n      ∑ q, μ q * equalityAcceptance (subspaceLaw ι) (label q)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt",
+     "quote": "theorem actual_fiber_mean_lower (S : Source) (k : Nat) {s d : Nat}\n    (g : SplitGadget s d) (label : Fin (vertexCount S k s d) → Fin (2 ^ s)) (r : Nat)\n    (hkernel : ∀ L : Ambient s d →ₗ[F2] ActualHomogeneous.E k,\n      r ≤ Module.finrank F2 (L.comp (alphabetEmbedding s d)).range →\n      Integration.SplitGadget.kernelProbability g L ≤ 7 / 8)\n    (haccept : (99 : ℚ) / 100 ≤ acceptanceProbability S k g label) :\n    (9 : ℝ) / 10 * ((2 : ℝ) ^ r)⁻¹ ≤\n      𝔼 U : Question S k, 𝔼 T, fiberAcceptance S k s d label U T"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Analysis.MatrixEnergy.txt",
+     "quote": "theorem spectralEnergy_le_cutoff_add\n    (weight : Q → ℝ) (keep : (q : Q) → I q → Prop) (eigen a : (q : Q) → I q → ℝ) (η : ℝ)\n    (hw : ∀ q, 0 ≤ weight q) (hη : 0 ≤ η)\n    (hone : ∀ q i, eigen q i ≤ 1)\n    (hhigh : ∀ q i, ¬ keep q i → eigen q i ≤ η) :\n    spectralEnergy weight eigen a ≤ cutoffEnergy weight keep a + η * energy weight a"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X08",
+   "domain": "D5",
+   "name": "Good row advice from matrix acceptance",
+   "kind": "Transformer",
+   "tags": [
+    "decomposition",
+    "projection",
+    "parameterized"
+   ],
+   "description": "With the inverse principle and a gadget whose high-rank kernel probabilities are at most 7/8, a matrix acceptance of at least 99/100 forces, for all large tuple lengths k, advice mass at least 10 eta^2 / 2^(s r) on good rows.",
+   "input": "Inverse parameters, a gadget with the kernel bound, a labeling with acceptance at least 99/100",
+   "output": "A lower bound on the advice mass",
+   "preserved": "The labeling: advice is read from the same labeling",
+   "broken": "Full table data reduce to row advice",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt",
+     "quote": "theorem exists_actual_advice_threshold (rstar : ℕ) (α : ℝ)\n    (hα : 0 < α) (hαone : α ≤ 1) (s r : ℕ)\n    (hr : r < s) (halphabet : 1 / (2 : ℝ) ^ s ≤ α / 8) :\n    ∃ k₀ : ℕ, ∀ k : ℕ, k₀ ≤ k →\n      (∀ f : Mat s (1 + 2 * k) → Vector s,\n        ActualSpectral.eta rstar ≤ Shortcode.equalityAcceptance f → HasAffineSlice f α r) →\n      ∀ (S : Source) (d : ℕ) (g : SplitGadget s d)\n        (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s)),\n        (∀ L : Ambient s d →ₗ[F2] ActualHomogeneous.E k,\n          rstar ≤ Module.finrank F2 (L.comp (alphabetEmbedding s d)).range →"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt",
+     "quote": "def goodRowMass (rstar s r : ℕ) : ℝ :=\n  10 * ActualSpectral.eta rstar ^ 2 / (2 : ℝ) ^ (s * r)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt",
+     "quote": "theorem exists_inverse_parameters (hinverse : InversePrinciple) (rstar : ℕ) :\n    Nonempty (InverseParameters rstar)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X09",
+   "domain": "D5",
+   "name": "Sparse seed law to the uniform table law",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "projection",
+    "parameterized"
+   ],
+   "description": "Bounds the total variation between the unrestricted table law and the projected sparse seed law by the variation between an independent sparse mixture and the uniform law; with k = m^3 and beta = 1/m^2 that variation goes to zero, so a cube size m exists meeting any budget.",
+   "input": "A source, sizes k, s, d, r, a sparsity beta in [0, 1]",
+   "output": "A total variation bound; a cube size m meeting the budget",
+   "preserved": "Event probabilities, up to the variation bound",
+   "broken": "The laws themselves differ; only their event probabilities become close",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "theorem actual_totalVariation_le_slope (S : Source) (k s d r : ℕ)\n    (β : ℝ) (hβ : 0 ≤ β) (hβ' : β ≤ 1) :\n    (ActualEvents.unrestricted S k s d r).totalVariation\n      ((ActualSeedEvents.law S k s d r β hβ hβ').pushforward (ActualSeedEvents.pad S k s d r)) ≤\n        Foundations.Information.totalVariation\n          (SparseLaw.independentWeights\n            (SparseLaw.mixture β (SparseLaw.singletonPairWeights (Ambient s d))) k)\n          (SparseLaw.uniformWeights (Fin k → Ambient s d × Ambient s d))"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.SparseLawLemmas.txt",
+     "quote": "theorem exists_cubeSlope_totalVariation_le (η : ℝ) (hη : 0 < η) (N : ℕ) :\n    ∃ m : ℕ, N ≤ m ∧ 0 < m ∧\n      totalVariation\n        (independentWeights (mixture (1 / (m : ℝ) ^ 2) (singletonPairWeights V)) (m ^ 3))\n        (uniformWeights (Fin (m ^ 3) → V × V)) ≤ η"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSpectralLemmas.txt",
+     "quote": "theorem exists_cube {rstar : ℕ} (P : InverseParameters rstar) (d : ℕ) :\n    ∃ m : ℕ, 0 < m ∧ P.tupleThreshold ≤ m ^ 3 ∧\n      0 ≤ 1 / (m : ℝ) ^ 2 ∧ 1 / (m : ℝ) ^ 2 ≤ 1 ∧\n      Foundations.Information.totalVariation\n        (SparseLaw.independentWeights\n          (SparseLaw.mixture (1 / (m : ℝ) ^ 2)\n            (SparseLaw.singletonPairWeights (Ambient P.s d))) (m ^ 3))\n        (SparseLaw.uniformWeights (Fin (m ^ 3) → Ambient P.s d × Ambient P.s d)) ≤\n          ConstantSelection.variationBudget P.α (ActualGoodRows.goodRowMass rstar P.s P.r) P.s P.r ∧"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X10",
+   "domain": "D5",
+   "name": "Selected affine witness to local decoding",
+   "kind": "Transformer",
+   "tags": [
+    "decomposition",
+    "projection",
+    "local"
+   ],
+   "description": "A witness chosen from the left observation is unchanged when the hidden matrix changes, and transferred affine agreement becomes a lower bound on the agreement of genuinely local answer policies: the decoding mass is at most the expected observed agreement under the seed law.",
+   "input": "An observed row, an affine witness, alpha > 0, the rank and small-alphabet bounds",
+   "output": "Lower bounds on conditional and observed agreement",
+   "preserved": "The selected witness depends only on the left observation",
+   "broken": "Affine table agreement becomes randomized local answer agreement",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysLemmas.txt",
+     "quote": "theorem selectedWitness_changeHidden {Witness : Type*}\n    (choose : FullAdvice k Id K W R → Witness) (d : Draw k Id K W R)\n    (N : RawPartnerTarget.RawPoint d.singletons →ₗ[F2] d.rowMap.ker) :\n    choose (leftObservation rhs (changeHidden d N)) = choose (leftObservation rhs d)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.TableKeysLemmas.txt",
+     "quote": "theorem actual_transferred_decoding (S : Source)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))\n    (J : Finset (Fin k)) (occ : Fin k → Fin S.occurrences)\n    (slot : Fin k → PartnerProjection.Slot)\n    (A : Alphabet s →ₗ[F2] R)\n    (rows : AdviceFibers.ObservedRow (E := RawPartnerTarget.RawPoint J) A)\n    (T : RawPartnerTarget.RawPoint J →ₗ[F2] Vector d)\n    (Mstar : RawPartnerTarget.RawPoint J →ₗ[F2] Alphabet s)\n    (hstar : A.comp Mstar = rows.val)\n    (Z : Submodule F2 (ActualHomogeneous.E k)) [Fintype Z]"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.VisiblePoliciesLemmas.txt",
+     "quote": "theorem observedAgreement_lower (S : Source)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))\n    (α : ℝ) (hα : 0 < α) (hsmall : 1 / (2 : ℝ) ^ (s - r) < α / 8)\n    (draw : AdviceExperiment.Draw k (Fin S.occurrences) (Alphabet s) (Vector d) (Vector r))\n    (hgood : GoodAdvice S labeling α (AdviceExperiment.leftObservation (ActualGame.rhs S) draw))\n    (Mstar : RawPartnerTarget.RawPoint draw.singletons →ₗ[F2] Alphabet s)\n    (hstar : draw.rowMap.comp Mstar = draw.rowMap.comp draw.hiddenMatrix)\n    (hagreement : α / 4 ≤ transferredAgreement S labeling draw"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualProjectedTransfer.txt",
+     "quote": "theorem actual_success_lower (S : Source)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))\n    (α g₀ β : ℝ) (hα : 0 < α)\n    (hsmall : 1 / (2 : ℝ) ^ (s - r) < α / 8)\n    (hβ : 0 ≤ β) (hβ' : β ≤ 1)\n    (hgood : g₀ ≤ ActualGoodRows.adviceMass S k s d r labeling α)\n    (hvariation : slopeVariation k s d β ≤ ConstantSelection.variationBudget α g₀ s r) :\n    ConstantSelection.decodingMass α g₀ s r ≤\n      (ActualSeedEvents.law S k s d r β hβ hβ').expectation\n        (fun seed => VisiblePolicies.observedAgreement S labeling"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D5-X11",
+   "domain": "D5",
+   "name": "Clean upper bound on local decoding",
+   "kind": "Transformer",
+   "tags": [
+    "projection",
+    "local",
+    "parameterized"
+   ],
+   "description": "For a parity source with distinct names and value at most 4/5, the expected observed agreement of any local policy under the full seed law is at most (1 - (beta/2^(d+rs))/3600)^k. Combined with the lower bound, a large enough tuple gives a contradiction.",
+   "input": "A source with distinct names and parity value at most 4/5, beta in [0, 1], dimensions d and rs",
+   "output": "Agreement at most (1 - (beta/2^(d+rs))/3600)^k",
+   "preserved": "The same sampled observable as in the lower bound",
+   "broken": "High agreement becomes impossible for large tuples",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "theorem fullSeedLaw_eq_sampledAgreement (S : Source)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))\n    (good : VisiblePolicies.LeftInput S k s d (Vector rs) →\n      VisiblePolicies.ResponseWitness k → Prop)\n    (β : ℝ) (hβ₀ : 0 ≤ β) (hβ₁ : β ≤ 1) :\n    (AdviceLaw.fullSeedLaw (V := Alphabet s × Vector d)\n      (FiniteDistribution.uniform (Fin k → Fin S.occurrences))\n      (FiniteDistribution.uniform (Alphabet s →ₗ[F2] Vector rs)) β hβ₀ hβ₁).expectation\n      (fun seed => VisiblePolicies.observedAgreement S labeling good"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "theorem fullSeedLaw_upper (S : Source)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))\n    (good : VisiblePolicies.LeftInput S k s d (Vector rs) →\n      VisiblePolicies.ResponseWitness k → Prop)\n    (β : ℝ) (hβ₀ : 0 ≤ β) (hβ₁ : β ≤ 1)\n    (distinct : ∀ o i j, (sourceIncidence S).name o i =\n      (sourceIncidence S).name o j → i = j)\n    (hopt : Clean.IncidenceGap.parityValue (sourceIncidence S)\n      (FiniteDistribution.uniform (Fin S.occurrences)) ≤ (4 : ℝ) / 5) :\n    (AdviceLaw.fullSeedLaw (V := Alphabet s × Vector d)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualMatrixContradiction.txt",
+     "quote": "theorem contradiction (S : Source)\n    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))\n    (α g₀ β : ℝ) (hα : 0 < α)\n    (hsmall : 1 / (2 : ℝ) ^ (s - r) < α / 8)\n    (hβ : 0 ≤ β) (hβ' : β ≤ 1)\n    (hgood : g₀ ≤ ActualGoodRows.adviceMass S k s d r labeling α)\n    (hvariation : ActualProjectedTransfer.slopeVariation k s d β ≤\n      ConstantSelection.variationBudget α g₀ s r)\n    (hrate : (1 - (β / (2 : ℝ) ^ (d + r)) / 3600) ^ k <\n      ConstantSelection.decodingMass α g₀ s r)\n    (hdistinct : S.DistinctNames)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X17",
+   "domain": "D8",
+   "name": "Matrix gap parameters",
+   "kind": "Constructor",
+   "tags": [
+    "construction",
+    "parameterized",
+    "composition"
+   ],
+   "description": "For each positive rational p, parameters exist (proved from the inverse principle): a tuple length k, alphabet dimension s, a noise table and a stable equivariant map, such that the addressed matrix output has translation constraints, value at least 1 - (k xi + p/2) when an assignment fails at most xi of the source, and value at most 99/100 on every distinct-name source of parity value at most 4/5.",
+   "input": "A positive rational p",
+   "output": "Matrix parameters: k, s, d, a noise table, a map f",
+   "preserved": "Completeness at least 1 - (k xi + p/2); translation constraints",
+   "broken": "The parity gap becomes a translation-game gap with soundness 99/100",
+   "complexity": "N/A for choosing the parameters; the output machine for fixed parameters is polynomial",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "structure Parameters (p : ℚ) where\n  k : Nat\n  s : Nat\n  d : Nat\n  k_pos : 1 ≤ k\n  s_pos : 1 ≤ s\n  T : NoiseTables.Table s d\n  f : Ambient s d → Alphabet s\n  equivariant : ∀ x c, f (x + (c, 0)) = f x + c\n  stability : (T.gadget f equivariant).stabilityError ≤ p\n  sound : ∀ S : Source, S.DistinctNames →\n    Clean.IncidenceGap.parityValue (ActualAdviceUpper.sourceIncidence S)\n      (FiniteDistribution.uniform (Fin S.occurrences)) ≤ (4 : ℝ) / 5 →\n    InstanceValue.value (TableKeysAddressGame.tableOutput S k T) ≤ (99 : ℝ) / 100"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "theorem completeness (P : Parameters p) (S : Source)\n    (assignment : Fin S.variables → Bool) (ξ : ℚ)\n    (hfailure : S.failure assignment ≤ ξ) :\n    (1 : ℝ) - ((P.k : ℝ) * (ξ : ℝ) + (p : ℝ) / 2) ≤\n      InstanceValue.value (TableKeysAddressGame.tableOutput S P.k P.T)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualSeedSamplingLemmas.txt",
+     "quote": "theorem output_translations (P : Parameters p) (S : Source) :\n    TranslationTarget.IsTranslationInstance (Encoding.alphabetEquiv P.s).symm\n      (P.output S)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.MatrixGapFromInverseLemmas.txt",
+     "quote": "theorem parameters_of_inverse (hinverse : Inverse.Shortcode.InversePrinciple)\n    (p : ℚ) (hp : 0 < p) : Nonempty (Parameters p)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.MatrixGapFromInverseLemmas.txt",
+     "quote": "theorem exists_parameters (p : ℚ) (hp : 0 < p) : Nonempty (Parameters p)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X18",
+   "domain": "D8",
+   "name": "Assembly of the 3SAT to Unique Games reduction",
+   "kind": "Transformer",
+   "tags": [
+    "composition",
+    "construction",
+    "computation-bridge"
+   ],
+   "description": "From outer parameters and matrix parameters, composes the parity reduction, the matrix output, uniform copying, four-edge subdivision and the padded product into a gap reduction; a matrix reduction with completeness 1 - d (d <= eps0/t) and soundness 99/100 is finished into one for eps and delta. This yields theorem11.",
+   "input": "Outer parameters for eps, delta; matrix parameters at p = 1/copies",
+   "output": "A gap reduction from binary 3SAT for eps, delta",
+   "preserved": "The raw input codec, finite tape alphabets, translation constraints",
+   "broken": "Alphabet 2^s becomes (2^s)^t; dimension s becomes s t; the 99/100 gap becomes 1 - eps against delta",
+   "complexity": "Polynomial (one TM2 machine, polynomial fixed before the input)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FromMatrixGap.txt",
+     "quote": "def reduction {ε δ : ℝ} (P : ParameterSelection.OuterParameters ε δ)\n    (M : Decoder.MatrixGap.Parameters P.pStar) :\n    MachineOutputContract.BinaryGapReduction ε δ"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FinishReduction.txt",
+     "quote": "def of_matrix_reduction {ε δ : ℝ} (P : ParameterSelection.OuterParameters ε δ)\n    {q s : ℕ} (hq : 2 ≤ q) (hs : 1 ≤ s)\n    (coordinates : Fin q ≃ BinaryLinear.Vector s)\n    (matrix : List Bool → Instance q)\n    (translations : ∀ input, TranslationTarget.IsTranslationInstance coordinates (matrix input))\n    (computation : Turing.TM2ComputableInPolyTime (id : List Bool → List Bool)\n      gameBits matrix)\n    (finiteAlphabet : MachineFiniteAlphabet.FiniteAlphabet computation.tm)\n    (d : ℚ) (hd : d ≤ P.epsilon0 / P.repetitions)\n    (complete : ∀ input, BinaryLanguage.language input →"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt",
+     "quote": "theorem exists_binaryGapReduction (ε δ : ℝ)\n    (hε : 0 < ε) (_hεhalf : ε < 1 / 2)\n    (hδ : 0 < δ) (_hδhalf : δ < 1 / 2) :\n    Nonempty (Explicit.MachineOutputContract.BinaryGapReduction ε δ)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt",
+     "quote": "theorem theorem11 (ε δ : ℝ)\n    (hε : 0 < ε) (hεhalf : ε < 1 / 2)\n    (hδ : 0 < δ) (hδhalf : δ < 1 / 2) :\n    Nonempty (Explicit.MachineOutputContract.BinaryGapReduction ε δ)"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Reduction.FinishReduction.txt",
+     "quote": "let rounded := fun input => UniformTarget.construct P.copies hC (matrix input)"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D8-X19",
+   "domain": "D8",
+   "name": "Largest-remainder rounding of constraint weights",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change",
+    "construction",
+    "parameterized"
+   ],
+   "description": "Turns rational constraint weights into copy counts: floor quotas plus one extra copy for a deterministic set of largest remainders, with total exactly Q. The copied game keeps each constraint's endpoints and permutation and its translations; its value is within a/b of the weighted value, and after subdivision within (a/b)/4 of 1 - (1 - weighted value)/4. The assembled reduction uses uniform copying (D8-X13) in its place.",
+   "input": "A game with h > 0 constraints, rational weights p/q summing to 1, a tolerance a/b",
+   "output": "An unweighted game with exactly Q constraint copies",
+   "preserved": "Each constraint's identity and permutation; translations",
+   "broken": "The weighted value moves by at most a/b",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "def denominator (h a b : Nat) : Nat := IntegerRounding (h * b) a"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "def count (Q q : Nat) (p : Fin h → Nat) (i : Fin h) : Nat :=\n  floorCount Q q p i + if i ∈ incremented Q q p then 1 else 0"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "theorem sum_count (Q q : Nat) (p : Fin h → Nat) (hq : 0 < q)\n    (hmass : ∑ i, p i = q) : ∑ i, count Q q p i = Q"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "def copied (g : OccurrenceGame V E A) (n : E → Nat) :\n    OccurrenceGame V (Σ e, Fin (n e)) A where\n  source e := g.source e.1\n  target e := g.target e.1\n  permutation e := g.permutation e.1"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "@[simp] theorem copied_isTranslation [Add A] (g : OccurrenceGame V E A)\n    (n : E → Nat) (hg : g.IsTranslation) : (copied g n).IsTranslation"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "theorem rounded_value_tolerance (g : OccurrenceGame V (Fin h) A)\n    (a b q : Nat) (p : Fin h → Nat) (hh : 0 < h)\n    (ha : 0 < a) (hb : 0 < b) (hq : 0 < q) (hmass : ∑ i, p i = q) :\n    |(copied g (count (denominator h a b) q p)).value -\n      g.weightedValue (fun e => (p e : ℝ) / q)| ≤ (a : ℝ) / b"
+    },
+    {
+     "file": "excerpts/openai-math-OAI.Computability.UniqueGames.Games.RoundingLemmas.txt",
+     "quote": "theorem rounded_subdivision_value (g : OccurrenceGame V (Fin h) A)\n    (a b q : Nat) (p : Fin h → Nat) (hh : 0 < h)\n    (ha : 0 < a) (hb : 0 < b) (hq : 0 < q) (hmass : ∑ i, p i = q) :\n    |(Subdivision.game (copied g (count (denominator h a b) q p))).value -\n      (1 - (1 - g.weightedValue (fun e => (p e : ℝ) / q)) / 4)| ≤\n      ((a : ℝ) / b) / 4"
     }
    ],
    "evidence": {

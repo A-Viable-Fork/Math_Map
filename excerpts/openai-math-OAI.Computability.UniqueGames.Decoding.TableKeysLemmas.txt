@@ -1,0 +1,45 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Decoding/TableKeysLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Decoding/TableKeysLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 5d2aa0f0a89ae5abb65f9c63603163cfb357f400c5644f4ded85f0096158264e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem selectedWitness_changeHidden {Witness : Type*}
+    (choose : FullAdvice k Id K W R → Witness) (d : Draw k Id K W R)
+    (N : RawPartnerTarget.RawPoint d.singletons →ₗ[F2] d.rowMap.ker) :
+    choose (leftObservation rhs (changeHidden d N)) = choose (leftObservation rhs d)
+
+theorem actual_transferred_decoding (S : Source)
+    (labeling : Fin (TableKeysGame.vertexCount S k s d) → Fin (2 ^ s))
+    (J : Finset (Fin k)) (occ : Fin k → Fin S.occurrences)
+    (slot : Fin k → PartnerProjection.Slot)
+    (A : Alphabet s →ₗ[F2] R)
+    (rows : AdviceFibers.ObservedRow (E := RawPartnerTarget.RawPoint J) A)
+    (T : RawPartnerTarget.RawPoint J →ₗ[F2] Vector d)
+    (Mstar : RawPartnerTarget.RawPoint J →ₗ[F2] Alphabet s)
+    (hstar : A.comp Mstar = rows.val)
+    (Z : Submodule F2 (ActualHomogeneous.E k)) [Fintype Z]
+    (z : ActualHomogeneous.E k) (hz : ActualHomogeneous.tau z = 1)
+    (u : Alphabet s) (α : ℝ) (hα : 0 ≤ α) (ℓ r : ℕ)
+    (hH : Module.finrank F2 A.ker ≤ ℓ) (hZ : Module.finrank F2 Z ≤ r)
+    [Fintype A.ker]
+    [Fintype (RawPartnerTarget.RawPoint J →ₗ[F2] A.ker)]
+    [Fintype (A.ker →ₗ[F2] RawPartnerTarget.RawPoint J)]
+    [Fintype (A.ker →ₗ[F2] Z.map (RawPrivateTable.projection J (ActualGame.rhs S) occ slot))]
+    [Fintype ((RawPartnerTarget.RawPoint J ⧸
+      Z.map (RawPrivateTable.projection J (ActualGame.rhs S) occ slot)) →ₗ[F2] A.ker)]
+    [Fintype (RowErasureSliceQuotient.AffineSlice A
+      (Z.map (RawPrivateTable.projection J (ActualGame.rhs S) occ slot)) Mstar)]
+    (hsmall : 1 / (Fintype.card A.ker : ℝ) ≤ α / 8)
+    (hagreement : α / 4 ≤
+      𝔼 M : RowErasureSliceQuotient.AffineSlice A
+          (Z.map (RawPrivateTable.projection J (ActualGame.rhs S) occ slot)) Mstar,
+        if TableKeysRestoration.projectedAnswer S k s d labeling J
+            (RawPrivateTable.supported J (ActualGame.names S) occ slot) (M.val.prod T) =
+          M.val (RawPrivateTable.projection J (ActualGame.rhs S) occ slot z) + u
+        then (1 : ℝ) else 0) :
+    (α / 8) ^ 2 / (2 : ℝ) ^ (ℓ * r) / (2 : ℝ) ^ r ≤
+      PrivateStrategy.conditionalAgreement Z z ActualHomogeneous.tau hz
+        (RawPrivateTable.projection J (ActualGame.rhs S) occ slot)
+        (TableKeysPrivateRow.rowAnswer S labeling J
+          (RawPrivateTable.supported J (ActualGame.names S) occ slot) A rows T)
+        A.ker.subtype (TableKeys.visibleTau J) (visibleFallback J)

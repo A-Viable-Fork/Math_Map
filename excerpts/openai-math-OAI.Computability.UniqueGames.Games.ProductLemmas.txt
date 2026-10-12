@@ -1,0 +1,33 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Games/ProductLemmas.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Games/ProductLemmas.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 29dd4728abf0170aa08740fc549b42d02a58b0c2a9694d865f76561f227f9edc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def output (t : ℕ) (ht : 0 < t) : Instance (q ^ t) :=
+  Embedded.render (graph H presentation t) (vertices H presentation t ht)
+    finFunctionFinEquiv.symm (pow_pos H.constraintCount_positive t)
+
+def simpleBipartite (t : ℕ) (ht : 0 < t) : SimpleBipartite (output H presentation t ht) :=
+  Embedded.simpleBipartite _ _ _ _ (side H presentation t ht)
+    (side_left H presentation t ht) (side_right H presentation t ht)
+
+theorem output_value_eq_repetition [Nonempty (Fin q)] (t : ℕ) (ht : 0 < t) :
+    Integration.InstanceValue.value (output H presentation t ht) =
+      (presentation.toBipartiteGame.toGame.repetition t).value
+
+theorem output_completeness [Nonempty (Fin q)] (t : ℕ) (ht : 0 < t) {error : ℝ}
+    (hcomplete : 1 - error ≤ Integration.InstanceValue.value H) :
+    1 - (t : ℝ) * error ≤ Integration.InstanceValue.value (output H presentation t ht)
+
+def finalCoordinates {ell : ℕ} (coordinates : Fin q ≃ (Fin ell → ZMod 2)) (t : ℕ) :
+    Fin (q ^ t) ≃ (Fin (ell * t) → ZMod 2) :=
+  finFunctionFinEquiv.symm.trans
+    ((Equiv.piCongrRight (fun _ : Fin t => coordinates)).trans
+      (BipartiteGame.binaryProductEquiv ell t).toEquiv)
+
+theorem output_translations {ell : ℕ}
+    (coordinates : Fin q ≃ (Fin ell → ZMod 2))
+    (hH : Integration.TranslationTarget.IsTranslationInstance coordinates H)
+    (t : ℕ) (ht : 0 < t) :
+    Integration.TranslationTarget.IsTranslationInstance (finalCoordinates coordinates t)
+      (output H presentation t ht)

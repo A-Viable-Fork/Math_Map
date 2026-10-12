@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/Machines/MachineFiniteAlphabet.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/Machines/MachineFiniteAlphabet.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: e87f2789e887db4ea6d5ad3cd23e7d9b4d4a0d93ff86399dc3c0c7c6dd1649b7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+theorem composeBits {α β γ : Type}
+    {ea : α → List Bool} {eb : β → List Bool} {ec : γ → List Bool}
+    {f : α → β} {g : β → γ}
+    (first : TM2ComputableInPolyTime ea eb f)
+    (second : TM2ComputableInPolyTime eb ec g)
+    (hfirst : FiniteAlphabet first.tm) (hsecond : FiniteAlphabet second.tm) :
+    FiniteAlphabet (MachineSequential.composeBits first second).tm

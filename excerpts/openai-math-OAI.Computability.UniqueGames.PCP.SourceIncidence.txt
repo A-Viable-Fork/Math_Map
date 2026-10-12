@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: OpenAI math, lean/OAI/Computability/UniqueGames/PCP/SourceIncidence.lean at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb (declaration statements, proofs omitted; Apache 2.0)
+URL: https://raw.githubusercontent.com/openai/math/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Computability/UniqueGames/PCP/SourceIncidence.lean
+Fetched: 2026-10-12. SHA-256 of the page source as fetched: 3bb2a45884087a9500037ae20ce85a2af38866f5e823de8da3c7efd133637505
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+def incidence (S : Source) : Incidence (Fin S.occurrences) (Fin S.variables) where
+  name := ActualGame.names S
+  rhs i := (S.equation i).rhs
+
+theorem paritySuccess_input (input : SourceEncoding.Input)
+    (a : Fin input.variables → Bool) :
+    paritySuccess (incidence (HastadSource.asSource input))
+      (FiniteDistribution.uniform (Fin (HastadSource.asSource input).occurrences)) a =
+      (Clone100.success input.equations a : ℝ)
