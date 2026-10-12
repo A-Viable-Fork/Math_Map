@@ -1,0 +1,26 @@
+Excerpts, verbatim as extracted, from: C. Chryssomalakos and E. Okon, Generalized quantum relativistic kinematics: a stability point of view, arXiv:hep-th/0410212 (2004); Int. J. Mod. Phys. D 13 (2004) 2003-2034
+URL: https://arxiv.org/pdf/hep-th/0410212v1
+Fetched: 2026-10-11. SHA-256 of the PDF as fetched: 878425cd6f1761905cdc6c0f37879e12aade4488aa08b8c146096d4a56a41da3
+Text extracted with pdftotext (poppler), which writes superscripts and subscripts inline ("H2 (g; g)" is H^2(g; g), "ϕ1" is phi_1) and keeps ligatures. Only the windows below are kept; each was checked to occur in the extracted text.
+
+about a minute. Further ahead, along the same path, lies a three dimensional deformation space,
+
+with an instability double cone through its origin.
+
+instability surface α23 = α1 α2 in α-space. The latter represents a double cone with the apex at the
+
+there are six equivalence classes of algebras, given by the various regions the α-space is divided into by
+
+As it has been pointed out in [17, 25], the above algebra, off the instability cone, is isomorphic to
+
+some so(m, 6 − m), where m depends on the signs of α1 , α2 (taking α3 = 0).
+
+The work of Vilela Mendes [25], which motivated ours, appeared in 1994.
+
+[25] R. Vilela Mendes. Deformations, Stable Theories and Fundamental Constants. J. Phys. A,
+
+The instability double cone is
+
+not mentioned in the above work.
+
+to non-commuting moment operators, a purely quantum effect that bears no relation to spacetime

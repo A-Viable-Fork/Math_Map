@@ -16,10 +16,10 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D4 | TOPOLOGY AND GEOMETRIC METHODS | 439 | 0 [0] | 439 [385] | 439 [385] |
 | D5 | PROBABILITY AND INFORMATION THEORY | 153 | 0 [0] | 153 [77] | 153 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 163 | 0 [0] | 163 [146] | 163 [146] |
-| D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 471 | 1 [416] | 471 [0] | 470 [0] |
+| D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 476 | 1 [416] | 476 [0] | 475 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 238 | 1 [0] | 238 [77] | 236 [77] |
 | D9 | SYSTEMS AND EFFECTS | 29 | 0 [0] | 29 [0] | 29 [0] |
-| **all** | | **2002** | **2** [416] | **2002** [1118] | **1999** [1118] |
+| **all** | | **2007** | **2** [416] | **2007** [1118] | **2004** [1118] |
 
 ## 2. The fill layer
 
@@ -52,11 +52,11 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D8-155 | Poisson-Mellin-Newton cycle | Recorded from memory of the analytic-combinatorics literature. |
 | D8-202 | Square transform | Generic reading as the power transform with exponent 2. |
 
-- **Additions: 19** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph.
+- **Additions: 24** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph; D7-X07 Chevalley-Eilenberg cohomology with adjoint coefficients; D7-X08 Infinitesimal deformation of a Lie algebra and its obstructions; D7-X09 Rigidity of a semisimple Lie algebra; D7-X10 Inonu-Wigner contraction; D7-X11 Cartan's criterion by the Killing form.
 
 - **Invariant vocabulary** (`mapfill/invariants.js`): 52 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
-- **Mathlib links: 105** on 58 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
+- **Mathlib links: 111** on 60 entries (`mapfill/formal.js`), pinned at 380f2aa; 4 record a conflict with the entry as written.
 
 - **Conditions: 9** (`mapfill/conditions.js`): the hypotheses an entry's claims need, receipted. Counterexamples recorded: 2.
 
@@ -83,35 +83,35 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `decomposition` | 161 |
 | `compression` | 91 |
 | `completion` | 31 |
-| `construction` | 711 |
+| `construction` | 712 |
 | `representation-change` | 563 |
 | `basis-change` | 5 |
 | `bijection` | 14 |
 | `involution` | 25 |
-| `projection` | 103 |
+| `projection` | 104 |
 | `embedding` | 17 |
-| `closure` | 12 |
+| `closure` | 13 |
 | `duality` | 31 |
 | `densification` | 3 |
 | `sparsification` | 2 |
 | `coarsening` | 7 |
 | `expansion` | 42 |
 | `orientation` | 3 |
-| `parameterized` | 41 |
-| `algebra-bridge` | 45 |
+| `parameterized` | 43 |
+| `algebra-bridge` | 48 |
 | `topology-bridge` | 9 |
 | `computation-bridge` | 57 |
 | `local` | 43 |
-| `spectral` | 20 |
-| `iterative` | 61 |
+| `spectral` | 21 |
+| `iterative` | 62 |
 | `heuristic` | 3 |
 | `generative` | 30 |
 
 ## 4. Operation kinds
 
-- Transformer: 1649
+- Transformer: 1651
 - Constructor: 285
-- Correspondence: 68
+- Correspondence: 71
 
 ## 5. Upward corrections still open
 

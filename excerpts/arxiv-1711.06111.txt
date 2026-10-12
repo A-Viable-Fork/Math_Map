@@ -1,0 +1,34 @@
+Excerpts, verbatim as extracted, from: José M. Figueroa-O'Farrill, Kinematical Lie algebras via deformation theory, arXiv:1711.06111 (2017); J. Math. Phys. 59 (2018) 061701
+URL: https://arxiv.org/pdf/1711.06111
+Fetched: 2026-10-11. SHA-256 of the PDF as fetched: 8dc3ac349ec9bdbf3c6b6a04728f855a6f1bef1fe36228c168f526a5d3f1168c
+Text extracted with pdftotext (poppler), which writes superscripts and subscripts inline ("H2 (g; g)" is H^2(g; g), "ϕ1" is phi_1) and keeps ligatures. Only the windows below are kept; each was checked to occur in the extracted text.
+
+Conversely, every cocycle in C2 (g; g) defines a first-order (or infinitesimal) deformation.
+
+trivial infinitesimal deformations (i.e., coboundaries) and hence isomorphic to the cohomology H2 (g; g).
+
+the cohomology class of [[ϕ1 , ϕ1 ]] in H3 (g; g) is the obstruction to integrating the infinitesimal deformation ϕ1 to second order in t.
+
+In summary, we get a sequence of obstructions in H3 (g; g) to integrating the infinitesimal deformation
+
+of Lie algebra deformations, following in spirit the seminal work of Nijenhuis and Richardson [8].
+
+[8] A. Nijenhuis and R. W. Richardson, Jr., “Deformations of Lie algebra structures,” J. Math. Mech. 17 (1967) 89–105.
+
+Moreover, from the Whitehead lemmas (see, e.g., [13, §III.10]), H1 (s; R) = H2 (s; R) = 0.
+
+brackets involving s are not modified. This, of course, is a consequence of the well-known rigidity of
+
+case we say that the Lie algebra defined by µ0 is a contraction of the Lie algebra defined by µ.
+
+extent, deformation is the inverse process to contraction.
+
+Therefore the most general (non-trivial) infinitesimal deformation can be parametrised as
+
+ϕ1 = t1 c1 + t2 (c3 + c7 ) + t3 c4 + t4 c6 + t5 (c3 − c7 ) + t6 c10 + t7 (c12 − c16 ) + t8 (c9 − c13 ) + t9 c15 .
+
+we will see that all deformations in this paper are either quickly obstructed or else integrate polynomially.
+
+“Possible kinematics,” J. Mathematical Phys. 9 (1968) 1605–1614.
+
+The classification for D = 3 is due to Bacry and Nuyts [2] who completed earlier

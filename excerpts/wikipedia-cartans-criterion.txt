@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Cartan's criterion (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1346803504
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 66ce4f5eedff4565d4f3d5172525d79d852251a9a7f8e37088ab0c251f1ce832
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+''A finite-dimensional Lie algebra <math>\mathfrak{g}</math> over a [[field (mathematics)|field]] of [[characteristic zero]] is semisimple if and only if the Killing form is [[degenerate form|non-degenerate]].''

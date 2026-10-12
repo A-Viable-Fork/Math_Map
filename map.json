@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "ffe5a5828d0be2db1684a649991e9d893737af83"
+  "commit": "bfdd4ea684933ba9f07df451d397ec55641b611a"
  },
  "domains": {
   "D1": {
@@ -678,20 +678,20 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 2002,
-  "anchorable": 1999,
+  "entries": 2007,
+  "anchorable": 2004,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 19,
+   "added": 24,
    "generated": 29
   },
   "byTier": {
    "landed": 1337,
    "audited": 116,
    "authored": 494,
-   "receipted": 25,
+   "receipted": 30,
    "flagged": 1,
    "generated": 29
   },
@@ -702,7 +702,7 @@
    "unsupported": 100,
    "unchecked": 11166,
    "imprecise": 20,
-   "sourced": 674,
+   "sourced": 704,
    "formal": 52
   },
   "lean": {
@@ -723,15 +723,15 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 58,
-   "links": 105,
+   "entries": 60,
+   "links": 111,
    "byMatch": {
-    "exact": 65,
+    "exact": 66,
     "conflicts": 4,
     "related": 11,
-    "special": 10,
+    "special": 12,
     "general": 11,
-    "ingredient": 4
+    "ingredient": 7
    }
   }
  },
@@ -58253,6 +58253,308 @@
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X07",
+   "domain": "D7",
+   "name": "Chevalley-Eilenberg cohomology with adjoint coefficients",
+   "kind": "Transformer",
+   "tags": [
+    "construction",
+    "algebra-bridge"
+   ],
+   "description": "Computes H^n(g, g) for a Lie algebra g acting on itself by the adjoint action: the cohomology of the complex of alternating n-linear maps from g to g under the Chevalley-Eilenberg differential, which squares to zero by the Jacobi identity. H^0 is the center, H^1 the outer derivations, and H^2 the infinitesimal deformations of the bracket modulo the trivial ones (D7-X08).",
+   "input": "Finite-dimensional Lie algebra g, given by its structure constants",
+   "output": "Cohomology groups H^n(g, g): the center (n = 0), the outer derivations (n = 1), the infinitesimal deformations up to change of basis (n = 2)",
+   "preserved": "The complex itself: d^2 = 0, by the Jacobi identity",
+   "broken": "Individual cochains: only classes modulo coboundaries survive, so inner derivations vanish in H^1 and deformations tangent to a change of basis vanish in H^2",
+   "complexity": "Polynomial: exact linear algebra on spaces of dimension n * C(n, k)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-lie-algebra-cohomology.txt",
+     "quote": "A homogeneous <math>n</math>-cochain from <math>\\mathfrak{g}</math> to <math>M</math> is thus an alternating <math>k</math>-multilinear function <math>f\\colon\\Lambda^n\\mathfrak{g}\\to M</math>."
+    },
+    {
+     "file": "excerpts/wikipedia-lie-algebra-cohomology.txt",
+     "quote": "the nilpotency condition <math>d^2 = 0</math> following from the Lie algebra homomorphism"
+    },
+    {
+     "file": "excerpts/wikipedia-lie-algebra-cohomology.txt",
+     "quote": "When <math>M = \\mathfrak{g}</math>, the action is the [[adjoint action]]"
+    },
+    {
+     "file": "excerpts/wikipedia-lie-algebra-cohomology.txt",
+     "quote": "The first cohomology group is the space of [[automorphism of a Lie algebra#derivations|outer derivation]]s."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "trivial infinitesimal deformations (i.e., coboundaries) and hence isomorphic to the cohomology H2 (g; g)."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "LieModule.Cohomology.d₂₃",
+     "file": "Mathlib/Algebra/Lie/Cochain.lean",
+     "match": "ingredient",
+     "note": "The coboundary from 2-cochains to 3-cochains with coefficients in any Lie module, the adjoint module included. Coboundaries, cohomology and the comparison with the full Chevalley-Eilenberg complex are TODO in the file at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Cochain.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "LieModule.Cohomology.d₂₃_comp_d₁₂",
+     "file": "Mathlib/Algebra/Lie/Cochain.lean",
+     "match": "special",
+     "note": "d^2 = 0 in the lowest degree the file covers (1-cochains to 3-cochains); the entry claims it in every degree.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Cochain.lean"
+    },
+    {
+     "field": "output",
+     "decl": "LieModule.Cohomology.twoCocycle",
+     "file": "Mathlib/Algebra/Lie/Cochain.lean",
+     "match": "ingredient",
+     "note": "The 2-cocycles, the kernel of d₂₃. With M the adjoint module these are the infinitesimal deformations; the quotient by coboundaries, H^2, is not defined at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Cochain.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X08",
+   "domain": "D7",
+   "name": "Infinitesimal deformation of a Lie algebra and its obstructions",
+   "kind": "Correspondence",
+   "tags": [
+    "parameterized",
+    "iterative"
+   ],
+   "description": "Deforms a Lie bracket mu_0 to mu_t = mu_0 + t phi_1 + t^2 phi_2 + ... The first-order term must be a 2-cocycle, and a coboundary gives a deformation isomorphic to the original, so the infinitesimal deformations up to isomorphism form H^2(g, g) (following Nijenhuis and Richardson). Integrating to higher order meets a sequence of obstructions in H^3(g, g), the first the class of [[phi_1, phi_1]]; each depends only on the class of phi_1. Deformation is, to some extent, the inverse of contraction (D7-X10).",
+   "input": "Lie algebra g; a 2-cocycle phi_1 in C^2(g, g)",
+   "output": "A formal (often polynomial) family of Lie brackets mu_t, or the first nonzero obstruction class in H^3(g, g)",
+   "preserved": "The underlying vector space; mu_0 as the member at t = 0, of which the deformed algebra is a contraction",
+   "broken": "The isomorphism class, when phi_1 is not a coboundary; integrability, at the first order whose obstruction class is nonzero",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "Conversely, every cocycle in C2 (g; g) defines a first-order (or infinitesimal) deformation."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "trivial infinitesimal deformations (i.e., coboundaries) and hence isomorphic to the cohomology H2 (g; g)."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "the cohomology class of [[ϕ1 , ϕ1 ]] in H3 (g; g) is the obstruction to integrating the infinitesimal deformation ϕ1 to second order in t."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "In summary, we get a sequence of obstructions in H3 (g; g) to integrating the infinitesimal deformation"
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "of Lie algebra deformations, following in spirit the seminal work of Nijenhuis and Richardson [8]."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "extent, deformation is the inverse process to contraction."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X09",
+   "domain": "D7",
+   "name": "Rigidity of a semisimple Lie algebra",
+   "kind": "Correspondence",
+   "tags": [
+    "closure",
+    "algebra-bridge"
+   ],
+   "description": "For a finite-dimensional semisimple Lie algebra over a field of characteristic zero, Whitehead's second lemma gives H^2(g, V) = 0 for every finite-dimensional module V, in particular H^2(g, g) = 0: every infinitesimal deformation is trivial, so the algebra is rigid and deformation stops there. Through the Hochschild-Serre factorization, the brackets involving a semisimple quotient are likewise left unmodified. The map's authored fill D7-408 states the lemma; this entry states the consequence for deformation.",
+   "input": "Finite-dimensional semisimple Lie algebra g over a field of characteristic zero",
+   "output": "H^2(g, g) = 0: g is rigid",
+   "preserved": "The isomorphism class of g under every infinitesimal deformation of its bracket",
+   "broken": "Nothing; it certifies that no deformation leaves the algebra",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-whitehead-lemma-lie.txt",
+     "quote": "Let <math>\\mathfrak{g}</math> be a finite-dimensional, semisimple Lie [[algebra over a field]] of characteristic zero, ''V'' a finite-dimensional"
+    },
+    {
+     "file": "excerpts/wikipedia-whitehead-lemma-lie.txt",
+     "quote": "Similarly, Whitehead's second lemma states that under the conditions of the first lemma, also <math>H^2(\\mathfrak{g},V) = 0</math>."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "Moreover, from the Whitehead lemmas (see, e.g., [13, §III.10]), H1 (s; R) = H2 (s; R) = 0."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "brackets involving s are not modified. This, of course, is a consequence of the well-known rigidity of"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X10",
+   "domain": "D7",
+   "name": "Inonu-Wigner contraction",
+   "kind": "Transformer",
+   "tags": [
+    "projection",
+    "parameterized"
+   ],
+   "description": "Rescales some generators of a Lie algebra by a parameter and takes the limit: a singular change of basis that alters the structure constants and yields a non-isomorphic Lie algebra. Examples: so(3) to the Euclidean algebra of the plane; de Sitter to Poincare as the radius diverges; Poincare to Galilei as the speed of light diverges. The contracted algebra lies in the closure of the orbit of the original under change of basis, and deformation (D7-X08) is, to some extent, its inverse.",
+   "input": "Lie algebra with a one-parameter family of changes of basis, singular in the limit",
+   "output": "The contracted Lie algebra",
+   "preserved": "The dimension; the brackets the rescaling leaves unscaled (in so(3) to e(2), [Y2, Y3] = Y1 and [Y3, Y1] = Y2)",
+   "broken": "The brackets whose scaling vanishes in the limit; semisimplicity (so(3), semisimple, contracts to e(2), which is not)",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-group-contraction.txt",
+     "quote": "That amounts to a limiting operation on a parameter of the [[Lie algebra]], altering the [[structure constant]]s of this Lie algebra in a nontrivial singular"
+    },
+    {
+     "file": "excerpts/wikipedia-group-contraction.txt",
+     "quote": "The contraction limit {{math|''ε'' → 0}} trivializes the first commutator and thus yields the non-isomorphic algebra of the plane [[Euclidean group]]"
+    },
+    {
+     "file": "excerpts/wikipedia-group-contraction.txt",
+     "quote": "the [[de Sitter space|de Sitter group]] {{math|SO(4, 1) ~ Sp(2, 2)}} to the [[Poincaré group]] {{math|ISO(3, 1)}}, as the de Sitter radius diverges"
+    },
+    {
+     "file": "excerpts/wikipedia-group-contraction.txt",
+     "quote": "the [[Poincaré group]] to the [[Galilean transformation#Galilean group|Galilei group]], as the [[speed of light]] diverges"
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "case we say that the Lie algebra defined by µ0 is a contraction of the Lie algebra defined by µ."
+    },
+    {
+     "file": "excerpts/arxiv-1711.06111.txt",
+     "quote": "extent, deformation is the inverse process to contraction."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X11",
+   "domain": "D7",
+   "name": "Cartan's criterion by the Killing form",
+   "kind": "Correspondence",
+   "tags": [
+    "spectral",
+    "algebra-bridge"
+   ],
+   "description": "A finite-dimensional Lie algebra over a field of characteristic zero is semisimple if and only if its Killing form B(x, y) = tr(ad x ad y) is nondegenerate. Over the reals, Sylvester's law makes the signature of the Killing form an invariant, and the real forms of a complex semisimple algebra are labeled by it. The map's authored fill D7-402 evaluates the form; this entry is the test.",
+   "input": "Finite-dimensional Lie algebra over a field of characteristic zero",
+   "output": "Whether it is semisimple; for a real semisimple algebra, the signature of its Killing form",
+   "preserved": "The signature: it does not depend on the diagonalizing basis",
+   "broken": "Nothing",
+   "complexity": "Polynomial: n^2 traces of products of n x n matrices, then a congruence diagonalization",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/wikipedia-cartans-criterion.txt",
+     "quote": "is semisimple if and only if the Killing form is [[degenerate form|non-degenerate]].''"
+    },
+    {
+     "file": "excerpts/wikipedia-killing-form.txt",
+     "quote": "The [[Cartan criterion]] states that a Lie algebra is [[semisimple Lie algebra|semisimple]] if and only if the Killing form is [[degenerate form|non-degenerate]]."
+    },
+    {
+     "file": "excerpts/wikipedia-killing-form.txt",
+     "quote": "By [[Sylvester's law of inertia]], the number of positive entries is an invariant of the bilinear form"
+    },
+    {
+     "file": "excerpts/wikipedia-killing-form.txt",
+     "quote": "The real forms of a given complex semisimple Lie algebra are frequently labeled by the positive index of inertia of their Killing form."
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "LieAlgebra.hasTrivialRadical_iff_isKilling",
+     "file": "Mathlib/Algebra/Lie/CartanCriterion.lean",
+     "match": "exact",
+     "note": "Trivial solvable radical iff nondegenerate Killing form, for a Lie algebra that is free and Noetherian over a principal ideal domain of characteristic zero (the file's variables): Cartan's criterion with semisimplicity read as trivial radical, which over a field of characteristic zero is the classical notion.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/CartanCriterion.lean"
+    },
+    {
+     "field": "description",
+     "decl": "LieAlgebra.IsKilling.instSemisimple",
+     "file": "Mathlib/Algebra/Lie/Killing.lean",
+     "match": "special",
+     "note": "One direction over a field: a finite-dimensional Lie algebra with nondegenerate Killing form is semisimple.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Killing.lean"
+    },
+    {
+     "field": "input",
+     "decl": "killingForm",
+     "file": "Mathlib/Algebra/Lie/TraceForm.lean",
+     "match": "ingredient",
+     "note": "The Killing form, the trace form of the adjoint representation: tr(ad x ad y). Real forms and the signature are not in Mathlib at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/TraceForm.lean"
+    }
+   ],
    "tier": "receipted"
   },
   {

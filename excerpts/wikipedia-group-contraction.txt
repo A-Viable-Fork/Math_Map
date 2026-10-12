@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Group contraction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1220858199
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: ce7aff652a883cfbad200d36c010500f13655f2319af1212c52975c02fb0065c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+That amounts to a limiting operation on a parameter of the [[Lie algebra]], altering the [[structure constant]]s of this Lie algebra in a nontrivial singular
+
+The contraction limit {{math|''ε'' → 0}} trivializes the first commutator and thus yields the non-isomorphic algebra of the plane [[Euclidean group]]
+
+the [[de Sitter space|de Sitter group]] {{math|SO(4, 1) ~ Sp(2, 2)}} to the [[Poincaré group]] {{math|ISO(3, 1)}}, as the de Sitter radius diverges
+
+the [[Poincaré group]] to the [[Galilean transformation#Galilean group|Galilei group]], as the [[speed of light]] diverges
