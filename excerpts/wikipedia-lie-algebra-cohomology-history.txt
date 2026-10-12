@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Lie algebra cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354572973
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 14b8febea86b1956da0fa8620772da9fbf036f4495cd4dd62ae5e8a81bb7ebe4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was first introduced in 1929 by [[Élie Cartan]]
+
+It was later extended by {{harvs|txt|last1=Chevalley|first1=Claude|last2=Eilenberg|first2=Samuel|author1-link=Claude Chevalley|author2-link=Samuel Eilenberg|year=1948}} to coefficients in an arbitrary [[Lie algebra representation|Lie module]].

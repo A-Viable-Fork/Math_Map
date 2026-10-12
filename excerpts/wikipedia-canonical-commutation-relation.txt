@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Canonical commutation relation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376733781
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: ec4d283a6b0f4bc2296942f578105fd880c394ed494950109ad464ca22fba5ee
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This relation is attributed to [[Werner Heisenberg]], [[Max Born]] and [[Pascual Jordan]] (1925),
+
+This observation led [[Paul Dirac|Dirac]] to propose that the quantum counterparts <math>\hat{f}</math>, <math>\hat{g}</math> of classical observables {{mvar|f}}, {{mvar|g}} satisfy

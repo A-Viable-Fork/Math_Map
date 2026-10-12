@@ -11,7 +11,7 @@ Statuses grade how deeply this repository has read each paper: `receipted` (quot
 - [x] `arxiv:1003.5944` Levels in the toposes of simplicial sets and cubical sets (Carolyn Kennett, Emily Riehl, Michael Roy, Michael Zaks, 2010) **receipted** · D7-X01 · excerpts/arxiv-1003.5944.txt
 - [x] `arxiv:1603.04641` Compositional game theory (Neil Ghani, Jules Hedges, Viktor Winschel, Philipp Zahn, 2016) **receipted** · D7-X04 · excerpts/arxiv-1603.04641.txt
 - [x] `arxiv:1608.02921` Construction of bicuspidal rational complex projective plane curves (József Bodnár, 2016) **receipted** · D2-X01 · excerpts/arxiv-1608.02921.txt
-- [x] `arxiv:1711.06111` Kinematical Lie algebras via deformation theory (José M. Figueroa-O'Farrill, 2017) **receipted** · D7-X07, D7-X08, D7-X09, D7-X10 · excerpts/arxiv-1711.06111.txt
+- [x] `arxiv:1711.06111` Kinematical Lie algebras via deformation theory (José M. Figueroa-O'Farrill, 2017) **receipted** · D7-X07, D7-X08, D7-X09, D7-X10 · excerpts/arxiv-1711.06111.txt, excerpts/arxiv-1711.06111-references.txt
 - [x] `arxiv:2103.12179` The Doob-McKean identity for stable Lévy processes (Andreas E. Kyprianou, Neil O'Connell, 2021) **receipted** · D5-037 · excerpts/arxiv-2103.12179.txt
 - [x] `arxiv:hep-th/0410212` Generalized quantum relativistic kinematics: a stability point of view (C. Chryssomalakos, E. Okon, 2004) **receipted** ·  · excerpts/arxiv-hep-th-0410212.txt · prior art for the seed of generation/2026-10-11-deform-001; no map entry rests on it
 - [x] `econometrica:59(2):461` Bayesian Implementation (Matthew O. Jackson, 1991) **receipted** · D7-X05 · excerpts/econometrica-jackson-1991.txt · receipted from the abstract page only

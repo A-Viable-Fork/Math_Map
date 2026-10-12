@@ -96,6 +96,7 @@
 | `scripts/check-all.mjs` | the gate. |
 | `scripts/compose.mjs` | composition. |
 | `scripts/deform-algebras.mjs` | the algebras and rounds of the deformation generator (scripts/deform.mjs). |
+| `scripts/deform-history.mjs` | the HISTORY-001 round. |
 | `scripts/deform.mjs` | the deformation generator. |
 | `scripts/evidence.mjs` | evidence per claim. |
 | `scripts/excerpt.mjs` | the excerpt maker. |
@@ -141,6 +142,7 @@
 | `excerpts/arxiv-1003.5944.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1603.04641.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1608.02921.txt` | Verbatim windows from an arXiv paper. |
+| `excerpts/arxiv-1711.06111-references.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1711.06111.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-2103.12179.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-hep-th-0410212.txt` | Verbatim windows from an arXiv paper. |
@@ -227,9 +229,12 @@
 | `excerpts/nlab-reflective-subcategory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subdivision.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subobject-classifier-meet.txt` | Verbatim windows from an nLab page. |
+| `excerpts/wikipedia-accelerating-expansion-1998.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birational-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-blowing-up.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-canonical-commutation-relation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-cartans-criterion-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cartans-criterion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-castelnuovo.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -238,6 +243,7 @@
 | `excerpts/wikipedia-data-transformation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-doob-h-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-duhamel.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-eightfold-way-1961.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-euler-lagrange-equation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-first-passage.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-five-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -245,20 +251,27 @@
 | `excerpts/wikipedia-galilean-transformation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galois-connection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-gibbard-satterthwaite.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-group-contraction-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-contraction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-hamiltonian-mechanics-1833.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-heisenberg-picture.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-helmholtz-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hermite-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-history-lorentz-transformations.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hodge-projection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hodge-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-implementation-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-infinitesimal-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-inverse-gaussian.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-jordan-chevalley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-killing-form-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-killing-form.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-kleene-fixed-point-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lebesgue-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-lie-algebra-cohomology-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lie-algebra-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-lie-algebra-extension.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-lie-algebra-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley-multiplier.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-littlewood-paley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-localization.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -267,20 +280,29 @@
 | `excerpts/wikipedia-matrix-square-root.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-matroid-minor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-merkle-tree.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-michelson-morley-1887.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-murray-gerstenhaber.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nash-equilibrium.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-newton-cartan-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-old-quantum-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-poisson-bracket-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-resolution-of-singularities.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-robust-pca.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-rotation-matrix.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-schrodinger-equation-galilean.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-special-relativity-1905.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-sylvesters-law-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-takens-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-sorting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-transition-state-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-whitehead-lemma-lie.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-wiener-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-xi-baryon-1959.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `generation/2026-10-11-deform-001/calibration.md` | The calibration round's computed report: H^2, directions, integration and contraction of the kinematical algebras (generated by scripts/deform.mjs --round calibration). |
 | `generation/2026-10-11-deform-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-11-deform-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
@@ -288,6 +310,7 @@
 | `generation/2026-10-11-gen-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-11-gen-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `generation/2026-10-11-history-001/preregistration.md` | A round's pre-registration: rows, constraints, controls and verdict rules, committed alone before any computation. |
+| `generation/2026-10-11-history-001/rows.md` | HISTORY-001's computed report: every row's candidates, survivors, controls, time slice and grade (generated by scripts/deform-history.mjs --round). |
 | `generation/2026-10-11-mm-dr-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-11-mm-dr-001/package-chatgpt.zip` | A generator's companion package, landed verbatim; its hash is in the round's record. |
 | `generation/2026-10-11-mm-dr-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
@@ -580,6 +603,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1003.5944.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1603.04641.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1608.02921.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/arxiv-1711.06111-references.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1711.06111.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-2103.12179.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-hep-th-0410212.txt` |
@@ -682,6 +706,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/check-all.mjs` | names | `scripts/build.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/catalogue.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/compose.mjs` |
+| `scripts/check-all.mjs` | names | `scripts/deform-history.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/deform.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/formal.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/gaps.mjs` |
@@ -696,6 +721,31 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/compose.mjs` | names | `scripts/evidence.mjs` |
 | `scripts/deform-algebras.mjs` | imports | `scripts/deform.mjs` |
 | `scripts/deform-algebras.mjs` | names | `scripts/deform.mjs` |
+| `scripts/deform-history.mjs` | imports | `scripts/deform-algebras.mjs` |
+| `scripts/deform-history.mjs` | imports | `scripts/deform.mjs` |
+| `scripts/deform-history.mjs` | names | `excerpts/arxiv-1711.06111-references.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-accelerating-expansion-1998.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-canonical-commutation-relation.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-cartans-criterion-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-eightfold-way-1961.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-group-contraction-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-hamiltonian-mechanics-1833.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-heisenberg-picture.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-history-lorentz-transformations.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-killing-form-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-lie-algebra-cohomology-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-lie-algebra-extension.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-lie-algebra-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-michelson-morley-1887.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-murray-gerstenhaber.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-newton-cartan-theory.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-old-quantum-theory.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-poisson-bracket-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-schrodinger-equation-galilean.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-special-relativity-1905.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-sylvesters-law-history.txt` |
+| `scripts/deform-history.mjs` | names | `excerpts/wikipedia-xi-baryon-1959.txt` |
+| `scripts/deform-history.mjs` | names | `generation/2026-10-11-history-001/preregistration.md` |
 | `scripts/deform.mjs` | imports | `scripts/deform-algebras.mjs` |
 | `scripts/deform.mjs` | names | `generation/2026-10-11-deform-001/calibration.md` |
 | `scripts/deform.mjs` | names | `scripts/deform-algebras.mjs` |

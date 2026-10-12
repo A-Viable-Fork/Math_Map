@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, History of Lorentz transformations (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374406826
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 64b398b40a7af6e464b74840930e16924c86bc3f7b43099598ec5301e8ee8b5c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Larmor showed that Maxwell's equations were invariant under this two-step transformation, "to second order in ''v/c''" – it was later shown by Lorentz (1904) and Poincaré (1905) that they are indeed invariant under this transformation to all orders in ''v/c''.
