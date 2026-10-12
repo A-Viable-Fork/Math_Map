@@ -333,6 +333,21 @@ const ADDITIONS = [
       { file: "excerpts/wikipedia-killing-form.txt", quote: "By [[Sylvester's law of inertia]], the number of positive entries is an invariant of the bilinear form" },
       { file: "excerpts/wikipedia-killing-form.txt", quote: "The real forms of a given complex semisimple Lie algebra are frequently labeled by the positive index of inertia of their Killing form." },
     ] },
+  { id: "D7-X12", name: "Central extension of a Lie algebra by a 2-cocycle with trivial coefficients", kind: "Constructor", tags: ["construction", "algebra-bridge"],
+    description: "Adds one central generator z to a Lie algebra g: given a 2-cocycle omega with values in the ground field, the bracket on z + g is [a, b] + omega(a, b) z, and z commutes with everything. A cohomology class defines its central extension up to isomorphism, so the one-dimensional central extensions are read from H^2(g; F). They are what projective representations need: by Bargmann's theorem, when H^2(g; R) vanishes every projective unitary representation lifts to an ordinary one; the Galilei algebra needs its central extension, the Bargmann algebra, the symmetry of the Schrodinger equation.",
+    input: "Lie algebra g; a 2-cocycle omega in C^2(g; F) with trivial coefficients",
+    output: "The central extension F z + g, with bracket [a, b] + omega(a, b) z",
+    preserved: "g as the quotient by the center F z; the brackets of g up to the central term",
+    broken: "The splitting: when omega is not a coboundary, g is not a subalgebra of the extension complementary to z",
+    complexity: "Polynomial: exact linear algebra on spaces of dimension C(n, 2) and C(n, 3)",
+    requestedBy: "Requested by HISTORY-001 (generation/2026-10-11-history-001): the Heisenberg and Bargmann rows are central extensions, computed by H^2 with trivial coefficients; receipted.",
+    receipts: [
+      { file: "excerpts/wikipedia-lie-algebra-extension.txt", quote: "If {{math|''ε''}} is a 2-cocycle ([[#Cohomology|background]]) on a Lie algebra {{math|'''g'''}} and {{math|'''h'''}} is any one-dimensional vector space, let {{math|'''e''' {{=}} '''h''' ⊕  '''g'''}} (vector space direct sum) and define a Lie bracket on {{math|'''e'''}} by" },
+      { file: "excerpts/wikipedia-lie-algebra-extension.txt", quote: "A cohomology class {{math|[''Φ''] ∈ ''H''<sup>2</sup>('''g''', ''F'')}} defines a central extension of {{math|'''g'''}} which is unique up to isomorphism." },
+      { file: "excerpts/wikipedia-lie-algebra-extension.txt", quote: "In this case one has to pass to its central extension, the '''Bargmann group''',<ref>{{harvnb|Bargmann|1954}}</ref> which is the symmetry group of the [[Schrödinger equation]]." },
+      { file: "excerpts/wikipedia-projective-representation-bargmann.txt", quote: "theorem states that if the second [[Lie algebra cohomology]] group <math>H^2(\\mathfrak g; \\mathbb R)</math> of <math>\\mathfrak g</math> is trivial, then every projective unitary representation of <math>G</math> can be de-projectivized" },
+      { file: "excerpts/wikipedia-galilean-transformation-bargmann.txt", quote: "The so-called '''Bargmann algebra''' is obtained by imposing <math>[C'_i,P'_j]=i M\\delta_{ij}</math>, such that {{math|''M''}} lies in the [[center (algebra)|center]]" },
+    ] },
 ];
 
 module.exports = { ADDITIONS };

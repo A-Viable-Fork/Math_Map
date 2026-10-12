@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Xi baryon (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361000901
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 90683b8d2de7b418b29e0af8d16f0cf28a2c7e68c2dff59d436de1e89e54ba4b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The first discovery of the neutral Xi particle was at Lawrence Berkeley Laboratory in 1959.

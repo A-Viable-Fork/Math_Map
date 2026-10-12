@@ -1,0 +1,14 @@
+Excerpts, verbatim as extracted, from: M. Lachièze-Rey, A. de Queiroz, S. Simon, Symmetry, Physical Theories and Theory Changes, PoS(FFP14)210 (Frontiers of Fundamental Physics 14, 2014; CC BY-NC-SA)
+URL: https://pos.sissa.it/224/210/pdf
+Fetched: 2026-10-12. SHA-256 of the PDF as fetched: 1242a59506be0e56dc52b50fa8c55e9ee4f3da962ab1e25c7d638dfa897fcf6f
+Text extracted with pdftotext (poppler). Only the windows below are kept; each was checked to occur in the extracted text.
+
+We discuss the problem of theory change in physics. We characterize a physical theory based
+through its kinematical symmetries. The progressions of theories is mathematically described
+as Inönü-Wigner extensions of the associated kinematical groups. This is compatible with the
+
+modern ideas in philosophy of science – e.g. the semantic approach to a scientific theory, with the
+advantage of remaining conceptually simple and admitting a well defined mathematical structure,
+with hints at a logic of discovery. This is also linked to the Bargmann-Wigner program. We
+
+Symmetry, Physical Theories and Theory Changes

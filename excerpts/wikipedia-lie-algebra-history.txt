@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Lie algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378352088
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 73cb2215db0f3af068505f2e7146d4fa4eacd2c7d66934b4b1a7455e6372a87b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Lie algebras were introduced to study the concept of [[infinitesimal transformation]]s by [[Sophus Lie]] in the 1870s,
+
+The name ''Lie algebra'' was given by [[Hermann Weyl]] in the 1930s; in older texts, the term ''infinitesimal group'' was used.
+
+The simple Lie algebras of finite dimension over an [[algebraically closed field]] ''F'' of characteristic zero were classified by Killing and Cartan in the 1880s and 1890s, using [[root system]]s.

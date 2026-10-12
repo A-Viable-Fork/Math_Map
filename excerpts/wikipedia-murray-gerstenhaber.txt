@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Murray Gerstenhaber (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1323555275
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 30badc8d62269580b1d43d2f557f159139097ef3456217da9e7ad57824561c2f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+"On the deformation of rings and algebras," ''Annals of Mathematics'', Second Series, Vol. 79, No. 1 (Jan., 1964)

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Schrodinger equation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378811087
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: c94c4ec34fea553ee6588cc75fc2832c229eb7c1084a94a1c59d8de466925311
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+who postulated the equation in 1925 and published it in 1926
+
+The effect of a [[Galilean transformation]] upon the Schrödinger equation can be creates a phase factor times the wave function, but the probabilities, as calculated via the Born rule, are unchanged.

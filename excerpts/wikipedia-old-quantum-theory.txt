@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Old quantum theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371811753
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: 6a2aa57d4724581faeebb932ec19212ec0df7e37e6f0617f56b348389a7aa14f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The main tool of the old quantum theory was the Bohr–Sommerfeld quantization condition, a procedure for selection of certain allowed states of a classical system: the system can then only exist in one of the allowed states and not in any other state.
+
+|date=1916|title=Zur Quantentheorie der Spektrallinien
+
+In the next few years [[Arnold Sommerfeld]] extended the quantum rule to arbitrary integrable systems

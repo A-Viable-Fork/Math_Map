@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Heisenberg picture (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1365136501
+Fetched: 2026-10-11. SHA-256 of the page source as fetched: ca4378495a170fb8a62ccd6a7e55ded589e8ceb703b5d29dea3e5fd8c7d81e15
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It stands in contrast to the [[Schrödinger picture]] in which observables are constant (as long as there is no external force) and the states evolve in time.
