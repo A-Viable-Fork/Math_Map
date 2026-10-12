@@ -209,7 +209,7 @@ const LINKS = [
 ];
 
 // D9 (generated, MM-DR-001): one label, compartment-context, for the per-process contamination rule
-// [ruling: operator, 2026-10-11; the Phone trellis, F-45]: a process that has taken in a compartment's data
+// [ruling: operator, 2026-10-11; the Phone program, F-45]: a process that has taken in a compartment's data
 // emits as that compartment until it is reset. Prior art: Weir (USENIX Security 2016, secondary;
 // generation/2026-10-11-mm-dr-003/grading.md). Raised by the steps whose output field says they bring
 // labeled data in; forbidden at every step whose broken field names E9-NOEGRESS. Nothing in D9 clears it:

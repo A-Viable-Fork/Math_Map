@@ -138,6 +138,6 @@ Do not try to be encouraging. Try to be correct. If an effect escapes every boun
 
 - The report is a lead. Every AOSP path is re-read at the stated tag before a binding lands; the tag is recorded in Math_Map and in Phone's `upstream/lock.json` as an upstream with file hashes.
 - Bindings land in a new `mapfill/android.js` modeled on `mapfill/formal.js`, each with a receipt from the AOSP source.
-- Escape channels feed Phone's trellis (F-52, the sensing layer; L19 and T0-MEM) as candidate Linter rules or exclusion reservoir entries; propose there, the operator rules.
+- Escape channels feed Phone's program (F-52, the sensing layer; L19 and T0-MEM) as candidate Linter rules or exclusion reservoir entries; propose there, the operator rules.
 - If step 1 or 5 fails, `compose.mjs` must report effects on unenforced channels as "unenforced" rather than as preserved.
 - Run MM-DR-003 (prior art) after this returns.
