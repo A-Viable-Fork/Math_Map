@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "aa3b58daa161dd54a37cde2ada4071e3a9b0f72b"
+  "commit": "78e3f9da21ebcfdbdd936a53a96dd9d34fe955d9"
  },
  "domains": {
   "D1": {
