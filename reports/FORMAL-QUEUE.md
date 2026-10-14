@@ -4,7 +4,7 @@
 
 Entries not yet linked (to Mathlib or to lean/) whose every name word matches a Mathlib module's title or path. A row is a place to look, not a link: many are false friends (the same word for a different object). A link is made only by reading the declaration and grading its match (`mapfill/formal.js`).
 
-244 candidates.
+234 candidates.
 
 | Entry | Name | Mathlib module | Module title |
 |---|---|---|---|
@@ -30,7 +30,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D2-039 | Z-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D2-040 | LU Decomposition | `Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean` | Lebesgue decomposition |
 | D2-047 | QR Decomposition | `Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean` | Lebesgue decomposition |
-| D2-074 | Quotient Ring Construction | `Mathlib/RingTheory/LocalRing/Quotient.lean` | - |
 | D2-076 | Product of Rings | `Mathlib/Algebra/Order/Ring/Prod.lean` | Products of ordered rings |
 | D2-078 | Integral Closure | `Mathlib/RingTheory/DedekindDomain/IntegralClosure.lean` | Integral closure of Dedekind domains |
 | D2-081 | Fractional Ideal Construction | `Mathlib/RingTheory/FractionalIdeal/Basic.lean` | Fractional ideals |
@@ -203,16 +202,13 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D7-139 | Prime Spectrum Construction | `Mathlib/RingTheory/Spectrum/Prime/ConstructibleSet.lean` | Constructible sets in the prime spectrum |
 | D7-140 | Maximal Spectrum Construction | `Mathlib/RingTheory/Spectrum/Maximal/Basic.lean` | Maximal spectrum of a commutative (semi)ring |
 | D7-141 | Module Tensor Product | `Mathlib/Algebra/Lie/TensorProduct.lean` | Tensor products of Lie modules |
-| D7-145 | Universal Enveloping Algebra Construction | `Mathlib/Algebra/Lie/UniversalEnveloping.lean` | Universal enveloping algebra |
 | D7-146 | Group Ring Construction | `Mathlib/Algebra/Ring/Action/Basic.lean` | Group action on rings |
 | D7-148 | Matrix Ring Construction | `Mathlib/LinearAlgebra/Matrix/Ideal.lean` | Ideals in a matrix ring |
 | D7-152 | Algebraic Closure Construction | `Mathlib/FieldTheory/IsAlgClosed/AlgebraicClosure.lean` | Algebraic Closure |
 | D7-153 | Separable Closure Construction | `Mathlib/FieldTheory/SeparableClosure.lean` | Separable closure |
-| D7-154 | Splitting Field Construction | `Mathlib/FieldTheory/SplittingField/Construction.lean` | Splitting fields |
 | D7-158 | Centralizer Construction | `Mathlib/Algebra/Ring/Centralizer.lean` | Centralizers of rings |
 | D7-159 | Normalizer Construction | `Mathlib/Algebra/Lie/Normalizer.lean` | The normalizer of Lie submodules and subalgebras. |
 | D7-161 | Group Extension | `Mathlib/GroupTheory/GroupExtension/Defs.lean` | Group Extensions |
-| D7-162 | Semidirect Product Construction | `Mathlib/GroupTheory/SemidirectProduct.lean` | Semidirect product |
 | D7-163 | Wreath Product Construction | `Mathlib/GroupTheory/RegularWreathProduct.lean` | Regular wreath product |
 | D7-178 | Hasse Diagram Construction | `Mathlib/Combinatorics/SimpleGraph/Hasse.lean` | The Hasse diagram as a graph |
 | D7-179 | Dedekind-MacNeille Completion | `Mathlib/Order/Completion.lean` | Dedekind-MacNeille completion |
@@ -222,12 +218,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D7-207 | Scott Topology Construction | `Mathlib/Topology/Order/ScottTopology.lean` | Scott topology |
 | D7-208 | Lawson Topology Construction | `Mathlib/Topology/Order/LawsonTopology.lean` | Lawson topology |
 | D7-214 | Incidence Algebra Construction | `Mathlib/Combinatorics/Enumerative/IncidenceAlgebra.lean` | Incidence algebras |
-| D7-215 | Chain Complex Construction | `Mathlib/Algebra/Homology/Embedding/Connect.lean` | Connecting a chain complex and a cochain complex |
-| D7-216 | Cochain Complex Construction | `Mathlib/Algebra/Homology/CochainComplexOpposite.lean` | Opposite categories of cochain complexes |
-| D7-221 | Projective Resolution Construction | `Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean` | Projective resolutions |
-| D7-222 | Injective Resolution Construction | `Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean` | Injective resolutions |
-| D7-234 | Mapping Cone Construction | `Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean` | - |
-| D7-236 | Chain Homotopy Equivalence | `Mathlib/Algebra/Homology/HomotopyCategory/ChainComplex.lean` | Homotopy equivalences between chain complexes |
 | D7-243 | Bar Construction | `Mathlib/Data/Sym/Card.lean` | Stars and bars |
 | D7-250 | Group Homology Construction | `Mathlib/RepresentationTheory/Homological/GroupHomology/Functoriality.lean` | Functoriality of group homology |
 | D7-251 | Group Cohomology Construction | `Mathlib/RepresentationTheory/Homological/GroupCohomology/Functoriality.lean` | Functoriality of group cohomology |

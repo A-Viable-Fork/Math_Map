@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/ShortComplex/Homology.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/Homology.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 26c17670109fb293ee4a0731aee0333ab3b2ed00ca640c3251bb34a06dca993f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.ShortComplex.homology (line 384)
+noncomputable def homology [HasHomology S] : C := S.homologyData.left.H

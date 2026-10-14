@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Abelian/RightDerived.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/RightDerived.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: a2908de546843fa2f10a833c1b31e982afe1db901d1698f801de68df8b42358c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Functor.rightDerived (line 108)
+noncomputable def Functor.rightDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :=
+  F.rightDerivedToHomotopyCategory ⋙ HomotopyCategory.homologyFunctor D _ n
+
+-- CategoryTheory.Functor.rightDerivedZeroIsoSelf (line 372)
+noncomputable def rightDerivedZeroIsoSelf : F.rightDerived 0 ≅ F :=
+  (asIso F.toRightDerivedZero).symm

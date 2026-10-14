@@ -1,0 +1,17 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/Homotopy.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/Homotopy.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d14897fc5e2a101ee2205957e1172aba81bf986349be2e12e013a3b7e77d1923
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- HomotopyEquiv (line 740)
+structure HomotopyEquiv (C D : HomologicalComplex V c) where
+  /-- The forward chain map -/
+  hom : C ⟶ D
+  /-- The backward chain map -/
+  inv : D ⟶ C
+  /-- A homotopy showing that composing the forward and backward maps is homotopic to the identity
+  on C -/
+  homotopyHomInvId : Homotopy (hom ≫ inv) (𝟙 C)
+  /-- A homotopy showing that composing the backward and forward maps is homotopic to the identity
+  on D -/
+  homotopyInvHomId : Homotopy (inv ≫ hom) (𝟙 D)

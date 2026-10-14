@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 3a4ce62903394153ea6f71efc911c5cc974fbe708c064cd1da5b0528f5329ea6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.InjectiveResolution (line 43)
+structure InjectiveResolution (Z : C) where
+  /-- the cochain complex involved in the resolution -/
+  cocomplex : CochainComplex C ℕ
+  /-- the cochain complex must be degreewise injective -/
+  injective : ∀ n, Injective (cocomplex.X n)

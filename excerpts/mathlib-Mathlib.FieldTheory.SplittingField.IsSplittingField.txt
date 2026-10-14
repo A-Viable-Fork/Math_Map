@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/FieldTheory/SplittingField/IsSplittingField.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/SplittingField/IsSplittingField.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 4eba3f796709887cfebdfdaeaa43c38f5541b0afe75cb0f7602a86e0852d9460
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.IsSplittingField (line 47)
+class IsSplittingField (f : K[X]) : Prop where
+  splits' : Splits (f.map (algebraMap K L))
+  adjoin_rootSet' : Algebra.adjoin K (f.rootSet L : Set L) = ⊤

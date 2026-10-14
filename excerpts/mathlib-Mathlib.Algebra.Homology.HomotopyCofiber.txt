@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/HomotopyCofiber.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCofiber.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 9710483ee19eb36fea72285cc50f7d5cb8e4184fe7cd1537660a906d5ae8b9e3
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- HomologicalComplex.homotopyCofiber (line 260)
+noncomputable def homotopyCofiber : HomologicalComplex C c where
+  X i := homotopyCofiber.X φ i
+  d i j := homotopyCofiber.d φ i j
+  shape i j hij := homotopyCofiber.shape φ i j hij
+  d_comp_d' i j k hij hjk := by
+    apply homotopyCofiber.ext_from_X φ j i hij

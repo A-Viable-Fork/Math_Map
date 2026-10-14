@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/Span/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Span/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 6496e57d3c96eb2d1272667fc32509255e6ba3e62f60c18bcb0fb1a23362f26f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Submodule.span (line 46)
+def span (s : Set M) : Submodule R M :=
+  sInf { p | s ⊆ p }
+
+-- Submodule.gi (line 260)
+protected def gi : GaloisInsertion (@span R M _ _ _) (↑) where
+  choice s _ := span R s
+  gc _ _ := span_le
+  le_l_u _ := subset_span
+  choice_eq _ _ := rfl

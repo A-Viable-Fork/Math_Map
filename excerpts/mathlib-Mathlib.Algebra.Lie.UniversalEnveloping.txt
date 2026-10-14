@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Lie/UniversalEnveloping.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/UniversalEnveloping.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: bd10b257d6521f21cc6db181d4535c97928986e9261bebbe1bb50a48e037cca3
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- UniversalEnvelopingAlgebra (line 65)
+def UniversalEnvelopingAlgebra := (UniversalEnvelopingAlgebra.ringCon R L).Quotient
+
+-- UniversalEnvelopingAlgebra.lift (line 92)
+def lift : (L →ₗ⁅R⁆ A) ≃ (UniversalEnvelopingAlgebra R L →ₐ[R] A) where
+  toFun f :=
+    RingCon.liftₐ _
+      (TensorAlgebra.lift R (f : L →ₗ[R] A)) <| by
+        grw [ringCon, RingCon.ringConGen_le]
+        intro a b h; induction h

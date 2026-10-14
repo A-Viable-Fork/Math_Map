@@ -5,3 +5,7 @@ Only the declaration statements below are kept (proofs omitted); each was checke
 
 -- killingForm (line 373)
 noncomputable abbrev killingForm : LinearMap.BilinForm R L := LieModule.traceForm R L L
+
+-- LieModule.traceForm_apply_apply (line 57)
+lemma traceForm_apply_apply (x y : L) :
+    traceForm R L M x y = trace R _ (φ x ∘ₗ φ y)
