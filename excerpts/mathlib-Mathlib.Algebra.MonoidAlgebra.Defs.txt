@@ -1,0 +1,25 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/MonoidAlgebra/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 7355b179617e8fd508d6cc2c0018fba08078e36223e7c42c63a9acbfb44a8a80
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- MonoidAlgebra (line 76)
+structure MonoidAlgebra (R M : Type*) [Semiring R] where
+  /-- Construct an element of the monoid algebra `R[M]`
+  from its coefficients `M →₀ R`. -/
+  ofCoeff ::
+  /-- The coefficients `M →₀ R` of an element of the monoid algebra `R[M]`. -/
+  coeff : M →₀ R
+
+-- AddMonoidAlgebra (line 64)
+structure AddMonoidAlgebra (R M : Type*) [Semiring R] where
+  /-- Construct an element of the additive monoid algebra `R[M]`
+  from its coefficients `M →₀ R`. -/
+  ofCoeff ::
+  /-- The coefficients `M →₀ R` of an element of the additive monoid algebra `R[M]`. -/
+  coeff : M →₀ R
+
+-- MonoidAlgebra.of (line 661)
+def of : M →* R[M] where
+  __ := ofMagma R M
+  map_one' := rfl

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 82a86a38496c4aac41c1a050df13ee67d4edd318bb1178ae9a9ffa3cd236aca7
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial (line 69)
+structure Polynomial (R : Type*) [Semiring R] where ofFinsupp ::
+  /-- The coefficients `ℕ →₀ R` of a polynomial in `R[X]`. -/
+  toFinsupp : AddMonoidAlgebra R ℕ
+
+-- Polynomial.commute_X (line 532)
+theorem commute_X (p : R[X]) : Commute X p

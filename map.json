@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "78e3f9da21ebcfdbdd936a53a96dd9d34fe955d9"
+  "commit": "7baf3a306bc417d5e540a34af722fa639bad6703"
  },
  "domains": {
   "D1": {
@@ -732,10 +732,10 @@
   "fieldEvidence": {
    "contradicted": 0,
    "unsupported": 100,
-   "unchecked": 11226,
+   "unchecked": 11221,
    "imprecise": 20,
    "sourced": 914,
-   "formal": 52
+   "formal": 57
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -755,13 +755,13 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 60,
-   "links": 111,
+   "entries": 65,
+   "links": 136,
    "byMatch": {
-    "exact": 66,
+    "exact": 90,
     "conflicts": 4,
     "related": 11,
-    "special": 12,
+    "special": 13,
     "general": 11,
     "ingredient": 7
    }
@@ -17453,10 +17453,60 @@
     "name": "unchecked",
     "description": "unchecked",
     "input": "unchecked",
-    "output": "unchecked",
+    "output": "formal",
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "closure",
+     "file": "Mathlib/Topology/Defs/Basic.lean",
+     "match": "exact",
+     "note": "The intersection of all closed supersets of s: the smallest closed set containing it.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Defs/Basic.lean"
+    },
+    {
+     "field": "output",
+     "decl": "closure_eq_self_union_derivedSet",
+     "file": "Mathlib/Topology/DerivedSet.lean",
+     "match": "exact",
+     "note": "cl(A) = A ∪ A', A' the accumulation points of A.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/DerivedSet.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "subset_closure",
+     "file": "Mathlib/Topology/Closure.lean",
+     "match": "exact",
+     "note": "Extensive: s ⊆ cl(s).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Closure.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "closure_mono",
+     "file": "Mathlib/Topology/Closure.lean",
+     "match": "exact",
+     "note": "Monotone.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Closure.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "closure_closure",
+     "file": "Mathlib/Topology/Closure.lean",
+     "match": "exact",
+     "note": "Idempotent.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Closure.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "closure_union",
+     "file": "Mathlib/Topology/Closure.lean",
+     "match": "exact",
+     "note": "Preserves binary unions; with closure_empty, finite unions.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Closure.lean"
+    }
+   ],
    "tier": "landed"
   },
   {
@@ -38269,10 +38319,44 @@
     "name": "unchecked",
     "description": "unchecked",
     "input": "unchecked",
-    "output": "unchecked",
+    "output": "formal",
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Quotient",
+     "file": "Mathlib/CategoryTheory/Quotient.lean",
+     "match": "exact",
+     "note": "The quotient category: the objects of C, with hom-sets quotiented by the relation.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean"
+    },
+    {
+     "field": "input",
+     "decl": "CategoryTheory.Congruence",
+     "file": "Mathlib/CategoryTheory/Quotient.lean",
+     "match": "exact",
+     "note": "A congruence: an equivalence on each hom-set, stable under pre- and postcomposition.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean"
+    },
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Quotient.full_functor",
+     "file": "Mathlib/CategoryTheory/Quotient.lean",
+     "match": "exact",
+     "note": "The functor C → C/~ is full.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "CategoryTheory.Quotient.functor_map_eq_iff",
+     "file": "Mathlib/CategoryTheory/Quotient.lean",
+     "match": "exact",
+     "note": "For a congruence, two morphisms have the same image exactly when they are congruent: the distinctions lost are those between congruent morphisms.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean"
+    }
+   ],
    "tier": "authored"
   },
   {
@@ -41017,10 +41101,44 @@
     "name": "unchecked",
     "description": "unchecked",
     "input": "unchecked",
-    "output": "unchecked",
+    "output": "formal",
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "MonoidAlgebra",
+     "file": "Mathlib/Algebra/MonoidAlgebra/Defs.lean",
+     "match": "exact",
+     "note": "R[M], finitely supported functions M →₀ R with the convolution product, over any semiring; MonoidAlgebra.ring makes it a ring when R is a ring and M a monoid.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "AddMonoidAlgebra",
+     "file": "Mathlib/Algebra/MonoidAlgebra/Defs.lean",
+     "match": "exact",
+     "note": "The same construction for a monoid written additively, which is how Mathlib builds polynomial rings.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "MonoidAlgebra.of",
+     "file": "Mathlib/Algebra/MonoidAlgebra/Defs.lean",
+     "match": "exact",
+     "note": "M → R[M] is a monoid homomorphism: the monoid multiplication survives as multiplication of basis elements.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+    },
+    {
+     "field": "description",
+     "decl": "MvPolynomial",
+     "file": "Mathlib/Algebra/MvPolynomial/Basic.lean",
+     "match": "exact",
+     "note": "Mathlib defines polynomials in the variables σ as AddMonoidAlgebra R (σ →₀ ℕ), the monoid ring of the free commutative monoid on σ (ℕ^n when σ has n elements).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MvPolynomial/Basic.lean"
+    }
+   ],
    "tier": "authored"
   },
   {
@@ -41099,10 +41217,68 @@
     "name": "unchecked",
     "description": "unchecked",
     "input": "unchecked",
-    "output": "unchecked",
+    "output": "formal",
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial",
+     "file": "Mathlib/Algebra/Polynomial/Basic.lean",
+     "match": "exact",
+     "note": "R[X], polynomials in one variable over R, defined over any semiring as AddMonoidAlgebra R ℕ; Polynomial.ring makes it a ring when R is one.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.isNoetherianRing",
+     "file": "Mathlib/RingTheory/Polynomial/Basic.lean",
+     "match": "exact",
+     "note": "Hilbert basis theorem: R[X] is Noetherian when R is (R commutative in the file's variables).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.uniqueFactorizationMonoid",
+     "file": "Mathlib/RingTheory/Polynomial/UniqueFactorization.lean",
+     "match": "exact",
+     "note": "D[X] is a unique factorization monoid when D is a commutative ring that is one: the UFD claim. The domain claim is an unnamed instance in Mathlib/Algebra/Polynomial/Basic.lean, so it carries no link here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/UniqueFactorization.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.ringKrullDim_of_isNoetherianRing",
+     "file": "Mathlib/RingTheory/KrullDimension/Polynomial.lean",
+     "match": "special",
+     "note": "dim R[X] = dim R + 1 for Noetherian R. The landed claim states it without that hypothesis; for an arbitrary commutative ring Mathlib gives only dim R[X] ≤ 2 dim R + 1 (Polynomial.ringKrullDim_le).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/KrullDimension/Polynomial.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.not_isUnit_X",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+     "match": "exact",
+     "note": "Over a nontrivial R the variable X is a nonzero non-unit, so R[X] is never a field.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.aevalEquiv",
+     "file": "Mathlib/Algebra/Polynomial/AlgebraMap.lean",
+     "match": "exact",
+     "note": "The variable is free: for commutative R, R-algebra maps R[X] → A correspond to elements of A, by where they send X.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/AlgebraMap.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.commute_X",
+     "file": "Mathlib/Algebra/Polynomial/Basic.lean",
+     "match": "exact",
+     "note": "The variable commutes with every polynomial.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
+    }
+   ],
    "tier": "authored"
   },
   {
@@ -41316,6 +41492,14 @@
      "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
      "match": "exact",
      "note": "Defined as the subgroup generated by all conjugates of the set.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Subgroup.conjugatesOfSet_subset_normalClosure",
+     "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
+     "match": "exact",
+     "note": "Every conjugate of an element of S lies in the normal closure, so the closure no longer tells S from its conjugates.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
     }
    ],
@@ -44491,10 +44675,36 @@
     "name": "unchecked",
     "description": "unchecked",
     "input": "unchecked",
-    "output": "unchecked",
+    "output": "formal",
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "DerivedCategory",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean",
+     "match": "exact",
+     "note": "D(C) for an abelian category C, given HasDerivedCategory (the localization exists in the chosen universe). The file makes it triangulated by an unnamed instance (IsTriangulated (DerivedCategory C)).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean"
+    },
+    {
+     "field": "description",
+     "decl": "DerivedCategory.Qh",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean",
+     "match": "exact",
+     "note": "The functor K(C) → D(C) from the homotopy category; an instance in the same file makes it a localization at the quasi-isomorphisms: D(A) = K(A)[qis^-1].",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "DerivedCategory.homologyFunctorFactors",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean",
+     "match": "exact",
+     "note": "Homology factors through D(C): Q followed by the homology functor on D(C) is the homology of complexes.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean"
+    }
+   ],
    "tier": "authored"
   },
   {

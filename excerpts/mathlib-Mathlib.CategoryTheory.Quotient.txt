@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Quotient.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 624d857a24236f5ee5028352c4e4c8e647f150ac86926e06db138a03bedffd38
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Quotient (line 121)
+structure Quotient (r : HomRel C) where
+  /-- The object of `C`. -/
+  as : C
+
+-- CategoryTheory.Congruence (line 104)
+class Congruence : Prop
+    extends HomRel.IsStableUnderPrecomp r, HomRel.IsStableUnderPostcomp r where
+  /-- `r` is an equivalence on every hom-set. -/
+  equivalence : ∀ {X Y}, _root_.Equivalence (@r X Y)
+
+-- CategoryTheory.Quotient.full_functor (line 197)
+instance full_functor : (functor r).Full
+
+-- CategoryTheory.Quotient.functor_map_eq_iff (line 220)
+theorem functor_map_eq_iff [h : Congruence r] {X Y : C} (f f' : X ⟶ Y) :
+    (functor r).map f = (functor r).map f' ↔ r f f'

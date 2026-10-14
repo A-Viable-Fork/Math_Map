@@ -4,7 +4,7 @@
 
 Entries not yet linked (to Mathlib or to lean/) whose every name word matches a Mathlib module's title or path. A row is a place to look, not a link: many are false friends (the same word for a different object). A link is made only by reading the declaration and grading its match (`mapfill/formal.js`).
 
-259 candidates.
+244 candidates.
 
 | Entry | Name | Mathlib module | Module title |
 |---|---|---|---|
@@ -72,18 +72,14 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D3-186 | Reflection | `Mathlib/Analysis/InnerProductSpace/Projection/Reflection.lean` | Reflection |
 | D3-187 | Rotation | `Mathlib/Data/List/Rotate.lean` | List rotation |
 | D3-188 | Dilation | `Mathlib/Topology/MetricSpace/Dilation.lean` | Dilations |
-| D4-010 | Abelianization | `Mathlib/GroupTheory/Abelianization/Defs.lean` | The abelianization of a group |
 | D4-015 | Adjunction space construction | `Mathlib/Topology/Category/Stonean/Adjunctions.lean` | Adjunctions involving the category of Stonean spaces |
 | D4-021 | Analytic continuation | `Mathlib/NumberTheory/LSeries/DirichletContinuation.lean` | Analytic continuation of Dirichlet L-functions |
 | D4-024 | Automorphism | `Mathlib/Algebra/Ring/Aut.lean` | Ring automorphisms |
 | D4-035 | Boundary operation | `Mathlib/Order/Heyting/Boundary.lean` | Co-Heyting boundary |
 | D4-036 | Box topology construction | `Mathlib/Topology/ClopenBox.lean` | Clopen subsets in Cartesian products |
-| D4-041 | Cantor space construction | `Mathlib/Topology/UniformSpace/HeineCantor.lean` | Compact separated uniform spaces |
 | D4-046 | Cayley graph construction | `Mathlib/Combinatorics/SimpleGraph/Cayley.lean` | - |
-| D4-060 | Closure operation | `Mathlib/Analysis/Convex/Cone/Closure.lean` | Closure of cones |
 | D4-065 | Cofibration | `Mathlib/AlgebraicTopology/SimplicialSet/CategoryWithFibrations.lean` | Cofibrations and fibrations in the category of simplicial sets |
 | D4-067 | Cohomology operation | `Mathlib/CategoryTheory/Sites/NonabelianCohomology/H1.lean` | - |
-| D4-072 | Compact-open topology construction | `Mathlib/Topology/CompactOpen.lean` | The compact-open topology |
 | D4-073 | Compactification | `Mathlib/Topology/Compactification/StoneCech.lean` | - |
 | D4-087 | Covering space construction | `Mathlib/Topology/MetricSpace/CoveringNumbers.lean` | Covering numbers |
 | D4-088 | Cross product | `Mathlib/Geometry/Euclidean/Angle/Unoriented/CrossProduct.lean` | Norm of cross-products |
@@ -94,7 +90,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D4-118 | Endomorphism | `Mathlib/Algebra/CharP/Frobenius.lean` | The Frobenius endomorphism |
 | D4-119 | Epimorphism | `Mathlib/Algebra/Category/Ring/Epi.lean` | Epimorphisms in `CommRingCat` |
 | D4-125 | Exponential map | `Mathlib/Probability/Distributions/Exponential.lean` | - |
-| D4-127 | Exterior derivative | `Mathlib/Analysis/Calculus/DifferentialForm/Basic.lean` | Exterior derivative of a differential form on a normed space |
 | D4-131 | Fiber bundle construction | `Mathlib/Topology/FiberBundle/Basic.lean` | Fiber bundles |
 | D4-132 | Fibration | `Mathlib/AlgebraicTopology/Quasicategory/InnerFibration.lean` | Inner fibrations |
 | D4-137 | Forgetful functor | `Mathlib/CategoryTheory/ConcreteCategory/Forget.lean` | Forgetful functors |
@@ -126,11 +121,9 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D4-231 | Locally compact space construction | `Mathlib/Topology/Compactness/LocallyCompact.lean` | Locally compact spaces |
 | D4-238 | Mapping cone construction | `Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean` | - |
 | D4-246 | Mayer-Vietoris sequence | `Mathlib/CategoryTheory/Sites/SheafCohomology/MayerVietoris.lean` | The Mayer-Vietoris exact sequence in sheaf cohomology |
-| D4-249 | Metrization | `Mathlib/Topology/Metrizable/Urysohn.lean` | Urysohn's Metrization Theorem |
 | D4-255 | Monomorphism | `Mathlib/AlgebraicTopology/SimplicialSet/Monomorphisms.lean` | Monomorphisms of simplicial sets |
 | D4-262 | N-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D4-263 | Natural transformation | `Mathlib/CategoryTheory/Monoidal/NaturalTransformation.lean` | Monoidal natural transformations |
-| D4-273 | One-point compactification | `Mathlib/Topology/Compactification/OnePoint/Basic.lean` | The one-point compactification |
 | D4-276 | Order topology construction | `Mathlib/Topology/Order/LawsonTopology.lean` | Lawson topology |
 | D4-281 | Paracompact space construction | `Mathlib/Topology/Compactness/Paracompact.lean` | Paracompact topological spaces |
 | D4-285 | Path space construction | `Mathlib/Topology/UniformSpace/Path.lean` | Paths in uniform spaces |
@@ -146,7 +139,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D4-339 | Sequential space construction | `Mathlib/Topology/Category/Sequential.lean` | The category of sequential topological spaces |
 | D4-357 | Spectral sequence | `Mathlib/Algebra/Homology/SpectralObject/SpectralSequence.lean` | The spectral sequence of a spectral object |
 | D4-358 | Spectrum construction | `Mathlib/Analysis/Matrix/Spectrum.lean` | - |
-| D4-373 | Stone-Cech compactification | `Mathlib/Topology/Compactification/StoneCech.lean` | - |
 | D4-375 | Submersion | `Mathlib/Geometry/Manifold/Submersion.lean` | - |
 | D4-376 | Subspace topology construction | `Mathlib/Topology/Algebra/AffineSubspace.lean` | Topology of affine subspaces. |
 | D4-386 | Tangent bundle construction | `Mathlib/Geometry/Manifold/VectorBundle/Tangent.lean` | - |
@@ -156,23 +148,18 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D4-407 | Twisting map | `Mathlib/CategoryTheory/Shift/Twist.lean` | Twisting a shift |
 | D4-409 | Ultraproduct | `Mathlib/ModelTheory/Ultraproducts.lean` | Ultraproducts and Łoś's Theorem |
 | D4-412 | Upper topology construction | `Mathlib/Analysis/Complex/UpperHalfPlane/Topology.lean` | Topology on the upper half plane |
-| D4-427 | Whitney embedding | `Mathlib/Geometry/Manifold/WhitneyEmbedding.lean` | Whitney embedding theorem |
 | D4-433 | Y-Δ transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D4-435 | Yoneda embedding | `Mathlib/Algebra/Category/Grp/Yoneda.lean` | Yoneda embeddings |
-| D4-436 | Zariski topology construction | `Mathlib/RingTheory/Spectrum/Maximal/Topology.lean` | The Zariski topology on the maximal spectrum of a commutative (semi)ring |
 | D5-010 | Basic extension | `Mathlib/AlgebraicTopology/SimplicialSet/AnodyneExtensions/Basic.lean` | Anodyne extensions |
 | D5-021 | Change of variables | `Mathlib/AlgebraicGeometry/EllipticCurve/VariableChange.lean` | Change of variables of Weierstrass curves |
-| D5-030 | Diffeomorphism | `Mathlib/Geometry/Manifold/Diffeomorph.lean` | Diffeomorphisms |
 | D5-046 | Fourier transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D5-062 | Homeomorphism | `Mathlib/Topology/Homeomorph/Defs.lean` | Homeomorphisms |
 | D5-092 | Mellin transform | `Mathlib/Analysis/MellinTransform.lean` | - |
 | D5-099 | N-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D5-112 | R-extension | `Mathlib/RingTheory/Valuation/Extension.lean` | Extension of Valuations |
 | D5-149 | Z-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
-| D6-023 | Continuous functional calculus | `Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/Pi.lean` | - |
 | D6-043 | Fourier transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D6-055 | GNS construction | `Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean` | The GNS (Gelfand-Naimark-Segal) construction |
-| D6-090 | Lebesgue decomposition | `Mathlib/MeasureTheory/Measure/Decomposition/Lebesgue.lean` | Lebesgue decomposition |
 | D6-100 | Mellin transform | `Mathlib/Analysis/MellinTransform.lean` | - |
 | D6-104 | N-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D6-159 | C*-algebra functional calculus | `Mathlib/Analysis/CStarAlgebra/ContinuousFunctionalCalculus/NonUnital.lean` | The continuous functional calculus for non-unital algebras |
@@ -197,7 +184,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D7-044 | Functor Category Construction | `Mathlib/Algebra/Homology/Functor.lean` | Complexes in functor categories |
 | D7-045 | Comma Category Construction | `Mathlib/CategoryTheory/Comma/Arrow.lean` | The category of arrows |
 | D7-046 | Slice Category Construction | `Mathlib/Tactic/CategoryTheory/Slice.lean` | The `slice` tactic |
-| D7-048 | Quotient Category Construction | `Mathlib/CategoryTheory/Localization/Quotient.lean` | Localization of quotient categories |
 | D7-055 | Whiskering | `Mathlib/CategoryTheory/Adjunction/Whiskering.lean` | Whiskering of adjunctions |
 | D7-062 | Pointwise Extension | `Mathlib/CategoryTheory/Functor/KanExtension/Pointwise.lean` | Pointwise Kan extensions |
 | D7-065 | Profunctor Composition | `Mathlib/CategoryTheory/Profunctor/Comp.lean` | Composition of Profunctors |
@@ -219,7 +205,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D7-141 | Module Tensor Product | `Mathlib/Algebra/Lie/TensorProduct.lean` | Tensor products of Lie modules |
 | D7-145 | Universal Enveloping Algebra Construction | `Mathlib/Algebra/Lie/UniversalEnveloping.lean` | Universal enveloping algebra |
 | D7-146 | Group Ring Construction | `Mathlib/Algebra/Ring/Action/Basic.lean` | Group action on rings |
-| D7-147 | Monoid Ring Construction | `Mathlib/Algebra/MonoidAlgebra/Opposite.lean` | Monoid algebras and the opposite ring |
 | D7-148 | Matrix Ring Construction | `Mathlib/LinearAlgebra/Matrix/Ideal.lean` | Ideals in a matrix ring |
 | D7-152 | Algebraic Closure Construction | `Mathlib/FieldTheory/IsAlgClosed/AlgebraicClosure.lean` | Algebraic Closure |
 | D7-153 | Separable Closure Construction | `Mathlib/FieldTheory/SeparableClosure.lean` | Separable closure |
@@ -246,7 +231,6 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D7-243 | Bar Construction | `Mathlib/Data/Sym/Card.lean` | Stars and bars |
 | D7-250 | Group Homology Construction | `Mathlib/RepresentationTheory/Homological/GroupHomology/Functoriality.lean` | Functoriality of group homology |
 | D7-251 | Group Cohomology Construction | `Mathlib/RepresentationTheory/Homological/GroupCohomology/Functoriality.lean` | Functoriality of group cohomology |
-| D7-273 | Derived Category Construction | `Mathlib/Algebra/Homology/DerivedCategory/Basic.lean` | - |
 | D7-276 | T-Structure Truncation | `Mathlib/CategoryTheory/Triangulated/TStructure/ETrunc.lean` | Truncations for a t-structure |
 | D7-282 | Inverse Image Functor | `Mathlib/CategoryTheory/Sites/Point/Comap.lean` | Inverse image of a point by a continuous functor |
 | D7-304 | Dialectica Category Construction | `Mathlib/CategoryTheory/Dialectica/Basic.lean` | Dialectica category |
@@ -267,3 +251,4 @@ Entries not yet linked (to Mathlib or to lean/) whose every name word matches a 
 | D8-141 | N-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D8-234 | Z-transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
 | D8-063 | Fourier transform | `Mathlib/Analysis/Fourier/FourierTransform.lean` | The Fourier transform |
+| D9-X01 | Send | `Mathlib/Algebra/Category/ModuleCat/Pseudofunctor.lean` | The pseudofunctors which send a commutative ring to its category of modules |

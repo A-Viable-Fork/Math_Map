@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 98cd35ca9b33aa2af7a9b59c757fd9fa537965018377b497ada058cb21ae07e5
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- DerivedCategory.homologyFunctorFactors (line 38)
+noncomputable def homologyFunctorFactors (n : ℤ) : Q ⋙ homologyFunctor C n ≅
+    HomologicalComplex.homologyFunctor _ _ n :=
+  HomologicalComplexUpToQuasiIso.homologyFunctorFactors C (ComplexShape.up ℤ) n

@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/AlgebraMap.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/AlgebraMap.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: a045cec274fbe4340593677142ff94993160780bab1836500ee89771507686ae
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.aevalEquiv (line 249)
+def aevalEquiv : A ≃ (R[X] →ₐ[R] A) where
+  toFun x := eval₂AlgHom (Algebra.ofId _ _) x (Algebra.commutes · _)
+  invFun f := f X
+  left_inv := eval₂_X _
+  right_inv _ := algHom_ext' (Subsingleton.elim ..) <| eval₂_X ..
