@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Closure.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Closure.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 61cfbf3d60c44ec92b783568945b6e7fb6f30c053159db62b44636fa3ac92fc6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- subset_closure (line 193)
+theorem subset_closure : s ⊆ closure s
+
+-- closure_mono (line 248)
+theorem closure_mono (h : s ⊆ t) : closure s ⊆ closure t
+
+-- closure_closure (line 291)
+theorem closure_closure : closure (closure s) = closure s
+
+-- closure_union (line 299)
+theorem closure_union : closure (s ∪ t) = closure s ∪ closure t

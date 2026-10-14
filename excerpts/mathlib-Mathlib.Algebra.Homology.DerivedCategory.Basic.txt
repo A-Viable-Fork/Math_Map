@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/DerivedCategory/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: fb849d911197dbcf364a20cfdc524cf8bbd9180d408bff7d8407d58e019d8cbc
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- DerivedCategory (line 87)
+def DerivedCategory : Type (max u v) := HomologicalComplexUpToQuasiIso C (ComplexShape.up ℤ)
+
+-- DerivedCategory.Qh (line 109)
+def Qh : HomotopyCategory C (ComplexShape.up ℤ) ⥤ DerivedCategory C :=
+  HomologicalComplexUpToQuasiIso.Qh

@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Degree/Operations.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 1ed8ac52ee54c7b8a02fcfe0d61f3a03cf1916327885f4accc8b332405f62a14
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.not_isUnit_X (line 534)
+theorem not_isUnit_X : ¬IsUnit (X : R[X])

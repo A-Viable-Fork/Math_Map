@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/KrullDimension/Polynomial.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/KrullDimension/Polynomial.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 4fb3af68d09f765b60c9824aa6fd58e64b425034c4a625cb560b12488085f48d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.ringKrullDim_of_isNoetherianRing (line 106)
+lemma ringKrullDim_of_isNoetherianRing : ringKrullDim R[X] = ringKrullDim R + 1

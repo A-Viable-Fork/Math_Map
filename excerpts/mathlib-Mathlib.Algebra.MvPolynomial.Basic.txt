@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/MvPolynomial/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MvPolynomial/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 32d2508542aea2c301bd2703a18bbdabbb1a86f35ed6db00a79824cc98a81329
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- MvPolynomial (line 79)
+abbrev MvPolynomial (σ : Type*) (R : Type*) [CommSemiring R] :=
+  AddMonoidAlgebra R (σ →₀ ℕ)
