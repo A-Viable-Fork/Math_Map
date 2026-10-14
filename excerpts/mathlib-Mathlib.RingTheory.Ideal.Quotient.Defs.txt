@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Ideal/Quotient/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 194ac19a4c3c98e7177c683bb89dd8ac09a0f597833f3223b6ee8e944b99bcfa
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Ideal.Quotient.mk (line 83)
+def mk : R →+* R ⧸ I where
+  toFun a := Submodule.Quotient.mk a
+  map_zero' := rfl
+  map_one' := rfl
+  map_mul' _ _ := rfl
+  map_add' _ _ := rfl
+
+-- Ideal.Quotient.eq_zero_iff_mem (line 111)
+theorem eq_zero_iff_mem : mk I a = 0 ↔ a ∈ I

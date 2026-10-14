@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 29ce1f37d45103df2925080eb5c152a0259fa24216b1cb47a8f446ed78a66d9e
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Abelian.Ext (line 118)
+def Ext (X Y : C) (n : ℕ) : Type w :=
+  SmallShiftedHom.{w} (HomologicalComplex.quasiIso C (ComplexShape.up ℤ))
+    ((CochainComplex.singleFunctor C 0).obj X)
+    ((CochainComplex.singleFunctor C 0).obj Y) (n : ℤ)

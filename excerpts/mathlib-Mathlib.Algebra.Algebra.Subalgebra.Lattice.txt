@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Algebra/Subalgebra/Lattice.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Algebra/Subalgebra/Lattice.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: fdcee72d2c27e7fb480be72803a1f184c0fc5d6a75d53b400773bb9f3f32773c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Algebra.adjoin (line 32)
+def adjoin (s : Set A) : Subalgebra R A :=
+  { Subsemiring.closure (Set.range (algebraMap R A) ∪ s) with
+    algebraMap_mem' := fun r => Subsemiring.subset_closure <| Or.inl ⟨r, rfl⟩ }

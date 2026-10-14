@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Monoidal/Tor.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Tor.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 63aeefddef4fdbf5f74cade1c13f0d63b742247c2ff2c69a9546454c57d34860
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Tor (line 44)
+def Tor (n : ℕ) : C ⥤ C ⥤ C where
+  obj X := Functor.leftDerived ((tensoringLeft C).obj X) n
+  map f := NatTrans.leftDerived ((tensoringLeft C).map f) n

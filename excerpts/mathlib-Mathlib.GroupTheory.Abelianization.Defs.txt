@@ -12,3 +12,6 @@ def of : G →* Abelianization G where
   toFun := QuotientGroup.mk
   map_one' := rfl
   map_mul' _ _ := rfl
+
+-- Abelianization.commutator_subset_ker (line 72)
+theorem commutator_subset_ker : commutator G ≤ f.ker

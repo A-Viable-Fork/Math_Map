@@ -36,3 +36,7 @@ Proposed on branch `claude/mathlib-algebra-links`, for the operator's merge. Sec
 - D7-157 also gains its broken field (Subgroup.conjugatesOfSet_subset_normalClosure), which closes one of the 13 targets the ingest queued.
 
 Section 2 (additive twins) is held: a `to_additive` name has no line in Mathlib's source, so `scripts/formal.mjs` cannot excerpt it, and the link format would need a twin field, read by Research_OS's map reader. Section 3's related and special leads and section 4 are not read yet.
+
+## Status, 2026-10-14 (later)
+
+Section 2 folded in [ruling: operator, 2026-10-14], on branch `claude/mathlib-algebra-links-2`: a link may name its additive twin (`twin` in `mapfill/formal.js`). `scripts/formal.mjs --excerpt` records the source's `@[to_additive]` beside the declaration and `--check` fails without it, or when the attribute names a different twin. Six links carry one (D7-157's four, D2-145's index, D7-193's subgroup closure). That a generated name exists is checked where Mathlib is built: Research_OS's ingest reads the twins and reports any its declarations lack.

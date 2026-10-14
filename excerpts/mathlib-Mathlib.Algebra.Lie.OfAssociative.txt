@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Lie/OfAssociative.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/OfAssociative.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 9a575f1295d6f111dd73579239003ff4fb9306445cfde5e0f9ae2f22d4b4be6c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- LieRing.ofAssociativeRing (line 47)
+def ofAssociativeRing : LieRing A where
+  add_lie _ _ _
+
+-- LieRing.of_associative_ring_bracket (line 54)
+theorem of_associative_ring_bracket (x y : A) : ⁅x, y⁆ = x * y - y * x

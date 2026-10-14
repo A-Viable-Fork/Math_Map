@@ -1,0 +1,21 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/HomologicalComplex.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomologicalComplex.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2b4a51622b98dad1df5e8030fb94e05e44ec642c976bf0ac65db293f2fac1fda
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- HomologicalComplex (line 59)
+structure HomologicalComplex (c : ComplexShape ι) where
+  X : ι → V
+  d : ∀ i j, X i ⟶ X j
+  shape : ∀ i j, ¬c.Rel i j → d i j = 0
+
+-- ChainComplex (line 151)
+abbrev ChainComplex (α : Type*) [AddRightCancelSemigroup α] [One α] : Type _ :=
+  HomologicalComplex V (ComplexShape.down α)
+
+-- HomologicalComplex.d_comp_d (line 72)
+theorem d_comp_d (C : HomologicalComplex V c) (i j k : ι) : C.d i j ≫ C.d j k = 0
+
+-- CochainComplex (line 157)
+abbrev CochainComplex (α : Type*) [AddRightCancelSemigroup α] [One α] : Type _ :=
+  HomologicalComplex V (ComplexShape.up α)
