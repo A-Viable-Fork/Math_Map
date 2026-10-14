@@ -148,7 +148,7 @@ export function parse() {
   for (const e of out) e.facets = [e.domain];
   for (const f of FACETS) { const e = outById2[f.entry]; if (e && !e.facets.includes(f.facet)) e.facets.push(f.facet); }
   const { MATHLIB, FORMAL } = require("../mapfill/formal.js");
-  for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note }); }
+  for (const k of FORMAL) { const e = outById2[k.entry]; if (e) (e.formal ||= []).push({ field: k.field, decl: k.decl, file: k.file, match: k.match, note: k.note, ...(k.twin ? { twin: k.twin } : {}) }); }
   // The landed map's eight domains, plus the domains added in mapfill/domains.js.
   const { DOMAINS, TAGS } = require("../mapfill/domains.js");
   const domains = { ...P.declared, ...Object.fromEntries(DOMAINS.map((d) => [d.id, { name: d.name, added: true }])) };

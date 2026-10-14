@@ -6,3 +6,4 @@ Only the declaration statements below are kept (proofs omitted); each was checke
 -- Subgroup.index (line 55)
 noncomputable def index : ℕ :=
   Nat.card (G ⧸ H)
+-- Subgroup.index carries @[to_additive]: twin AddSubgroup.index

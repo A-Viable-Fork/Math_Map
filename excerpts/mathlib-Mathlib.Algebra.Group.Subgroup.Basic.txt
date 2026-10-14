@@ -5,13 +5,17 @@ Only the declaration statements below are kept (proofs omitted); each was checke
 
 -- Subgroup.normalClosure_normal (line 645)
 instance normalClosure_normal : (normalClosure s).Normal
+-- Subgroup.normalClosure_normal carries @[to_additive]: twin AddSubgroup.normalClosure_normal
 
 -- Subgroup.normalClosure_le_normal (line 659)
 theorem normalClosure_le_normal {N : Subgroup G} [N.Normal] (h : s ⊆ N) : normalClosure s ≤ N
+-- Subgroup.normalClosure_le_normal carries @[to_additive]: twin AddSubgroup.normalClosure_le_normal
 
 -- Subgroup.normalClosure (line 628)
 def normalClosure (s : Set G) : Subgroup G :=
   closure (conjugatesOfSet s)
+-- Subgroup.normalClosure carries @[to_additive]: twin AddSubgroup.normalClosure
 
 -- Subgroup.conjugatesOfSet_subset_normalClosure (line 632)
 theorem conjugatesOfSet_subset_normalClosure : conjugatesOfSet s ⊆ normalClosure s
+-- Subgroup.conjugatesOfSet_subset_normalClosure carries @[to_additive]: twin AddSubgroup.addConjugatesOfSet_subset_normalClosure

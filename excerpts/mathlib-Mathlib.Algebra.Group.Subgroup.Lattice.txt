@@ -6,3 +6,4 @@ Only the declaration statements below are kept (proofs omitted); each was checke
 -- Subgroup.closure (line 329)
 def closure (k : Set G) : Subgroup G :=
   sInf { K | k ⊆ K }
+-- Subgroup.closure carries @[to_additive]: twin AddSubgroup.closure

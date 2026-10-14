@@ -6,7 +6,10 @@
 //   fails on any it cannot find, and writes the excerpt files. `--candidates --mathlib DIR` writes
 //   reports/FORMAL-QUEUE.md: entries whose name matches a Mathlib module title, unreviewed. `--verify`
 //   (network) refetches each excerpted file at the pinned commit and checks its hash.
-//   Links may carry whole, invariant and premise (see mapfill/formal.js); scripts/evidence.mjs reads them.
+//   Links may carry whole, invariant and premise (see mapfill/formal.js); scripts/evidence.mjs reads them. A link
+//   with twin names the additive declaration Mathlib's @[to_additive] generates from the linked one: --excerpt
+//   records the attribute, --check fails without it, and where the attribute states the twin's name, on a mismatch.
+//   A generated name has no line in the source, so its existence is checked where Mathlib is built (the ingest).
 // Invariant: a link says Mathlib proves (or defines) the quoted statement; the match grade saying how that
 //   statement bears on the entry is a judgment, recorded with a note, like an audit grade. No Lean is
 //   compiled here: the pinned commit is one Mathlib's CI built, so a declaration present at it type-checks.
@@ -33,6 +36,22 @@ const KW = /^(?:@\[[^\]]*\]\s*)?(?:(?:public|private|protected|noncomputable|non
 export const excerptFile = (path) => `excerpts/mathlib-${path.replace(/\.lean$/, "").replace(/\//g, ".")}.txt`;
 const sha = (t) => createHash("sha256").update(t).digest("hex");
 
+// Whether an attribute block carries @[to_additive], and the twin's name when the attribute states it. Returns null
+// (no attribute), "" (attribute with Mathlib's automatic name) or the stated name.
+export function toAdditive(attrs) {
+  const at = attrs.search(/@\[(?:[^\]]*,\s*)?to_additive\b/);
+  if (at < 0) return null;
+  let r = attrs.slice(attrs.indexOf("to_additive", at) + "to_additive".length);
+  for (;;) {
+    r = r.replace(/^\s+/, "");
+    if (r.startsWith("(")) { let d = 0, j = 0; for (; j < r.length; j++) { if (r[j] === "(") d++; else if (r[j] === ")" && --d === 0) break; } r = r.slice(j + 1); continue; }
+    if (r.startsWith("/--")) { r = r.slice(r.indexOf("-/") + 2); continue; }
+    break;
+  }
+  const m = r.match(/^([^\s\]\/(,]+)/);
+  return m ? m[1] : "";
+}
+
 // Every declaration in a Lean file with its full name and statement window (keyword line up to the proof).
 function declarations(text) {
   const lines = text.split("\n"), stack = [], out = [];
@@ -58,7 +77,10 @@ function declarations(text) {
     }
     if (!isDef || /^:=\s*by\b/.test(s.slice(cut))) s = s.slice(0, cut);
     else if (!["structure", "class"].includes(m[1])) s = s.split("\n").slice(0, 6).join("\n");
-    out.push({ full, line: i + 1, statement: s.split("\n").map((x) => x.trimEnd()).join("\n").trimEnd() });
+    // The attributes and doc comment above the declaration, up to a blank line: where @[to_additive] is written.
+    let a = i; while (a > 0 && lines[a - 1].trim()) a--;
+    const attrs = lines.slice(a, i).join("\n") + "\n" + (l.match(/^@\[[^\]]*\]/)?.[0] ?? "");
+    out.push({ full, line: i + 1, statement: s.split("\n").map((x) => x.trimEnd()).join("\n").trimEnd(), additive: toAdditive(attrs) });
   }
   return out;
 }
@@ -76,7 +98,10 @@ function excerpt(dir) {
     for (const d of decls) {
       const hit = ds.find((x) => x.full === d);
       if (!hit) { F.push(`${d}: not declared in ${file} (found: ${ds.filter((x) => x.full.endsWith(d.split(".").pop())).map((x) => x.full).join(", ") || "none"})`); continue; }
-      wins.push(`-- ${d} (line ${hit.line})\n${hit.statement}`);
+      const tw = FORMAL.filter((k) => k.file === file && k.decl === d && k.twin).map((k) => k.twin);
+      if (tw.length && hit.additive === null) F.push(`${d}: a twin is claimed but the declaration carries no @[to_additive]`);
+      const twl = [...new Set(tw)].map((t) => `\n-- ${d} carries @[to_additive${hit.additive ? ` ${hit.additive}` : ""}]: twin ${t}`).join("");
+      wins.push(`-- ${d} (line ${hit.line})\n${hit.statement}${twl}`);
     }
     const hdr = [`Excerpts, verbatim, from: Mathlib, ${file}`, `URL: https://github.com/leanprover-community/mathlib4/blob/${MATHLIB.commit}/${file}`,
       `Commit: ${MATHLIB.commit}. SHA-256 of the file at that commit: ${sha(text)}`,
@@ -109,6 +134,12 @@ export function check(entries) {
     const t = readFileSync(ef, "utf8");
     if (!t.includes(`Commit: ${MATHLIB.commit}.`)) F.push(`${at}: excerpt file is not at the pinned commit`);
     if (!t.includes(`-- ${k.decl} (line `)) F.push(`${at}: the declaration is not in its excerpt file (run --excerpt)`);
+    if (k.twin !== undefined) {
+      const m = t.match(new RegExp(`^-- ${k.decl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} carries @\\[to_additive( \\S+)?\\]: twin ${k.twin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"));
+      if (!/^[^\s.][^\s]*$/.test(k.twin) || k.twin === k.decl) F.push(`${at}: twin must be the additive declaration's full name`);
+      else if (!m) F.push(`${at}: the excerpt does not record @[to_additive] for twin ${k.twin} (run --excerpt)`);
+      else if (m[1] && !k.twin.endsWith(m[1].trim())) F.push(`${at}: the attribute names the twin ${m[1].trim()}, not ${k.twin}`);
+    }
   }
   return F;
 }

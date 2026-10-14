@@ -95,7 +95,7 @@ export function build() {
       if (e.corrected) L.push(`- corrected: ${e.corrected.fields.join(", ")}. ${e.corrected.reason} Landed: ${e.corrected.fields.map((f) => `${f} "${e.corrected.landed[f]}"`).join("; ")}.`);
       if (e.conditions) L.push(`- conditions: ${e.conditions}`);
       for (const k of e.lean || []) L.push(`- Lean (${k.match}, ${k.status}, on ${k.field}${k.invariant ? `: ${k.invariant}` : ""}): \`${k.decl}\` in \`${k.file}\`. ${k.note}`);
-      for (const k of e.formal || []) L.push(`- Mathlib (${k.match}, on ${k.field}): [\`${k.decl}\`](${k.url}). ${k.note}`);
+      for (const k of e.formal || []) L.push(`- Mathlib (${k.match}, on ${k.field}): [\`${k.decl}\`](${k.url})${k.twin ? `, with its additive twin \`${k.twin}\`` : ""}. ${k.note}`);
       for (const k of e.counterexamples || []) L.push(`- counterexample: ${k.case}`);
       if (e.reading) L.push(`- reading: ${e.reading}`);
       if (e.receipts) for (const r of e.receipts) L.push(`- receipt (${r.file}): "${r.quote}"`);
