@@ -34,6 +34,7 @@
 | `generation/2026-10-11-ro-bp-001` | The RO-BP-001 round: two D9 operations for journal-native systems, written for the Research_OS blueprint, graded and ruled. |
 | `generation/2026-10-12-select-001` | The SELECT-001 round: whether the conflicts of physics select the historical successor from menus large enough to fail, pre-registered. |
 | `generation/2026-10-12-select-002` | The SELECT-002 round: the mixing form F5 tested with decoys on every menu, and iterated menus following the lowest-order path under conflicts in order, pre-registered. |
+| `generation/2026-10-23-poly-001` | The POLY-001 round: entries for the operations inside the polynomial ring (degree, coefficients, evaluation, derivative, roots and the rest), the questions fixed by Research_OS's Mathlib decomposition, graded against Mathlib at the pin and pre-registered. |
 | `lean` | A Lean 4 project on the pinned Mathlib that states and proves claims Mathlib does not cover. |
 | `lean/MathMap` | The Lean sources, one file per topic, each naming the entries it bears on. |
 | `mapfill` | The fill layer the parser applies over the landed map: clone resolution, fills, additions, conditions, corrections, invariants and formal links. |
@@ -191,7 +192,20 @@
 | `excerpts/mathlib-Mathlib.Algebra.MvPolynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Degree.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Expand.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.FieldDivision.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Monic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.AlgebraicGeometry.Scheme.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.Nerve.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -227,6 +241,7 @@
 | `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Rank.ENat.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Combinatorics.SimpleGraph.LineGraph.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Data.Nat.ModEq.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.FieldTheory.Finite.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.Construction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.IsSplittingField.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Geometry.Manifold.Diffeomorph.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -468,6 +483,9 @@
 | `generation/2026-10-12-select-002/preregistration.md` | A round's pre-registration: rows, constraints, controls and verdict rules, committed alone before any computation. |
 | `generation/2026-10-12-select-002/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `generation/2026-10-12-select-002/rows.md` | SELECT-002's computed report: the F5 rows with decoys, the iterated paths, and the boosts-only deviation (generated by scripts/deform-select2.mjs --round --deviation). |
+| `generation/2026-10-23-poly-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
+| `generation/2026-10-23-poly-001/preregistration.md` | A round's pre-registration: rows, constraints, controls and verdict rules, committed alone before any computation. |
+| `generation/2026-10-23-poly-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `infra.json` | Configuration of the vendored Repo-Infrastructure kit: which checks run. |
 | `infra.lock.json` | Pins the vendored kit in .infra/: upstream commit and the hash of every file. |
 | `lean/.gitignore` | Keeps Lake's build directory out of git. |
@@ -549,6 +567,23 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/arxiv-1608.02921.txt` |
 | `mapfill/additions.js` | names | `excerpts/arxiv-1711.06111.txt` |
 | `mapfill/additions.js` | names | `excerpts/econometrica-jackson-1991.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Degree.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Expand.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.FieldDivision.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Monic.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt` |
+| `mapfill/additions.js` | names | `excerpts/mathlib-Mathlib.FieldTheory.Finite.Basic.txt` |
 | `mapfill/additions.js` | names | `excerpts/nixpkgs-7c8764b-lib-modules.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung-definition.txt` |
 | `mapfill/additions.js` | names | `excerpts/nlab-aufhebung-modalities.txt` |

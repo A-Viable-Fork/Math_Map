@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Degree/Lemmas.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Lemmas.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: f2d9d010d59843e1186bdef392c10aa623029909cc22157e10a55b839572c178
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.natDegree_comp (line 378)
+theorem natDegree_comp : natDegree (p.comp q) = natDegree p * natDegree q
+
+-- Polynomial.degree_map_eq_of_injective (line 288)
+theorem degree_map_eq_of_injective {f : R →+* S} (hf : Function.Injective f) (p : Polynomial R) :
+    (p.map f).degree = p.degree

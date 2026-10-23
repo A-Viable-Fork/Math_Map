@@ -1,0 +1,28 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Roots.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: f408698f0af228b7ee614440e12f3dc1349840d3908d732842e5bcd59a5226b4
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.funext (line 469)
+theorem funext [Infinite R] {p q : R[X]} (ext : ∀ r : R, p.eval r = q.eval r) : p = q
+
+-- Polynomial.roots (line 56)
+noncomputable def roots (p : R[X]) : Multiset R :=
+  haveI := Classical.decEq R
+  haveI := Classical.dec (p = 0)
+  if h : p = 0 then ∅ else Classical.choose (exists_multiset_roots h)
+
+-- Polynomial.card_roots' (line 78)
+theorem card_roots' (p : R[X]) : Multiset.card p.roots ≤ natDegree p
+
+-- Polynomial.roots_mul (line 179)
+theorem roots_mul {p q : R[X]} (hpq : p * q ≠ 0) : (p * q).roots = p.roots + q.roots
+
+-- Polynomial.mem_roots (line 108)
+theorem mem_roots (hp : p ≠ 0) : a ∈ p.roots ↔ IsRoot p a
+
+-- Polynomial.count_roots (line 97)
+theorem count_roots [DecidableEq R] (p : R[X]) : p.roots.count a = rootMultiplicity a p
+
+-- Polynomial.roots_zero (line 69)
+theorem roots_zero : (0 : R[X]).roots = 0

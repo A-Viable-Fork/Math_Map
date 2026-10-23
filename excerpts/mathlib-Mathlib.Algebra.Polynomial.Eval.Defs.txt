@@ -1,0 +1,79 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Eval/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 522e17b1c5ea2166fe844241f1c0c803020953242cd1130b3fe2fe648bfda258
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.map (line 493)
+def map : R[X] → S[X] :=
+  eval₂ (C.comp f) X
+
+-- Polynomial.map_X (line 501)
+theorem map_X : X.map f = X
+
+-- Polynomial.mapRingHom (line 533)
+def mapRingHom (f : R →+* S) : R[X] →+* S[X] where
+  toFun := Polynomial.map f
+  map_add' _ _ := Polynomial.map_add f
+  map_zero' := Polynomial.map_zero f
+  map_mul' _ _ := Polynomial.map_mul f
+  map_one' := Polynomial.map_one f
+
+-- Polynomial.eval_map (line 576)
+theorem eval_map (x : S) : (p.map f).eval x = p.eval₂ f x
+
+-- Polynomial.eval₂_at_apply (line 260)
+theorem eval₂_at_apply {S : Type*} [Semiring S] (f : R →+* S) (r : R) :
+    p.eval₂ f (f r) = f (p.eval r)
+
+-- Polynomial.map_comp (line 586)
+theorem map_comp (p q : R[X]) : map f (p.comp q) = (map f p).comp (map f q)
+
+-- Polynomial.eval₂ (line 56)
+irreducible_def eval₂ (p : R[X]) : S :=
+  p.sum fun e a => f a * x ^ e
+
+-- Polynomial.eval (line 249)
+def eval (x : R) (p : R[X]) : R :=
+  eval₂ (RingHom.id _) x p
+
+-- Polynomial.eval₂RingHom (line 212)
+def eval₂RingHom (f : R →+* S) (x : S) : R[X] →+* S :=
+  { eval₂AddMonoidHom f x with
+    map_one' := eval₂_one _ _
+    map_mul' := fun _ _ => eval₂_mul _ _ }
+
+-- Polynomial.eval₂RingHom' (line 177)
+def eval₂RingHom' (f : R →+* S) (x : S) (hf : ∀ a, Commute (f a) x) : R[X] →+* S where
+  toFun := eval₂ f x
+  map_add' _ _ := eval₂_add _ _
+  map_zero' := eval₂_zero _ _
+  map_mul' _p q := eval₂_mul_noncomm f x fun k => hf <| coeff q k
+  map_one' := eval₂_one _ _
+
+-- Polynomial.IsRoot (line 354)
+def IsRoot (p : R[X]) (a : R) : Prop :=
+  p.eval a = 0
+
+-- Polynomial.comp (line 380)
+def comp (p q : R[X]) : R[X] :=
+  p.eval₂ C q
+
+-- Polynomial.comp_assoc (line 476)
+theorem comp_assoc {R : Type*} [CommSemiring R] (φ ψ χ : R[X]) :
+    (φ.comp ψ).comp χ = φ.comp (ψ.comp χ)
+
+-- Polynomial.comp_X (line 386)
+theorem comp_X : p.comp X = p
+
+-- Polynomial.X_comp (line 391)
+theorem X_comp : X.comp p = p
+
+-- Polynomial.eval_comp (line 627)
+theorem eval_comp : (p.comp q).eval x = p.eval (q.eval x)
+
+-- Polynomial.add_comp (line 421)
+theorem add_comp : (p + q).comp r = p.comp r + q.comp r
+
+-- Polynomial.mul_comp (line 461)
+theorem mul_comp {R : Type*} [CommSemiring R] (p q r : R[X]) :
+    (p * q).comp r = p.comp r * q.comp r

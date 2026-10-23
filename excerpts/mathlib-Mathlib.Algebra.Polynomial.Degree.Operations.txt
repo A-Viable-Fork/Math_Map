@@ -3,5 +3,19 @@ URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93d
 Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 1ed8ac52ee54c7b8a02fcfe0d61f3a03cf1916327885f4accc8b332405f62a14
 Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
 
+-- Polynomial.degree_mul (line 677)
+lemma degree_mul : degree (p * q) = degree p + degree q
+
+-- Polynomial.degree_mul' (line 313)
+theorem degree_mul' (h : leadingCoeff p * leadingCoeff q ≠ 0) :
+    degree (p * q) = degree p + degree q
+
+-- Polynomial.leadingCoeff_mul (line 696)
+lemma leadingCoeff_mul (p q : R[X]) : leadingCoeff (p * q) = leadingCoeff p * leadingCoeff q
+
+-- Polynomial.leadingCoeff_add_of_degree_lt (line 263)
+theorem leadingCoeff_add_of_degree_lt (h : degree p < degree q) :
+    leadingCoeff (p + q) = leadingCoeff q
+
 -- Polynomial.not_isUnit_X (line 534)
 theorem not_isUnit_X : ¬IsUnit (X : R[X])

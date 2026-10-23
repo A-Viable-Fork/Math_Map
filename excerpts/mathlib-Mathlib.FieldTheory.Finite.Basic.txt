@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/FieldTheory/Finite/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/Finite/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 388de371b141c61f2c06655f195ebf528269f3282c463b049c2f48f440aaf44e
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- FiniteField.pow_card (line 227)
+theorem pow_card (a : K) : a ^ q = a
+
+-- FiniteField.X_pow_card_sub_X_ne_zero (line 444)
+theorem X_pow_card_sub_X_ne_zero (hp : 1 < p) : (X ^ p - X : K'[X]) ≠ 0

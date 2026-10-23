@@ -1,0 +1,32 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Degree/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: fd04c8793e9d9efa7ed75055b3e06dece7eeab35e4dee779369efad6b934aeff
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.degree (line 47)
+def degree (p : R[X]) : WithBot ℕ :=
+  p.support.max
+
+-- Polynomial.natDegree (line 51)
+def natDegree (p : R[X]) : ℕ :=
+  (degree p).unbotD 0
+
+-- Polynomial.degree_zero (line 76)
+theorem degree_zero : degree (0 : R[X]) = ⊥
+
+-- Polynomial.degree_add_le (line 329)
+theorem degree_add_le (p q : R[X]) : degree (p + q) ≤ max (degree p) (degree q)
+
+-- Polynomial.degree_mul_le (line 397)
+theorem degree_mul_le (p q : R[X]) : degree (p * q) ≤ degree p + degree q
+
+-- Polynomial.leadingCoeff (line 55)
+def leadingCoeff (p : R[X]) : R :=
+  coeff p (natDegree p)
+
+-- Polynomial.Monic (line 59)
+def Monic (p : R[X]) :=
+  leadingCoeff p = (1 : R)
+
+-- Polynomial.leadingCoeff_zero (line 353)
+theorem leadingCoeff_zero : leadingCoeff (0 : R[X]) = 0
