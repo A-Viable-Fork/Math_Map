@@ -32,7 +32,7 @@ export const MATCHES = {
   related: "Mathlib states a weaker or neighbouring result; the claim itself is not formalized at the pin.",
   conflicts: "Mathlib's statement conflicts with the claim as written; the note says how.",
 };
-const KW = /^(?:@\[[^\]]*\]\s*)?(?:(?:public|private|protected|noncomputable|nonrec|scoped)\s+)*(theorem|lemma|def|abbrev|instance|structure|class|inductive)\s+(?:\(priority\s*:=\s*\w+\)\s+)?([^\s:({[⦃]+)/;
+const KW = /^(?:@\[[^\]]*\]\s*)?(?:(?:public|private|protected|noncomputable|nonrec|scoped)\s+)*(theorem|lemma|def|irreducible_def|abbrev|instance|structure|class|inductive)\s+(?:\(priority\s*:=\s*\w+\)\s+)?([^\s:({[⦃]+)/;
 export const excerptFile = (path) => `excerpts/mathlib-${path.replace(/\.lean$/, "").replace(/\//g, ".")}.txt`;
 const sha = (t) => createHash("sha256").update(t).digest("hex");
 
@@ -66,7 +66,7 @@ function declarations(text) {
     const full = written.startsWith("_root_.") ? written.slice(7) : ns ? `${ns}.${written}` : written;
     // A theorem's statement ends at the proof's ":=" (bracket depth 0); a definition keeps its body, up to a
     // blank line or the next unindented line, so the excerpt says what is defined.
-    const isDef = ["def", "abbrev", "structure", "class", "inductive"].includes(m[1]);
+    const isDef = ["def", "irreducible_def", "abbrev", "structure", "class", "inductive"].includes(m[1]);
     const chunk = [];
     for (let j = i; j < lines.length && j < i + 16; j++) { if (j > i && (!lines[j].trim() || /^\S/.test(lines[j]))) break; chunk.push(lines[j]); }
     let s = chunk.join("\n"), depth = 0, cut = s.length;
