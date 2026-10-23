@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/EraseLead.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/EraseLead.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: b0ed21c603ffa18e05fc4599fa3c3464b725d5253d81e7a646bc66653f7f3c03
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.eraseLead (line 39)
+def eraseLead (f : R[X]) : R[X] :=
+  Polynomial.erase f.natDegree f
+
+-- Polynomial.eraseLead_add_monomial_natDegree_leadingCoeff (line 61)
+theorem eraseLead_add_monomial_natDegree_leadingCoeff (f : R[X]) :
+    f.eraseLead + monomial f.natDegree f.leadingCoeff = f
+
+-- Polynomial.degree_eraseLead_lt (line 188)
+theorem degree_eraseLead_lt (hf : f ≠ 0) : (eraseLead f).degree < f.degree

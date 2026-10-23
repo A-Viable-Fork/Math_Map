@@ -3,6 +3,17 @@ URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93d
 Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: a045cec274fbe4340593677142ff94993160780bab1836500ee89771507686ae
 Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
 
+-- Polynomial.aeval (line 259)
+def aeval : R[X] →ₐ[R] A :=
+  aevalEquiv R A x
+
+-- Polynomial.aeval_X (line 292)
+theorem aeval_X : aeval x (X : R[X]) = x
+
+-- Polynomial.algHom_ext (line 271)
+theorem algHom_ext {f g : R[X] →ₐ[R] B} (hX : f X = g X) :
+    f = g
+
 -- Polynomial.aevalEquiv (line 249)
 def aevalEquiv : A ≃ (R[X] →ₐ[R] A) where
   toFun x := eval₂AlgHom (Algebra.ofId _ _) x (Algebra.commutes · _)

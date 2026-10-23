@@ -1,0 +1,33 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Derivative.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: cb83c1c0aa501801752efbb30dcb1202b24afd036b0250a6752c84506e95cf88
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.derivative_map (line 248)
+theorem derivative_map [Semiring S] (p : R[X]) (f : R →+* S) :
+    derivative (p.map f) = p.derivative.map f
+
+-- Polynomial.derivative (line 46)
+def derivative : R[X] →ₗ[R] R[X] where
+  toFun p := p.sum fun n a => C (a * n) * X ^ (n - 1)
+  map_add' p q := by
+    rw [sum_add_index] <;>
+      simp only [add_mul, forall_const, map_add, zero_mul, map_zero]
+  map_smul' a p := by
+
+-- Polynomial.derivative_mul (line 227)
+theorem derivative_mul {f g : R[X]} : derivative (f * g) = derivative f * g + f * derivative g
+
+-- Polynomial.derivative_comp (line 583)
+theorem derivative_comp (p q : R[X]) :
+    derivative (p.comp q) = derivative q * p.derivative.comp q
+
+-- Polynomial.natDegree_derivative_le (line 180)
+theorem natDegree_derivative_le (p : R[X]) : p.derivative.natDegree ≤ p.natDegree - 1
+
+-- Polynomial.natDegree_derivative_lt (line 172)
+theorem natDegree_derivative_lt {p : R[X]} (hp : p.natDegree ≠ 0) :
+    p.derivative.natDegree < p.natDegree
+
+-- Polynomial.derivative_X_pow (line 99)
+theorem derivative_X_pow (n : ℕ) : derivative (X ^ n : R[X]) = C (n : R) * X ^ (n - 1)

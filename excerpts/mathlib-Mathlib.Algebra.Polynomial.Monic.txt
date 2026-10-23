@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Monic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Monic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 32775bc66d81538a80d0f961480f131d50b18c083e18bc73c2630dd100b8d214
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.Monic.mul (line 84)
+theorem Monic.mul (hp : Monic p) (hq : Monic q) : Monic (p * q)

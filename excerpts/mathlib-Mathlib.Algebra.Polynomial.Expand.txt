@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Expand.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Expand.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: bbba38eb532e9ba61f5fc058f3c96dc113e538c087223d641dd9f308be40ec09
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.expand_contract (line 239)
+theorem expand_contract [CharP R p] [NoZeroDivisors R] {f : R[X]} (hf : Polynomial.derivative f = 0)
+    (hp : p ≠ 0) : expand R p (contract p f) = f

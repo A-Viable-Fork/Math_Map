@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Eval/Degree.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Degree.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 81f41446155dd6c8a79d8090cd080bacfc6529e11b32a8dbf54d4399e5fc43c0
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.degree_map_le (line 146)
+lemma degree_map_le : degree (p.map f) ≤ degree p
