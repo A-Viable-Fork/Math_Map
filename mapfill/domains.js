@@ -25,6 +25,7 @@ const TAGS = [
   T("audit", "Records an effect so it can be checked later."),
   T("erasure", "Removes data from modeled storage."),
   T("freshness", "Issues or checks a value meant to be used once."),
+  T("presentation", "Changes how a host shows a guest's content, leaving what the content computes and sends unchanged."),
   T("transaction", "Commits a change only if its preconditions still hold at the moment of commit."),
 ];
 
