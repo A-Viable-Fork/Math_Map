@@ -28,6 +28,7 @@
     "generation/2026-10-11-gen-001": "The GEN-001 round: the first test of gap-driven generation, its candidates and composites, graded.",
     "generation/2026-10-11-deform-001": "The DEFORM-001 round: theory change read as Lie algebra deformation; the kinematical calibration and the Poincare-Heisenberg seed, computed exactly and graded.",
     "generation/2026-10-12-select-002": "The SELECT-002 round: the mixing form F5 tested with decoys on every menu, and iterated menus following the lowest-order path under conflicts in order, pre-registered.",
+    "generation/2026-10-23-poly-001": "The POLY-001 round: entries for the operations inside the polynomial ring (degree, coefficients, evaluation, derivative, roots and the rest), the questions fixed by Research_OS's Mathlib decomposition, graded against Mathlib at the pin and pre-registered.",
     "generation/2026-10-12-select-001": "The SELECT-001 round: whether the conflicts of physics select the historical successor from menus large enough to fail, pre-registered.",
     "generation/2026-10-11-history-001": "The HISTORY-001 round: whether the deformation generator retrodicts paradigm transitions, pre-registered, with null controls and a time-sliced vocabulary."
   },
