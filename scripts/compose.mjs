@@ -38,6 +38,9 @@
 //   "holds by whole-chain proof", "violation stated", "unknown" or "whole-chain check required", and the
 //   chain gets the worst of them (order in VERDICTS; the operator saw no reason to change it, 2026-10-11).
 //   These grade what the map says; none is a proof about an implementation.
+//   A chain step may be written OUTER(INNER), a combinator entry (one with a combinator field) wrapping one
+//   effect: its claims are the two-step chain's, except that the invariants named in combinator.output are
+//   produced instead of broken, and it carries both parts' context rules (see wrapped below).
 //   Context labels (CONTEXT in mapfill/invariants.js) are carried along the chain: a label raised at a
 //   step stays on every later step until a step clears it, and a step that forbids a label present on
 //   entry is a context violation. Under a policy, any context violation makes the chain's verdict
@@ -90,12 +93,36 @@ function outputClosure(direct, R, relEv) {
 
 const isa = (k, t, C) => { for (let x = k; x; x = C[x]) if (x === t) return true; return false; };
 
+// A wrapped step, OUTER(INNER): a combinator entry (one carrying a combinator field) applied to an effect. Its
+// claims are those of the combinator's own step followed by the effect, as a two-step chain would give them,
+// except that the invariants the combinator names in combinator.output move from broken to produced: the
+// effect commits inside the combinator's step, with what it guarantees. An invariant is preserved when both
+// parts preserve it or the part that does not acts on another carrier; silence in either part stays silence.
+const WRAP = /^([^()\s]+)\(([^()\s]+)\)$/;
+function wrapped(id, by, C, carrierOf) {
+  const m = WRAP.exec(id); if (!m) return null;
+  const o = by[m[1]], e = by[m[2]];
+  if (!o || !e) return { error: `no such entries: ${[m[1], m[2]].filter((x) => !by[x]).join(", ")}` };
+  if (!o.combinator) return { error: `${m[1]} is not a combinator` };
+  if (e.combinator) return { error: `${m[2]} is a combinator; a combinator wraps one effect` };
+  const inv = (x) => x.invariants || { preserved: [], broken: [], output: [] };
+  const io = inv(o), ie = inv(e), fixed = new Set(o.combinator.output || []);
+  const acts = (x, v) => { const c = carrierOf[v]; if (c === "operation" || !x.actsOn) return true; return [...x.actsOn.input, ...x.actsOn.output].some((k) => isa(k, c, C)); };
+  const broken = [...new Set([...io.broken, ...ie.broken])].filter((v) => !fixed.has(v));
+  const output = [...new Set([...io.output, ...ie.output, ...fixed])].filter((v) => !broken.includes(v));
+  const keeps = (x, v) => inv(x).preserved.includes(v) || !acts(x, v);
+  const preserved = [...new Set([...io.preserved, ...ie.preserved])].filter((v) => !broken.includes(v) && keeps(o, v) && keeps(e, v));
+  const actsOn = o.actsOn && e.actsOn ? { input: [...new Set([...o.actsOn.input, ...e.actsOn.input])], output: [...new Set([...e.actsOn.output, ...(o.combinator.adds || [])])] } : null;
+  return { entry: { id, name: `${o.name}: ${e.name}`, domain: e.domain, origin: "generated", input: e.input, output: e.output, actsOn, invariants: { preserved, broken, output }, wraps: [o.id, e.id] } };
+}
+
 export function compose(chain, P = parse(), opts = {}) {
   const by = Object.fromEntries(P.entries.map((e) => [e.id, e]));
   const R = P.vocabulary.RELATIONS;
+  const C = P.vocabulary.CARRIERS, carrierOf = Object.fromEntries(P.vocabulary.INVARIANTS.map((v) => [v.id, v.carrier]));
+  for (const id of chain) { const w = wrapped(id, by, C, carrierOf); if (w?.error) return { chain, error: w.error }; if (w) by[id] = w.entry; }
   const missing = chain.filter((id) => !by[id]);
   if (missing.length) return { chain, error: `no such entries: ${missing.join(", ")}` };
-  const C = P.vocabulary.CARRIERS, carrierOf = Object.fromEntries(P.vocabulary.INVARIANTS.map((v) => [v.id, v.carrier]));
   const E = evidence(P);
   const steps = chain.map((id) => {
     const e = by[id], inv = e.invariants || { preserved: [], broken: [], output: [] };
@@ -186,6 +213,9 @@ export function compose(chain, P = parse(), opts = {}) {
   })() : null;
   // Context labels: absorbing until cleared; a forbidden label present on entry to a step is a violation.
   const ctxOf = Object.fromEntries((P.vocabulary.CONTEXT || []).map((c) => [c.entry, c]));
+  // A wrapped step carries the context rules of both its parts, the combinator's first.
+  for (const st of steps) { const w = by[st.id].wraps; if (!w) continue; const parts = w.map((x) => ctxOf[x]).filter(Boolean);
+    if (parts.length) ctxOf[st.id] = { entry: st.id, forbids: parts.flatMap((c) => c.forbids || []), clears: parts.flatMap((c) => c.clears || []), raises: parts.flatMap((c) => c.raises || []) }; }
   const live = new Map(), contextViolations = [], cleared = [];
   steps.forEach((st, k) => {
     const c = ctxOf[st.id]; if (!c) return;
@@ -300,6 +330,18 @@ function selftest() {
   const brokenAnyway = compose(["a"], { ...P0, entries: [e("a", { broken: ["N"] })],
     vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: [{ id: "N", name: "N", carrier: "t", class: "relational" }], LINKS: [], ACTS_ON: [] } }, { require: ["N"], proofs: { N: "Synthetic.proof" } }).policy.verdict;
   want("a proof does not overrule a stated break", brokenAnyway, "violation stated");
+  const g = { ...e("g", { preserved: ["S", "A"], broken: ["T"] }), combinator: { output: ["A"] } };
+  const runW = (chain, extra = [], CONTEXT = []) => compose(chain, { ...P0, entries: [g, e("x", { preserved: ["S"], broken: ["A", "B"] }), e("y", { broken: ["A"] }), ...extra],
+    vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: ["S", "A", "B", "T", "U"].map((id) => ({ id, name: id, carrier: "t" })), LINKS: [], ACTS_ON: [], CONTEXT } });
+  want("a combinator turns its named break into a production", st(runW(["g(x)"]), "A"), "created");
+  want("unwrapped, the same effect breaks it", st(runW(["g", "x"]), "A"), "broken");
+  want("a wrapped step keeps the effect's other breaks", st(runW(["g(x)"]), "B"), "broken");
+  want("a wrapped step keeps the combinator's own breaks", st(runW(["g(x)"]), "T"), "broken");
+  want("preserved by both parts survives", st(runW(["g(x)"]), "S"), "survives");
+  want("silence in the effect is never survival", st(runW(["g(y)"]), "S") !== "survives", true);
+  want("only a combinator wraps", !!runW(["x(y)"]).error, true);
+  want("a combinator does not wrap a combinator", !!runW(["g(g)"]).error, true);
+  want("a wrapped step carries the effect's context", runW(["r", "g(x)"], [e("r")], [{ entry: "r", raises: ["w"], basis: "s" }, { entry: "x", forbids: ["w"], basis: "s" }]).context.violations.length, 1);
   want("map chain still restores", st(compose(["D2-118", "D2-117"]), "exceptional-divisor"), "restored");
   if (F.length) { console.log(`compose selftest: FAIL\n  ${F.join("\n  ")}`); process.exit(1); }
   console.log(`compose selftest: PASS (${N} checks)`);

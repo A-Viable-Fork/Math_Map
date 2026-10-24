@@ -26,5 +26,6 @@ A typed map of mathematical transformations across nine domains: each entry give
 - A flag withholds a wrong entry from use; it never rewrites it.
 - Generated entries land only from a graded round, at their own tier, with the round recorded in `mapfill/generated.js`; a round whose text this repository corrected says so and names the generator's ids.
 - Bindings are generated claims with hashed sources, never a device or host test; a hash is reproduced here before it is marked so.
+- A device observation, when one lands, bears only on the build it was made on; one run is a reading, never standing, and needs a second run by an observer independent of the actor; observations raise a contract grade to monitored at most; a contradiction is a finding [ruling: operator, 2026-10-23].
 - Mathlib is pinned at `380f2aa` (`mapfill/formal.js`); links and Lean claims are made at that pin.
 - A held finding for an outside project (an upstream bug, a patch) is recorded and held until the operator signs off.

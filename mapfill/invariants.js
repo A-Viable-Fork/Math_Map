@@ -63,6 +63,11 @@ const CARRIERS = {
   // Research_OS blueprint round (generation/2026-10-11-ro-bp-001): a journal is the trace of a journal-native system,
   // so the trace invariants apply to it.
   "journal": "execution-trace",
+  // Unattested round (generation/2026-10-23-un-001) [ruling: operator, 2026-10-23, "new types of objects"]: a guest's
+  // page and the rule a host restyles it with are data; a principal is what runs and can be suspended.
+  "page": "data-value",
+  "presentation-rule": "data-value",
+  "principal": null,
 };
 
 const I = (id, name, kind, carrier, definition, cls) => ({ id, name, kind, carrier, definition, class: cls || (carrier === "operation" ? "step" : "state") });
@@ -125,6 +130,9 @@ const INVARIANTS = [
   I("e9-tni", "Confidentiality for timed and resource observations", "confidentiality noninterference", "agent-program", "For the same deterministic low-equivalence used by E9-CNI and an observation that includes its ordinary low outputs plus declared times, resource events and termination behavior, corresponding executions have identical full observer traces. The time/resource semantics and scheduler are explicitly part of the model.", "relational"),
   I("e9-ebnd", "Sound static effect upper bound", "static-to-step soundness relation", "operation", "For this instantiated expression, environment and handler semantics, every emitted modeled effect belongs to its certified effect upper bound epsilon. Hidden foreign effects, handler-introduced effects and all branch alternatives are included. An annotation without a conformance proof is not this predicate.", "step"),
   I("e9-appendonly", "Append-only journal", "history preservation", "journal", "Every earlier state of the journal is a subset of every later one: entries are added and never removed, and each entry keeps the bytes first written.", "trace"),
+  I("e9-idem", "Idempotence", "step algebra", "operation", "Applying the step twice to the same input gives the same result as applying it once.", "step"),
+  I("e9-miss-identity", "Identity on no match", "step algebra", "operation", "Where the step's rule selects nothing in its input, its output equals its input.", "step"),
+  I("e9-suspended-noexec", "No execution while suspended", "lifecycle trace safety", "execution-trace", "Between a principal's suspension and its resumption, the trace holds no event in which that principal runs, starts or receives an event.", "trace"),
   I("e9-converge", "Convergence of replicas", "replica consistency", "journal", "Two replicas that have received the same entries, in any order and with any repetition, hold equal journals.", "relational"),
   I("e9-pni", "Probabilistic noninterference of joint observations", "probabilistic confidentiality", "agent-program", "For fixed low inputs, declared scheduler/adversary class, probability model and any two secret inputs, the distributions of the complete joint low observation history are identical. Equality of the distribution of each release separately is insufficient. This is exact probabilistic secrecy, not computational indistinguishability.", "hyperproperty"),
   I("e9-nix-repro", "Byte reproducibility of a build", "build determinism", "data-value", "For any two successful builds of the same derivation (the same declared input closure, platform system and builder) under the same sandbox settings, each paired output's NAR serialization is byte-identical. A substitution is not an independent build.", "relational"),
@@ -216,6 +224,10 @@ const LINKS = [
 // D9-X10 releases one datum's label, and the decisions already taken on the data are not that datum, so a
 // reset (a fresh process) lies outside the chain. Coarse by design: a read of public data raises it too,
 // since a boundary monitor cannot tell the two apart (generation/2026-10-11-mm-dr-002/grading.md).
+// So after a raising step, a declassified datum (D9-X10) leaves only by D9-X28, the journal append, which is
+// not among the forbidding steps: the record is the one broker every crossing goes through, as F-45 rules. A
+// store (D9-X02) or send (D9-X01) after the raise is a stated violation by design, not a gap in the map
+// (generation/2026-10-23-un-001/grading.md, M4).
 const RAISE = (entry, phrase) => ({ entry, raises: ["compartment-context"], basis: `Its output field: "${phrase}".` });
 const FORBID = (entry) => ({ entry, forbids: ["compartment-context"], basis: "Its broken field names E9-NOEGRESS." });
 const CONTEXT = [
