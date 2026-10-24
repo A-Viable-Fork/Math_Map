@@ -360,6 +360,7 @@
 | `excerpts/wikipedia-completion-of-a-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cone-topology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-data-transformation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-determinant.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-doob-h-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-duhamel.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-eightfold-way-1961.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -369,6 +370,7 @@
 | `excerpts/wikipedia-fraisse-limit.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galilean-transformation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galois-connection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-georgi-glashow-model.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-gibbard-satterthwaite.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-contraction-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-contraction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -407,6 +409,7 @@
 | `excerpts/wikipedia-newton-cartan-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-old-quantum-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-peres-horodecki-criterion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-poisson-bracket-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -621,10 +624,12 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt` |
 | `mapfill/additions.js` | names | `excerpts/openai-math-unique-games-paper-introduction.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-cartans-criterion.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-determinant.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-duhamel.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-euler-lagrange-equation.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-first-passage.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-galilean-transformation-bargmann.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-georgi-glashow-model.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-group-contraction.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-infinitesimal-generator.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-inverse-gaussian.txt` |
@@ -636,6 +641,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `excerpts/wikipedia-maskin-monotonicity.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-merkle-tree.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-nyquist-shannon-sampling.txt` |
+| `mapfill/additions.js` | names | `excerpts/wikipedia-peres-horodecki-criterion.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-projective-representation-bargmann.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-random-walk.txt` |
 | `mapfill/additions.js` | names | `excerpts/wikipedia-takens-theorem.txt` |

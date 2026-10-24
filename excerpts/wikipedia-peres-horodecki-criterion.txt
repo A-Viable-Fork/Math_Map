@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Peres–Horodecki criterion (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1336154937
+Fetched: 2026-10-24. SHA-256 of the page source as fetched: 4e400da6ec27a5b0d2f78327ba32ffe7c63ba1432eeb21afdced115b2938c485
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In the 2×2 and 2×3 dimensional cases the condition is also sufficient.
+
+Thus we conclude that the Peres–Horodecki criterion is also sufficient for separability when <math>\textrm{dim}(\mathcal{H}_A \otimes \mathcal{H}_B) \le 6 </math>.
+
+In higher dimensions, however, there exist maps that can't be decomposed in this fashion, and the criterion is no longer sufficient. Consequently, there are entangled states which have a positive partial transpose.

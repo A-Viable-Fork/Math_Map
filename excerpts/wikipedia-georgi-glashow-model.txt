@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Georgi–Glashow model (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374864841
+Fetched: 2026-10-24. SHA-256 of the page source as fetched: 1857244b4c550509834bdfd4bd2da01c34d5dd85e491b5685e648a1c60274e50
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Choosing a <math>\mathbb{C}^2\oplus\mathbb{C}^3</math> splitting restricts SU(5) to {{math|S(U(2)×U(3))}}, yielding matrices of the form
+
+hence isomorphic to the [[Standard Model]]'s true [[gauge group]] <math>SU(3)\times SU(2)\times U(1)/\mathbb{Z}_6</math>.
+
+:<math> N\,B^0_\mu\operatorname{diag}\left(-1/3, -1/3, -1/3, 1/2, 1/2\right)</math>

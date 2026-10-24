@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Determinant (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381418946
+Fetched: 2026-10-24. SHA-256 of the page source as fetched: 8622ad8fea7de4a9eb7101dc7eafd39b9840a814d6ebb5862446bfaee1eb9242
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+So, the determinant of the product of two square matrices is the product of their determinants.
+
+the transformations of type ''1'' multiply the determinant by the involved scalar

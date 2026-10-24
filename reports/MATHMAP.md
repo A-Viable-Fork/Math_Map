@@ -11,15 +11,15 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | Domain | Name | Entries | Name-only stubs | With invariants | Anchorable |
 |---|---|---|---|---|---|
 | D1 | COMBINATORICS AND GRAPH THEORY | 124 | 0 [0] | 124 [119] | 124 [119] |
-| D2 | ALGEBRA AND ALGEBRAIC GEOMETRY | 205 | 0 [0] | 205 [167] | 205 [167] |
+| D2 | ALGEBRA AND ALGEBRAIC GEOMETRY | 207 | 0 [0] | 207 [167] | 207 [167] |
 | D3 | LOGIC AND PROOF THEORY | 189 | 0 [0] | 189 [147] | 189 [147] |
 | D4 | TOPOLOGY AND GEOMETRIC METHODS | 439 | 0 [0] | 439 [385] | 439 [385] |
-| D5 | PROBABILITY AND INFORMATION THEORY | 160 | 0 [0] | 160 [77] | 160 [77] |
+| D5 | PROBABILITY AND INFORMATION THEORY | 161 | 0 [0] | 161 [77] | 161 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 163 | 0 [0] | 163 [146] | 163 [146] |
 | D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 478 | 1 [416] | 478 [0] | 477 [0] |
 | D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 255 | 1 [0] | 255 [77] | 253 [77] |
 | D9 | SYSTEMS AND EFFECTS | 44 | 0 [0] | 44 [0] | 44 [0] |
-| **all** | | **2057** | **2** [416] | **2057** [1118] | **2054** [1118] |
+| **all** | | **2060** | **2** [416] | **2060** [1118] | **2057** [1118] |
 
 ## 2. The fill layer
 
@@ -52,7 +52,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D8-155 | Poisson-Mellin-Newton cycle | Recorded from memory of the analytic-combinatorics literature. |
 | D8-202 | Square transform | Generic reading as the power transform with exponent 2. |
 
-- **Additions: 59** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph; D7-X07 Chevalley-Eilenberg cohomology with adjoint coefficients; D7-X08 Infinitesimal deformation of a Lie algebra and its obstructions; D7-X09 Rigidity of a semisimple Lie algebra; D7-X10 Inonu-Wigner contraction; D7-X11 Cartan's criterion by the Killing form; D7-X12 Central extension of a Lie algebra by a 2-cocycle with trivial coefficients; D7-X13 Priority-filtered merge of definitions; D3-X01 Binary 3SAT formula syntax; D8-X03 Total parse and renaming of 3SAT bits; D8-X04 Table-driven PCP amplification to a clause gap; D8-X05 Clause gap to near-satisfiable three-variable parity equations; D8-X06 Hundredfold cloning of parity variables; D8-X07 Parity list as an incidence source; D1-X01 Explicit permutation constraint game; D1-X02 Occurrence value of a Unique Games instance; D8-X08 Unary serialization of a Unique Games instance; D8-X09 Gap reduction from binary 3SAT to translation Unique Games; D5-X05 Finite two-prover projection game; D2-X02 Quadratic block shift space over characteristic two; D2-X03 Recursive nonlinear stage iteration; D2-X04 Split gadget with a uniform rank threshold; D8-X10 Enumerated noise table of a gadget; D8-X11 Table-key matrix game from a parity source; D8-X12 Addressed single-orbit matrix output; D8-X13 Uniform copying of constraints; D1-X03 Four-edge subdivision of a constraint game; D1-X04 Simple bipartite instance as a two-prover game; D5-X06 Parallel repetition of a projection game; D8-X14 Padded tuple product of a simple bipartite game; D8-X15 Sequential composition of polynomial-time TM2 machines; D8-X16 Outer parameter selection before the matrix alphabet; D2-X05 Shortcode inverse principle; D5-X07 Matrix-noise acceptance to subspace acceptance; D5-X08 Good row advice from matrix acceptance; D5-X09 Sparse seed law to the uniform table law; D5-X10 Selected affine witness to local decoding; D5-X11 Clean upper bound on local decoding; D8-X17 Matrix gap parameters; D8-X18 Assembly of the 3SAT to Unique Games reduction; D8-X19 Largest-remainder rounding of constraint weights.
+- **Additions: 62** (`mapfill/additions.js`): entries the map lacks, written for a composite and receipted by verbatim windows in excerpts/. Counted in the domain totals above. D2-X01 Strict transform under a point blow-up; D7-X01 Aufhebung of a level; D6-X01 Littlewood-Paley dyadic decomposition; D6-X02 Duhamel propagation of a source; D5-X01 Kramers escape rate; D5-X02 First passage time of Brownian motion; D7-X02 Inclusion of a subtopos; D7-X03 Level of an essential inclusion; D4-X01 Face poset of a simplicial complex; D7-X04 Monoidal product of open games; D7-X05 Nash implementation (Maskin); D6-X03 Sampling a band-limited function; D4-X02 Delay embedding of a time series; D5-X03 Random walk on a graph; D5-X04 Markov process from its generator; D6-X04 Euler-Lagrange equations of an action; D7-X06 Least fixed point by Kleene iteration; D8-X01 Merkle hashing of a tree or acyclic graph; D8-X02 Topological sort of a directed acyclic graph; D7-X07 Chevalley-Eilenberg cohomology with adjoint coefficients; D7-X08 Infinitesimal deformation of a Lie algebra and its obstructions; D7-X09 Rigidity of a semisimple Lie algebra; D7-X10 Inonu-Wigner contraction; D7-X11 Cartan's criterion by the Killing form; D7-X12 Central extension of a Lie algebra by a 2-cocycle with trivial coefficients; D7-X13 Priority-filtered merge of definitions; D3-X01 Binary 3SAT formula syntax; D8-X03 Total parse and renaming of 3SAT bits; D8-X04 Table-driven PCP amplification to a clause gap; D8-X05 Clause gap to near-satisfiable three-variable parity equations; D8-X06 Hundredfold cloning of parity variables; D8-X07 Parity list as an incidence source; D1-X01 Explicit permutation constraint game; D1-X02 Occurrence value of a Unique Games instance; D8-X08 Unary serialization of a Unique Games instance; D8-X09 Gap reduction from binary 3SAT to translation Unique Games; D5-X05 Finite two-prover projection game; D2-X02 Quadratic block shift space over characteristic two; D2-X03 Recursive nonlinear stage iteration; D2-X04 Split gadget with a uniform rank threshold; D8-X10 Enumerated noise table of a gadget; D8-X11 Table-key matrix game from a parity source; D8-X12 Addressed single-orbit matrix output; D8-X13 Uniform copying of constraints; D1-X03 Four-edge subdivision of a constraint game; D1-X04 Simple bipartite instance as a two-prover game; D5-X06 Parallel repetition of a projection game; D8-X14 Padded tuple product of a simple bipartite game; D8-X15 Sequential composition of polynomial-time TM2 machines; D8-X16 Outer parameter selection before the matrix alphabet; D2-X05 Shortcode inverse principle; D5-X07 Matrix-noise acceptance to subspace acceptance; D5-X08 Good row advice from matrix acceptance; D5-X09 Sparse seed law to the uniform table law; D5-X10 Selected affine witness to local decoding; D5-X11 Clean upper bound on local decoding; D8-X17 Matrix gap parameters; D8-X18 Assembly of the 3SAT to Unique Games reduction; D8-X19 Largest-remainder rounding of constraint weights; D5-X12 Partial-transpose separability test, exact up to dimension six; D2-X06 Block-diagonal subgroup S(U(2)xU(3)) of SU(5); D2-X07 Anticommutation obstruction in odd dimension.
 
 - **Invariant vocabulary** (`mapfill/invariants.js`): 59 named invariants, 5 relations between them, 49 links from entries (20 entries; 5 receipted where the entry is silent), each justified by a phrase in the entry's own field or by a quoted source; 20 entries record what kinds of object they take and return. `node scripts/compose.mjs --chain ID,ID,...` reports what survives a chain.
 
@@ -80,11 +80,11 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 |---|---|
 | `surgery` | 236 |
 | `composition` | 76 |
-| `decomposition` | 164 |
+| `decomposition` | 165 |
 | `compression` | 93 |
 | `completion` | 31 |
 | `construction` | 729 |
-| `representation-change` | 575 |
+| `representation-change` | 576 |
 | `basis-change` | 5 |
 | `bijection` | 14 |
 | `involution` | 25 |
@@ -97,20 +97,20 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | `coarsening` | 7 |
 | `expansion` | 47 |
 | `orientation` | 3 |
-| `parameterized` | 53 |
-| `algebra-bridge` | 54 |
+| `parameterized` | 54 |
+| `algebra-bridge` | 55 |
 | `topology-bridge` | 9 |
 | `computation-bridge` | 66 |
 | `local` | 51 |
-| `spectral` | 23 |
+| `spectral` | 24 |
 | `iterative` | 64 |
 | `heuristic` | 3 |
 | `generative` | 30 |
 
 ## 4. Operation kinds
 
-- Transformer: 1688
-- Constructor: 295
+- Transformer: 1690
+- Constructor: 296
 - Correspondence: 73
 - Combinator: 1
 
@@ -121,6 +121,6 @@ Findings for the map; the landed text is not repaired here.
 - **Name-only stubs after the fill layer: 2** (landed: 416).
 - **Entries without preserved or broken invariants: 0** (landed: 836).
 - **Off-vocabulary tags: 65.** egress, storage, ingress, isolation, authority, information-flow, concurrency, dispatch, cryptography, audit, erasure, freshness, transaction, presentation
-- **Entries outside the 2 to 4 tag rule: 1557.** Tags are the map's own and are not refilled here.
+- **Entries outside the 2 to 4 tag rule: 1558.** Tags are the map's own and are not refilled here.
 - **Vocabulary count:** the map declares "14 primary + 6 effect + 3 bridge + 6 modifier = 29"; its tables list 28 tags (the modifier table has one fewer row than declared).
 
