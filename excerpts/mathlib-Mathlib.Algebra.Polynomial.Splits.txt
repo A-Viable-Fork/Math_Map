@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Splits.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 7b19acd9f06f2cf5dc7f5ab9343d4b742d8b381555de872a1bc22565ba94f2b1
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.Splits (line 35)
+def Splits (f : R[X]) : Prop := f ∈ Submonoid.closure ({C a | a : R} ∪ {X + C a | a : R})
+
+-- Polynomial.Splits.map (line 83)
+protected theorem Splits.map {f : R[X]} (hf : Splits f) {S : Type*} [Semiring S] (i : R →+* S) :
+    Splits (map i f)
+
+-- Polynomial.Splits.mul (line 58)
+protected theorem Splits.mul {f g : R[X]} (hf : Splits f) (hg : Splits g) :
+    Splits (f * g)
+
+-- Polynomial.splits_mul (line 441)
+theorem splits_mul (hf₀ : f ≠ 0) (hg₀ : g ≠ 0) :
+    Splits (f * g) ↔ Splits f ∧ Splits g
+
+-- Polynomial.splits_iff_card_roots (line 378)
+theorem splits_iff_card_roots : Splits f ↔ f.roots.card = f.natDegree

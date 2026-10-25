@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "9cd551e393aa67b6a86ddb5dabd50f83256902a8"
+  "commit": "dacfc7cf23c19aa4b102050e34f1b5739df14575"
  },
  "domains": {
   "D1": {
@@ -737,20 +737,20 @@
   "added": "an entry the map lacked, each claim receipted by a verbatim quote (receipts)"
  },
  "counts": {
-  "entries": 2057,
-  "anchorable": 2054,
+  "entries": 2066,
+  "anchorable": 2063,
   "byOrigin": {
    "map": 1100,
    "clone": 329,
    "fill": 525,
-   "added": 59,
+   "added": 68,
    "generated": 44
   },
   "byTier": {
    "landed": 1337,
    "audited": 116,
    "authored": 494,
-   "receipted": 65,
+   "receipted": 74,
    "flagged": 1,
    "generated": 44
   },
@@ -761,8 +761,8 @@
    "unsupported": 100,
    "unchecked": 11236,
    "imprecise": 20,
-   "sourced": 912,
-   "formal": 74
+   "sourced": 961,
+   "formal": 79
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -782,12 +782,12 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 85,
-   "links": 173,
+   "entries": 94,
+   "links": 248,
    "byMatch": {
-    "exact": 116,
+    "exact": 189,
     "conflicts": 4,
-    "related": 12,
+    "related": 14,
     "special": 17,
     "general": 17,
     "ingredient": 7
@@ -60954,6 +60954,1183 @@
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X14",
+   "domain": "D7",
+   "name": "Degree of a polynomial",
+   "kind": "Transformer",
+   "tags": [
+    "projection"
+   ],
+   "description": "Assigns to a polynomial the largest exponent of X with a nonzero coefficient, the maximum of its support. The zero polynomial has degree minus infinity (degree takes values in WithBot ℕ); natDegree is the same with the zero polynomial sent to 0.",
+   "input": "Polynomial p in R[X], R a semiring",
+   "output": "degree p in ℕ ∪ {-∞}, or natDegree p in ℕ",
+   "preserved": "deg(p + q) ≤ max(deg p, deg q) and deg(pq) ≤ deg p + deg q over any semiring; deg(pq) = deg p + deg q when R has no zero divisors, and then natDeg(p ∘ q) = natDeg p · natDeg q",
+   "broken": "The polynomial itself: degree keeps one exponent. With zero divisors the product law is only an inequality; equality needs the product of the leading coefficients nonzero",
+   "complexity": "Linear in the number of terms",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "def degree (p : R[X]) : WithBot ℕ :=\n  p.support.max"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "def natDegree (p : R[X]) : ℕ :=\n  (degree p).unbotD 0"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "theorem degree_zero : degree (0 : R[X]) = ⊥"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "theorem degree_add_le (p q : R[X]) : degree (p + q) ≤ max (degree p) (degree q)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "theorem degree_mul_le (p q : R[X]) : degree (p * q) ≤ degree p + degree q"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+     "quote": "lemma degree_mul : degree (p * q) = degree p + degree q"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt",
+     "quote": "theorem natDegree_comp : natDegree (p.comp q) = natDegree p * natDegree q"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+     "quote": "theorem degree_mul' (h : leadingCoeff p * leadingCoeff q ≠ 0) :\n    degree (p * q) = degree p + degree q"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.degree",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "The maximum of the support, in WithBot ℕ, so degree 0 = ⊥.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.natDegree",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "degree with ⊥ sent to 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.degree_zero",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "The zero polynomial has degree ⊥.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.degree_add_le",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "Over any semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.degree_mul_le",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "Over any semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.degree_mul",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+     "match": "exact",
+     "note": "Over a semiring with no zero divisors.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.natDegree_comp",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Lemmas.lean",
+     "match": "exact",
+     "note": "Over a semiring with no zero divisors; stated for natDegree.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Lemmas.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.degree_mul'",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+     "match": "exact",
+     "note": "Equality holds when the product of the leading coefficients is nonzero, which is what fails with zero divisors.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X15",
+   "domain": "D7",
+   "name": "Coefficient extraction",
+   "kind": "Transformer",
+   "tags": [
+    "projection",
+    "decomposition"
+   ],
+   "description": "Reads the coefficient of X^n in p. A polynomial is determined by its coefficients; the exponents with a nonzero coefficient form its support, a finite set.",
+   "input": "Polynomial p in R[X], R a semiring; an exponent n",
+   "output": "coeff p n in R; support p, a finite set of naturals",
+   "preserved": "Additivity: coeff (p + q) n = coeff p n + coeff q n, and coeff at n is an R-linear map; two polynomials with the same coefficients are equal; the coefficient of a product is the sum over i + j = n of coeff p i · coeff q j",
+   "broken": "Multiplicativity: the coefficient of a product is that convolution sum, not the product of coefficients",
+   "complexity": "Constant per coefficient",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt",
+     "quote": "def coeff : R[X] → ℕ →₀ R\n  | ⟨p⟩ => p.coeff"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt",
+     "quote": "def support : R[X] → Finset ℕ\n  | ⟨p⟩ => p.coeff.support"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt",
+     "quote": "theorem coeff_add (p q : R[X]) (n : ℕ) : coeff (p + q) n = coeff p n + coeff q n"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt",
+     "quote": "def lcoeff (n : ℕ) : R[X] →ₗ[R] R where\n  toFun p := coeff p n\n  map_add' p q := coeff_add p q n\n  map_smul' r p := coeff_smul r p n"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt",
+     "quote": "theorem ext_iff {p q : R[X]} : p = q ↔ ∀ n, coeff p n = coeff q n"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt",
+     "quote": "theorem coeff_mul (p q : R[X]) (n : ℕ) :\n    coeff (p * q) n = ∑ x ∈ antidiagonal n, coeff p x.1 * coeff q x.2"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.coeff",
+     "file": "Mathlib/Algebra/Polynomial/Basic.lean",
+     "match": "exact",
+     "note": "Coefficients as a finitely supported function ℕ →₀ R.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.support",
+     "file": "Mathlib/Algebra/Polynomial/Basic.lean",
+     "match": "exact",
+     "note": "The support is a Finset ℕ.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.coeff_add",
+     "file": "Mathlib/Algebra/Polynomial/Coeff.lean",
+     "match": "exact",
+     "note": "Additivity at each exponent.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Coeff.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.lcoeff",
+     "file": "Mathlib/Algebra/Polynomial/Coeff.lean",
+     "match": "exact",
+     "note": "coeff at n as an R-linear map R[X] →ₗ[R] R.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Coeff.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.ext_iff",
+     "file": "Mathlib/Algebra/Polynomial/Basic.lean",
+     "match": "exact",
+     "note": "Equal iff all coefficients agree.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.coeff_mul",
+     "file": "Mathlib/Algebra/Polynomial/Coeff.lean",
+     "match": "exact",
+     "note": "The convolution over the antidiagonal of n.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Coeff.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.coeff_mul",
+     "file": "Mathlib/Algebra/Polynomial/Coeff.lean",
+     "match": "related",
+     "note": "The law that replaces multiplicativity; the failure itself is inferred from it.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Coeff.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X16",
+   "domain": "D7",
+   "name": "Leading coefficient of a polynomial",
+   "kind": "Transformer",
+   "tags": [
+    "projection"
+   ],
+   "description": "The coefficient of the highest power present, coeff p (natDegree p). A polynomial is monic when its leading coefficient is 1. Erasing the leading term leaves eraseLead p, with p = eraseLead p + (leading coefficient) X^(natDegree p) and, for p ≠ 0, deg(eraseLead p) < deg p.",
+   "input": "Polynomial p in R[X], R a semiring",
+   "output": "leadingCoeff p in R; whether p is monic; eraseLead p in R[X]",
+   "preserved": "Multiplicative when R has no zero divisors: lc(pq) = lc p · lc q; a product of monic polynomials is monic over any semiring; lc 0 = 0",
+   "broken": "Additivity: lc(p + q) = lc q is given only when deg p < deg q",
+   "complexity": "Linear in the number of terms",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "def leadingCoeff (p : R[X]) : R :=\n  coeff p (natDegree p)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "def Monic (p : R[X]) :=\n  leadingCoeff p = (1 : R)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt",
+     "quote": "def eraseLead (f : R[X]) : R[X] :=\n  Polynomial.erase f.natDegree f"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt",
+     "quote": "theorem eraseLead_add_monomial_natDegree_leadingCoeff (f : R[X]) :\n    f.eraseLead + monomial f.natDegree f.leadingCoeff = f"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt",
+     "quote": "theorem degree_eraseLead_lt (hf : f ≠ 0) : (eraseLead f).degree < f.degree"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+     "quote": "lemma leadingCoeff_mul (p q : R[X]) : leadingCoeff (p * q) = leadingCoeff p * leadingCoeff q"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Monic.txt",
+     "quote": "theorem Monic.mul (hp : Monic p) (hq : Monic q) : Monic (p * q)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt",
+     "quote": "theorem leadingCoeff_zero : leadingCoeff (0 : R[X]) = 0"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+     "quote": "theorem leadingCoeff_add_of_degree_lt (h : degree p < degree q) :\n    leadingCoeff (p + q) = leadingCoeff q"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.leadingCoeff",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "coeff p (natDegree p).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.Monic",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "leadingCoeff p = 1.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.eraseLead",
+     "file": "Mathlib/Algebra/Polynomial/EraseLead.lean",
+     "match": "exact",
+     "note": "p with its leading term erased.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/EraseLead.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.eraseLead_add_monomial_natDegree_leadingCoeff",
+     "file": "Mathlib/Algebra/Polynomial/EraseLead.lean",
+     "match": "exact",
+     "note": "p = eraseLead p + monomial (natDegree p) (leadingCoeff p).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/EraseLead.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.degree_eraseLead_lt",
+     "file": "Mathlib/Algebra/Polynomial/EraseLead.lean",
+     "match": "exact",
+     "note": "For p ≠ 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/EraseLead.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.leadingCoeff_mul",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+     "match": "exact",
+     "note": "Over a semiring with no zero divisors.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.Monic.mul",
+     "file": "Mathlib/Algebra/Polynomial/Monic.lean",
+     "match": "exact",
+     "note": "Over any semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Monic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.leadingCoeff_zero",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Defs.lean",
+     "match": "exact",
+     "note": "lc 0 = 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Defs.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.leadingCoeff_add_of_degree_lt",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+     "match": "related",
+     "note": "The case where the sum keeps a leading coefficient; cancellation of equal top degrees is inferred from it.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X17",
+   "domain": "D7",
+   "name": "Change of coefficient ring",
+   "kind": "Transformer",
+   "tags": [
+    "representation-change"
+   ],
+   "description": "Applies a ring homomorphism f: R → S to every coefficient: map f p = eval₂ (C ∘ f) X p, a ring homomorphism R[X] → S[X] sending X to X.",
+   "input": "Ring homomorphism f: R → S of semirings; polynomial p in R[X]",
+   "output": "map f p in S[X]",
+   "preserved": "It is a ring homomorphism (mapRingHom); evaluating map f p at x is eval₂ f x p, so at f a it is f (eval a p); it commutes with the derivative and with composition; degree is kept when f is injective",
+   "broken": "Degree can drop: deg(map f p) ≤ deg p, strict when f kills the leading coefficient",
+   "complexity": "Linear in the number of terms",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def map : R[X] → S[X] :=\n  eval₂ (C.comp f) X"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem map_X : X.map f = X"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def mapRingHom (f : R →+* S) : R[X] →+* S[X] where\n  toFun := Polynomial.map f\n  map_add' _ _ := Polynomial.map_add f\n  map_zero' := Polynomial.map_zero f\n  map_mul' _ _ := Polynomial.map_mul f\n  map_one' := Polynomial.map_one f"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem eval_map (x : S) : (p.map f).eval x = p.eval₂ f x"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem eval₂_at_apply {S : Type*} [Semiring S] (f : R →+* S) (r : R) :\n    p.eval₂ f (f r) = f (p.eval r)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "theorem derivative_map [Semiring S] (p : R[X]) (f : R →+* S) :\n    derivative (p.map f) = p.derivative.map f"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem map_comp (p q : R[X]) : map f (p.comp q) = (map f p).comp (map f q)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt",
+     "quote": "theorem degree_map_eq_of_injective {f : R →+* S} (hf : Function.Injective f) (p : Polynomial R) :\n    (p.map f).degree = p.degree"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Degree.txt",
+     "quote": "lemma degree_map_le : degree (p.map f) ≤ degree p"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.map",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "eval₂ (C.comp f) X.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.map_X",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "map f X = X.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.mapRingHom",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "map as a ring homomorphism.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.eval_map",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "(map f p).eval x = p.eval₂ f x.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.eval₂_at_apply",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "p.eval₂ f (f r) = f (p.eval r); with eval_map, evaluation commutes with map.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.derivative_map",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "derivative (map f p) = map f (derivative p).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.map_comp",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "map f (p.comp q) = (map f p).comp (map f q).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.degree_map_eq_of_injective",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Lemmas.lean",
+     "match": "exact",
+     "note": "For injective f.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Lemmas.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.degree_map_le",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Degree.lean",
+     "match": "exact",
+     "note": "Degree never rises, so it can only drop.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Degree.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X18",
+   "domain": "D7",
+   "name": "Evaluation of a polynomial",
+   "kind": "Transformer",
+   "tags": [
+    "projection",
+    "algebra-bridge"
+   ],
+   "description": "Substitutes a value for X. eval₂ f x p = Σ f(a_i) x^i along a ring homomorphism f: R → S at x in S; eval x p takes f the identity; aeval x is the R-algebra homomorphism R[X] → A sending X to x, for any R-algebra A, commutative or not.",
+   "input": "Polynomial p in R[X]; a point x in S, or in an R-algebra A (R commutative); for eval₂, a ring homomorphism f: R → S",
+   "output": "The value p(x) in S or A",
+   "preserved": "eval₂ f x is a ring homomorphism when S is commutative, and when x commutes with every f(a) in general (eval₂RingHom'); aeval x is the unique R-algebra homomorphism sending X to x",
+   "broken": "The polynomial is lost: over a finite field with q elements every a has a^q = a, so X^q and X define the same function though X^q - X ≠ 0; over an infinite domain, polynomials agreeing at every point are equal",
+   "complexity": "Linear in the degree (Horner's rule)",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "irreducible_def eval₂ (p : R[X]) : S :=\n  p.sum fun e a => f a * x ^ e"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def eval (x : R) (p : R[X]) : R :=\n  eval₂ (RingHom.id _) x p"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt",
+     "quote": "def aeval : R[X] →ₐ[R] A :=\n  aevalEquiv R A x"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt",
+     "quote": "theorem aeval_X : aeval x (X : R[X]) = x"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def eval₂RingHom (f : R →+* S) (x : S) : R[X] →+* S :=\n  { eval₂AddMonoidHom f x with\n    map_one' := eval₂_one _ _\n    map_mul' := fun _ _ => eval₂_mul _ _ }"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def eval₂RingHom' (f : R →+* S) (x : S) (hf : ∀ a, Commute (f a) x) : R[X] →+* S where\n  toFun := eval₂ f x\n  map_add' _ _ := eval₂_add _ _\n  map_zero' := eval₂_zero _ _\n  map_mul' _p q := eval₂_mul_noncomm f x fun k => hf <| coeff q k\n  map_one' := eval₂_one _ _"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt",
+     "quote": "theorem algHom_ext {f g : R[X] →ₐ[R] B} (hX : f X = g X) :\n    f = g"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.FieldTheory.Finite.Basic.txt",
+     "quote": "theorem pow_card (a : K) : a ^ q = a"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.FieldTheory.Finite.Basic.txt",
+     "quote": "theorem X_pow_card_sub_X_ne_zero (hp : 1 < p) : (X ^ p - X : K'[X]) ≠ 0"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "theorem funext [Infinite R] {p q : R[X]} (ext : ∀ r : R, p.eval r = q.eval r) : p = q"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.eval₂",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Evaluation along f at x.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.eval",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "eval₂ (RingHom.id _) x.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.aeval",
+     "file": "Mathlib/Algebra/Polynomial/AlgebraMap.lean",
+     "match": "exact",
+     "note": "The R-algebra homomorphism R[X] →ₐ[R] A determined by x.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/AlgebraMap.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.aeval_X",
+     "file": "Mathlib/Algebra/Polynomial/AlgebraMap.lean",
+     "match": "exact",
+     "note": "aeval x X = x.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/AlgebraMap.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.eval₂RingHom",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "For S a commutative semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.eval₂RingHom'",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "For noncommutative S, given that x commutes with each f a.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.algHom_ext",
+     "file": "Mathlib/Algebra/Polynomial/AlgebraMap.lean",
+     "match": "exact",
+     "note": "Two R-algebra homomorphisms out of R[X] agreeing on X are equal: uniqueness.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/AlgebraMap.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "FiniteField.pow_card",
+     "file": "Mathlib/FieldTheory/Finite/Basic.lean",
+     "match": "exact",
+     "note": "a ^ q = a in a finite field with q elements.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/Finite/Basic.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "FiniteField.X_pow_card_sub_X_ne_zero",
+     "file": "Mathlib/FieldTheory/Finite/Basic.lean",
+     "match": "exact",
+     "note": "X^p - X is a nonzero polynomial for p > 1.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/Finite/Basic.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.funext",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "Over an infinite domain, agreement at every point gives equality.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X19",
+   "domain": "D7",
+   "name": "Formal derivative of a polynomial",
+   "kind": "Transformer",
+   "tags": [
+    "local"
+   ],
+   "description": "Sends Σ a_i X^i to Σ i·a_i X^(i-1), defined by the formula over any semiring, with no limit. The algebraic counterpart of the analytic derivative (D6-028).",
+   "input": "Polynomial p in R[X], R a semiring",
+   "output": "derivative p in R[X]",
+   "preserved": "R-linearity; the Leibniz rule (pq)' = p'q + pq' over any semiring; the chain rule (p ∘ q)' = q' · (p' ∘ q) over a commutative semiring",
+   "broken": "Degree: natDeg p' ≤ natDeg p - 1, strictly below natDeg p unless p is constant. In characteristic p, (X^n)' = n X^(n-1) vanishes when p divides n, and p' = 0 makes f an expansion f(X^p) rather than a constant (over a domain). A root t has multiplicity above 1 iff t is a root of both p and p' (p ≠ 0, R a commutative ring)",
+   "complexity": "Linear in the number of terms",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "def derivative : R[X] →ₗ[R] R[X] where\n  toFun p := p.sum fun n a => C (a * n) * X ^ (n - 1)\n  map_add' p q := by\n    rw [sum_add_index] <;>\n      simp only [add_mul, forall_const, map_add, zero_mul, map_zero]\n  map_smul' a p := by"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "theorem derivative_mul {f g : R[X]} : derivative (f * g) = derivative f * g + f * derivative g"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "theorem derivative_comp (p q : R[X]) :\n    derivative (p.comp q) = derivative q * p.derivative.comp q"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "theorem natDegree_derivative_le (p : R[X]) : p.derivative.natDegree ≤ p.natDegree - 1"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "theorem natDegree_derivative_lt {p : R[X]} (hp : p.natDegree ≠ 0) :\n    p.derivative.natDegree < p.natDegree"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+     "quote": "theorem derivative_X_pow (n : ℕ) : derivative (X ^ n : R[X]) = C (n : R) * X ^ (n - 1)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Expand.txt",
+     "quote": "theorem expand_contract [CharP R p] [NoZeroDivisors R] {f : R[X]} (hf : Polynomial.derivative f = 0)\n    (hp : p ≠ 0) : expand R p (contract p f) = f"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.FieldDivision.txt",
+     "quote": "theorem one_lt_rootMultiplicity_iff_isRoot\n    {p : R[X]} {t : R} (h : p ≠ 0) :\n    1 < p.rootMultiplicity t ↔ p.IsRoot t ∧ (derivative p).IsRoot t"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.derivative",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "p.sum fun n a => C (a * n) * X ^ (n - 1), as an R-linear map.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.derivative_mul",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "Over any semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.derivative_comp",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "Over a commutative semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.natDegree_derivative_le",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "natDegree p' ≤ natDegree p - 1.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.natDegree_derivative_lt",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "Strict when natDegree p ≠ 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.derivative_X_pow",
+     "file": "Mathlib/Algebra/Polynomial/Derivative.lean",
+     "match": "exact",
+     "note": "(X^n)' = C n · X^(n-1); in characteristic p the cast of n vanishes when p divides n.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Derivative.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.expand_contract",
+     "file": "Mathlib/Algebra/Polynomial/Expand.lean",
+     "match": "exact",
+     "note": "In characteristic p over a domain, f' = 0 gives f = expand p (contract p f).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Expand.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.one_lt_rootMultiplicity_iff_isRoot",
+     "file": "Mathlib/Algebra/Polynomial/FieldDivision.lean",
+     "match": "exact",
+     "note": "For p ≠ 0 over a commutative ring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/FieldDivision.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X20",
+   "domain": "D7",
+   "name": "Roots of a polynomial with multiplicity",
+   "kind": "Transformer",
+   "tags": [
+    "decomposition"
+   ],
+   "description": "IsRoot p a says p(a) = 0. rootMultiplicity a p is the largest n with (X - a)^n dividing p (0 for p = 0). Over a commutative domain, roots p is the multiset of roots, each counted with its multiplicity.",
+   "input": "Polynomial p in R[X]; R a commutative domain for roots, a ring for rootMultiplicity",
+   "output": "roots p, a finite multiset of R; rootMultiplicity a p in ℕ; whether a is a root",
+   "preserved": "card (roots p) ≤ natDegree p; roots (pq) = roots p + roots q when pq ≠ 0; for p ≠ 0, a is in roots p iff it is a root; the count of a in roots p is its multiplicity; X - a divides p iff a is a root (the factor theorem, R commutative)",
+   "broken": "roots 0 = 0 by convention; over a commutative domain, card (roots p) = natDegree p exactly when p splits (D7-X22), so a polynomial that does not split has fewer",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "noncomputable def roots (p : R[X]) : Multiset R :=\n  haveI := Classical.decEq R\n  haveI := Classical.dec (p = 0)\n  if h : p = 0 then ∅ else Classical.choose (exists_multiset_roots h)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def IsRoot (p : R[X]) (a : R) : Prop :=\n  p.eval a = 0"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt",
+     "quote": "def rootMultiplicity (a : R) (p : R[X]) : ℕ :=\n  letI := Classical.decEq R\n  if h0 : p = 0 then 0\n  else\n    let _ : DecidablePred fun n : ℕ => ¬(X - C a) ^ (n + 1) ∣ p := Classical.decPred _\n    Nat.find (finiteMultiplicity_X_sub_C a h0)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt",
+     "quote": "lemma le_rootMultiplicity_iff (p0 : p ≠ 0) {a : R} {n : ℕ} :\n    n ≤ rootMultiplicity a p ↔ (X - C a) ^ n ∣ p"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "theorem card_roots' (p : R[X]) : Multiset.card p.roots ≤ natDegree p"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "theorem roots_mul {p q : R[X]} (hpq : p * q ≠ 0) : (p * q).roots = p.roots + q.roots"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "theorem mem_roots (hp : p ≠ 0) : a ∈ p.roots ↔ IsRoot p a"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "theorem count_roots [DecidableEq R] (p : R[X]) : p.roots.count a = rootMultiplicity a p"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt",
+     "quote": "theorem dvd_iff_isRoot : X - C a ∣ p ↔ IsRoot p a"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+     "quote": "theorem roots_zero : (0 : R[X]).roots = 0"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+     "quote": "theorem splits_iff_card_roots : Splits f ↔ f.roots.card = f.natDegree"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.roots",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "The multiset of roots, over a commutative domain.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.IsRoot",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "p.eval a = 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Polynomial.rootMultiplicity",
+     "file": "Mathlib/Algebra/Polynomial/Div.lean",
+     "match": "exact",
+     "note": "Defined over a ring; 0 for the zero polynomial.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Div.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Polynomial.le_rootMultiplicity_iff",
+     "file": "Mathlib/Algebra/Polynomial/Div.lean",
+     "match": "exact",
+     "note": "n ≤ rootMultiplicity a p iff (X - C a)^n divides p, for p ≠ 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Div.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.card_roots'",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "card roots ≤ natDegree.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.roots_mul",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "For pq ≠ 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.mem_roots",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "For p ≠ 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.count_roots",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "Multiplicity is the count in the multiset.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.dvd_iff_isRoot",
+     "file": "Mathlib/Algebra/Polynomial/Div.lean",
+     "match": "exact",
+     "note": "The factor theorem over a commutative ring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Div.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.roots_zero",
+     "file": "Mathlib/Algebra/Polynomial/Roots.lean",
+     "match": "exact",
+     "note": "roots 0 = 0.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Roots.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Polynomial.splits_iff_card_roots",
+     "file": "Mathlib/Algebra/Polynomial/Splits.lean",
+     "match": "exact",
+     "note": "Over a commutative domain, card roots = natDegree iff p splits.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X21",
+   "domain": "D7",
+   "name": "Composition of polynomials",
+   "kind": "Transformer",
+   "tags": [
+    "composition"
+   ],
+   "description": "Substitutes q for X in p: p.comp q = eval₂ C q p = Σ a_i q^i.",
+   "input": "Polynomials p, q in R[X], R a semiring",
+   "output": "p.comp q in R[X]",
+   "preserved": "Associative over a commutative semiring, with X a two-sided identity; eval x (p ∘ q) = eval (eval x q) p over a commutative semiring; additive in p over any semiring and multiplicative in p over a commutative semiring; natDeg(p ∘ q) = natDeg p · natDeg q when R has no zero divisors",
+   "broken": "No receipted claim: the generator's (no additivity in q) is true but no declaration at the pin states it; see the round's grading",
+   "complexity": "Polynomial in the degrees",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "def comp (p q : R[X]) : R[X] :=\n  p.eval₂ C q"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem comp_assoc {R : Type*} [CommSemiring R] (φ ψ χ : R[X]) :\n    (φ.comp ψ).comp χ = φ.comp (ψ.comp χ)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem comp_X : p.comp X = p"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem X_comp : X.comp p = p"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem eval_comp : (p.comp q).eval x = p.eval (q.eval x)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem add_comp : (p + q).comp r = p.comp r + q.comp r"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+     "quote": "theorem mul_comp {R : Type*} [CommSemiring R] (p q r : R[X]) :\n    (p * q).comp r = p.comp r * q.comp r"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt",
+     "quote": "theorem natDegree_comp : natDegree (p.comp q) = natDegree p * natDegree q"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.comp",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "p.eval₂ C q.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.comp_assoc",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Over a commutative semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.comp_X",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Right identity.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.X_comp",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Left identity.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.eval_comp",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Over a commutative semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.add_comp",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Over any semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.mul_comp",
+     "file": "Mathlib/Algebra/Polynomial/Eval/Defs.lean",
+     "match": "exact",
+     "note": "Over a commutative semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Eval/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.natDegree_comp",
+     "file": "Mathlib/Algebra/Polynomial/Degree/Lemmas.lean",
+     "match": "exact",
+     "note": "With no zero divisors.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Lemmas.lean"
+    }
+   ],
+   "tier": "receipted"
+  },
+  {
+   "id": "D7-X22",
+   "domain": "D7",
+   "name": "Splitting of a polynomial",
+   "kind": "Correspondence",
+   "tags": [
+    "decomposition"
+   ],
+   "description": "Tests whether p is a product of constants and monic linear polynomials X + a, over the ring it lives in (Mathlib's definition, for any semiring). Splitting over a larger ring is splitting of the image: p splits along i: R → S when map i p splits.",
+   "input": "Polynomial p in R[X], R a semiring; for splitting along i, a ring homomorphism i: R → S and map i p",
+   "output": "Whether p splits",
+   "preserved": "Splitting persists along any ring homomorphism; a product of splitting polynomials splits, and over a commutative domain a product of nonzero polynomials splits iff each factor does; over a commutative domain p splits iff it has natDegree p roots counted with multiplicity",
+   "broken": "Nothing",
+   "complexity": "N/A",
+   "status": "Added / receipted (mapfill/additions.js)",
+   "origin": "added",
+   "anchorable": true,
+   "receipts": [
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+     "quote": "def Splits (f : R[X]) : Prop := f ∈ Submonoid.closure ({C a | a : R} ∪ {X + C a | a : R})"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+     "quote": "protected theorem Splits.map {f : R[X]} (hf : Splits f) {S : Type*} [Semiring S] (i : R →+* S) :\n    Splits (map i f)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+     "quote": "protected theorem Splits.mul {f g : R[X]} (hf : Splits f) (hg : Splits g) :\n    Splits (f * g)"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+     "quote": "theorem splits_mul (hf₀ : f ≠ 0) (hg₀ : g ≠ 0) :\n    Splits (f * g) ↔ Splits f ∧ Splits g"
+    },
+    {
+     "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+     "quote": "theorem splits_iff_card_roots : Splits f ↔ f.roots.card = f.natDegree"
+    }
+   ],
+   "evidence": {
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "sourced"
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Polynomial.Splits",
+     "file": "Mathlib/Algebra/Polynomial/Splits.lean",
+     "match": "exact",
+     "note": "Membership in the submonoid generated by the constants and the X + C a.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.Splits.map",
+     "file": "Mathlib/Algebra/Polynomial/Splits.lean",
+     "match": "exact",
+     "note": "Along any ring homomorphism of semirings.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.Splits.mul",
+     "file": "Mathlib/Algebra/Polynomial/Splits.lean",
+     "match": "exact",
+     "note": "Over any semiring.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.splits_mul",
+     "file": "Mathlib/Algebra/Polynomial/Splits.lean",
+     "match": "exact",
+     "note": "For nonzero factors, over a commutative domain.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.splits_iff_card_roots",
+     "file": "Mathlib/Algebra/Polynomial/Splits.lean",
+     "match": "exact",
+     "note": "Over a commutative domain.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Splits.lean"
+    }
+   ],
    "tier": "receipted"
   },
   {

@@ -1,0 +1,19 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Polynomial/Div.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Div.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 7320b95c5c9e2f28a62d8eac3ee43105c2da3769d8beb74a5fba8731fd071d80
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Polynomial.rootMultiplicity (line 498)
+def rootMultiplicity (a : R) (p : R[X]) : ℕ :=
+  letI := Classical.decEq R
+  if h0 : p = 0 then 0
+  else
+    let _ : DecidablePred fun n : ℕ => ¬(X - C a) ^ (n + 1) ∣ p := Classical.decPred _
+    Nat.find (finiteMultiplicity_X_sub_C a h0)
+
+-- Polynomial.le_rootMultiplicity_iff (line 559)
+lemma le_rootMultiplicity_iff (p0 : p ≠ 0) {a : R} {n : ℕ} :
+    n ≤ rootMultiplicity a p ↔ (X - C a) ^ n ∣ p
+
+-- Polynomial.dvd_iff_isRoot (line 623)
+theorem dvd_iff_isRoot : X - C a ∣ p ↔ IsRoot p a
