@@ -35,6 +35,7 @@
 | `generation/2026-10-12-select-001` | The SELECT-001 round: whether the conflicts of physics select the historical successor from menus large enough to fail, pre-registered. |
 | `generation/2026-10-12-select-002` | The SELECT-002 round: the mixing form F5 tested with decoys on every menu, and iterated menus following the lowest-order path under conflicts in order, pre-registered. |
 | `generation/2026-10-23-poly-001` | The POLY-001 round: entries for the operations inside the polynomial ring (degree, coefficients, evaluation, derivative, roots and the rest), the questions fixed by Research_OS's Mathlib decomposition, graded against Mathlib at the pin and pre-registered. |
+| `generation/2026-10-23-un-001` | The UN-001 round: the logged effect tested in two shapes (D9-X40 landed), a host restyling a guest, a principal's lifecycle, and the per-UID firewall binding, from the Unattested inbound notes. |
 | `lean` | A Lean 4 project on the pinned Mathlib that states and proves claims Mathlib does not cover. |
 | `lean/MathMap` | The Lean sources, one file per topic, each naming the entries it bears on. |
 | `mapfill` | The fill layer the parser applies over the landed map: clone resolution, fills, additions, conditions, corrections, invariants and formal links. |
@@ -75,6 +76,7 @@
 | `audit/blind/rulings-0_1.js` | rulings on the disagreements of the second readings of packet-0_1. |
 | `audit/grades-0_1.js` | the audit grades for audit/sample-0_1.json. |
 | `audit/targeted-0_1.js` | targeted receipts. |
+| `generation/2026-10-23-un-001/test-both.mjs` | the UN-001 round's test of both shapes for a logged effect, on the flows that found the gap. |
 | `mapfill/additions.js` | additions. |
 | `mapfill/android.js` | the Android binding layer. |
 | `mapfill/conditions.js` | conditions and counterexamples. |
@@ -486,6 +488,8 @@
 | `generation/2026-10-23-poly-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
 | `generation/2026-10-23-poly-001/preregistration.md` | A round's pre-registration: rows, constraints, controls and verdict rules, committed alone before any computation. |
 | `generation/2026-10-23-poly-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
+| `generation/2026-10-23-un-001/grading.md` | The grading of one generation round: each candidate checked against sources and code, with evidence marks and verdicts. |
+| `generation/2026-10-23-un-001/record.md` | A generation record (kit template): the commission, seeds, candidates and handoff; expression, not evidence. |
 | `infra.json` | Configuration of the vendored Repo-Infrastructure kit: which checks run. |
 | `infra.lock.json` | Pins the vendored kit in .infra/: upstream commit and the hash of every file. |
 | `lean/.gitignore` | Keeps Lake's build directory out of git. |
@@ -561,6 +565,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `CLAUDE.md` | names | `scripts/mathmap.mjs` |
 | `CLAUDE.md` | names | `SHA256SUMS` |
 | `CLAUDE.md` | names | `STATUS.md` |
+| `generation/2026-10-23-un-001/test-both.mjs` | imports | `scripts/compose.mjs` |
+| `generation/2026-10-23-un-001/test-both.mjs` | imports | `scripts/mathmap.mjs` |
+| `generation/2026-10-23-un-001/test-both.mjs` | names | `scripts/compose.mjs` |
 | `lean/WISHLIST.md` | names | `lean/MathMap/LawvereTierneyInternal.lean` |
 | `mapfill/additions.js` | names | `excerpts/arxiv-1003.5944.txt` |
 | `mapfill/additions.js` | names | `excerpts/arxiv-1603.04641.txt` |
@@ -673,6 +680,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/additions.js` | names | `mapfill/README.md` |
 | `mapfill/additions.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/android.js` | names | `generation/2026-10-11-mm-dr-002/grading.md` |
+| `mapfill/android.js` | names | `generation/2026-10-23-un-001/grading.md` |
 | `mapfill/android.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/conditions.js` | names | `excerpts/arxiv-2103.12179.txt` |
 | `mapfill/conditions.js` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` |
@@ -745,6 +753,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/generated.js` | names | `generation/2026-10-11-mm-dr-004/grading-part-b.md` |
 | `mapfill/generated.js` | names | `generation/2026-10-11-mm-dr-004/grading.md` |
 | `mapfill/generated.js` | names | `generation/2026-10-11-ro-bp-001/grading.md` |
+| `mapfill/generated.js` | names | `generation/2026-10-23-un-001/grading.md` |
+| `mapfill/generated.js` | names | `generation/2026-10-23-un-001/test-both.mjs` |
 | `mapfill/generated.js` | names | `mapfill/domains.js` |
 | `mapfill/generated.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/homes.js` | imports | `mapfill/fill.js` |
@@ -766,6 +776,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/invariants.js` | names | `excerpts/wikipedia-resolution-of-singularities.txt` |
 | `mapfill/invariants.js` | names | `generation/2026-10-11-mm-dr-002/grading.md` |
 | `mapfill/invariants.js` | names | `generation/2026-10-11-mm-dr-003/grading.md` |
+| `mapfill/invariants.js` | names | `generation/2026-10-23-un-001/grading.md` |
 | `mapfill/invariants.js` | names | `mapfill/generated.js` |
 | `mapfill/invariants.js` | names | `reports/TYPING.md` |
 | `mapfill/invariants.js` | names | `scripts/compose.mjs` |
