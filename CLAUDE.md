@@ -6,8 +6,8 @@ A typed map of mathematical transformations across nine domains: each entry give
 
 ## Checks
 
-- `node scripts/check-all.mjs` before every commit: the parser and vocabulary checks (`mathmap.mjs --check`), the audit, the Mathlib and Lean links, freshness of every generated file (`build.mjs --check`), the composition and MCP self-tests, the blind and catalogue checks, the kit's checks (`.infra/run.mjs`), and freshness of the five reports. Commit only on PASS, and gate the commit on the command's exit status.
-- After a change to `mapfill/`, `source/` or `audit/`: `node scripts/build.mjs`, then regenerate the reports (`node scripts/mathmap.mjs`, `audit.mjs`, `topology.mjs`, `type-lexicon.mjs`, `gaps.mjs`).
+- `node scripts/check-all.mjs` before every commit: the parser and vocabulary checks (`mathmap.mjs --check`), the audit, the Mathlib and Lean links, freshness of every generated file (`build.mjs --check`), the composition and MCP self-tests, the blind and catalogue checks, the kit's checks (`.infra/run.mjs`), and freshness of the six reports. Commit only on PASS, and gate the commit on the command's exit status.
+- After a change to `mapfill/`, `source/` or `audit/`: `node scripts/build.mjs`, then regenerate the reports (`node scripts/mathmap.mjs`, `audit.mjs`, `topology.mjs`, `type-lexicon.mjs`, `gaps.mjs`, `misalign.mjs`).
 - After adding or removing a file: describe it (a `Role:` header in code, or a line in `repo-map-manifest.json`) and run `node .infra/tools/repo-map.mjs`.
 
 ## Layout

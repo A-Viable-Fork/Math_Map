@@ -2,7 +2,8 @@
 //   machine-readable), domains/*.md (readable), audit.json (grades), README.md (the design),
 //   STATUS.md (what the data holds, dated by the commit built from), MANIFEST.json and SHA256SUMS.
 // Contract: `node scripts/build.mjs` writes them; `--check` fails if any differs from what would be written
-//   (the commit stamp aside). Sources: source/math_map.md, mapfill/, audit/, excerpts/.
+//   (the commit stamp aside). Sources: source/math_map.md, mapfill/, audit/, excerpts/. Exports build(),
+//   relationOf(iso) (the landed ISO / DEP / CS field as a relation) and clustersOf(entries).
 // Invariant: generated files are never edited by hand.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -13,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import { parse, anchorable } from "./mathmap.mjs";
 import { evidence, LEVELS } from "./evidence.mjs";
 import { status as leanStatus } from "./lean.mjs";
+import { leads as misalignLeads } from "./misalign.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -24,6 +26,44 @@ const sha = (t) => createHash("sha256").update(t).digest("hex");
 // field). Links to Mathlib (mapfill/formal.js) are a separate axis, reported per claim.
 const FIELDS6 = ["name", "description", "input", "output", "preserved", "broken"];
 const worst = (g) => { const vs = FIELDS6.map((f) => g.fields[f].verdict); return vs.includes("wrong") ? "wrong" : vs.includes("imprecise") ? "imprecise" : vs.every((v) => v === "confirmed") ? "confirmed" : "partly unsupported"; };
+
+// The landed ISO / DEP / CS field, three parts: an isomorphism cluster (with a note), a departure note, and a clone
+// status. "- / - / Unlinked" says nothing and is dropped; a field that is not three parts is kept whole as a note.
+// Landed text, unchecked like every landed field.
+export function relationOf(iso) {
+  const t = (iso || "").trim();
+  if (!t || t === "- / - / Unlinked") return null;
+  const parts = t.split(" / ");
+  if (parts.length !== 3) return { note: t };
+  const v = (x) => (x.trim() === "-" ? null : x.trim());
+  const [i, departure, cloneStatus] = parts.map(v);
+  const r = {};
+  if (i) { const m = i.match(/^(ISO-[A-Z0-9-]+?)(?:\s*\((.*)\))?$/); r.cluster = m ? m[1] : null; if (m?.[2]) r.clusterNote = m[2]; if (!m) r.iso = i; }
+  if (departure) r.departure = departure;
+  if (cloneStatus && cloneStatus !== "Unlinked") r.cloneStatus = cloneStatus;
+  return Object.keys(r).length ? r : null;
+}
+
+// Isomorphism clusters: every cluster id the entries name, with its members, and the landed cluster index's row where
+// the map has one (Domain 1 only). The index text is landed and unchecked.
+export function clustersOf(entries) {
+  const src = readFileSync(join(ROOT, "source/math_map.md"), "utf8");
+  const at = src.indexOf("## ISOMORPHISM CLUSTER INDEX"), end = src.indexOf("\n## ", at + 5);
+  const index = {};
+  if (at >= 0) {
+    const block = src.slice(at, end < 0 ? undefined : end);
+    let head = null;
+    for (const line of block.split("\n")) {
+      const cells = line.split("|").slice(1, -1).map((c) => c.trim());
+      if (cells[0] === "Cluster ID") { head = cells; continue; }
+      if (head && /^ISO-/.test(cells[0] || "")) index[cells[0]] = Object.fromEntries(head.slice(1).map((h, k) => [h.replace(/^Domain 1 Entry$/, "entries").replace(/^Entries$/, "entries").replace(/^Cross-Domain Partners$/, "partners").toLowerCase(), cells[k + 1]]));
+    }
+  }
+  const out = {};
+  for (const e of entries) if (e.relation?.cluster) (out[e.relation.cluster] ||= { members: [] }).members.push(e.id);
+  for (const [id, row] of Object.entries(index)) (out[id] ||= { members: [] }).index = row;
+  return Object.fromEntries(Object.keys(out).sort().map((k) => [k, out[k]]));
+}
 
 export function build() {
   const P = parse();
@@ -41,6 +81,8 @@ export function build() {
       input: e.input, output: e.output, preserved: e.preserved, broken: e.broken, complexity: e.complexity || null,
       status: e.status || null, origin: e.origin, anchorable: anchorable(e) };
     if (e.reading) o.reading = e.reading;
+    const rel = relationOf(e.iso);
+    if (rel) o.relation = rel;
     if (e.unknown) o.unknown = true;
     if (e.flag) o.flag = { kind: e.flag.kind, evidence: e.flag.evidence };
     if (e.pointer) o.landedAs = e.pointer;
@@ -81,6 +123,7 @@ export function build() {
       claimEvidence: Object.fromEntries(LEVELS.map((l) => [l, entries.reduce((n, e) => n + (e.claims || []).filter((c) => c.level === l).length, 0)])),
       formal: { mathlibCommit: P.formal.mathlib.commit, entries: entries.filter((e) => e.formal).length, links: P.formal.links.length,
         byMatch: P.formal.links.reduce((a, k) => { a[k.match] = (a[k.match] || 0) + 1; return a; }, {}) } },
+    clusters: clustersOf(entries),
     entries: entries.map((e) => e.receipts ? e : e) };
   files["map.json"] = JSON.stringify(map, null, 1) + "\n";
   files["audit.json"] = JSON.stringify(audit, null, 1) + "\n";
@@ -97,6 +140,7 @@ export function build() {
       for (const k of e.lean || []) L.push(`- Lean (${k.match}, ${k.status}, on ${k.field}${k.invariant ? `: ${k.invariant}` : ""}): \`${k.decl}\` in \`${k.file}\`. ${k.note}`);
       for (const k of e.formal || []) L.push(`- Mathlib (${k.match}, on ${k.field}): [\`${k.decl}\`](${k.url})${k.twin ? `, with its additive twin \`${k.twin}\`` : ""}. ${k.note}`);
       for (const k of e.counterexamples || []) L.push(`- counterexample: ${k.case}`);
+      if (e.relation) L.push(`- relation (landed, unchecked): ${[e.relation.cluster && `cluster ${e.relation.cluster}${e.relation.clusterNote ? ` (${e.relation.clusterNote})` : ""}`, e.relation.iso, e.relation.departure && `departure: ${e.relation.departure}`, e.relation.cloneStatus, e.relation.note].filter(Boolean).join("; ")}`);
       if (e.reading) L.push(`- reading: ${e.reading}`);
       if (e.receipts) for (const r of e.receipts) L.push(`- receipt (${r.file}): "${r.quote}"`);
       L.push("");
@@ -135,18 +179,21 @@ export function build() {
     "`lean/` is a Lean 4 project on the same pinned Mathlib. It states and proves claims of entries that Mathlib does not cover, over definitions of its own. `mapfill/lean.js` registers each definition with receipts from its source and each claim with the entry, field and invariant it bears on. Whether a claim is proved or only stated is read from Lean itself: `node scripts/lean.mjs --audit` runs `#print axioms` (a proof that uses `sorry` is only stated) and lists the definitions each statement depends on, all of which must be receipted; the result is `lean/AUDIT.json`, which CI regenerates after `lake build` and compares. A proved exact claim makes its invariant claim, or its whole field, formal. To build: `cd lean && lake exe cache get && lake build`.", "",
     "## Audit", "",
     "`audit.json` holds field-by-field grades (confirmed, imprecise, wrong, unsupported) against cited sources: a fixed random sample, kept for unbiased error rates, and targeted grades for entries chosen for use (composites) or for citation (entries with a Mathlib counterpart), kept out of the estimates. Entries found misaligned are flagged with their evidence (`mapfill/flags.js`).", "",
+    "`scripts/misalign.mjs` lists every landed entry whose own content shares no significant word with its name, the shape of a row carrying a neighbour's content (`reports/MISALIGN.md`). A lead never flags: reading settles it, recorded in `mapfill/alignment.js` as aligned or held, and a misaligned one is flagged. A lead from a changed entry stays open until a sweep reads it.", "",
+    "## Relations", "",
+    "The landed map's ISO / DEP / CS field is carried on each entry as `relation` (landed, unchecked): the isomorphism cluster the entry belongs to and a note on how, the departure (where this entry differs from its home or its partners), and the clone status. `map.json` lists the clusters with their members under `clusters`, with the landed cluster index's type and status where the map has one (Domain 1). Clone resolution reads the same field.", "",
     "## Layout", "",
     "Sources, edited by hand and checked:", "",
     "- `source/math_map.md`: the map as landed, verbatim. `source/Category_Theory_Transformation_Enumeration.pdf`: the report the D7 names come from.",
     "- `mapfill/`: the fill layer (clone resolution, authored fills, missing homes, flags), the additions (`mapfill/additions.js`), conditions, the invariant vocabulary, and the Mathlib links (`mapfill/formal.js`). See `mapfill/README.md`.",
     "- `audit/`: the fixed sample, its grades, and the targeted receipts.",
     "- `excerpts/`: the verbatim windows that receipt the additions, each with its source URL and the hash of the page or PDF as fetched. Quoted for reference; the sources keep their own licences.",
-    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the evidence levels (`evidence.mjs`), the Mathlib links (`formal.mjs`), the excerpt maker (`excerpt.mjs`), the MCP server (`mcp.mjs`), the Guardians export (`export-guardians.mjs`), the topology of the typed map (`topology.mjs`), the free typing pass (`type-lexicon.mjs`), the gap finder (`gaps.mjs`), the deformation generator (`deform.mjs`: exact Lie algebra cohomology, integration and contraction, with its algebras and rounds in `deform-algebras.mjs`); the HISTORY-001 round, retrodicting paradigm transitions under pre-registered controls, in `deform-history.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.",
+    "- `scripts/`: the parser and query tool (`mathmap.mjs`), the composition checker (`compose.mjs`), the evidence levels (`evidence.mjs`), the Mathlib links (`formal.mjs`), the excerpt maker (`excerpt.mjs`), the MCP server (`mcp.mjs`), the Guardians export (`export-guardians.mjs`), the topology of the typed map (`topology.mjs`), the free typing pass (`type-lexicon.mjs`), the gap finder (`gaps.mjs`), the misalignment lead finder (`misalign.mjs`), the deformation generator (`deform.mjs`: exact Lie algebra cohomology, integration and contraction, with its algebras and rounds in `deform-algebras.mjs`); the HISTORY-001 round, retrodicting paradigm transitions under pre-registered controls, in `deform-history.mjs`), the audit (`audit.mjs`), this build (`build.mjs`), and the gate (`check-all.mjs`). Node 18 or later, no dependencies.",
     "- `.infra/`: the vendored [Repo-Infrastructure](https://github.com/A-Viable-Fork/Repo-Infrastructure) kit, pinned by `infra.lock.json` and configured by `infra.json`. `node .infra/run.mjs` runs its checks, and `check-all.mjs` runs it. `repo-map-manifest.json` describes every directory and every file that has no Role header.", "",
     "Generated by `node scripts/build.mjs`, never edited by hand:", "",
     `- \`map.json\`: every entry, machine-readable. \`domains/D1.md\` to \`domains/${Object.keys(P.domains).at(-1)}.md\`: the same, readable. \`audit.json\`: the grades with their quotes and sources.`,
     "- `README.md`, this design, and `STATUS.md`, what the map holds as counts from its data, dated by the commit it was built from.",
-    "- `reports/MATHMAP.md` and `reports/AUDIT.md`: data quality and error rates (written by `mathmap.mjs` and `audit.mjs`).",
+    "- `reports/MATHMAP.md` and `reports/AUDIT.md`: data quality and error rates (written by `mathmap.mjs` and `audit.mjs`). `reports/MISALIGN.md`: misalignment leads and how each was settled (written by `misalign.mjs`).",
     "- `MANIFEST.json` and `SHA256SUMS`: the source commit and file hashes, so an answer that cites this map can cite the exact version.", "",
     "Generated by `node .infra/tools/repo-map.mjs`: `REPO-MAP.md`, every directory and file with a one-line description, and the edges between files (imports, and paths a file names). The kit's `repomap` check fails when a file is undescribed or the map is stale.", "",
     "## Querying", "",
@@ -160,7 +207,7 @@ export function build() {
     "A change to a field needs evidence: an addition or a correction carries receipts (verbatim quotes in `excerpts/`), and a grade carries a quote from its cited source. `node scripts/check-all.mjs` must pass.", "",
   ].join("\n");
   // STATUS.md: what the map holds, derived from the data at the commit the build ran on. Dated by that commit.
-  const A = require("../mapfill/android.js"), N = require("../mapfill/nixos.js"), FL = require("../mapfill/flags.js").FLAGS;
+  const A = require("../mapfill/android.js"), N = require("../mapfill/nixos.js"), FL = require("../mapfill/flags.js").FLAGS, ML = misalignLeads();
   const commitDate = (() => { try { return execFileSync("git", ["log", "-1", "--format=%cs", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
   const kv = (o) => Object.entries(o).map(([k, v]) => `${k} ${v}`).join(", ");
   const added = P.addedDomains.map((d) => `${d.id} (${d.name.toLowerCase()})`).join(", ");
@@ -176,6 +223,7 @@ export function build() {
     `| Invariant-claim evidence | ${LEVELS.map((l) => `${l} ${map.counts.claimEvidence[l]}`).join(", ")} |`, "",
     `Conditions: ${map.counts.withConditions} entries. Corrections: ${map.counts.corrected} entries. Flags: ${FL.length} recorded, ${entries.filter((e) => e.flagResolved).length} resolved by corrections, ${entries.filter((e) => e.flag).length} still withheld.`, "",
     `Named invariants: ${P.vocabulary.INVARIANTS.length} in the vocabulary, linked to ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries.`, "",
+    `Relations (landed, unchecked): ${entries.filter((e) => e.relation).length} entries carry one; ${entries.filter((e) => e.relation?.cluster).length} name one of ${Object.keys(map.clusters).length} isomorphism clusters, ${entries.filter((e) => e.relation?.departure).length} a departure.`, "",
     "## Audit", "",
     `${GRADES.length} entries in the fixed random sample (seed ${audit.sample.seed}), ${TARGETED.length} targeted grades. Error rates are in \`reports/AUDIT.md\`.`, "",
     "## Formal links", "",
@@ -187,6 +235,7 @@ export function build() {
     "## Owed", "",
     `- ${map.counts.byTier.authored ?? 0} authored fills and ${map.counts.byTier.generated ?? 0} generated entries not yet reviewed against sources; ${map.counts.fieldEvidence.unchecked} fields unchecked.`,
     `- ${map.counts.fieldEvidence.unsupported} fields unsupported and ${map.counts.fieldEvidence.imprecise} imprecise, awaiting a source or a correction.`,
+    `- Misalignment leads: ${ML.filter((l) => l.state === "open").length} open, ${ML.filter((l) => l.state === "held").length} held (\`reports/MISALIGN.md\`).`,
     "- Unreviewed Mathlib name matches: `reports/FORMAL-QUEUE.md`. Notions Mathlib lacks: `lean/WISHLIST.md`.",
     "- No binding is a device or host test.", "",
   ].join("\n");
