@@ -49,3 +49,31 @@ Kmett (2012–2018)</a></cite> are morphisms in
 Setters are optics for identity action
 
 {{\emph{\mathbf{Setter}}}}((A,B),(S,T))\coloneqq{\hyperlink{linkvenrichment}{\mathcal{V}}}([A,B],[S,T]).
+
+category. Getters (morphisms
+
+ltx_font_typewriter">s -&gt; a</span>
+
+degenerate optics for the trivial action on the covariant side.
+
+optics, they act only unidirectionally.
+
+Folds are optics for the action of foldable functors and the trivial
+
+ltx_font_typewriter">s -&gt; [a]</span>
+
+In its profunctor representation, each optic is written as a single function that
+
+is polymorphic over profunctors with a certain algebraic structure. For
+
+to propose a unified definition of optic. This definition
+
+Pastro and Street (2008)
+
+Riley (2018)
+
+Perhaps surprisingly, many implementations allow the programmer to wrap optics
+
+to construct composite optics.
+
+which is based on the isomorphism between lenses (and optics

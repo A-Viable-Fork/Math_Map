@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/CStarAlgebra/CompletelyPositiveMap.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/CompletelyPositiveMap.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: df54acf8acd6edc3d599d06063e8a6f8baf6e7d8e46e0e54aa8b1751849594b7
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CompletelyPositiveMap (line 50)
+structure CompletelyPositiveMap (A₁ : Type*) (A₂ : Type*) [NonUnitalCStarAlgebra A₁]
+    [NonUnitalCStarAlgebra A₂] [PartialOrder A₁] [PartialOrder A₂] [StarOrderedRing A₁]
+    [StarOrderedRing A₂] extends A₁ →ₗ[ℂ] A₂ where
+  map_cstarMatrix_nonneg' (k : ℕ) (M : CStarMatrix (Fin k) (Fin k) A₁) (hM : 0 ≤ M) :
+      0 ≤ M.map toLinearMap

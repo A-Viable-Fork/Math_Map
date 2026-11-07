@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Quantum channel (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369381836
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bdc8a6bf47f10e492a1f475d0ac413d4e4f18321047af702abe834e6227734ef
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators.
+
+:<math>\Phi (\rho)= \Phi_2 \circ \Phi_1 (\rho) = \sum _i \rho (F_i) R_i.</math>
+
+The total operation is the composition

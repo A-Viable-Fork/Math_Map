@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 375 of 416 D7 stubs, 0 of 79 homes; 375 entries in 15 batches.
+Reviewed: 400 of 416 D7 stubs, 0 of 79 homes; 400 entries in 16 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (375 entries)
+### D7 stubs (400 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 346 | 0 | 0 | 29 |
-| description | 342 | 7 | 0 | 26 |
-| input | 320 | 3 | 0 | 52 |
-| output | 321 | 0 | 0 | 54 |
-| preserved | 248 | 2 | 0 | 125 |
-| broken | 115 | 4 | 0 | 256 |
-| **all** | 1692 | 16 | 0 | 542 |
+| name | 367 | 0 | 0 | 33 |
+| description | 363 | 7 | 0 | 30 |
+| input | 336 | 3 | 0 | 61 |
+| output | 338 | 0 | 0 | 62 |
+| preserved | 261 | 2 | 0 | 137 |
+| broken | 121 | 4 | 0 | 275 |
+| **all** | 1786 | 16 | 0 | 598 |
 
 ## 2. Recall against source
 
@@ -43,7 +43,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 13 | 25 | 94 | 1 | 1% |
 | 14 | 25 | 113 | 0 | 0% |
 | 15 | 25 | 106 | 1 | 1% |
-| **all** | 375 | 1708 | 6 | 0% |
+| 16 | 25 | 94 | 0 | 0% |
+| **all** | 400 | 1802 | 6 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -358,6 +359,29 @@ Every field not confirmed, with the reason.
 - **D7-374 Grate Optic Transformation** (batch 15): *input* unsupported: A representable container is not quoted; the source encodes grates through corepresentable functors. *preserved* unsupported: Zipping is not quoted. *broken* unsupported: Not stated.
 - **D7-375 Adapter Optic Transformation** (batch 15): *preserved* unsupported: Composition is not quoted for adapters. *broken* unsupported: Not stated.
 - **D7-376 Setter Optic Transformation** (batch 15): *input* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Read access is not quoted.
+- **D7-377 Getter Optic Transformation** (batch 16): *preserved* unsupported: Not quoted.
+- **D7-378 Fold Optic Extraction** (batch 16): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-379 Profunctor Optic Tambara Module Application** (batch 16): *input* unsupported: The existential form is not quoted.
+- **D7-380 Mezzolens Construction** (batch 16): *name* unsupported: No fetched source names the mezzolens. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-381 String Diagram Wiring Operation** (batch 16): *name* unsupported: No fetched source for the operad of wiring diagrams (the nLab page was not served). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-383 Completely Positive Map Transformation** (batch 16): *broken* unsupported: Not stated.
+- **D7-384 Dagger Compact Closed Categorification** (batch 16): *broken* unsupported: Not stated.
+- **D7-385 Selinger's CPM Construction** (batch 16): *input* unsupported: Not quoted. *output* unsupported: CPM(C) is not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-386 Stinespring Dilation** (batch 16): *preserved* unsupported: Not quoted.
+- **D7-387 Gelfand-Naimark-Segal Construction** (batch 16): *broken* unsupported: Not stated.
+- **D7-388 Frobenius Algebra Measurement Operation** (batch 16): *broken* unsupported: Not stated.
+- **D7-389 Spider Theorem Reduction** (batch 16): *name* unsupported: No fetched source states the spider theorem; spider fusion is in the ZX-calculus page. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-390 ZX-Calculus Diagrammatic Rewrite** (batch 16): *broken* unsupported: Not stated.
+- **D7-391 ZW-Calculus Diagrammatic Rewrite** (batch 16): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-392 ZH-Calculus Diagrammatic Rewrite** (batch 16): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-393 Quantum Channel Composition** (batch 16): *preserved* unsupported: That composites stay CPTP is not stated. *broken* unsupported: Not stated.
+- **D7-394 Trace Evaluation** (batch 16): *broken* unsupported: Not stated.
+- **D7-395 Marginalization Transformation** (batch 16): *broken* unsupported: Loss of correlations is not stated.
+- **D7-396 Open System Resource Transducer** (batch 16): *name* unsupported: No fetched source for categorical resource theories (the nLab and Wikipedia pages were not served). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-397 Matrix Exponential Transformation** (batch 16): *broken* unsupported: The source states global failure of surjectivity, not of injectivity.
+- **D7-399 Jordan-Chevalley Decomposition** (batch 16): *broken* unsupported: Not stated.
+- **D7-400 Root Space Decomposition** (batch 16): *preserved* unsupported: Not stated.
+- **D7-401 Weyl Character Formula Application** (batch 16): *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -4984,4 +5008,305 @@ actions defining an optic"
 - recalled: name: Standard; description: (A to B) to (S to T); mapped profunctors; input: Functorial structure; output: Setter; preserved: Functor laws; broken: Read access
 
   a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-377 Getter Optic Transformation (batch 16)
+
+- name: **confirmed** [a] "category. Getters (morphisms"
+- description: **confirmed** [a] "ltx_font_typewriter">s -&gt; a</span>" [a] "degenerate optics for the trivial action on the covariant side." *The usual implementation of getters, per the source.*
+- input: **confirmed** [a] "ltx_font_typewriter">s -&gt; a</span>"
+- output: **confirmed** [a] "category. Getters (morphisms"
+- preserved: **unsupported** *Not quoted.*
+- broken: **confirmed** [a] "optics, they act only unidirectionally."
+- recalled: name: Standard; description: Read-only optic S to A; input: Types; output: Getter; preserved: Composition; broken: Write access
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-378 Fold Optic Extraction (batch 16)
+
+- name: **confirmed** [a] "Folds are optics for the action of foldable functors and the trivial"
+- description: **confirmed** [a] "Folds are optics for the action of foldable functors and the trivial" [a] "ltx_font_typewriter">s -&gt; [a]</span>" *Collection into a list, the free monoid; a general monoid is not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Read-only traversal into a monoid (foldMap); input: Structure and monoid; output: Summary; preserved: Monoid laws; broken: Shape of the whole
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-379 Profunctor Optic Tambara Module Application (batch 16)
+
+- name: **confirmed** [a] "In its profunctor representation, each optic is written as a single function that"
+- description: **confirmed** [a] "is polymorphic over profunctors with a certain algebraic structure. For" [a] "to propose a unified definition of optic. This definition" [a] "Pastro and Street (2008)" [a] "Riley (2018)" *The source cites Pastro and Street and Riley; Clarke and coauthors are the paper's authors.*
+- input: **unsupported** *The existential form is not quoted.*
+- output: **confirmed** [a] "In its profunctor representation, each optic is written as a single function that"
+- preserved: **confirmed** [a] "Perhaps surprisingly, many implementations allow the programmer to wrap optics" [a] "to construct composite optics."
+- broken: **confirmed** [a] "which is based on the isomorphism between lenses (and optics" *An isomorphism, so nothing is lost.*
+- recalled: name: Standard (Pastro and Street; Riley; Clarke et al.); description: Optics as natural transformations over Tambara modules; input: Existential optic; output: Profunctor optic; preserved: Composition as function composition; broken: Nothing
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-380 Mezzolens Construction (batch 16)
+
+- name: **unsupported** *No fetched source names the mezzolens.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Uncertain (O'Connor); description: Between lens and traversal; input: Whole and action; output: Mezzolens; preserved: Optic laws; broken: Nothing
+
+
+### D7-381 String Diagram Wiring Operation (batch 16)
+
+- name: **unsupported** *No fetched source for the operad of wiring diagrams (the nLab page was not served).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Spivak); description: Operad of wiring diagrams composes boxes; input: Boxes and wiring; output: Composite; preserved: Associativity; broken: Internal wiring
+
+
+### D7-382 Dagger Functor Inversion (batch 16)
+
+- name: **confirmed** [d] "a '''dagger category''' (also called '''involutive category''' or '''category with involution'''"
+- description: **confirmed** [d] "equipped with an [[Involution (mathematics)|involutive]] [[Contravariant functor|contravariant]] [[endofunctor]] <math>\dagger</math> which is the identity on [[Object (category theory)|objects]]." [d] "the map <math>f^\dagger:B \rightarrow A</math> is just its [[Hermitian adjoint|adjoint]] in the usual sense."
+- input: **confirmed** [d] "* for all [[morphism]]s <math>f: A \to B</math>, there exists its [[Hermitian adjoint|adjoint]] <math>f^\dagger: B \to A</math>"
+- output: **confirmed** [d] "* for all [[morphism]]s <math>f: A \to B</math>, there exists its [[Hermitian adjoint|adjoint]] <math>f^\dagger: B \to A</math>"
+- preserved: **confirmed** [d] "* for all morphisms <math>f</math>, <math>(f^\dagger)^\dagger = f</math>" [d] "<math>(g \circ f)^\dagger = f^\dagger \circ g^\dagger: C \to A</math>"
+- broken: **confirmed** [d] "there exists its [[Hermitian adjoint|adjoint]] <math>f^\dagger: B \to A</math>" *f runs A to B, its dagger B to A.*
+- recalled: name: Standard; description: Involutive contravariant identity-on-objects functor; input: Dagger category; output: Adjoint morphism; preserved: Involution; broken: Direction
+
+  d: excerpts/wikipedia-dagger-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1319081876)
+
+### D7-383 Completely Positive Map Transformation (batch 16)
+
+- name: **confirmed** [c] "and '''completely positive''' if <math>\phi</math> is k-positive for all k."
+- description: **confirmed** [c] "We then say <math>\phi</math> is '''k-positive''' if <math>\textrm{id}_{\mathbb{C}^{k\times k}} \otimes \phi</math> is a positive map" [q] "Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators."
+- input: **confirmed** [c] "Let <math>A</math> and <math>B</math> be [[C*-algebra]]s. A linear map <math>\phi: A\to B</math>"
+- output: **confirmed** [c] "and '''completely positive''' if <math>\phi</math> is k-positive for all k."
+- preserved: **confirmed** [c] "is a map between [[C*-algebra]]s that sends positive elements to positive elements." *Positivity, which positivity of states is a case of.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Stinespring; Choi); description: Positive after tensoring with identity; channels are trace preserving; input: Map of operator algebras; output: CP map; preserved: Positivity; broken: Purity
+
+  c: excerpts/wikipedia-completely-positive-map.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1273806442)
+  q: excerpts/wikipedia-quantum-channel.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369381836)
+
+### D7-384 Dagger Compact Closed Categorification (batch 16)
+
+- name: **confirmed** [d] "'''dagger compact categories''' (or '''dagger compact closed categories''')"
+- description: **confirmed** [q] "It was pioneered in 2004 by [[Samson Abramsky]] and [[Bob Coecke]]." [d] "first appeared in 1989 in the work of  [[Sergio Doplicher]] and John E. Roberts" [d] "* The category '''FdHilb''' of [[Category of finite dimensional Hilbert spaces|finite dimensional Hilbert spaces]] and [[linear maps]]." *Per the source dagger compact categories first appeared in Doplicher and Roberts (1989); Abramsky and Coecke pioneered their use for quantum mechanics.*
+- input: **confirmed** [q] "The primitive objects of study are physical [[Quantum process|processes]], and the different ways these can be composed."
+- output: **confirmed** [q] "* A [[dagger compact category]] allows one to distinguish between an "input" and "output" of a process."
+- preserved: **confirmed** [d] "Dagger compact categories can be used to express and verify some fundamental [[quantum computing|quantum information]] protocols, namely: [[quantum teleportation|teleportation]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Abramsky and Coecke 2004); description: Categorical quantum mechanics in dagger compact categories; input: Quantum processes; output: Dagger compact category; preserved: Teleportation; broken: Numbers
+
+  q: excerpts/wikipedia-categorical-quantum-mechanics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855)
+  d: excerpts/wikipedia-dagger-compact.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1370402753)
+
+### D7-385 Selinger's CPM Construction (batch 16)
+
+- name: **confirmed** [q] "|last=Selinger |chapter=Dagger compact closed categories and completely positive maps" *A citation title; the construction is not spelled out.*
+- description: **confirmed** [q] "* Considering only the morphisms that are [[completely positive map]]s, one can also handle [[Mixed state (physics)|mixed state]]s" *Mixed states from completely positive maps; CPM(C) itself is not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *CPM(C) is not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Selinger 2007); description: CPM construction from a dagger compact category; input: Dagger compact category; output: CPM(C); preserved: Dagger compactness; broken: Global phase
+
+  q: excerpts/wikipedia-categorical-quantum-mechanics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855)
+
+### D7-386 Stinespring Dilation (batch 16)
+
+- name: **confirmed** [s] "named after [[W. Forrest Stinespring]]"
+- description: **confirmed** [s] "every completely positive map <math>\Phi</math> can be "[[Lifting property|lifted]]" up to a map of the form <math>V^* (\cdot) V</math>." [s] "In particular <math>V^\ast V = \Phi(1)</math> holds so that <math>V</math> is an isometry if and only if <math>\Phi(1)=1</math>." *The source states the Heisenberg form V* pi(a) V; the isometry-then-partial-trace form is its dual, not quoted.*
+- input: **confirmed** [s] "represents any [[completely positive map]] on a [[C*-algebra]] ''A''"
+- output: **confirmed** [s] "In particular <math>V^\ast V = \Phi(1)</math> holds so that <math>V</math> is an isometry if and only if <math>\Phi(1)=1</math>."
+- preserved: **unsupported** *Not quoted.*
+- broken: **confirmed** [s] "Thus minimal Stinespring representations are unique [[up to]] a unitary transformation."
+- recalled: name: Standard (Stinespring 1955); description: CP map as V* pi V; channel as isometry then partial trace; input: CP map; output: Isometry and environment; preserved: Channel; broken: Uniqueness up to isometry
+
+  s: excerpts/wikipedia-stinespring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1345142488)
+
+### D7-387 Gelfand-Naimark-Segal Construction (batch 16)
+
+- name: **confirmed** [g] "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>"
+- description: **confirmed** [g] "Given a state <math>\rho</math> of <math>A</math>, there is a <math>*</math>-representation <math>\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\xi</math>"
+- input: **confirmed** [g] "Given a state <math>\rho</math> of <math>A</math>"
+- output: **confirmed** [g] "there is a <math>*</math>-representation <math>\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\xi</math>"
+- preserved: **confirmed** [g] "such that <math>\rho(a)=\langle \pi(a) \xi, \xi \rangle</math>"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Gelfand, Naimark, Segal); description: Cyclic representation from a state; input: C*-algebra and state; output: Cyclic representation; preserved: Expectation; broken: Other states
+
+  g: excerpts/wikipedia-gns.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1343628657)
+
+### D7-388 Frobenius Algebra Measurement Operation (batch 16)
+
+- name: **confirmed** [q] "* Special commutative dagger [[Frobenius algebra]]s model the fact that certain processes yield classical information, that can be cloned or deleted"
+- description: **confirmed** [q] "* Special commutative dagger [[Frobenius algebra]]s model the fact that certain processes yield classical information, that can be cloned or deleted" [q] "* Dagger commutative Frobenius algebras in the category of finite-dimensional Hilbert spaces correspond to [[Orthogonal basis|orthogonal bases]]." *The source pairs dagger commutative Frobenius algebras with orthogonal bases; the fill says orthonormal, the special case.*
+- input: **confirmed** [q] "* Special commutative dagger [[Frobenius algebra]]s"
+- output: **confirmed** [q] "certain processes yield classical information, that can be cloned or deleted"
+- preserved: **confirmed** [q] "thus capturing [[classical information channel|classical communication]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Coecke, Pavlovic, Vicary); description: Classical structures are orthonormal bases; input: Dagger Frobenius algebra; output: Copy and delete; preserved: Classical data; broken: Coherence
+
+  q: excerpts/wikipedia-categorical-quantum-mechanics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855)
+
+### D7-389 Spider Theorem Reduction (batch 16)
+
+- name: **unsupported** *No fetched source states the spider theorem; spider fusion is in the ZX-calculus page.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard; description: Connected diagrams equal spiders; input: Frobenius diagram; output: Spider; preserved: Value; broken: Topology
+
+
+### D7-390 ZX-Calculus Diagrammatic Rewrite (batch 16)
+
+- name: **confirmed** [z] "The '''ZX-calculus''' is a [[Graphical modeling language|graphical language]]."
+- description: **confirmed** [z] "Whenever two Z-spider touch, they can fuse together, and their phases add." [z] "|Color change" [z] "i.e. the ZX-calculus is [[Soundness|sound]] and [[Completeness (logic)|complete]]."
+- input: **confirmed** [z] "which are represented as [[string diagrams]] called ''ZX-diagrams''"
+- output: **confirmed** [z] "A given ZX-diagram can be transformed into another ZX-diagram using the rewrite rules of the ZX-calculus if and only if the two diagrams represent the same linear map"
+- preserved: **confirmed** [z] "if and only if the two diagrams represent the same linear map"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Coecke and Duncan); description: Spider fusion, color change; complete (Jeandel, Perdrix, Vilmart; Ng and Wang); input: ZX diagram; output: Diagram; preserved: Linear map; broken: Shape
+
+  z: excerpts/wikipedia-zx-calculus.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408)
+
+### D7-391 ZW-Calculus Diagrammatic Rewrite (batch 16)
+
+- name: **confirmed** [z] "The ''ZW-calculus'' was developed alongside the ZX-calculus"
+- description: **confirmed** [z] "It was the first graphical language which had a complete rule-set for an approximately universal set of linear maps between qubits," [z] "|last1=Hadzihasanovic |first1=Amar |last2=Ng |first2=Kang Feng |last3=Wang |first3=Quanlong" *W-nodes are not quoted; the completeness citation is Hadzihasanovic, Ng and Wang (2018), where the fill names Hadzihasanovic alone.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Coecke and Kissinger; Hadzihasanovic); description: Z spiders and W nodes; complete; input: ZW diagram; output: Diagram; preserved: Linear map; broken: Shape
+
+  z: excerpts/wikipedia-zx-calculus.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408)
+
+### D7-392 ZH-Calculus Diagrammatic Rewrite (batch 16)
+
+- name: **confirmed** [z] "A more recent language is the ''ZH-calculus''."
+- description: **confirmed** [z] "This adds the ''H-box'' as a generator, that generalizes the Hadamard gate from the ZX-calculus. It can naturally describe quantum circuits involving Toffoli gates." *Hypergraph states and completeness are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Backens and Kissinger); description: Z spiders and H boxes; complete; input: ZH diagram; output: Diagram; preserved: Linear map; broken: Shape
+
+  z: excerpts/wikipedia-zx-calculus.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408)
+
+### D7-393 Quantum Channel Composition (batch 16)
+
+- name: **confirmed** [q] "Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators."
+- description: **confirmed** [q] ":<math>\Phi (\rho)= \Phi_2 \circ \Phi_1 (\rho) = \sum _i \rho (F_i) R_i.</math>" *Sequential composition, in an example; parallel composition is not quoted.*
+- input: **confirmed** [q] "Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators."
+- output: **confirmed** [q] "The total operation is the composition"
+- preserved: **unsupported** *That composites stay CPTP is not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Sequential and parallel composition of CPTP maps; input: Channels; output: Channel; preserved: CPTP; broken: Invertibility
+
+  q: excerpts/wikipedia-quantum-channel.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369381836)
+
+### D7-394 Trace Evaluation (batch 16)
+
+- name: **confirmed** [w] "a '''traced monoidal category''' is a category with some extra structure which gives a reasonable notion of feedback."
+- description: **confirmed** [w] "a '''traced monoidal category''' is a category with some extra structure which gives a reasonable notion of feedback." [n] "The trace is a minor generalization of matrix trace:"
+- input: **confirmed** [w] ":<math>\mathrm{Tr}^U_{X,Y}:\mathbf{C}(X\otimes U,Y\otimes U)\to\mathbf{C}(X,Y)</math>" *A map X (x) U to Y (x) U, traced over U; an endomorphism is the case X = Y.*
+- output: **confirmed** [w] ":<math>\mathrm{Tr}^U_{X,Y}:\mathbf{C}(X\otimes U,Y\otimes U)\to\mathbf{C}(X,Y)</math>"
+- preserved: **confirmed** [w] "* dinaturality in <math>U</math>: for every <math>f:X\otimes U\to Y\otimes U'</math> and <math>g:U'\to U</math>" *Dinaturality is the categorical form of cyclicity; dimension is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Joyal, Street, Verity); description: Trace in traced monoidal category; matrix trace; input: Endomorphism; output: Trace; preserved: Cyclicity; broken: Detail
+
+  w: excerpts/wikipedia-traced-monoidal.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375238551)
+  n: excerpts/nlab-traced-monoidal-category.txt (https://ncatlab.org/nlab/source/traced+monoidal+category)
+
+### D7-395 Marginalization Transformation (batch 16)
+
+- name: **confirmed** [m] "the marginal distribution of either variable"
+- description: **confirmed** [p] "The partial trace of ''ρ'' with respect to the system ''B'', denoted by <math>\rho ^A</math>, is called the reduced state of ''ρ'' on system ''A''." [m] "This can be calculated by summing the [[joint probability]]"
+- input: **confirmed** [m] "Given a known [[joint distribution]] of two '''discrete''' [[random variable]]s"
+- output: **confirmed** [p] "is called the reduced state of ''ρ'' on system ''A''."
+- preserved: **confirmed** [p] "Let ''M'' be an observable on the subsystem ''A'', then the corresponding observable on the composite system is <math>M \otimes I</math>." *The reduced state is fixed by consistency of measurement statistics on A.*
+- broken: **unsupported** *Loss of correlations is not stated.*
+- recalled: name: Standard; description: Partial trace or summing out; input: Joint state; output: Marginal; preserved: Local statistics; broken: Correlations
+
+  p: excerpts/wikipedia-partial-trace.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1352052580)
+  m: excerpts/wikipedia-marginal-distribution.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367682406)
+
+### D7-396 Open System Resource Transducer (batch 16)
+
+- name: **unsupported** *No fetched source for categorical resource theories (the nLab and Wikipedia pages were not served).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Nonstandard name (Coecke, Fritz, Spekkens); description: Resource theories as symmetric monoidal categories; input: Resource theory; output: Convertibility; preserved: Monotones; broken: Free operations
+
+
+### D7-397 Matrix Exponential Transformation (batch 16)
+
+- name: **confirmed** [e] "The exponential map coincides with the [[matrix exponential]] and is given by the ordinary series expansion:"
+- description: **confirmed** [e] "restricts to a [[diffeomorphism]] from some neighborhood of 0 in <math>\mathfrak g</math> to a neighborhood of 1 in <math>G</math>."
+- input: **confirmed** [e] "the exponential map is the restriction of the matrix exponential to the Lie algebra <math>\mathfrak g</math> of <math>G</math>."
+- output: **confirmed** [e] "restricts to a [[diffeomorphism]] from some neighborhood of 0 in <math>\mathfrak g</math> to a neighborhood of 1 in <math>G</math>."
+- preserved: **confirmed** [e] "the map <math>\gamma(t) = \exp(tX)</math> is the unique [[one-parameter subgroup]] of <math>G</math>"
+- broken: **unsupported** *The source states global failure of surjectivity, not of injectivity.*
+- recalled: name: Standard; description: Exponential map; local diffeomorphism at zero; input: Lie algebra element; output: Group element; preserved: One-parameter subgroups; broken: Global injectivity
+
+  e: excerpts/wikipedia-exponential-map-lie.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1356799612)
+
+### D7-398 Tangent Space Differentiation (batch 16)
+
+- name: **confirmed** [l] "If <math>f: G \to H</math> is a [[Lie group homomorphism]], then its differential at the identity element" *The landed name is a gloss for the differential at the identity.*
+- description: **confirmed** [l] "If <math>f: G \to H</math> is a [[Lie group homomorphism]], then its differential at the identity element"
+- input: **confirmed** [l] "If <math>f: G \to H</math> is a [[Lie group homomorphism]]"
+- output: **confirmed** [l] ":<math>df = df_e: \operatorname{Lie}(G) \to \operatorname{Lie}(H)</math>"
+- preserved: **confirmed** [l] "is a [[Lie algebra homomorphism]] (brackets go to brackets)"
+- broken: **confirmed** [l] "For example, the Lie algebras of SO(3) and SU(2) are isomorphic" *Non-isomorphic groups with one Lie algebra, as the fill says of covers.*
+- recalled: name: Standard; description: Differential at identity is a Lie algebra map; input: Lie group homomorphism; output: Lie algebra map; preserved: Bracket; broken: Global topology
+
+  l: excerpts/wikipedia-lie-group-lie-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353739449)
+
+### D7-399 Jordan-Chevalley Decomposition (batch 16)
+
+- name: **confirmed** [j] "the '''Jordan–Chevalley decomposition''', named after [[Camille Jordan]] and [[Claude Chevalley]], expresses a [[linear operator]] in a unique way as the sum of two other linear operators which are simpler to understand."
+- description: **confirmed** [j] "can be written as a polynomial (with coefficients from <math> K </math>) in <math> x </math> with zero constant coefficient." [j] "The commutativity condition on the decomposition yields" [x] "∃ᵉ (n ∈ adjoin K {f}) (s ∈ adjoin K {f}), IsNilpotent n ∧ IsSemisimple s ∧ f = n + s"
+- input: **confirmed** [j] "If <math> K </math> is a [[perfect field]], then every polynomial is a product of separable polynomials" [x] "theorem exists_isNilpotent_isSemisimple [PerfectField K] :"
+- output: **confirmed** [x] "IsNilpotent n ∧ IsSemisimple s ∧ f = n + s"
+- preserved: **confirmed** [j] "there is a unique Jordan-Chevalley decomposition"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Semisimple plus nilpotent, commuting, polynomials in the operator; input: Operator over perfect field; output: Parts; preserved: Commutation, uniqueness; broken: Nothing
+
+  j: excerpts/wikipedia-jordan-chevalley-dec.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376010683)
+  x: excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean)
+
+### D7-400 Root Space Decomposition (batch 16)
+
+- name: **confirmed** [c] "there is a direct sum decomposition of <math>\mathfrak{g}</math> as:"
+- description: **confirmed** [c] "These two properties say that the operators in <math>\operatorname{ad}(\mathfrak h)</math> are simultaneously diagonalizable and that there is a direct sum decomposition of <math>\mathfrak{g}</math> as:"
+- input: **confirmed** [c] "For finite-dimensional [[semisimple Lie algebra]] <math>\mathfrak g</math> over an [[algebraically closed field]] of characteristic 0, a Cartan subalgebra <math>\mathfrak h</math> has the following properties:"
+- output: **confirmed** [c] "Then <math>\Phi</math> is a [[root system]] and, moreover, <math>\mathfrak{g}_0 = \mathfrak h</math>"
+- preserved: **unsupported** *Not stated.*
+- broken: **confirmed** [c] "all Cartan subalgebras are conjugate under [[automorphism]]s of the algebra, and in particular are all [[isomorphism|isomorphic]]."
+- recalled: name: Standard; description: Root spaces under a Cartan subalgebra; input: Semisimple Lie algebra and Cartan; output: Root system; preserved: Isomorphism class; broken: Choice of Cartan
+
+  c: excerpts/wikipedia-root-system-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374197769)
+
+### D7-401 Weyl Character Formula Application (batch 16)
+
+- name: **confirmed** [w] "the '''Weyl character formula''' in [[representation theory]] describes the [[character theory|characters]] of [[irreducible representation]]s of [[compact Lie group]]s in terms of their [[highest weight]]s."
+- description: **confirmed** [w] "Using the Weyl denominator formula (described below), the character formula may be rewritten as" [w] "* <math>W</math> is the [[Weyl group]];" [w] "This is equal to <math>(-1)^{\ell(w)}</math>"
+- input: **confirmed** [w] "* <math>\lambda</math> is the [[highest weight]] of the irreducible representation <math>\pi</math>;"
+- output: **confirmed** [w] "The character of <math>\pi</math> is then the function"
+- preserved: **confirmed** [w] "where <math>m_\mu</math> is the multiplicity of <math>\mu</math>." *The character records the weight multiplicities.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Weyl); description: Alternating sum over Weyl group over Weyl denominator; input: Highest weight; output: Character; preserved: Multiplicities; broken: Nothing
+
+  w: excerpts/wikipedia-weyl-character-formula.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363413194)
 

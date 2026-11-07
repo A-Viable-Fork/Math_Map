@@ -22393,6 +22393,1190 @@
    "sources": {
     "a": "https://arxiv.org/html/2001.07488"
    }
+  },
+  {
+   "id": "D7-377",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "category. Getters (morphisms"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">s -&gt; a</span>",
+     "note": "The usual implementation of getters, per the source.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "degenerate optics for the trivial action on the covariant side."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">s -&gt; a</span>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "category. Getters (morphisms"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "optics, they act only unidirectionally."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-378",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Folds are optics for the action of foldable functors and the trivial"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Folds are optics for the action of foldable functors and the trivial",
+     "note": "Collection into a list, the free monoid; a general monoid is not quoted.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "ltx_font_typewriter\">s -&gt; [a]</span>"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-379",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "In its profunctor representation, each optic is written as a single function that"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is polymorphic over profunctors with a certain algebraic structure. For",
+     "note": "The source cites Pastro and Street and Riley; Clarke and coauthors are the paper's authors.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "to propose a unified definition of optic. This definition"
+      },
+      {
+       "src": "a",
+       "quote": "Pastro and Street (2008)"
+      },
+      {
+       "src": "a",
+       "quote": "Riley (2018)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "The existential form is not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "In its profunctor representation, each optic is written as a single function that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Perhaps surprisingly, many implementations allow the programmer to wrap optics",
+     "more": [
+      {
+       "src": "a",
+       "quote": "to construct composite optics."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "which is based on the isomorphism between lenses (and optics",
+     "note": "An isomorphism, so nothing is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-380",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source names the mezzolens."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-381",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for the operad of wiring diagrams (the nLab page was not served)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-382",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-dagger-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''dagger category''' (also called '''involutive category''' or '''category with involution'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "equipped with an [[Involution (mathematics)|involutive]] [[Contravariant functor|contravariant]] [[endofunctor]] <math>\\dagger</math> which is the identity on [[Object (category theory)|objects]].",
+     "more": [
+      {
+       "src": "d",
+       "quote": "the map <math>f^\\dagger:B \\rightarrow A</math> is just its [[Hermitian adjoint|adjoint]] in the usual sense."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "* for all [[morphism]]s <math>f: A \\to B</math>, there exists its [[Hermitian adjoint|adjoint]] <math>f^\\dagger: B \\to A</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "* for all [[morphism]]s <math>f: A \\to B</math>, there exists its [[Hermitian adjoint|adjoint]] <math>f^\\dagger: B \\to A</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "* for all morphisms <math>f</math>, <math>(f^\\dagger)^\\dagger = f</math>",
+     "more": [
+      {
+       "src": "d",
+       "quote": "<math>(g \\circ f)^\\dagger = f^\\dagger \\circ g^\\dagger: C \\to A</math>"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "there exists its [[Hermitian adjoint|adjoint]] <math>f^\\dagger: B \\to A</math>",
+     "note": "f runs A to B, its dagger B to A."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1319081876"
+   }
+  },
+  {
+   "id": "D7-383",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-completely-positive-map.txt",
+    "q": "excerpts/wikipedia-quantum-channel.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and '''completely positive''' if <math>\\phi</math> is k-positive for all k."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "We then say <math>\\phi</math> is '''k-positive''' if <math>\\textrm{id}_{\\mathbb{C}^{k\\times k}} \\otimes \\phi</math> is a positive map",
+     "more": [
+      {
+       "src": "q",
+       "quote": "Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Let <math>A</math> and <math>B</math> be [[C*-algebra]]s. A linear map <math>\\phi: A\\to B</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and '''completely positive''' if <math>\\phi</math> is k-positive for all k."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is a map between [[C*-algebra]]s that sends positive elements to positive elements.",
+     "note": "Positivity, which positivity of states is a case of."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1273806442",
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369381836"
+   }
+  },
+  {
+   "id": "D7-384",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-categorical-quantum-mechanics.txt",
+    "d": "excerpts/wikipedia-dagger-compact.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "'''dagger compact categories''' (or '''dagger compact closed categories''')"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "It was pioneered in 2004 by [[Samson Abramsky]] and [[Bob Coecke]].",
+     "note": "Per the source dagger compact categories first appeared in Doplicher and Roberts (1989); Abramsky and Coecke pioneered their use for quantum mechanics.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "first appeared in 1989 in the work of  [[Sergio Doplicher]] and John E. Roberts"
+      },
+      {
+       "src": "d",
+       "quote": "* The category '''FdHilb''' of [[Category of finite dimensional Hilbert spaces|finite dimensional Hilbert spaces]] and [[linear maps]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "The primitive objects of study are physical [[Quantum process|processes]], and the different ways these can be composed."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* A [[dagger compact category]] allows one to distinguish between an \"input\" and \"output\" of a process."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "Dagger compact categories can be used to express and verify some fundamental [[quantum computing|quantum information]] protocols, namely: [[quantum teleportation|teleportation]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855",
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370402753"
+   }
+  },
+  {
+   "id": "D7-385",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-categorical-quantum-mechanics.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "|last=Selinger |chapter=Dagger compact closed categories and completely positive maps",
+     "note": "A citation title; the construction is not spelled out."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* Considering only the morphisms that are [[completely positive map]]s, one can also handle [[Mixed state (physics)|mixed state]]s",
+     "note": "Mixed states from completely positive maps; CPM(C) itself is not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "CPM(C) is not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855"
+   }
+  },
+  {
+   "id": "D7-386",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-stinespring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "named after [[W. Forrest Stinespring]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "every completely positive map <math>\\Phi</math> can be \"[[Lifting property|lifted]]\" up to a map of the form <math>V^* (\\cdot) V</math>.",
+     "note": "The source states the Heisenberg form V* pi(a) V; the isometry-then-partial-trace form is its dual, not quoted.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "In particular <math>V^\\ast V = \\Phi(1)</math> holds so that <math>V</math> is an isometry if and only if <math>\\Phi(1)=1</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "represents any [[completely positive map]] on a [[C*-algebra]] ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In particular <math>V^\\ast V = \\Phi(1)</math> holds so that <math>V</math> is an isometry if and only if <math>\\Phi(1)=1</math>."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Thus minimal Stinespring representations are unique [[up to]] a unitary transformation."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345142488"
+   }
+  },
+  {
+   "id": "D7-387",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-gns.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Given a state <math>\\rho</math> of <math>A</math>, there is a <math>*</math>-representation <math>\\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\\xi</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Given a state <math>\\rho</math> of <math>A</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a <math>*</math>-representation <math>\\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\\xi</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "such that <math>\\rho(a)=\\langle \\pi(a) \\xi, \\xi \\rangle</math>"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1343628657"
+   }
+  },
+  {
+   "id": "D7-388",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-categorical-quantum-mechanics.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* Special commutative dagger [[Frobenius algebra]]s model the fact that certain processes yield classical information, that can be cloned or deleted"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* Special commutative dagger [[Frobenius algebra]]s model the fact that certain processes yield classical information, that can be cloned or deleted",
+     "note": "The source pairs dagger commutative Frobenius algebras with orthogonal bases; the fill says orthonormal, the special case.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "* Dagger commutative Frobenius algebras in the category of finite-dimensional Hilbert spaces correspond to [[Orthogonal basis|orthogonal bases]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* Special commutative dagger [[Frobenius algebra]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "certain processes yield classical information, that can be cloned or deleted"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "thus capturing [[classical information channel|classical communication]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855"
+   }
+  },
+  {
+   "id": "D7-389",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source states the spider theorem; spider fusion is in the ZX-calculus page."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-390",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-zx-calculus.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "The '''ZX-calculus''' is a [[Graphical modeling language|graphical language]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "Whenever two Z-spider touch, they can fuse together, and their phases add.",
+     "more": [
+      {
+       "src": "z",
+       "quote": "|Color change"
+      },
+      {
+       "src": "z",
+       "quote": "i.e. the ZX-calculus is [[Soundness|sound]] and [[Completeness (logic)|complete]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "which are represented as [[string diagrams]] called ''ZX-diagrams''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "A given ZX-diagram can be transformed into another ZX-diagram using the rewrite rules of the ZX-calculus if and only if the two diagrams represent the same linear map"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "if and only if the two diagrams represent the same linear map"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408"
+   }
+  },
+  {
+   "id": "D7-391",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-zx-calculus.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "The ''ZW-calculus'' was developed alongside the ZX-calculus"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "It was the first graphical language which had a complete rule-set for an approximately universal set of linear maps between qubits,",
+     "note": "W-nodes are not quoted; the completeness citation is Hadzihasanovic, Ng and Wang (2018), where the fill names Hadzihasanovic alone.",
+     "more": [
+      {
+       "src": "z",
+       "quote": "|last1=Hadzihasanovic |first1=Amar |last2=Ng |first2=Kang Feng |last3=Wang |first3=Quanlong"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408"
+   }
+  },
+  {
+   "id": "D7-392",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-zx-calculus.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "A more recent language is the ''ZH-calculus''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "This adds the ''H-box'' as a generator, that generalizes the Hadamard gate from the ZX-calculus. It can naturally describe quantum circuits involving Toffoli gates.",
+     "note": "Hypergraph states and completeness are not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408"
+   }
+  },
+  {
+   "id": "D7-393",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quantum-channel.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": ":<math>\\Phi (\\rho)= \\Phi_2 \\circ \\Phi_1 (\\rho) = \\sum _i \\rho (F_i) R_i.</math>",
+     "note": "Sequential composition, in an example; parallel composition is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Terminologically, quantum channels are [[completely positive]] (CP) trace-preserving maps between spaces of operators."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "The total operation is the composition"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "That composites stay CPTP is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369381836"
+   }
+  },
+  {
+   "id": "D7-394",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-traced-monoidal.txt",
+    "n": "excerpts/nlab-traced-monoidal-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "a '''traced monoidal category''' is a category with some extra structure which gives a reasonable notion of feedback."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "a '''traced monoidal category''' is a category with some extra structure which gives a reasonable notion of feedback.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "The trace is a minor generalization of matrix trace:"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": ":<math>\\mathrm{Tr}^U_{X,Y}:\\mathbf{C}(X\\otimes U,Y\\otimes U)\\to\\mathbf{C}(X,Y)</math>",
+     "note": "A map X (x) U to Y (x) U, traced over U; an endomorphism is the case X = Y."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": ":<math>\\mathrm{Tr}^U_{X,Y}:\\mathbf{C}(X\\otimes U,Y\\otimes U)\\to\\mathbf{C}(X,Y)</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "* dinaturality in <math>U</math>: for every <math>f:X\\otimes U\\to Y\\otimes U'</math> and <math>g:U'\\to U</math>",
+     "note": "Dinaturality is the categorical form of cyclicity; dimension is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375238551",
+    "n": "https://ncatlab.org/nlab/source/traced+monoidal+category"
+   }
+  },
+  {
+   "id": "D7-395",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-partial-trace.txt",
+    "m": "excerpts/wikipedia-marginal-distribution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "the marginal distribution of either variable"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The partial trace of ''ρ'' with respect to the system ''B'', denoted by <math>\\rho ^A</math>, is called the reduced state of ''ρ'' on system ''A''.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "This can be calculated by summing the [[joint probability]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Given a known [[joint distribution]] of two '''discrete''' [[random variable]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "is called the reduced state of ''ρ'' on system ''A''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Let ''M'' be an observable on the subsystem ''A'', then the corresponding observable on the composite system is <math>M \\otimes I</math>.",
+     "note": "The reduced state is fixed by consistency of measurement statistics on A."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of correlations is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1352052580",
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367682406"
+   }
+  },
+  {
+   "id": "D7-396",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for categorical resource theories (the nLab and Wikipedia pages were not served)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-397",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-exponential-map-lie.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The exponential map coincides with the [[matrix exponential]] and is given by the ordinary series expansion:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "restricts to a [[diffeomorphism]] from some neighborhood of 0 in <math>\\mathfrak g</math> to a neighborhood of 1 in <math>G</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the exponential map is the restriction of the matrix exponential to the Lie algebra <math>\\mathfrak g</math> of <math>G</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "restricts to a [[diffeomorphism]] from some neighborhood of 0 in <math>\\mathfrak g</math> to a neighborhood of 1 in <math>G</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the map <math>\\gamma(t) = \\exp(tX)</math> is the unique [[one-parameter subgroup]] of <math>G</math>"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The source states global failure of surjectivity, not of injectivity."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1356799612"
+   }
+  },
+  {
+   "id": "D7-398",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-lie-group-lie-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "If <math>f: G \\to H</math> is a [[Lie group homomorphism]], then its differential at the identity element",
+     "note": "The landed name is a gloss for the differential at the identity."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "If <math>f: G \\to H</math> is a [[Lie group homomorphism]], then its differential at the identity element"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "If <math>f: G \\to H</math> is a [[Lie group homomorphism]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": ":<math>df = df_e: \\operatorname{Lie}(G) \\to \\operatorname{Lie}(H)</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is a [[Lie algebra homomorphism]] (brackets go to brackets)"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "For example, the Lie algebras of SO(3) and SU(2) are isomorphic",
+     "note": "Non-isomorphic groups with one Lie algebra, as the fill says of covers."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353739449"
+   }
+  },
+  {
+   "id": "D7-399",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "j": "excerpts/wikipedia-jordan-chevalley-dec.txt",
+    "x": "excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "the '''Jordan–Chevalley decomposition''', named after [[Camille Jordan]] and [[Claude Chevalley]], expresses a [[linear operator]] in a unique way as the sum of two other linear operators which are simpler to understand."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "can be written as a polynomial (with coefficients from <math> K </math>) in <math> x </math> with zero constant coefficient.",
+     "more": [
+      {
+       "src": "j",
+       "quote": "The commutativity condition on the decomposition yields"
+      },
+      {
+       "src": "x",
+       "quote": "∃ᵉ (n ∈ adjoin K {f}) (s ∈ adjoin K {f}), IsNilpotent n ∧ IsSemisimple s ∧ f = n + s"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "If <math> K </math> is a [[perfect field]], then every polynomial is a product of separable polynomials",
+     "more": [
+      {
+       "src": "x",
+       "quote": "theorem exists_isNilpotent_isSemisimple [PerfectField K] :"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "IsNilpotent n ∧ IsSemisimple s ∧ f = n + s"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "there is a unique Jordan-Chevalley decomposition"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376010683",
+    "x": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean"
+   }
+  },
+  {
+   "id": "D7-400",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-root-system-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "there is a direct sum decomposition of <math>\\mathfrak{g}</math> as:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "These two properties say that the operators in <math>\\operatorname{ad}(\\mathfrak h)</math> are simultaneously diagonalizable and that there is a direct sum decomposition of <math>\\mathfrak{g}</math> as:"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "For finite-dimensional [[semisimple Lie algebra]] <math>\\mathfrak g</math> over an [[algebraically closed field]] of characteristic 0, a Cartan subalgebra <math>\\mathfrak h</math> has the following properties:"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Then <math>\\Phi</math> is a [[root system]] and, moreover, <math>\\mathfrak{g}_0 = \\mathfrak h</math>"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "all Cartan subalgebras are conjugate under [[automorphism]]s of the algebra, and in particular are all [[isomorphism|isomorphic]]."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374197769"
+   }
+  },
+  {
+   "id": "D7-401",
+   "batch": 16,
+   "why": "Fill review, batch 16: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-weyl-character-formula.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''Weyl character formula''' in [[representation theory]] describes the [[character theory|characters]] of [[irreducible representation]]s of [[compact Lie group]]s in terms of their [[highest weight]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Using the Weyl denominator formula (described below), the character formula may be rewritten as",
+     "more": [
+      {
+       "src": "w",
+       "quote": "* <math>W</math> is the [[Weyl group]];"
+      },
+      {
+       "src": "w",
+       "quote": "This is equal to <math>(-1)^{\\ell(w)}</math>"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "* <math>\\lambda</math> is the [[highest weight]] of the irreducible representation <math>\\pi</math>;"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The character of <math>\\pi</math> is then the function"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "where <math>m_\\mu</math> is the multiplicity of <math>\\mu</math>.",
+     "note": "The character records the weight multiplicities."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1363413194"
+   }
   }
  ]
 }

@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/SpecialFunctions/Exponential.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/Exponential.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: ccf78eb419eed1c6f1172d4e62609d7942f028c9ea037eed54d7b095c80362c0
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- hasStrictFDerivAt_exp_zero (line 159)
+theorem hasStrictFDerivAt_exp_zero : HasStrictFDerivAt exp (1 : 𝔸 →L[𝕂] 𝔸) 0
