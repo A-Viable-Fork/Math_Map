@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 75 of 416 D7 stubs, 0 of 79 homes; 75 entries in 3 batches.
+Reviewed: 100 of 416 D7 stubs, 0 of 79 homes; 100 entries in 4 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (75 entries)
+### D7 stubs (100 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 75 | 0 | 0 | 0 |
-| description | 72 | 3 | 0 | 0 |
-| input | 72 | 3 | 0 | 0 |
-| output | 75 | 0 | 0 | 0 |
-| preserved | 65 | 2 | 0 | 8 |
-| broken | 44 | 3 | 0 | 28 |
-| **all** | 403 | 11 | 0 | 36 |
+| name | 99 | 0 | 0 | 1 |
+| description | 96 | 4 | 0 | 0 |
+| input | 97 | 3 | 0 | 0 |
+| output | 100 | 0 | 0 | 0 |
+| preserved | 86 | 2 | 0 | 12 |
+| broken | 56 | 3 | 0 | 41 |
+| **all** | 534 | 12 | 0 | 54 |
 
 ## 2. Recall against source
 
@@ -31,7 +31,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 1 | 25 | 143 | 2 | 1% |
 | 2 | 25 | 132 | 0 | 0% |
 | 3 | 25 | 139 | 0 | 0% |
-| **all** | 75 | 414 | 2 | 0% |
+| 4 | 25 | 132 | 1 | 1% |
+| **all** | 100 | 546 | 3 | 1% |
 
 ## 3. Second reading of the sample
 
@@ -85,6 +86,20 @@ Every field not confirmed, with the reason.
 - **D7-069 Coreflective Subcategory Localization** (batch 3): *broken* unsupported: "Structure not seen from S" is a gloss no source states.
 - **D7-070 Factorization System Application** (batch 3): *broken* unsupported: "Nothing; it is a decomposition" is not stated by a source.
 - **D7-072 Exact Completion** (batch 3): *description* imprecise: From a category with finite limits (ex/lex), the completion adds quotients of pseudo-equivalence relations, not only of equivalence relations; from a regular category (ex/reg) it adds quotients of equivalence relations. The ex/lex case is a free completion, the ex/reg a completion proper.
+- **D7-076 Pro-Completion** (batch 4): *preserved* unsupported: No fetched source states which limits of C the embedding keeps or that objects of C are cocompact. *broken* unsupported: No fetched source states what the completion loses.
+- **D7-077 Filtered Colimit Construction** (batch 4): *broken* unsupported: Eventual identification is not stated in the fetched text.
+- **D7-079 Sifted Colimit Construction** (batch 4): *broken* unsupported: No source states the identifications made.
+- **D7-080 Initial Object Evaluation** (batch 4): *broken* unsupported: "Nothing" is not stated by a source.
+- **D7-081 Terminal Object Evaluation** (batch 4): *broken* unsupported: "Nothing" is not stated by a source.
+- **D7-084 Additive Category Completion** (batch 4): *preserved* unsupported: Full faithfulness of the embedding is not stated in the fetched source. *broken* unsupported: No source states what the envelope loses.
+- **D7-085 Preadditive Enrichment** (batch 4): *broken* unsupported: The free case is not checked.
+- **D7-086 Abelianization of a Category** (batch 4): *name* unsupported: "Abelianization of a Category" is not a name any fetched source uses for these constructions. *description* imprecise: An exact category embeds in an abelian one by left-exact functors to abelian groups. The Freyd-Mitchell theorem the fill names embeds an abelian category (small) in modules over a ring; it does not abelianize an additive or exact one. Freyd's abelian envelope of an additive category is not checked. *broken* unsupported: No source states that kernels and cokernels are added freely.
+- **D7-087 Krull-Schmidt Decomposition** (batch 4): *broken* unsupported: Non-canonicity of the splitting maps is not stated.
+- **D7-088 Split Epimorphism Reduction** (batch 4): *broken* unsupported: "Nothing" is not stated by a source.
+- **D7-089 Retract Construction** (batch 4): *preserved* unsupported: Closure of projectivity, injectivity and finiteness under retracts is not stated in the fetched source. *broken* unsupported: No source states what r kills.
+- **D7-090 Groupoidification** (batch 4): *preserved* unsupported: Connected components and pi_1 of the nerve are not stated in the fetched sources.
+- **D7-096 Quasivariety Generation** (batch 4): *broken* unsupported: The source does not say that homomorphic images may leave a quasivariety (it gives cancellative semigroups as a quasivariety without the argument).
+- **D7-098 Subalgebra Generation** (batch 4): *broken* unsupported: No source states what is not reached.
 
 ## 6. Receipts
 
@@ -1042,4 +1057,311 @@ actions defining an optic"
 - recalled: name: Standard; description: Free completion under filtered colimits; objects of C become compact; input: A category; output: Ind(C) with fully faithful embedding; preserved: Finite colimits of C; compactness; broken: Nothing removed
 
   i: excerpts/nlab-ind-object.txt (https://ncatlab.org/nlab/source/ind-object)
+
+### D7-076 Pro-Completion (batch 4)
+
+- name: **confirmed** [p] "A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$."
+- description: **confirmed** [p] "A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$." *The duality with Ind and the profinite-groups example are not checked.*
+- input: **confirmed** [p] "A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$."
+- output: **confirmed** [p] "The *category of pro-objects of $\mathcal{C}$*, according to [Grothendieck 1960, Section 2](#Grothendieck1960), is the [[full subcategory]]"
+- preserved: **unsupported** *No fetched source states which limits of C the embedding keeps or that objects of C are cocompact.*
+- broken: **unsupported** *No fetched source states what the completion loses.*
+- recalled: name: Standard; description: Free completion under cofiltered limits, dual of Ind; profinite groups as pro-finite groups; input: A category; output: Pro(C) with embedding; preserved: Finite limits; cocompact objects; broken: Nothing removed
+
+  p: excerpts/nlab-pro-object.txt (https://ncatlab.org/nlab/source/pro-object)
+
+### D7-077 Filtered Colimit Construction (batch 4)
+
+- name: **confirmed** [f] "So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]"
+- description: **confirmed** [f] "The following is the crucial property of filtered colimits: that they [[commutativity of limits with colimits|commute]] with [[finite limits]]." *Directed unions and stalks are not checked.*
+- input: **confirmed** [f] "So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]"
+- output: **confirmed** [f] "So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]"
+- preserved: **confirmed** [f] "The following is the crucial property of filtered colimits: that they [[commutativity of limits with colimits|commute]] with [[finite limits]]." *Locally finitely presentable categories and finitely presentable structure are not checked.*
+- broken: **unsupported** *Eventual identification is not stated in the fetched text.*
+- recalled: name: Standard; description: Colimit of a filtered diagram; commutes with finite limits in Set; input: Filtered diagram; output: Colimit; preserved: Finite limits commute in Set; broken: Eventual identification
+
+  f: excerpts/nlab-filtered-colimit.txt (https://ncatlab.org/nlab/source/filtered+colimit)
+
+### D7-078 Cofiltered Limit Construction (batch 4)
+
+- name: **confirmed** [f] "a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a"
+- description: **confirmed** [f] "a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a" *Inverse limits are the source's leading case; profinite completions and formal neighbourhoods are not checked.*
+- input: **confirmed** [f] "a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a"
+- output: **confirmed** [i] "every inverse system has an inverse limit, which can be constructed in an elementary manner as a subset of the product of the sets forming the inverse system."
+- preserved: **confirmed** [i] "every inverse system has an inverse limit, which can be constructed in an elementary manner as a subset of the product of the sets forming the inverse system." *Compatible families: the subset of the product.*
+- broken: **confirmed** [i] "The inverse limit of any inverse system of non-empty finite sets is non-empty." *Finiteness (compactness, via Tychonoff in the source) is what guarantees nonemptiness.*
+- recalled: name: Standard; description: Limit over a cofiltered diagram: inverse limits; input: Cofiltered diagram; output: Limit; preserved: Compatible families; broken: Can be empty for nonempty sets; nonempty for finite or compact
+
+  f: excerpts/nlab-filtered-colimit.txt (https://ncatlab.org/nlab/source/filtered+colimit)
+  i: excerpts/wikipedia-inverse-limit.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1362961726)
+
+### D7-079 Sifted Colimit Construction (batch 4)
+
+- name: **confirmed** [s] "A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \to C$ where $D$ is a [[sifted category]]"
+- description: **confirmed** [s] "In fact, sifted colimits can &quot;almost&quot; be characterized as combinations of [[filtered colimits]] and reflexive coequalizers." *"Diagonal is final" is not quoted.*
+- input: **confirmed** [s] "A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \to C$ where $D$ is a [[sifted category]]"
+- output: **confirmed** [s] "A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \to C$ where $D$ is a [[sifted category]]"
+- preserved: **confirmed** [s] "Such colimits [[limits commuting with colimits|commute]] with finite [[products]] in [[Set]], by definition." *Closure of models of algebraic theories is not checked.*
+- broken: **unsupported** *No source states the identifications made.*
+- recalled: name: Standard; description: Colimit over a sifted category; filtered colimits and reflexive coequalizers are sifted; input: Sifted diagram; output: Colimit; preserved: Commutes with finite products in Set; broken: Identifications
+
+  s: excerpts/nlab-sifted-colimit.txt (https://ncatlab.org/nlab/source/sifted+colimit)
+
+### D7-080 Initial Object Evaluation (batch 4)
+
+- name: **confirmed** [i] "An initial object, if it exists, is unique up to unique [[isomorphism]], so that we may speak of [[the]] initial object."
+- description: **confirmed** [i] "By definition, an initial object is equipped with a universal [[cocone]] under the unique functor $\emptyset\to C$ from the [[empty category]]."
+- input: **confirmed** [i] "By definition, an initial object is equipped with a universal [[cocone]] under the unique functor $\emptyset\to C$ from the [[empty category]]."
+- output: **confirmed** [i] "if $I$ is initial, the unique morphisms $!: I \to x$ form a cone"
+- preserved: **confirmed** [i] "An initial object, if it exists, is unique up to unique [[isomorphism]], so that we may speak of [[the]] initial object."
+- broken: **unsupported** *"Nothing" is not stated by a source.*
+- recalled: name: Standard; description: Unique map to every object; empty colimit; input: A category; output: Initial object; preserved: Unique up to unique isomorphism; broken: Nothing
+
+  i: excerpts/nlab-initial-object.txt (https://ncatlab.org/nlab/source/initial+object)
+
+### D7-081 Terminal Object Evaluation (batch 4)
+
+- name: **confirmed** [t] "A **terminal object** in a [[category]] $C$ is an [[object]] $1$ of $C$ satisfying the following [[universal property]]:"
+- description: **confirmed** [t] "for every object $x$ of $C$, there exists a unique [[morphism]] $!:x\to 1$." *"Empty limit" and global elements are not quoted.*
+- input: **confirmed** [t] "A **terminal object** in a [[category]] $C$ is an [[object]] $1$ of $C$"
+- output: **confirmed** [t] "for every object $x$ of $C$, there exists a unique [[morphism]] $!:x\to 1$."
+- preserved: **confirmed** [t] "The terminal object of any category, if it exists, is unique up to unique [[isomorphism]]."
+- broken: **unsupported** *"Nothing" is not stated by a source.*
+- recalled: name: Standard; description: Unique map from every object; empty limit; global elements; input: A category; output: Terminal object; preserved: Unique up to unique isomorphism; broken: Nothing
+
+  t: excerpts/nlab-terminal-object.txt (https://ncatlab.org/nlab/source/terminal+object)
+
+### D7-082 Zero Object Reduction (batch 4)
+
+- name: **confirmed** [z] "a **zero object**, **null object**, or **biterminator** if it is both an [[initial object]] and a [[terminal object]]."
+- description: **confirmed** [z] "there is always a canonical morphism from any object $A$ to any other object $B$ called the _[[zero morphism]]_" *Kernels and cokernels are not quoted.*
+- input: **confirmed** [z] "In a category with a zero object 0"
+- output: **confirmed** [z] "there is always a canonical morphism from any object $A$ to any other object $B$ called the _[[zero morphism]]_"
+- preserved: **confirmed** [z] "A category with a zero object is sometimes called a _[[pointed category]]_." *Additive structure is not implied by a zero object; the pointed part is quoted.*
+- broken: **confirmed** [z] "a **zero object**, **null object**, or **biterminator** if it is both an [[initial object]] and a [[terminal object]]."
+- recalled: name: Standard; description: Both initial and terminal; zero morphisms; input: A category with zero object; output: Zero morphisms; preserved: Pointedness; broken: Initial and terminal identified
+
+  z: excerpts/nlab-zero-object.txt (https://ncatlab.org/nlab/source/zero+object)
+
+### D7-083 Biproduct Construction (batch 4)
+
+- name: **confirmed** [b] "A _biproduct_ in a [[category]] $\mathcal{C}$ is an operation that is both a [[product]] and a [[coproduct]], in a compatible way."
+- description: **confirmed** [b] "This object is often denoted $c_1 \oplus c_2$, alluding to the [[direct sum]] (which is often an example)."
+- input: **confirmed** [b] "A _biproduct_ in a [[category]] $\mathcal{C}$ is an operation that is both a [[product]] and a [[coproduct]], in a compatible way." *The source does not require a preadditive category for the definition.*
+- output: **confirmed** [b] "This object is often denoted $c_1 \oplus c_2$, alluding to the [[direct sum]] (which is often an example)."
+- preserved: **confirmed** [b] "Morphisms between finite biproducts are encoded in a [[matrix calculus]]."
+- broken: **confirmed** [b] "is an [[isomorphism]], then the isomorphic objects $c_1 \times c_2$ and $c_1 \sqcup c_2$ are called [[generalized the|the]] __biproduct__"
+- recalled: name: Standard; description: Product and coproduct at once, with compatible maps; direct sum; input: Objects in a preadditive category; output: Biproduct; preserved: Matrix calculus; broken: Distinction of product and coproduct
+
+  b: excerpts/nlab-biproduct.txt (https://ncatlab.org/nlab/source/biproduct)
+
+### D7-084 Additive Category Completion (batch 4)
+
+- name: **confirmed** [a] "The additive envelope of an [[Ab-enriched category]] $A$ is defined by taking the objects as formal direct sums of objects in $A$"
+- description: **confirmed** [a] "and morphisms as matrices of coefficients, giving an [[additive category]].  This is a universal construction."
+- input: **confirmed** [a] "The additive envelope of an [[Ab-enriched category]] $A$"
+- output: **confirmed** [a] "and morphisms as matrices of coefficients, giving an [[additive category]]."
+- preserved: **unsupported** *Full faithfulness of the embedding is not stated in the fetched source.*
+- broken: **unsupported** *No source states what the envelope loses.*
+- recalled: name: Standard (additive envelope); description: Matrix category freely adding finite biproducts; input: Preadditive category; output: Additive category; preserved: Full faithfulness; broken: Nothing removed
+
+  a: excerpts/nlab-additive-envelope.txt (https://ncatlab.org/nlab/source/additive+envelope)
+
+### D7-085 Preadditive Enrichment (batch 4)
+
+- name: **confirmed** [a] "An _$Ab$-enriched category_  (or, if small, _ringoid_) is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]]"
+- description: **confirmed** [a] "An _$Ab$-enriched category_  (or, if small, _ringoid_) is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]]" *The free preadditive category Z[C] is not checked.*
+- input: **confirmed** [a] "is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]] with its usual [[tensor product]]."
+- output: **confirmed** [a] "Sometimes they are called [[pre-additive category|pre-additive categories]]"
+- preserved: **confirmed** [a] "is bilinear. A __ringoid__ is a small $Ab$-enriched category."
+- broken: **unsupported** *The free case is not checked.*
+- recalled: name: Standard (Ab-enrichment); description: Hom-sets abelian groups, bilinear composition; free preadditive category; input: A category; output: Preadditive category; preserved: Composition; broken: Morphisms become formal combinations in the free case
+
+  a: excerpts/nlab-ab-enriched-category.txt (https://ncatlab.org/nlab/source/Ab-enriched+category)
+
+### D7-086 Abelianization of a Category (batch 4)
+
+- name: **unsupported** *"Abelianization of a Category" is not a name any fetched source uses for these constructions.*
+- description: **imprecise** [e] "Conversely, if '''E''' is any exact category, we can take '''A''' to be the category of [[exact functor|left-exact functor]]s from '''E''' into the category of [[abelian group]]s" [f] "Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor to the category $R$[[Mod]] for some [[ring]] $R$." *An exact category embeds in an abelian one by left-exact functors to abelian groups. The Freyd-Mitchell theorem the fill names embeds an abelian category (small) in modules over a ring; it does not abelianize an additive or exact one. Freyd's abelian envelope of an additive category is not checked.* (recall contradicted)
+- input: **confirmed** [e] "Conversely, if '''E''' is any exact category" *The exact case is checked; the additive case is not.*
+- output: **confirmed** [e] "which is itself abelian and in which '''E''' is a natural subcatego"
+- preserved: **confirmed** [f] "Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor"
+- broken: **unsupported** *No source states that kernels and cokernels are added freely.*
+- recalled: name: Nonstandard name; Freyd's abelian envelope and the Freyd-Mitchell embedding; description: Embed an additive or exact category in an abelian one; input: Additive or exact category; output: Abelian category; preserved: Exactness, full faithfulness; broken: Nothing removed
+
+  f: excerpts/nlab-freyd-mitchell-embedding-theorem.txt (https://ncatlab.org/nlab/source/Freyd-Mitchell+embedding+theorem)
+  e: excerpts/wikipedia-exact-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1313565396)
+
+### D7-087 Krull-Schmidt Decomposition (batch 4)
+
+- name: **confirmed** [k] "the '''Krull–Schmidt theorem''' states that a [[group (mathematics)|group]] subjected to certain [[finite set|finiteness]] conditions"
+- description: **confirmed** [k] "Up to a permutation, the indecomposable components in such a direct sum are uniquely determined up to isomorphism." [k] "A module is '''strongly indecomposable''' if its ring of endomorphisms is local."
+- input: **confirmed** [k] "of finite [[Length of a module|length]]), then <math>E</math> is a [[direct sum of modules|direct sum]] of [[indecomposable module]]s."
+- output: **confirmed** [k] "of finite [[Length of a module|length]]), then <math>E</math> is a [[direct sum of modules|direct sum]] of [[indecomposable module]]s."
+- preserved: **confirmed** [k] "Up to a permutation, the indecomposable components in such a direct sum are uniquely determined up to isomorphism."
+- broken: **unsupported** *Non-canonicity of the splitting maps is not stated.*
+- recalled: name: Standard (Krull-Schmidt theorem); description: Unique decomposition into indecomposables with local endomorphism rings; input: Object of finite length or in a Krull-Schmidt category; output: Indecomposable summands; preserved: Isomorphism classes and multiplicities; broken: The splitting is not canonical
+
+  k: excerpts/wikipedia-krull-schmidt-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380868315)
+
+### D7-088 Split Epimorphism Reduction (batch 4)
+
+- name: **confirmed** [s] "A **split epimorphism** in a [[category]] $C$ is a [[morphism]] $e\colon A \to B$ in $C$ such that there exists a morphism $s\colon B \to A$"
+- description: **confirmed** [s] "* $B$ is a __[[retract]]__ of $A$,"
+- input: **confirmed** [s] "* $s$ is a __[[section]]__ of $e$,"
+- output: **confirmed** [s] "* $B$ is a __[[retract]]__ of $A$," *The additive decomposition X = Y (+) ker p is not checked.*
+- preserved: **confirmed** [s] "it is also possible to define a split epimorphism as an __absolute epimorphism__: a morphism such that for every [[functor]] $F$ out of $C$, $F(e)$ is an [[epimorphism]]."
+- broken: **unsupported** *"Nothing" is not stated by a source.*
+- recalled: name: Standard; description: Epimorphism with a section; codomain a retract; input: Split epi with section; output: Retract data; preserved: Every functor preserves split epis; broken: Nothing
+
+  s: excerpts/nlab-split-epimorphism.txt (https://ncatlab.org/nlab/source/split+epimorphism)
+
+### D7-089 Retract Construction (batch 4)
+
+- name: **confirmed** [r] "is called a **retract** of an object $B$ if there are [[morphisms]] $i\colon A\to B$ and $r \colon B\to A$ such that $r \circ i = id_A$."
+- description: **confirmed** [r] "The entire situation is said to be a _splitting of  the [[idempotent]]_"
+- input: **confirmed** [r] "is called a **retract** of an object $B$ if there are [[morphisms]] $i\colon A\to B$ and $r \colon B\to A$ such that $r \circ i = id_A$."
+- output: **confirmed** [r] "In this case $r$ is called a **retraction** of $B$ onto $A$."
+- preserved: **unsupported** *Closure of projectivity, injectivity and finiteness under retracts is not stated in the fetched source.*
+- broken: **unsupported** *No source states what r kills.*
+- recalled: name: Standard; description: r i = id; split idempotent; input: Maps i, r or idempotent; output: Retract; preserved: Properties closed under retracts (projective); broken: Complement part
+
+  r: excerpts/nlab-retract.txt (https://ncatlab.org/nlab/source/retract)
+
+### D7-090 Groupoidification (batch 4)
+
+- name: **confirmed** [g] "__Groupoidification__ is a program based on the observation that the operation of pull-pushing bundles of [[groupoid|groupoids]]" *The name is Baez's program; the free groupoid reading is the fill's first.*
+- description: **confirmed** [f] "given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms" [f] "On the construction of free groupoids on a category ([[localization]] at all morphisms):"
+- input: **confirmed** [f] "there is a free groupoid construction on ([[small category|small]]) [[strict categories]]"
+- output: **confirmed** [f] "given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms"
+- preserved: **unsupported** *Connected components and pi_1 of the nerve are not stated in the fetched sources.*
+- broken: **confirmed** [f] "given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms" *Every morphism becomes invertible.*
+- recalled: name: Two meanings: free groupoid (localization at all maps); Baez-Dolan groupoidification; description: Invert all morphisms; or spans of groupoids; input: A category; output: Groupoid; preserved: pi_1 of the nerve; broken: Direction
+
+  f: excerpts/nlab-free-groupoid.txt (https://ncatlab.org/nlab/source/free+groupoid)
+  g: excerpts/nlab-groupoidification.txt (https://ncatlab.org/nlab/source/groupoidification)
+
+### D7-091 Free Algebra Generation (batch 4)
+
+- name: **confirmed** [f] "Informally, a free object over a [[Set (mathematics)|set]] ''A'' can be thought of as being a "generic" [[algebraic structure]] over ''A''"
+- description: **confirmed** [f] "the only equations that hold between elements of the free object are those that follow from the defining axioms of the algebraic structure." [f] "{{Short description|Left adjoint to a forgetful functor to sets}}"
+- input: **confirmed** [f] "The concept is a part of [[universal algebra]], in the sense that it relates to all types of algebraic structure (with [[finitary]] operations)."
+- output: **confirmed** [f] "Informally, a free object over a [[Set (mathematics)|set]] ''A'' can be thought of as being a "generic" [[algebraic structure]] over ''A''"
+- preserved: **confirmed** [f] "the universal property implies]] every map between two sets induces a unique morphism between the free objects built on them"
+- broken: **confirmed** [f] "the only equations that hold between elements of the free object are those that follow from the defining axioms of the algebraic structure."
+- recalled: name: Standard; description: Terms modulo equations; left adjoint to forgetful; input: Generators and a variety; output: Free algebra; preserved: Universal property; broken: Non-forced relations
+
+  f: excerpts/wikipedia-free-object.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375074174)
+
+### D7-092 Term Algebra Construction (batch 4)
+
+- name: **confirmed** [t] "a '''term algebra''' is a freely generated [[algebraic structure]] over a given [[Signature (logic)|signature]]."
+- description: **confirmed** [t] "is the set of all well-formed [[String (computer science)|strings]] that can be constructed u"
+- input: **confirmed** [t] "Let <math>\tau</math> be a type, and let <math>X</math> be a non-empty set of symbols, representing the variable symbols."
+- output: **confirmed** [t] "a '''term algebra''' is a freely generated [[algebraic structure]] over a given [[Signature (logic)|signature]]."
+- preserved: **confirmed** [t] "a term algebra is the [[initial object]] for the [[F-algebra|category of all ''X''-generated algebras of the same signature]]"
+- broken: **confirmed** [t] "which is (absolutely freely) " *No equations are imposed beyond the syntax.*
+- recalled: name: Standard; description: All terms over a signature, no equations; absolutely free; input: Signature and variables; output: Term algebra; preserved: Initiality with no variables; broken: Semantic identifications
+
+  t: excerpts/wikipedia-term-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1325669145)
+
+### D7-093 Signature Morphism Application (batch 4)
+
+- name: **confirmed** [i] "The notion of '''institution''' was created by [[Joseph Goguen]] and [[Rod Burstall]] in the late 1970s" *The attribution is the source's.*
+- description: **confirmed** [i] "it is assumed that signature morphisms lead to translations of sentences and models in a way that satisfaction is preserved." *"Symbols into terms" is a special case (derived signature morphisms), not checked.*
+- input: **confirmed** [i] "'''signature morphisms''' allow to extend signatures, change notation, and so on."
+- output: **confirmed** [i] "models are translated (or better: reduced) '''against''' signature morphisms."
+- preserved: **confirmed** [i] "satisfaction condition expresses that truth is invariant under change of notation"
+- broken: **confirmed** [i] "models are translated (or better: reduced) '''against''' signature morphisms." *The reduct forgets what the target signature adds.*
+- recalled: name: Standard (institutions, Goguen and Burstall); description: Translation of sentences and reduct of models; input: Signature morphism; output: Sentence translation and reduct functor; preserved: Satisfaction condition; broken: Extra operations
+
+  i: excerpts/wikipedia-institution-computer-science.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1305700908)
+
+### D7-094 Equational Class Reduction (batch 4)
+
+- name: **confirmed** [v] "a '''variety of algebras''' or '''equational class''' is the [[class (set theory)|class]] of all [[algebraic structure]]s of a given [[signature (logic)|signature]] satisfying a given set of"
+- description: **confirmed** [v] "a '''variety of algebras''' or '''equational class''' is the [[class (set theory)|class]] of all [[algebraic structure]]s of a given [[signature (logic)|signature]] satisfying a given set of" *"Reduction" is not a standard name; the second reading, a smaller equivalent set of equations, is not checked.*
+- input: **confirmed** [v] "Given a class of algebraic structures of the same signature"
+- output: **confirmed** [v] "is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products."
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+- broken: **confirmed** [v] "the product of fields is not a field, so fields do not form a variety."
+- recalled: name: Nonstandard name; equational class generated; description: Variety generated by a class; input: Class of algebras; output: Variety; preserved: Equational theory; broken: Non-equational properties
+
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-095 Variety Generation (batch 4)
+
+- name: **confirmed** [v] "[[Garrett Birkhoff]] proved that a class of algebraic structures of the same signature is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products." *The attribution to Birkhoff is the source's.*
+- description: **confirmed** [v] "[[Garrett Birkhoff]] proved that a class of algebraic structures of the same signature is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products."
+- input: **confirmed** [v] "Given a class of algebraic structures of the same signature"
+- output: **confirmed** [v] "is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products."
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+- broken: **confirmed** [v] "the product of fields is not a field, so fields do not form a variety."
+- recalled: name: Standard (Birkhoff HSP); description: Variety = HSP(K); varieties are equational classes; input: Class of algebras; output: Variety; preserved: Equations of K; broken: Non-equational properties
+
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-096 Quasivariety Generation (batch 4)
+
+- name: **confirmed** [q] "a '''quasivariety''' is a class of [[algebraic structure]]s generalizing the notion of [[variety (universal algebra)|variety]]"
+- description: **confirmed** [q] "# ''K'' contains a trivial algebra and is closed under isomorphisms, subalgebras, direct products, and [[ultraproduct]]s." [q] "# ''K'' is the class of all [[model (logic)|model]]s of a set of [[quasi-identity|quasi-identities]]" *The source adds that K contains a trivial algebra.*
+- input: **confirmed** [q] "A '''quasivariety''' is a class ''K'' of algebras with a specified [[signature (logic)|signature]]"
+- output: **confirmed** [q] "# ''K'' contains a trivial algebra and is closed under isomorphisms, subalgebras, direct products, and [[ultraproduct]]s."
+- preserved: **confirmed** [q] "# ''K'' is the class of all [[model (logic)|model]]s of a set of [[quasi-identity|quasi-identities]]"
+- broken: **unsupported** *The source does not say that homomorphic images may leave a quasivariety (it gives cancellative semigroups as a quasivariety without the argument).*
+- recalled: name: Standard (Mal'cev); description: Closure under I, S, P, P_U; quasi-identities; input: Class of algebras; output: Quasivariety; preserved: Quasi-identities; broken: Homomorphic images
+
+  q: excerpts/wikipedia-quasivariety.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1186598336)
+
+### D7-097 Homomorphic Image Construction (batch 4)
+
+- name: **confirmed** [h] "In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\!\sim</math>; this fact is one of the [[isomorphism theorem]]s."
+- description: **confirmed** [h] "In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\!\sim</math>; this fact is one of the [[isomorphism theorem]]s."
+- input: **confirmed** [h] "Any homomorphism <math>f: X \to Y</math> defines an [[equivalence relation]]"
+- output: **confirmed** [h] "In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\!\sim</math>"
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+- broken: **confirmed** [h] "The relation <math>\sim</math> is called the '''kernel''' of <math>f</math>."
+- recalled: name: Standard; description: Image of a homomorphism, quotient by kernel; input: Algebra and surjective homomorphism; output: Quotient algebra; preserved: Identities; broken: Collapsed elements
+
+  h: excerpts/wikipedia-homomorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381551549)
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-098 Subalgebra Generation (batch 4)
+
+- name: **confirmed** [s] "In [[universal algebra]], a '''subalgebra''' of an [[structure (mathematical logic)|algebra]] ''A'' is a [[subset]] ''S'' of ''A''"
+- description: **confirmed** [s] "then the only thing that needs to be checked is that ''S'' is [[closure (mathematics)|''closed'']] under the operations." *The smallest such subalgebra is not quoted.*
+- input: **confirmed** [s] "In [[universal algebra]], a '''subalgebra''' of an [[structure (mathematical logic)|algebra]] ''A'' is a [[subset]] ''S'' of ''A''"
+- output: **confirmed** [s] "that also has the structure of an algebra of the same type when the algebraic operations are restricted to ''S''."
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+- broken: **unsupported** *No source states what is not reached.*
+- recalled: name: Standard; description: Smallest subalgebra containing S; input: Algebra and subset; output: Generated subalgebra; preserved: Identities; broken: Unreached elements
+
+  s: excerpts/wikipedia-subalgebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1328384742)
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-099 Direct Product Construction (batch 4)
+
+- name: **confirmed** [d] "== Direct product in universal algebra =="
+- description: **confirmed** [d] "its interpretation <math>f^{\mathbf{A}}</math> in <math>\mathbf{A}</math> is defined componentwise"
+- input: **confirmed** [d] "== Direct product in universal algebra =="
+- output: **confirmed** [d] "its interpretation <math>f^{\mathbf{A}}</math> in <math>\mathbf{A}</math> is defined componentwise"
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+- broken: **confirmed** [d] "is not because the nonzero element <math>(1,0)</math> does not have a [[multiplicative inverse]]." [v] "the product of fields is not a field, so fields do not form a variety."
+- recalled: name: Standard; description: Cartesian product, componentwise operations; input: Family of algebras; output: Product algebra; preserved: Identities; broken: Field property, no zero divisors
+
+  d: excerpts/wikipedia-direct-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376674288)
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-100 Subdirect Product Construction (batch 4)
+
+- name: **confirmed** [s] "a '''subdirect product''' is a [[subalgebra]] of a [[direct product]] that depends fully on all its factors" *Introduced by Birkhoff (1944), per the source.*
+- description: **confirmed** [s] "such that every induced projection (the composite ''p<sub>j</sub>s'': ''A'' → ''A<sub>j</sub>'' of a projection"
+- input: **confirmed** [s] "A '''subdirect product''' is a [[subalgebra]] (in the sense of [[universal algebra]]) ''A'' of a [[direct product]]"
+- output: **confirmed** [s] "A '''subdirect product''' is a [[subalgebra]] (in the sense of [[universal algebra]]) ''A'' of a [[direct product]]"
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions." *Surjectivity onto each factor is the definition.*
+- broken: **confirmed** [s] "without however necessarily being the whole direct product."
+- recalled: name: Standard (Birkhoff); description: Subalgebra of a product projecting onto each factor; input: Family and subalgebra; output: Subdirect product; preserved: Identities; broken: Full product
+
+  s: excerpts/wikipedia-subdirect-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024)
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
 

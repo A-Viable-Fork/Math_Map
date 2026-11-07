@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, groupoidification (page source)
+URL: https://ncatlab.org/nlab/source/groupoidification
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 181d2a8bacb576e18361f1d8479b9d0e515e945231e4640ef88c2888f3b33d64
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+__Groupoidification__ is a program based on the observation that the operation of pull-pushing bundles of [[groupoid|groupoids]]

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, filtered colimit (page source)
+URL: https://ncatlab.org/nlab/source/filtered+colimit
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a728802e6d6d9d90bb0a1c5e0c3c04f6882f2cf4751083149cb02ac44f85d7e8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]
+
+The following is the crucial property of filtered colimits: that they [[commutativity of limits with colimits|commute]] with [[finite limits]].
+
+a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a

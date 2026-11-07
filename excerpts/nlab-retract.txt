@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, retract (page source)
+URL: https://ncatlab.org/nlab/source/retract
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 22bf238d3d3a1230a728575a2fdd8f74cf2c09b6a2b97b11f07080b54d9fd037
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is called a **retract** of an object $B$ if there are [[morphisms]] $i\colon A\to B$ and $r \colon B\to A$ such that $r \circ i = id_A$.
+
+The entire situation is said to be a _splitting of  the [[idempotent]]_
+
+In this case $r$ is called a **retraction** of $B$ onto $A$.

@@ -206,6 +206,11 @@ const CORRECTIONS = [
     reason: "Fill review, batch 3: description graded imprecise. The ex/lex completion adds quotients of pseudo-equivalence relations, not only of equivalence relations.",
     receipts: [R("excerpts/nlab-regular-and-exact-completions.txt", "we take the objects of $C_{ex}$ to be the [[pseudo-equivalence relations]] in $C$", "description"),
       R("excerpts/nlab-regular-and-exact-completions.txt", "so the left adjoint can properly be called a [[completion]], while in the first two cases, the 2-monad is only [[lax-idempotent monad|lax-idempotent]], so the left adjoint should technically be called a [[free completion]].", "description")] },
+  { id: "D7-086", name: "Abelianization of a Category",
+    fields: { description: "Embeds an exact category (Quillen) in an abelian one: the category of left-exact functors from it to abelian groups, in which it sits as a full subcategory. The Freyd-Mitchell theorem is a different statement: a small abelian category embeds fully, faithfully and exactly in modules over a ring. Freyd's abelian envelope of an additive category is not checked here." },
+    reason: "Fill review, batch 4: description graded imprecise. The Freyd-Mitchell embedding the landed fill names takes an abelian category to modules; it does not abelianize an additive or exact one.",
+    receipts: [R("excerpts/wikipedia-exact-category.txt", "Conversely, if '''E''' is any exact category, we can take '''A''' to be the category of [[exact functor|left-exact functor]]s from '''E''' into the category of [[abelian group]]s", "description"),
+      R("excerpts/nlab-freyd-mitchell-embedding-theorem.txt", "Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor to the category $R$[[Mod]] for some [[ring]] $R$.", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

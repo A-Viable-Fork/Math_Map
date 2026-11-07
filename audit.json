@@ -8497,6 +8497,1168 @@
    "sources": {
     "i": "https://ncatlab.org/nlab/source/ind-object"
    }
+  },
+  {
+   "id": "D7-076",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-pro-object.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$.",
+     "note": "The duality with Ind and the profinite-groups example are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The *category of pro-objects of $\\mathcal{C}$*, according to [Grothendieck 1960, Section 2](#Grothendieck1960), is the [[full subcategory]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states which limits of C the embedding keeps or that objects of C are cocompact."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source states what the completion loses."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/pro-object"
+   }
+  },
+  {
+   "id": "D7-077",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-filtered-colimit.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The following is the crucial property of filtered colimits: that they [[commutativity of limits with colimits|commute]] with [[finite limits]].",
+     "note": "Directed unions and stalks are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "So, a _filtered colimit_ is a [[colimit]] over a [[diagram]] from a [[filtered category]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The following is the crucial property of filtered colimits: that they [[commutativity of limits with colimits|commute]] with [[finite limits]].",
+     "note": "Locally finitely presentable categories and finitely presentable structure are not checked."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Eventual identification is not stated in the fetched text."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/filtered+colimit"
+   }
+  },
+  {
+   "id": "D7-078",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-filtered-colimit.txt",
+    "i": "excerpts/wikipedia-inverse-limit.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a",
+     "note": "Inverse limits are the source's leading case; profinite completions and formal neighbourhoods are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "a _cofiltered limit_ (sometimes called a filtered limit) is a [[limit]] over a [[diagram]] from a"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "every inverse system has an inverse limit, which can be constructed in an elementary manner as a subset of the product of the sets forming the inverse system."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "every inverse system has an inverse limit, which can be constructed in an elementary manner as a subset of the product of the sets forming the inverse system.",
+     "note": "Compatible families: the subset of the product."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The inverse limit of any inverse system of non-empty finite sets is non-empty.",
+     "note": "Finiteness (compactness, via Tychonoff in the source) is what guarantees nonemptiness."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/filtered+colimit",
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1362961726"
+   }
+  },
+  {
+   "id": "D7-079",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-sifted-colimit.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \\to C$ where $D$ is a [[sifted category]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In fact, sifted colimits can &quot;almost&quot; be characterized as combinations of [[filtered colimits]] and reflexive coequalizers.",
+     "note": "\"Diagonal is final\" is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \\to C$ where $D$ is a [[sifted category]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \\to C$ where $D$ is a [[sifted category]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Such colimits [[limits commuting with colimits|commute]] with finite [[products]] in [[Set]], by definition.",
+     "note": "Closure of models of algebraic theories is not checked."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states the identifications made."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/sifted+colimit"
+   }
+  },
+  {
+   "id": "D7-080",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/nlab-initial-object.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An initial object, if it exists, is unique up to unique [[isomorphism]], so that we may speak of [[the]] initial object."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "By definition, an initial object is equipped with a universal [[cocone]] under the unique functor $\\emptyset\\to C$ from the [[empty category]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "By definition, an initial object is equipped with a universal [[cocone]] under the unique functor $\\emptyset\\to C$ from the [[empty category]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "if $I$ is initial, the unique morphisms $!: I \\to x$ form a cone"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An initial object, if it exists, is unique up to unique [[isomorphism]], so that we may speak of [[the]] initial object."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing\" is not stated by a source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://ncatlab.org/nlab/source/initial+object"
+   }
+  },
+  {
+   "id": "D7-081",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/nlab-terminal-object.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A **terminal object** in a [[category]] $C$ is an [[object]] $1$ of $C$ satisfying the following [[universal property]]:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "for every object $x$ of $C$, there exists a unique [[morphism]] $!:x\\to 1$.",
+     "note": "\"Empty limit\" and global elements are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A **terminal object** in a [[category]] $C$ is an [[object]] $1$ of $C$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "for every object $x$ of $C$, there exists a unique [[morphism]] $!:x\\to 1$."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The terminal object of any category, if it exists, is unique up to unique [[isomorphism]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing\" is not stated by a source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://ncatlab.org/nlab/source/terminal+object"
+   }
+  },
+  {
+   "id": "D7-082",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/nlab-zero-object.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "a **zero object**, **null object**, or **biterminator** if it is both an [[initial object]] and a [[terminal object]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "there is always a canonical morphism from any object $A$ to any other object $B$ called the _[[zero morphism]]_",
+     "note": "Kernels and cokernels are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "In a category with a zero object 0"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "there is always a canonical morphism from any object $A$ to any other object $B$ called the _[[zero morphism]]_"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "A category with a zero object is sometimes called a _[[pointed category]]_.",
+     "note": "Additive structure is not implied by a zero object; the pointed part is quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "a **zero object**, **null object**, or **biterminator** if it is both an [[initial object]] and a [[terminal object]]."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://ncatlab.org/nlab/source/zero+object"
+   }
+  },
+  {
+   "id": "D7-083",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/nlab-biproduct.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "A _biproduct_ in a [[category]] $\\mathcal{C}$ is an operation that is both a [[product]] and a [[coproduct]], in a compatible way."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "This object is often denoted $c_1 \\oplus c_2$, alluding to the [[direct sum]] (which is often an example)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "A _biproduct_ in a [[category]] $\\mathcal{C}$ is an operation that is both a [[product]] and a [[coproduct]], in a compatible way.",
+     "note": "The source does not require a preadditive category for the definition."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "This object is often denoted $c_1 \\oplus c_2$, alluding to the [[direct sum]] (which is often an example)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Morphisms between finite biproducts are encoded in a [[matrix calculus]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "is an [[isomorphism]], then the isomorphic objects $c_1 \\times c_2$ and $c_1 \\sqcup c_2$ are called [[generalized the|the]] __biproduct__"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://ncatlab.org/nlab/source/biproduct"
+   }
+  },
+  {
+   "id": "D7-084",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/nlab-additive-envelope.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The additive envelope of an [[Ab-enriched category]] $A$ is defined by taking the objects as formal direct sums of objects in $A$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "and morphisms as matrices of coefficients, giving an [[additive category]].  This is a universal construction."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The additive envelope of an [[Ab-enriched category]] $A$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "and morphisms as matrices of coefficients, giving an [[additive category]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Full faithfulness of the embedding is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states what the envelope loses."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://ncatlab.org/nlab/source/additive+envelope"
+   }
+  },
+  {
+   "id": "D7-085",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/nlab-ab-enriched-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "An _$Ab$-enriched category_  (or, if small, _ringoid_) is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "An _$Ab$-enriched category_  (or, if small, _ringoid_) is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]]",
+     "note": "The free preadditive category Z[C] is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]] with its usual [[tensor product]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Sometimes they are called [[pre-additive category|pre-additive categories]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is bilinear. A __ringoid__ is a small $Ab$-enriched category."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The free case is not checked."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://ncatlab.org/nlab/source/Ab-enriched+category"
+   }
+  },
+  {
+   "id": "D7-086",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-freyd-mitchell-embedding-theorem.txt",
+    "e": "excerpts/wikipedia-exact-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Abelianization of a Category\" is not a name any fetched source uses for these constructions."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "e",
+     "quote": "Conversely, if '''E''' is any exact category, we can take '''A''' to be the category of [[exact functor|left-exact functor]]s from '''E''' into the category of [[abelian group]]s",
+     "note": "An exact category embeds in an abelian one by left-exact functors to abelian groups. The Freyd-Mitchell theorem the fill names embeds an abelian category (small) in modules over a ring; it does not abelianize an additive or exact one. Freyd's abelian envelope of an additive category is not checked.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor to the category $R$[[Mod]] for some [[ring]] $R$."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Conversely, if '''E''' is any exact category",
+     "note": "The exact case is checked; the additive case is not."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "which is itself abelian and in which '''E''' is a natural subcatego"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states that kernels and cokernels are added freely."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/Freyd-Mitchell+embedding+theorem",
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1313565396"
+   }
+  },
+  {
+   "id": "D7-087",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-krull-schmidt-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the '''Krull–Schmidt theorem''' states that a [[group (mathematics)|group]] subjected to certain [[finite set|finiteness]] conditions"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Up to a permutation, the indecomposable components in such a direct sum are uniquely determined up to isomorphism.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "A module is '''strongly indecomposable''' if its ring of endomorphisms is local."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "of finite [[Length of a module|length]]), then <math>E</math> is a [[direct sum of modules|direct sum]] of [[indecomposable module]]s."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "of finite [[Length of a module|length]]), then <math>E</math> is a [[direct sum of modules|direct sum]] of [[indecomposable module]]s."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Up to a permutation, the indecomposable components in such a direct sum are uniquely determined up to isomorphism."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Non-canonicity of the splitting maps is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380868315"
+   }
+  },
+  {
+   "id": "D7-088",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-split-epimorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A **split epimorphism** in a [[category]] $C$ is a [[morphism]] $e\\colon A \\to B$ in $C$ such that there exists a morphism $s\\colon B \\to A$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* $B$ is a __[[retract]]__ of $A$,"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* $s$ is a __[[section]]__ of $e$,"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* $B$ is a __[[retract]]__ of $A$,",
+     "note": "The additive decomposition X = Y (+) ker p is not checked."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "it is also possible to define a split epimorphism as an __absolute epimorphism__: a morphism such that for every [[functor]] $F$ out of $C$, $F(e)$ is an [[epimorphism]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing\" is not stated by a source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/split+epimorphism"
+   }
+  },
+  {
+   "id": "D7-089",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/nlab-retract.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "is called a **retract** of an object $B$ if there are [[morphisms]] $i\\colon A\\to B$ and $r \\colon B\\to A$ such that $r \\circ i = id_A$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The entire situation is said to be a _splitting of  the [[idempotent]]_"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "is called a **retract** of an object $B$ if there are [[morphisms]] $i\\colon A\\to B$ and $r \\colon B\\to A$ such that $r \\circ i = id_A$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "In this case $r$ is called a **retraction** of $B$ onto $A$."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Closure of projectivity, injectivity and finiteness under retracts is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states what r kills."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://ncatlab.org/nlab/source/retract"
+   }
+  },
+  {
+   "id": "D7-090",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-free-groupoid.txt",
+    "g": "excerpts/nlab-groupoidification.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "__Groupoidification__ is a program based on the observation that the operation of pull-pushing bundles of [[groupoid|groupoids]]",
+     "note": "The name is Baez's program; the free groupoid reading is the fill's first."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms",
+     "more": [
+      {
+       "src": "f",
+       "quote": "On the construction of free groupoids on a category ([[localization]] at all morphisms):"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "there is a free groupoid construction on ([[small category|small]]) [[strict categories]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Connected components and pi_1 of the nerve are not stated in the fetched sources."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms",
+     "note": "Every morphism becomes invertible."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/free+groupoid",
+    "g": "https://ncatlab.org/nlab/source/groupoidification"
+   }
+  },
+  {
+   "id": "D7-091",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-free-object.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Informally, a free object over a [[Set (mathematics)|set]] ''A'' can be thought of as being a \"generic\" [[algebraic structure]] over ''A''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the only equations that hold between elements of the free object are those that follow from the defining axioms of the algebraic structure.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "{{Short description|Left adjoint to a forgetful functor to sets}}"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The concept is a part of [[universal algebra]], in the sense that it relates to all types of algebraic structure (with [[finitary]] operations)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Informally, a free object over a [[Set (mathematics)|set]] ''A'' can be thought of as being a \"generic\" [[algebraic structure]] over ''A''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the universal property implies]] every map between two sets induces a unique morphism between the free objects built on them"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the only equations that hold between elements of the free object are those that follow from the defining axioms of the algebraic structure."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375074174"
+   }
+  },
+  {
+   "id": "D7-092",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-term-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''term algebra''' is a freely generated [[algebraic structure]] over a given [[Signature (logic)|signature]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is the set of all well-formed [[String (computer science)|strings]] that can be constructed u"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Let <math>\\tau</math> be a type, and let <math>X</math> be a non-empty set of symbols, representing the variable symbols."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''term algebra''' is a freely generated [[algebraic structure]] over a given [[Signature (logic)|signature]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a term algebra is the [[initial object]] for the [[F-algebra|category of all ''X''-generated algebras of the same signature]]"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "which is (absolutely freely) ",
+     "note": "No equations are imposed beyond the syntax."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1325669145"
+   }
+  },
+  {
+   "id": "D7-093",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-institution-computer-science.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The notion of '''institution''' was created by [[Joseph Goguen]] and [[Rod Burstall]] in the late 1970s",
+     "note": "The attribution is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "it is assumed that signature morphisms lead to translations of sentences and models in a way that satisfaction is preserved.",
+     "note": "\"Symbols into terms\" is a special case (derived signature morphisms), not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "'''signature morphisms''' allow to extend signatures, change notation, and so on."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "models are translated (or better: reduced) '''against''' signature morphisms."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "satisfaction condition expresses that truth is invariant under change of notation"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "models are translated (or better: reduced) '''against''' signature morphisms.",
+     "note": "The reduct forgets what the target signature adds."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1305700908"
+   }
+  },
+  {
+   "id": "D7-094",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''variety of algebras''' or '''equational class''' is the [[class (set theory)|class]] of all [[algebraic structure]]s of a given [[signature (logic)|signature]] satisfying a given set of"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''variety of algebras''' or '''equational class''' is the [[class (set theory)|class]] of all [[algebraic structure]]s of a given [[signature (logic)|signature]] satisfying a given set of",
+     "note": "\"Reduction\" is not a standard name; the second reading, a smaller equivalent set of equations, is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "Given a class of algebraic structures of the same signature"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "the product of fields is not a field, so fields do not form a variety."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
+  },
+  {
+   "id": "D7-095",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "[[Garrett Birkhoff]] proved that a class of algebraic structures of the same signature is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products.",
+     "note": "The attribution to Birkhoff is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "[[Garrett Birkhoff]] proved that a class of algebraic structures of the same signature is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "Given a class of algebraic structures of the same signature"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "the product of fields is not a field, so fields do not form a variety."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
+  },
+  {
+   "id": "D7-096",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quasivariety.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quasivariety''' is a class of [[algebraic structure]]s generalizing the notion of [[variety (universal algebra)|variety]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "# ''K'' contains a trivial algebra and is closed under isomorphisms, subalgebras, direct products, and [[ultraproduct]]s.",
+     "note": "The source adds that K contains a trivial algebra.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "# ''K'' is the class of all [[model (logic)|model]]s of a set of [[quasi-identity|quasi-identities]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "A '''quasivariety''' is a class ''K'' of algebras with a specified [[signature (logic)|signature]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "# ''K'' contains a trivial algebra and is closed under isomorphisms, subalgebras, direct products, and [[ultraproduct]]s."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "# ''K'' is the class of all [[model (logic)|model]]s of a set of [[quasi-identity|quasi-identities]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The source does not say that homomorphic images may leave a quasivariety (it gives cancellative semigroups as a quasivariety without the argument)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1186598336"
+   }
+  },
+  {
+   "id": "D7-097",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-homomorphism.txt",
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\\!\\sim</math>; this fact is one of the [[isomorphism theorem]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\\!\\sim</math>; this fact is one of the [[isomorphism theorem]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Any homomorphism <math>f: X \\to Y</math> defines an [[equivalence relation]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\\!\\sim</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The relation <math>\\sim</math> is called the '''kernel''' of <math>f</math>."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381551549",
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
+  },
+  {
+   "id": "D7-098",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-subalgebra.txt",
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In [[universal algebra]], a '''subalgebra''' of an [[structure (mathematical logic)|algebra]] ''A'' is a [[subset]] ''S'' of ''A''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "then the only thing that needs to be checked is that ''S'' is [[closure (mathematics)|''closed'']] under the operations.",
+     "note": "The smallest such subalgebra is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In [[universal algebra]], a '''subalgebra''' of an [[structure (mathematical logic)|algebra]] ''A'' is a [[subset]] ''S'' of ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "that also has the structure of an algebra of the same type when the algebraic operations are restricted to ''S''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states what is not reached."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1328384742",
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
+  },
+  {
+   "id": "D7-099",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-direct-product.txt",
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "== Direct product in universal algebra =="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "its interpretation <math>f^{\\mathbf{A}}</math> in <math>\\mathbf{A}</math> is defined componentwise"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "== Direct product in universal algebra =="
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "its interpretation <math>f^{\\mathbf{A}}</math> in <math>\\mathbf{A}</math> is defined componentwise"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "is not because the nonzero element <math>(1,0)</math> does not have a [[multiplicative inverse]].",
+     "more": [
+      {
+       "src": "v",
+       "quote": "the product of fields is not a field, so fields do not form a variety."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376674288",
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
+  },
+  {
+   "id": "D7-100",
+   "batch": 4,
+   "why": "Fill review, batch 4: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-subdirect-product.txt",
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''subdirect product''' is a [[subalgebra]] of a [[direct product]] that depends fully on all its factors",
+     "note": "Introduced by Birkhoff (1944), per the source."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "such that every induced projection (the composite ''p<sub>j</sub>s'': ''A'' → ''A<sub>j</sub>'' of a projection"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A '''subdirect product''' is a [[subalgebra]] (in the sense of [[universal algebra]]) ''A'' of a [[direct product]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A '''subdirect product''' is a [[subalgebra]] (in the sense of [[universal algebra]]) ''A'' of a [[direct product]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions.",
+     "note": "Surjectivity onto each factor is the definition."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "without however necessarily being the whole direct product."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024",
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
   }
  ]
 }

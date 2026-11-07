@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Direct product (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376674288
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 379e361ef4a8569edf475dcbe02f6942a993caa6770b2f28573894b399669888
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+== Direct product in universal algebra ==
+
+its interpretation <math>f^{\mathbf{A}}</math> in <math>\mathbf{A}</math> is defined componentwise
+
+is not because the nonzero element <math>(1,0)</math> does not have a [[multiplicative inverse]].
