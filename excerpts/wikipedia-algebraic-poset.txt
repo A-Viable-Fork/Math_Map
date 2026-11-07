@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Compact element (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375338724
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a3a0eb9b5f9fd8eb1bbdaf1570da606752552f21fc5b08d2c4490920d3eae267
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A poset in which every element is the supremum of the directed set formed by the compact elements below it is called an ''algebraic poset''.

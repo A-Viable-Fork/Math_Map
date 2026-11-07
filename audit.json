@@ -13090,6 +13090,1152 @@
    "sources": {
     "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279"
    }
+  },
+  {
+   "id": "D7-176",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-infimum-and-supremum.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the '''infimum''' (abbreviated '''inf'''; {{plural abbr}}: '''infima''') of a [[subset]] <math>S</math> of a [[partially ordered set]] <math>P</math> is the [[greatest element]] in <math>P</math> that is less than or equal"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Consequently, the term ''greatest lower bound'' (abbreviated as {{em|GLB}}) is also commonly used."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "of a [[subset]] <math>S</math> of a [[partially ordered set]] <math>P</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The empty set of cardinal numbers has many lower bounds but no greatest lower bound among cardinal numbers.",
+     "note": "It need not exist, as the fill's \"if it exists\" says."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "If the infimum of <math>S</math> exists, it is unique"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279"
+   }
+  },
+  {
+   "id": "D7-177",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-duality-order-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "every [[partially ordered set]] ''P'' gives rise to a '''dual''' (or '''opposite''') partially ordered set"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "This dual order ''P''<sup>op</sup> is defined to be the same set, but with the '''inverse order'''",
+     "note": "Joins becoming meets and the duality principle are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "every [[partially ordered set]] ''P'' gives rise to a '''dual''' (or '''opposite''') partially ordered set"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "which is often denoted by ''P''<sup>op</sup> or ''P''<sup>''d''</sup>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "This dual order ''P''<sup>op</sup> is defined to be the same set"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "but with the '''inverse order'''"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345571859"
+   }
+  },
+  {
+   "id": "D7-178",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hasse-diagram.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "a '''Hasse diagram''' ({{IPAc-en|ˈ|h|æ|s|ə}}; {{IPA|de|ˈhasə|lang}}) is a type of [[mathematical diagram]] used to represent a finite [[partially ordered set]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the [[directed acyclic graph]] obtained from the covering relation of a partially ordered set, independently of any drawing of that graph.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "the transitive reduction of the partial order."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "used to represent a finite [[partially ordered set]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the [[directed acyclic graph]] obtained from the covering relation of a partially ordered set"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Recovery of the order as the transitive closure is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1339943720"
+   }
+  },
+  {
+   "id": "D7-179",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-dedekind-macneille-completion.txt",
+    "n": "excerpts/nlab-macneille-completion.txt",
+    "m": "excerpts/mathlib-Mathlib.Order.Completion.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "It is named after [[Holbrook Mann MacNeille]] whose 1937 paper first defined and constructed it",
+     "note": "The same operation as D7-025."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "define a ''cut'' to be a pair of sets {{math|(''A'', ''B'')}} for which {{math|1=''A''<sup>u</sup> = ''B''}}",
+     "note": "The reals as the completion of the rationals are named in the source's history (Dedekind cuts) but not quoted as a statement.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "is the smallest [[complete lattice]] that contains it."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "is the smallest [[complete lattice]] that contains it."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev DedekindCut [Preorder α] := Concept α α (· ≤ ·)"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "that preserves all least upper bounds (joins) and greatest lower bounds (meets) existing in $L$.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "is join-dense and meet-dense in the Dedekind–MacNeille completion"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "However, the completion of a [[distributive lattice]] need not itself be distributive"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377697498",
+    "n": "https://ncatlab.org/nlab/source/MacNeille+completion",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean"
+   }
+  },
+  {
+   "id": "D7-180",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-ideal-order-theory.txt",
+    "a": "excerpts/wikipedia-algebraic-poset.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "For example, the [[ideal completion]] of a given partial order ''P'' is the set of all ideals of ''P'' ordered by subset inclusion."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "A directed lower subset of a poset ''X'' is called an ideal",
+     "note": "\"The free dcpo\" and the role in denotational semantics are not checked.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "A poset in which every element is the supremum of the directed set formed by the compact elements below it is called an ''algebraic poset''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the [[ideal completion]] of a given partial order ''P''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is the set of all ideals of ''P'' ordered by subset inclusion."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "That compact elements correspond to P (principal ideals) is not stated in the fetched windows."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "That existing directed joins are not preserved is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367794239",
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375338724"
+   }
+  },
+  {
+   "id": "D7-181",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-filter-mathematics.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "This upper set is a {{em|filter}}, and even a {{em|principal filter}}."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The poset of filters as the order dual of the ideal completion is not stated in the fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381293247"
+   }
+  },
+  {
+   "id": "D7-182",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-ideal-order-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The smallest ideal that contains a given element ''p'' is a {{em|{{visible anchor|principal ideal}}}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The principal ideal <math>\\downarrow p</math> for a principal ''p'' is thus given by",
+     "note": "The ring ideal aR is not checked here."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The smallest ideal that contains a given element ''p''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The principal ideal <math>\\downarrow p</math> for a principal ''p'' is thus given by"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The order embedding a to (a] is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367794239"
+   }
+  },
+  {
+   "id": "D7-183",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-filter-mathematics.txt",
+    "u": "excerpts/wikipedia-upper-set.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "then the set of elements above {{Mvar|x}} is a filter, called the principal filter at {{Mvar|x}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "then the set of elements above {{Mvar|x}} is a filter, called the principal filter at {{Mvar|x}}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "For instance, if <math>x \\in P</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "The upper closure of an element is the same thing as the [[principal filter]] generated by that element"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The order-reversing embedding is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381293247",
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354544889"
+   }
+  },
+  {
+   "id": "D7-184",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "u": "excerpts/wikipedia-ultrafilter.txt",
+    "s": "excerpts/wikipedia-stone-ech-compactification.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]] of cardinality",
+     "note": "The ultrafilter extension of a Kripke frame is not checked."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "Especially, when considering the ultrafilters on a powerset <math>{\\mathcal P}(S)</math>, the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]]",
+     "more": [
+      {
+       "src": "u",
+       "quote": "Likewise, ultrafilters on Boolean algebras play a central role in [[Stone's representation theorem for Boolean algebras|Stone's representation theorem]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "when considering the ultrafilters on a powerset <math>{\\mathcal P}(S)</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The '''Stone–Čech compactification''' of a space provides the most extensive such enlargement",
+     "note": "Compactness gained; reflection of modal validity is not checked."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of discreteness and finiteness is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380399862",
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382289965"
+   }
+  },
+  {
+   "id": "D7-185",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-boolean-prime-ideal-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "''strong prime ideal theorems'' require that every ideal that is disjoint from a given filter can be extended to a prime ideal that is still disjoint from that filter."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Then {{mvar|I}} is contained in some prime ideal of ''B'' that is disjoint from ''F''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "or [[distributive lattice]]s and ''ma",
+     "note": "Rings and distributive lattices are the source's examples."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Then {{mvar|I}} is contained in some prime ideal of ''B'' that is disjoint from ''F''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "every ideal that is disjoint from a given filter can be extended to a prime ideal that is still disjoint from that filter.",
+     "note": "Separation; points of the spectrum are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1347096205"
+   }
+  },
+  {
+   "id": "D7-186",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-krulls-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Let ''R'' be a nonzero ring, and let ''I'' be a [[proper ideal]] of ''R''.  Then there is a maximal ideal of ''R'' containing ''I''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The theorem admits a [[Zorn's lemma#Every_nontrivial_ring_with_unity_contains_a_maximal_ideal|simple proof using Zorn's lemma]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Let ''R'' be a nonzero ring, and let ''I'' be a [[proper ideal]] of ''R''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Then there is a maximal ideal of ''R'' containing ''I''.",
+     "note": "The residue field R/m is not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376834558"
+   }
+  },
+  {
+   "id": "D7-187",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "Nonstandard name (the fill's reading: disjointification); no fetched source."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-188",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-heyting-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "This element is the '''relative pseudo-complement''' of ''a'' with respect to ''b'', and is denoted ''a''→''b''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "there is a greatest element ''x'' of ''H'' such that",
+     "note": "With a and x below b: the source's definition. Right adjoint to meet is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A Heyting algebra ''H'' is a [[lattice (order)#Bounded_lattice|bounded lattice]] such that for all ''a'' and ''b'' in ''H''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "and is denoted ''a''→''b''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Intuitionistic validity and the adjunction are not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Boolean algebras are precisely the Heyting algebras satisfying ''a'' ∨ ¬''a'' = 1 ([[excluded middle]]), equivalently ¬¬''a'' = ''a''."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377613483"
+   }
+  },
+  {
+   "id": "D7-189",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-pseudocomplement.txt",
+    "h": "excerpts/wikipedia-heyting-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "an element ''x'' ∈ ''L'' is said to have a ''pseudocomplement'' if there exists a [[greatest element]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "an element ''x'' ∈ ''L'' is said to have a ''pseudocomplement'' if there exists a [[greatest element]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "In a [[Lattice (order)|lattice]] ''L'' with [[bottom element]] 0"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "if there exists a [[greatest element]] <math>x^*\\in L</math>"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Boolean algebras are precisely the Heyting algebras satisfying ''a'' ∨ ¬''a'' = 1 ([[excluded middle]]), equivalently ¬¬''a'' = ''a''.",
+     "note": "Double negation holds exactly in the Boolean case."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1346806602",
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377613483"
+   }
+  },
+  {
+   "id": "D7-190",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-complemented-lattice.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A '''relatively complemented lattice''' is a lattice such that every [[Interval (partial order)|interval]] [''c'',&nbsp;''d'']"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A '''relatively complemented lattice''' is a lattice such that every [[Interval (partial order)|interval]] [''c'',&nbsp;''d''], viewed as a bounded lattice in its own right, is a complemented lattice.",
+     "note": "a \\ b in a Boolean algebra is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "every [[Interval (partial order)|interval]] [''c'',&nbsp;''d''], viewed as a bounded lattice in its own right"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is a complemented lattice."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Complements need not be unique.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "In bounded [[distributive lattice]]s, complements are unique."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1293084295"
+   }
+  },
+  {
+   "id": "D7-191",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-stones-representation-theorem-for-boolean-algebras.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A simple version of '''Stone's representation theorem''' states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'')."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "For every Boolean algebra ''B'', ''S''(''B'') is a [[Compact space|compact]] [[totally disconnected]] [[Hausdorff space]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "For every Boolean algebra ''B''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "such spaces are called '''Stone spaces''' (also ''profinite spaces'')."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'')."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1312231128"
+   }
+  },
+  {
+   "id": "D7-192",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-priestley-space.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Priestley spaces are named after [[Hilary Priestley]] who introduced and investigated them.",
+     "note": "The attribution is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Priestley spaces play a fundamental role in the study of [[distributive lattice]]s.",
+     "note": "That the points are prime filters is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Priestley spaces play a fundamental role in the study of [[distributive lattice]]s."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a '''Priestley space''' is an [[partial order|ordered]] [[topological space]] with special properties."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "provides a clopen up-set {{math|''U''}} of {{math|''X''}} such that",
+     "note": "Recovery of L as clopen up-sets is the duality; this window shows the clopen up-sets, not the isomorphism."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "In particular, there is a [[duality theory for distributive lattices|duality]]"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383534420"
+   }
+  },
+  {
+   "id": "D7-193",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-closure-operator.txt",
+    "m": "excerpts/mathlib-Mathlib.LinearAlgebra.Span.Defs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "| {{nb5}}(cl is ''idempotent'')."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "| {{nb5}}(cl is ''idempotent'').",
+     "note": "Extensive and monotone are the definition's other clauses; subalgebra generation and deductive closure are the source's examples, not quoted here."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Closure operators are determined by their '''closed sets'''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Closure operators are determined by their '''closed sets'''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Such families of \"closed sets\" are sometimes called '''closure systems''' or \"'''Moore families'''\".",
+     "note": "That they form a complete lattice is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377888587",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Span/Defs.lean"
+   }
+  },
+  {
+   "id": "D7-194",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-interior-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Interior algebras are to [[topology]] and the [[modal logic]] '''S4''' what [[Boolean algebra (structure)|Boolean algebra]]s are to [[set theory]] and ordinary [[propositional logic]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Interior algebras are to [[topology]] and the [[modal logic]] '''S4''' what [[Boolean algebra (structure)|Boolean algebra]]s are to [[set theory]] and ordinary [[propositional logic]].",
+     "note": "The axioms (contractive, monotone, idempotent) are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The [[duality (order theory)|dual]] of the interior operator is the '''[[closure operator]]'''"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1295577828"
+   }
+  },
+  {
+   "id": "D7-195",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "u": "excerpts/wikipedia-upper-set.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "<math>\\eta(x) = {\\downarrow\\! x}</math> is the lower closure of <math>x</math>."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "Then the lower closure <math>\\downarrow x</math> corresponds to the [[slice category]] over <math>x</math>",
+     "note": "Lower closure of a subset is not quoted separately."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354544889"
+   }
+  },
+  {
+   "id": "D7-196",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "u": "excerpts/wikipedia-upper-set.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "map each antichain to its  upper closure (see below)"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "* Every upper set <math>Y</math> of a finite partially ordered set <math>X</math> is equal to the smallest upper set containing all [[minimal element]]s of <math>Y."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "is equal to the smallest upper set containing all [[minimal element]]s of <math>Y."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354544889"
+   }
+  },
+  {
+   "id": "D7-197",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-antichain.txt",
+    "d": "excerpts/wikipedia-dilworths-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''antichain''' is a subset of a [[partially ordered set]] such that any two distinct elements in the subset are [[Incomparability|incomparable]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the maximum size of an [[antichain]] of incomparable elements equals the minimum number of [[Chain (order theory)|chains]] needed to cover all elements.",
+     "note": "Dilworth's theorem, for finite posets, as the fill says."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is a subset of a [[partially ordered set]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''antichain''' is a subset of a [[partially ordered set]] such that any two distinct elements in the subset are [[Incomparability|incomparable]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The size of the largest antichain in a finite partially ordered set is known as its [[Width (partial order)|'''width''']]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "such that any two distinct elements in the subset are [[Incomparability|incomparable]].",
+     "note": "No comparabilities remain inside an antichain."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382006498",
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383233951"
+   }
+  },
+  {
+   "id": "D7-198",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-mirskys-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]], a [[total order|totally ordered]] subset of the given partial order."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]]",
+     "note": "The source measures height by cardinality; the fill's \"length\" must be read as size (a chain of length n has n + 1 elements in the other convention).",
+     "more": [
+      {
+       "src": "m",
+       "quote": "'''Mirsky's theorem''' characterizes the height of any finite [[partially ordered set]] in terms of a partition of the order into a minimum nu"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "characterizes the height of any finite [[partially ordered set]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "a [[total order|totally ordered]] subset of the given partial order."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1184448688"
+   }
+  },
+  {
+   "id": "D7-199",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-zorns-lemma.txt",
+    "m": "excerpts/mathlib-Mathlib.Order.Zorn.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "It states that a [[partially ordered set]] containing [[upper bound]]s for every [[chain (order theory)|chain]] (that is, every [[total order|totally ordered]] [[subset]]) [[Necessity and sufficiency|necessarily]] con"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "necessarily]] contains at least one [[maximal element]].",
+     "more": [
+      {
+       "src": "z",
+       "quote": "the theorem that every [[vector space]] has a [[basis (linear algebra)|basis]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "It states that a [[partially ordered set]] containing [[upper bound]]s for every [[chain (order theory)|chain]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "necessarily]] contains at least one [[maximal element]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "necessarily]] contains at least one [[maximal element]].",
+     "note": "Existence only."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Non-constructivity and non-uniqueness are not stated in the fetched windows."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364256157",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Zorn.lean"
+   }
+  },
+  {
+   "id": "D7-200",
+   "batch": 8,
+   "why": "Fill review, batch 8: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-well-ordering-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''well-ordering theorem''', also known as '''Zermelo's theorem''', states that every [[Set (mathematics)|set]] can be [[well-order]]ed."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A set ''X'' is ''well-ordered'' by a [[strict total order]] if every non-empty subset of ''X'' has a [[least element]] under the ordering.",
+     "note": "Transfinite induction is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "are the most important mathematical statements that are equivalent to the [[axiom of choice]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "states that every [[Set (mathematics)|set]] can be [[well-order]]ed."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344684772"
+   }
   }
  ]
 }

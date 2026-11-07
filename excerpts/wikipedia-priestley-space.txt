@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Priestley space (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383534420
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 660762c06d429b33e66736effe0809fdd9b651286c9a94b51d579eb45082a702
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Priestley spaces are named after [[Hilary Priestley]] who introduced and investigated them.
+
+Priestley spaces play a fundamental role in the study of [[distributive lattice]]s.
+
+a '''Priestley space''' is an [[partial order|ordered]] [[topological space]] with special properties.
+
+provides a clopen up-set {{math|''U''}} of {{math|''X''}} such that
+
+In particular, there is a [[duality theory for distributive lattices|duality]]

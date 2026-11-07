@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 175 of 416 D7 stubs, 0 of 79 homes; 175 entries in 7 batches.
+Reviewed: 200 of 416 D7 stubs, 0 of 79 homes; 200 entries in 8 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (175 entries)
+### D7 stubs (200 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 166 | 0 | 0 | 9 |
-| description | 162 | 5 | 0 | 8 |
-| input | 159 | 3 | 0 | 13 |
-| output | 160 | 0 | 0 | 15 |
-| preserved | 137 | 2 | 0 | 36 |
-| broken | 79 | 3 | 0 | 93 |
-| **all** | 863 | 13 | 0 | 174 |
+| name | 190 | 0 | 0 | 10 |
+| description | 185 | 5 | 0 | 10 |
+| input | 180 | 3 | 0 | 17 |
+| output | 181 | 0 | 0 | 19 |
+| preserved | 148 | 2 | 0 | 50 |
+| broken | 87 | 3 | 0 | 110 |
+| **all** | 971 | 13 | 0 | 216 |
 
 ## 2. Recall against source
 
@@ -35,7 +35,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 5 | 25 | 83 | 0 | 0% |
 | 6 | 25 | 128 | 0 | 0% |
 | 7 | 25 | 119 | 0 | 0% |
-| **all** | 175 | 876 | 3 | 0% |
+| 8 | 25 | 108 | 0 | 0% |
+| **all** | 200 | 984 | 3 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -44,8 +45,9 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-123 description: sample confirmed, review unsupported.
 - D7-123 input: sample confirmed, review unsupported.
 - D7-123 preserved: sample confirmed, review unsupported.
+- D7-192 broken: sample unsupported, review confirmed.
 
-Agreement: 15 of 18 fields.
+Agreement: 26 of 30 fields.
 
 ## 4. Sources in disagreement
 
@@ -162,6 +164,26 @@ Every field not confirmed, with the reason.
 - **D7-173 Diamond Lemma Application** (batch 7): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
 - **D7-174 Squier's Theorem Homotopy Construction** (batch 7): *name* unsupported: Squier's theorem: no fetched source (no Wikipedia or nLab page). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
 - **D7-175 Supremum Evaluation** (batch 7): *broken* unsupported: Not stated.
+- **D7-176 Infimum Evaluation** (batch 8): *broken* unsupported: Not stated.
+- **D7-178 Hasse Diagram Construction** (batch 8): *preserved* unsupported: Recovery of the order as the transitive closure is not stated. *broken* unsupported: Not stated.
+- **D7-180 Ideal Completion** (batch 8): *preserved* unsupported: That compact elements correspond to P (principal ideals) is not stated in the fetched windows. *broken* unsupported: That existing directed joins are not preserved is not stated.
+- **D7-181 Filter Completion** (batch 8): *description* unsupported: The poset of filters as the order dual of the ideal completion is not stated in the fetched source. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-182 Principal Ideal Generation** (batch 8): *preserved* unsupported: The order embedding a to (a] is not stated. *broken* unsupported: Not stated.
+- **D7-183 Principal Filter Generation** (batch 8): *preserved* unsupported: The order-reversing embedding is not stated. *broken* unsupported: Not stated.
+- **D7-184 Ultrafilter Extension** (batch 8): *broken* unsupported: Loss of discreteness and finiteness is not stated.
+- **D7-185 Prime Ideal Extraction** (batch 8): *broken* unsupported: Not stated.
+- **D7-186 Maximal Ideal Extraction** (batch 8): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-187 Boolean Algebra Orthogonalization** (batch 8): *name* unsupported: Nonstandard name (the fill's reading: disjointification); no fetched source. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-188 Heyting Algebra Implication Operation** (batch 8): *preserved* unsupported: Intuitionistic validity and the adjunction are not quoted.
+- **D7-189 Pseudo-Complement Evaluation** (batch 8): *preserved* unsupported: Not quoted.
+- **D7-190 Relative Complement Evaluation** (batch 8): *preserved* unsupported: Not stated.
+- **D7-193 Closure Operator Application** (batch 8): *broken* unsupported: Not stated.
+- **D7-194 Interior Operator Application** (batch 8): *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-195 Down-Set Generation** (batch 8): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-196 Up-Set Generation** (batch 8): *input* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-198 Chain Evaluation** (batch 8): *broken* unsupported: Not stated.
+- **D7-199 Zorn's Lemma Maximization** (batch 8): *broken* unsupported: Non-constructivity and non-uniqueness are not stated in the fetched windows.
+- **D7-200 Well-Ordering Transformation** (batch 8): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -2345,4 +2367,312 @@ actions defining an optic"
 - recalled: name: Standard; description: Least upper bound; input: Poset and subset; output: Supremum if it exists; preserved: Order; broken: Elements
 
   i: excerpts/wikipedia-infimum-and-supremum.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279)
+
+### D7-176 Infimum Evaluation (batch 8)
+
+- name: **confirmed** [i] "the '''infimum''' (abbreviated '''inf'''; {{plural abbr}}: '''infima''') of a [[subset]] <math>S</math> of a [[partially ordered set]] <math>P</math> is the [[greatest element]] in <math>P</math> that is less than or equal"
+- description: **confirmed** [i] "Consequently, the term ''greatest lower bound'' (abbreviated as {{em|GLB}}) is also commonly used."
+- input: **confirmed** [i] "of a [[subset]] <math>S</math> of a [[partially ordered set]] <math>P</math>"
+- output: **confirmed** [i] "The empty set of cardinal numbers has many lower bounds but no greatest lower bound among cardinal numbers." *It need not exist, as the fill's "if it exists" says.*
+- preserved: **confirmed** [i] "If the infimum of <math>S</math> exists, it is unique"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Greatest lower bound; input: Poset and subset; output: Infimum if it exists; preserved: Order; broken: Elements
+
+  i: excerpts/wikipedia-infimum-and-supremum.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279)
+
+### D7-177 Order Dualization (batch 8)
+
+- name: **confirmed** [d] "every [[partially ordered set]] ''P'' gives rise to a '''dual''' (or '''opposite''') partially ordered set"
+- description: **confirmed** [d] "This dual order ''P''<sup>op</sup> is defined to be the same set, but with the '''inverse order'''" *Joins becoming meets and the duality principle are not quoted.*
+- input: **confirmed** [d] "every [[partially ordered set]] ''P'' gives rise to a '''dual''' (or '''opposite''') partially ordered set"
+- output: **confirmed** [d] "which is often denoted by ''P''<sup>op</sup> or ''P''<sup>''d''</sup>"
+- preserved: **confirmed** [d] "This dual order ''P''<sup>op</sup> is defined to be the same set"
+- broken: **confirmed** [d] "but with the '''inverse order'''"
+- recalled: name: Standard; description: Reverse the order; duality principle; input: Poset; output: Dual poset; preserved: Everything up to reversal; broken: Direction
+
+  d: excerpts/wikipedia-duality-order-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1345571859)
+
+### D7-178 Hasse Diagram Construction (batch 8)
+
+- name: **confirmed** [h] "a '''Hasse diagram''' ({{IPAc-en|ˈ|h|æ|s|ə}}; {{IPA|de|ˈhasə|lang}}) is a type of [[mathematical diagram]] used to represent a finite [[partially ordered set]]"
+- description: **confirmed** [h] "the [[directed acyclic graph]] obtained from the covering relation of a partially ordered set, independently of any drawing of that graph." [h] "the transitive reduction of the partial order."
+- input: **confirmed** [h] "used to represent a finite [[partially ordered set]]"
+- output: **confirmed** [h] "the [[directed acyclic graph]] obtained from the covering relation of a partially ordered set"
+- preserved: **unsupported** *Recovery of the order as the transitive closure is not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Covering relation; transitive reduction; input: Finite poset; output: Graph of covers; preserved: Order recoverable; broken: Nothing
+
+  h: excerpts/wikipedia-hasse-diagram.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1339943720)
+
+### D7-179 Dedekind-MacNeille Completion (batch 8)
+
+- name: **confirmed** [w] "It is named after [[Holbrook Mann MacNeille]] whose 1937 paper first defined and constructed it" *The same operation as D7-025.*
+- description: **confirmed** [w] "define a ''cut'' to be a pair of sets {{math|(''A'', ''B'')}} for which {{math|1=''A''<sup>u</sup> = ''B''}}" [w] "is the smallest [[complete lattice]] that contains it." *The reals as the completion of the rationals are named in the source's history (Dedekind cuts) but not quoted as a statement.*
+- input: **confirmed** [w] "is the smallest [[complete lattice]] that contains it."
+- output: **confirmed** [m] "abbrev DedekindCut [Preorder α] := Concept α α (· ≤ ·)"
+- preserved: **confirmed** [n] "that preserves all least upper bounds (joins) and greatest lower bounds (meets) existing in $L$." [w] "is join-dense and meet-dense in the Dedekind–MacNeille completion"
+- broken: **confirmed** [w] "However, the completion of a [[distributive lattice]] need not itself be distributive"
+- recalled: name: Standard; description: Smallest complete lattice by cuts; extended reals from rationals; input: Poset; output: Complete lattice; preserved: Existing joins and meets; density; broken: Distributivity
+
+  w: excerpts/wikipedia-dedekind-macneille-completion.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377697498)
+  n: excerpts/nlab-macneille-completion.txt (https://ncatlab.org/nlab/source/MacNeille+completion)
+  m: excerpts/mathlib-Mathlib.Order.Completion.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean)
+
+### D7-180 Ideal Completion (batch 8)
+
+- name: **confirmed** [i] "For example, the [[ideal completion]] of a given partial order ''P'' is the set of all ideals of ''P'' ordered by subset inclusion."
+- description: **confirmed** [i] "A directed lower subset of a poset ''X'' is called an ideal" [a] "A poset in which every element is the supremum of the directed set formed by the compact elements below it is called an ''algebraic poset''." *"The free dcpo" and the role in denotational semantics are not checked.*
+- input: **confirmed** [i] "the [[ideal completion]] of a given partial order ''P''"
+- output: **confirmed** [i] "is the set of all ideals of ''P'' ordered by subset inclusion."
+- preserved: **unsupported** *That compact elements correspond to P (principal ideals) is not stated in the fetched windows.*
+- broken: **unsupported** *That existing directed joins are not preserved is not stated.*
+- recalled: name: Standard; description: Ideals of P; algebraic dcpo with compact elements the principal ideals; input: Poset; output: Ideal completion; preserved: Order; compact elements; broken: Existing directed joins not preserved
+
+  i: excerpts/wikipedia-ideal-order-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367794239)
+  a: excerpts/wikipedia-algebraic-poset.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375338724)
+
+### D7-181 Filter Completion (batch 8)
+
+- name: **confirmed** [f] "This upper set is a {{em|filter}}, and even a {{em|principal filter}}."
+- description: **unsupported** *The poset of filters as the order dual of the ideal completion is not stated in the fetched source.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Filters, dual of ideals; input: Poset; output: Filter poset; preserved: Order reversed; broken: Existing meets
+
+  f: excerpts/wikipedia-filter-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381293247)
+
+### D7-182 Principal Ideal Generation (batch 8)
+
+- name: **confirmed** [i] "The smallest ideal that contains a given element ''p'' is a {{em|{{visible anchor|principal ideal}}}}"
+- description: **confirmed** [i] "The principal ideal <math>\downarrow p</math> for a principal ''p'' is thus given by" *The ring ideal aR is not checked here.*
+- input: **confirmed** [i] "The smallest ideal that contains a given element ''p''"
+- output: **confirmed** [i] "The principal ideal <math>\downarrow p</math> for a principal ''p'' is thus given by"
+- preserved: **unsupported** *The order embedding a to (a] is not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Down-set of a; or aR in a ring; input: Poset or ring and element; output: Principal ideal; preserved: Order embedding; broken: Nothing
+
+  i: excerpts/wikipedia-ideal-order-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367794239)
+
+### D7-183 Principal Filter Generation (batch 8)
+
+- name: **confirmed** [f] "then the set of elements above {{Mvar|x}} is a filter, called the principal filter at {{Mvar|x}}."
+- description: **confirmed** [f] "then the set of elements above {{Mvar|x}} is a filter, called the principal filter at {{Mvar|x}}."
+- input: **confirmed** [f] "For instance, if <math>x \in P</math>"
+- output: **confirmed** [u] "The upper closure of an element is the same thing as the [[principal filter]] generated by that element"
+- preserved: **unsupported** *The order-reversing embedding is not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Up-set of a; input: Poset and element; output: Principal filter; preserved: Reversed embedding; broken: Nothing
+
+  f: excerpts/wikipedia-filter-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381293247)
+  u: excerpts/wikipedia-upper-set.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354544889)
+
+### D7-184 Ultrafilter Extension (batch 8)
+
+- name: **confirmed** [u] "the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]] of cardinality" *The ultrafilter extension of a Kripke frame is not checked.*
+- description: **confirmed** [u] "Especially, when considering the ultrafilters on a powerset <math>{\mathcal P}(S)</math>, the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]]" [u] "Likewise, ultrafilters on Boolean algebras play a central role in [[Stone's representation theorem for Boolean algebras|Stone's representation theorem]]."
+- input: **confirmed** [u] "when considering the ultrafilters on a powerset <math>{\mathcal P}(S)</math>"
+- output: **confirmed** [u] "the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]]"
+- preserved: **confirmed** [s] "The '''Stone–Čech compactification''' of a space provides the most extensive such enlargement" *Compactness gained; reflection of modal validity is not checked.*
+- broken: **unsupported** *Loss of discreteness and finiteness is not stated.*
+- recalled: name: Standard; description: Ultrafilters; Stone-Cech of a discrete set; ultrafilter extension of a frame; input: Set, Boolean algebra or frame; output: Ultrafilter space or frame; preserved: Modal validity reflected; compactness; broken: Discreteness
+
+  u: excerpts/wikipedia-ultrafilter.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380399862)
+  s: excerpts/wikipedia-stone-ech-compactification.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382289965)
+
+### D7-185 Prime Ideal Extraction (batch 8)
+
+- name: **confirmed** [b] "''strong prime ideal theorems'' require that every ideal that is disjoint from a given filter can be extended to a prime ideal that is still disjoint from that filter."
+- description: **confirmed** [b] "Then {{mvar|I}} is contained in some prime ideal of ''B'' that is disjoint from ''F''."
+- input: **confirmed** [b] "or [[distributive lattice]]s and ''ma" *Rings and distributive lattices are the source's examples.*
+- output: **confirmed** [b] "Then {{mvar|I}} is contained in some prime ideal of ''B'' that is disjoint from ''F''."
+- preserved: **confirmed** [b] "every ideal that is disjoint from a given filter can be extended to a prime ideal that is still disjoint from that filter." *Separation; points of the spectrum are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (prime ideal theorem); description: Prime ideal separating an ideal from a disjoint filter; input: Distributive lattice or ring; output: Prime ideal; preserved: Separation; broken: Non-prime information
+
+  b: excerpts/wikipedia-boolean-prime-ideal-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1347096205)
+
+### D7-186 Maximal Ideal Extraction (batch 8)
+
+- name: **confirmed** [k] "Let ''R'' be a nonzero ring, and let ''I'' be a [[proper ideal]] of ''R''.  Then there is a maximal ideal of ''R'' containing ''I''."
+- description: **confirmed** [k] "The theorem admits a [[Zorn's lemma#Every_nontrivial_ring_with_unity_contains_a_maximal_ideal|simple proof using Zorn's lemma]]"
+- input: **confirmed** [k] "Let ''R'' be a nonzero ring, and let ''I'' be a [[proper ideal]] of ''R''."
+- output: **confirmed** [k] "Then there is a maximal ideal of ''R'' containing ''I''." *The residue field R/m is not quoted.*
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Krull's theorem); description: Maximal ideal containing a proper ideal via Zorn; input: Ring with identity and proper ideal; output: Maximal ideal, residue field; preserved: Points; broken: Collapsed information
+
+  k: excerpts/wikipedia-krulls-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376834558)
+
+### D7-187 Boolean Algebra Orthogonalization (batch 8)
+
+- name: **unsupported** *Nonstandard name (the fill's reading: disjointification); no fetched source.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Nonstandard name (disjointification); description: Rewrite as joins of pairwise disjoint elements; input: Boolean algebra and finite family; output: Disjoint family with same join; preserved: Joins; broken: Overlaps
+
+
+### D7-188 Heyting Algebra Implication Operation (batch 8)
+
+- name: **confirmed** [h] "This element is the '''relative pseudo-complement''' of ''a'' with respect to ''b'', and is denoted ''a''→''b''."
+- description: **confirmed** [h] "there is a greatest element ''x'' of ''H'' such that" *With a and x below b: the source's definition. Right adjoint to meet is not quoted.*
+- input: **confirmed** [h] "A Heyting algebra ''H'' is a [[lattice (order)#Bounded_lattice|bounded lattice]] such that for all ''a'' and ''b'' in ''H''"
+- output: **confirmed** [h] "and is denoted ''a''→''b''."
+- preserved: **unsupported** *Intuitionistic validity and the adjunction are not quoted.*
+- broken: **confirmed** [h] "Boolean algebras are precisely the Heyting algebras satisfying ''a'' ∨ ¬''a'' = 1 ([[excluded middle]]), equivalently ¬¬''a'' = ''a''."
+- recalled: name: Standard; description: Largest c with c and a below b; right adjoint to meet; input: Heyting algebra; output: Implication; preserved: Adjunction with meet; broken: Excluded middle
+
+  h: excerpts/wikipedia-heyting-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377613483)
+
+### D7-189 Pseudo-Complement Evaluation (batch 8)
+
+- name: **confirmed** [p] "an element ''x'' ∈ ''L'' is said to have a ''pseudocomplement'' if there exists a [[greatest element]]"
+- description: **confirmed** [p] "an element ''x'' ∈ ''L'' is said to have a ''pseudocomplement'' if there exists a [[greatest element]]"
+- input: **confirmed** [p] "In a [[Lattice (order)|lattice]] ''L'' with [[bottom element]] 0"
+- output: **confirmed** [p] "if there exists a [[greatest element]] <math>x^*\in L</math>"
+- preserved: **unsupported** *Not quoted.*
+- broken: **confirmed** [h] "Boolean algebras are precisely the Heyting algebras satisfying ''a'' ∨ ¬''a'' = 1 ([[excluded middle]]), equivalently ¬¬''a'' = ''a''." *Double negation holds exactly in the Boolean case.*
+- recalled: name: Standard; description: Largest element disjoint from a; input: Pseudocomplemented lattice; output: Pseudocomplement; preserved: Disjointness; broken: Double negation
+
+  p: excerpts/wikipedia-pseudocomplement.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1346806602)
+  h: excerpts/wikipedia-heyting-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377613483)
+
+### D7-190 Relative Complement Evaluation (batch 8)
+
+- name: **confirmed** [c] "A '''relatively complemented lattice''' is a lattice such that every [[Interval (partial order)|interval]] [''c'',&nbsp;''d'']"
+- description: **confirmed** [c] "A '''relatively complemented lattice''' is a lattice such that every [[Interval (partial order)|interval]] [''c'',&nbsp;''d''], viewed as a bounded lattice in its own right, is a complemented lattice." *a \ b in a Boolean algebra is not checked.*
+- input: **confirmed** [c] "every [[Interval (partial order)|interval]] [''c'',&nbsp;''d''], viewed as a bounded lattice in its own right"
+- output: **confirmed** [c] "is a complemented lattice."
+- preserved: **unsupported** *Not stated.*
+- broken: **confirmed** [c] "Complements need not be unique." [c] "In bounded [[distributive lattice]]s, complements are unique."
+- recalled: name: Standard; description: Complement within an interval; input: Lattice and interval; output: Relative complement; preserved: Interval structure; broken: Uniqueness outside distributive lattices
+
+  c: excerpts/wikipedia-complemented-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1293084295)
+
+### D7-191 Stone Space Topologization (batch 8)
+
+- name: **confirmed** [s] "A simple version of '''Stone's representation theorem''' states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'')."
+- description: **confirmed** [s] "For every Boolean algebra ''B'', ''S''(''B'') is a [[Compact space|compact]] [[totally disconnected]] [[Hausdorff space]]"
+- input: **confirmed** [s] "For every Boolean algebra ''B''"
+- output: **confirmed** [s] "such spaces are called '''Stone spaces''' (also ''profinite spaces'')."
+- preserved: **confirmed** [s] "states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'')."
+- broken: **confirmed** [s] "In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories."
+- recalled: name: Standard (Stone); description: Ultrafilters with compact Hausdorff totally disconnected topology; duality; input: Boolean algebra; output: Stone space; preserved: B as clopens; broken: Nothing
+
+  s: excerpts/wikipedia-stones-representation-theorem-for-boolean-algebras.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1312231128)
+
+### D7-192 Priestley Space Topologization (batch 8)
+
+- name: **confirmed** [p] "Priestley spaces are named after [[Hilary Priestley]] who introduced and investigated them." *The attribution is the source's.*
+- description: **confirmed** [p] "Priestley spaces play a fundamental role in the study of [[distributive lattice]]s." *That the points are prime filters is not quoted.*
+- input: **confirmed** [p] "Priestley spaces play a fundamental role in the study of [[distributive lattice]]s."
+- output: **confirmed** [p] "a '''Priestley space''' is an [[partial order|ordered]] [[topological space]] with special properties."
+- preserved: **confirmed** [p] "provides a clopen up-set {{math|''U''}} of {{math|''X''}} such that" *Recovery of L as clopen up-sets is the duality; this window shows the clopen up-sets, not the isomorphism.*
+- broken: **confirmed** [p] "In particular, there is a [[duality theory for distributive lattices|duality]]"
+- recalled: name: Standard (Priestley); description: Prime filters as an ordered Stone space; duality; input: Bounded distributive lattice; output: Priestley space; preserved: L as clopen up-sets; broken: Nothing
+
+  p: excerpts/wikipedia-priestley-space.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383534420)
+
+### D7-193 Closure Operator Application (batch 8)
+
+- name: **confirmed** [c] "| {{nb5}}(cl is ''idempotent'')."
+- description: **confirmed** [c] "| {{nb5}}(cl is ''idempotent'')." *Extensive and monotone are the definition's other clauses; subalgebra generation and deductive closure are the source's examples, not quoted here.*
+- input: **confirmed** [c] "Closure operators are determined by their '''closed sets'''"
+- output: **confirmed** [c] "Closure operators are determined by their '''closed sets'''"
+- preserved: **confirmed** [c] "Such families of "closed sets" are sometimes called '''closure systems''' or "'''Moore families'''"." *That they form a complete lattice is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Extensive, monotone, idempotent map; input: Poset with closure operator; output: Closed element; preserved: Closed elements form a complete lattice; broken: x versus c(x)
+
+  c: excerpts/wikipedia-closure-operator.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377888587)
+  m: excerpts/mathlib-Mathlib.LinearAlgebra.Span.Defs.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Span/Defs.lean)
+
+### D7-194 Interior Operator Application (batch 8)
+
+- name: **confirmed** [i] "Interior algebras are to [[topology]] and the [[modal logic]] '''S4''' what [[Boolean algebra (structure)|Boolean algebra]]s are to [[set theory]] and ordinary [[propositional logic]]."
+- description: **confirmed** [i] "Interior algebras are to [[topology]] and the [[modal logic]] '''S4''' what [[Boolean algebra (structure)|Boolean algebra]]s are to [[set theory]] and ordinary [[propositional logic]]." *The axioms (contractive, monotone, idempotent) are not quoted.*
+- input: **confirmed** [i] "The [[duality (order theory)|dual]] of the interior operator is the '''[[closure operator]]'''"
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Deflationary, monotone, idempotent; interior; S4 box; input: Poset with interior operator; output: Open element; preserved: Open elements; broken: Boundary
+
+  i: excerpts/wikipedia-interior-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1295577828)
+
+### D7-195 Down-Set Generation (batch 8)
+
+- name: **confirmed** [u] "<math>\eta(x) = {\downarrow\! x}</math> is the lower closure of <math>x</math>."
+- description: **confirmed** [u] "Then the lower closure <math>\downarrow x</math> corresponds to the [[slice category]] over <math>x</math>" *Lower closure of a subset is not quoted separately.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Elements below some element of S; input: Poset and subset; output: Down-set; preserved: Down-set structure; broken: S versus its closure
+
+  u: excerpts/wikipedia-upper-set.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354544889)
+
+### D7-196 Up-Set Generation (batch 8)
+
+- name: **confirmed** [u] "map each antichain to its  upper closure (see below)"
+- description: **confirmed** [u] "* Every upper set <math>Y</math> of a finite partially ordered set <math>X</math> is equal to the smallest upper set containing all [[minimal element]]s of <math>Y."
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [u] "is equal to the smallest upper set containing all [[minimal element]]s of <math>Y."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Elements above some element of S; input: Poset and subset; output: Up-set; preserved: Up-set structure; broken: S versus its closure
+
+  u: excerpts/wikipedia-upper-set.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354544889)
+
+### D7-197 Antichain Extraction (batch 8)
+
+- name: **confirmed** [a] "an '''antichain''' is a subset of a [[partially ordered set]] such that any two distinct elements in the subset are [[Incomparability|incomparable]]."
+- description: **confirmed** [d] "the maximum size of an [[antichain]] of incomparable elements equals the minimum number of [[Chain (order theory)|chains]] needed to cover all elements." *Dilworth's theorem, for finite posets, as the fill says.*
+- input: **confirmed** [a] "is a subset of a [[partially ordered set]]"
+- output: **confirmed** [a] "an '''antichain''' is a subset of a [[partially ordered set]] such that any two distinct elements in the subset are [[Incomparability|incomparable]]."
+- preserved: **confirmed** [a] "The size of the largest antichain in a finite partially ordered set is known as its [[Width (partial order)|'''width''']]."
+- broken: **confirmed** [a] "such that any two distinct elements in the subset are [[Incomparability|incomparable]]." *No comparabilities remain inside an antichain.*
+- recalled: name: Standard (Dilworth); description: Pairwise incomparable set; max antichain equals min chain cover for finite posets; input: Poset; output: Antichain; preserved: Width; broken: Comparability
+
+  a: excerpts/wikipedia-antichain.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382006498)
+  d: excerpts/wikipedia-dilworths-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383233951)
+
+### D7-198 Chain Evaluation (batch 8)
+
+- name: **confirmed** [m] "The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]], a [[total order|totally ordered]] subset of the given partial order."
+- description: **confirmed** [m] "The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]]" [m] "'''Mirsky's theorem''' characterizes the height of any finite [[partially ordered set]] in terms of a partition of the order into a minimum nu" *The source measures height by cardinality; the fill's "length" must be read as size (a chain of length n has n + 1 elements in the other convention).*
+- input: **confirmed** [m] "characterizes the height of any finite [[partially ordered set]]"
+- output: **confirmed** [m] "a [[total order|totally ordered]] subset of the given partial order."
+- preserved: **confirmed** [m] "The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Mirsky); description: Totally ordered subsets; height equals min antichain partition; input: Poset; output: Chain; preserved: Height; broken: Incomparables
+
+  m: excerpts/wikipedia-mirskys-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1184448688)
+
+### D7-199 Zorn's Lemma Maximization (batch 8)
+
+- name: **confirmed** [z] "It states that a [[partially ordered set]] containing [[upper bound]]s for every [[chain (order theory)|chain]] (that is, every [[total order|totally ordered]] [[subset]]) [[Necessity and sufficiency|necessarily]] con"
+- description: **confirmed** [z] "necessarily]] contains at least one [[maximal element]]." [z] "the theorem that every [[vector space]] has a [[basis (linear algebra)|basis]]"
+- input: **confirmed** [z] "It states that a [[partially ordered set]] containing [[upper bound]]s for every [[chain (order theory)|chain]]"
+- output: **confirmed** [z] "necessarily]] contains at least one [[maximal element]]."
+- preserved: **confirmed** [z] "necessarily]] contains at least one [[maximal element]]." *Existence only.*
+- broken: **unsupported** *Non-constructivity and non-uniqueness are not stated in the fetched windows.*
+- recalled: name: Standard (Zorn); description: Chains bounded implies a maximal element; input: Nonempty poset; output: Maximal element; preserved: Existence; broken: Constructivity
+
+  z: excerpts/wikipedia-zorns-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364256157)
+  m: excerpts/mathlib-Mathlib.Order.Zorn.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Zorn.lean)
+
+### D7-200 Well-Ordering Transformation (batch 8)
+
+- name: **confirmed** [w] "the '''well-ordering theorem''', also known as '''Zermelo's theorem''', states that every [[Set (mathematics)|set]] can be [[well-order]]ed."
+- description: **confirmed** [w] "A set ''X'' is ''well-ordered'' by a [[strict total order]] if every non-empty subset of ''X'' has a [[least element]] under the ordering." *Transfinite induction is not quoted.*
+- input: **confirmed** [w] "are the most important mathematical statements that are equivalent to the [[axiom of choice]]"
+- output: **confirmed** [w] "states that every [[Set (mathematics)|set]] can be [[well-order]]ed."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Zermelo); description: Every set can be well-ordered (choice); input: Set; output: Well-order; preserved: Cardinality; broken: Canonicity
+
+  w: excerpts/wikipedia-well-ordering-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1344684772)
 

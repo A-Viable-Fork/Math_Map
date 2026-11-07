@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Ultrafilter (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380399862
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 969939cedec171c773492399a17ea66dec8e23a5b2f149650af134cb9122619f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]] of cardinality
+
+Especially, when considering the ultrafilters on a powerset <math>{\mathcal P}(S)</math>, the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]]
+
+Likewise, ultrafilters on Boolean algebras play a central role in [[Stone's representation theorem for Boolean algebras|Stone's representation theorem]].
+
+when considering the ultrafilters on a powerset <math>{\mathcal P}(S)</math>
+
+the resulting [[topological space]] is the [[Stone–Čech compactification]] of a [[discrete space]]

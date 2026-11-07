@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Ideal (order theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1367794239
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d3a5f07ca3730c07070f3316587aaa5afea3cfe47c6614fbb148ff14e29d2c28
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+For example, the [[ideal completion]] of a given partial order ''P'' is the set of all ideals of ''P'' ordered by subset inclusion.
+
+A directed lower subset of a poset ''X'' is called an ideal
+
+the [[ideal completion]] of a given partial order ''P''
+
+is the set of all ideals of ''P'' ordered by subset inclusion.
+
+The smallest ideal that contains a given element ''p'' is a {{em|{{visible anchor|principal ideal}}}}
+
+The principal ideal <math>\downarrow p</math> for a principal ''p'' is thus given by
+
+The smallest ideal that contains a given element ''p''

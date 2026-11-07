@@ -10,3 +10,11 @@ is the [[least element]] in <math>P</math> that is greater than or equ
 of a subset <math>S</math> of a partially ordered set <math>P</math>
 
 If the infimum of <math>S</math> exists, it is unique
+
+the '''infimum''' (abbreviated '''inf'''; {{plural abbr}}: '''infima''') of a [[subset]] <math>S</math> of a [[partially ordered set]] <math>P</math> is the [[greatest element]] in <math>P</math> that is less than or equal
+
+Consequently, the term ''greatest lower bound'' (abbreviated as {{em|GLB}}) is also commonly used.
+
+of a [[subset]] <math>S</math> of a [[partially ordered set]] <math>P</math>
+
+The empty set of cardinal numbers has many lower bounds but no greatest lower bound among cardinal numbers.

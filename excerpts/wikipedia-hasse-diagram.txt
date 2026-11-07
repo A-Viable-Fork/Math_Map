@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Hasse diagram (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1339943720
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bd4a46cd631d87392044434e23c32fa84a68de94ce4c2896594b0b88be162d2e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Hasse diagram''' ({{IPAc-en|ˈ|h|æ|s|ə}}; {{IPA|de|ˈhasə|lang}}) is a type of [[mathematical diagram]] used to represent a finite [[partially ordered set]]
+
+the [[directed acyclic graph]] obtained from the covering relation of a partially ordered set, independently of any drawing of that graph.
+
+the transitive reduction of the partial order.
+
+used to represent a finite [[partially ordered set]]
+
+the [[directed acyclic graph]] obtained from the covering relation of a partially ordered set
