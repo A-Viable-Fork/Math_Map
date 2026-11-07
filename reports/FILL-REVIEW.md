@@ -4,7 +4,7 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 416 of 416 D7 stubs, 0 of 79 homes; 416 entries in 17 batches.
+Reviewed: 416 of 416 D7 stubs, 20 of 79 homes; 436 entries in 18 batches.
 
 ## 1. Verdicts by field
 
@@ -21,6 +21,78 @@ Each population's fields, counted by verdict. The domain is the reviewed entry's
 | preserved | 272 | 2 | 0 | 142 |
 | broken | 125 | 4 | 0 | 287 |
 | **all** | 1864 | 16 | 0 | 616 |
+
+### Homes (20 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 16 | 0 | 0 | 4 |
+| description | 17 | 1 | 0 | 2 |
+| input | 16 | 0 | 0 | 4 |
+| output | 16 | 1 | 0 | 3 |
+| preserved | 16 | 0 | 0 | 4 |
+| broken | 8 | 0 | 1 | 11 |
+| **all** | 89 | 2 | 1 | 28 |
+
+### Homes, D2 (7 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 6 | 0 | 0 | 1 |
+| description | 7 | 0 | 0 | 0 |
+| input | 7 | 0 | 0 | 0 |
+| output | 6 | 1 | 0 | 0 |
+| preserved | 7 | 0 | 0 | 0 |
+| broken | 4 | 0 | 1 | 2 |
+| **all** | 37 | 1 | 1 | 3 |
+
+### Homes, D3 (3 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 3 | 0 | 0 | 0 |
+| description | 3 | 0 | 0 | 0 |
+| input | 3 | 0 | 0 | 0 |
+| output | 3 | 0 | 0 | 0 |
+| preserved | 3 | 0 | 0 | 0 |
+| broken | 1 | 0 | 0 | 2 |
+| **all** | 16 | 0 | 0 | 2 |
+
+### Homes, D4 (1 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 1 | 0 | 0 | 0 |
+| description | 1 | 0 | 0 | 0 |
+| input | 1 | 0 | 0 | 0 |
+| output | 1 | 0 | 0 | 0 |
+| preserved | 1 | 0 | 0 | 0 |
+| broken | 0 | 0 | 0 | 1 |
+| **all** | 5 | 0 | 0 | 1 |
+
+### Homes, D5 (1 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 1 | 0 | 0 | 0 |
+| description | 1 | 0 | 0 | 0 |
+| input | 1 | 0 | 0 | 0 |
+| output | 1 | 0 | 0 | 0 |
+| preserved | 1 | 0 | 0 | 0 |
+| broken | 1 | 0 | 0 | 0 |
+| **all** | 6 | 0 | 0 | 0 |
+
+### Homes, D8 (8 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 5 | 0 | 0 | 3 |
+| description | 5 | 1 | 0 | 2 |
+| input | 4 | 0 | 0 | 4 |
+| output | 5 | 0 | 0 | 3 |
+| preserved | 4 | 0 | 0 | 4 |
+| broken | 2 | 0 | 0 | 6 |
+| **all** | 25 | 1 | 0 | 22 |
 
 ## 2. Recall against source
 
@@ -45,7 +117,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 15 | 25 | 106 | 1 | 1% |
 | 16 | 25 | 94 | 0 | 0% |
 | 17 | 16 | 78 | 0 | 0% |
-| **all** | 416 | 1880 | 6 | 0% |
+| 18 | 20 | 92 | 3 | 3% |
+| **all** | 436 | 1972 | 9 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -63,8 +136,13 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-302 output: sample confirmed, review unsupported.
 - D7-376 description: sample unsupported, review confirmed.
 - D7-376 output: sample unsupported, review confirmed.
+- D2-036 output: sample unsupported, review confirmed.
+- D8-102 preserved: sample unsupported, review confirmed.
+- D8-102 broken: sample unsupported, review confirmed.
+- D8-040 name: sample confirmed, review unsupported.
+- D8-040 description: sample imprecise, review unsupported.
 
-Agreement: 78 of 90 fields.
+Agreement: 91 of 108 fields.
 
 ## 4. Sources in disagreement
 
@@ -396,6 +474,19 @@ Every field not confirmed, with the reason.
 - **D7-414 Ado's Theorem Matrix Embedding** (batch 17): *broken* unsupported: Not stated.
 - **D7-416 Kazhdan-Lusztig Polynomial Transformation** (batch 17): *broken* unsupported: Not stated.
 - **D7-465 M\u00f6bius Transform** (batch 17): *broken* unsupported: Not stated.
+- **D2-029 Inverse Two-sided Laplace Transform** (batch 18): *name* unsupported: No fetched source states the bilateral inverse by name; the unilateral inverse is (Wikipedia, Inverse Laplace transform). *broken* unsupported: Not stated for the bilateral case.
+- **D2-033 Poisson-Mellin-Newton Cycle** (batch 18): *output* imprecise: The cycle's output is the original sequence, regained exactly through the Mellin transform and the Nørlund-Rice integral; an asymptotic expansion is what evaluating that integral gives. *broken* wrong: The cycle loses nothing: the sequence is regained exactly, so exact values survive.
+- **D2-036 Harish-Chandra Transform** (batch 18): *broken* unsupported: Not stated.
+- **D3-171 Discrete cosine transform** (batch 18): *broken* unsupported: Not stated.
+- **D3-184 Stirling transform** (batch 18): *broken* unsupported: Not stated.
+- **D4-175 Hilbert-Schmidt integral operator** (batch 18): *broken* unsupported: Not stated.
+- **D8-040 Discrete Hankel transform** (batch 18): *name* unsupported: No fetched source for the discrete Hankel transform; the Hankel transform page names it only in a reference title. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D8-035 Daubechies wavelet transform** (batch 18): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *broken* unsupported: Asymmetry of the filters is not stated; the source chooses the extremal-phase solution.
+- **D8-201 Square root transform** (batch 18): *description* imprecise: Anscombe's transform is 2 sqrt(x + 3/8), the factor 2 setting the variance near 1; the fill writes sqrt(x + 3/8). *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D8-202 Square transform** (batch 18): *name* unsupported: No fetched source for the square transform as such. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D8-016 Box-Cox transform** (batch 18): *input* unsupported: Positivity of the data is not quoted for the one-parameter form. *broken* unsupported: Not stated.
+- **D8-166 Quantile transform** (batch 18): *name* unsupported: No fetched source uses the name quantile transform. *broken* unsupported: Not stated.
+- **D8-055 Feature binning transformation** (batch 18): *preserved* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -5517,4 +5608,246 @@ actions defining an optic"
 
   m: excerpts/wikipedia-mobius-inversion.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1326604822)
   n: excerpts/wikipedia-incidence-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047)
+
+### D2-017 Rectangular Mask STFT (batch 18; covers D5-115, D7-424, D8-179)
+
+- name: **confirmed** [r] "a '''rectangular mask short-time Fourier transform''' (rec-STFT) is a simplified form of the [[short-time Fourier transform]]"
+- description: **confirmed** [r] "In rec-STFT, a '''rectangular window''' (a simple on/off time-limiting function) is used to isolate short time segments of the signal." [r] ": <math>X(t,f)=\int_{t-B}^{t+B} x(\tau) e^{-j2\pi f\tau} \, d\tau</math>"
+- input: **confirmed** [r] "The [[Rectangular function|rectangular mask function]] can be defined for some bound (''B)'' over time (''t'') as"
+- output: **confirmed** [r] ": <math>X(t,f)=\int_{t-B}^{t+B} x(\tau) e^{-j2\pi f\tau} \, d\tau</math>"
+- preserved: **confirmed** [r] ":: <math>\int_{-\infty}^\infty \int_{-\infty}^\infty |X(t, f)|^2\,df\,dt = 2B \int_{-\infty}^\infty |x(\tau)|^2\,d\tau</math>" [r] "Inverse form" *Energy up to the factor 2B; the source's continuous inverse needs no overlap condition, the discrete case being where overlap enters.*
+- broken: **confirmed** [r] "The [[jump discontinuity]] of the edges of the rectangular mask results in [[Gibbs phenomenon|Gibbs ringing artifacts]] in the frequency domain"
+- recalled: name: Standard (STFT with boxcar window); description: Fourier transform of rectangular-windowed segments; input: Signal and window; output: Time-frequency coefficients; preserved: Invertibility with overlap; broken: Leakage from sidelobes
+
+  r: excerpts/wikipedia-rect-stft.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380155291)
+
+### D2-028 Two-sided Laplace Transform (batch 18; covers D3-162, D5-141, D7-436, D8-221)
+
+- name: **confirmed** [b] "the '''two-sided Laplace transform''' or '''bilateral Laplace transform''' is an [[integral transform]] equivalent to [[probability]]'s [[moment-generating function]]."
+- description: **confirmed** [b] "<math>\mathcal{B}\{f\}(s) = F(s) = \int_{-\infty}^\infty e^{-st} f(t)\, dt.</math>" [b] "The [[Fourier transform]] can be defined in terms of the two-sided Laplace transform {{tmath|F}} of a function {{tmath|f}}:" [b] "| <math> \alpha < \Re(s) < \beta </math>" *The page writes the strip once as a < Im(s) < b, elsewhere in Re(s); the fill's vertical strip matches the Re(s) form.*
+- input: **confirmed** [b] "<math>\mathcal{B}\{f\}(s) = F(s) = \int_{-\infty}^\infty e^{-st} f(t)\, dt.</math>"
+- output: **confirmed** [b] "| <math> \alpha < \Re(s) < \beta </math>" *A strip of convergence; analyticity is not quoted.*
+- preserved: **confirmed** [b] "| <math> (f * g)(t) = \int_{-\infty}^{\infty} f(\tau)\,g(t - \tau)\,d\tau </math>" [b] "then {{tmath|1= f=g }} [[almost everywhere]]."
+- broken: **confirmed** [b] "Bilateral transforms do not respect [[causality]]." *That specifying the strip restores it is not quoted.*
+- recalled: name: Standard; description: Bilateral Laplace transform over R; strip of convergence; Fourier on the imaginary axis; moment generating function; input: Function on R; output: Analytic function on a strip; preserved: Convolution to product; broken: Ambiguity without the strip
+
+  b: excerpts/wikipedia-two-sided-laplace.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382300991)
+
+### D2-029 Inverse Two-sided Laplace Transform (batch 18; covers D3-163, D5-071, D8-101)
+
+- name: **unsupported** *No fetched source states the bilateral inverse by name; the unilateral inverse is (Wikipedia, Inverse Laplace transform).*
+- description: **confirmed** [i] "where the integration is done along the vertical line <math>\textrm{Re}(s) = \gamma</math> in the [[complex plane]]" *The source states Bromwich's formula for the unilateral transform; the bilateral case is the same integral along a line in the strip.*
+- input: **confirmed** [i] "for example if the contour path is in the [[region of convergence]]."
+- output: **confirmed** [i] ":<math>f(t) = \mathcal{L}^{-1} \{F(s)\}(t) =  \frac{1}{2\pi i}\lim_{T\to\infty}\int_{\gamma-iT}^{\gamma+iT}e^{st}F(s)\,ds</math>"
+- preserved: **confirmed** [i] "then <math>f</math> is uniquely determined"
+- broken: **unsupported** *Not stated for the bilateral case.*
+- recalled: name: Standard; description: Bromwich integral along a vertical line in the strip; input: F and strip; output: Function; preserved: Information; broken: Ambiguity without the strip
+
+  i: excerpts/wikipedia-inverse-laplace.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1366640671)
+
+### D2-033 Poisson-Mellin-Newton Cycle (batch 18; covers D3-167, D4-303, D8-155)
+
+- name: **confirmed** [n] "The Poisson–Mellin–Newton cycle, noted by Flajolet et al. in 1985, is the observation that the resemblance of the Nørlund–Rice integral to the [[Mellin transform]] is not accidental"
+- description: **confirmed** [n] "The Poisson–Mellin–Newton cycle, noted by Flajolet et al. in 1985" [m] "The Mellin transform also connects the [[Newton series]] or [[binomial transform]] to the [[Poisson generating function]] by means of the [[Poisson–Mellin–Newton cycle]]." [m] "The Mellin transform is widely used in computer science for the [[analysis of algorithms]]"
+- input: **confirmed** [n] "let <math>\{f_n\}</math> be a [[sequence]], and let ''g''(''t'') be the corresponding [[Poisson generating function]]"
+- output: **imprecise** [n] "the integral can often be evaluated using [[asymptotic expansion]]" *The cycle's output is the original sequence, regained exactly through the Mellin transform and the Nørlund-Rice integral; an asymptotic expansion is what evaluating that integral gives.* (recall contradicted)
+- preserved: **confirmed** [n] "one can then regain the original sequence by means of the Nörlund–Rice integral" *The source regains the whole sequence, more than its asymptotics.*
+- broken: **wrong** [n] "one can then regain the original sequence by means of the Nörlund–Rice integral" *The cycle loses nothing: the sequence is regained exactly, so exact values survive.* (recall contradicted)
+- recalled: name: Standard (Flajolet and Sedgewick; Rice integrals); description: Poisson, Mellin and Newton transforms linked in analysis of algorithms; input: Sequence; output: Asymptotics; preserved: Asymptotics; broken: Exact values
+
+  n: excerpts/wikipedia-norlund-rice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1370498533)
+  m: excerpts/wikipedia-mellin-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378457791)
+
+### D2-036 Harish-Chandra Transform (batch 18)
+
+- name: **confirmed** [p] "The transformation ''U'' is called the '''spherical Fourier transform''' or sometimes just the '''spherical transform'''" *The source's name is the spherical transform, whose Plancherel theorem is Harish-Chandra's; "Harish-Chandra transform" is not the source's name.*
+- description: **confirmed** [p] "The transformation ''U'' is called the '''spherical Fourier transform''' or sometimes just the '''spherical transform'''" [p] "consisting of compactly supported ''K''-biinvariant continuous functions on ''G''" [p] "due in its final form to [[Harish-Chandra]]"
+- input: **confirmed** [p] "consisting of compactly supported ''K''-biinvariant continuous functions on ''G''"
+- output: **confirmed** [p] "Two different characters λ<sub>1</sub> and λ<sub>2</sub> give the same spherical function if and only if λ<sub>1</sub> = λ<sub>2</sub>·''s'', where ''s'' is in the [[Weyl group]] of ''A''" *Characters up to the Weyl group: the Weyl-invariance of the output.*
+- preserved: **confirmed** [p] "and μ is called the '''[[Plancherel measure]]'''" [p] "Here '''c'''(λ) is '''Harish-Chandra's c-function'''."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Harish-Chandra); description: Spherical transform of K-bi-invariant functions; Plancherel with c-function; input: K-bi-invariant function; output: Weyl-invariant function; preserved: Convolution to product; broken: Non-invariant information
+
+  p: excerpts/wikipedia-plancherel-spherical.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354552690)
+
+### D2-038 Fourier-Stieltjes Transform (batch 18)
+
+- name: **confirmed** [f] "is called the ''Fourier–Stieltjes transform''"
+- description: **confirmed** [f] "The Fourier transform of a [[finite measure|finite]] [[Borel measure]] {{mvar|μ}} on {{math|'''R'''<sup>''n''</sup>}}, given by the bounded, uniformly continuous function:" [f] "then its Fourier–Stieltjes transform is, by definition, a [[Characteristic function (probability theory)|characteristic function]]." *The source's kernel is e^{-i 2 pi x xi}; the fill's e^{-i x xi} is another normalization.*
+- input: **confirmed** [f] "The Fourier transform of a [[finite measure|finite]] [[Borel measure]]"
+- output: **confirmed** [f] "given by the bounded, uniformly continuous function:"
+- preserved: **confirmed** [c] "There is a [[Bijection|one-to-one correspondence]] between cumulative distribution functions and characteristic functions" [f] "[[Bochner's theorem]] characterizes which functions may arise as the Fourier–Stieltjes transform of a positive measure on the circle." *Convolution to product is not quoted.*
+- broken: **confirmed** [f] "the Fourier-Stieltjes transform need not vanish at infinity, i.e., the [[Riemann–Lebesgue lemma]] fails for measures."
+- recalled: name: Standard; description: Fourier transform of a finite measure; characteristic functions; Bochner; input: Finite measure; output: Bounded uniformly continuous function; preserved: Uniqueness; broken: Decay at infinity
+
+  f: excerpts/wikipedia-fourier-transform-measure.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382587942)
+  c: excerpts/wikipedia-fourier-stieltjes.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378990780)
+
+### D2-039 Z-transform (batch 18; covers D5-149, D7-464, D8-234)
+
+- name: **confirmed** [z] "the '''Z-transform''' converts a [[discrete-time signal]]"
+- description: **confirmed** [z] "<math>X(z) = \mathcal{Z}\{x[n]\} = \sum_{n=-\infty}^{\infty} x[n] z^{-n}</math>" [z] "It can be considered a discrete-time counterpart of the [[Laplace transform]]"
+- input: **confirmed** [z] "The ''bilateral'' or ''two-sided'' Z-transform of a discrete-time signal <math>x[n]</math>"
+- output: **confirmed** [z] "ROC shown as a blue ring 0.5&nbsp;<&nbsp;{{abs|''z''}}&nbsp;<&nbsp;0.75" *A ring of convergence, in an example.*
+- preserved: **confirmed** [z] "<math>X_1(z) \, X_2(z)</math>" [z] "is unique when and only when specifying the ROC."
+- broken: **confirmed** [z] "the Z-transform <math>X(z)</math> of <math>x[n]</math> is unique when and only when specifying the ROC."
+- recalled: name: Standard; description: X(z) = sum x_n z^-n on an annulus; discrete Laplace analogue; input: Sequence; output: Function on annulus; preserved: Convolution to product; broken: Causality without the region
+
+  z: excerpts/wikipedia-z-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379162615)
+
+### D8-102 Inverse Z-transform (batch 18)
+
+- name: **confirmed** [z] "The ''inverse'' Z-transform is:"
+- description: **confirmed** [z] "This method involves applying the [[Residue theorem|Cauchy Residue Theorem]] to evaluate the inverse Z-transform." [z] "In this method, the Z-transform is expanded into a power series." [z] "This technique decomposes the Z-transform into a sum of simpler fractions, each corresponding to known Z-transform pairs."
+- input: **confirmed** [z] "entirely in the [[Radius of convergence|region of convergence]] (ROC)"
+- output: **confirmed** [z] "<math> x[n] = \mathcal{Z}^{-1} \{X(z) \}= \frac{1}{2 \pi i} \oint_{C} X(z) z^{n-1} dz</math>"
+- preserved: **confirmed** [z] "is unique when and only when specifying the ROC."
+- broken: **confirmed** [z] "Let us assume we are provided a Z-transform of a system without a ROC (i.e., an ambiguous {{tmath| x[n] }})." *Without the region the sequence is ambiguous; given it, nothing is lost.*
+- recalled: name: Standard; description: Contour integral, partial fractions, power series; input: X(z) and region; output: Sequence; preserved: Information; broken: Nothing given the region
+
+  z: excerpts/wikipedia-z-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379162615)
+
+### D3-171 Discrete cosine transform (batch 18; covers D7-454, D8-038)
+
+- name: **confirmed** [d] "A '''discrete cosine transform''' ('''DCT''') expresses a finite sequence of [[data points]] in terms of a sum of [[cosine]] functions oscillating at different [[frequencies]]."
+- description: **confirmed** [d] "A '''discrete cosine transform''' ('''DCT''') expresses a finite sequence of [[data points]] in terms of a sum of [[cosine]] functions oscillating at different [[frequencies]]." [d] "The most common variant of discrete cosine transform is the type-II DCT" [d] "because it has a strong ''energy compaction'' property." [d] "It is used in image compression standards such as [[JPEG]]"
+- input: **confirmed** [d] "Formally, the discrete cosine transform is a [[linear]], invertible [[function (mathematics)|function]] <math> f : \R^{N} \to \R^{N} </math>"
+- output: **confirmed** [d] "Formally, the discrete cosine transform is a [[linear]], invertible [[function (mathematics)|function]] <math> f : \R^{N} \to \R^{N} </math>"
+- preserved: **confirmed** [d] "This makes the DCT-II matrix [[orthogonal matrix|orthogonal]]" [d] "Formally, the discrete cosine transform is a [[linear]], invertible [[function (mathematics)|function]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Ahmed, Natarajan, Rao 1974); description: Cosine basis; DCT-II; energy compaction; JPEG; input: Real sequence; output: Coefficients; preserved: Energy (orthonormal); broken: Locality
+
+  d: excerpts/wikipedia-dct.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383445210)
+
+### D3-172 Modified discrete cosine transform (batch 18; covers D8-137)
+
+- name: **confirmed** [m] "The '''modified discrete cosine transform''' ('''MDCT''') is a transform based on the type-IV [[discrete cosine transform]] (DCT-IV), with the additional property of being [[lapped transform|lapped]]"
+- description: **confirmed** [m] "it is designed to be performed on consecutive blocks of a larger [[dataset]], where subsequent blocks are overlapped" [m] "<math>F\colon \mathbf{R}^{2N} \to \mathbf{R}^N</math>" [m] "The MDCT was later proposed by John P. Princen, A.W. Johnson and Alan B. Bradley at the [[University of Surrey]] in 1987" [m] "following earlier work by Princen and Bradley (1986)" *The source dates the MDCT to Princen, Johnson and Bradley (1987) and its aliasing cancellation to Princen and Bradley (1986).*
+- input: **confirmed** [m] "it is designed to be performed on consecutive blocks of a larger [[dataset]]"
+- output: **confirmed** [m] "it has half as many outputs as inputs (instead of the same number)."
+- preserved: **confirmed** [m] "However, perfect invertibility is achieved by ''adding'' the overlapped IMDCTs of subsequent overlapping blocks"
+- broken: **confirmed** [m] "at first glance it might seem that the MDCT should not be invertible." *A single block is not inverted on its own.*
+- recalled: name: Standard (Princen and Bradley); description: Lapped transform 2N to N with TDAC; input: Overlapping blocks; output: Coefficients; preserved: Perfect reconstruction; broken: Single-block invertibility
+
+  m: excerpts/wikipedia-mdct.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1279243458)
+
+### D3-184 Stirling transform (batch 18; covers D5-135, D7-463, D8-204)
+
+- name: **confirmed** [s] "the '''Stirling transform''' of a [[sequence]]"
+- description: **confirmed** [s] ":<math>b_n=\sum_{k=1}^n \left\{\begin{matrix} n \\ k \end{matrix} \right\} a_k</math>" [s] "is a signed [[Stirling number of the first kind]]" [s] ":<math>g(x) = f(e^x-1)</math>."
+- input: **confirmed** [s] "of a [[sequence]] { ''a''<sub>''n''</sub> : ''n'' = 1, 2, 3, ... } of numbers"
+- output: **confirmed** [s] "is the sequence { ''b''<sub>''n''</sub> : ''n'' = 1, 2, 3, ... } given by"
+- preserved: **confirmed** [s] "The inverse transform is"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: b_n = sum S(n,k) a_k; inverse with first kind; EGF composition with e^x - 1; input: Sequence; output: Sequence; preserved: Invertible; broken: Nothing
+
+  s: excerpts/wikipedia-stirling-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371072699)
+
+### D4-175 Hilbert-Schmidt integral operator (batch 18; covers D5-061, D7-431, D8-093)
+
+- name: **confirmed** [h] "a '''Hilbert–Schmidt integral operator''' is a type of [[integral transform]]."
+- description: **confirmed** [h] ":<math>(Tf) (x) = \int_{\Omega} k(x, y) f(y) \, dy</math>" [h] ":<math>\Vert T \Vert_\mathrm{HS} = \Vert k \Vert_{L^2}.</math>" [h] "Hilbert–Schmidt integral operators are both [[continuous function|continuous]] and [[compact operator|compact]]."
+- input: **confirmed** [h] ":<math>\int_{\Omega} \int_{\Omega} | k(x, y) |^{2} \,dx \, dy < \infty ,</math>"
+- output: **confirmed** [h] "{{math|''T''&nbsp;:&nbsp;''L''<sup>2</sup>(&Omega;)&nbsp;&rarr;&nbsp;''L''<sup>2</sup>(&Omega;)}} given by"
+- preserved: **confirmed** [h] "Hilbert–Schmidt integral operators are both [[continuous function|continuous]] and [[compact operator|compact]]." *Square-summable singular values are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: L^2 kernel operator; compact; HS norm equals kernel L^2 norm; input: Kernel and function; output: Function; preserved: Compactness; broken: Invertibility
+
+  h: excerpts/wikipedia-hs-integral-operator.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1328385372)
+
+### D5-073 Irrational base DWT (batch 18)
+
+- name: **confirmed** [i] "the '''irrational base discrete weighted transform''' ('''IBDWT''') is a variant of the [[fast Fourier transform]] using an [[irrational number|irrational]] base;" *The source credits Crandall, Fagin and Doenias with the transform and Crandall and Fagin with its key elements; the fill names Crandall and Fagin.*
+- description: **confirmed** [i] "This approach avoids the need for zero-padding the arrays and performs the multiplication modulo <math>M_p</math> directly." [i] "It is most notably used in the [[Great Internet Mersenne Prime Search]]." [i] "is based on four key elements developed by Crandall and Fagin:"
+- input: **confirmed** [i] "which requires repeated squaring modulo a Mersenne number <math>M_p = 2^p - 1</math>"
+- output: **confirmed** [i] "The algorithm to compute the product <math>xy \pmod{M_p}</math> is as follows:"
+- preserved: **confirmed** [i] "performs the multiplication modulo <math>M_p</math> directly."
+- broken: **confirmed** [i] "optionally checking the roundoff error is no greater than 0.4" *Exact after rounding to integers, with a roundoff check.*
+- recalled: name: Standard (Crandall and Fagin 1994); description: Weighted FFT for multiplication mod 2^p - 1 without padding; GIMPS; input: Integers mod Mersenne; output: Product; preserved: Product; broken: Nothing
+
+  i: excerpts/wikipedia-ibdwt.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364721671)
+
+### D8-040 Discrete Hankel transform (batch 18)
+
+- name: **unsupported** *No fetched source for the discrete Hankel transform; the Hankel transform page names it only in a reference title.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Johnson; Guizar-Sicairos); description: Sampling at Bessel zeros; input: Radial samples; output: Hankel samples; preserved: Approximate orthogonality; broken: Exactness
+
+
+### D8-035 Daubechies wavelet transform (batch 18)
+
+- name: **confirmed** [d] "The '''Daubechies wavelets''', based on the work of [[Ingrid Daubechies]], are a family of [[orthogonal wavelet]]s defining a [[discrete wavelet transform]]"
+- description: **confirmed** [d] "characterized by a maximal number of vanishing [[Moment (mathematics)|moments]] for some given [[Support (mathematics)|support]]."
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [d] "D4 encodes polynomials with two coefficients, i.e. constant and linear signal components" *Polynomial reproduction; energy is read from orthogonality, not quoted.*
+- broken: **unsupported** *Asymmetry of the filters is not stated; the source chooses the extremal-phase solution.*
+- recalled: name: Standard (Daubechies 1988); description: Compactly supported orthogonal wavelets with maximal vanishing moments; input: Signal; output: Wavelet coefficients; preserved: Energy; broken: Symmetry
+
+  d: excerpts/wikipedia-daubechies.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377628474)
+
+### D8-201 Square root transform (batch 18)
+
+- name: **confirmed** [v] ":<math>y=\sqrt{x} \, </math>"
+- description: **imprecise** [a] ": <math>A:x \mapsto 2 \sqrt{x + \tfrac{3}{8}} \, </math>" *Anscombe's transform is 2 sqrt(x + 3/8), the factor 2 setting the variance near 1; the fill writes sqrt(x + 3/8).* (recall contradicted)
+- input: **confirmed** [v] "suppose that the values x are realizations from different [[Poisson distribution]]s"
+- output: **confirmed** [v] "such that the variability of the values ''y'' is not related to their mean value."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Anscombe); description: Square root; variance stabilizing for Poisson; sqrt(x + 3/8); input: Counts; output: Stabilized data; preserved: Order; broken: Scale
+
+  v: excerpts/wikipedia-variance-stabilizing.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1328174344)
+  a: excerpts/wikipedia-anscombe.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375126716)
+
+### D8-202 Square transform (batch 18)
+
+- name: **unsupported** *No fetched source for the square transform as such.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Generic; description: Square of the data; input: Data; output: Squared data; preserved: Order on nonnegatives; broken: Sign
+
+
+### D8-016 Box-Cox transform (batch 18)
+
+- name: **confirmed** [p] "The one-parameter Box–Cox transformations are defined as"
+- description: **confirmed** [p] "\dfrac{y_i^\lambda - 1}{\lambda} & \text{if } \lambda \neq 0," [p] "\ln y_i & \text{if } \lambda = 0," [p] "This allows the normal [[Maximum likelihood#Continuous distribution, continuous parameter space|log likelihood at its maximum]] to be written as follows:" [p] "make the data more [[normal distribution]]-like"
+- input: **unsupported** *Positivity of the data is not quoted for the one-parameter form.*
+- output: **confirmed** [p] "The one-parameter Box–Cox transformations are defined as"
+- preserved: **confirmed** [p] "a family of functions applied to create a [[Monotonic function|monotonic transformation]] of data using [[power function]]s"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Box and Cox 1964); description: Power family with log at zero; lambda by maximum likelihood; input: Positive data; output: Transformed data; preserved: Order; broken: Scale
+
+  p: excerpts/wikipedia-power-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380160451)
+
+### D8-166 Quantile transform (batch 18)
+
+- name: **unsupported** *No fetched source uses the name quantile transform.*
+- description: **confirmed** [p] "Then the random variable <math>Y</math> defined as" [p] "has a [[standard uniform distribution]]." [p] "applying the inverse of the probability integral transform to convert random variables from a uniform distribution to have a selected distribution" [q] "sort the test distribution and sort the reference distribution." *The source states it with the true distribution function; the empirical version is quantile normalization (the second source).*
+- input: **confirmed** [p] "data values that are modeled as being [[random variable]]s from any given [[continuous distribution]]"
+- output: **confirmed** [p] "The result is sometimes modified or extended so that the result of the transformation is a standard distribution other than the uniform distribution"
+- preserved: **confirmed** [q] "The highest entry in the test distribution then takes the value of the highest entry in the reference distribution"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Empirical CDF then inverse target CDF; input: Data; output: Uniform or normal marginals; preserved: Rank order; broken: Distances
+
+  p: excerpts/wikipedia-probability-integral-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1359903284)
+  q: excerpts/wikipedia-quantile-normalization.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1249280901)
+
+### D8-055 Feature binning transformation (batch 18)
+
+- name: **confirmed** [b] "'''Data binning''', also called '''data discrete binning''' or '''data bucketing''', is a [[data pre-processing]] technique"
+- description: **confirmed** [b] "'''Statistical data binning''' is a way to group numbers of more-or-less continuous values into a smaller number of "bins"." *Learned bins are not quoted.*
+- input: **confirmed** [b] "to group numbers of more-or-less continuous values"
+- output: **confirmed** [b] "The original data values which fall into a given small interval, a ''[[bin (computational geometry)|bin]]'', are replaced by a value representative of that interval"
+- preserved: **unsupported** *Not stated.*
+- broken: **confirmed** [b] "are replaced by a value representative of that interval" *Within-bin variation is replaced by one value.*
+- recalled: name: Standard; description: Discretize into intervals; input: Continuous feature; output: Bins; preserved: Order; broken: Within-bin variation
+
+  b: excerpts/wikipedia-data-binning.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1295299437)
 

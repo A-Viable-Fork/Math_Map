@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Data binning (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1295299437
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b281d89034be7360ce7ed3b20b17d72cb35d5862d4d9f3e4c17eaad1bb56ec44
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Data binning''', also called '''data discrete binning''' or '''data bucketing''', is a [[data pre-processing]] technique
+
+'''Statistical data binning''' is a way to group numbers of more-or-less continuous values into a smaller number of "bins".
+
+to group numbers of more-or-less continuous values
+
+The original data values which fall into a given small interval, a ''[[bin (computational geometry)|bin]]'', are replaced by a value representative of that interval
+
+are replaced by a value representative of that interval

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Quantile normalization (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1249280901
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 19cb56fc09e740a63e7a3be419bcf55e6e51d9944b9aa1a270bd64f5d6d44cf2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+sort the test distribution and sort the reference distribution.
+
+The highest entry in the test distribution then takes the value of the highest entry in the reference distribution

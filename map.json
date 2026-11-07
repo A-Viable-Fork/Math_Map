@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "bc19ba6103b80834d83ff5ee05d35ddf39101cd8"
+  "commit": "76eb38d22616238b8b8b713b5e683916ab194e9f"
  },
  "domains": {
   "D1": {
@@ -748,20 +748,20 @@
   },
   "byTier": {
    "landed": 1337,
-   "audited": 512,
-   "authored": 98,
+   "audited": 552,
+   "authored": 58,
    "receipted": 74,
    "flagged": 1,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 37,
+  "corrected": 42,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 691,
-   "unchecked": 8878,
-   "imprecise": 18,
-   "sourced": 2727,
+   "unsupported": 721,
+   "unchecked": 8638,
+   "imprecise": 17,
+   "sourced": 2938,
    "formal": 82
   },
   "lean": {
@@ -4793,14 +4793,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-018",
@@ -5090,14 +5091,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-029",
@@ -5117,14 +5119,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-030",
@@ -5236,23 +5239,53 @@
    ],
    "description": "The triangle of correspondences between Poisson generating functions, Mellin transforms and Newton (finite difference) series used in the analysis of algorithms (Flajolet and coauthors): a sequence's asymptotics read from the poles of a Mellin transform via Rice's integrals.",
    "input": "Sequence or generating function",
-   "output": "Asymptotic expansion via Mellin poles",
+   "output": "The original sequence, regained exactly from the Mellin transform of its Poisson generating function by the Nørlund-Rice integral; asymptotic expansions come from evaluating that integral",
    "preserved": "Asymptotic information",
-   "broken": "Exact values (only asymptotics survive)",
+   "broken": "Nothing: the cycle regains the sequence exactly; asymptotics are a use of it, not all that survives",
    "complexity": "See Domain 6 home entry",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "reading": "Recorded from memory of the analytic-combinatorics literature.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "output",
+     "broken"
+    ],
+    "landed": {
+     "output": "Asymptotic expansion via Mellin poles",
+     "broken": "Exact values (only asymptotics survive)"
+    },
+    "reason": "Fill review, batch 18: output graded imprecise and broken graded wrong on this entry, the home's first; the grade covers D3-167, D4-303 and D8-155. The landed fill said only asymptotics survive; the source says the cycle regains the original sequence, and that the integral can often be evaluated by asymptotic expansion.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "one can then regain the original sequence by means of the",
+      "fields": [
+       "output",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "the integral can often be evaluated using [[asymptotic expansion]]",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D2-034",
@@ -5329,7 +5362,7 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "unsupported",
+    "output": "sourced",
     "preserved": "sourced",
     "broken": "unsupported"
    },
@@ -5354,14 +5387,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-039",
@@ -5381,14 +5415,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-037",
@@ -15026,14 +15061,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D3-163",
@@ -15053,14 +15089,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D3-164",
@@ -15156,23 +15193,53 @@
    ],
    "description": "The triangle of correspondences between Poisson generating functions, Mellin transforms and Newton (finite difference) series used in the analysis of algorithms (Flajolet and coauthors): a sequence's asymptotics read from the poles of a Mellin transform via Rice's integrals.",
    "input": "Sequence or generating function",
-   "output": "Asymptotic expansion via Mellin poles",
+   "output": "The original sequence, regained exactly from the Mellin transform of its Poisson generating function by the Nørlund-Rice integral; asymptotic expansions come from evaluating that integral",
    "preserved": "Asymptotic information",
-   "broken": "Exact values (only asymptotics survive)",
+   "broken": "Nothing: the cycle regains the sequence exactly; asymptotics are a use of it, not all that survives",
    "complexity": "See Domain 6",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "reading": "Recorded from memory of the analytic-combinatorics literature.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "output",
+     "broken"
+    ],
+    "landed": {
+     "output": "Asymptotic expansion via Mellin poles",
+     "broken": "Exact values (only asymptotics survive)"
+    },
+    "reason": "Fill review, batch 18: output graded imprecise and broken graded wrong on the home's first entry (D2-033), which covers this one. The landed fill said only asymptotics survive; the source says the cycle regains the original sequence, and that the integral can often be evaluated by asymptotic expansion.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "one can then regain the original sequence by means of the",
+      "fields": [
+       "output",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "the integral can often be evaluated using [[asymptotic expansion]]",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D3-168",
@@ -15276,14 +15343,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D3-172",
@@ -15303,14 +15371,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D3-173",
@@ -15638,14 +15707,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D3-185",
@@ -20933,14 +21003,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-176",
@@ -24608,23 +24679,53 @@
    ],
    "description": "The triangle of correspondences between Poisson generating functions, Mellin transforms and Newton (finite difference) series used in the analysis of algorithms (Flajolet and coauthors): a sequence's asymptotics read from the poles of a Mellin transform via Rice's integrals.",
    "input": "Sequence or generating function",
-   "output": "Asymptotic expansion via Mellin poles",
+   "output": "The original sequence, regained exactly from the Mellin transform of its Poisson generating function by the Nørlund-Rice integral; asymptotic expansions come from evaluating that integral",
    "preserved": "Asymptotic information",
-   "broken": "Exact values (only asymptotics survive)",
+   "broken": "Nothing: the cycle regains the sequence exactly; asymptotics are a use of it, not all that survives",
    "complexity": "See D6",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "reading": "Recorded from memory of the analytic-combinatorics literature.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "output",
+     "broken"
+    ],
+    "landed": {
+     "output": "Asymptotic expansion via Mellin poles",
+     "broken": "Exact values (only asymptotics survive)"
+    },
+    "reason": "Fill review, batch 18: output graded imprecise and broken graded wrong on the home's first entry (D2-033), which covers this one. The landed fill said only asymptotics survive; the source says the cycle regains the original sequence, and that the integral can often be evaluated by asymptotic expansion.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "one can then regain the original sequence by means of the",
+      "fields": [
+       "output",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "the integral can often be evaluated using [[asymptotic expansion]]",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D4-304",
@@ -30213,14 +30314,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D5-062",
@@ -30491,14 +30593,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D5-072",
@@ -30545,14 +30648,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D5-074",
@@ -31704,14 +31808,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D5-116",
@@ -32257,14 +32362,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D5-136",
@@ -32421,14 +32527,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D5-142",
@@ -32642,14 +32749,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D6-001",
@@ -50581,14 +50689,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-425",
@@ -50776,14 +50885,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-432",
@@ -50915,14 +51025,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-437",
@@ -51418,14 +51529,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-455",
@@ -51669,14 +51781,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-464",
@@ -51696,14 +51809,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-465",
@@ -52094,14 +52208,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-018",
@@ -52582,15 +52697,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "sourced",
-    "description": "imprecise",
+    "name": "unsupported",
+    "description": "unsupported",
     "input": "unsupported",
     "output": "unsupported",
     "preserved": "unsupported",
     "broken": "unsupported"
    },
    "tier": "audited",
-   "auditVerdict": "imprecise"
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-041",
@@ -52858,14 +52973,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-056",
@@ -53734,14 +53850,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-094",
@@ -53904,11 +54021,11 @@
     "description": "sourced",
     "input": "sourced",
     "output": "sourced",
-    "preserved": "unsupported",
-    "broken": "unsupported"
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-103",
@@ -56273,7 +56390,7 @@
    "tags": [
     "representation-change"
    ],
-   "description": "Applies y = sqrt(x), a variance-stabilizing transform for Poisson counts (Anscombe's variant sqrt(x + 3/8)).",
+   "description": "Applies y = sqrt(x), a variance-stabilizing transform for Poisson counts; Anscombe's variant 2 sqrt(x + 3/8) brings the variance near 1 for large means",
    "input": "Nonnegative data (counts)",
    "output": "Transformed data with near-constant variance",
    "preserved": "Order",
@@ -56283,14 +56400,34 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Applies y = sqrt(x), a variance-stabilizing transform for Poisson counts (Anscombe's variant sqrt(x + 3/8))."
+    },
+    "reason": "Fill review, batch 18: description graded imprecise. Anscombe's transform carries a factor 2, which sets the variance near 1; the landed fill wrote sqrt(x + 3/8).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-anscombe.txt",
+      "quote": ": <math>A:x \\mapsto 2 \\sqrt{x + \\tfrac{3}{8}} \\, </math>",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D8-204",
@@ -56310,14 +56447,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-205",
@@ -56754,14 +56892,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-222",
@@ -57007,11 +57146,11 @@
     "description": "sourced",
     "input": "sourced",
     "output": "sourced",
-    "preserved": "unsupported",
-    "broken": "unsupported"
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-235",
@@ -57308,14 +57447,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-038",
@@ -57335,14 +57475,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-046",
@@ -57781,11 +57922,11 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "sourced",
+    "name": "unsupported",
     "description": "sourced",
     "input": "sourced",
     "output": "sourced",
-    "preserved": "unsupported",
+    "preserved": "sourced",
     "broken": "unsupported"
    },
    "tier": "audited",
@@ -58014,14 +58155,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-140",
@@ -58144,23 +58286,53 @@
    ],
    "description": "The triangle of correspondences between Poisson generating functions, Mellin transforms and Newton (finite difference) series used in the analysis of algorithms (Flajolet and coauthors): a sequence's asymptotics read from the poles of a Mellin transform via Rice's integrals.",
    "input": "Sequence or generating function",
-   "output": "Asymptotic expansion via Mellin poles",
+   "output": "The original sequence, regained exactly from the Mellin transform of its Poisson generating function by the Nørlund-Rice integral; asymptotic expansions come from evaluating that integral",
    "preserved": "Asymptotic information",
-   "broken": "Exact values (only asymptotics survive)",
+   "broken": "Nothing: the cycle regains the sequence exactly; asymptotics are a use of it, not all that survives",
    "complexity": "See D6",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "reading": "Recorded from memory of the analytic-combinatorics literature.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "output",
+     "broken"
+    ],
+    "landed": {
+     "output": "Asymptotic expansion via Mellin poles",
+     "broken": "Exact values (only asymptotics survive)"
+    },
+    "reason": "Fill review, batch 18: output graded imprecise and broken graded wrong on the home's first entry (D2-033), which covers this one. The landed fill said only asymptotics survive; the source says the cycle regains the original sequence, and that the integral can often be evaluated by asymptotic expansion.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "one can then regain the original sequence by means of the",
+      "fields": [
+       "output",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-norlund-rice.txt",
+      "quote": "the integral can often be evaluated using [[asymptotic expansion]]",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D8-160",
@@ -58234,14 +58406,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-172",
@@ -58373,14 +58546,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-183",
@@ -58456,14 +58630,15 @@
    "anchorable": true,
    "reading": "Generic reading as the power transform with exponent 2.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-203",

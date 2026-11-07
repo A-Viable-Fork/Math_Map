@@ -8,28 +8,28 @@ Entries: 2022.
 |---|---|---|
 | Every operand, with existing kinds only | 720 | 35.6% |
 | Every operand, using candidate kinds | 40 | 2.0% |
-| At least one input and one output kind | 147 | 7.3% |
-| Neither side | 1115 | 55.1% |
+| At least one input and one output kind | 151 | 7.5% |
+| Neither side | 1111 | 54.9% |
 
 ## By domain
 
 | Domain | Entries | Fully typed | Partly | Neither |
 |---|---|---|---|---|
 | D1 | 124 | 58 | 19 | 47 |
-| D2 | 205 | 54 | 14 | 137 |
-| D3 | 189 | 58 | 7 | 124 |
-| D4 | 439 | 183 | 38 | 218 |
+| D2 | 205 | 54 | 15 | 136 |
+| D3 | 189 | 58 | 8 | 123 |
+| D4 | 439 | 183 | 39 | 217 |
 | D5 | 160 | 51 | 11 | 98 |
 | D6 | 163 | 76 | 8 | 79 |
 | D7 | 487 | 203 | 35 | 249 |
-| D8 | 255 | 77 | 15 | 163 |
+| D8 | 255 | 77 | 16 | 162 |
 
 ## Kinds used
 
 | Kind | Operands | Status |
 |---|---|---|
 | function | 426 | carrier |
-| sequence | 253 | carrier |
+| sequence | 257 | carrier |
 | graph | 167 | carrier |
 | morphism | 139 | carrier |
 | space | 133 | carrier |

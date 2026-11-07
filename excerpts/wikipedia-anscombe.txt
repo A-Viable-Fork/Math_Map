@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Anscombe transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375126716
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 230f51cdf7af09f03bef94fd23d49a1a1e7f36e300cb0648a06991662da12f9f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+: <math>A:x \mapsto 2 \sqrt{x + \tfrac{3}{8}} \, </math>

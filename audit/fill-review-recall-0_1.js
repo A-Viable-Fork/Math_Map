@@ -445,6 +445,27 @@ const RECALL = [
   k("D7-415", 17, "Standard (Iwasawa)", "G = KAN, diffeomorphism K x A x N to G", "Real semisimple Lie group", "Factors", "Diffeomorphism", "Group structure"),
   k("D7-416", 17, "Standard (Kazhdan and Lusztig 1979)", "From the KL basis of the Hecke algebra; category O multiplicities; IC of Schubert varieties; positivity (Elias and Williamson)", "Coxeter group elements", "Polynomial", "Bruhat order; positivity", "Nothing"),
   k("D7-465", 17, "Ambiguous", "Moebius inversion in an incidence algebra", "Function on a locally finite poset", "Inverted function", "Information", "Nothing"),
+  // Batch 18: home groups 1 to 20 (mapfill/homes.js), one recall per group on its first entry, written 2026-11-07 before the batch's sources were fetched.
+  k("D2-017", 18, "Standard (STFT with boxcar window)", "Fourier transform of rectangular-windowed segments", "Signal and window", "Time-frequency coefficients", "Invertibility with overlap", "Leakage from sidelobes"),
+  k("D2-028", 18, "Standard", "Bilateral Laplace transform over R; strip of convergence; Fourier on the imaginary axis; moment generating function", "Function on R", "Analytic function on a strip", "Convolution to product", "Ambiguity without the strip"),
+  k("D2-029", 18, "Standard", "Bromwich integral along a vertical line in the strip", "F and strip", "Function", "Information", "Ambiguity without the strip"),
+  k("D2-033", 18, "Standard (Flajolet and Sedgewick; Rice integrals)", "Poisson, Mellin and Newton transforms linked in analysis of algorithms", "Sequence", "Asymptotics", "Asymptotics", "Exact values"),
+  k("D2-036", 18, "Standard (Harish-Chandra)", "Spherical transform of K-bi-invariant functions; Plancherel with c-function", "K-bi-invariant function", "Weyl-invariant function", "Convolution to product", "Non-invariant information"),
+  k("D2-038", 18, "Standard", "Fourier transform of a finite measure; characteristic functions; Bochner", "Finite measure", "Bounded uniformly continuous function", "Uniqueness", "Decay at infinity"),
+  k("D2-039", 18, "Standard", "X(z) = sum x_n z^-n on an annulus; discrete Laplace analogue", "Sequence", "Function on annulus", "Convolution to product", "Causality without the region"),
+  k("D8-102", 18, "Standard", "Contour integral, partial fractions, power series", "X(z) and region", "Sequence", "Information", "Nothing given the region"),
+  k("D3-171", 18, "Standard (Ahmed, Natarajan, Rao 1974)", "Cosine basis; DCT-II; energy compaction; JPEG", "Real sequence", "Coefficients", "Energy (orthonormal)", "Locality"),
+  k("D3-172", 18, "Standard (Princen and Bradley)", "Lapped transform 2N to N with TDAC", "Overlapping blocks", "Coefficients", "Perfect reconstruction", "Single-block invertibility"),
+  k("D3-184", 18, "Standard", "b_n = sum S(n,k) a_k; inverse with first kind; EGF composition with e^x - 1", "Sequence", "Sequence", "Invertible", "Nothing"),
+  k("D4-175", 18, "Standard", "L^2 kernel operator; compact; HS norm equals kernel L^2 norm", "Kernel and function", "Function", "Compactness", "Invertibility"),
+  k("D5-073", 18, "Standard (Crandall and Fagin 1994)", "Weighted FFT for multiplication mod 2^p - 1 without padding; GIMPS", "Integers mod Mersenne", "Product", "Product", "Nothing"),
+  k("D8-040", 18, "Standard (Johnson; Guizar-Sicairos)", "Sampling at Bessel zeros", "Radial samples", "Hankel samples", "Approximate orthogonality", "Exactness"),
+  k("D8-035", 18, "Standard (Daubechies 1988)", "Compactly supported orthogonal wavelets with maximal vanishing moments", "Signal", "Wavelet coefficients", "Energy", "Symmetry"),
+  k("D8-201", 18, "Standard (Anscombe)", "Square root; variance stabilizing for Poisson; sqrt(x + 3/8)", "Counts", "Stabilized data", "Order", "Scale"),
+  k("D8-202", 18, "Generic", "Square of the data", "Data", "Squared data", "Order on nonnegatives", "Sign"),
+  k("D8-016", 18, "Standard (Box and Cox 1964)", "Power family with log at zero; lambda by maximum likelihood", "Positive data", "Transformed data", "Order", "Scale"),
+  k("D8-166", 18, "Standard", "Empirical CDF then inverse target CDF", "Data", "Uniform or normal marginals", "Rank order", "Distances"),
+  k("D8-055", 18, "Standard", "Discretize into intervals", "Continuous feature", "Bins", "Order", "Within-bin variation"),
 ];
 
 module.exports = { RECALL };
