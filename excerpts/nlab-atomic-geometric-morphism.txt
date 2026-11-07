@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, atomic geometric morphism (page source)
+URL: https://ncatlab.org/nlab/source/atomic+geometric+morphism
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c8f65ecb98b853f31a50e0e33ac26b35504a1b23897d415f372857794a36aade
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]].
+
+A [[geometric morphism]] $f : \mathcal{E}

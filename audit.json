@@ -17640,6 +17640,1099 @@
    "sources": {
     "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375329989"
    }
+  },
+  {
+   "id": "D7-277",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/nlab-transgression.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "we say this is _transgressive_ if"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "For $P \\to X$ a [[fiber bundle]] with typical fiber $i : F \\hookrightarrow P $ and $[\\omega] \\in H_{dR}^n(F)$ a class in [[de Rham cohomology]] of the fiber, we say this is _transgressive_ if",
+     "note": "Fiber classes transfer to the base when transgressive (partially defined). The Serre spectral sequence edge is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "For $P \\to X$ a [[fiber bundle]] with typical fiber $i : F \\hookrightarrow P $ and $[\\omega] \\in H_{dR}^n(F)$ a class in [[de Rham cohomology]] of the fiber"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The class in H(B) and its indeterminacy are not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Characteristic classes are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://ncatlab.org/nlab/source/transgression"
+   }
+  },
+  {
+   "id": "D7-278",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/nlab-dold-kan-correspondence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The _Dold--Kan correspondence_ asserts there is an [[equivalence of categories]] between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]] of [[abelian groups]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The _Dold--Kan correspondence_ asserts there is an [[equivalence of categories]] between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]] of [[abelian groups]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "in that they induce isomorphisms between [[simplicial homotopy groups]] and [[homology group]]s"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "asserts there is an [[equivalence of categories]]",
+     "note": "An equivalence loses nothing."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://ncatlab.org/nlab/source/Dold-Kan+correspondence"
+   }
+  },
+  {
+   "id": "D7-279",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-internal-logic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Topos Internalization\" is not a name the source uses; internalization and internal logic are."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "One of the most important observations of [[category theory]] is that large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Thus, in a Heyting category we can interpret all of (finitary, first-order) [[intuitionistic logic]].",
+     "note": "Kripke-Joyal soundness is not quoted here."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is that the internal logic of all these categories is, in general, [[constructive mathematics|constructive]]."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/internal+logic"
+   }
+  },
+  {
+   "id": "D7-280",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-geometric-morphism-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "such that the [[left adjoint]] $f^*:F \\to E$ preserves [[finite limits]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "* furthermore, $f^*$ is [[exact functor|left exact]] in that it preserves finite [[limits]].",
+     "more": [
+      {
+       "src": "g",
+       "quote": "* $f^*$ is [[adjoint functor|left adjoint]] to $f_*$, so $f^*$ preserves all small [[colimits]] and $f_*$ preserves all small [[limits]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "between the corresponding  [[Grothendieck topos|Grothendieck topoi]] of [[sheaf|sheaves]] on $X$ and $Y$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "such that the [[left adjoint]] $f^*:F \\to E$ preserves [[finite limits]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "necessarily preserves all constructions in [[geometric logic]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "That higher-order logic is not preserved in general is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/geometric+morphism"
+   }
+  },
+  {
+   "id": "D7-281",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/nlab-direct-image.txt",
+    "g": "excerpts/nlab-geometric-morphism-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The [[right adjoint]] part $f_*$ of any [[geometric morphism]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The [[right adjoint]] part $f_*$ of any [[geometric morphism]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "of any [[geometric morphism]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The [[right adjoint]] part $f_*$ of any [[geometric morphism]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "so $f^*$ preserves all small [[colimits]] and $f_*$ preserves all small [[limits]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Failure to preserve colimits and the derived functors are not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://ncatlab.org/nlab/source/direct+image",
+    "g": "https://ncatlab.org/nlab/source/geometric+morphism"
+   }
+  },
+  {
+   "id": "D7-282",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/nlab-inverse-image.txt",
+    "g": "excerpts/nlab-geometric-morphism-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An _inverse image_ operation is the [[left adjoint]] part $f^*$ of a [[geometric morphism]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "* furthermore, $f^*$ is [[exact functor|left exact]] in that it preserves finite [[limits]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "of a [[geometric morphism]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An _inverse image_ operation is the [[left adjoint]] part $f^*$ of a [[geometric morphism]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "a [[functor]] such as $f^*$ that preserves finite [[limits]] and arbitrary [[colimits]] (since it is a [[adjoint functor|left adjoint]]) necessarily preserves all constructions in [[geometric logic]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of infinite limits, implication and universal quantification is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://ncatlab.org/nlab/source/inverse+image",
+    "g": "https://ncatlab.org/nlab/source/geometric+morphism"
+   }
+  },
+  {
+   "id": "D7-283",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-logical-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "it suffices to define a logical functor to preserve these, up to [[isomorphism]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Since all the elementary topos structure follows from having [[finite limits]] and [[power objects]], it suffices to define a logical functor to preserve these, up to [[isomorphism]].",
+     "note": "Power objects in the source; exponentials and Omega follow."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "it suffices to define a logical functor to preserve these"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Since all the elementary topos structure follows from having [[finite limits]] and [[power objects]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/logical+functor"
+   }
+  },
+  {
+   "id": "D7-284",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-essential-geometric-morphism-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "it is an **essential geometric morphism** if the"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "but also a [[left adjoint]] $f_!$:"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "it is an **essential geometric morphism** if the"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "but also a [[left adjoint]] $f_!$:"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "preserves small limits since it is a right adjoint",
+     "note": "Limits because f^* is now a right adjoint; colimits because it is a left adjoint."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Whether essentiality is property or structure is not stated in the fetched windows."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/essential+geometric+morphism"
+   }
+  },
+  {
+   "id": "D7-285",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/nlab-atomic-geometric-morphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]].",
+     "note": "Galois toposes as the example are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "A [[geometric morphism]] $f : \\mathcal{E}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]].",
+     "note": "A logical functor preserves the higher-order structure."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://ncatlab.org/nlab/source/atomic+geometric+morphism"
+   }
+  },
+  {
+   "id": "D7-286",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-local-homeomorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "One also says that this exhibits $X$ as an [[étale space]] over $Y$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "In general, for every [[sheaf]] $A$ of sets on $Y$; there is a local homeomorphism $X \\to Y$",
+     "note": "The space-level correspondence; the topos form E/X to E is not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/local+homeomorphism"
+   }
+  },
+  {
+   "id": "D7-287",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-grothendieck-topology.txt",
+    "s": "excerpts/nlab-sieve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A category equipped with a Grothendieck topology is a [[site]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the classical examples of _sieves on_ an object are [[Grothendieck topologies]], used to present the [[presheaves]] that behave like [[coverings]].",
+     "note": "The axioms (pullback stability, local character) are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _sieve_ $S$ on an object $c \\in C$ is a subset $S \\subset Ob(C/c)$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A category equipped with a Grothendieck topology is a [[site]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Probably the main point of having a site is so that one can define [[sheaf|sheaves]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/Grothendieck+topology",
+    "s": "https://ncatlab.org/nlab/source/sieve"
+   }
+  },
+  {
+   "id": "D7-288",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-lawvere-tierney-topology-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A __Lawvere--Tierney topology__ in $E$ is ([[internalization|internally]]) a [[closure operator]] given by a [[exact functor|left exact]] [[idempotent monad]] on the internal meet-[[semilattice]] $\\Omega$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A __Lawvere--Tierney topology__ in $E$ is ([[internalization|internally]]) a [[closure operator]] given by a [[exact functor|left exact]] [[idempotent monad]] on the internal meet-[[semilattice]] $\\Omega$.",
+     "note": "Inflationary and idempotent (a monad), meet-preserving (left exact): the fill's three conditions."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A __Lawvere--Tierney topology__ in $E$"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The subtopos of j-sheaves is not quoted from this revision."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "which has a [[exact functor|left exact]] [[left adjoint]] functor",
+     "note": "The left exact reflector keeps finite limits."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "natural closure operator on subobjects",
+     "note": "Subobjects with the same closure are identified."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/Lawvere-Tierney+topology"
+   }
+  },
+  {
+   "id": "D7-289",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-sieve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Sieve Saturation\" is not a name the source uses."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "which is _closed under precomposition_",
+     "note": "The sieve generated by a family (its closure under precomposition) follows; closure under a topology is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _sieve_ $S$ on an object $c \\in C$ is a subset $S \\subset Ob(C/c)$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "which is _closed under precomposition_"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singled out subobjects then correspond to _covering si"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/sieve"
+   }
+  },
+  {
+   "id": "D7-290",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-sheafification.txt",
+    "c": "excerpts/mathlib-Mathlib.CategoryTheory.Sites.ConcreteSheafification.txt",
+    "a": "excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "It is characterized as being the [[left adjoint|left]] [[adjoint functor]] $L : PSh(C) \\to Sh(C)$ to the inclusion $Sh(C) \\hookrightarrow PSh(C)$ of sheaves into all presheaves"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "J.plusObj (J.plusObj P)",
+     "note": "The plus construction applied twice, in Mathlib.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "presheafToSheaf J A ⊣ sheafToPresheaf J A := Adjunction.ofIsRightAdjoint _"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "noncomputable def sheafify (P : Cᵒᵖ ⥤ D) : Cᵒᵖ ⥤ D :="
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "exhibiting this as a [[reflective subcategory]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Exactness and stalks are not quoted from these windows."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/sheafification",
+    "c": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/ConcreteSheafification.lean",
+    "a": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean"
+   }
+  },
+  {
+   "id": "D7-291",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-category-of-presheaves.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "* The category of presheaves $PSh(\\mathcal{C})$ is the [[free cocompletion]] of $\\mathcal{C}$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "* The category of presheaves $PSh(\\mathcal{C})$ is the [[free cocompletion]] of $\\mathcal{C}$."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Smallness of C is not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Since any category of the form $PSh(C)$ is a [[topos]], such a category is often called a **presheaf topos**."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/category+of+presheaves"
+   }
+  },
+  {
+   "id": "D7-292",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-classifying-topos.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "So the **classifying [[topos]]** for the [[geometric theory]] $T$ is a [[Grothendieck topos]] $S[T]$ equipped with a &quot;universal model $U$ of $T$&quot;."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "for any Grothendieck topos $E$, the category of $T$-models in $E$ is equivalent to the category of geometric morphisms $E \\to S[T]$."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "for the [[geometric theory]] $T$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "equipped with a &quot;universal model $U$ of $T$&quot;."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the category of $T$-models in $E$ is equivalent to the category of geometric morphisms $E \\to S[T]$."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Morita equivalence of theories is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/classifying+topos"
+   }
+  },
+  {
+   "id": "D7-293",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-syntactic-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the syntactic category is also called the **category of contexts**."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Since the objects of the syntactic category are frequently taken to be the [[contexts]] in the theory",
+     "note": "Provably functional relations as morphisms are not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the syntactic category is also called the **category of contexts**."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/syntactic+category"
+   }
+  },
+  {
+   "id": "D7-294",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-effective-topos.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]].",
+     "note": "Hyland's, per the source's reference."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "in the [[internal logic]], it is provable that every [[total function]] from [[natural numbers]] to natural numbers is [[compu"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "It is an environment for [[higher-order logic|higher order]] [[recursion]] theory"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Failure of excluded middle and choice is not stated in the fetched windows."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/effective+topos"
+   }
+  },
+  {
+   "id": "D7-295",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for the object classifier (no nLab page by that title)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-296",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/nlab-diaconescus-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "For the theorem in [[logic]] that often goes by the same name, see at _[[Diaconescu-Goodman–Myhill theorem]]_.",
+     "note": "Both theorems carry the name, as the fill's reading says."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "_Diaconescu&#39;s theorem_ asserts that any [[presheaf topos]] is the [[classifying topos]] for [[internally flat functors]] on its [[site]].",
+     "note": "Reading (1). Reading (2), choice implies excluded middle, has no fetched source (the nLab page for it was not served)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "_Diaconescu&#39;s theorem_ asserts that any [[presheaf topos]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "between the category of [[geometric morphism]]s $f : \\mathcal{E} \\to PSh(C)$ and the category of [[internally flat functors]] $C \\to \\mathcal{E}$."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "between the category of [[geometric morphism]]s $f : \\mathcal{E} \\to PSh(C)$ and the category of [[internally flat functors]] $C \\to \\mathcal{E}$."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://ncatlab.org/nlab/source/Diaconescu%27s+theorem"
+   }
+  },
+  {
+   "id": "D7-297",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-freyd-cover.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The Freyd cover is sometimes known as the **Sierpinski cone** or **scone**"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The construction is a special case of [[Artin gluing]]",
+     "note": "Disjunction and existence properties are not quoted.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "Let $\\mathcal{T}$ be a category with a terminal object and $\\Gamma = \\mathcal{T} (1, -)$ the global section functor ."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The **Freyd cover** $\\overline{\\mathcal{T}}$ of a [[topos]] $\\mathcal{T}$, or more generally of a [[category]] with a [[terminal object]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The **Freyd cover** $\\overline{\\mathcal{T}}$ of a [[topos]] $\\mathcal{T}$"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "E as an open subtopos is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/Freyd+cover"
+   }
+  },
+  {
+   "id": "D7-298",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for the elementary quotient completion (Maietti and Rosolini)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-299",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kripke-joyal-semantics.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "**Kripke--Joyal semantics** is a higher order generalization of the [[semantics|semantic]] interpretation proposed initially by Beth, Grzegorczyk, and Kripke"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "It provides a notion of _&#39;local truth&#39;_ or _&#39;validity at a stage&#39;_ in a [[topos]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "for [[intuitionistic logic|intuitionistic predicate logic]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "it is sometimes called _forcing_ semantics."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Soundness is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "It provides a notion of _&#39;local truth&#39;_ or _&#39;validity at a stage&#39;_ in a [[topos]].",
+     "note": "Truth is local, not global and two-valued."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kripke-Joyal+semantics"
+   }
+  },
+  {
+   "id": "D7-300",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/nlab-mitchell-benabou-language.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is a particularly simple form of the [[internal language]] of an [[elementary topos]] $E$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is a particularly simple form of the [[internal language]] of an [[elementary topos]] $E$."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "of an [[elementary topos]] $E$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is a particularly simple form of the [[internal language]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "since a formula or [[proposition]] can be identified with a term o",
+     "note": "Higher-order typed terms; intuitionistic logic is not quoted here."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://ncatlab.org/nlab/source/Mitchell-B%C3%A9nabou+language"
+   }
+  },
+  {
+   "id": "D7-301",
+   "batch": 12,
+   "why": "Fill review, batch 12: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-forcing.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "it is more or less equivalent to the construction of [[categories of sheaves]] in [[topos theory]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "In structural set theory, this construction is simply that of the [[topos of sheaves]] on a suitable [[site]], in the model $V$.",
+     "note": "The double-negation topology on a poset of conditions is not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "The poset of forcing conditions is not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "In structural set theory, this construction is simply that of the [[topos of sheaves]] on a suitable [[site]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Failure of CH appears only in the source's references (Cohen); not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/forcing"
+   }
   }
  ]
 }

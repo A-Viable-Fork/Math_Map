@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, Freyd cover (page source)
+URL: https://ncatlab.org/nlab/source/Freyd+cover
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f296ebcc11916c06987cb24c3036e44e3af623d6dfbb5129c6bd51649e42fb18
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Freyd cover is sometimes known as the **Sierpinski cone** or **scone**
+
+The construction is a special case of [[Artin gluing]]
+
+Let $\mathcal{T}$ be a category with a terminal object and $\Gamma = \mathcal{T} (1, -)$ the global section functor .
+
+The **Freyd cover** $\overline{\mathcal{T}}$ of a [[topos]] $\mathcal{T}$, or more generally of a [[category]] with a [[terminal object]]
+
+The **Freyd cover** $\overline{\mathcal{T}}$ of a [[topos]] $\mathcal{T}$

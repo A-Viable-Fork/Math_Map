@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, transgression (page source)
+URL: https://ncatlab.org/nlab/source/transgression
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bc1504842dfc0efbe5f94546da9de11e858a2ecf3d74f6dc518032ba57f44d6b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+we say this is _transgressive_ if
+
+For $P \to X$ a [[fiber bundle]] with typical fiber $i : F \hookrightarrow P $ and $[\omega] \in H_{dR}^n(F)$ a class in [[de Rham cohomology]] of the fiber, we say this is _transgressive_ if
+
+For $P \to X$ a [[fiber bundle]] with typical fiber $i : F \hookrightarrow P $ and $[\omega] \in H_{dR}^n(F)$ a class in [[de Rham cohomology]] of the fiber

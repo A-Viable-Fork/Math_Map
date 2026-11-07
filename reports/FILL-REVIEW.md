@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 275 of 416 D7 stubs, 0 of 79 homes; 275 entries in 11 batches.
+Reviewed: 300 of 416 D7 stubs, 0 of 79 homes; 300 entries in 12 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (275 entries)
+### D7 stubs (300 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 257 | 0 | 0 | 18 |
-| description | 252 | 7 | 0 | 16 |
-| input | 246 | 3 | 0 | 26 |
-| output | 241 | 0 | 0 | 34 |
-| preserved | 189 | 2 | 0 | 84 |
-| broken | 94 | 3 | 0 | 178 |
-| **all** | 1279 | 15 | 0 | 356 |
+| name | 278 | 0 | 0 | 22 |
+| description | 275 | 7 | 0 | 18 |
+| input | 265 | 3 | 0 | 32 |
+| output | 260 | 0 | 0 | 40 |
+| preserved | 204 | 2 | 0 | 94 |
+| broken | 98 | 3 | 0 | 199 |
+| **all** | 1380 | 15 | 0 | 405 |
 
 ## 2. Recall against source
 
@@ -39,7 +39,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 9 | 25 | 108 | 0 | 0% |
 | 10 | 25 | 105 | 1 | 1% |
 | 11 | 25 | 97 | 0 | 0% |
-| **all** | 275 | 1294 | 4 | 0% |
+| 12 | 25 | 101 | 0 | 0% |
+| **all** | 300 | 1395 | 4 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -54,7 +55,7 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-252 output: sample unsupported, review confirmed.
 - D7-275 preserved: sample unsupported, review confirmed.
 
-Agreement: 46 of 54 fields.
+Agreement: 52 of 60 fields.
 
 ## 4. Sources in disagreement
 
@@ -264,6 +265,30 @@ Every field not confirmed, with the reason.
 - **D7-273 Derived Category Construction** (batch 11): *broken* unsupported: Loss of abelianness is not stated in the fetched windows.
 - **D7-274 Triangulated Category Shift Functor** (batch 11): *broken* unsupported: Not stated.
 - **D7-276 T-Structure Truncation** (batch 11): *output* unsupported: Truncations and the triangle are not quoted. *broken* unsupported: Not stated.
+- **D7-277 Transgression Map Application** (batch 12): *output* unsupported: The class in H(B) and its indeterminacy are not quoted. *preserved* unsupported: Characteristic classes are not quoted. *broken* unsupported: Not stated.
+- **D7-279 Topos Internalization** (batch 12): *name* unsupported: "Topos Internalization" is not a name the source uses; internalization and internal logic are.
+- **D7-280 Geometric Morphism Construction** (batch 12): *broken* unsupported: That higher-order logic is not preserved in general is not stated.
+- **D7-281 Direct Image Functor** (batch 12): *broken* unsupported: Failure to preserve colimits and the derived functors are not stated.
+- **D7-282 Inverse Image Functor** (batch 12): *broken* unsupported: Loss of infinite limits, implication and universal quantification is not stated.
+- **D7-283 Logical Functor Application** (batch 12): *output* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-284 Essential Geometric Morphism** (batch 12): *broken* unsupported: Whether essentiality is property or structure is not stated in the fetched windows.
+- **D7-285 Atomic Geometric Morphism** (batch 12): *broken* unsupported: Not stated.
+- **D7-286 Local Homeomorphism Transformation** (batch 12): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-287 Grothendieck Topology Generation** (batch 12): *broken* unsupported: Not stated.
+- **D7-288 Lawvere-Tierney Topology Closure** (batch 12): *output* unsupported: The subtopos of j-sheaves is not quoted from this revision.
+- **D7-289 Sieve Saturation** (batch 12): *name* unsupported: "Sieve Saturation" is not a name the source uses. *broken* unsupported: Not stated.
+- **D7-290 Sheafification** (batch 12): *preserved* unsupported: Exactness and stalks are not quoted from these windows. *broken* unsupported: Not stated.
+- **D7-291 Presheaf Category Formation** (batch 12): *input* unsupported: Smallness of C is not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not quoted.
+- **D7-292 Classifying Topos Construction** (batch 12): *broken* unsupported: Morita equivalence of theories is not quoted.
+- **D7-293 Syntactic Category Construction** (batch 12): *input* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-294 Effective Topos Construction** (batch 12): *broken* unsupported: Failure of excluded middle and choice is not stated in the fetched windows.
+- **D7-295 Object Classifier Evaluation** (batch 12): *name* unsupported: No fetched source for the object classifier (no nLab page by that title). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-296 Diaconescu's Theorem Transformation** (batch 12): *broken* unsupported: Not stated.
+- **D7-297 Freyd Cover Construction** (batch 12): *preserved* unsupported: E as an open subtopos is not quoted. *broken* unsupported: Not stated.
+- **D7-298 Hyperdoctrine Quotient Completion** (batch 12): *name* unsupported: No fetched source for the elementary quotient completion (Maietti and Rosolini). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-299 Kripke-Joyal Semantics Interpretation** (batch 12): *preserved* unsupported: Soundness is not quoted.
+- **D7-300 Mitchell-B\u00e9nabou Language Translation** (batch 12): *broken* unsupported: Not stated.
+- **D7-301 Forcing Interpretation in Topos** (batch 12): *input* unsupported: The poset of forcing conditions is not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Failure of CH appears only in the source's references (Cohen); not stated.
 
 ## 6. Receipts
 
@@ -3670,4 +3695,307 @@ actions defining an optic"
 - recalled: name: Standard (Beilinson, Bernstein, Deligne); description: Truncation triangle; abelian heart; input: Triangulated category with t-structure; output: Truncations; preserved: Heart cohomology; broken: Parts outside the range
 
   t: excerpts/wikipedia-t-structure.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375329989)
+
+### D7-277 Transgression Map Application (batch 12)
+
+- name: **confirmed** [t] "we say this is _transgressive_ if"
+- description: **confirmed** [t] "For $P \to X$ a [[fiber bundle]] with typical fiber $i : F \hookrightarrow P $ and $[\omega] \in H_{dR}^n(F)$ a class in [[de Rham cohomology]] of the fiber, we say this is _transgressive_ if" *Fiber classes transfer to the base when transgressive (partially defined). The Serre spectral sequence edge is not quoted.*
+- input: **confirmed** [t] "For $P \to X$ a [[fiber bundle]] with typical fiber $i : F \hookrightarrow P $ and $[\omega] \in H_{dR}^n(F)$ a class in [[de Rham cohomology]] of the fiber"
+- output: **unsupported** *The class in H(B) and its indeterminacy are not quoted.*
+- preserved: **unsupported** *Characteristic classes are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Partially defined map from fiber cohomology to base cohomology via the Serre spectral sequence; input: Fibration and fiber class; output: Base class modulo indeterminacy; preserved: Characteristic classes; broken: Well-definedness
+
+  t: excerpts/nlab-transgression.txt (https://ncatlab.org/nlab/source/transgression)
+
+### D7-278 Dold-Kan Correspondence Transformation (batch 12)
+
+- name: **confirmed** [d] "The _Dold--Kan correspondence_ asserts there is an [[equivalence of categories]] between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]] of [[abelian groups]]."
+- description: **confirmed** [d] "The _Dold--Kan correspondence_ asserts there is an [[equivalence of categories]] between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]] of [[abelian groups]]."
+- input: **confirmed** [d] "between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]]"
+- output: **confirmed** [d] "between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]]"
+- preserved: **confirmed** [d] "in that they induce isomorphisms between [[simplicial homotopy groups]] and [[homology group]]s"
+- broken: **confirmed** [d] "asserts there is an [[equivalence of categories]]" *An equivalence loses nothing.*
+- recalled: name: Standard (Dold, Kan); description: Equivalence of simplicial abelian groups and connective chain complexes; input: Simplicial abelian group; output: Chain complex; preserved: Homotopy groups are homology; broken: Nothing
+
+  d: excerpts/nlab-dold-kan-correspondence.txt (https://ncatlab.org/nlab/source/Dold-Kan+correspondence)
+
+### D7-279 Topos Internalization (batch 12)
+
+- name: **unsupported** *"Topos Internalization" is not a name the source uses; internalization and internal logic are.*
+- description: **confirmed** [l] "One of the most important observations of [[category theory]] is that large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure."
+- input: **confirmed** [l] "large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure."
+- output: **confirmed** [l] "large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure."
+- preserved: **confirmed** [l] "Thus, in a Heyting category we can interpret all of (finitary, first-order) [[intuitionistic logic]]." *Kripke-Joyal soundness is not quoted here.*
+- broken: **confirmed** [l] "is that the internal logic of all these categories is, in general, [[constructive mathematics|constructive]]."
+- recalled: name: Nonstandard name; internal language standard; description: Interpret constructions in a topos's internal language; input: Construction and topos; output: Internal object; preserved: Constructive validity; broken: Excluded middle, choice
+
+  l: excerpts/nlab-internal-logic.txt (https://ncatlab.org/nlab/source/internal+logic)
+
+### D7-280 Geometric Morphism Construction (batch 12)
+
+- name: **confirmed** [g] "such that the [[left adjoint]] $f^*:F \to E$ preserves [[finite limits]]."
+- description: **confirmed** [g] "* furthermore, $f^*$ is [[exact functor|left exact]] in that it preserves finite [[limits]]." [g] "* $f^*$ is [[adjoint functor|left adjoint]] to $f_*$, so $f^*$ preserves all small [[colimits]] and $f_*$ preserves all small [[limits]]."
+- input: **confirmed** [g] "between the corresponding  [[Grothendieck topos|Grothendieck topoi]] of [[sheaf|sheaves]] on $X$ and $Y$."
+- output: **confirmed** [g] "such that the [[left adjoint]] $f^*:F \to E$ preserves [[finite limits]]."
+- preserved: **confirmed** [g] "necessarily preserves all constructions in [[geometric logic]]."
+- broken: **unsupported** *That higher-order logic is not preserved in general is not stated.*
+- recalled: name: Standard; description: f^* left adjoint to f_*, f^* left exact; input: Toposes; output: Geometric morphism; preserved: Geometric logic; broken: Higher-order logic
+
+  g: excerpts/nlab-geometric-morphism-r.txt (https://ncatlab.org/nlab/source/geometric+morphism)
+
+### D7-281 Direct Image Functor (batch 12)
+
+- name: **confirmed** [d] "The [[right adjoint]] part $f_*$ of any [[geometric morphism]]"
+- description: **confirmed** [d] "The [[right adjoint]] part $f_*$ of any [[geometric morphism]]"
+- input: **confirmed** [d] "of any [[geometric morphism]]"
+- output: **confirmed** [d] "The [[right adjoint]] part $f_*$ of any [[geometric morphism]]"
+- preserved: **confirmed** [g] "so $f^*$ preserves all small [[colimits]] and $f_*$ preserves all small [[limits]]."
+- broken: **unsupported** *Failure to preserve colimits and the derived functors are not stated.*
+- recalled: name: Standard; description: The right adjoint f_*; input: Geometric morphism; output: Direct image; preserved: Limits; broken: Colimits
+
+  d: excerpts/nlab-direct-image.txt (https://ncatlab.org/nlab/source/direct+image)
+  g: excerpts/nlab-geometric-morphism-r.txt (https://ncatlab.org/nlab/source/geometric+morphism)
+
+### D7-282 Inverse Image Functor (batch 12)
+
+- name: **confirmed** [i] "An _inverse image_ operation is the [[left adjoint]] part $f^*$ of a [[geometric morphism]]"
+- description: **confirmed** [g] "* furthermore, $f^*$ is [[exact functor|left exact]] in that it preserves finite [[limits]]."
+- input: **confirmed** [i] "of a [[geometric morphism]]"
+- output: **confirmed** [i] "An _inverse image_ operation is the [[left adjoint]] part $f^*$ of a [[geometric morphism]]"
+- preserved: **confirmed** [g] "a [[functor]] such as $f^*$ that preserves finite [[limits]] and arbitrary [[colimits]] (since it is a [[adjoint functor|left adjoint]]) necessarily preserves all constructions in [[geometric logic]]."
+- broken: **unsupported** *Loss of infinite limits, implication and universal quantification is not stated.*
+- recalled: name: Standard; description: The left exact left adjoint f^*; input: Geometric morphism; output: Inverse image; preserved: Finite limits and colimits; broken: Implication, universal quantification
+
+  i: excerpts/nlab-inverse-image.txt (https://ncatlab.org/nlab/source/inverse+image)
+  g: excerpts/nlab-geometric-morphism-r.txt (https://ncatlab.org/nlab/source/geometric+morphism)
+
+### D7-283 Logical Functor Application (batch 12)
+
+- name: **confirmed** [l] "it suffices to define a logical functor to preserve these, up to [[isomorphism]]."
+- description: **confirmed** [l] "Since all the elementary topos structure follows from having [[finite limits]] and [[power objects]], it suffices to define a logical functor to preserve these, up to [[isomorphism]]." *Power objects in the source; exponentials and Omega follow.*
+- input: **confirmed** [l] "it suffices to define a logical functor to preserve these"
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [l] "Since all the elementary topos structure follows from having [[finite limits]] and [[power objects]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Preserves finite limits, exponentials and subobject classifier; input: Toposes and logical functor; output: Images; preserved: Higher-order logic; broken: Colimits
+
+  l: excerpts/nlab-logical-functor.txt (https://ncatlab.org/nlab/source/logical+functor)
+
+### D7-284 Essential Geometric Morphism (batch 12)
+
+- name: **confirmed** [e] "it is an **essential geometric morphism** if the"
+- description: **confirmed** [e] "but also a [[left adjoint]] $f_!$:"
+- input: **confirmed** [e] "it is an **essential geometric morphism** if the"
+- output: **confirmed** [e] "but also a [[left adjoint]] $f_!$:"
+- preserved: **confirmed** [e] "preserves small limits since it is a right adjoint" *Limits because f^* is now a right adjoint; colimits because it is a left adjoint.*
+- broken: **unsupported** *Whether essentiality is property or structure is not stated in the fetched windows.*
+- recalled: name: Standard; description: Inverse image has a further left adjoint f_!; input: Geometric morphism; output: Triple; preserved: Limits and colimits under f^*; broken: Nothing; property
+
+  e: excerpts/nlab-essential-geometric-morphism-r.txt (https://ncatlab.org/nlab/source/essential+geometric+morphism)
+
+### D7-285 Atomic Geometric Morphism (batch 12)
+
+- name: **confirmed** [a] "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]]."
+- description: **confirmed** [a] "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]]." *Galois toposes as the example are not quoted.*
+- input: **confirmed** [a] "A [[geometric morphism]] $f : \mathcal{E}"
+- output: **confirmed** [a] "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]]."
+- preserved: **confirmed** [a] "is called **atomic** if its [[inverse image]] $f^*$ is a [[logical functor]]." *A logical functor preserves the higher-order structure.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Barr and Diaconescu); description: Inverse image is logical; input: Geometric morphism; output: Verdict; preserved: Higher-order logic; broken: Nothing
+
+  a: excerpts/nlab-atomic-geometric-morphism.txt (https://ncatlab.org/nlab/source/atomic+geometric+morphism)
+
+### D7-286 Local Homeomorphism Transformation (batch 12)
+
+- name: **confirmed** [l] "One also says that this exhibits $X$ as an [[étale space]] over $Y$."
+- description: **confirmed** [l] "In general, for every [[sheaf]] $A$ of sets on $Y$; there is a local homeomorphism $X \to Y$" *The space-level correspondence; the topos form E/X to E is not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Equivalent to E/X to E (etale); input: Topos and object; output: Etale geometric morphism; preserved: Local structure; broken: Global structure
+
+  l: excerpts/nlab-local-homeomorphism.txt (https://ncatlab.org/nlab/source/local+homeomorphism)
+
+### D7-287 Grothendieck Topology Generation (batch 12)
+
+- name: **confirmed** [g] "A category equipped with a Grothendieck topology is a [[site]]."
+- description: **confirmed** [s] "the classical examples of _sieves on_ an object are [[Grothendieck topologies]], used to present the [[presheaves]] that behave like [[coverings]]." *The axioms (pullback stability, local character) are not quoted.*
+- input: **confirmed** [s] "A _sieve_ $S$ on an object $c \in C$ is a subset $S \subset Ob(C/c)$"
+- output: **confirmed** [g] "A category equipped with a Grothendieck topology is a [[site]]."
+- preserved: **confirmed** [g] "Probably the main point of having a site is so that one can define [[sheaf|sheaves]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Covering sieves with maximality, stability, transitivity; input: Category and coverage; output: Grothendieck topology; preserved: Sheaf condition; broken: Non-gluing presheaves
+
+  g: excerpts/nlab-grothendieck-topology.txt (https://ncatlab.org/nlab/source/Grothendieck+topology)
+  s: excerpts/nlab-sieve.txt (https://ncatlab.org/nlab/source/sieve)
+
+### D7-288 Lawvere-Tierney Topology Closure (batch 12)
+
+- name: **confirmed** [l] "A __Lawvere--Tierney topology__ in $E$ is ([[internalization|internally]]) a [[closure operator]] given by a [[exact functor|left exact]] [[idempotent monad]] on the internal meet-[[semilattice]] $\Omega$."
+- description: **confirmed** [l] "A __Lawvere--Tierney topology__ in $E$ is ([[internalization|internally]]) a [[closure operator]] given by a [[exact functor|left exact]] [[idempotent monad]] on the internal meet-[[semilattice]] $\Omega$." *Inflationary and idempotent (a monad), meet-preserving (left exact): the fill's three conditions.*
+- input: **confirmed** [l] "A __Lawvere--Tierney topology__ in $E$"
+- output: **unsupported** *The subtopos of j-sheaves is not quoted from this revision.*
+- preserved: **confirmed** [l] "which has a [[exact functor|left exact]] [[left adjoint]] functor" *The left exact reflector keeps finite limits.*
+- broken: **confirmed** [l] "natural closure operator on subobjects" *Subobjects with the same closure are identified.*
+- recalled: name: Standard; description: j: Omega to Omega inflationary, idempotent, meet-preserving; subtopos; input: Topos and j; output: Subtopos of sheaves; preserved: Finite limits; broken: Collapsed truth values
+
+  l: excerpts/nlab-lawvere-tierney-topology-r.txt (https://ncatlab.org/nlab/source/Lawvere-Tierney+topology)
+
+### D7-289 Sieve Saturation (batch 12)
+
+- name: **unsupported** *"Sieve Saturation" is not a name the source uses.*
+- description: **confirmed** [s] "which is _closed under precomposition_" *The sieve generated by a family (its closure under precomposition) follows; closure under a topology is not quoted.*
+- input: **confirmed** [s] "A _sieve_ $S$ on an object $c \in C$ is a subset $S \subset Ob(C/c)$"
+- output: **confirmed** [s] "which is _closed under precomposition_"
+- preserved: **confirmed** [s] "the singled out subobjects then correspond to _covering si"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Nonstandard name; description: Sieve generated by a family; closure under the topology; input: Family of maps; output: Generated sieve; preserved: Covering status; broken: Generators
+
+  s: excerpts/nlab-sieve.txt (https://ncatlab.org/nlab/source/sieve)
+
+### D7-290 Sheafification (batch 12)
+
+- name: **confirmed** [s] "It is characterized as being the [[left adjoint|left]] [[adjoint functor]] $L : PSh(C) \to Sh(C)$ to the inclusion $Sh(C) \hookrightarrow PSh(C)$ of sheaves into all presheaves"
+- description: **confirmed** [c] "J.plusObj (J.plusObj P)" [a] "presheafToSheaf J A ⊣ sheafToPresheaf J A := Adjunction.ofIsRightAdjoint _" *The plus construction applied twice, in Mathlib.*
+- input: **confirmed** [c] "noncomputable def sheafify (P : Cᵒᵖ ⥤ D) : Cᵒᵖ ⥤ D :="
+- output: **confirmed** [s] "exhibiting this as a [[reflective subcategory]]."
+- preserved: **unsupported** *Exactness and stalks are not quoted from these windows.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Left exact left adjoint to inclusion; plus construction twice; input: Presheaf; output: Associated sheaf; preserved: Finite limits, stalks; broken: Non-gluing data
+
+  s: excerpts/nlab-sheafification.txt (https://ncatlab.org/nlab/source/sheafification)
+  c: excerpts/mathlib-Mathlib.CategoryTheory.Sites.ConcreteSheafification.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/ConcreteSheafification.lean)
+  a: excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean)
+
+### D7-291 Presheaf Category Formation (batch 12)
+
+- name: **confirmed** [p] "* The category of presheaves $PSh(\mathcal{C})$ is the [[free cocompletion]] of $\mathcal{C}$."
+- description: **confirmed** [p] "* The category of presheaves $PSh(\mathcal{C})$ is the [[free cocompletion]] of $\mathcal{C}$."
+- input: **unsupported** *Smallness of C is not quoted.*
+- output: **confirmed** [p] "Since any category of the form $PSh(C)$ is a [[topos]], such a category is often called a **presheaf topos**."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not quoted.*
+- recalled: name: Standard; description: Free cocompletion of C; input: Small category; output: Presheaf topos; preserved: C via Yoneda; broken: Colimits of C
+
+  p: excerpts/nlab-category-of-presheaves.txt (https://ncatlab.org/nlab/source/category+of+presheaves)
+
+### D7-292 Classifying Topos Construction (batch 12)
+
+- name: **confirmed** [c] "So the **classifying [[topos]]** for the [[geometric theory]] $T$ is a [[Grothendieck topos]] $S[T]$ equipped with a &quot;universal model $U$ of $T$&quot;."
+- description: **confirmed** [c] "for any Grothendieck topos $E$, the category of $T$-models in $E$ is equivalent to the category of geometric morphisms $E \to S[T]$."
+- input: **confirmed** [c] "for the [[geometric theory]] $T$"
+- output: **confirmed** [c] "equipped with a &quot;universal model $U$ of $T$&quot;."
+- preserved: **confirmed** [c] "the category of $T$-models in $E$ is equivalent to the category of geometric morphisms $E \to S[T]$."
+- broken: **unsupported** *Morita equivalence of theories is not quoted.*
+- recalled: name: Standard; description: Topos whose points are T-models; Morita equivalence of theories; input: Geometric theory; output: Classifying topos; preserved: Models; broken: Presentation
+
+  c: excerpts/nlab-classifying-topos.txt (https://ncatlab.org/nlab/source/classifying+topos)
+
+### D7-293 Syntactic Category Construction (batch 12)
+
+- name: **confirmed** [s] "the syntactic category is also called the **category of contexts**."
+- description: **confirmed** [s] "Since the objects of the syntactic category are frequently taken to be the [[contexts]] in the theory" *Provably functional relations as morphisms are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [s] "the syntactic category is also called the **category of contexts**."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Formulas in context and provably functional relations; input: Theory; output: Syntactic category; preserved: Provability; broken: Semantics beyond T
+
+  s: excerpts/nlab-syntactic-category.txt (https://ncatlab.org/nlab/source/syntactic+category)
+
+### D7-294 Effective Topos Construction (batch 12)
+
+- name: **confirmed** [e] "It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]]." *Hyland's, per the source's reference.*
+- description: **confirmed** [e] "in the [[internal logic]], it is provable that every [[total function]] from [[natural numbers]] to natural numbers is [[compu"
+- input: **confirmed** [e] "It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]]."
+- output: **confirmed** [e] "It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]]."
+- preserved: **confirmed** [e] "It is an environment for [[higher-order logic|higher order]] [[recursion]] theory"
+- broken: **unsupported** *Failure of excluded middle and choice is not stated in the fetched windows.*
+- recalled: name: Standard (Hyland 1982); description: Realizability topos over Kleene's first algebra; input: PCA K1; output: Effective topos; preserved: Computability; broken: Excluded middle
+
+  e: excerpts/nlab-effective-topos.txt (https://ncatlab.org/nlab/source/effective+topos)
+
+### D7-295 Object Classifier Evaluation (batch 12)
+
+- name: **unsupported** *No fetched source for the object classifier (no nLab page by that title).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Lurie); description: Universe classifying small maps; univalence; input: Infinity-topos; output: Classifying map; preserved: Univalence; broken: Nothing
+
+
+### D7-296 Diaconescu's Theorem Transformation (batch 12)
+
+- name: **confirmed** [d] "For the theorem in [[logic]] that often goes by the same name, see at _[[Diaconescu-Goodman–Myhill theorem]]_." *Both theorems carry the name, as the fill's reading says.*
+- description: **confirmed** [d] "_Diaconescu&#39;s theorem_ asserts that any [[presheaf topos]] is the [[classifying topos]] for [[internally flat functors]] on its [[site]]." *Reading (1). Reading (2), choice implies excluded middle, has no fetched source (the nLab page for it was not served).*
+- input: **confirmed** [d] "_Diaconescu&#39;s theorem_ asserts that any [[presheaf topos]]"
+- output: **confirmed** [d] "between the category of [[geometric morphism]]s $f : \mathcal{E} \to PSh(C)$ and the category of [[internally flat functors]] $C \to \mathcal{E}$."
+- preserved: **confirmed** [d] "between the category of [[geometric morphism]]s $f : \mathcal{E} \to PSh(C)$ and the category of [[internally flat functors]] $C \to \mathcal{E}$."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Two theorems named after Diaconescu; description: Choice implies excluded middle; geometric morphisms to presheaf toposes are flat functors; input: Topos; output: Booleanness or flat functor; preserved: Points as flat functors; broken: Nothing
+
+  d: excerpts/nlab-diaconescus-theorem.txt (https://ncatlab.org/nlab/source/Diaconescu%27s+theorem)
+
+### D7-297 Freyd Cover Construction (batch 12)
+
+- name: **confirmed** [f] "The Freyd cover is sometimes known as the **Sierpinski cone** or **scone**"
+- description: **confirmed** [f] "The construction is a special case of [[Artin gluing]]" [f] "Let $\mathcal{T}$ be a category with a terminal object and $\Gamma = \mathcal{T} (1, -)$ the global section functor ." *Disjunction and existence properties are not quoted.*
+- input: **confirmed** [f] "The **Freyd cover** $\overline{\mathcal{T}}$ of a [[topos]] $\mathcal{T}$, or more generally of a [[category]] with a [[terminal object]]"
+- output: **confirmed** [f] "The **Freyd cover** $\overline{\mathcal{T}}$ of a [[topos]] $\mathcal{T}$"
+- preserved: **unsupported** *E as an open subtopos is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Freyd); description: Artin gluing along global sections; disjunction and existence properties; input: Topos; output: Glued topos; preserved: Open subtopos; broken: Nothing
+
+  f: excerpts/nlab-freyd-cover.txt (https://ncatlab.org/nlab/source/Freyd+cover)
+
+### D7-298 Hyperdoctrine Quotient Completion (batch 12)
+
+- name: **unsupported** *No fetched source for the elementary quotient completion (Maietti and Rosolini).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Maietti and Rosolini); description: Elementary quotient completion of a doctrine; input: Elementary doctrine; output: Doctrine with quotients; preserved: Logic; broken: Nothing
+
+
+### D7-299 Kripke-Joyal Semantics Interpretation (batch 12)
+
+- name: **confirmed** [k] "**Kripke--Joyal semantics** is a higher order generalization of the [[semantics|semantic]] interpretation proposed initially by Beth, Grzegorczyk, and Kripke"
+- description: **confirmed** [k] "It provides a notion of _&#39;local truth&#39;_ or _&#39;validity at a stage&#39;_ in a [[topos]]."
+- input: **confirmed** [k] "for [[intuitionistic logic|intuitionistic predicate logic]"
+- output: **confirmed** [k] "it is sometimes called _forcing_ semantics."
+- preserved: **unsupported** *Soundness is not quoted.*
+- broken: **confirmed** [k] "It provides a notion of _&#39;local truth&#39;_ or _&#39;validity at a stage&#39;_ in a [[topos]]." *Truth is local, not global and two-valued.*
+- recalled: name: Standard; description: Forcing semantics at stages; input: Formula and topos; output: Forcing relation; preserved: Soundness; broken: Two-valued truth
+
+  k: excerpts/nlab-kripke-joyal-semantics.txt (https://ncatlab.org/nlab/source/Kripke-Joyal+semantics)
+
+### D7-300 Mitchell-B\u00e9nabou Language Translation (batch 12)
+
+- name: **confirmed** [m] "is a particularly simple form of the [[internal language]] of an [[elementary topos]] $E$."
+- description: **confirmed** [m] "is a particularly simple form of the [[internal language]] of an [[elementary topos]] $E$."
+- input: **confirmed** [m] "of an [[elementary topos]] $E$."
+- output: **confirmed** [m] "is a particularly simple form of the [[internal language]]"
+- preserved: **confirmed** [m] "since a formula or [[proposition]] can be identified with a term o" *Higher-order typed terms; intuitionistic logic is not quoted here.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: The internal typed higher-order language of a topos; input: Topos; output: Internal language; preserved: Intuitionistic higher-order logic; broken: Classical principles
+
+  m: excerpts/nlab-mitchell-benabou-language.txt (https://ncatlab.org/nlab/source/Mitchell-B%C3%A9nabou+language)
+
+### D7-301 Forcing Interpretation in Topos (batch 12)
+
+- name: **confirmed** [f] "it is more or less equivalent to the construction of [[categories of sheaves]] in [[topos theory]]"
+- description: **confirmed** [f] "In structural set theory, this construction is simply that of the [[topos of sheaves]] on a suitable [[site]], in the model $V$." *The double-negation topology on a poset of conditions is not quoted.*
+- input: **unsupported** *The poset of forcing conditions is not quoted.*
+- output: **confirmed** [f] "In structural set theory, this construction is simply that of the [[topos of sheaves]] on a suitable [[site]]"
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Failure of CH appears only in the source's references (Cohen); not stated.*
+- recalled: name: Standard; description: Cohen forcing as sheaves on conditions with double-negation topology; CH fails; input: Poset of conditions; output: Boolean topos; preserved: ZF axioms; broken: Continuum hypothesis
+
+  f: excerpts/nlab-forcing.txt (https://ncatlab.org/nlab/source/forcing)
 

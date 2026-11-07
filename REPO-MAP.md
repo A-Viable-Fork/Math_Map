@@ -314,6 +314,7 @@
 | `excerpts/nlab-additive-envelope.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-adjoint-functor-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-adjoint-functor.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-atomic-geometric-morphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung-modalities.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung.txt` | Verbatim windows from an nLab page. |
@@ -323,7 +324,9 @@
 | `excerpts/nlab-cartesian-closed-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-product.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-category-of-fractions.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-category-of-presheaves.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cauchy-complete-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-classifying-topos.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-closure-operator.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-co-yoneda-lemma.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coequalizer.txt` | Verbatim windows from an nLab page. |
@@ -335,40 +338,56 @@
 | `excerpts/nlab-coreflective-subcategory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-day-convolution.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-diaconescus-theorem.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-direct-image.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-dold-kan-correspondence.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-effective-topos.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-eilenberg-moore-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-end.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-equalizer.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-essential-geometric-morphism-r.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-essential-geometric-morphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-essential-image.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-exponential-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-factorization-homology.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-faithful-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-filtered-colimit.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-forcing.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-free-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-free-groupoid.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-freyd-cover.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-freyd-mitchell-embedding-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-full-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-functor-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-functor.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-geometric-morphism-r.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-geometric-morphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-godement-product.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-grothendieck-construction.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-grothendieck-topology.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-groupoidification.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-horizontal-composition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-ind-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-initial-object.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-internal-logic.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-inverse-image.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-isbell-duality.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-kan-extension.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-karoubi-envelope.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-kleisli-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-kripke-joyal-semantics.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-theory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-tierney-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-tierney-meet.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-lawvere-tierney-topology-r.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-tierney.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-level-of-a-topos.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-limit.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-local-homeomorphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-localization.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-logical-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-macneille-completion.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-mitchell-benabou-language.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-monadicity-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-monoidal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-monoidal-natural-transformation.txt` | Verbatim windows from an nLab page. |
@@ -386,6 +405,8 @@
 | `excerpts/nlab-reflective-subcategory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-regular-and-exact-completions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-retract.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-sheafification.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-sieve.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-sifted-colimit.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-skeletal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-split-epimorphism.txt` | Verbatim windows from an nLab page. |
@@ -394,7 +415,9 @@
 | `excerpts/nlab-subobject-classifier-meet.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subobject-classifier.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-symmetric-monoidal-natural-transformation.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-syntactic-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-terminal-object.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-transgression.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-under-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-weak-factorization-system.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-whiskering.txt` | Verbatim windows from an nLab page. |
@@ -1207,6 +1230,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Quotient.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.ConcreteSheafification.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Skeletal.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Subobject.Classifier.Defs.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt` |
@@ -1224,13 +1249,16 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-additive-envelope.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-adjoint-functor-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-adjoint-functor.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-atomic-geometric-morphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-biproduct.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-braided-monoidal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-calculus-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-closed-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-category-of-fractions.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-category-of-presheaves.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cauchy-complete-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-classifying-topos.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-co-yoneda-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coequalizer.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-colimit.txt` |
@@ -1241,34 +1269,50 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coreflective-subcategory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-day-convolution.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-diaconescus-theorem.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-direct-image.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-dold-kan-correspondence.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-effective-topos.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-eilenberg-moore-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-end.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-equalizer.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-essential-geometric-morphism-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-essential-image.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-exponential-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-factorization-homology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-faithful-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-filtered-colimit.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-forcing.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-free-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-free-groupoid.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-freyd-cover.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-freyd-mitchell-embedding-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-full-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-functor-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-functor.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-geometric-morphism-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-godement-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-construction.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-topology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-groupoidification.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-horizontal-composition.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-ind-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-initial-object.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-internal-logic.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-inverse-image.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-isbell-duality.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kan-extension.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-karoubi-envelope.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kleisli-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kripke-joyal-semantics.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-lawvere-theory.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-lawvere-tierney-topology-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-limit.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-local-homeomorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-localization.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-logical-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-macneille-completion.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-mitchell-benabou-language.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monadicity-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monoidal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monoidal-natural-transformation.txt` |
@@ -1284,13 +1328,17 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-reflective-subcategory-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-regular-and-exact-completions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-retract.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sheafification.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sieve.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sifted-colimit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-skeletal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-split-epimorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-string-diagram.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-subobject-classifier.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-symmetric-monoidal-natural-transformation.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-syntactic-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-terminal-object.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-transgression.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-under-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-weak-factorization-system.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-whiskering.txt` |

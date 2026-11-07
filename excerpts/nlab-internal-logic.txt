@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, internal logic (page source)
+URL: https://ncatlab.org/nlab/source/internal+logic
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 83efb6723fd8af3e8ce783a20f429daa453557ef0428571bd0087fcb45749229
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+One of the most important observations of [[category theory]] is that large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure.
+
+large parts of mathematics can be [[internalization|internalized]] in any [[category]] with sufficient structure.
+
+Thus, in a Heyting category we can interpret all of (finitary, first-order) [[intuitionistic logic]].
+
+is that the internal logic of all these categories is, in general, [[constructive mathematics|constructive]].
