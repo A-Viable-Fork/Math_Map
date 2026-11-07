@@ -11,3 +11,41 @@ applied to obtain a profunctor representation for optics.
 
  has Tambara module structure for the monoidal
 actions defining an optic
+
+Lenses are pairs of ‘view’ and ‘update’ functions that capture
+
+representation of setters as a single
+
+ltx_font_typewriter">over</span> function.
+
+ltx_font_typewriter">match</span> function that tries to access the
+
+Prisms pattern-match on data structures and handle a possible failure to
+
+{{\emph{\mathbf{Prism}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,T\bullet A)\times\mathbf{D}(B,T).
+
+ltx_font_typewriter">build</span> function that constructs an abstract type
+
+Traversals extract the elements of a finitary container
+
+{{\emph{\mathbf{Traversal}}}}((A,B),(S,T))\coloneqq\mathbf{C}\left(S,\int^{n\in\mathbb{N}}A^{n}\otimes[B^{n},T]\right).
+
+different encoding in terms of profunctors represented by an applicative
+
+to iterate over the elements without altering the container
+
+ltx_font_typewriter">grate</span> function with the form
+
+“closed” profunctors was first reported by Deikun and
+
+{{\emph{\mathbf{Grate}}}}\left((A,B),(S,T)\right):=\mathbf{D}([S,A]\bullet B,T).
+
+create a new structure when provided with a way of creating a new focus from
+
+Kmett (2012–2018)</a></cite> are morphisms in
+
+{{\emph{\mathbf{Adapter}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,A)\otimes\mathbf{D}(B,T).
+
+Setters are optics for identity action
+
+{{\emph{\mathbf{Setter}}}}((A,B),(S,T))\coloneqq{\hyperlink{linkvenrichment}{\mathcal{V}}}([A,B],[S,T]).

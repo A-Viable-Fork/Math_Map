@@ -14,3 +14,17 @@ a ''composition'' function
 * ''associativity'':
 
 *''equivariance'': given a permutation <math>t\in S_n</math>,
+
+The Swiss-cheese operad was defined by [[Alexander A. Voronov]].
+
+The ''Swiss-cheese operad'' is a two-colored
+
+It was used by [[Maxim Kontsevich]] to formulate a Swiss-cheese version of [[Deligne conjecture|Deligne's conjecture]] on [[Hochschild cohomology]].
+
+title = Operads and Motives in Deformation Quantization
+
+this non-<math>\Sigma</math> operad has the structure of a braided operad, which generalizes the notion of a symmetric operad from symmetric to braid groups.
+
+which generalizes the notion of a symmetric operad from symmetric to braid groups.
+
+has the structure of a braided operad

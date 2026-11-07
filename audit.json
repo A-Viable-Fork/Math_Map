@@ -21135,6 +21135,1264 @@
    "sources": {
     "b": "https://ncatlab.org/nlab/source/biased+definition"
    }
+  },
+  {
+   "id": "D7-352",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/nlab-boardman-vogt-tensor-product.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "The _Boardman-Vogt tensor product_ is a natural [[tensor product]] on [[symmetric operads]].",
+     "more": [
+      {
+       "src": "b",
+       "quote": "* [[Michael Boardman]], [[Rainer Vogt]], _Homotopy invariant algebraic structures on topological spaces_, Lecture Notes in Mathematics, Vol. 347, Springer-Verlag, (1973)."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "For $P_1, P_2, E \\in Operad$, the category of $P_1$-algebras in $P_2$-algebras in $E$ is equivalent to the category of $P_2$-algebras in $P_1$-algebras in $E$.",
+     "note": "The source states iterated algebras through the internal hom and names Dunn's additivity theorem for the map quoted.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "We may therefore speak of $[P,Q]$ as being the **operad of $P$-algebras in $Q$."
+      },
+      {
+       "src": "b",
+       "quote": "### Dunn&#39;s additivity theorem"
+      },
+      {
+       "src": "b",
+       "quote": "Then, the canonical maps $C_n,C_m \\rightarrow C_{n+m}$ together yield a map $\\mu:C_n \\otimes C_m \\rightarrow C_{n+m}$."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Let $\\mathcal{P}$ be an operad over a set of colors $C$, and $\\mathcal{Q}$ be an operad over a set of colors $D$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Their **Boardman-Vogt tensor product** $\\mathcal{P} \\otimes_{BV} \\mathcal{Q}$ is the operad whose set of colors is $C \\times D$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "1. The operations  in $\\mathcal{P}$ and $\\mathcal{Q}$ [[distributive law|distribute]] over each other in $\\mathcal{P} \\otimes_{BV} \\mathcal{Q}$ in the evident sense (...).",
+     "note": "Interchange, as distributivity."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://ncatlab.org/nlab/source/Boardman-Vogt+tensor+product"
+   }
+  },
+  {
+   "id": "D7-353",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-little-cubes-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The **little $k$-disk operad** or **little $k$-cubes operad**"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "whose $n$-ary operations are parameterized by rectilinear disjoint embeddings of $n$ $k$-dimensional cubes into another $k$-dimensional cube.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "Then $Y$ is homotopy equivalent to a $k$-fold loop space $\\Omega^k X$ for some pointed topological space $X$."
+      },
+      {
+       "src": "c",
+       "quote": "Specifically for $\\mathcal{X} = Top$, this refines to the classical theorem by [May 1972](#May72)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Let $Y$ be a [[topological space]] equipped with an action of the [[little cubes operad]] $\\mathcal{C}_k$ and suppose that $Y$ is grouplike."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "An [[algebra over an operad]] over $E_k$ is an [[Ek-algebra]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Therefore the [[algebra over an operad|algebras over]] the $E_k$ operad are &quot;$k$-fold monoidal&quot; objects.",
+     "note": "k-fold monoidal; \"commutativity up to homotopy in n directions\" is the fill's gloss."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/little+cubes+operad"
+   }
+  },
+  {
+   "id": "D7-354",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-operad.txt",
+    "s": "excerpts/nlab-swiss-cheese-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The Swiss-cheese operad was defined by [[Alexander A. Voronov]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The ''Swiss-cheese operad'' is a two-colored",
+     "note": "Bulk-boundary modelling is not quoted; per the source Kontsevich used the operad for a Swiss-cheese Deligne conjecture, and the cited paper's title names deformation quantization.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "where disks are replaced by half-disks,"
+      },
+      {
+       "src": "o",
+       "quote": "It was used by [[Maxim Kontsevich]] to formulate a Swiss-cheese version of [[Deligne conjecture|Deligne's conjecture]] on [[Hochschild cohomology]]."
+      },
+      {
+       "src": "o",
+       "quote": "title = Operads and Motives in Deformation Quantization"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382614144",
+    "s": "https://ncatlab.org/nlab/source/Swiss+cheese+operad"
+   }
+  },
+  {
+   "id": "D7-355",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-a-infinity-algebra.txt",
+    "w": "excerpts/wikipedia-a-infinity.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "An _$A_\\infty$-algebra_ is a [[monoid]] [[internal category|internal]] to a [[homotopical category]] such that the [[associativity]] law holds not as an equation, but only up to higher [[coherent]] [[homotopy]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "with a multiplication operation and a series of higher homotopies giving the failure for the multiplication to be associative.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "One of the key properties of <math>A_\\infty</math>-algebras is their structure can be transferred to other algebraic objects given the correct hypotheses."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "An $A_\\infty$-algebra in chain complexes is concretely the following data."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "An **$A_\\infty$-algebra** is an [[algebra over an operad]] over an [[A-∞ operad]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "such that the [[associativity]] law holds not as an equation, but only up to higher [[coherent]] [[homotopy]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "as the vanishing of <math>m_3</math> means that <math>m_2</math> is associative on the nose."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/A-infinity-algebra",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369001761"
+   }
+  },
+  {
+   "id": "D7-356",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-l-infinity-algebra.txt",
+    "w": "excerpts/wikipedia-l-infinity.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "_$L_\\infty$-algebras_ (or _strong homotopy Lie algebras_) are a higher generalization"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "is a collection of symmetric multi-linear maps <math>l_n \\colon V^{\\otimes n}\\to V</math> of degree <math>n-2</math>",
+     "note": "The control of deformation problems is not quoted.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "in an $L_\\infty$-algebra the [[Jacobi identity]] is allowed to hold (only) up to higher [[coherence law|coherent]] [[homotopy]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "on a [[graded vector space]] <math>V = \\bigoplus V_i </math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "a '''homotopy Lie algebra''' (or '''<math>L_\\infty</math>-algebra''') is a generalisation of the concept of a [[differential graded Lie algebra]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "in an $L_\\infty$-algebra the [[Jacobi identity]] is allowed to hold (only) up to higher [[coherence law|coherent]] [[homotopy]].",
+     "note": "Maurer-Cartan elements are not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "showing that the differential of the 3-bracket gives the failure for the 2-bracket to be a Lie algebra structure. It is only a Lie algebra up to homotopy."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/L-infinity-algebra",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1336513082"
+   }
+  },
+  {
+   "id": "D7-357",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-e-infinity-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "In terms of [[operads]], an $E_\\infty$-algebra is an [[algebra over an operad]] for an [[E-∞ operad]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "an **$E_\\infty$-algebra** in $C$ is synonymous with a [[commutative monoid in a symmetric monoidal (infinity,1)-category|commutative monoid]] in $C$.",
+     "more": [
+      {
+       "src": "e",
+       "quote": "complex $C^*(X,\\mathbb{Z})$ is not: instead, it is an $E_\\infty$-algebra."
+      },
+      {
+       "src": "e",
+       "quote": "that has the [[homotopy type]] of a $k$-fold [[loop space]] for all $k \\in \\mathbb{N}$ admits the structure of an $E_\\infty$-space."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Most often $C$ is the [[(infinity,1)-category of chain complexes]] over a [[field]] or [[commutative ring]], or the [[stable (infinity,1)-category]] of [[spectra]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "an **$E_\\infty$-algebra** in $C$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is synonymous with a [[commutative monoid in a symmetric monoidal (infinity,1)-category|commutative monoid]] in $C$."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is a graded-commutative algebra over the integers, but the the [[singular cohomology|singular cochain]] complex $C^*(X,\\mathbb{Z})$ is not: instead, it is an $E_\\infty$-algebra."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/E-infinity+algebra"
+   }
+  },
+  {
+   "id": "D7-358",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/nlab-multicategory.txt",
+    "b": "excerpts/nlab-boardman-vogt-tensor-product.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Let $\\mathcal{P}$ be an operad over a set of colors $C$",
+     "note": "Multisorted algebras are not quoted.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* A source map $s: C_1 \\to (C_0)*$ to the collection of finite, possibly empty [[list]]s of objects"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "We write $f: c_1, \\ldots, c_n \\to c$ to indicate the source and target of a multimorphism $f$.",
+     "note": "Typing, as sources and targets."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://ncatlab.org/nlab/source/multicategory",
+    "b": "https://ncatlab.org/nlab/source/Boardman-Vogt+tensor+product"
+   }
+  },
+  {
+   "id": "D7-359",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-cyclic-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The notion of *cyclic operads* ([Getzler &amp; Kapranov 1995](#GetzlerKapranov1995))"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the [[cyclic group]] $\\mathbb{Z}_{/(n+1)}$ which rotates the $n+1$ in/outputs into each other."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "for a cyclic operad this is extended to an [[group action|action]] of $Sym(n+1)$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The notion of *cyclic operads*"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Invariant inner products are not quoted; the source points to cyclic homology."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "in which the distinction between &quot;inputs&quot; and &quot;output&quot; of operations is made to disappear."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/cyclic+operad"
+   }
+  },
+  {
+   "id": "D7-360",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "this non-<math>\\Sigma</math> operad has the structure of a braided operad, which generalizes the notion of a symmetric operad from symmetric to braid groups."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "which generalizes the notion of a symmetric operad from symmetric to braid groups.",
+     "note": "Algebras in braided monoidal categories are not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "has the structure of a braided operad"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "which generalizes the notion of a symmetric operad from symmetric to braid groups.",
+     "note": "Braid-group equivariance, per the generalization."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382614144"
+   }
+  },
+  {
+   "id": "D7-361",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-pro.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A PRO, an abbreviation for &quot;product category&quot;, is similar to a [[PROP]] but more general"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A **PRO** is a [[strict monoidal category]] $T$ in which every [[object]] is of the form",
+     "note": "Many inputs and many outputs are quoted for PROPs, not for PROs.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "(\\mathbb{N}, +, 0)"
+      },
+      {
+       "src": "p",
+       "quote": "being merely a [[monoidal category]] but not necessarily [[symmetric monoidal category|symmetric monoidal]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "A signature of m-to-n operations is not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A **PRO** is a [[strict monoidal category]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Somewhat more precisely, a PRO is a strict monoidal category along with a [[strict monoidal functor|strict monoidal]] [[bijective-on-objects functor]]:",
+     "note": "Monoidal composition, as the strict monoidal structure."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "being merely a [[monoidal category]] but not necessarily [[symmetric monoidal category|symmetric monoidal]]"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/PRO"
+   }
+  },
+  {
+   "id": "D7-362",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-prop.txt",
+    "n": "excerpts/nlab-prop.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The notion was introduced by [[Frank Adams]] and [[Saunders Mac Lane]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "whose objects are the natural numbers ''n'' identified with the finite sets <math>\\{0,1,\\ldots,n-1\\}</math> and whose tensor product is given on objects by the addition on numbers.",
+     "note": "Bialgebras and Frobenius algebras are not quoted.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "because they can be used to describe operations with many outputs as well as many inputs."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "A **PROP** is a strict [[symmetric monoidal category]] where every object is of the form"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "a '''PROP''' is a [[symmetric monoidal category|symmetric]] strict [[monoidal category]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1334143481",
+    "n": "https://ncatlab.org/nlab/source/PROP"
+   }
+  },
+  {
+   "id": "D7-363",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-free-operad.txt",
+    "c": "excerpts/nlab-cyclic-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "And composition of operations is given by grafting of trees."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "(the unique root of one tree to any of the leaves of another)",
+     "more": [
+      {
+       "src": "f",
+       "quote": "the free operad on this collection has as $n$-ary operations the collection of all [[trees]] with $n$ leaves equipped with a labelling of each vertex $v$ with a $k$-ary operation"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The corresponding free operad has as $n$-ary operations all rooted trees with $n$ leaves."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "And composition of operations is given by grafting of trees."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "where the [[composition]] operations in a symmetric operad are indexed by grafting of [[rooted trees]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/free+operad",
+    "c": "https://ncatlab.org/nlab/source/cyclic+operad"
+   }
+  },
+  {
+   "id": "D7-364",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-koszul-duality.txt",
+    "n": "excerpts/nlab-koszul-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "An extension of the above concept of Koszul duality was formulated by Ginzburg and Kapranov who introduced the notion of a quadratic [[operad]] and defined the quadratic dual of such an operad."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the associative operad is self-dual, while the commutative and the Lie operad correspond to each other",
+     "more": [
+      {
+       "src": "n",
+       "quote": "* [[Victor Ginzburg]], [[Mikhail Kapranov]], _Koszul duality for operads_, Duke Math. J. __76__ (1994)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Koszul duality is a duality between [[quadratic operad]]s, predicted in",
+     "note": "The nLab page credits Kontsevich with predicting it."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "defined the quadratic dual of such an operad.",
+     "note": "The minimal resolution is not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The cobar construction and P_infinity are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371645629",
+    "n": "https://ncatlab.org/nlab/source/Koszul+duality"
+   }
+  },
+  {
+   "id": "D7-365",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kelly-mac-lane-graph.txt",
+    "t": "excerpts/nlab-coherence-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "They have come to be known as &quot;Kelly--Mac Lane graphs&quot; principally on account of their application to coherence problems for closed categories in the treatment",
+     "more": [
+      {
+       "src": "k",
+       "quote": "* {#KM71} [[Max Kelly]], [[Saunders MacLane]], _Coherence in closed categories_, JPAA 1 (1971), 97--140"
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "A diagrammatic calculus for [[closed categories]]",
+     "note": "Per the source the graphs were introduced by Eilenberg and Kelly (1966), and Kelly and Mac Lane applied them to coherence.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "* [[Samuel Eilenberg]], [[Max Kelly]], _A generalization of the functorial calculus_, J. Algebra 3 (1966), 366--375."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a coherence theorem may provide a full or partial algorithm for deciding equality in free algebras."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a coherence theorem may provide a full or partial algorithm for deciding equality in free algebras.",
+     "note": "A verdict on equality of composites, so on commutativity."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kelly-Mac+Lane+graph",
+    "t": "https://ncatlab.org/nlab/source/coherence+theorem"
+   }
+  },
+  {
+   "id": "D7-366",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/nlab-infinity-1-topos.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A [[Alexander Grothendieck|Grothendieck]]--[[Charles Rezk|Rezk]]--[[Jacob Lurie|Lurie]] **$(\\infty,1)$-topos**"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "[left exact](reflective+sub-%28infinity%2C1%29-category#ExactLocalizations) [[reflective sub-(∞,1)-category]] of an [[(∞,1)-category of (∞,1)-presheaves]]",
+     "note": "The source names Grothendieck, Rezk and Lurie in the definition and cites Toën and Vezzosi.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "* {#ToenVezzosi05} [[Bertrand Toën]], [[Gabriele Vezzosi]], _Homotopical Algebraic Geometry I: Topos theory_"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* $\\mathbf{H}$ is [[presentable (infinity,1)-category|presentable]];",
+     "note": "Presentability is one of the Giraud-Rezk-Lurie conditions; sites are not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "**$(\\infty,1)$-topos** $\\mathbf{H}$ is an"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* that has [[object classifiers]].",
+     "note": "Descent is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Hypercompleteness is named, not explained, in the fetched page."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://ncatlab.org/nlab/source/%28infinity%2C1%29-topos"
+   }
+  },
+  {
+   "id": "D7-367",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-lens-cs.txt",
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "(&quot;view&quot;, &quot;read-out&quot;, &quot;forward operation&quot;)"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "S \\longrightarrow V",
+     "note": "The source's get, also called view.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "Lenses are pairs of ‘view’ and ‘update’ functions that capture"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "1. a [[pair]] of [[morphisms]] of the form"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "S \\longrightarrow V"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* (PutGet) &quot;what has just been written is read out as such&quot;:",
+     "note": "A law relating get and put; that the get step preserves it is the fill's gloss."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "turn out to equivalently be data base types of product form $S = D \\times V$ with &quot;view&quot; given by projecting onto the $V$-factor.",
+     "note": "For lawful lenses get is a projection, so the D-factor is not read."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/lens+%28in+computer+science%29",
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-368",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-lens-cs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "(&quot;update&quot;, &quot;write&quot;, &quot;backward operation&quot;)"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "V \\times S \\longrightarrow S",
+     "note": "The source orders the arguments V x S."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "V \\times S \\longrightarrow S"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "V \\times S \\longrightarrow S"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* (GetPut) &quot;writing what has just been read out means no change&quot;:",
+     "more": [
+      {
+       "src": "n",
+       "quote": "* (PutGet) &quot;what has just been written is read out as such&quot;:"
+      },
+      {
+       "src": "n",
+       "quote": "* (PutPut) &quot;writing means to over-write previous edits&quot;:"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* (PutPut) &quot;writing means to over-write previous edits&quot;:"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/lens+%28in+computer+science%29"
+   }
+  },
+  {
+   "id": "D7-369",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "representation of setters as a single",
+     "note": "The source gives over as the representation of setters; a lens yields one.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "ltx_font_typewriter\">over</span> function."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The formula through get and put is not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-370",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">match</span> function that tries to access the"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Prisms pattern-match on data structures and handle a possible failure to",
+     "more": [
+      {
+       "src": "a",
+       "quote": "{{\\emph{\\mathbf{Prism}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}(S,T\\bullet A)\\times\\mathbf{D}(B,T)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Prisms pattern-match on data structures and handle a possible failure to"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Prism}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}(S,T\\bullet A)\\times\\mathbf{D}(B,T).",
+     "note": "The match component lands in T acted on by A: the focus or the remainder."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Prism laws are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-371",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">build</span> function that constructs an abstract type"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Prism}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}(S,T\\bullet A)\\times\\mathbf{D}(B,T).",
+     "note": "The build component is the D(B,T) factor."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">build</span> function that constructs an abstract type"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">build</span> function that constructs an abstract type"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Prism laws are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-372",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Traversals extract the elements of a finitary container"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Traversal}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}\\left(S,\\int^{n\\in\\mathbb{N}}A^{n}\\otimes[B^{n},T]\\right).",
+     "note": "Zero or more foci, as the coend over n.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "different encoding in terms of profunctors represented by an applicative"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Traversals extract the elements of a finitary container"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The updated whole inside the effect is not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "to iterate over the elements without altering the container"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-373",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source defines iso optics."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-374",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "ltx_font_typewriter\">grate</span> function with the form",
+     "more": [
+      {
+       "src": "a",
+       "quote": "“closed” profunctors was first reported by Deikun and"
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Grate}}}}\\left((A,B),(S,T)\\right):=\\mathbf{D}([S,A]\\bullet B,T)."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "A representable container is not quoted; the source encodes grates through corepresentable functors."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "create a new structure when provided with a way of creating a new focus from"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Zipping is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [
+    "name"
+   ],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-375",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Kmett (2012–2018)</a></cite> are morphisms in"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Adapter}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}(S,A)\\otimes\\mathbf{D}(B,T)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Adapter}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}(S,A)\\otimes\\mathbf{D}(B,T)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Adapter}}}}((A,B),(S,T))\\coloneqq\\mathbf{C}(S,A)\\otimes\\mathbf{D}(B,T)."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Composition is not quoted for adapters."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-376",
+   "batch": 15,
+   "why": "Fill review, batch 15: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Setters are optics for identity action"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Setter}}}}((A,B),(S,T))\\coloneqq{\\hyperlink{linkvenrichment}{\\mathcal{V}}}([A,B],[S,T])."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "{{\\emph{\\mathbf{Setter}}}}((A,B),(S,T))\\coloneqq{\\hyperlink{linkvenrichment}{\\mathcal{V}}}([A,B],[S,T])."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Read access is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://arxiv.org/html/2001.07488"
+   }
   }
  ]
 }

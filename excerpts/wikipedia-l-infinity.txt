@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Homotopy Lie algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1336513082
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 685ddbfbf0ceff8e3a4ca5de87ce781953dbde93efeb4e6bc598acace4b2047d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a collection of symmetric multi-linear maps <math>l_n \colon V^{\otimes n}\to V</math> of degree <math>n-2</math>
+
+on a [[graded vector space]] <math>V = \bigoplus V_i </math>
+
+a '''homotopy Lie algebra''' (or '''<math>L_\infty</math>-algebra''') is a generalisation of the concept of a [[differential graded Lie algebra]].
+
+showing that the differential of the 3-bracket gives the failure for the 2-bracket to be a Lie algebra structure. It is only a Lie algebra up to homotopy.

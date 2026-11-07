@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 350 of 416 D7 stubs, 0 of 79 homes; 350 entries in 14 batches.
+Reviewed: 375 of 416 D7 stubs, 0 of 79 homes; 375 entries in 15 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (350 entries)
+### D7 stubs (375 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 322 | 0 | 0 | 28 |
-| description | 319 | 7 | 0 | 24 |
-| input | 303 | 3 | 0 | 44 |
-| output | 300 | 0 | 0 | 50 |
-| preserved | 234 | 2 | 0 | 114 |
-| broken | 108 | 4 | 0 | 238 |
-| **all** | 1586 | 16 | 0 | 498 |
+| name | 346 | 0 | 0 | 29 |
+| description | 342 | 7 | 0 | 26 |
+| input | 320 | 3 | 0 | 52 |
+| output | 321 | 0 | 0 | 54 |
+| preserved | 248 | 2 | 0 | 125 |
+| broken | 115 | 4 | 0 | 256 |
+| **all** | 1692 | 16 | 0 | 542 |
 
 ## 2. Recall against source
 
@@ -42,7 +42,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 12 | 25 | 101 | 0 | 0% |
 | 13 | 25 | 94 | 1 | 1% |
 | 14 | 25 | 113 | 0 | 0% |
-| **all** | 350 | 1602 | 5 | 0% |
+| 15 | 25 | 106 | 1 | 1% |
+| **all** | 375 | 1708 | 6 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -58,8 +59,10 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-275 preserved: sample unsupported, review confirmed.
 - D7-302 name: sample confirmed, review unsupported.
 - D7-302 output: sample confirmed, review unsupported.
+- D7-376 description: sample unsupported, review confirmed.
+- D7-376 output: sample unsupported, review confirmed.
 
-Agreement: 68 of 78 fields.
+Agreement: 72 of 84 fields.
 
 ## 4. Sources in disagreement
 
@@ -335,6 +338,26 @@ Every field not confirmed, with the reason.
 - **D7-349 Operadic Whiskering** (batch 14): *name* unsupported: No fetched source calls partial composition whiskering. *preserved* unsupported: Associativity of partial composition is not quoted. *broken* unsupported: Not stated.
 - **D7-350 Multicategory Free Construction** (batch 14): *name* unsupported: No fetched source states the free multicategory construction. *description* unsupported: The free construction is not quoted; the identification of multicategories with coloured operads is (nLab, multicategory). *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
 - **D7-351 Biased to Unbiased Bicategory Transformation** (batch 14): *description* unsupported: The equivalence of biased and unbiased bicategories and its attribution to Leinster are not in a fetched source; the general distinction is (nLab, biased definition). *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-352 Boardman-Vogt Tensor Product** (batch 15): *broken* unsupported: Not stated.
+- **D7-353 Little Cubes Operad Application** (batch 15): *broken* unsupported: Not stated.
+- **D7-354 Swiss-Cheese Operad Application** (batch 15): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-358 Colored Operad Construction** (batch 15): *broken* unsupported: Not stated.
+- **D7-359 Cyclic Operad Transformation** (batch 15): *preserved* unsupported: Invariant inner products are not quoted; the source points to cyclic homology.
+- **D7-360 Braided Operad Transformation** (batch 15): *input* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-361 PRO Construction** (batch 15): *input* unsupported: A signature of m-to-n operations is not quoted.
+- **D7-362 PROP Construction** (batch 15): *input* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-363 Trees and Grafting Operation** (batch 15): *broken* unsupported: Not stated.
+- **D7-364 Koszul Duality for Operads** (batch 15): *preserved* unsupported: The cobar construction and P_infinity are not quoted. *broken* unsupported: Not stated.
+- **D7-365 Kelly-Mac Lane Coherence Construction** (batch 15): *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-366 Higher Topos Construction** (batch 15): *broken* unsupported: Hypercompleteness is named, not explained, in the fetched page.
+- **D7-369 Lens Modify Application** (batch 15): *description* unsupported: The formula through get and put is not quoted. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-370 Prism Match Evaluation** (batch 15): *preserved* unsupported: Prism laws are not quoted. *broken* unsupported: Not stated.
+- **D7-371 Prism Build Construction** (batch 15): *preserved* unsupported: Prism laws are not quoted. *broken* unsupported: Not stated.
+- **D7-372 Traversal Optic Application** (batch 15): *output* unsupported: The updated whole inside the effect is not quoted. *broken* unsupported: Not stated.
+- **D7-373 Iso Optic Transformation** (batch 15): *name* unsupported: No fetched source defines iso optics. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-374 Grate Optic Transformation** (batch 15): *input* unsupported: A representable container is not quoted; the source encodes grates through corepresentable functors. *preserved* unsupported: Zipping is not quoted. *broken* unsupported: Not stated.
+- **D7-375 Adapter Optic Transformation** (batch 15): *preserved* unsupported: Composition is not quoted for adapters. *broken* unsupported: Not stated.
+- **D7-376 Setter Optic Transformation** (batch 15): *input* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Read access is not quoted.
 
 ## 6. Receipts
 
@@ -4653,4 +4676,312 @@ actions defining an optic"
 - recalled: name: Standard (Leinster); description: Biased and unbiased bicategories are equivalent; input: Biased bicategory; output: Unbiased bicategory; preserved: Equivalence; broken: Nothing
 
   b: excerpts/nlab-biased-definition.txt (https://ncatlab.org/nlab/source/biased+definition)
+
+### D7-352 Boardman-Vogt Tensor Product (batch 15)
+
+- name: **confirmed** [b] "The _Boardman-Vogt tensor product_ is a natural [[tensor product]] on [[symmetric operads]]." [b] "* [[Michael Boardman]], [[Rainer Vogt]], _Homotopy invariant algebraic structures on topological spaces_, Lecture Notes in Mathematics, Vol. 347, Springer-Verlag, (1973)."
+- description: **confirmed** [b] "For $P_1, P_2, E \in Operad$, the category of $P_1$-algebras in $P_2$-algebras in $E$ is equivalent to the category of $P_2$-algebras in $P_1$-algebras in $E$." [b] "We may therefore speak of $[P,Q]$ as being the **operad of $P$-algebras in $Q$." [b] "### Dunn&#39;s additivity theorem" [b] "Then, the canonical maps $C_n,C_m \rightarrow C_{n+m}$ together yield a map $\mu:C_n \otimes C_m \rightarrow C_{n+m}$." *The source states iterated algebras through the internal hom and names Dunn's additivity theorem for the map quoted.*
+- input: **confirmed** [b] "Let $\mathcal{P}$ be an operad over a set of colors $C$, and $\mathcal{Q}$ be an operad over a set of colors $D$."
+- output: **confirmed** [b] "Their **Boardman-Vogt tensor product** $\mathcal{P} \otimes_{BV} \mathcal{Q}$ is the operad whose set of colors is $C \times D$"
+- preserved: **confirmed** [b] "1. The operations  in $\mathcal{P}$ and $\mathcal{Q}$ [[distributive law|distribute]] over each other in $\mathcal{P} \otimes_{BV} \mathcal{Q}$ in the evident sense (...)." *Interchange, as distributivity.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Boardman and Vogt); description: Algebras over the tensor are P-algebras in Q-algebras with interchange; Dunn additivity for little cubes; input: Two operads; output: Tensor operad; preserved: Interchange; broken: Homotopy invariance fails in general
+
+  b: excerpts/nlab-boardman-vogt-tensor-product.txt (https://ncatlab.org/nlab/source/Boardman-Vogt+tensor+product)
+
+### D7-353 Little Cubes Operad Application (batch 15)
+
+- name: **confirmed** [c] "The **little $k$-disk operad** or **little $k$-cubes operad**"
+- description: **confirmed** [c] "whose $n$-ary operations are parameterized by rectilinear disjoint embeddings of $n$ $k$-dimensional cubes into another $k$-dimensional cube." [c] "Then $Y$ is homotopy equivalent to a $k$-fold loop space $\Omega^k X$ for some pointed topological space $X$." [c] "Specifically for $\mathcal{X} = Top$, this refines to the classical theorem by [May 1972](#May72)."
+- input: **confirmed** [c] "Let $Y$ be a [[topological space]] equipped with an action of the [[little cubes operad]] $\mathcal{C}_k$ and suppose that $Y$ is grouplike."
+- output: **confirmed** [c] "An [[algebra over an operad]] over $E_k$ is an [[Ek-algebra]]."
+- preserved: **confirmed** [c] "Therefore the [[algebra over an operad|algebras over]] the $E_k$ operad are &quot;$k$-fold monoidal&quot; objects." *k-fold monoidal; "commutativity up to homotopy in n directions" is the fill's gloss.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Boardman and Vogt; May); description: Embeddings of little cubes; recognition: grouplike E_n-algebras are n-fold loop spaces; input: Space; output: E_n-algebra; preserved: Homotopy commutativity in n directions; broken: Strict commutativity
+
+  c: excerpts/nlab-little-cubes-operad.txt (https://ncatlab.org/nlab/source/little+cubes+operad)
+
+### D7-354 Swiss-Cheese Operad Application (batch 15)
+
+- name: **confirmed** [o] "The Swiss-cheese operad was defined by [[Alexander A. Voronov]]."
+- description: **confirmed** [o] "The ''Swiss-cheese operad'' is a two-colored" [s] "where disks are replaced by half-disks," [o] "It was used by [[Maxim Kontsevich]] to formulate a Swiss-cheese version of [[Deligne conjecture|Deligne's conjecture]] on [[Hochschild cohomology]]." [o] "title = Operads and Motives in Deformation Quantization" *Bulk-boundary modelling is not quoted; per the source Kontsevich used the operad for a Swiss-cheese Deligne conjecture, and the cited paper's title names deformation quantization.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Voronov); description: Two-colored operad of disks and half-disks; Kontsevich formality; input: Pair of algebras; output: Swiss-cheese algebra; preserved: Bulk acts on boundary; broken: Nothing
+
+  o: excerpts/wikipedia-operad.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382614144)
+  s: excerpts/nlab-swiss-cheese-operad.txt (https://ncatlab.org/nlab/source/Swiss+cheese+operad)
+
+### D7-355 A_\\infty-Algebra Formulation (batch 15)
+
+- name: **confirmed** [n] "An _$A_\infty$-algebra_ is a [[monoid]] [[internal category|internal]] to a [[homotopical category]] such that the [[associativity]] law holds not as an equation, but only up to higher [[coherent]] [[homotopy]]."
+- description: **confirmed** [w] "with a multiplication operation and a series of higher homotopies giving the failure for the multiplication to be associative." [w] "One of the key properties of <math>A_\infty</math>-algebras is their structure can be transferred to other algebraic objects given the correct hypotheses."
+- input: **confirmed** [n] "An $A_\infty$-algebra in chain complexes is concretely the following data."
+- output: **confirmed** [n] "An **$A_\infty$-algebra** is an [[algebra over an operad]] over an [[A-∞ operad]]."
+- preserved: **confirmed** [n] "such that the [[associativity]] law holds not as an equation, but only up to higher [[coherent]] [[homotopy]]."
+- broken: **confirmed** [w] "as the vanishing of <math>m_3</math> means that <math>m_2</math> is associative on the nose."
+- recalled: name: Standard (Stasheff); description: Higher multiplications m_n; homotopy transfer (Kadeishvili); input: Graded or dg data; output: A_infinity algebra; preserved: Associativity up to homotopy; broken: Strict associativity
+
+  n: excerpts/nlab-a-infinity-algebra.txt (https://ncatlab.org/nlab/source/A-infinity-algebra)
+  w: excerpts/wikipedia-a-infinity.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369001761)
+
+### D7-356 L_\\infty-Algebra Formulation (batch 15)
+
+- name: **confirmed** [n] "_$L_\infty$-algebras_ (or _strong homotopy Lie algebras_) are a higher generalization"
+- description: **confirmed** [w] "is a collection of symmetric multi-linear maps <math>l_n \colon V^{\otimes n}\to V</math> of degree <math>n-2</math>" [n] "in an $L_\infty$-algebra the [[Jacobi identity]] is allowed to hold (only) up to higher [[coherence law|coherent]] [[homotopy]]." *The control of deformation problems is not quoted.*
+- input: **confirmed** [w] "on a [[graded vector space]] <math>V = \bigoplus V_i </math>"
+- output: **confirmed** [w] "a '''homotopy Lie algebra''' (or '''<math>L_\infty</math>-algebra''') is a generalisation of the concept of a [[differential graded Lie algebra]]."
+- preserved: **confirmed** [n] "in an $L_\infty$-algebra the [[Jacobi identity]] is allowed to hold (only) up to higher [[coherence law|coherent]] [[homotopy]]." *Maurer-Cartan elements are not quoted.*
+- broken: **confirmed** [w] "showing that the differential of the 3-bracket gives the failure for the 2-bracket to be a Lie algebra structure. It is only a Lie algebra up to homotopy."
+- recalled: name: Standard (Lada and Stasheff); description: Brackets l_n; deformation theory via Maurer-Cartan; input: Graded data; output: L_infinity algebra; preserved: Jacobi up to homotopy; broken: Strict Jacobi
+
+  n: excerpts/nlab-l-infinity-algebra.txt (https://ncatlab.org/nlab/source/L-infinity-algebra)
+  w: excerpts/wikipedia-l-infinity.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1336513082)
+
+### D7-357 E_\\infty-Algebra Formulation (batch 15)
+
+- name: **confirmed** [e] "In terms of [[operads]], an $E_\infty$-algebra is an [[algebra over an operad]] for an [[E-∞ operad]]."
+- description: **confirmed** [e] "an **$E_\infty$-algebra** in $C$ is synonymous with a [[commutative monoid in a symmetric monoidal (infinity,1)-category|commutative monoid]] in $C$." [e] "complex $C^*(X,\mathbb{Z})$ is not: instead, it is an $E_\infty$-algebra." [e] "that has the [[homotopy type]] of a $k$-fold [[loop space]] for all $k \in \mathbb{N}$ admits the structure of an $E_\infty$-space."
+- input: **confirmed** [e] "Most often $C$ is the [[(infinity,1)-category of chain complexes]] over a [[field]] or [[commutative ring]], or the [[stable (infinity,1)-category]] of [[spectra]]"
+- output: **confirmed** [e] "an **$E_\infty$-algebra** in $C$"
+- preserved: **confirmed** [e] "is synonymous with a [[commutative monoid in a symmetric monoidal (infinity,1)-category|commutative monoid]] in $C$."
+- broken: **confirmed** [e] "is a graded-commutative algebra over the integers, but the the [[singular cohomology|singular cochain]] complex $C^*(X,\mathbb{Z})$ is not: instead, it is an $E_\infty$-algebra."
+- recalled: name: Standard (May); description: Commutative up to all homotopies; infinite loop spaces; cochains; input: Space, spectrum or complex; output: E_infinity algebra; preserved: Coherent commutativity; broken: Strict commutativity
+
+  e: excerpts/nlab-e-infinity-algebra.txt (https://ncatlab.org/nlab/source/E-infinity+algebra)
+
+### D7-358 Colored Operad Construction (batch 15)
+
+- name: **confirmed** [m] "Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_."
+- description: **confirmed** [b] "Let $\mathcal{P}$ be an operad over a set of colors $C$" [m] "Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_." *Multisorted algebras are not quoted.*
+- input: **confirmed** [m] "* A source map $s: C_1 \to (C_0)*$ to the collection of finite, possibly empty [[list]]s of objects"
+- output: **confirmed** [m] "Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_."
+- preserved: **confirmed** [m] "We write $f: c_1, \ldots, c_n \to c$ to indicate the source and target of a multimorphism $f$." *Typing, as sources and targets.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Operads with colors; multicategories; multisorted algebras; input: Colors and operations; output: Colored operad; preserved: Typing; broken: Nothing
+
+  m: excerpts/nlab-multicategory.txt (https://ncatlab.org/nlab/source/multicategory)
+  b: excerpts/nlab-boardman-vogt-tensor-product.txt (https://ncatlab.org/nlab/source/Boardman-Vogt+tensor+product)
+
+### D7-359 Cyclic Operad Transformation (batch 15)
+
+- name: **confirmed** [c] "The notion of *cyclic operads* ([Getzler &amp; Kapranov 1995](#GetzlerKapranov1995))"
+- description: **confirmed** [c] "the [[cyclic group]] $\mathbb{Z}_{/(n+1)}$ which rotates the $n+1$ in/outputs into each other."
+- input: **confirmed** [c] "for a cyclic operad this is extended to an [[group action|action]] of $Sym(n+1)$"
+- output: **confirmed** [c] "The notion of *cyclic operads*"
+- preserved: **unsupported** *Invariant inner products are not quoted; the source points to cyclic homology.*
+- broken: **confirmed** [c] "in which the distinction between &quot;inputs&quot; and &quot;output&quot; of operations is made to disappear."
+- recalled: name: Standard (Getzler and Kapranov); description: Action of cyclic groups mixing inputs and output; input: Operad; output: Cyclic operad; preserved: Invariant bilinear forms; broken: Distinguished output
+
+  c: excerpts/nlab-cyclic-operad.txt (https://ncatlab.org/nlab/source/cyclic+operad)
+
+### D7-360 Braided Operad Transformation (batch 15)
+
+- name: **confirmed** [o] "this non-<math>\Sigma</math> operad has the structure of a braided operad, which generalizes the notion of a symmetric operad from symmetric to braid groups."
+- description: **confirmed** [o] "which generalizes the notion of a symmetric operad from symmetric to braid groups." *Algebras in braided monoidal categories are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [o] "has the structure of a braided operad"
+- preserved: **confirmed** [o] "which generalizes the notion of a symmetric operad from symmetric to braid groups." *Braid-group equivariance, per the generalization.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Fiedorowicz); description: Braid groups in place of symmetric groups; input: Operad; output: Braided operad; preserved: Braid equivariance; broken: Symmetric equivariance
+
+  o: excerpts/wikipedia-operad.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382614144)
+
+### D7-361 PRO Construction (batch 15)
+
+- name: **confirmed** [p] "A PRO, an abbreviation for &quot;product category&quot;, is similar to a [[PROP]] but more general"
+- description: **confirmed** [p] "A **PRO** is a [[strict monoidal category]] $T$ in which every [[object]] is of the form" [p] "(\mathbb{N}, +, 0)" [p] "being merely a [[monoidal category]] but not necessarily [[symmetric monoidal category|symmetric monoidal]]" *Many inputs and many outputs are quoted for PROPs, not for PROs.*
+- input: **unsupported** *A signature of m-to-n operations is not quoted.*
+- output: **confirmed** [p] "A **PRO** is a [[strict monoidal category]]"
+- preserved: **confirmed** [p] "Somewhat more precisely, a PRO is a strict monoidal category along with a [[strict monoidal functor|strict monoidal]] [[bijective-on-objects functor]]:" *Monoidal composition, as the strict monoidal structure.*
+- broken: **confirmed** [p] "being merely a [[monoidal category]] but not necessarily [[symmetric monoidal category|symmetric monoidal]]"
+- recalled: name: Standard (Mac Lane); description: Strict monoidal category with objects the naturals under addition; input: Signature; output: PRO; preserved: Monoidal composition; broken: Symmetry
+
+  p: excerpts/nlab-pro.txt (https://ncatlab.org/nlab/source/PRO)
+
+### D7-362 PROP Construction (batch 15)
+
+- name: **confirmed** [w] "The notion was introduced by [[Frank Adams]] and [[Saunders Mac Lane]]"
+- description: **confirmed** [w] "whose objects are the natural numbers ''n'' identified with the finite sets <math>\{0,1,\ldots,n-1\}</math> and whose tensor product is given on objects by the addition on numbers." [n] "because they can be used to describe operations with many outputs as well as many inputs." *Bialgebras and Frobenius algebras are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [n] "A **PROP** is a strict [[symmetric monoidal category]] where every object is of the form"
+- preserved: **confirmed** [w] "a '''PROP''' is a [[symmetric monoidal category|symmetric]] strict [[monoidal category]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Mac Lane); description: Symmetric strict monoidal category on the naturals; input: Signature and relations; output: PROP; preserved: Symmetric monoidal structure; broken: Nothing
+
+  w: excerpts/wikipedia-prop.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1334143481)
+  n: excerpts/nlab-prop.txt (https://ncatlab.org/nlab/source/PROP)
+
+### D7-363 Trees and Grafting Operation (batch 15)
+
+- name: **confirmed** [f] "And composition of operations is given by grafting of trees."
+- description: **confirmed** [c] "(the unique root of one tree to any of the leaves of another)" [f] "the free operad on this collection has as $n$-ary operations the collection of all [[trees]] with $n$ leaves equipped with a labelling of each vertex $v$ with a $k$-ary operation"
+- input: **confirmed** [f] "The corresponding free operad has as $n$-ary operations all rooted trees with $n$ leaves."
+- output: **confirmed** [f] "And composition of operations is given by grafting of trees."
+- preserved: **confirmed** [c] "where the [[composition]] operations in a symmetric operad are indexed by grafting of [[rooted trees]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Grafting trees; free operad is labelled trees; input: Rooted trees; output: Grafted tree; preserved: Operadic composition; broken: Nothing
+
+  f: excerpts/nlab-free-operad.txt (https://ncatlab.org/nlab/source/free+operad)
+  c: excerpts/nlab-cyclic-operad.txt (https://ncatlab.org/nlab/source/cyclic+operad)
+
+### D7-364 Koszul Duality for Operads (batch 15)
+
+- name: **confirmed** [w] "An extension of the above concept of Koszul duality was formulated by Ginzburg and Kapranov who introduced the notion of a quadratic [[operad]] and defined the quadratic dual of such an operad."
+- description: **confirmed** [w] "the associative operad is self-dual, while the commutative and the Lie operad correspond to each other" [n] "* [[Victor Ginzburg]], [[Mikhail Kapranov]], _Koszul duality for operads_, Duke Math. J. __76__ (1994)"
+- input: **confirmed** [n] "Koszul duality is a duality between [[quadratic operad]]s, predicted in" *The nLab page credits Kontsevich with predicting it.*
+- output: **confirmed** [w] "defined the quadratic dual of such an operad." *The minimal resolution is not quoted.*
+- preserved: **unsupported** *The cobar construction and P_infinity are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Ginzburg and Kapranov); description: Quadratic dual; Com and Lie dual, Ass self-dual; minimal model via cobar; input: Quadratic operad; output: Dual operad; preserved: Homotopy algebras; broken: Nothing
+
+  w: excerpts/wikipedia-koszul-duality.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371645629)
+  n: excerpts/nlab-koszul-duality.txt (https://ncatlab.org/nlab/source/Koszul+duality)
+
+### D7-365 Kelly-Mac Lane Coherence Construction (batch 15)
+
+- name: **confirmed** [k] "They have come to be known as &quot;Kelly--Mac Lane graphs&quot; principally on account of their application to coherence problems for closed categories in the treatment" [k] "* {#KM71} [[Max Kelly]], [[Saunders MacLane]], _Coherence in closed categories_, JPAA 1 (1971), 97--140"
+- description: **confirmed** [k] "A diagrammatic calculus for [[closed categories]]" [k] "* [[Samuel Eilenberg]], [[Max Kelly]], _A generalization of the functorial calculus_, J. Algebra 3 (1966), 366--375." *Per the source the graphs were introduced by Eilenberg and Kelly (1966), and Kelly and Mac Lane applied them to coherence.*
+- input: **confirmed** [t] "a coherence theorem may provide a full or partial algorithm for deciding equality in free algebras."
+- output: **confirmed** [t] "a coherence theorem may provide a full or partial algorithm for deciding equality in free algebras." *A verdict on equality of composites, so on commutativity.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Kelly and Mac Lane); description: Coherence in closed categories via graphs; input: Diagram in a free closed category; output: Commutativity verdict; preserved: Coherence; broken: Nothing
+
+  k: excerpts/nlab-kelly-mac-lane-graph.txt (https://ncatlab.org/nlab/source/Kelly-Mac+Lane+graph)
+  t: excerpts/nlab-coherence-theorem.txt (https://ncatlab.org/nlab/source/coherence+theorem)
+
+### D7-366 Higher Topos Construction (batch 15)
+
+- name: **confirmed** [h] "A [[Alexander Grothendieck|Grothendieck]]--[[Charles Rezk|Rezk]]--[[Jacob Lurie|Lurie]] **$(\infty,1)$-topos**"
+- description: **confirmed** [h] "[left exact](reflective+sub-%28infinity%2C1%29-category#ExactLocalizations) [[reflective sub-(∞,1)-category]] of an [[(∞,1)-category of (∞,1)-presheaves]]" [h] "* {#ToenVezzosi05} [[Bertrand Toën]], [[Gabriele Vezzosi]], _Homotopical Algebraic Geometry I: Topos theory_" *The source names Grothendieck, Rezk and Lurie in the definition and cites Toën and Vezzosi.*
+- input: **confirmed** [h] "* $\mathbf{H}$ is [[presentable (infinity,1)-category|presentable]];" *Presentability is one of the Giraud-Rezk-Lurie conditions; sites are not quoted.*
+- output: **confirmed** [h] "**$(\infty,1)$-topos** $\mathbf{H}$ is an"
+- preserved: **confirmed** [h] "* that has [[object classifiers]]." *Descent is not quoted.*
+- broken: **unsupported** *Hypercompleteness is named, not explained, in the fetched page.*
+- recalled: name: Standard (Lurie; Toen and Vezzosi; Rezk); description: Left exact localization of presheaves of spaces; input: Infinity-site; output: Infinity-topos; preserved: Descent; object classifier; broken: Hypercompleteness issues
+
+  h: excerpts/nlab-infinity-1-topos.txt (https://ncatlab.org/nlab/source/%28infinity%2C1%29-topos)
+
+### D7-367 Lens Get Extraction (batch 15)
+
+- name: **confirmed** [n] "(&quot;view&quot;, &quot;read-out&quot;, &quot;forward operation&quot;)"
+- description: **confirmed** [n] "S \longrightarrow V" [a] "Lenses are pairs of ‘view’ and ‘update’ functions that capture" *The source's get, also called view.*
+- input: **confirmed** [n] "1. a [[pair]] of [[morphisms]] of the form"
+- output: **confirmed** [n] "S \longrightarrow V"
+- preserved: **confirmed** [n] "* (PutGet) &quot;what has just been written is read out as such&quot;:" *A law relating get and put; that the get step preserves it is the fill's gloss.*
+- broken: **confirmed** [n] "turn out to equivalently be data base types of product form $S = D \times V$ with &quot;view&quot; given by projecting onto the $V$-factor." *For lawful lenses get is a projection, so the D-factor is not read.*
+- recalled: name: Standard; description: view or get: S to A; input: Lens and whole; output: Focus; preserved: Lens laws; broken: Complement
+
+  n: excerpts/nlab-lens-cs.txt (https://ncatlab.org/nlab/source/lens+%28in+computer+science%29)
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-368 Lens Set Modification (batch 15)
+
+- name: **confirmed** [n] "(&quot;update&quot;, &quot;write&quot;, &quot;backward operation&quot;)"
+- description: **confirmed** [n] "V \times S \longrightarrow S" *The source orders the arguments V x S.*
+- input: **confirmed** [n] "V \times S \longrightarrow S"
+- output: **confirmed** [n] "V \times S \longrightarrow S"
+- preserved: **confirmed** [n] "* (GetPut) &quot;writing what has just been read out means no change&quot;:" [n] "* (PutGet) &quot;what has just been written is read out as such&quot;:" [n] "* (PutPut) &quot;writing means to over-write previous edits&quot;:"
+- broken: **confirmed** [n] "* (PutPut) &quot;writing means to over-write previous edits&quot;:"
+- recalled: name: Standard; description: update or put: S x A to S; input: Lens, whole, focus; output: Updated whole; preserved: Lens laws; broken: Old focus
+
+  n: excerpts/nlab-lens-cs.txt (https://ncatlab.org/nlab/source/lens+%28in+computer+science%29)
+
+### D7-369 Lens Modify Application (batch 15)
+
+- name: **confirmed** [a] "representation of setters as a single" [a] "ltx_font_typewriter">over</span> function." *The source gives over as the representation of setters; a lens yields one.*
+- description: **unsupported** *The formula through get and put is not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (over); description: over f s = put s (f (get s)); input: Lens and function; output: Updated whole; preserved: Complement; broken: Old focus
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-370 Prism Match Evaluation (batch 15)
+
+- name: **confirmed** [a] "ltx_font_typewriter">match</span> function that tries to access the"
+- description: **confirmed** [a] "Prisms pattern-match on data structures and handle a possible failure to" [a] "{{\emph{\mathbf{Prism}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,T\bullet A)\times\mathbf{D}(B,T)."
+- input: **confirmed** [a] "Prisms pattern-match on data structures and handle a possible failure to"
+- output: **confirmed** [a] "{{\emph{\mathbf{Prism}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,T\bullet A)\times\mathbf{D}(B,T)." *The match component lands in T acted on by A: the focus or the remainder.*
+- preserved: **unsupported** *Prism laws are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: match: S to S + A; input: Prism and value; output: Focus or value; preserved: Prism laws; broken: Nothing
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-371 Prism Build Construction (batch 15)
+
+- name: **confirmed** [a] "ltx_font_typewriter">build</span> function that constructs an abstract type"
+- description: **confirmed** [a] "{{\emph{\mathbf{Prism}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,T\bullet A)\times\mathbf{D}(B,T)." *The build component is the D(B,T) factor.*
+- input: **confirmed** [a] "ltx_font_typewriter">build</span> function that constructs an abstract type"
+- output: **confirmed** [a] "ltx_font_typewriter">build</span> function that constructs an abstract type"
+- preserved: **unsupported** *Prism laws are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: build or review: A to S; input: Prism and focus; output: Whole; preserved: Prism laws; broken: Nothing
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-372 Traversal Optic Application (batch 15)
+
+- name: **confirmed** [a] "Traversals extract the elements of a finitary container"
+- description: **confirmed** [a] "{{\emph{\mathbf{Traversal}}}}((A,B),(S,T))\coloneqq\mathbf{C}\left(S,\int^{n\in\mathbb{N}}A^{n}\otimes[B^{n},T]\right)." [a] "different encoding in terms of profunctors represented by an applicative" *Zero or more foci, as the coend over n.*
+- input: **confirmed** [a] "Traversals extract the elements of a finitary container"
+- output: **unsupported** *The updated whole inside the effect is not quoted.*
+- preserved: **confirmed** [a] "to iterate over the elements without altering the container"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: traverse with an applicative over many foci; input: Traversal and function; output: Effectful updated whole; preserved: Shape; broken: Old foci
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-373 Iso Optic Transformation (batch 15)
+
+- name: **unsupported** *No fetched source defines iso optics.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard; description: Mutually inverse maps; input: Isomorphic types; output: Iso; preserved: Everything; broken: Nothing
+
+
+### D7-374 Grate Optic Transformation (batch 15)
+
+- name: **confirmed** [a] "ltx_font_typewriter">grate</span> function with the form" [a] "“closed” profunctors was first reported by Deikun and" (recall contradicted)
+- description: **confirmed** [a] "{{\emph{\mathbf{Grate}}}}\left((A,B),(S,T)\right):=\mathbf{D}([S,A]\bullet B,T)."
+- input: **unsupported** *A representable container is not quoted; the source encodes grates through corepresentable functors.*
+- output: **confirmed** [a] "create a new structure when provided with a way of creating a new focus from"
+- preserved: **unsupported** *Zipping is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (O'Connor; Pickering, Gibbons and Wu); description: ((S to A) to B) to T; closed profunctors; input: Representable structure; output: Grate; preserved: Zipping; broken: Nothing
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-375 Adapter Optic Transformation (batch 15)
+
+- name: **confirmed** [a] "Kmett (2012–2018)</a></cite> are morphisms in"
+- description: **confirmed** [a] "{{\emph{\mathbf{Adapter}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,A)\otimes\mathbf{D}(B,T)."
+- input: **confirmed** [a] "{{\emph{\mathbf{Adapter}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,A)\otimes\mathbf{D}(B,T)."
+- output: **confirmed** [a] "{{\emph{\mathbf{Adapter}}}}((A,B),(S,T))\coloneqq\mathbf{C}(S,A)\otimes\mathbf{D}(B,T)."
+- preserved: **unsupported** *Composition is not quoted for adapters.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Pair of maps with no residual; input: Types; output: Adapter; preserved: Composition; broken: Nothing
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-376 Setter Optic Transformation (batch 15)
+
+- name: **confirmed** [a] "Setters are optics for identity action"
+- description: **confirmed** [a] "{{\emph{\mathbf{Setter}}}}((A,B),(S,T))\coloneqq{\hyperlink{linkvenrichment}{\mathcal{V}}}([A,B],[S,T])."
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [a] "{{\emph{\mathbf{Setter}}}}((A,B),(S,T))\coloneqq{\hyperlink{linkvenrichment}{\mathcal{V}}}([A,B],[S,T])."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Read access is not quoted.*
+- recalled: name: Standard; description: (A to B) to (S to T); mapped profunctors; input: Functorial structure; output: Setter; preserved: Functor laws; broken: Read access
+
+  a: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
 

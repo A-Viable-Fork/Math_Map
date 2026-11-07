@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, Swiss cheese operad (page source)
+URL: https://ncatlab.org/nlab/source/Swiss+cheese+operad
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 960c9d7a9aef2a8f9ee7cab2689349d429fb03e34b3bdf56c720fa06efb2d515
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+where disks are replaced by half-disks,

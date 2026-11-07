@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: nLab, E-infinity algebra (page source)
+URL: https://ncatlab.org/nlab/source/E-infinity+algebra
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3e54f3c320a835a15a9ac37d80d9446d61712af34d1550cb110b12ac41d4db42
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In terms of [[operads]], an $E_\infty$-algebra is an [[algebra over an operad]] for an [[E-∞ operad]].
+
+an **$E_\infty$-algebra** in $C$ is synonymous with a [[commutative monoid in a symmetric monoidal (infinity,1)-category|commutative monoid]] in $C$.
+
+complex $C^*(X,\mathbb{Z})$ is not: instead, it is an $E_\infty$-algebra.
+
+that has the [[homotopy type]] of a $k$-fold [[loop space]] for all $k \in \mathbb{N}$ admits the structure of an $E_\infty$-space.
+
+Most often $C$ is the [[(infinity,1)-category of chain complexes]] over a [[field]] or [[commutative ring]], or the [[stable (infinity,1)-category]] of [[spectra]]
+
+an **$E_\infty$-algebra** in $C$
+
+is synonymous with a [[commutative monoid in a symmetric monoidal (infinity,1)-category|commutative monoid]] in $C$.
+
+is a graded-commutative algebra over the integers, but the the [[singular cohomology|singular cochain]] complex $C^*(X,\mathbb{Z})$ is not: instead, it is an $E_\infty$-algebra.
