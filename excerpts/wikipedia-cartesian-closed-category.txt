@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Cartesian closed category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369029729
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d0d61feee4793422bd27336b298092a2f15799faefad763acadff67b8c91eb22
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+their [[internal language]] is the [[simply typed lambda calculus]].
+
+it has led to the realization that simply-typed lambda calculus can be interpreted in any Cartesian closed category.
+
+simply-typed lambda calculus can be interpreted in any Cartesian closed category.
+
+can be interpreted in any Cartesian closed category.
+
+The [[Curry–Howard–Lambek correspondence]] provides a deep [[isomorphism]] between [[intuitionistic logic]], simply-typed lambda calculus and Cartesian closed categories.
+
+simply-typed lambda calculus and Cartesian closed categories.

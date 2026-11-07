@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, hyperdoctrine (page source)
+URL: https://ncatlab.org/nlab/source/hyperdoctrine
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e1412996eafe275fd2fdbedbc289735c8a1dacd66173c6e6f0bc61ef7ecd7fb9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+These adjoints are regarded as the action of [[quantifiers]] along $f$.
+
+has both a [[left adjoint]] as well as a [[right adjoint]], typically required to satisfy [[Frobenius reciprocity]] and the [[B
+
+* the right adjoint to $P(f)$ gives the application of the [[universal quantifier]]
+
+We generally require also that for every morphism $f \colon A \to B$ the morphism $P(f)$ has both a [[left adjoint]] as well as a [[right adjoint]]
+
+typically required to satisfy [[Frobenius reciprocity]] and the [[B

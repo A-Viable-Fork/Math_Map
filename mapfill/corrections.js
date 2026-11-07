@@ -229,6 +229,11 @@ const CORRECTIONS = [
     receipts: [R("excerpts/wikipedia-nine-lemma.txt", "* If all columns as well as the two bottom rows are exact, then the top row is exact.", "description"),
       R("excerpts/wikipedia-nine-lemma.txt", "* If all columns as well as the two top rows are exact, then the bottom row is exact.", "description"),
       R("excerpts/wikipedia-nine-lemma.txt", "* If all columns as well as the top and bottom rows are exact, and <math>A_2 \\to C_2</math> is the zero morphism, then the middle row is exact.", "description")] },
+  { id: "D7-310", name: "Lambda Calculus Categorification",
+    fields: { broken: "The dynamics of computation: the correspondence is of equational theories, so beta reduction and normalization are forgotten and only equality of terms is kept" },
+    reason: "Fill review, batch 13: broken graded imprecise. The landed fill said nothing is lost (an equivalence); the source says Lambek's correspondence abstracts away from reduction and normalization.",
+    receipts: [R("excerpts/wikipedia-curry-howard-correspondence.txt", "Lambek's correspondence is a correspondence of equational theories", "broken"),
+      R("excerpts/wikipedia-curry-howard-correspondence.txt", "abstracting away from dynamics of computation such as beta reduction and term normalization", "broken")] },
 ];
 
 module.exports = { CORRECTIONS };

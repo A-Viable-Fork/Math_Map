@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 300 of 416 D7 stubs, 0 of 79 homes; 300 entries in 12 batches.
+Reviewed: 325 of 416 D7 stubs, 0 of 79 homes; 325 entries in 13 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (300 entries)
+### D7 stubs (325 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 278 | 0 | 0 | 22 |
-| description | 275 | 7 | 0 | 18 |
-| input | 265 | 3 | 0 | 32 |
-| output | 260 | 0 | 0 | 40 |
-| preserved | 204 | 2 | 0 | 94 |
-| broken | 98 | 3 | 0 | 199 |
-| **all** | 1380 | 15 | 0 | 405 |
+| name | 299 | 0 | 0 | 26 |
+| description | 296 | 7 | 0 | 22 |
+| input | 282 | 3 | 0 | 40 |
+| output | 277 | 0 | 0 | 48 |
+| preserved | 218 | 2 | 0 | 105 |
+| broken | 101 | 4 | 0 | 220 |
+| **all** | 1473 | 16 | 0 | 461 |
 
 ## 2. Recall against source
 
@@ -40,7 +40,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 10 | 25 | 105 | 1 | 1% |
 | 11 | 25 | 97 | 0 | 0% |
 | 12 | 25 | 101 | 0 | 0% |
-| **all** | 300 | 1395 | 4 | 0% |
+| 13 | 25 | 94 | 1 | 1% |
+| **all** | 325 | 1489 | 5 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -54,8 +55,10 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-252 input: sample unsupported, review confirmed.
 - D7-252 output: sample unsupported, review confirmed.
 - D7-275 preserved: sample unsupported, review confirmed.
+- D7-302 name: sample confirmed, review unsupported.
+- D7-302 output: sample confirmed, review unsupported.
 
-Agreement: 52 of 60 fields.
+Agreement: 62 of 72 fields.
 
 ## 4. Sources in disagreement
 
@@ -289,6 +292,29 @@ Every field not confirmed, with the reason.
 - **D7-299 Kripke-Joyal Semantics Interpretation** (batch 12): *preserved* unsupported: Soundness is not quoted.
 - **D7-300 Mitchell-B\u00e9nabou Language Translation** (batch 12): *broken* unsupported: Not stated.
 - **D7-301 Forcing Interpretation in Topos** (batch 12): *input* unsupported: The poset of forcing conditions is not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Failure of CH appears only in the source's references (Cohen); not stated.
+- **D7-302 Categorical Comprehension Evaluation** (batch 13): *name* unsupported: No fetched source for comprehension in categorical logic (the nLab pages tried were not served). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-303 Categorical Quantifier Adjunction** (batch 13): *broken* unsupported: Not stated.
+- **D7-304 Dialectica Category Construction** (batch 13): *description* unsupported: De Paiva's Dialectica categories are not described in the fetched source. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-305 Chu Space Construction** (batch 13): *broken* unsupported: Not stated.
+- **D7-306 Finiteness Space Construction** (batch 13): *broken* unsupported: Not stated.
+- **D7-307 Coherent Logic Interpretation** (batch 13): *output* unsupported: Not quoted. *preserved* unsupported: Deligne's completeness theorem is not quoted.
+- **D7-308 Geometric Logic Interpretation** (batch 13): *output* unsupported: Not quoted. *broken* unsupported: That implication and universal quantification are excluded is not quoted.
+- **D7-309 Cartesian Closed Category Semantics** (batch 13): *preserved* unsupported: Beta-eta equality is not quoted here. *broken* unsupported: Not stated.
+- **D7-310 Lambda Calculus Categorification** (batch 13): *broken* imprecise: The equivalence is of equational theories: it keeps equality of terms and forgets the dynamics (beta reduction, normalization), so "nothing" is lost only up to equality.
+- **D7-311 Curry-Howard Correspondence Translation** (batch 13): *input* unsupported: Natural deduction proofs as input are not quoted. *broken* unsupported: Not stated.
+- **D7-312 Realizability Interpretation** (batch 13): *input* unsupported: Partial combinatory algebras are not quoted here. *output* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-313 Coalgebraic Modal Logic Transformation** (batch 13): *name* unsupported: No fetched source for coalgebraic modal logic (the nLab page was not served). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-316 Giraud Theorem Framing** (batch 13): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-317 Boolean Topos Reduction** (batch 13): *broken* unsupported: Not stated.
+- **D7-318 Double Negation Translation** (batch 13): *broken* unsupported: Loss of constructive content is not stated.
+- **D7-319 Homotopy Coherent Nerve Construction** (batch 13): *preserved* unsupported: The Quillen equivalence is not quoted. *broken* unsupported: Not stated.
+- **D7-320 Simplicial Set Generation** (batch 13): *name* unsupported: "Simplicial Set Generation" is not a name the source uses. *input* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-321 Kan Complex Fibration** (batch 13): *preserved* unsupported: Homotopy groups and long exact sequences are not quoted. *broken* unsupported: Not stated.
+- **D7-322 Quasicategory Formulation** (batch 13): *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-323 Straightening of Left Fibrations** (batch 13): *input* unsupported: Left fibrations are not named in the fetched windows. *output* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-324 Unstraightening Transformation** (batch 13): *broken* unsupported: Not stated.
+- **D7-325 Cartesian Fibration** (batch 13): *broken* unsupported: Not stated.
+- **D7-326 Cocartesian Fibration** (batch 13): *name* unsupported: The cocartesian dual is not stated in the fetched windows. *description* unsupported: Not quoted. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -3998,4 +4024,305 @@ actions defining an optic"
 - recalled: name: Standard; description: Cohen forcing as sheaves on conditions with double-negation topology; CH fails; input: Poset of conditions; output: Boolean topos; preserved: ZF axioms; broken: Continuum hypothesis
 
   f: excerpts/nlab-forcing.txt (https://ncatlab.org/nlab/source/forcing)
+
+### D7-302 Categorical Comprehension Evaluation (batch 13)
+
+- name: **unsupported** *No fetched source for comprehension in categorical logic (the nLab pages tried were not served).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard notion (Lawvere's comprehension, Jacobs's comprehension categories); description: Comprehension as a right adjoint, predicates to subobjects; input: Predicate; output: Subobject; preserved: Membership; broken: Nothing
+
+
+### D7-303 Categorical Quantifier Adjunction (batch 13)
+
+- name: **confirmed** [h] "These adjoints are regarded as the action of [[quantifiers]] along $f$."
+- description: **confirmed** [h] "has both a [[left adjoint]] as well as a [[right adjoint]], typically required to satisfy [[Frobenius reciprocity]] and the [[B" [h] "* the right adjoint to $P(f)$ gives the application of the [[universal quantifier]]"
+- input: **confirmed** [h] "We generally require also that for every morphism $f \colon A \to B$ the morphism $P(f)$ has both a [[left adjoint]] as well as a [[right adjoint]]"
+- output: **confirmed** [h] "These adjoints are regarded as the action of [[quantifiers]] along $f$."
+- preserved: **confirmed** [h] "typically required to satisfy [[Frobenius reciprocity]] and the [[B" *Beck-Chevalley is the condition the window begins to name.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Lawvere); description: Exists left of pullback left of forall; input: Morphism and predicate; output: Quantified predicate; preserved: Beck-Chevalley; broken: Nothing
+
+  h: excerpts/nlab-hyperdoctrine.txt (https://ncatlab.org/nlab/source/hyperdoctrine)
+
+### D7-304 Dialectica Category Construction (batch 13)
+
+- name: **confirmed** [d] "It was developed by [[Kurt Gödel]] to provide a [[consistency proof]] of arithmetic." *Goedel's interpretation is quoted; de Paiva's categories are not.*
+- description: **unsupported** *De Paiva's Dialectica categories are not described in the fetched source.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (de Paiva); description: Categories from Goedel's Dialectica interpretation; models of linear logic; input: Category with finite limits; output: Dialectica category; preserved: Linear logic; broken: Cartesian closedness
+
+  d: excerpts/wikipedia-dialectica-interpretation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1270401680)
+
+### D7-305 Chu Space Construction (batch 13)
+
+- name: **confirmed** [c] "the _Chu construction_ &amp;lbrack;[Chu 1979](#Chu79); [Barr 1991](#Barr91), [1996](#Barr96)&amp;rbrack; is a method for constructing a [[star-autonomous category]] from a [[closed monoidal ca"
+- description: **confirmed** [c] "is a method for constructing a [[star-autonomous category]] from a [[closed monoidal ca" [c] "Early discussion of application of the Chu construction as [[categorical semantics]] for [[linear logic]] is due to [Barr 1991](#Barr91)"
+- input: **confirmed** [c] "from a [[closed monoidal ca"
+- output: **confirmed** [c] "is a method for constructing a [[star-autonomous category]]"
+- preserved: **confirmed** [c] "Being star-autonomous, $Chu(C, d)$ is self-dual"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Barr; Chu); description: Objects (A, X, r) with morphisms adjoint pairs; star-autonomous; input: Closed symmetric monoidal category and K; output: Chu category; preserved: Linear logic duality; broken: Nothing
+
+  c: excerpts/nlab-chu-construction.txt (https://ncatlab.org/nlab/source/Chu+construction)
+
+### D7-306 Finiteness Space Construction (batch 13)
+
+- name: **confirmed** [f] "We refer to the elements of $\mathcal{U}$ as **finitary**, and the elements of $\mathcal{U}^\perp$ as **cofinitary**."
+- description: **confirmed** [f] "* $FinSp_{rel}$ is [[star-autonomous]] (see [Ehrhard](#Ehrhard05))." *Ehrhard's, per the source; matrices as linear maps are not quoted.*
+- input: **confirmed** [f] "We refer to the elements of $\mathcal{U}$ as **finitary**"
+- output: **confirmed** [f] "We refer to the elements of $\mathcal{U}$ as **finitary**, and the elements of $\mathcal{U}^\perp$ as **cofinitary**."
+- preserved: **confirmed** [f] "* $FinSp_{rel}$ is [[star-autonomous]] (see [Ehrhard](#Ehrhard05))." *A linear-logic model; "without topology" is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Ehrhard); description: Finitary subsets closed under orthogonality; linear logic model; input: Set with finiteness structure; output: Finiteness space; preserved: Linear logic; broken: Nothing
+
+  f: excerpts/nlab-finiteness-space.txt (https://ncatlab.org/nlab/source/finiteness+space)
+
+### D7-307 Coherent Logic Interpretation (batch 13)
+
+- name: **confirmed** [c] "Coherent logic (including sequents, as above) is the [[internal logic]] of a [[coherent category]]."
+- description: **confirmed** [c] "Coherent logic (including sequents, as above) is the [[internal logic]] of a [[coherent category]]."
+- input: **confirmed** [c] "is the [[internal logic]] of a [[coherent category]]."
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Deligne's completeness theorem is not quoted.*
+- broken: **confirmed** [c] "which is not coherent since negation is not allowed in coherent formula"
+- recalled: name: Standard; description: Interpretation of coherent logic in coherent categories; Deligne completeness; input: Coherent theory and category; output: Models; preserved: Deligne's theorem; broken: Negation
+
+  c: excerpts/nlab-coherent-logic.txt (https://ncatlab.org/nlab/source/coherent+logic)
+
+### D7-308 Geometric Logic Interpretation (batch 13)
+
+- name: **confirmed** [g] "* A geometric theory is a (possibly infinitary) [[first-order logic|first order]] [[theory]] whose [[model|models]] are preserved and reflected by [[geometric morphisms]]."
+- description: **confirmed** [g] "by taking advantage of the availability of infinitary disjunctions in geometric logic" [g] "whose [[model|models]] are preserved and reflected by [[geometric morphisms]]."
+- input: **confirmed** [g] "* A geometric theory is a (possibly infinitary) [[first-order logic|first order]] [[theory]]"
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [g] "whose [[model|models]] are preserved and reflected by [[geometric morphisms]]."
+- broken: **unsupported** *That implication and universal quantification are excluded is not quoted.*
+- recalled: name: Standard; description: Geometric formulas in toposes; preserved by inverse images; input: Geometric theory; output: Models; preserved: Preserved by geometric morphisms; broken: Implication and universal quantification
+
+  g: excerpts/nlab-geometric-theory.txt (https://ncatlab.org/nlab/source/geometric+theory)
+
+### D7-309 Cartesian Closed Category Semantics (batch 13)
+
+- name: **confirmed** [c] "their [[internal language]] is the [[simply typed lambda calculus]]."
+- description: **confirmed** [c] "it has led to the realization that simply-typed lambda calculus can be interpreted in any Cartesian closed category."
+- input: **confirmed** [c] "simply-typed lambda calculus can be interpreted in any Cartesian closed category."
+- output: **confirmed** [c] "can be interpreted in any Cartesian closed category."
+- preserved: **unsupported** *Beta-eta equality is not quoted here.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Types as objects, terms as morphisms; input: Typed lambda theory; output: CCC model; preserved: Beta-eta equality; broken: Evaluation order
+
+  c: excerpts/wikipedia-cartesian-closed-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369029729)
+
+### D7-310 Lambda Calculus Categorification (batch 13)
+
+- name: **confirmed** [c] "The [[Curry–Howard–Lambek correspondence]] provides a deep [[isomorphism]] between [[intuitionistic logic]], simply-typed lambda calculus and Cartesian closed categories."
+- description: **confirmed** [h] "Lambek's correspondence is a correspondence of equational theories" *The free CCC as term model is not quoted.*
+- input: **confirmed** [c] "simply-typed lambda calculus and Cartesian closed categories."
+- output: **confirmed** [c] "simply-typed lambda calculus and Cartesian closed categories."
+- preserved: **confirmed** [h] "Lambek's correspondence is a correspondence of equational theories" *Equality of terms is what it keeps.*
+- broken: **imprecise** [h] "abstracting away from dynamics of computation such as beta reduction and term normalization" *The equivalence is of equational theories: it keeps equality of terms and forgets the dynamics (beta reduction, normalization), so "nothing" is lost only up to equality.* (recall contradicted)
+- recalled: name: Standard (Lambek); description: Equivalence of typed lambda theories and CCCs; input: Typed lambda calculus; output: CCC; preserved: Term equality; broken: Nothing
+
+  c: excerpts/wikipedia-cartesian-closed-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369029729)
+  h: excerpts/wikipedia-curry-howard-correspondence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1373154084)
+
+### D7-311 Curry-Howard Correspondence Translation (batch 13)
+
+- name: **confirmed** [h] "It is also known as the '''Curry–Howard isomorphism''' or '''equivalence''', or the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''."
+- description: **confirmed** [h] "It is also known as the '''Curry–Howard isomorphism''' or '''equivalence''', or the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''."
+- input: **unsupported** *Natural deduction proofs as input are not quoted.*
+- output: **confirmed** [h] "the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''."
+- preserved: **confirmed** [h] "For instance, the notion of [[combinatory logic#Reduction in combinatory logic|reduction]] of terms in combinatory logic can be transferred to Hilbert-style logic" *Reduction corresponds to proof transformation; "normalization equals evaluation" is a gloss on this.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Proofs as programs, propositions as types; Curry-Howard-Lambek; input: Proof; output: Typed term; preserved: Normalization is evaluation; broken: Nothing
+
+  h: excerpts/wikipedia-curry-howard-correspondence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1373154084)
+
+### D7-312 Realizability Interpretation (batch 13)
+
+- name: **confirmed** [r] "The idea of _realizability_ is a way of making the [[Brouwer-Heyting-Kolmogorov interpretation]] of [[constructivism]] and [[intuitionistic mathematics]] precise." *Kleene (1945) per the source's references.*
+- description: **confirmed** [r] "The idea of _realizability_ is a way of making the [[Brouwer-Heyting-Kolmogorov interpretation]] of [[constructivism]] and [[intuitionistic mathematics]] precise." [r] "[[Stephen Kleene]], _On the interpretation of intuitionistic number theory_"
+- input: **unsupported** *Partial combinatory algebras are not quoted here.*
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [r] "It is related to the [[propositions as types]] paradigm."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Kleene); description: Realizers witnessing truth; input: Formula and PCA; output: Realizability; preserved: Constructive content; broken: Classical validity
+
+  r: excerpts/nlab-realizability.txt (https://ncatlab.org/nlab/source/realizability)
+
+### D7-313 Coalgebraic Modal Logic Transformation (batch 13)
+
+- name: **unsupported** *No fetched source for coalgebraic modal logic (the nLab page was not served).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard; description: Modal logic over coalgebras via predicate liftings; bisimulation invariance; input: Functor and liftings; output: Modal semantics; preserved: Behavioural equivalence; broken: State identity
+
+
+### D7-314 Stone Duality Transformation (batch 13)
+
+- name: **confirmed** [s] "Stone duality is often described for [[topological spaces]] rather than for [[locales]]."
+- description: **confirmed** [s] "Perhaps the most general duality falling under this heading is that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side)." [b] "In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories." *Boolean algebras and Stone spaces from the second source; Gelfand duality is not checked.*
+- input: **confirmed** [s] "that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side)."
+- output: **confirmed** [s] "that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side)."
+- preserved: **confirmed** [b] "In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories."
+- broken: **confirmed** [b] "there is a [[contravariant functor]]" *Direction reversed.*
+- recalled: name: Standard; description: Dual equivalences: Stone, frames and locales, Gelfand; input: Algebra or space; output: Dual; preserved: Everything; broken: Direction
+
+  s: excerpts/nlab-stone-duality.txt (https://ncatlab.org/nlab/source/Stone+duality)
+  b: excerpts/wikipedia-stones-representation-theorem-for-boolean-algebras.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1312231128)
+
+### D7-315 Isbell Conjugacy (batch 13)
+
+- name: **confirmed** [i] "this is called **Isbell conjugation** or **Isbell duality** (after [[John Isbell]])."
+- description: **confirmed** [i] "relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$"
+- input: **confirmed** [i] "\mathcal{O}(X) \colon c \mapsto [C^{op}, \mathcal{V}](X, C(-,c))"
+- output: **confirmed** [i] "\mathcal{O}(X) \colon c \mapsto [C^{op}, \mathcal{V}](X, C(-,c))"
+- preserved: **confirmed** [i] "**Lemma 1:** $Spec(C(c,-)) \simeq C(-,c)$"
+- broken: **confirmed** [i] "are called __Isbell self-dual__." *Objects outside the fixed points change.*
+- recalled: name: Standard (Isbell); description: Same as D7-027; input: Presheaf; output: Copresheaf; preserved: Representables; broken: Non-reflexive objects
+
+  i: excerpts/nlab-isbell-duality.txt (https://ncatlab.org/nlab/source/Isbell+duality)
+
+### D7-316 Giraud Theorem Framing (batch 13)
+
+- name: **confirmed** [g] "A classical theorem of [[Jean Giraud|Giraud]] characterizes [[sheaf toposes]] abstractly as [[categories]] with certain [[properties]] known as *Giraud&#39;s axioms*."
+- description: **confirmed** [g] "A [[category]] is a [[Grothendieck topos]] if and only if it satisfies the following conditions:" [g] "1. it has [[universal colimits]];" [g] "1. it has [[effective quotients]]." *The source's axioms: locally presentable, universal colimits, disjoint coproducts, effective quotients. The fill's small generating set and stable colimits are a common equivalent form; exactness matches effective quotients.*
+- input: **confirmed** [g] "A [[category]] is a [[Grothendieck topos]] if and only if it satisfies the following conditions:"
+- output: **confirmed** [g] "A [[category]] is a [[Grothendieck topos]] if and only if"
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Giraud); description: Grothendieck toposes characterized by exactness, extensivity, a generating set, stable colimits; input: Category; output: Topos verdict; preserved: Topos structure; broken: Nothing
+
+  g: excerpts/nlab-girauds-theorem.txt (https://ncatlab.org/nlab/source/Giraud%27s+theorem)
+
+### D7-317 Boolean Topos Reduction (batch 13)
+
+- name: **confirmed** [d] "The _double negation topology_ closes morphisms under double negation (def."
+- description: **confirmed** [d] "\ref{DoubleNegationSheavesFormBooleanTopos} below)." *The source's proposition that double-negation sheaves form a Boolean topos, cited by its label.*
+- input: **confirmed** [d] "The _double negation topology_ closes morphisms under double negation (def."
+- output: **confirmed** [d] "\ref{DoubleNegationSheavesFormBooleanTopos} below)."
+- preserved: **confirmed** [d] "This sublocale is [[dense sublocale|dense]], and in fact it is the smallest dense sublocale of $L$" *Stated for locales.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Double-negation subtopos is Boolean; input: Topos; output: Boolean subtopos; preserved: Dense; broken: Intuitionistic distinctions
+
+  d: excerpts/nlab-double-negation.txt (https://ncatlab.org/nlab/source/double+negation)
+
+### D7-318 Double Negation Translation (batch 13)
+
+- name: **confirmed** [t] "**Double negation translation** is a method for converting [[propositions]] [[valid]] in [[classical logic]] into propositions valid in [[intuitionistic logic]]."
+- description: **confirmed** [t] "**Double negation translation** is a method for converting [[propositions]] [[valid]] in [[classical logic]] into propositions valid in [[intuitionistic logic]]." *Goedel's use is quoted; Gentzen and Kolmogorov and the topos form are not.*
+- input: **confirmed** [t] "is a method for converting [[propositions]] [[valid]] in [[classical logic]]"
+- output: **confirmed** [t] "into propositions valid in [[intuitionistic logic]]."
+- preserved: **confirmed** [t] "[[Kurt Gödel]] used this technique to show that [[Peano arithmetic]] and [[Heyting arithmetic]] are equiconsistent."
+- broken: **unsupported** *Loss of constructive content is not stated.*
+- recalled: name: Standard (Goedel-Gentzen, Kolmogorov); description: Embeds classical into intuitionistic logic; input: Classical formula; output: Intuitionistic formula; preserved: Provability; broken: Constructive content
+
+  t: excerpts/nlab-double-negation-translation.txt (https://ncatlab.org/nlab/source/double+negation+translation)
+
+### D7-319 Homotopy Coherent Nerve Construction (batch 13)
+
+- name: **confirmed** [h] "In the original paper, Cordier uses a different one of these conventions" *Cordier's, per the source.*
+- description: **confirmed** [h] "then the homotopy coherent nerve $N(C)$ is a [[weak Kan complex]]/[[quasi-category]]." [h] "also known as the operation of *[[rigidification of quasi-categories]]*."
+- input: **confirmed** [h] "is such that all [[hom-object]]s $C(x,y) \in sSet$ are [[Kan complex]]es"
+- output: **confirmed** [h] "then the homotopy coherent nerve $N(C)$ is a [[weak Kan complex]]/[[quasi-category]]."
+- preserved: **unsupported** *The Quillen equivalence is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Cordier); description: Simplicial categories to quasicategories; right adjoint to rigidification; Quillen equivalence; input: Simplicial category; output: Quasicategory; preserved: Homotopy theory; broken: Strict composition
+
+  h: excerpts/nlab-homotopy-coherent-nerve.txt (https://ncatlab.org/nlab/source/homotopy+coherent+nerve)
+
+### D7-320 Simplicial Set Generation (batch 13)
+
+- name: **unsupported** *"Simplicial Set Generation" is not a name the source uses.*
+- description: **confirmed** [s] "A **simplicial set**  is a [[presheaf]] on the [[simplex category]] $\Delta$" *Nerves and singular complexes as sources of simplicial sets are not quoted here.*
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [s] "A **simplicial set**  is a [[presheaf]] on the [[simplex category]] $\Delta$"
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Nonstandard name; description: Nerves, singular complexes, free simplicial sets; input: Category or space; output: Simplicial set; preserved: Homotopy type; broken: Topology
+
+  s: excerpts/nlab-simplicial-set.txt (https://ncatlab.org/nlab/source/simplicial+set)
+
+### D7-321 Kan Complex Fibration (batch 13)
+
+- name: **confirmed** [k] "A _Kan fibration_ is a [[morphism]] $\pi \colon Y \to X$ of [[simplicial set|simplicial sets]] with the [[lifting property]] for all [[horn]]-inclusions."
+- description: **confirmed** [k] "A _Kan fibration_ is a [[morphism]] $\pi \colon Y \to X$ of [[simplicial set|simplicial sets]] with the [[lifting property]] for all [[horn]]-inclusions." *Kan complexes modelling spaces is not quoted here.*
+- input: **confirmed** [k] "of [[simplicial set|simplicial sets]]"
+- output: **confirmed** [k] "with the [[lifting property]] for all [[horn]]-inclusions."
+- preserved: **unsupported** *Homotopy groups and long exact sequences are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Right lifting against horn inclusions; Kan complexes model spaces; input: Map of simplicial sets; output: Kan fibration; preserved: Homotopy groups; broken: Nothing
+
+  k: excerpts/nlab-kan-fibration.txt (https://ncatlab.org/nlab/source/Kan+fibration)
+
+### D7-322 Quasicategory Formulation (batch 13)
+
+- name: **confirmed** [q] "The notion of _quasi-category_ is a [[geometric definition of higher categories|geometric model]] for [[(∞,1)-category]]."
+- description: **confirmed** [q] "* all _inner_ [[horn]]s in $C$ have fillers." *Joyal and Lurie per the source's references.*
+- input: **confirmed** [q] "The notion of _quasi-category_ is a [[geometric definition of higher categories|geometric model]] for [[(∞,1)-category]]."
+- output: **confirmed** [q] "* all _inner_ [[horn]]s in $C$ have fillers."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Boardman-Vogt, Joyal, Lurie); description: Inner horn fillers; input: Higher data; output: Quasicategory; preserved: Coherent composition; broken: Strictness
+
+  q: excerpts/nlab-quasi-category.txt (https://ncatlab.org/nlab/source/quasi-category)
+
+### D7-323 Straightening of Left Fibrations (batch 13)
+
+- name: **confirmed** [s] "which has been introduced under the name *straightening and unstraightening* in [Lurie 2009, Sec. 3.2](#Lurie09):" *Lurie's, per the source.*
+- description: **confirmed** [s] "the [[(∞,1)-Grothendieck construction]] takes the form of a [[Quillen equivalence]]" *Stated for Cartesian fibrations and marked simplicial sets; the left-fibration case is not quoted.*
+- input: **unsupported** *Left fibrations are not named in the fetched windows.*
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [s] "takes the form of a [[Quillen equivalence]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Lurie); description: Left fibrations over S correspond to functors S to spaces; input: Left fibration; output: Functor to spaces; preserved: Equivalence; broken: Presentation
+
+  s: excerpts/nlab-straightening-functor.txt (https://ncatlab.org/nlab/source/straightening+functor)
+
+### D7-324 Unstraightening Transformation (batch 13)
+
+- name: **confirmed** [s] "* $Un_\phi$ is called the *unstraightening functor*."
+- description: **confirmed** [s] "the [[(∞,1)-Grothendieck construction]] takes the form of a [[Quillen equivalence]]"
+- input: **confirmed** [s] "1. the global projective [[model structure on functors]] with values in the [[model structure on marked simplicial sets]]."
+- output: **confirmed** [s] "1. the [[model structure for Cartesian fibrations]]" *Cartesian fibrations, the dual of the fill's cocartesian ones.*
+- preserved: **confirmed** [s] "takes the form of a [[Quillen equivalence]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Lurie); description: Functors to Cat_infinity become cocartesian fibrations; input: Functor; output: Cocartesian fibration; preserved: Equivalence; broken: Presentation
+
+  s: excerpts/nlab-straightening-functor.txt (https://ncatlab.org/nlab/source/straightening+functor)
+
+### D7-325 Cartesian Fibration (batch 13)
+
+- name: **confirmed** [c] "and such that there is a sufficient supply of [[cartesian morphisms]]."
+- description: **confirmed** [c] "Hence a Cartesian lift $(\gamma, \hat f)$ of $\gamma$ in $E&#39;$ having $y$ as target." *Contravariant families are the 1-categorical fibred-category reading, not quoted.*
+- input: **confirmed** [c] "It is an [[inner fibration]] that lifts also all right _outer_ [[horn]] inclusions"
+- output: **confirmed** [c] "and such that there is a sufficient supply of [[cartesian morphisms]]."
+- preserved: **confirmed** [f] "is called an ''inverse image'' of its projection" *Pullback along base morphisms.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Cartesian lifts of base morphisms; contravariant families; input: Functor; output: Cartesian fibration; preserved: Pullback; broken: Nothing
+
+  c: excerpts/nlab-cartesian-fibration.txt (https://ncatlab.org/nlab/source/Cartesian+fibration)
+  f: excerpts/wikipedia-fibred-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375036869)
+
+### D7-326 Cocartesian Fibration (batch 13)
+
+- name: **unsupported** *The cocartesian dual is not stated in the fetched windows.*
+- description: **unsupported** *Not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Cocartesian lifts; covariant families; input: Functor; output: Cocartesian fibration; preserved: Pushforward; broken: Nothing
+
+  c: excerpts/nlab-cartesian-fibration.txt (https://ncatlab.org/nlab/source/Cartesian+fibration)
 

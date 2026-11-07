@@ -18733,6 +18733,1121 @@
    "sources": {
     "f": "https://ncatlab.org/nlab/source/forcing"
    }
+  },
+  {
+   "id": "D7-302",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for comprehension in categorical logic (the nLab pages tried were not served)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-303",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/nlab-hyperdoctrine.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "These adjoints are regarded as the action of [[quantifiers]] along $f$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "has both a [[left adjoint]] as well as a [[right adjoint]], typically required to satisfy [[Frobenius reciprocity]] and the [[B",
+     "more": [
+      {
+       "src": "h",
+       "quote": "* the right adjoint to $P(f)$ gives the application of the [[universal quantifier]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "We generally require also that for every morphism $f \\colon A \\to B$ the morphism $P(f)$ has both a [[left adjoint]] as well as a [[right adjoint]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "These adjoints are regarded as the action of [[quantifiers]] along $f$."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "typically required to satisfy [[Frobenius reciprocity]] and the [[B",
+     "note": "Beck-Chevalley is the condition the window begins to name."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://ncatlab.org/nlab/source/hyperdoctrine"
+   }
+  },
+  {
+   "id": "D7-304",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-dialectica-interpretation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "It was developed by [[Kurt Gödel]] to provide a [[consistency proof]] of arithmetic.",
+     "note": "Goedel's interpretation is quoted; de Paiva's categories are not."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "De Paiva's Dialectica categories are not described in the fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1270401680"
+   }
+  },
+  {
+   "id": "D7-305",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-chu-construction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the _Chu construction_ &amp;lbrack;[Chu 1979](#Chu79); [Barr 1991](#Barr91), [1996](#Barr96)&amp;rbrack; is a method for constructing a [[star-autonomous category]] from a [[closed monoidal ca"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is a method for constructing a [[star-autonomous category]] from a [[closed monoidal ca",
+     "more": [
+      {
+       "src": "c",
+       "quote": "Early discussion of application of the Chu construction as [[categorical semantics]] for [[linear logic]] is due to [Barr 1991](#Barr91)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "from a [[closed monoidal ca"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is a method for constructing a [[star-autonomous category]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Being star-autonomous, $Chu(C, d)$ is self-dual"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/Chu+construction"
+   }
+  },
+  {
+   "id": "D7-306",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-finiteness-space.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "We refer to the elements of $\\mathcal{U}$ as **finitary**, and the elements of $\\mathcal{U}^\\perp$ as **cofinitary**."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "* $FinSp_{rel}$ is [[star-autonomous]] (see [Ehrhard](#Ehrhard05)).",
+     "note": "Ehrhard's, per the source; matrices as linear maps are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "We refer to the elements of $\\mathcal{U}$ as **finitary**"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "We refer to the elements of $\\mathcal{U}$ as **finitary**, and the elements of $\\mathcal{U}^\\perp$ as **cofinitary**."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "* $FinSp_{rel}$ is [[star-autonomous]] (see [Ehrhard](#Ehrhard05)).",
+     "note": "A linear-logic model; \"without topology\" is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/finiteness+space"
+   }
+  },
+  {
+   "id": "D7-307",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-coherent-logic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Coherent logic (including sequents, as above) is the [[internal logic]] of a [[coherent category]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Coherent logic (including sequents, as above) is the [[internal logic]] of a [[coherent category]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is the [[internal logic]] of a [[coherent category]]."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Deligne's completeness theorem is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "which is not coherent since negation is not allowed in coherent formula"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/coherent+logic"
+   }
+  },
+  {
+   "id": "D7-308",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-geometric-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "* A geometric theory is a (possibly infinitary) [[first-order logic|first order]] [[theory]] whose [[model|models]] are preserved and reflected by [[geometric morphisms]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "by taking advantage of the availability of infinitary disjunctions in geometric logic",
+     "more": [
+      {
+       "src": "g",
+       "quote": "whose [[model|models]] are preserved and reflected by [[geometric morphisms]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "* A geometric theory is a (possibly infinitary) [[first-order logic|first order]] [[theory]]"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "whose [[model|models]] are preserved and reflected by [[geometric morphisms]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "That implication and universal quantification are excluded is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/geometric+theory"
+   }
+  },
+  {
+   "id": "D7-309",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cartesian-closed-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "their [[internal language]] is the [[simply typed lambda calculus]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "it has led to the realization that simply-typed lambda calculus can be interpreted in any Cartesian closed category."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "simply-typed lambda calculus can be interpreted in any Cartesian closed category."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "can be interpreted in any Cartesian closed category."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Beta-eta equality is not quoted here."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369029729"
+   }
+  },
+  {
+   "id": "D7-310",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cartesian-closed-category.txt",
+    "h": "excerpts/wikipedia-curry-howard-correspondence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The [[Curry–Howard–Lambek correspondence]] provides a deep [[isomorphism]] between [[intuitionistic logic]], simply-typed lambda calculus and Cartesian closed categories."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Lambek's correspondence is a correspondence of equational theories",
+     "note": "The free CCC as term model is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "simply-typed lambda calculus and Cartesian closed categories."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "simply-typed lambda calculus and Cartesian closed categories."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Lambek's correspondence is a correspondence of equational theories",
+     "note": "Equality of terms is what it keeps."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "abstracting away from dynamics of computation such as beta reduction and term normalization",
+     "note": "The equivalence is of equational theories: it keeps equality of terms and forgets the dynamics (beta reduction, normalization), so \"nothing\" is lost only up to equality."
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369029729",
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1373154084"
+   }
+  },
+  {
+   "id": "D7-311",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-curry-howard-correspondence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "It is also known as the '''Curry–Howard isomorphism''' or '''equivalence''', or the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "It is also known as the '''Curry–Howard isomorphism''' or '''equivalence''', or the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Natural deduction proofs as input are not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "For instance, the notion of [[combinatory logic#Reduction in combinatory logic|reduction]] of terms in combinatory logic can be transferred to Hilbert-style logic",
+     "note": "Reduction corresponds to proof transformation; \"normalization equals evaluation\" is a gloss on this."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1373154084"
+   }
+  },
+  {
+   "id": "D7-312",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/nlab-realizability.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The idea of _realizability_ is a way of making the [[Brouwer-Heyting-Kolmogorov interpretation]] of [[constructivism]] and [[intuitionistic mathematics]] precise.",
+     "note": "Kleene (1945) per the source's references."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The idea of _realizability_ is a way of making the [[Brouwer-Heyting-Kolmogorov interpretation]] of [[constructivism]] and [[intuitionistic mathematics]] precise.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "[[Stephen Kleene]], _On the interpretation of intuitionistic number theory_"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Partial combinatory algebras are not quoted here."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "It is related to the [[propositions as types]] paradigm."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://ncatlab.org/nlab/source/realizability"
+   }
+  },
+  {
+   "id": "D7-313",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for coalgebraic modal logic (the nLab page was not served)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-314",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-stone-duality.txt",
+    "b": "excerpts/wikipedia-stones-representation-theorem-for-boolean-algebras.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Stone duality is often described for [[topological spaces]] rather than for [[locales]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Perhaps the most general duality falling under this heading is that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side).",
+     "note": "Boolean algebras and Stone spaces from the second source; Gelfand duality is not checked.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "there is a [[contravariant functor]]",
+     "note": "Direction reversed."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/Stone+duality",
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1312231128"
+   }
+  },
+  {
+   "id": "D7-315",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/nlab-isbell-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "this is called **Isbell conjugation** or **Isbell duality** (after [[John Isbell]])."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "\\mathcal{O}(X) \\colon c \\mapsto [C^{op}, \\mathcal{V}](X, C(-,c))"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "\\mathcal{O}(X) \\colon c \\mapsto [C^{op}, \\mathcal{V}](X, C(-,c))"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "**Lemma 1:** $Spec(C(c,-)) \\simeq C(-,c)$"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "are called __Isbell self-dual__.",
+     "note": "Objects outside the fixed points change."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://ncatlab.org/nlab/source/Isbell+duality"
+   }
+  },
+  {
+   "id": "D7-316",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-girauds-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A classical theorem of [[Jean Giraud|Giraud]] characterizes [[sheaf toposes]] abstractly as [[categories]] with certain [[properties]] known as *Giraud&#39;s axioms*."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A [[category]] is a [[Grothendieck topos]] if and only if it satisfies the following conditions:",
+     "note": "The source's axioms: locally presentable, universal colimits, disjoint coproducts, effective quotients. The fill's small generating set and stable colimits are a common equivalent form; exactness matches effective quotients.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "1. it has [[universal colimits]];"
+      },
+      {
+       "src": "g",
+       "quote": "1. it has [[effective quotients]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A [[category]] is a [[Grothendieck topos]] if and only if it satisfies the following conditions:"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A [[category]] is a [[Grothendieck topos]] if and only if"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/Giraud%27s+theorem"
+   }
+  },
+  {
+   "id": "D7-317",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/nlab-double-negation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The _double negation topology_ closes morphisms under double negation (def."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "\\ref{DoubleNegationSheavesFormBooleanTopos} below).",
+     "note": "The source's proposition that double-negation sheaves form a Boolean topos, cited by its label."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The _double negation topology_ closes morphisms under double negation (def."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "\\ref{DoubleNegationSheavesFormBooleanTopos} below)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "This sublocale is [[dense sublocale|dense]], and in fact it is the smallest dense sublocale of $L$",
+     "note": "Stated for locales."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://ncatlab.org/nlab/source/double+negation"
+   }
+  },
+  {
+   "id": "D7-318",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/nlab-double-negation-translation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "**Double negation translation** is a method for converting [[propositions]] [[valid]] in [[classical logic]] into propositions valid in [[intuitionistic logic]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "**Double negation translation** is a method for converting [[propositions]] [[valid]] in [[classical logic]] into propositions valid in [[intuitionistic logic]].",
+     "note": "Goedel's use is quoted; Gentzen and Kolmogorov and the topos form are not."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is a method for converting [[propositions]] [[valid]] in [[classical logic]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "into propositions valid in [[intuitionistic logic]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "[[Kurt Gödel]] used this technique to show that [[Peano arithmetic]] and [[Heyting arithmetic]] are equiconsistent."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of constructive content is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://ncatlab.org/nlab/source/double+negation+translation"
+   }
+  },
+  {
+   "id": "D7-319",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/nlab-homotopy-coherent-nerve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "In the original paper, Cordier uses a different one of these conventions",
+     "note": "Cordier's, per the source."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "then the homotopy coherent nerve $N(C)$ is a [[weak Kan complex]]/[[quasi-category]].",
+     "more": [
+      {
+       "src": "h",
+       "quote": "also known as the operation of *[[rigidification of quasi-categories]]*."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "is such that all [[hom-object]]s $C(x,y) \\in sSet$ are [[Kan complex]]es"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "then the homotopy coherent nerve $N(C)$ is a [[weak Kan complex]]/[[quasi-category]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The Quillen equivalence is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://ncatlab.org/nlab/source/homotopy+coherent+nerve"
+   }
+  },
+  {
+   "id": "D7-320",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-simplicial-set.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Simplicial Set Generation\" is not a name the source uses."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A **simplicial set**  is a [[presheaf]] on the [[simplex category]] $\\Delta$",
+     "note": "Nerves and singular complexes as sources of simplicial sets are not quoted here."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A **simplicial set**  is a [[presheaf]] on the [[simplex category]] $\\Delta$"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/simplicial+set"
+   }
+  },
+  {
+   "id": "D7-321",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kan-fibration.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "A _Kan fibration_ is a [[morphism]] $\\pi \\colon Y \\to X$ of [[simplicial set|simplicial sets]] with the [[lifting property]] for all [[horn]]-inclusions."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "A _Kan fibration_ is a [[morphism]] $\\pi \\colon Y \\to X$ of [[simplicial set|simplicial sets]] with the [[lifting property]] for all [[horn]]-inclusions.",
+     "note": "Kan complexes modelling spaces is not quoted here."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "of [[simplicial set|simplicial sets]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "with the [[lifting property]] for all [[horn]]-inclusions."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Homotopy groups and long exact sequences are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kan+fibration"
+   }
+  },
+  {
+   "id": "D7-322",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/nlab-quasi-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "The notion of _quasi-category_ is a [[geometric definition of higher categories|geometric model]] for [[(∞,1)-category]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* all _inner_ [[horn]]s in $C$ have fillers.",
+     "note": "Joyal and Lurie per the source's references."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "The notion of _quasi-category_ is a [[geometric definition of higher categories|geometric model]] for [[(∞,1)-category]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "* all _inner_ [[horn]]s in $C$ have fillers."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://ncatlab.org/nlab/source/quasi-category"
+   }
+  },
+  {
+   "id": "D7-323",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-straightening-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "which has been introduced under the name *straightening and unstraightening* in [Lurie 2009, Sec. 3.2](#Lurie09):",
+     "note": "Lurie's, per the source."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the [[(∞,1)-Grothendieck construction]] takes the form of a [[Quillen equivalence]]",
+     "note": "Stated for Cartesian fibrations and marked simplicial sets; the left-fibration case is not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Left fibrations are not named in the fetched windows."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "takes the form of a [[Quillen equivalence]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/straightening+functor"
+   }
+  },
+  {
+   "id": "D7-324",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-straightening-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* $Un_\\phi$ is called the *unstraightening functor*."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the [[(∞,1)-Grothendieck construction]] takes the form of a [[Quillen equivalence]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "1. the global projective [[model structure on functors]] with values in the [[model structure on marked simplicial sets]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "1. the [[model structure for Cartesian fibrations]]",
+     "note": "Cartesian fibrations, the dual of the fill's cocartesian ones."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "takes the form of a [[Quillen equivalence]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/straightening+functor"
+   }
+  },
+  {
+   "id": "D7-325",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-cartesian-fibration.txt",
+    "f": "excerpts/wikipedia-fibred-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and such that there is a sufficient supply of [[cartesian morphisms]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Hence a Cartesian lift $(\\gamma, \\hat f)$ of $\\gamma$ in $E&#39;$ having $y$ as target.",
+     "note": "Contravariant families are the 1-categorical fibred-category reading, not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "It is an [[inner fibration]] that lifts also all right _outer_ [[horn]] inclusions"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and such that there is a sufficient supply of [[cartesian morphisms]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is called an ''inverse image'' of its projection",
+     "note": "Pullback along base morphisms."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/Cartesian+fibration",
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375036869"
+   }
+  },
+  {
+   "id": "D7-326",
+   "batch": 13,
+   "why": "Fill review, batch 13: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-cartesian-fibration.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "The cocartesian dual is not stated in the fetched windows."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/Cartesian+fibration"
+   }
   }
  ]
 }

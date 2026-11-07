@@ -322,14 +322,17 @@
 | `excerpts/nlab-braided-monoidal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-calculus-of-fractions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-closed-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-cartesian-fibration.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-product.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-category-of-fractions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-category-of-presheaves.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cauchy-complete-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-chu-construction.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-classifying-topos.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-closure-operator.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-co-yoneda-lemma.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coequalizer.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-coherent-logic.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-colimit.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-comma-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-comonad.txt` | Verbatim windows from an nLab page. |
@@ -341,6 +344,8 @@
 | `excerpts/nlab-diaconescus-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-direct-image.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-dold-kan-correspondence.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-double-negation-translation.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-double-negation.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-effective-topos.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-eilenberg-moore-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-end.txt` | Verbatim windows from an nLab page. |
@@ -352,6 +357,7 @@
 | `excerpts/nlab-factorization-homology.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-faithful-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-filtered-colimit.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-finiteness-space.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-forcing.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-free-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-free-groupoid.txt` | Verbatim windows from an nLab page. |
@@ -362,17 +368,22 @@
 | `excerpts/nlab-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-geometric-morphism-r.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-geometric-morphism.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-geometric-theory.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-girauds-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-godement-product.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-grothendieck-construction.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-grothendieck-topology.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-groupoidification.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-homotopy-coherent-nerve.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-horizontal-composition.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-hyperdoctrine.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-ind-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-initial-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-internal-logic.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-inverse-image.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-isbell-duality.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-kan-extension.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-kan-fibration.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-karoubi-envelope.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-kleisli-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-kripke-joyal-semantics.txt` | Verbatim windows from an nLab page. |
@@ -399,7 +410,9 @@
 | `excerpts/nlab-profunctor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-pullback.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-pushout.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-quasi-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-quotient-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-realizability.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-reflective-subcategory-colimits.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-reflective-subcategory-r.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-reflective-subcategory.txt` | Verbatim windows from an nLab page. |
@@ -408,8 +421,11 @@
 | `excerpts/nlab-sheafification.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-sieve.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-sifted-colimit.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-simplicial-set.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-skeletal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-split-epimorphism.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-stone-duality.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-straightening-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-string-diagram.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subdivision.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subobject-classifier-meet.txt` | Verbatim windows from an nLab page. |
@@ -507,6 +523,7 @@
 | `excerpts/wikipedia-cartan-eilenberg-resolution.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cartans-criterion-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cartans-criterion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-cartesian-closed-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-castelnuovo.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-catamorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -531,11 +548,13 @@
 | `excerpts/wikipedia-continuous-lattice.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-critical-pair-term-rewriting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-crystalline-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-curry-howard-correspondence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cyclic-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-data-transformation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-dedekind-macneille-completion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-derived-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-derived-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-dialectica-interpretation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-dilworths-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-direct-product.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-distributive-lattice.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -554,6 +573,7 @@
 | `excerpts/wikipedia-ext-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-exterior-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-factorization-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-fibred-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-field-of-fractions.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-filter-mathematics.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-first-passage.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -1022,6 +1042,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-cech-complex.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-completion-of-a-ring.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-cone-topology.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-curry-howard-correspondence.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-data-transformation.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-doob-h-transform.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-eckmann-hilton-argument.txt` |
@@ -1254,13 +1275,16 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-braided-monoidal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-calculus-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-closed-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-fibration.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-category-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-category-of-presheaves.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cauchy-complete-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-chu-construction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-classifying-topos.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-co-yoneda-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coequalizer.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coherent-logic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-colimit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-comma-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-comonad.txt` |
@@ -1272,6 +1296,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-diaconescus-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-direct-image.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-dold-kan-correspondence.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-double-negation-translation.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-double-negation.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-effective-topos.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-eilenberg-moore-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-end.txt` |
@@ -1282,6 +1308,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-factorization-homology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-faithful-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-filtered-colimit.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-finiteness-space.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-forcing.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-free-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-free-groupoid.txt` |
@@ -1291,17 +1318,22 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-functor-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-geometric-morphism-r.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-geometric-theory.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-girauds-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-godement-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-construction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-topology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-groupoidification.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-homotopy-coherent-nerve.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-horizontal-composition.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-hyperdoctrine.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-ind-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-initial-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-internal-logic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-inverse-image.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-isbell-duality.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kan-extension.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kan-fibration.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-karoubi-envelope.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kleisli-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kripke-joyal-semantics.txt` |
@@ -1324,15 +1356,20 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-profunctor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-pullback.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-pushout.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-quasi-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-quotient-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-realizability.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-reflective-subcategory-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-regular-and-exact-completions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-retract.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sheafification.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sieve.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sifted-colimit.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-simplicial-set.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-skeletal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-split-epimorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-stone-duality.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-straightening-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-string-diagram.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-subobject-classifier.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-symmetric-monoidal-natural-transformation.txt` |
@@ -1364,6 +1401,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-buchbergers-algorithm.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cardinal-number.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cartan-eilenberg-resolution.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cartesian-closed-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-catamorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cech-cohomology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-center-group-theory.txt` |
@@ -1384,10 +1422,12 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-continuous-lattice.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-critical-pair-term-rewriting.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-crystalline-cohomology.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-curry-howard-correspondence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cyclic-homology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dedekind-macneille-completion.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-derived-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-derived-functor.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dialectica-interpretation.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dilworths-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-direct-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-distributive-lattice.txt` |
@@ -1402,6 +1442,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ext-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-exterior-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-factorization-homology.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-fibred-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-field-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-filter-mathematics.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-five-lemma-r.txt` |

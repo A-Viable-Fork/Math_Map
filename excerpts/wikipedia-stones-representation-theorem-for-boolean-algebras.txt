@@ -14,3 +14,5 @@ such spaces are called '''Stone spaces''' (also ''profinite spaces'').
 states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'').
 
 In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories.
+
+there is a [[contravariant functor]]
