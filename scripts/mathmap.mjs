@@ -268,7 +268,7 @@ export function check(P = parse()) {
   }
   // The fill review's receipts: every quote of a graded field occurs in the excerpt file its source names.
   const { REVIEW } = require("../audit/fill-review-0_1.js");
-  for (const g of REVIEW) for (const [k, v] of Object.entries(g.fields || {})) for (const x of [v, ...(v.more || [])]) {
+  for (const g of REVIEW) for (const [k, v] of Object.entries(g.fields || {})) for (const x of [v, ...(v.more || []), ...(v.against || [])]) {
     if (!x.quote) continue;
     const file = g.files?.[x.src];
     if (!file) { F.push(`review ${g.id}.${k}: receipt ${x.src} names no excerpt file`); continue; }

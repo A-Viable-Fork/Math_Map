@@ -114,6 +114,8 @@ export function checkReview() {
       if (!v) { F.push(`${at}: no grade for ${f}`); continue; }
       if (!VERDICTS.includes(v.verdict)) F.push(`${at}.${f}: bad verdict ${v.verdict}`);
       for (const x of [v, ...(v.more || [])]) if (v.verdict !== "unsupported" && !(x.src && g.files?.[x.src] && x.quote)) F.push(`${at}.${f}: a ${v.verdict} grade needs an excerpt file and a quote for each receipt`);
+      for (const x of v.against || []) if (!(x.src && g.files?.[x.src] && x.quote)) F.push(`${at}.${f}: a disagreeing source needs an excerpt file and a quote`);
+      if (v.against?.length && !v.note) F.push(`${at}.${f}: a grade with a disagreeing source needs a note recording both`);
       if (v.verdict === "unsupported" && (v.quote || v.more)) F.push(`${at}.${f}: an unsupported grade carries no quote`);
       if (v.verdict !== "confirmed" && !v.note) F.push(`${at}.${f}: a ${v.verdict} grade needs a note`);
       if (/[–—]/.test(v.note || "")) F.push(`${at}.${f}: an en or em dash in the note`);
@@ -165,6 +167,12 @@ function renderReview(S, G) {
     for (const g of sampled) for (const f of FIELDS) { n++; const a = gOf[g.id].fields[f].verdict, b = g.fields[f].verdict; if (a === b) same++; else L.push(`- ${g.id} ${f}: sample ${a}, review ${b}.`); }
     L.push("", `Agreement: ${same} of ${n} fields.`, "");
   }
+  const dis = REVIEW.flatMap((g) => FIELDS.filter((f) => g.fields[f].against?.length).map((f) => [g, f]));
+  if (dis.length) {
+    L.push(H("Sources in disagreement"), "", "Fields where two sources disagree. Both are recorded; the grade states which source it follows and the note says how the other differs. Neither is picked as right.", "");
+    for (const [g, f] of dis) L.push(`- **${g.id} ${byId[g.id].name}**, ${f}: ${g.fields[f].note} Against: ${g.fields[f].against.map((x) => `[${x.src}] "${x.quote}"`).join(" ")}`);
+    L.push("");
+  }
   L.push(H("Findings"), "", "Every field not confirmed, with the reason.", "");
   for (const g of REVIEW) {
     const bad = FIELDS.filter((f) => g.fields[f].verdict !== "confirmed");
@@ -174,7 +182,7 @@ function renderReview(S, G) {
   for (const g of REVIEW) {
     L.push(`### ${g.id} ${byId[g.id].name} (batch ${g.batch}${g.covers?.length ? `; covers ${g.covers.join(", ")}` : ""})`, "");
     for (const f of FIELDS) {
-      const v = g.fields[f], rs = [v, ...(v.more || [])].filter((x) => x.quote).map((x) => `[${x.src}] "${x.quote}"`).join(" ");
+      const v = g.fields[f], rs = [v, ...(v.more || [])].filter((x) => x.quote).map((x) => `[${x.src}] "${x.quote}"`).join(" ") + (v.against?.length ? ` Against: ${v.against.map((x) => `[${x.src}] "${x.quote}"`).join(" ")}` : "");
       L.push(`- ${f}: **${v.verdict}**${rs ? ` ${rs}` : ""}${v.note ? ` *${v.note}*` : ""}${g.contra.includes(f) ? " (recall contradicted)" : ""}`);
     }
     if (rc[g.id]) L.push(`- recalled: ${FIELDS.map((f) => `${f}: ${rc[g.id][f]}`).join("; ")}`);

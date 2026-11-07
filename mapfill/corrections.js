@@ -195,6 +195,17 @@ const CORRECTIONS = [
     receipts: [R("excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt", "[PreservesLimitsOfShape J R] : HasLimitsOfShape J (Comma L R)", "preserved"),
       R("excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt", "[PreservesColimitsOfShape J L] : HasColimitsOfShape J (Comma L R)", "preserved"),
       R("excerpts/nlab-comma-category.txt", "It can also be seen a kind of [[2-limit]]", "preserved")] },
+  { id: "D7-061", name: "Eckmann-Hilton Argument Reduction",
+    fields: { description: "Two unital binary operations on a set, each a homomorphism for the other (the interchange law), coincide and are commutative and associative. Forces higher homotopy groups abelian and monoids in monoids commutative." },
+    reason: "Fill review, batch 3: description graded imprecise. The hypothesis is interchange, not that the operations distribute over each other.",
+    receipts: [R("excerpts/wikipedia-eckmann-hilton-argument.txt", "is an [[argument]] about two [[unital magma]] structures on a [[Set (mathematics)|set]] where one is a [[homomorphism]] for the other.", "description"),
+      R("excerpts/wikipedia-eckmann-hilton-argument.txt", "Then <math>\\circ</math> and <math>\\otimes</math> are the same and in fact commutative and associative.", "description"),
+      R("excerpts/wikipedia-eckmann-hilton-argument.txt", "The above proof also has a \"two-dimensional\" presentation that better illustrates the application to higher [[homotopy group]]s.", "description")] },
+  { id: "D7-072", name: "Exact Completion",
+    fields: { description: "Freely adds quotients to make an exact (Barr-exact) category: from a category with finite limits (ex/lex), quotients of pseudo-equivalence relations, a free completion; from a regular category (ex/reg), quotients of equivalence relations, a completion proper." },
+    reason: "Fill review, batch 3: description graded imprecise. The ex/lex completion adds quotients of pseudo-equivalence relations, not only of equivalence relations.",
+    receipts: [R("excerpts/nlab-regular-and-exact-completions.txt", "we take the objects of $C_{ex}$ to be the [[pseudo-equivalence relations]] in $C$", "description"),
+      R("excerpts/nlab-regular-and-exact-completions.txt", "so the left adjoint can properly be called a [[completion]], while in the first two cases, the 2-monad is only [[lax-idempotent monad|lax-idempotent]], so the left adjoint should technically be called a [[free completion]].", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

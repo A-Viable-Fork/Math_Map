@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, essential image (page source)
+URL: https://ncatlab.org/nlab/source/essential+image
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a2192f5ac1321d6b5be744d01538961bddb96882b2128cbf5687a196c58cafef
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion of _essential image_ is supposed to be an adaptation of the notion of [[image]]
+
+is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$.

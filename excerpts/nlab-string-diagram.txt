@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, string diagram (page source)
+URL: https://ncatlab.org/nlab/source/string+diagram
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3d7d8daca86260ee53329333166c644814fc1574e1295ae2cea8a5e75a2c1641
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]].
+
+* {#JoyalStreet91} [[André Joyal]], [[Ross Street]]: *The geometry of tensor calculus I_, Advances in Math. 88 (1991) 55-112

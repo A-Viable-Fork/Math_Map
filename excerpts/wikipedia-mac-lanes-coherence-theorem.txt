@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Mac Lane's coherence theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376831342
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 927b73a34beb31dc5136b312be1ece8b6820e078e7af2f0e8a7661f06dfcc88c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The theorem can be stated as a [[strictification]] result, namely that every monoidal category is monoidally equiva
+
+One important consequence is that every monoidal category is equivalent, in a sense appropriate to monoidal structure, to a strict monoidal category in which the associativity and unital laws hold on the nose.
+
+states that in any [[monoidal category]], every well-formed diagram built from the associativity and unit isomorphisms commutes.
+
+to a strict monoidal category in which the associativity and unital laws hold on the nose.
+
+This “strictification” property explains why monoidal categories can often be treated as though they were strictly associative without loss of generality.

@@ -404,6 +404,9 @@ const FORMAL = [
   K("D7-045", "preserved", "CategoryTheory.Comma.hasLimitsOfShape", "Mathlib/CategoryTheory/Limits/Comma.lean", "conflicts", "Limits of shape J exist in Comma L R when the source categories have them and R, the functor on the target side of the arrows (the fill's G), preserves them. The fill puts the condition on F; F's preservation of colimits is what gives colimits (hasColimitsOfShape)."),
   K("D7-045", "preserved", "CategoryTheory.Comma.hasColimitsOfShape", "Mathlib/CategoryTheory/Limits/Comma.lean", "related", "The dual: colimits exist when L, the source-side functor (the fill's F), preserves them."),
   K("D7-049", "output", "CategoryTheory.skeletonEquivalence", "Mathlib/CategoryTheory/Skeletal.lean", "exact", "The skeleton is equivalent to C (noncomputable: the construction chooses representatives)."),
+  // Fill review, batch 3.
+  K("D7-067", "output", "CategoryTheory.Functor.EssImageSubcategory", "Mathlib/CategoryTheory/EssentialImage.lean", "exact", "Mathlib's essential image subcategory is the full subcategory on objects isomorphic to some F.obj X (essImage), as the fill says. The nLab defines it instead as the smallest replete subcategory containing the image, which need not be full: a disagreement between sources, recorded in the fill review."),
+  K("D7-067", "description", "CategoryTheory.Functor.essImage", "Mathlib/CategoryTheory/EssentialImage.lean", "exact", "Objects Y with some X and an isomorphism F.obj X ≅ Y."),
 ];
 
 module.exports = { MATHLIB, FORMAL };

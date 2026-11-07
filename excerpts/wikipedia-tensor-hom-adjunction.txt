@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Tensor–hom adjunction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345274466
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 83e0f7216ea46771a46a845c5662b9b3539e270b602ccca651ee4fd49ea1c036
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''tensor-hom adjunction''' is the statement that the [[Tensor product of modules|tensor product]]
+
+The order of terms in the phrase "tensor-hom adjunction" reflects their relationship: tensor is the left adjoint, while hom is the right adjoint.
+
+Fix an <math>(R,S)</math>-bimodule <math>X</math>
+
+:<math>\operatorname{Hom}(Y \otimes X, Z) \cong \operatorname{Hom}(Y,\operatorname{Hom}(X,Z)).</math>

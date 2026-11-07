@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 50 of 416 D7 stubs, 0 of 79 homes; 50 entries in 2 batches.
+Reviewed: 75 of 416 D7 stubs, 0 of 79 homes; 75 entries in 3 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (50 entries)
+### D7 stubs (75 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 50 | 0 | 0 | 0 |
-| description | 49 | 1 | 0 | 0 |
-| input | 47 | 3 | 0 | 0 |
-| output | 50 | 0 | 0 | 0 |
-| preserved | 42 | 2 | 0 | 6 |
-| broken | 28 | 3 | 0 | 19 |
-| **all** | 266 | 9 | 0 | 25 |
+| name | 75 | 0 | 0 | 0 |
+| description | 72 | 3 | 0 | 0 |
+| input | 72 | 3 | 0 | 0 |
+| output | 75 | 0 | 0 | 0 |
+| preserved | 65 | 2 | 0 | 8 |
+| broken | 44 | 3 | 0 | 28 |
+| **all** | 403 | 11 | 0 | 36 |
 
 ## 2. Recall against source
 
@@ -30,9 +30,24 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 |---|---|---|---|---|
 | 1 | 25 | 143 | 2 | 1% |
 | 2 | 25 | 132 | 0 | 0% |
-| **all** | 50 | 275 | 2 | 1% |
+| 3 | 25 | 139 | 0 | 0% |
+| **all** | 75 | 414 | 2 | 0% |
 
-## 3. Findings
+## 3. Second reading of the sample
+
+Fills in the audit's fixed sample, first graded by the fills' author against live URLs (`audit/grades-0_1.js`, kept for the sample's estimates), graded again here against excerpt files. Fields where the two readings differ:
+
+
+Agreement: 6 of 6 fields.
+
+## 4. Sources in disagreement
+
+Fields where two sources disagree. Both are recorded; the grade states which source it follows and the note says how the other differs. Neither is picked as right.
+
+- **D7-067 Essential Image Reduction**, description: Mathlib takes the full subcategory on objects isomorphic to some F c, as the fill does. The nLab defines the essential image as the smallest replete subcategory containing the image, which need not be full. Both are recorded. Against: [e] "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$."
+- **D7-067 Essential Image Reduction**, output: As the description: Mathlib's is full, the nLab's need not be. Against: [e] "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$."
+
+## 5. Findings
 
 Every field not confirmed, with the reason.
 
@@ -59,8 +74,19 @@ Every field not confirmed, with the reason.
 - **D7-044 Functor Category Construction** (batch 2): *broken* unsupported: Size control is not discussed in the fetched source.
 - **D7-045 Comma Category Construction** (batch 2): *preserved* imprecise: The universal 2-cell is right (the comma category is a 2-limit). Limits exist where the target-side functor G preserves them, not F; F's preservation gives colimits. *broken* unsupported: "Nothing; it adds structure" is a gloss no source states.
 - **D7-047 Coslice Category Construction** (batch 2): *preserved* unsupported: No fetched source states which limits or colimits of X/C are computed in C. Recalled, unchecked: only connected colimits are, so "colimits (via C)" would need that qualifier. *broken* unsupported: No fetched source states that the initial object of X/C is id_X.
+- **D7-051 Monoidal Product Application** (batch 3): *broken* unsupported: No fetched source states that tensor factors are not recoverable.
+- **D7-055 Whiskering** (batch 3): *broken* unsupported: "Nothing" is not stated by a source.
+- **D7-056 Vertical Composition of Natural Transformations** (batch 3): *broken* unsupported: No source states that the middle functor is lost.
+- **D7-057 Horizontal Composition of Natural Transformations** (batch 3): *broken* unsupported: "Individual components" is a gloss no source states.
+- **D7-060 String Diagram Evaluation** (batch 3): *preserved* unsupported: Invariance under isotopy is not stated in the fetched text; only Joyal and Street's paper is cited. *broken* unsupported: No source states that bracketing and sequencing are forgotten.
+- **D7-061 Eckmann-Hilton Argument Reduction** (batch 3): *description* imprecise: The hypothesis is interchange (each operation is a homomorphism for the other), not that the operations distribute over each other; the input field states it correctly. Higher homotopy groups as the application are right.
+- **D7-062 Pointwise Extension** (batch 3): *broken* unsupported: The source does not say which properties fail to pass (total order, field axioms).
+- **D7-066 Tambara Module Construction** (batch 3): *preserved* unsupported: The coherence of the action is not quoted. *broken* unsupported: No source states what is excluded.
+- **D7-069 Coreflective Subcategory Localization** (batch 3): *broken* unsupported: "Structure not seen from S" is a gloss no source states.
+- **D7-070 Factorization System Application** (batch 3): *broken* unsupported: "Nothing; it is a decomposition" is not stated by a source.
+- **D7-072 Exact Completion** (batch 3): *description* imprecise: From a category with finite limits (ex/lex), the completion adds quotients of pseudo-equivalence relations, not only of equivalence relations; from a regular category (ex/reg) it adds quotients of equivalence relations. The ex/lex case is a free completion, the ex/reg a completion proper.
 
-## 4. Receipts
+## 6. Receipts
 
 ### D7-001 Functor Application (batch 1)
 
@@ -701,4 +727,319 @@ Every field not confirmed, with the reason.
 - recalled: name: Standard; description: The maximal subgroupoid: all objects, only isomorphisms; input: A category; output: Its core; preserved: Objects, isomorphisms; broken: Non-invertible morphisms
 
   g: excerpts/nlab-core-groupoid.txt (https://ncatlab.org/nlab/source/core+groupoid)
+
+### D7-051 Monoidal Product Application (batch 3)
+
+- name: **confirmed** [m] "A **monoidal category** is a [[category]] equipped with some notion of &#39;tensor product&#39; of its [[objects]]."
+- description: **confirmed** [m] "For any monoidal category $M$, the operation of tensor product is actually a [[functor]]:" [m] "out of the [[product category]] of $\mathcal{C}$ with itself, called the **[[tensor product]]**," *Associativity and unit up to coherent isomorphism: the source's associator.*
+- input: **confirmed** [m] "A **monoidal category** is a [[category]] equipped with some notion of &#39;tensor product&#39; of its [[objects]]."
+- output: **confirmed** [m] "For any monoidal category $M$, the operation of tensor product is actually a [[functor]]:"
+- preserved: **confirmed** [m] "\label{AssociatorInAMonoidalCategory}" *The associator is part of the structure; its coherence is the pentagon, not quoted here.*
+- broken: **unsupported** *No fetched source states that tensor factors are not recoverable.*
+- recalled: name: Standard (tensor of a monoidal category); description: Bifunctor C x C to C with associator and unitors satisfying pentagon and triangle; input: A monoidal category and objects or morphisms; output: Their tensor; preserved: Associativity and unit up to coherent isomorphism; broken: Factors not recoverable
+
+  m: excerpts/nlab-monoidal-category.txt (https://ncatlab.org/nlab/source/monoidal+category)
+
+### D7-052 Braiding Isomorphism Application (batch 3)
+
+- name: **confirmed** [b] "called the **[[braiding]]**, such that the following two kinds of [[commuting diagram|diagrams commute]] for all [[objects]] involved"
+- description: **confirmed** [b] "(called the **hexagon identities** encoding the compatibility of the braiding with the [[associator]] for the tensor product):"
+- input: **confirmed** [b] "Intuitively speaking, a braided monoidal category is a category with a tensor product and an isomorphism called the &#39;braiding&#39;"
+- output: **confirmed** [b] "an isomorphism called the &#39;braiding&#39; which lets us &#39;switch&#39; two objects in a tensor product like $x \otimes y$."
+- preserved: **confirmed** [b] "(called the **hexagon identities** encoding the compatibility of the braiding with the [[associator]] for the tensor product):" *"Everything (it is an isomorphism)" restates invertibility.*
+- broken: **confirmed** [b] "then the braided monoidal category is called a _[[symmetric monoidal category]]_." *Symmetry is the extra condition that the braiding squares to the identity.*
+- recalled: name: Standard; description: Natural isomorphism X (x) Y to Y (x) X satisfying the hexagon identities; input: A braided monoidal category; output: The swap isomorphism; preserved: Hexagons; broken: Symmetry (the double braiding need not be the identity)
+
+  b: excerpts/nlab-braided-monoidal-category.txt (https://ncatlab.org/nlab/source/braided+monoidal+category)
+
+### D7-053 Symmetric Monoidal Transformation (batch 3)
+
+- name: **confirmed** [s] "A _symmetric monoidal natural transformation_ is a [[natural transformation]] between [[symmetric monoidal functors]] that respects the symmetric monoidal structure."
+- description: **confirmed** [m] "between the underlying functors that is compatible with the tensor product and the unit"
+- input: **confirmed** [s] "A _symmetric monoidal natural transformation_ is a [[natural transformation]] between [[symmetric monoidal functors]]"
+- output: **confirmed** [s] "In fact, a symmetric monoidal natural transformation is the same as a [[monoidal natural transformation]] (as long as it goes between symmetric monoidal functors)."
+- preserved: **confirmed** [m] "between the underlying functors that is compatible with the tensor product and the unit" *Symmetry imposes no further condition on the transformation.*
+- broken: **confirmed** [s] "In fact, a symmetric monoidal natural transformation is the same as a [[monoidal natural transformation]] (as long as it goes between symmetric monoidal functors)."
+- recalled: name: A monoidal natural transformation between symmetric monoidal functors; description: Natural transformation compatible with the tensor and unit; symmetry adds no condition on transformations; input: Symmetric monoidal functors; output: A monoidal natural transformation; preserved: Tensor and unit compatibility; broken: Nothing beyond naturality
+
+  s: excerpts/nlab-symmetric-monoidal-natural-transformation.txt (https://ncatlab.org/nlab/source/symmetric+monoidal+natural+transformation)
+  m: excerpts/nlab-monoidal-natural-transformation.txt (https://ncatlab.org/nlab/source/monoidal+natural+transformation)
+
+### D7-054 Tensor-Hom Adjunction (batch 3)
+
+- name: **confirmed** [t] "the '''tensor-hom adjunction''' is the statement that the [[Tensor product of modules|tensor product]]"
+- description: **confirmed** [t] "The order of terms in the phrase "tensor-hom adjunction" reflects their relationship: tensor is the left adjoint, while hom is the right adjoint." *Closed monoidal categories are not checked; modules are.*
+- input: **confirmed** [t] "Fix an <math>(R,S)</math>-bimodule <math>X</math>"
+- output: **confirmed** [t] ":<math>\operatorname{Hom}(Y \otimes X, Z) \cong \operatorname{Hom}(Y,\operatorname{Hom}(X,Z)).</math>"
+- preserved: **confirmed** [p] "are always [[right exact functor]]s, but not necessarily left exact" [h] "is a covariant [[exact functor|left-exact]] functor"
+- broken: **confirmed** [p] "are always [[right exact functor]]s, but not necessarily left exact" *Full exactness fails; that Tor and Ext measure the failure is not quoted here.*
+- recalled: name: Standard; description: Tensor left adjoint to internal Hom; currying; input: A closed monoidal category, or modules; output: Natural bijection; preserved: Tensor is right exact, Hom left exact; broken: Exactness; Tor and Ext measure the failure
+
+  t: excerpts/wikipedia-tensor-hom-adjunction.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1345274466)
+  p: excerpts/wikipedia-tensor-product-of-modules.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1362505653)
+  h: excerpts/wikipedia-hom-functor.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374264691)
+
+### D7-055 Whiskering (batch 3)
+
+- name: **confirmed** [w] "the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_."
+- description: **confirmed** [n] "Whiskering is an [[external binary operation]] between a functor and a natural transformation."
+- input: **confirmed** [n] "Whiskering is an [[external binary operation]] between a functor and a natural transformation."
+- output: **confirmed** [w] "the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_."
+- preserved: **confirmed** [w] "the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_." *The result is again a 2-morphism, a natural transformation.*
+- broken: **unsupported** *"Nothing" is not stated by a source.*
+- recalled: name: Standard; description: Composite of a natural transformation with a functor on either side; input: A natural transformation and a functor; output: A natural transformation; preserved: Naturality; broken: Nothing
+
+  w: excerpts/nlab-whiskering.txt (https://ncatlab.org/nlab/source/whiskering)
+  n: excerpts/wikipedia-natural-transformation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552)
+
+### D7-056 Vertical Composition of Natural Transformations (batch 3)
+
+- name: **confirmed** [n] "=== Vertical composition ==="
+- description: **confirmed** [n] ":<math>(\epsilon \circ \eta)_X = \epsilon_X \circ \eta_X</math>."
+- input: **confirmed** [n] "are natural transformations between functors <math>F, G, H: C \to D</math>"
+- output: **confirmed** [n] "then we can compose them to get a natural transformation"
+- preserved: **confirmed** [n] "This vertical composition of natural transformations is [[associative]] and has an identity"
+- broken: **unsupported** *No source states that the middle functor is lost.*
+- recalled: name: Standard; description: Componentwise composition; input: Transformations F to G and G to H; output: Transformation F to H; preserved: Naturality, associativity; broken: The middle functor
+
+  n: excerpts/wikipedia-natural-transformation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552)
+
+### D7-057 Horizontal Composition of Natural Transformations (batch 3)
+
+- name: **confirmed** [h] "* In [[Cat]], horizontal composition is the [[Godement product]] of [[natural transformation]]s."
+- description: **confirmed** [g] "is their [[horizontal composition]] as 2-cells in the [[2-category]] [[Cat]] of [[categories]], functors and natural transformations:"
+- input: **confirmed** [g] "The __Godement product__ of two [[natural transformations]] between appropriate [[functors]]"
+- output: **confirmed** [g] "is their [[horizontal composition]] as 2-cells in the [[2-category]] [[Cat]] of [[categories]], functors and natural transformations:"
+- preserved: **confirmed** [g] "are defined by any of the two equivale" *The two routes around the naturality square agree, as the fill says.*
+- broken: **unsupported** *"Individual components" is a gloss no source states.*
+- recalled: name: Standard (Godement product); description: beta * alpha: H F to K G, either route around the square; input: Transformations between composable functors; output: Transformation H F to K G; preserved: Naturality; well defined; broken: Components
+
+  g: excerpts/nlab-godement-product.txt (https://ncatlab.org/nlab/source/Godement+product)
+  h: excerpts/nlab-horizontal-composition.txt (https://ncatlab.org/nlab/source/horizontal+composition)
+
+### D7-058 Interchange Law Reduction (batch 3)
+
+- name: **confirmed** [g] "The [[interchange law]] in (general) $2$-categories"
+- description: **confirmed** [g] "The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_." *The displayed law is not quoted.*
+- input: **confirmed** [g] "The [[interchange law]] in (general) $2$-categories"
+- output: **confirmed** [n] "the interchange law gives immediately the compact formulas of horizontal composition"
+- preserved: **confirmed** [g] "The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_."
+- broken: **confirmed** [g] "The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_." *An equality loses nothing.*
+- recalled: name: Standard; description: Vertical and horizontal composition commute; input: Pasting diagram of 2-cells; output: Equal composite; preserved: The 2-cell; broken: Nothing
+
+  g: excerpts/nlab-godement-product.txt (https://ncatlab.org/nlab/source/Godement+product)
+  n: excerpts/wikipedia-natural-transformation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552)
+
+### D7-059 Strictification of Monoidal Categories (batch 3)
+
+- name: **confirmed** [c] "The theorem can be stated as a [[strictification]] result, namely that every monoidal category is monoidally equiva" *The attribution to Mac Lane is the source's.*
+- description: **confirmed** [c] "One important consequence is that every monoidal category is equivalent, in a sense appropriate to monoidal structure, to a strict monoidal category in which the associativity and unital laws hold on the nose."
+- input: **confirmed** [c] "states that in any [[monoidal category]], every well-formed diagram built from the associativity and unit isomorphisms commutes."
+- output: **confirmed** [c] "to a strict monoidal category in which the associativity and unital laws hold on the nose."
+- preserved: **confirmed** [c] "states that in any [[monoidal category]], every well-formed diagram built from the associativity and unit isomorphisms commutes."
+- broken: **confirmed** [c] "This “strictification” property explains why monoidal categories can often be treated as though they were strictly associative without loss of generality." *Nothing structural is lost; "objects-level identity" is the fill's gloss for the change of model.*
+- recalled: name: Mac Lane's coherence theorem (strictification); description: Every monoidal category is monoidally equivalent to a strict one; input: A monoidal category; output: Strict monoidal category; preserved: Monoidal equivalence; broken: The particular model
+
+  c: excerpts/wikipedia-mac-lanes-coherence-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376831342)
+
+### D7-060 String Diagram Evaluation (batch 3)
+
+- name: **confirmed** [s] "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]."
+- description: **confirmed** [s] "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]." [s] "* {#JoyalStreet91} [[André Joyal]], [[Ross Street]]: *The geometry of tensor calculus I_, Advances in Math. 88 (1991) 55-112" *The isotopy invariance and its attribution to Joyal and Street are cited in the source's references only; the theorem is not quoted.*
+- input: **confirmed** [s] "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]."
+- output: **confirmed** [s] "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]."
+- preserved: **unsupported** *Invariance under isotopy is not stated in the fetched text; only Joyal and Street's paper is cited.*
+- broken: **unsupported** *No source states that bracketing and sequencing are forgotten.*
+- recalled: name: Standard (Joyal and Street); description: Diagrams denote morphisms; isotopic diagrams give equal morphisms; input: A string diagram; output: A morphism of a monoidal category; preserved: Value under isotopy; broken: Bracketing
+
+  s: excerpts/nlab-string-diagram.txt (https://ncatlab.org/nlab/source/string+diagram)
+
+### D7-061 Eckmann-Hilton Argument Reduction (batch 3)
+
+- name: **confirmed** [e] "the '''Eckmann–Hilton argument''' (or '''Eckmann–Hilton principle''' or '''Eckmann–Hilton theorem''') is an [[argument]] about two [[unital magma]] structures"
+- description: **imprecise** [e] "is an [[argument]] about two [[unital magma]] structures on a [[Set (mathematics)|set]] where one is a [[homomorphism]] for the other." [e] "The above proof also has a "two-dimensional" presentation that better illustrates the application to higher [[homotopy group]]s." *The hypothesis is interchange (each operation is a homomorphism for the other), not that the operations distribute over each other; the input field states it correctly. Higher homotopy groups as the application are right.*
+- input: **confirmed** [e] "is an [[argument]] about two [[unital magma]] structures on a [[Set (mathematics)|set]] where one is a [[homomorphism]] for the other."
+- output: **confirmed** [e] "Given this, the structures are the same, and the resulting [[magma (algebra) |magma]] is a [[commutative monoid]]."
+- preserved: **confirmed** [e] "Then <math>\circ</math> and <math>\otimes</math> are the same and in fact commutative and associative."
+- broken: **confirmed** [e] "This establishes that the two operations coincide and are commutative."
+- recalled: name: Standard (Eckmann and Hilton); description: Two unital operations with interchange are equal and commutative; input: A set with two unital operations satisfying interchange; output: One commutative operation; preserved: The operation; broken: Noncommutativity; higher homotopy groups abelian
+
+  e: excerpts/wikipedia-eckmann-hilton-argument.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1358258783)
+
+### D7-062 Pointwise Extension (batch 3)
+
+- name: **confirmed** [p] "are the ''pointwise operations'', that is, operations defined on functions by applying the operations to function values separately for each point in the [[domain of a function|domain]] of definition." *"Pointwise Extension" is not a standard name; the source names pointwise operations. The fill's second sentence, on pointwise Kan extensions, is a different notion.*
+- description: **confirmed** [p] "The pointwise addition <math>f+g</math> of two functions <math>f</math> and <math>g</math> with the same domain and [[codomain]] is defined by:"
+- input: **confirmed** [p] "A binary operation {{math|''o'': ''Y'' × ''Y'' → ''Y''}} on a set {{mvar|Y}} can be lifted pointwise"
+- output: **confirmed** [p] "the set of all functions <math>X</math> to the [[carrier set]] of <math>A</math> can be turned into an algebraic structure of the same type in an analogous way."
+- preserved: **confirmed** [p] "Pointwise operations inherit such properties as [[associativity]], [[commutativity]] and [[distributivity]] from corresponding operations on the [[codomain]]." *That exactly equational laws pass is not stated; the source lists examples.*
+- broken: **unsupported** *The source does not say which properties fail to pass (total order, field axioms).*
+- recalled: name: Not a standard named operation; pointwise operations are standard; description: Operations on functions defined pointwise; input: Structure on D and functions into it; output: Same structure on functions; preserved: Equational laws; broken: Non-equational properties such as being a field
+
+  p: excerpts/wikipedia-pointwise.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1298665805)
+
+### D7-063 End Evaluation (batch 3)
+
+- name: **confirmed** [e] "An _end_ is a special kind of [[limit]] over a [[functor]] of the form $F : C^{op} \times C \to D$"
+- description: **confirmed** [w] "is a universal [[dinatural transformation]] from an object <math>e</math> of <math>\mathbf X</math> to <math>S</math>." [e] "A classical example of an _end_ is the $V$-object of [[natural transformations]] between $V$-[[enriched functors]]"
+- input: **confirmed** [e] "An _end_ is a special kind of [[limit]] over a [[functor]] of the form $F : C^{op} \times C \to D$"
+- output: **confirmed** [e] "then the _end_ of the functor picks out the universal [[subobject]] on which the left and right actions coincide."
+- preserved: **confirmed** [w] "is a universal [[dinatural transformation]] from an object <math>e</math> of <math>\mathbf X</math> to <math>S</math>."
+- broken: **confirmed** [e] "then the _end_ of the functor picks out the universal [[subobject]] on which the left and right actions coincide." *Only the diagonal values enter.*
+- recalled: name: Standard; description: The universal wedge; Nat(F, G) is an end; input: P: C^op x C to D; output: The end; preserved: Universal wedge; broken: Off-diagonal values
+
+  e: excerpts/nlab-end.txt (https://ncatlab.org/nlab/source/end)
+  w: excerpts/wikipedia-end-category-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378029815)
+
+### D7-064 Coend Evaluation (batch 3)
+
+- name: **confirmed** [w] "The definition of the '''coend''' of a functor"
+- description: **confirmed** [e] "Dually, the _coend_ of $F$ is the universal quotient of $\coprod_{c \in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal."
+- input: **confirmed** [w] "The definition of the '''coend''' of a functor <math>S\colon \mathbf{C}^{\mathrm{op}}\times\mathbf{C}\to\mathbf{X}</math> is the dual of the definition of an end."
+- output: **confirmed** [e] "Dually, the _coend_ of $F$ is the universal quotient of $\coprod_{c \in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal."
+- preserved: **confirmed** [e] "Perhaps the most common way in which ends and coends arise is through homs and tensor products of (generalized) modules"
+- broken: **confirmed** [e] "Dually, the _coend_ of $F$ is the universal quotient of $\coprod_{c \in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal."
+- recalled: name: Standard; description: Universal cowedge, a colimit; input: P: C^op x C to D; output: The coend; preserved: Universal cowedge; tensor product of functors; broken: Off-diagonal values
+
+  e: excerpts/nlab-end.txt (https://ncatlab.org/nlab/source/end)
+  w: excerpts/wikipedia-end-category-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378029815)
+
+### D7-065 Profunctor Composition (batch 3)
+
+- name: **confirmed** [p] "Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable."
+- description: **confirmed** [p] "Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable."
+- input: **confirmed** [p] "Specifically, for profunctors $F : C $&amp;#8696;$ D$ and $G : D $&amp;#8696;$ E$, their composite"
+- output: **confirmed** [p] "Specifically, for profunctors $F : C $&amp;#8696;$ D$ and $G : D $&amp;#8696;$ E$, their composite"
+- preserved: **confirmed** [p] "This yields a [[bicategory]] in which"
+- broken: **confirmed** [p] "Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable."
+- recalled: name: Standard; description: Coend over the middle variable; input: Profunctors; output: Composite profunctor; preserved: Associativity up to isomorphism: a bicategory; broken: The middle variable
+
+  p: excerpts/nlab-profunctor.txt (https://ncatlab.org/nlab/source/profunctor)
+
+### D7-066 Tambara Module Construction (batch 3)
+
+- name: **confirmed** [x] "Our work generalizes a
+classic result by Pastro and Street on Tambara theory" *Tambara modules as used for optics go back to Pastro and Street, per the source.*
+- description: **confirmed** [x] " describes how the theory of Tambara modules can be
+applied to obtain a profunctor representation for optics." *The strength's formula is not quoted (it is typeset as mathematics).*
+- input: **confirmed** [x] " has Tambara module structure for the monoidal
+actions defining an optic"
+- output: **confirmed** [x] " has Tambara module structure for the monoidal
+actions defining an optic"
+- preserved: **unsupported** *The coherence of the action is not quoted.*
+- broken: **unsupported** *No source states what is excluded.*
+- recalled: name: Standard (Tambara; Pastro and Street); description: Profunctor with a strength for a monoidal action; optics as transformations of Tambara modules; input: A profunctor and an action; output: A Tambara module; preserved: Coherence of the action; broken: Profunctors without strength
+
+  x: excerpts/arxiv-2001.07488.txt (https://arxiv.org/html/2001.07488)
+
+### D7-067 Essential Image Reduction (batch 3)
+
+- name: **confirmed** [e] "The notion of _essential image_ is supposed to be an adaptation of the notion of [[image]]"
+- description: **confirmed** [m] "abbrev EssImageSubcategory (F : C ⥤ D) := F.essImage.FullSubcategory" Against: [e] "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$." *Mathlib takes the full subcategory on objects isomorphic to some F c, as the fill does. The nLab defines the essential image as the smallest replete subcategory containing the image, which need not be full. Both are recorded.*
+- input: **confirmed** [m] "def essImage (F : C ⥤ D) : ObjectProperty D := fun Y => ∃ X : C, Nonempty (F.obj X ≅ Y)"
+- output: **confirmed** [m] "abbrev EssImageSubcategory (F : C ⥤ D) := F.essImage.FullSubcategory" Against: [e] "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$." *As the description: Mathlib's is full, the nLab's need not be.*
+- preserved: **confirmed** [m] "def essImage (F : C ⥤ D) : ObjectProperty D := fun Y => ∃ X : C, Nonempty (F.obj X ≅ Y)"
+- broken: **confirmed** [m] "def essImage (F : C ⥤ D) : ObjectProperty D := fun Y => ∃ X : C, Nonempty (F.obj X ≅ Y)" *Objects not isomorphic to any F c are left out.*
+- recalled: name: Standard; description: Full subcategory on objects isomorphic to F c; input: A functor; output: The essential image; preserved: Objects reached up to isomorphism; broken: Objects not reached
+
+  e: excerpts/nlab-essential-image.txt (https://ncatlab.org/nlab/source/essential+image)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.EssentialImage.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/EssentialImage.lean)
+
+### D7-068 Reflective Subcategory Localization (batch 3)
+
+- name: **confirmed** [r] "This reflection is sometimes called a _[[localization]]_" [r] "is term is reserved for the case when the functor $T$ is [[exact functor|left exact]]." *The source adds that the term is sometimes reserved for a left exact reflector, which this entry does not require.*
+- description: **confirmed** [r] "The reflector in that case is the [[sheafification]] functor." [r] "of the [[category of abelian groups]] into the [[category of groups]], whose reflector is the operation of _[[abelianization]]_." [r] "If the reflector $T$ is [[faithful functor|faithful]], the reflection is called a **[[completion]]**."
+- input: **confirmed** [r] "The left adjoint is sometimes called the __reflector__"
+- output: **confirmed** [r] "The components of the [[unit of an adjunction|unit]]"
+- preserved: **confirmed** [r] "A reflective subcategory is always closed under [[limit|limits]] which exist in the ambient category" [r] "2. The [[counit of an adjunction|counit]] $\varepsilon : L R \to 1_B$ of the [[adjunction]] is a [[natural isomorphism]] of functors." *Objects already in R being fixed is the counit's invertibility, also in the source.*
+- broken: **confirmed** [r] "When the unit of the reflector is a [[monomorphism]], a reflective category is often thought of as a [[full subcategory]] of *complete* objects in some sense"
+- recalled: name: Reflective subcategory standard; localization in Lawvere's sense needs a left exact reflector; description: Full subcategory whose inclusion has a left adjoint; input: A category and a reflective subcategory; output: Reflector with unit; preserved: Limits computed in C; objects of R fixed; broken: Structure the unit kills or adds
+
+  r: excerpts/nlab-reflective-subcategory-r.txt (https://ncatlab.org/nlab/source/reflective+subcategory)
+
+### D7-069 Coreflective Subcategory Localization (batch 3)
+
+- name: **confirmed** [c] "A __coreflective subcategory__ is a [[full subcategory]] whose inclusion functor has a [[right adjoint]] $R$"
+- description: **confirmed** [c] "* the inclusion of [[torsion theory|torsion]] [[abelian groups]] into [[Ab]], where the right adjoint takes the [[torsion subgroup]]." *Compactly generated spaces are not checked.*
+- input: **confirmed** [c] "A __coreflective subcategory__ is a [[full subcategory]] whose inclusion functor has a [[right adjoint]] $R$"
+- output: **confirmed** [r] "Of course, there are dual notions of __[[coreflective subcategory]]__, __coreflector__, and __coreflection__."
+- preserved: **confirmed** [r] "A reflective subcategory is always closed under [[limit|limits]] which exist in the ambient category" *Dually, a coreflective subcategory is closed under colimits; the dual is not quoted separately.*
+- broken: **unsupported** *"Structure not seen from S" is a gloss no source states.*
+- recalled: name: Standard; description: Dual: inclusion has a right adjoint; input: A category and a coreflective subcategory; output: Coreflector with counit; preserved: Colimits computed in C; broken: Dual
+
+  c: excerpts/nlab-coreflective-subcategory.txt (https://ncatlab.org/nlab/source/coreflective+subcategory)
+  r: excerpts/nlab-reflective-subcategory-r.txt (https://ncatlab.org/nlab/source/reflective+subcategory)
+
+### D7-070 Factorization System Application (batch 3)
+
+- name: **confirmed** [o] "We say that $(E,M)$ is an **orthogonal factorization system** if $(E,M)$ is a [[weak factorization system]] in which solutions to [[lifting problems]] are unique."
+- description: **confirmed** [w] "A classical example of an orthogonal factorization system is the [[(epi,mono)-factorization system]] on the category [[Set]] or in fact on any [[topos]]." [o] "a. $E$ is precisely the class of morphisms that are left [[orthogonality|orthogonal]] to every morphism in $M$;"
+- input: **confirmed** [o] "We say that $(E,M)$ is an **orthogonal factorization system** if"
+- output: **confirmed** [w] "every morphism of the category factors as the composite of one in $\mathcal{L}$ followed by one in $\mathcal{R}$"
+- preserved: **confirmed** [o] "in which solutions to [[lifting problems]] are unique." *Uniqueness of the factorization up to isomorphism follows from unique lifting; not quoted directly.*
+- broken: **unsupported** *"Nothing; it is a decomposition" is not stated by a source.*
+- recalled: name: Standard; description: Unique (E, M) factorization with unique lifting; input: A category with an orthogonal factorization system; output: The factorization; preserved: Uniqueness up to isomorphism; orthogonality; broken: Nothing
+
+  o: excerpts/nlab-orthogonal-factorization-system.txt (https://ncatlab.org/nlab/source/orthogonal+factorization+system)
+  w: excerpts/nlab-weak-factorization-system.txt (https://ncatlab.org/nlab/source/weak+factorization+system)
+
+### D7-071 Weak Factorization System Application (batch 3)
+
+- name: **confirmed** [w] "A _weak factorization system_ on a [[category]] is a [[pair]] $(\mathcal{L},\mathcal{R})$ of [[classes]] of [[morphisms]]"
+- description: **confirmed** [w] "Non-orthogonal weak factorization systems are the key ingredient in [[model categories]]"
+- input: **confirmed** [w] "A _weak factorization system_ on a [[category]] is a [[pair]] $(\mathcal{L},\mathcal{R})$ of [[classes]] of [[morphisms]]"
+- output: **confirmed** [w] "every morphism of the category factors as the composite of one in $\mathcal{L}$ followed by one in $\mathcal{R}$"
+- preserved: **confirmed** [w] "1. $\mathcal{L}$ is precisely the class of morphisms having the [[left lifting property]] against every morphism in $\mathcal{R}$;"
+- broken: **confirmed** [w] "If the liftings here are unique, then one speaks of an _orthogonal factorization system_." *Without unique lifts the factorization is not unique.*
+- recalled: name: Standard; description: Factorization and lifting without uniqueness; model categories; input: A weak factorization system; output: A factorization; preserved: Lifting properties; broken: Uniqueness
+
+  w: excerpts/nlab-weak-factorization-system.txt (https://ncatlab.org/nlab/source/weak+factorization+system)
+
+### D7-072 Exact Completion (batch 3)
+
+- name: **confirmed** [e] "Their left adjoints are called ([[free construction|free]]) regular or exact completions."
+- description: **imprecise** [e] "we take the objects of $C_{ex}$ to be the [[pseudo-equivalence relations]] in $C$" [e] "so the left adjoint can properly be called a [[completion]], while in the first two cases, the 2-monad is only [[lax-idempotent monad|lax-idempotent]], so the left adjoint should technically be called a [[free completion]]." *From a category with finite limits (ex/lex), the completion adds quotients of pseudo-equivalence relations, not only of equivalence relations; from a regular category (ex/reg) it adds quotients of equivalence relations. The ex/lex case is a free completion, the ex/reg a completion proper.*
+- input: **confirmed** [e] "* from [[exact categories]] to [[lex categories]], and"
+- output: **confirmed** [e] "One can then verify directly that $C_{ex}$ is exact, that this embedding preserves finite limits, and that it is universal with respect to lex functors from $C$ into exact categories."
+- preserved: **confirmed** [e] "One can then verify directly that $C_{ex}$ is exact, that this embedding preserves finite limits" *"Regular epis already present" is not checked.*
+- broken: **confirmed** [e] "We have a [[full and faithful functor]] $C\to C_{ex}$" *Nothing present is lost; what is added are the quotients the description names.*
+- recalled: name: Standard (Carboni and Celia Magno); description: Free exact category on a category with finite limits (ex/lex) or a regular category (ex/reg); input: Finite limits or regular category; output: Exact category with embedding; preserved: Finite limits; broken: Nothing removed
+
+  e: excerpts/nlab-regular-and-exact-completions.txt (https://ncatlab.org/nlab/source/regular+and+exact+completions)
+
+### D7-073 Regular Completion (batch 3)
+
+- name: **confirmed** [e] "The reg/lex completion $C_{reg}= C_{reg/lex}$ of a lex category $C$"
+- description: **confirmed** [e] "we only add those quotients which are necessary in order to be able to construct [[images]] of morphisms in $C$."
+- input: **confirmed** [e] "The reg/lex completion $C_{reg}= C_{reg/lex}$ of a lex category $C$"
+- output: **confirmed** [e] "* from [[regular categories]] to [[lex categories]],"
+- preserved: **confirmed** [e] "the [[kernel pairs]] of morphisms of $C$ (or finite families of such)" *Finite limits: the reg/lex completion is the left adjoint to the forgetful functor from regular to lex categories.*
+- broken: **confirmed** [e] "we only add those quotients which are necessary in order to be able to construct [[images]] of morphisms in $C$."
+- recalled: name: Standard; description: Free regular category on a category with finite limits; input: Finite limits; output: Regular category; preserved: Finite limits; broken: Nothing removed
+
+  e: excerpts/nlab-regular-and-exact-completions.txt (https://ncatlab.org/nlab/source/regular+and+exact+completions)
+
+### D7-074 Free Category Generation (batch 3)
+
+- name: **confirmed** [f] "The _free category_ on a &quot;set of arrows&quot;, hence on a [[directed graph]], is the ([[strict category|strict]]) [[category]] whose:"
+- description: **confirmed** [f] "whence free categories are also called *[[path categories]]*."
+- input: **confirmed** [f] "The _free category_ on a &quot;set of arrows&quot;, hence on a [[directed graph]]"
+- output: **confirmed** [f] "whence free categories are also called *[[path categories]]*."
+- preserved: **confirmed** [f] "and the free category construction is its [[left adjoint]]" *Functors out of the free category correspond to graph maps: the adjunction.*
+- broken: **confirmed** [f] "These morphisms may also be thought of as the &quot;paths&quot; traced out in the directed graph" *Morphisms are paths, with no identifications.*
+- recalled: name: Standard; description: Category of paths of a graph; left adjoint to the forgetful functor to graphs; input: A directed graph; output: Free category; preserved: Graph maps out extend uniquely; broken: No relations
+
+  f: excerpts/nlab-free-category.txt (https://ncatlab.org/nlab/source/free+category)
+
+### D7-075 Ind-Completion (batch 3)
+
+- name: **confirmed** [i] "An **ind-object** of a [[category]] $\mathcal{C}$ is a **formal [[filtered colimit]]** of objects of $\mathcal{C}$."
+- description: **confirmed** [i] "Here &quot;formal&quot; means that the colimit is taken in the [[category of presheaves]] of $\mathcal{C}$"
+- input: **confirmed** [i] "An **ind-object** of a [[category]] $\mathcal{C}$ is a **formal [[filtered colimit]]** of objects of $\mathcal{C}$."
+- output: **confirmed** [i] "1. The embedding $\mathcal{C}\to ind$-$\mathcal{C}$ should be [[full and faithful functor|full and faithful]],"
+- preserved: **confirmed** [i] "1. the objects of $\mathcal{C}$ should be [[compact object|compact]] in $ind$-$\mathcal{C}$." *Compactness is stated. Preservation of finite colimits is not; the source states the embedding preserves finite limits.*
+- broken: **confirmed** [i] "1. The embedding $\mathcal{C}\to ind$-$\mathcal{C}$ should be [[full and faithful functor|full and faithful]]," *Nothing present is lost.*
+- recalled: name: Standard; description: Free completion under filtered colimits; objects of C become compact; input: A category; output: Ind(C) with fully faithful embedding; preserved: Finite colimits of C; compactness; broken: Nothing removed
+
+  i: excerpts/nlab-ind-object.txt (https://ncatlab.org/nlab/source/ind-object)
 

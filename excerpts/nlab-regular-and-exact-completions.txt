@@ -1,0 +1,26 @@
+Excerpts, verbatim, from: nLab, regular and exact completions (page source)
+URL: https://ncatlab.org/nlab/source/regular+and+exact+completions
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bc703e07c8bb1403c4922de5f4d1fb0b7652b64afa3e6a6f976ec9a2beebd99d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Their left adjoints are called ([[free construction|free]]) regular or exact completions.
+
+we take the objects of $C_{ex}$ to be the [[pseudo-equivalence relations]] in $C$
+
+so the left adjoint can properly be called a [[completion]], while in the first two cases, the 2-monad is only [[lax-idempotent monad|lax-idempotent]], so the left adjoint should technically be called a [[free completion]].
+
+* from [[exact categories]] to [[lex categories]], and
+
+One can then verify directly that $C_{ex}$ is exact, that this embedding preserves finite limits, and that it is universal with respect to lex functors from $C$ into exact categories.
+
+One can then verify directly that $C_{ex}$ is exact, that this embedding preserves finite limits
+
+We have a [[full and faithful functor]] $C\to C_{ex}$
+
+The reg/lex completion $C_{reg}= C_{reg/lex}$ of a lex category $C$
+
+we only add those quotients which are necessary in order to be able to construct [[images]] of morphisms in $C$.
+
+* from [[regular categories]] to [[lex categories]],
+
+the [[kernel pairs]] of morphisms of $C$ (or finite families of such)

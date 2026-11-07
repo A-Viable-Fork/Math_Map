@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: Bryce Clarke, Derek Elkins, Jeremy Gibbons, Fosco Loregian, Bartosz Milewski, Emily Pillmore, Mario Román, Profunctor optics, a categorical update, arXiv:2001.07488 (HTML full text)
+URL: https://arxiv.org/html/2001.07488
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 713b15c1ccf628a902464f8d91f02d1e82e77f65c9692365697478da80d415ae
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Our work generalizes a
+classic result by Pastro and Street on Tambara theory
+
+ describes how the theory of Tambara modules can be
+applied to obtain a profunctor representation for optics.
+
+ has Tambara module structure for the monoidal
+actions defining an optic

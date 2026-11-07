@@ -7273,6 +7273,1230 @@
    "sources": {
     "g": "https://ncatlab.org/nlab/source/core+groupoid"
    }
+  },
+  {
+   "id": "D7-051",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/nlab-monoidal-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A **monoidal category** is a [[category]] equipped with some notion of &#39;tensor product&#39; of its [[objects]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "For any monoidal category $M$, the operation of tensor product is actually a [[functor]]:",
+     "note": "Associativity and unit up to coherent isomorphism: the source's associator.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "out of the [[product category]] of $\\mathcal{C}$ with itself, called the **[[tensor product]]**,"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A **monoidal category** is a [[category]] equipped with some notion of &#39;tensor product&#39; of its [[objects]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "For any monoidal category $M$, the operation of tensor product is actually a [[functor]]:"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "\\label{AssociatorInAMonoidalCategory}",
+     "note": "The associator is part of the structure; its coherence is the pentagon, not quoted here."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source states that tensor factors are not recoverable."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://ncatlab.org/nlab/source/monoidal+category"
+   }
+  },
+  {
+   "id": "D7-052",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/nlab-braided-monoidal-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "called the **[[braiding]]**, such that the following two kinds of [[commuting diagram|diagrams commute]] for all [[objects]] involved"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "(called the **hexagon identities** encoding the compatibility of the braiding with the [[associator]] for the tensor product):"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Intuitively speaking, a braided monoidal category is a category with a tensor product and an isomorphism called the &#39;braiding&#39;"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "an isomorphism called the &#39;braiding&#39; which lets us &#39;switch&#39; two objects in a tensor product like $x \\otimes y$."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "(called the **hexagon identities** encoding the compatibility of the braiding with the [[associator]] for the tensor product):",
+     "note": "\"Everything (it is an isomorphism)\" restates invertibility."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "then the braided monoidal category is called a _[[symmetric monoidal category]]_.",
+     "note": "Symmetry is the extra condition that the braiding squares to the identity."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://ncatlab.org/nlab/source/braided+monoidal+category"
+   }
+  },
+  {
+   "id": "D7-053",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-symmetric-monoidal-natural-transformation.txt",
+    "m": "excerpts/nlab-monoidal-natural-transformation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _symmetric monoidal natural transformation_ is a [[natural transformation]] between [[symmetric monoidal functors]] that respects the symmetric monoidal structure."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "between the underlying functors that is compatible with the tensor product and the unit"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A _symmetric monoidal natural transformation_ is a [[natural transformation]] between [[symmetric monoidal functors]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In fact, a symmetric monoidal natural transformation is the same as a [[monoidal natural transformation]] (as long as it goes between symmetric monoidal functors)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "between the underlying functors that is compatible with the tensor product and the unit",
+     "note": "Symmetry imposes no further condition on the transformation."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In fact, a symmetric monoidal natural transformation is the same as a [[monoidal natural transformation]] (as long as it goes between symmetric monoidal functors)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/symmetric+monoidal+natural+transformation",
+    "m": "https://ncatlab.org/nlab/source/monoidal+natural+transformation"
+   }
+  },
+  {
+   "id": "D7-054",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-tensor-hom-adjunction.txt",
+    "p": "excerpts/wikipedia-tensor-product-of-modules.txt",
+    "h": "excerpts/wikipedia-hom-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "the '''tensor-hom adjunction''' is the statement that the [[Tensor product of modules|tensor product]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The order of terms in the phrase \"tensor-hom adjunction\" reflects their relationship: tensor is the left adjoint, while hom is the right adjoint.",
+     "note": "Closed monoidal categories are not checked; modules are."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Fix an <math>(R,S)</math>-bimodule <math>X</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": ":<math>\\operatorname{Hom}(Y \\otimes X, Z) \\cong \\operatorname{Hom}(Y,\\operatorname{Hom}(X,Z)).</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "are always [[right exact functor]]s, but not necessarily left exact",
+     "more": [
+      {
+       "src": "h",
+       "quote": "is a covariant [[exact functor|left-exact]] functor"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "are always [[right exact functor]]s, but not necessarily left exact",
+     "note": "Full exactness fails; that Tor and Ext measure the failure is not quoted here."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345274466",
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1362505653",
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374264691"
+   }
+  },
+  {
+   "id": "D7-055",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/nlab-whiskering.txt",
+    "n": "excerpts/wikipedia-natural-transformation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Whiskering is an [[external binary operation]] between a functor and a natural transformation."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Whiskering is an [[external binary operation]] between a functor and a natural transformation."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_.",
+     "note": "The result is again a 2-morphism, a natural transformation."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing\" is not stated by a source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://ncatlab.org/nlab/source/whiskering",
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552"
+   }
+  },
+  {
+   "id": "D7-056",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/wikipedia-natural-transformation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "=== Vertical composition ==="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": ":<math>(\\epsilon \\circ \\eta)_X = \\epsilon_X \\circ \\eta_X</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "are natural transformations between functors <math>F, G, H: C \\to D</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "then we can compose them to get a natural transformation"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "This vertical composition of natural transformations is [[associative]] and has an identity"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states that the middle functor is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552"
+   }
+  },
+  {
+   "id": "D7-057",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-godement-product.txt",
+    "h": "excerpts/nlab-horizontal-composition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* In [[Cat]], horizontal composition is the [[Godement product]] of [[natural transformation]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is their [[horizontal composition]] as 2-cells in the [[2-category]] [[Cat]] of [[categories]], functors and natural transformations:"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The __Godement product__ of two [[natural transformations]] between appropriate [[functors]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is their [[horizontal composition]] as 2-cells in the [[2-category]] [[Cat]] of [[categories]], functors and natural transformations:"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "are defined by any of the two equivale",
+     "note": "The two routes around the naturality square agree, as the fill says."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual components\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/Godement+product",
+    "h": "https://ncatlab.org/nlab/source/horizontal+composition"
+   }
+  },
+  {
+   "id": "D7-058",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-godement-product.txt",
+    "n": "excerpts/wikipedia-natural-transformation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The [[interchange law]] in (general) $2$-categories"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_.",
+     "note": "The displayed law is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The [[interchange law]] in (general) $2$-categories"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "the interchange law gives immediately the compact formulas of horizontal composition"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_.",
+     "note": "An equality loses nothing."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/Godement+product",
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552"
+   }
+  },
+  {
+   "id": "D7-059",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-mac-lanes-coherence-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The theorem can be stated as a [[strictification]] result, namely that every monoidal category is monoidally equiva",
+     "note": "The attribution to Mac Lane is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "One important consequence is that every monoidal category is equivalent, in a sense appropriate to monoidal structure, to a strict monoidal category in which the associativity and unital laws hold on the nose."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "states that in any [[monoidal category]], every well-formed diagram built from the associativity and unit isomorphisms commutes."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "to a strict monoidal category in which the associativity and unital laws hold on the nose."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "states that in any [[monoidal category]], every well-formed diagram built from the associativity and unit isomorphisms commutes."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "This “strictification” property explains why monoidal categories can often be treated as though they were strictly associative without loss of generality.",
+     "note": "Nothing structural is lost; \"objects-level identity\" is the fill's gloss for the change of model."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376831342"
+   }
+  },
+  {
+   "id": "D7-060",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-string-diagram.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]].",
+     "note": "The isotopy invariance and its attribution to Joyal and Street are cited in the source's references only; the theorem is not quoted.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "* {#JoyalStreet91} [[André Joyal]], [[Ross Street]]: *The geometry of tensor calculus I_, Advances in Math. 88 (1991) 55-112"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "_String diagrams_ constitute a graphical calculus for expressing operations in [[monoidal categories]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Invariance under isotopy is not stated in the fetched text; only Joyal and Street's paper is cited."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states that bracketing and sequencing are forgotten."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/string+diagram"
+   }
+  },
+  {
+   "id": "D7-061",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-eckmann-hilton-argument.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''Eckmann–Hilton argument''' (or '''Eckmann–Hilton principle''' or '''Eckmann–Hilton theorem''') is an [[argument]] about two [[unital magma]] structures"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "e",
+     "quote": "is an [[argument]] about two [[unital magma]] structures on a [[Set (mathematics)|set]] where one is a [[homomorphism]] for the other.",
+     "note": "The hypothesis is interchange (each operation is a homomorphism for the other), not that the operations distribute over each other; the input field states it correctly. Higher homotopy groups as the application are right.",
+     "more": [
+      {
+       "src": "e",
+       "quote": "The above proof also has a \"two-dimensional\" presentation that better illustrates the application to higher [[homotopy group]]s."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is an [[argument]] about two [[unital magma]] structures on a [[Set (mathematics)|set]] where one is a [[homomorphism]] for the other."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Given this, the structures are the same, and the resulting [[magma (algebra) |magma]] is a [[commutative monoid]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Then <math>\\circ</math> and <math>\\otimes</math> are the same and in fact commutative and associative."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "This establishes that the two operations coincide and are commutative."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358258783"
+   }
+  },
+  {
+   "id": "D7-062",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-pointwise.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "are the ''pointwise operations'', that is, operations defined on functions by applying the operations to function values separately for each point in the [[domain of a function|domain]] of definition.",
+     "note": "\"Pointwise Extension\" is not a standard name; the source names pointwise operations. The fill's second sentence, on pointwise Kan extensions, is a different notion."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The pointwise addition <math>f+g</math> of two functions <math>f</math> and <math>g</math> with the same domain and [[codomain]] is defined by:"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A binary operation {{math|''o'': ''Y'' × ''Y'' → ''Y''}} on a set {{mvar|Y}} can be lifted pointwise"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "the set of all functions <math>X</math> to the [[carrier set]] of <math>A</math> can be turned into an algebraic structure of the same type in an analogous way."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Pointwise operations inherit such properties as [[associativity]], [[commutativity]] and [[distributivity]] from corresponding operations on the [[codomain]].",
+     "note": "That exactly equational laws pass is not stated; the source lists examples."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The source does not say which properties fail to pass (total order, field axioms)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1298665805"
+   }
+  },
+  {
+   "id": "D7-063",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-end.txt",
+    "w": "excerpts/wikipedia-end-category-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "An _end_ is a special kind of [[limit]] over a [[functor]] of the form $F : C^{op} \\times C \\to D$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "is a universal [[dinatural transformation]] from an object <math>e</math> of <math>\\mathbf X</math> to <math>S</math>.",
+     "more": [
+      {
+       "src": "e",
+       "quote": "A classical example of an _end_ is the $V$-object of [[natural transformations]] between $V$-[[enriched functors]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "An _end_ is a special kind of [[limit]] over a [[functor]] of the form $F : C^{op} \\times C \\to D$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then the _end_ of the functor picks out the universal [[subobject]] on which the left and right actions coincide."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "is a universal [[dinatural transformation]] from an object <math>e</math> of <math>\\mathbf X</math> to <math>S</math>."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "then the _end_ of the functor picks out the universal [[subobject]] on which the left and right actions coincide.",
+     "note": "Only the diagonal values enter."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/end",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378029815"
+   }
+  },
+  {
+   "id": "D7-064",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-end.txt",
+    "w": "excerpts/wikipedia-end-category-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The definition of the '''coend''' of a functor"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Dually, the _coend_ of $F$ is the universal quotient of $\\coprod_{c \\in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The definition of the '''coend''' of a functor <math>S\\colon \\mathbf{C}^{\\mathrm{op}}\\times\\mathbf{C}\\to\\mathbf{X}</math> is the dual of the definition of an end."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Dually, the _coend_ of $F$ is the universal quotient of $\\coprod_{c \\in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Perhaps the most common way in which ends and coends arise is through homs and tensor products of (generalized) modules"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Dually, the _coend_ of $F$ is the universal quotient of $\\coprod_{c \\in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/end",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378029815"
+   }
+  },
+  {
+   "id": "D7-065",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-profunctor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Specifically, for profunctors $F : C $&amp;#8696;$ D$ and $G : D $&amp;#8696;$ E$, their composite"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Specifically, for profunctors $F : C $&amp;#8696;$ D$ and $G : D $&amp;#8696;$ E$, their composite"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "This yields a [[bicategory]] in which"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/profunctor"
+   }
+  },
+  {
+   "id": "D7-066",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "x": "excerpts/arxiv-2001.07488.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "Our work generalizes a\nclassic result by Pastro and Street on Tambara theory",
+     "note": "Tambara modules as used for optics go back to Pastro and Street, per the source."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": " describes how the theory of Tambara modules can be\napplied to obtain a profunctor representation for optics.",
+     "note": "The strength's formula is not quoted (it is typeset as mathematics)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": " has Tambara module structure for the monoidal\nactions defining an optic"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": " has Tambara module structure for the monoidal\nactions defining an optic"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The coherence of the action is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states what is excluded."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "x": "https://arxiv.org/html/2001.07488"
+   }
+  },
+  {
+   "id": "D7-067",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-essential-image.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.EssentialImage.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The notion of _essential image_ is supposed to be an adaptation of the notion of [[image]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev EssImageSubcategory (F : C ⥤ D) := F.essImage.FullSubcategory",
+     "note": "Mathlib takes the full subcategory on objects isomorphic to some F c, as the fill does. The nLab defines the essential image as the smallest replete subcategory containing the image, which need not be full. Both are recorded.",
+     "against": [
+      {
+       "src": "e",
+       "quote": "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def essImage (F : C ⥤ D) : ObjectProperty D := fun Y => ∃ X : C, Nonempty (F.obj X ≅ Y)"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev EssImageSubcategory (F : C ⥤ D) := F.essImage.FullSubcategory",
+     "note": "As the description: Mathlib's is full, the nLab's need not be.",
+     "against": [
+      {
+       "src": "e",
+       "quote": "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$."
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def essImage (F : C ⥤ D) : ObjectProperty D := fun Y => ∃ X : C, Nonempty (F.obj X ≅ Y)"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def essImage (F : C ⥤ D) : ObjectProperty D := fun Y => ∃ X : C, Nonempty (F.obj X ≅ Y)",
+     "note": "Objects not isomorphic to any F c are left out."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/essential+image",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/EssentialImage.lean"
+   }
+  },
+  {
+   "id": "D7-068",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/nlab-reflective-subcategory-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "This reflection is sometimes called a _[[localization]]_",
+     "note": "The source adds that the term is sometimes reserved for a left exact reflector, which this entry does not require.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "is term is reserved for the case when the functor $T$ is [[exact functor|left exact]]."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The reflector in that case is the [[sheafification]] functor.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "of the [[category of abelian groups]] into the [[category of groups]], whose reflector is the operation of _[[abelianization]]_."
+      },
+      {
+       "src": "r",
+       "quote": "If the reflector $T$ is [[faithful functor|faithful]], the reflection is called a **[[completion]]**."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The left adjoint is sometimes called the __reflector__"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The components of the [[unit of an adjunction|unit]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "A reflective subcategory is always closed under [[limit|limits]] which exist in the ambient category",
+     "note": "Objects already in R being fixed is the counit's invertibility, also in the source.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "2. The [[counit of an adjunction|counit]] $\\varepsilon : L R \\to 1_B$ of the [[adjunction]] is a [[natural isomorphism]] of functors."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "When the unit of the reflector is a [[monomorphism]], a reflective category is often thought of as a [[full subcategory]] of *complete* objects in some sense"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://ncatlab.org/nlab/source/reflective+subcategory"
+   }
+  },
+  {
+   "id": "D7-069",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-coreflective-subcategory.txt",
+    "r": "excerpts/nlab-reflective-subcategory-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A __coreflective subcategory__ is a [[full subcategory]] whose inclusion functor has a [[right adjoint]] $R$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* the inclusion of [[torsion theory|torsion]] [[abelian groups]] into [[Ab]], where the right adjoint takes the [[torsion subgroup]].",
+     "note": "Compactly generated spaces are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A __coreflective subcategory__ is a [[full subcategory]] whose inclusion functor has a [[right adjoint]] $R$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Of course, there are dual notions of __[[coreflective subcategory]]__, __coreflector__, and __coreflection__."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "A reflective subcategory is always closed under [[limit|limits]] which exist in the ambient category",
+     "note": "Dually, a coreflective subcategory is closed under colimits; the dual is not quoted separately."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Structure not seen from S\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/coreflective+subcategory",
+    "r": "https://ncatlab.org/nlab/source/reflective+subcategory"
+   }
+  },
+  {
+   "id": "D7-070",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/nlab-orthogonal-factorization-system.txt",
+    "w": "excerpts/nlab-weak-factorization-system.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "We say that $(E,M)$ is an **orthogonal factorization system** if $(E,M)$ is a [[weak factorization system]] in which solutions to [[lifting problems]] are unique."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A classical example of an orthogonal factorization system is the [[(epi,mono)-factorization system]] on the category [[Set]] or in fact on any [[topos]].",
+     "more": [
+      {
+       "src": "o",
+       "quote": "a. $E$ is precisely the class of morphisms that are left [[orthogonality|orthogonal]] to every morphism in $M$;"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "We say that $(E,M)$ is an **orthogonal factorization system** if"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "every morphism of the category factors as the composite of one in $\\mathcal{L}$ followed by one in $\\mathcal{R}$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "in which solutions to [[lifting problems]] are unique.",
+     "note": "Uniqueness of the factorization up to isomorphism follows from unique lifting; not quoted directly."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing; it is a decomposition\" is not stated by a source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://ncatlab.org/nlab/source/orthogonal+factorization+system",
+    "w": "https://ncatlab.org/nlab/source/weak+factorization+system"
+   }
+  },
+  {
+   "id": "D7-071",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/nlab-weak-factorization-system.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A _weak factorization system_ on a [[category]] is a [[pair]] $(\\mathcal{L},\\mathcal{R})$ of [[classes]] of [[morphisms]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Non-orthogonal weak factorization systems are the key ingredient in [[model categories]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A _weak factorization system_ on a [[category]] is a [[pair]] $(\\mathcal{L},\\mathcal{R})$ of [[classes]] of [[morphisms]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "every morphism of the category factors as the composite of one in $\\mathcal{L}$ followed by one in $\\mathcal{R}$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "1. $\\mathcal{L}$ is precisely the class of morphisms having the [[left lifting property]] against every morphism in $\\mathcal{R}$;"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "If the liftings here are unique, then one speaks of an _orthogonal factorization system_.",
+     "note": "Without unique lifts the factorization is not unique."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://ncatlab.org/nlab/source/weak+factorization+system"
+   }
+  },
+  {
+   "id": "D7-072",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-regular-and-exact-completions.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Their left adjoints are called ([[free construction|free]]) regular or exact completions."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "e",
+     "quote": "we take the objects of $C_{ex}$ to be the [[pseudo-equivalence relations]] in $C$",
+     "note": "From a category with finite limits (ex/lex), the completion adds quotients of pseudo-equivalence relations, not only of equivalence relations; from a regular category (ex/reg) it adds quotients of equivalence relations. The ex/lex case is a free completion, the ex/reg a completion proper.",
+     "more": [
+      {
+       "src": "e",
+       "quote": "so the left adjoint can properly be called a [[completion]], while in the first two cases, the 2-monad is only [[lax-idempotent monad|lax-idempotent]], so the left adjoint should technically be called a [[free completion]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "* from [[exact categories]] to [[lex categories]], and"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "One can then verify directly that $C_{ex}$ is exact, that this embedding preserves finite limits, and that it is universal with respect to lex functors from $C$ into exact categories."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "One can then verify directly that $C_{ex}$ is exact, that this embedding preserves finite limits",
+     "note": "\"Regular epis already present\" is not checked."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "We have a [[full and faithful functor]] $C\\to C_{ex}$",
+     "note": "Nothing present is lost; what is added are the quotients the description names."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/regular+and+exact+completions"
+   }
+  },
+  {
+   "id": "D7-073",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-regular-and-exact-completions.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The reg/lex completion $C_{reg}= C_{reg/lex}$ of a lex category $C$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "we only add those quotients which are necessary in order to be able to construct [[images]] of morphisms in $C$."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The reg/lex completion $C_{reg}= C_{reg/lex}$ of a lex category $C$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "* from [[regular categories]] to [[lex categories]],"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the [[kernel pairs]] of morphisms of $C$ (or finite families of such)",
+     "note": "Finite limits: the reg/lex completion is the left adjoint to the forgetful functor from regular to lex categories."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "we only add those quotients which are necessary in order to be able to construct [[images]] of morphisms in $C$."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/regular+and+exact+completions"
+   }
+  },
+  {
+   "id": "D7-074",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-free-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The _free category_ on a &quot;set of arrows&quot;, hence on a [[directed graph]], is the ([[strict category|strict]]) [[category]] whose:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "whence free categories are also called *[[path categories]]*."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The _free category_ on a &quot;set of arrows&quot;, hence on a [[directed graph]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "whence free categories are also called *[[path categories]]*."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "and the free category construction is its [[left adjoint]]",
+     "note": "Functors out of the free category correspond to graph maps: the adjunction."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "These morphisms may also be thought of as the &quot;paths&quot; traced out in the directed graph",
+     "note": "Morphisms are paths, with no identifications."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/free+category"
+   }
+  },
+  {
+   "id": "D7-075",
+   "batch": 3,
+   "why": "Fill review, batch 3: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/nlab-ind-object.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An **ind-object** of a [[category]] $\\mathcal{C}$ is a **formal [[filtered colimit]]** of objects of $\\mathcal{C}$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Here &quot;formal&quot; means that the colimit is taken in the [[category of presheaves]] of $\\mathcal{C}$"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An **ind-object** of a [[category]] $\\mathcal{C}$ is a **formal [[filtered colimit]]** of objects of $\\mathcal{C}$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "1. The embedding $\\mathcal{C}\\to ind$-$\\mathcal{C}$ should be [[full and faithful functor|full and faithful]],"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "1. the objects of $\\mathcal{C}$ should be [[compact object|compact]] in $ind$-$\\mathcal{C}$.",
+     "note": "Compactness is stated. Preservation of finite colimits is not; the source states the embedding preserves finite limits."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "1. The embedding $\\mathcal{C}\\to ind$-$\\mathcal{C}$ should be [[full and faithful functor|full and faithful]],",
+     "note": "Nothing present is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://ncatlab.org/nlab/source/ind-object"
+   }
   }
  ]
 }
