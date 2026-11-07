@@ -19848,6 +19848,1293 @@
    "sources": {
     "c": "https://ncatlab.org/nlab/source/Cartesian+fibration"
    }
+  },
+  {
+   "id": "D7-327",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/nlab-inner-fibration.txt",
+    "w": "excerpts/wikipedia-fibration-of-simplicial-sets.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "A [[morphism]] of [[simplicial set]]s $F : X \\to Y$ is an **inner fibration** or **[[inner Kan fibration]]** if its has the [[right lifting property]] with respect to all inner [[horn]] inclusions"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "an _inner fibration_ is a morphism of [[simplicial set]]s $C \\to D$ such that each fiber is a quasi-category",
+     "more": [
+      {
+       "src": "i",
+       "quote": "if its has the [[right lifting property]] with respect to all inner [[horn]] inclusions"
+      },
+      {
+       "src": "w",
+       "quote": "The maps having the right lifting property with respect to inner anodyne extensions or equivalently with respect to the horn inclusions <math>\\Lambda^n_k \\to \\Delta^n, \\, n \\ge 1, 0 < k < n</math> are called '''inner fibrations'''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "A [[morphism]] of [[simplicial set]]s $F : X \\to Y$ is an **inner fibration**"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is an **inner fibration** or **[[inner Kan fibration]]** if",
+     "note": "A property of the map: the output is a verdict."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "such that each fiber is a quasi-category",
+     "note": "Fibers are quasi-categories; \"fiberwise categorical structure\" is the fill's gloss."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://ncatlab.org/nlab/source/inner+fibration",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358208168"
+   }
+  },
+  {
+   "id": "D7-328",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-fibration-of-simplicial-sets.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Thus, a map is a left (resp. right) fibration if and only if it has the [[right lifting property]] with respect to left (resp. right) anodyne extensions."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "a map is a left (resp. right) fibration if and only if it has the [[right lifting property]] with respect to left (resp. right) anodyne extensions.",
+     "note": "Kan-complex fibers for a left fibration are not quoted; covariance is read from the universal left fibration.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "A '''left anodyne extension''' is a map in the saturation of the set of the horn inclusions <math>\\Lambda^n_k \\to \\Delta^n</math> for <math>n \\ge 1, 0 \\le k < n</math>"
+      },
+      {
+       "src": "w",
+       "quote": "the set of the isomorphism classes of left fibrations over ''X''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "in the category of [[simplicial set]]s, where the saturation of a class is the smallest class"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "a map is a left (resp. right) fibration if and only if it has the [[right lifting property]]",
+     "note": "A property: the output is a verdict."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the set of the isomorphism classes of left fibrations over ''X''",
+     "note": "Left fibrations over X correspond to maps from X to Kan, the infinity-category of Kan complexes.",
+     "more": [
+      {
+       "src": "w",
+       "quote": ":<math>[X, \\textbf{Kan}] \\, \\overset{\\sim}\\to </math>"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358208168"
+   }
+  },
+  {
+   "id": "D7-329",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-fibration-of-simplicial-sets.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A right fibration is a [[cartesian fibration]] such that each fiber is a [[Kan complex]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A '''right anodyne extension''' is defined by replacing the condition <math>0 \\le k < n</math> with <math>0 < k \\le n</math>.",
+     "note": "\"Presheaves of spaces\" is read from the cartesian fibration with Kan-complex fibers; the phrase is not quoted.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "Thus, a map is a left (resp. right) fibration if and only if it has the [[right lifting property]] with respect to left (resp. right) anodyne extensions."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "in the category of [[simplicial set]]s, where the saturation of a class is the smallest class"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A right fibration is a [[cartesian fibration]]",
+     "note": "A property: the output is a verdict."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A right fibration is a [[cartesian fibration]] such that each fiber is a [[Kan complex]].",
+     "note": "Contravariance is read from \"cartesian\".",
+     "more": [
+      {
+       "src": "w",
+       "quote": "a [[Fibered category|category fibered in groupoids over another category]] is a special case of a right fibration"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358208168"
+   }
+  },
+  {
+   "id": "D7-330",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-weak-equivalence.txt",
+    "h": "excerpts/nlab-homotopy-category-of-a-model-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the corresponding [[homotopy category]], which is the universal solution to turning all weak equivalences into [[isomorphisms]];",
+     "note": "The landed name is a gloss for localization at the weak equivalences."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the corresponding [[homotopy category]], which is the universal solution to turning all weak equivalences into [[isomorphisms]];"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "For $\\mathcal{C}$ a [[category with weak equivalences]], its _[[homotopy category]]_ (or: _[[localization]]_ at the weak equivalences)",
+     "more": [
+      {
+       "src": "h",
+       "quote": "Let $\\mathcal{C}$ be a [[model category]]. Write $Ho(\\mathcal{C})$ for the [[category]] whose"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Write $Ho(\\mathcal{C})$ for the [[category]] whose"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/weak+equivalence",
+    "h": "https://ncatlab.org/nlab/source/homotopy+category+of+a+model+category"
+   }
+  },
+  {
+   "id": "D7-331",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-bousfield-localization.txt",
+    "s": "excerpts/nlab-bousfield-localization-of-spectra.txt",
+    "n": "excerpts/nlab-bousfield-localization.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Bousfield localization is named after [[Aldridge Bousfield]], who first introduced this technique in the context of localization of [[topological space|topological spaces]] and spectra."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "replaces the model structure with another model structure with the same cofibrations but with more weak equivalences.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "Bousfield localization allows us to *make more morphisms count as weak equivalences*."
+      },
+      {
+       "src": "s",
+       "quote": "at the collection of [[morphisms]] which become [[equivalences]] under [[smash product of spectra|smash product]] with a given"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Given a [[class (mathematics)|class]] ''C'' of morphisms in a [[model category]] ''M''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the left Bousfield localization is a new model structure on the same category as before."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "* the original cofibrations of ''M''",
+     "note": "Local objects are where the new equivalences are tested; that they are \"preserved\" is the fill's gloss.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "is required to be a weak equivalence (of [[simplicial set]]s) for any ''C''-local object ''W''."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "for $Y$ any $E$-acyclic spectrum in that $Y \\wedge E \\simeq 0$, every morphism $Y \\longrightarrow L_E X$ is null-homotopic",
+     "note": "E-acyclic information is what the localization kills."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380356533",
+    "s": "https://ncatlab.org/nlab/source/Bousfield+localization+of+spectra",
+    "n": "https://ncatlab.org/nlab/source/Bousfield+localization"
+   }
+  },
+  {
+   "id": "D7-332",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-path-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "giving the **[[free category]]** or **path category** of a quiver"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "giving the **[[free category]]** or **path category** of a quiver",
+     "note": "Van den Berg and Moerdijk's path categories are not in the fetched source.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "this is the [[Moore path category]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "This forgetful functor has a [[left adjoint]], giving the **[[free category]]** or **path category** of a quiver",
+     "more": [
+      {
+       "src": "p",
+       "quote": "Given a [[topological space]] $X$ (or some other kind of [[space]] with a notion of maps from [[intervals]] into it)"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "there are various ways to obtain a [[small category|small]] [[strict category|strict]] [[category]] whose objects are the points of $X$ and whose morphisms are [[paths]] in $X$."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The source divides out nothing for Moore paths and thin homotopy for the path groupoid; \"up to reparametrization\" is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/path+category"
+   }
+  },
+  {
+   "id": "D7-333",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-suspension.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''suspension''' of a [[topological space]] ''X'' is intuitively obtained by stretching ''X'' into a [[cylinder (geometry)|cylinder]] and then collapsing both end faces to points."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One can view <math>SX</math> as two [[cone (topology)|cones]] on ''X,'' [[adjunction space|glued together]] at their bases.",
+     "note": "The homology shift is not quoted.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "An important property of this functor is that it is [[left adjoint]] to the functor <math>\\Omega</math> taking a pointed space <math>X</math> to its [[loop space]] <math>\\Omega X</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "If ''X'' is a [[pointed space]] with basepoint ''x''<sub>0</sub>, there is a variation of the suspension",
+     "note": "Spectra are not in the fetched source."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The suspension of ''X'' is denoted by '''''SX'''''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The reduced suspension can be used to construct a [[Group homomorphism|homomorphism]] of [[homotopy group]]s, to which the [[Freudenthal suspension theorem]] applies.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "In [[homotopy theory]], the phenomena which are preserved under suspension, in a suitable sense, make up [[stable homotopy theory]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Implied by the stable-homotopy window, not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377890955"
+   }
+  },
+  {
+   "id": "D7-334",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-loop-space.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''loop space''' Ω''X'' of a [[Pointed space|pointed]] [[topological space]] ''X'' is the space of (based) loops in ''X''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the loop space construction is right adjoint to the [[reduced suspension]]",
+     "more": [
+      {
+       "src": "l",
+       "quote": "With this operation, the loop space is an [[A-infinity operad|''A''<sub>∞</sub>-space]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "of a [[Pointed space|pointed]] [[topological space]] ''X''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''loop space''' Ω''X''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": ":<math>\\pi_k(X) \\approxeq \\pi_{k-1}(\\Omega X)</math>."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382205623"
+   }
+  },
+  {
+   "id": "D7-335",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-homotopy-pullback.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A **homotopy pullback** is a special kind of [[homotopy limit]]: the appropriate notion of [[pullback]] in the context of [[homotopy theory]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "the appropriate notion of [[pullback]] in the context of [[homotopy theory]].",
+     "more": [
+      {
+       "src": "p",
+       "quote": "* one of the two morphisms is a [[fibration]] and all three objects are [[fibrant objects]];"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "the homotopy pullback of a [[co-span|cospan]] $X \\to Z \\leftarrow Y$ in a [[category with weak equivalences]] $C$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "is its image under the right [[derived functor]] of the [[base change]] functor"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Homotopy invariance and long exact sequences are not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "We discuss various concrete constructions by ordinary [[pullbacks]] and ordinary [[limits]] such that under some sufficient conditions these compute homotopy pullbacks, up to weak equivalence.",
+     "note": "The strict pullback computes it only under conditions."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/homotopy+pullback"
+   }
+  },
+  {
+   "id": "D7-336",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-homotopy-colimit.txt",
+    "n": "excerpts/nlab-homotopy-pushout.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* the generalization of the notion of *[[pushout]]* to [[homotopy theory]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "two copies of a [[Cylinder (geometry)|cylinder]] on ''B'' are glued together and their ends are glued to ''A'' and ''C''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The ''homotopy pushout'' of two maps <math>A \\leftarrow B \\rightarrow C</math> of topological spaces is defined as"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The ''homotopy pushout'' of two maps <math>A \\leftarrow B \\rightarrow C</math> of topological spaces is defined as"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "replacing ''A'', ''B'' and / or ''C'' by a homotopic space, the homotopy pushout ''will'' also be homotopic.",
+     "note": "Mayer-Vietoris is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "if one (or more) of the spaces used to form the pushout is replaced by a weakly equivalent space, the pushout is not guaranteed to stay weakly equivalent."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1347520938",
+    "n": "https://ncatlab.org/nlab/source/homotopy+pushout"
+   }
+  },
+  {
+   "id": "D7-337",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-puppe-sequence.txt",
+    "f": "excerpts/nlab-fiber-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "It comes in two forms: a [[long exact sequence]], built from the [[homotopy fiber|mapping fibre]] (a [[fibration]])"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": ":<math>\\cdots \\to \\Omega^2(Mf) \\to \\Omega^2 X \\to \\Omega^2 Y \\to \\Omega(Mf) \\to \\Omega X \\to \\Omega Y \\to Mf\\to X \\to Y</math>",
+     "more": [
+      {
+       "src": "f",
+       "quote": "the homotopy kernel of a homotopy kernel is typically far from trivial, but is a [[loop space object]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Let <math>f\\colon (X,x_0)\\to(Y,y_0)</math> be a [[continuous map]] between [[pointed space]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The construction can then be iterated to obtain the exact Puppe sequence"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "From this, the Puppe sequence gives the '''homotopy sequence of a fibration''':"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1260952312",
+    "f": "https://ncatlab.org/nlab/source/fiber+sequence"
+   }
+  },
+  {
+   "id": "D7-338",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-puppe-sequence.txt",
+    "c": "excerpts/nlab-cofiber-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "and a long coexact sequence, built from the [[mapping cone (topology)|mapping cone]] (which is a [[cofibration]])",
+     "more": [
+      {
+       "src": "c",
+       "quote": "A cofiber sequence is the dual notion to a [[fiber sequence]]."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": ":<math>A\\to B\\to C(f) \\to \\Sigma A \\to \\Sigma B \\to \\Sigma C(f) \\to \\Sigma^2 A \\to \\Sigma^2 B \\to \\Sigma^2 C(f) \\to \\Sigma^3 A \\to \\Sigma^3 B \\to \\Sigma^3 C(f) \\to \\cdots </math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Let <math>f\\colon A \\to B</math> be a [[continuous map]] between [[CW complex]]es",
+     "note": "The source's map is between CW complexes; the pointed case is its reduced variant.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "one can also consider unreduced and reduced Puppe sequences (at least if dealing with [[pointed space]]s, when it's possible to form reduced suspension)."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Iterating this construction, we obtain the Puppe sequence associated to <math>A\\to B</math>:"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "after acting with the functor in question on the Puppe sequence associated to <math>A\\to B</math>, one obtains a long [[exact sequence]].",
+     "note": "For a half-exact functor; cohomology is the case the fill names."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1260952312",
+    "c": "https://ncatlab.org/nlab/source/cofiber+sequence"
+   }
+  },
+  {
+   "id": "D7-339",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-postnikov-system.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Postnikov systems were introduced by, and are named after, [[Mikhail Postnikov]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "\\pi_k(X) & \\text{ for } k \\leq n",
+     "more": [
+      {
+       "src": "p",
+       "quote": "called the '''''n''th Postnikov invariant''' of <math>X</math>"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A '''Postnikov system''' of a [[connected space|path-connected space]] <math>X</math> is an inverse system of spaces"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "that are [[Fibration|fibrations]] with [[Eilenberg–MacLane space|Eilenberg-MacLane spaces]] <math>K(\\pi_n(X),n)</math> as fibers"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "induces an isomorphism <math>\\pi_i(X) \\to \\pi_i(X_n)</math> for every <math>i\\leq n</math>."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "0 & \\text{ for } k > n"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380969307"
+   }
+  },
+  {
+   "id": "D7-340",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-postnikov-system.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "there is a dual construction to the Postnikov tower called the '''Whitehead tower'''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Instead of killing off all higher homotopy groups, the Whitehead tower iteratively kills off lower homotopy groups.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "each <math>X_n \\to X</math> is the universal <math>n</math>-connected cover of <math>X</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Given a CW complex <math>X</math>, there is a dual construction",
+     "note": "A CW complex, per the source."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "This is given by a tower of CW complexes,"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The induced map <math>\\pi_i : \\pi_i(X_n) \\to \\pi_i(X)</math> is an isomorphism for <math>i > n</math>."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The lower homotopy groups are zero, so <math>\\pi_i(X_n) = 0</math> for <math>i \\leq n</math>.",
+     "note": "The page's lead gives the vanishing range as 1 < k < n; its definition, quoted here, says i <= n."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380969307"
+   }
+  },
+  {
+   "id": "D7-341",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-bicategory.txt",
+    "n": "excerpts/nlab-bicategory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "This is an instance of [[strictification]] (a process of replacing coherent isomorphisms with equalities.)"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "*Every bicategory is \"biequivalent\"",
+     "note": "Mac Lane and Paré stand in the bibliography; the theorem's inline citations are Leinster, Gurski, and Johnson and Yau.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "One way to state the [[coherence theorem]] for bicategories is that every bicategory is [[equivalence of 2-categories|equivalent]] to a [[strict 2-category]]."
+      },
+      {
+       "src": "w",
+       "quote": "|title=Coherence for bicategories and indexed categories |date=1985 |last1=MacLane |first1=Saunders |author-link1=Saunders Mac Lane |last2=Paré |first2=Robert"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The more general concept of '''bicategory''' (or '''weak 2-category'''), where composition of morphisms is [[associative]] only up to a 2-isomorphism"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "every bicategory is [[equivalence of 2-categories|equivalent]] to a [[strict 2-category]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "*Every bicategory is \"biequivalent\"",
+     "note": "Biequivalence, per the source."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Note that $n=2$ is the greatest value of $n$ for which every weak $n$-category is equivalent to a fully strict one; see [[semi-strict infinity-category]] and [[Gray-category]].",
+     "note": "The source points to Gray-categories for the three-dimensional case rather than attributing the failure to Gray."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370990183",
+    "n": "https://ncatlab.org/nlab/source/bicategory"
+   }
+  },
+  {
+   "id": "D7-342",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/nlab-monoidal-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A **lax monoidal functor** between them is a [[functor]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "F(x) \\otimes_{\\mathcal{D}} F(y)",
+     "more": [
+      {
+       "src": "m",
+       "quote": "\\eta \\;\\colon\\; 1_{\\mathcal{D}} \\longrightarrow F(1_{\\mathcal{C}})"
+      },
+      {
+       "src": "m",
+       "quote": "If $\\eta$ and all $\\mu_{x,y}$ are [[isomorphisms]], then $F$ is called a **strong monoidal functor**."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "be two [[monoidal categories]]. A **lax monoidal functor** between them is a [[functor]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A **lax monoidal functor** between them is a [[functor]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "**(Lax monoidal functors send [[monoid]]s to monoids)**"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "If $\\eta$ and all $\\mu_{x,y}$ are [[isomorphisms]], then $F$ is called a **strong monoidal functor**.",
+     "note": "Strong only when the structure maps are invertible."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://ncatlab.org/nlab/source/monoidal+functor"
+   }
+  },
+  {
+   "id": "D7-343",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/nlab-opetope.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "_Opetopes_ are one of the [[geometric shapes for higher structures|geometric shapes]] of cells in the approach to the [[higher category theory]] of [[n-category|n-categories]] and [[∞-categories]] put forward in ([Baez-Dolan 97](#BaezDolan97))"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "put forward in ([Baez-Dolan 97](#BaezDolan97))",
+     "note": "\"Many inputs and one output\" is not quoted; the name's etymology points at operations.",
+     "more": [
+      {
+       "src": "o",
+       "quote": "the word &quot;opetope&quot; seems to derive from *[[operad]]*/*operation* + *[[polytope]]*."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "\"Opetopic data\" names no input the source states."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* [[Eugenia Cheng]], The category of opetopes and the category of opetopic sets,",
+     "note": "A bibliography title; the page redirects opetopic sets to itself."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://ncatlab.org/nlab/source/opetope"
+   }
+  },
+  {
+   "id": "D7-344",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-segal-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The notion of _Segal category_ is one of the models for that of _[[(∞,1)-category]]_"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* such that $X_0$ is a [[discrete object|discrete]] (= constant) simplicial set;",
+     "more": [
+      {
+       "src": "s",
+       "quote": "This property of the [[nerve]] of an ordinary category goes by the name _Segal condition_ and is what gave Segal categories its name."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* a [[simplicial object|simplicial]] [[simplicial set]] ($\\simeq$ [[bisimplicial set]]) $X \\in [\\Delta^{op}, sSet]$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The notion of _Segal category_ is one of the models"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Homotopy-coherent composition is not quoted for Segal categories."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/Segal+category"
+   }
+  },
+  {
+   "id": "D7-345",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-complete-segal-space.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "They are also called _Rezk categories_ after [[Charles Rezk]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the sub-simplicial object $Core(X_\\bullet)$ on the invertible morphisms in each degree is homotopy constant",
+     "note": "The source states completeness as homotopy constancy of the core; the fill's objects-equal-equivalences form is that condition read in degree one, not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* forming a [[simplicial object]] $X_\\bullet$ in [[sSet]] (a [[bisimplicial set]]);"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "More in detail, a complete Segal space $X$ is"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "So complete Segal spaces present [[(∞,1)-categories]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/complete+Segal+space"
+   }
+  },
+  {
+   "id": "D7-346",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-simplicially-enriched-category.txt",
+    "m": "excerpts/nlab-model-structure-on-simplicial-categories.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* requiring the hom-simplicial sets to be [[Kan complex]]es makes simplicially enriched categories a model for [[(∞,1)-categories]];"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* requiring the hom-simplicial sets to be [[Kan complex]]es makes simplicially enriched categories a model for [[(∞,1)-categories]];",
+     "more": [
+      {
+       "src": "m",
+       "quote": "&amp;lbrack;[Bergner (2004)](#Bergner04), [Lurie (2009), thm. A.3.2.4](#Lurie09)&amp;rbrack;"
+      },
+      {
+       "src": "m",
+       "quote": "* [[weak equivalences]] the [[Dwyer-Kan equivalences]] (Def. \\ref{DwyerKanEquivalences});"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "To every [[category with weak equivalences]] $(C,W)$ is associated its [[simplicial localization]] $L_W C$",
+     "note": "The source's input is a category with weak equivalences; \"homotopy-theoretic data\" is vaguer."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "which is an $sSet$-category"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "with the property that its [[homotopy category of an (∞,1)-category]] coincides with the [[homotopy category]] $Ho_W(C)$."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/simplicially+enriched+category",
+    "m": "https://ncatlab.org/nlab/source/model+structure+on+sSet-categories"
+   }
+  },
+  {
+   "id": "D7-347",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/nlab-topologically-enriched-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A **[[topologically enriched category]]** $\\mathcal{C}$ is a $Top_{cg}$-[[enriched category]], hence:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "called the **space of [[morphisms]]** or the **[[hom-space]]** between $a$ and $b$;"
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "\"Topological data\" names no input the source states."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A **[[topologically enriched category]]** $\\mathcal{C}$ is a $Top_{cg}$-[[enriched category]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Comparison through the singular complex is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://ncatlab.org/nlab/source/topologically+enriched+category"
+   }
+  },
+  {
+   "id": "D7-348",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "a ''composition'' function"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "\\circ: P(n)\\times P(k_1)\\times\\cdots\\times P(k_n) & \\to P(k_1+\\cdots+k_n)"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "(\\theta,\\theta_1,\\ldots,\\theta_n) & \\mapsto \\theta\\circ(\\theta_1,\\ldots,\\theta_n),"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "\\mapsto \\theta\\circ(\\theta_1,\\ldots,\\theta_n)"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* ''associativity'':",
+     "more": [
+      {
+       "src": "o",
+       "quote": "*''equivariance'': given a permutation <math>t\\in S_n</math>,"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382614144"
+   }
+  },
+  {
+   "id": "D7-349",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-operad.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source calls partial composition whiskering."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "which encode the idea of substituting an $n$-ary operation into the $i-th$ argument of an $m$-ary operation, to get an $(m+n-1)$-ary operation.",
+     "note": "The identity on the other inputs is the source's mutual definability in the presence of identities.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "in the presence of identity operations, the two forms of operadic composition are mutually definable"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "$$sub_i: C(m) \\times C(n) \\to C(m+n-1)$$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "to get an $(m+n-1)$-ary operation."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Associativity of partial composition is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/operad"
+   }
+  },
+  {
+   "id": "D7-350",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source states the free multicategory construction."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The free construction is not quoted; the identification of multicategories with coloured operads is (nLab, multicategory)."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-351",
+   "batch": 14,
+   "why": "Fill review, batch 14: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/nlab-biased-definition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "A definition in which only these are required is called __biased__.",
+     "note": "The source defines biased and unbiased definitions in general; bicategories are not named."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The equivalence of biased and unbiased bicategories and its attribution to Leinster are not in a fetched source; the general distinction is (nLab, biased definition)."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://ncatlab.org/nlab/source/biased+definition"
+   }
   }
  ]
 }

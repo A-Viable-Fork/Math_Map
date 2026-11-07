@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Suspension (topology) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377890955
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5ea820111eb00a73ccc6c668c03a229da0208acae7bf474ae2178e6f6f314c00
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''suspension''' of a [[topological space]] ''X'' is intuitively obtained by stretching ''X'' into a [[cylinder (geometry)|cylinder]] and then collapsing both end faces to points.
+
+One can view <math>SX</math> as two [[cone (topology)|cones]] on ''X,'' [[adjunction space|glued together]] at their bases.
+
+An important property of this functor is that it is [[left adjoint]] to the functor <math>\Omega</math> taking a pointed space <math>X</math> to its [[loop space]] <math>\Omega X</math>.
+
+If ''X'' is a [[pointed space]] with basepoint ''x''<sub>0</sub>, there is a variation of the suspension
+
+The suspension of ''X'' is denoted by '''''SX'''''
+
+The reduced suspension can be used to construct a [[Group homomorphism|homomorphism]] of [[homotopy group]]s, to which the [[Freudenthal suspension theorem]] applies.
+
+In [[homotopy theory]], the phenomena which are preserved under suspension, in a suitable sense, make up [[stable homotopy theory]].

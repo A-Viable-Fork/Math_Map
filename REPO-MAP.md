@@ -318,7 +318,11 @@
 | `excerpts/nlab-aufhebung-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung-modalities.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-biased-definition.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-bicategory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-biproduct.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-bousfield-localization-of-spectra.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-bousfield-localization.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-braided-monoidal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-calculus-of-fractions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-closed-category.txt` | Verbatim windows from an nLab page. |
@@ -332,10 +336,12 @@
 | `excerpts/nlab-closure-operator.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-co-yoneda-lemma.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coequalizer.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-cofiber-sequence.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coherent-logic.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-colimit.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-comma-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-comonad.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-complete-segal-space.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coproduct.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-core-groupoid.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coreflective-subcategory.txt` | Verbatim windows from an nLab page. |
@@ -356,6 +362,7 @@
 | `excerpts/nlab-exponential-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-factorization-homology.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-faithful-functor.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-fiber-sequence.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-filtered-colimit.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-finiteness-space.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-forcing.txt` | Verbatim windows from an nLab page. |
@@ -374,11 +381,15 @@
 | `excerpts/nlab-grothendieck-construction.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-grothendieck-topology.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-groupoidification.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-homotopy-category-of-a-model-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-homotopy-coherent-nerve.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-homotopy-pullback.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-homotopy-pushout.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-horizontal-composition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-hyperdoctrine.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-ind-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-initial-object.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-inner-fibration.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-internal-logic.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-inverse-image.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-isbell-duality.txt` | Verbatim windows from an nLab page. |
@@ -399,13 +410,18 @@
 | `excerpts/nlab-logical-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-macneille-completion.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-mitchell-benabou-language.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-model-structure-on-simplicial-categories.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-monadicity-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-monoidal-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-monoidal-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-monoidal-natural-transformation.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-natural-transformation.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-operad.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-opetope.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-opposite-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-orthogonal-factorization-system.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-over-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-path-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-pro-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-profunctor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-pullback.txt` | Verbatim windows from an nLab page. |
@@ -418,10 +434,12 @@
 | `excerpts/nlab-reflective-subcategory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-regular-and-exact-completions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-retract.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-segal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-sheafification.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-sieve.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-sifted-colimit.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-simplicial-set.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-simplicially-enriched-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-skeletal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-split-epimorphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-stone-duality.txt` | Verbatim windows from an nLab page. |
@@ -433,8 +451,10 @@
 | `excerpts/nlab-symmetric-monoidal-natural-transformation.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-syntactic-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-terminal-object.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-topologically-enriched-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-transgression.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-under-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-weak-equivalence.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-weak-factorization-system.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-whiskering.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-yoneda-embedding.txt` | Verbatim windows from an nLab page. |
@@ -512,11 +532,13 @@
 | `excerpts/wikipedia-bergmans-diamond-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-betti-number.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-bicategory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birational-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birkhoffs-representation-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-blowing-up.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bockstein-spectral-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-boolean-prime-ideal-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-bousfield-localization.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-buchbergers-algorithm.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-canonical-commutation-relation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cardinal-number.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -573,6 +595,7 @@
 | `excerpts/wikipedia-ext-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-exterior-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-factorization-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-fibration-of-simplicial-sets.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-fibred-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-field-of-fractions.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-filter-mathematics.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -611,6 +634,7 @@
 | `excerpts/wikipedia-hom-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-homology-mathematics.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-homomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-homotopy-colimit.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-horseshoe-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hylomorphism-computer-science.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hyperhomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -649,6 +673,7 @@
 | `excerpts/wikipedia-littlewood-paley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-localization-commutative-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-localization.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-loop-space.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mac-lanes-coherence-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mapping-cone-homological-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mapping-cylinder.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -678,6 +703,7 @@
 | `excerpts/wikipedia-normal-closure-group-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-old-quantum-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-operad.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-opposite-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-ordinal-arithmetic.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-ore-condition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -685,10 +711,12 @@
 | `excerpts/wikipedia-pointwise.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-poisson-bracket-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-polynomial-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-postnikov-system.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-posts-lattice.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-priestley-space.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-pseudocomplement.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-puppe-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quasi-isomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quasivariety.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quotient-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -718,6 +746,7 @@
 | `excerpts/wikipedia-subalgebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-subdirect-product.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-subdirectly-irreducible-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-suspension.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-sylow-theorems.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-sylvesters-law-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-symmetric-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -1271,7 +1300,11 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-adjoint-functor-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-adjoint-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-atomic-geometric-morphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-biased-definition.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-bicategory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-biproduct.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-bousfield-localization-of-spectra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-bousfield-localization.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-braided-monoidal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-calculus-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-closed-category.txt` |
@@ -1284,10 +1317,12 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-classifying-topos.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-co-yoneda-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coequalizer.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cofiber-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coherent-logic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-colimit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-comma-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-comonad.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-complete-segal-space.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coproduct.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-core-groupoid.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coreflective-subcategory.txt` |
@@ -1307,6 +1342,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-exponential-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-factorization-homology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-faithful-functor.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-fiber-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-filtered-colimit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-finiteness-space.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-forcing.txt` |
@@ -1324,11 +1360,15 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-construction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-topology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-groupoidification.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-homotopy-category-of-a-model-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-homotopy-coherent-nerve.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-homotopy-pullback.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-homotopy-pushout.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-horizontal-composition.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-hyperdoctrine.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-ind-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-initial-object.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-inner-fibration.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-internal-logic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-inverse-image.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-isbell-duality.txt` |
@@ -1345,13 +1385,18 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-logical-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-macneille-completion.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-mitchell-benabou-language.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-model-structure-on-simplicial-categories.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monadicity-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monoidal-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monoidal-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monoidal-natural-transformation.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-natural-transformation.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-operad.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-opetope.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-opposite-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-orthogonal-factorization-system.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-over-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-path-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-pro-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-profunctor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-pullback.txt` |
@@ -1362,10 +1407,12 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-reflective-subcategory-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-regular-and-exact-completions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-retract.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-segal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sheafification.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sieve.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-sifted-colimit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-simplicial-set.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-simplicially-enriched-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-skeletal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-split-epimorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-stone-duality.txt` |
@@ -1375,8 +1422,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-symmetric-monoidal-natural-transformation.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-syntactic-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-terminal-object.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-topologically-enriched-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-transgression.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-under-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-weak-equivalence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-weak-factorization-system.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-whiskering.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-yoneda-embedding.txt` |
@@ -1395,9 +1444,11 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bar-construction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bergmans-diamond-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-betti-number.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bicategory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-birkhoffs-representation-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bockstein-spectral-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-boolean-prime-ideal-theorem.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bousfield-localization.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-buchbergers-algorithm.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cardinal-number.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cartan-eilenberg-resolution.txt` |
@@ -1442,6 +1493,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ext-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-exterior-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-factorization-homology.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-fibration-of-simplicial-sets.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-fibred-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-field-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-filter-mathematics.txt` |
@@ -1465,6 +1517,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hom-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-homology-mathematics.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-homomorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-homotopy-colimit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-horseshoe-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hylomorphism-computer-science.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hyperhomology.txt` |
@@ -1488,6 +1541,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-leray-spectral-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-lexicographic-order.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-localization-commutative-algebra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-loop-space.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mac-lanes-coherence-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mapping-cone-homological-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mapping-cylinder.txt` |
@@ -1504,15 +1558,18 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-nilradical-of-a-ring.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-nine-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-normal-closure-group-theory.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-operad.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-opposite-ring.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ordinal-arithmetic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ore-condition.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-paramorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-pointwise.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-polynomial-ring.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-postnikov-system.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-posts-lattice.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-priestley-space.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-pseudocomplement.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-puppe-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quasi-isomorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quasivariety.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quotient-universal-algebra.txt` |
@@ -1536,6 +1593,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-subalgebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-subdirect-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-subdirectly-irreducible-algebra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-suspension.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-sylow-theorems.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-symmetric-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-t-structure.txt` |

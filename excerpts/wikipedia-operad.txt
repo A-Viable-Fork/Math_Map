@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Operad (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382614144
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c2988a8213f9ba1344b62f85431e924a3ca7fd558f1a2103f276b5dff9e53cb2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a ''composition'' function
+
+\circ: P(n)\times P(k_1)\times\cdots\times P(k_n) & \to P(k_1+\cdots+k_n)
+
+(\theta,\theta_1,\ldots,\theta_n) & \mapsto \theta\circ(\theta_1,\ldots,\theta_n),
+
+\mapsto \theta\circ(\theta_1,\ldots,\theta_n)
+
+* ''associativity'':
+
+*''equivariance'': given a permutation <math>t\in S_n</math>,

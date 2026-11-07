@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, Bousfield localization of spectra (page source)
+URL: https://ncatlab.org/nlab/source/Bousfield+localization+of+spectra
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 62a9ca02170221d239bd02c14c24a4767bdfce190cf913576cdf9d18f3de3d5f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+at the collection of [[morphisms]] which become [[equivalences]] under [[smash product of spectra|smash product]] with a given
+
+for $Y$ any $E$-acyclic spectrum in that $Y \wedge E \simeq 0$, every morphism $Y \longrightarrow L_E X$ is null-homotopic

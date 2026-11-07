@@ -1,0 +1,26 @@
+Excerpts, verbatim, from: Wikipedia, Puppe sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1260952312
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d8adedb3a001f88ea2dcae6de44d9b5ceb41e43a254f24994fd82b6686a9a2a8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It comes in two forms: a [[long exact sequence]], built from the [[homotopy fiber|mapping fibre]] (a [[fibration]])
+
+:<math>\cdots \to \Omega^2(Mf) \to \Omega^2 X \to \Omega^2 Y \to \Omega(Mf) \to \Omega X \to \Omega Y \to Mf\to X \to Y</math>
+
+Let <math>f\colon (X,x_0)\to(Y,y_0)</math> be a [[continuous map]] between [[pointed space]]s
+
+The construction can then be iterated to obtain the exact Puppe sequence
+
+From this, the Puppe sequence gives the '''homotopy sequence of a fibration''':
+
+and a long coexact sequence, built from the [[mapping cone (topology)|mapping cone]] (which is a [[cofibration]])
+
+:<math>A\to B\to C(f) \to \Sigma A \to \Sigma B \to \Sigma C(f) \to \Sigma^2 A \to \Sigma^2 B \to \Sigma^2 C(f) \to \Sigma^3 A \to \Sigma^3 B \to \Sigma^3 C(f) \to \cdots </math>
+
+Let <math>f\colon A \to B</math> be a [[continuous map]] between [[CW complex]]es
+
+one can also consider unreduced and reduced Puppe sequences (at least if dealing with [[pointed space]]s, when it's possible to form reduced suspension).
+
+Iterating this construction, we obtain the Puppe sequence associated to <math>A\to B</math>:
+
+after acting with the functor in question on the Puppe sequence associated to <math>A\to B</math>, one obtains a long [[exact sequence]].
