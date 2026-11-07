@@ -14236,6 +14236,1151 @@
    "sources": {
     "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344684772"
    }
+  },
+  {
+   "id": "D7-201",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-ordinal-arithmetic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "Ordinal addition is, in general, not [[commutative]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "For example, {{math|1=3 + ''ω'' = ''ω''}} since the order relation for {{math|3 + ''ω''}} is",
+     "note": "The fill's example 1 + omega = omega is the same phenomenon with 1 for 3.",
+     "more": [
+      {
+       "src": "o",
+       "quote": "Multiplication of ordinals is not in general commutative."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "Ordinal addition on the [[natural numbers]] is the same as standard addition."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The first transfinite ordinal is {{mvar|ω}}, the set of all natural numbers, followed by {{math|''ω'' + 1}}, {{math|''ω'' + 2}}, etc."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "That the results are well-orders (ordinals) is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "Ordinal addition is, in general, not [[commutative]]."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379889185"
+   }
+  },
+  {
+   "id": "D7-202",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cardinal-number.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\kappa + \\mu = \\max\\{\\kappa, \\mu\\}\\,."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\kappa\\cdot\\mu = \\max\\{\\kappa, \\mu\\}.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "The properties of other aleph numbers and of [[Transfinite number|infinite cardinal number]]s in general depend on statements [[Independence (mathematical logic)|independent]] of [[Zermelo–Fraenkel set theory]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\kappa + \\mu = \\max\\{\\kappa, \\mu\\}\\,."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\kappa\\cdot\\mu = \\max\\{\\kappa, \\mu\\}."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383146059"
+   }
+  },
+  {
+   "id": "D7-203",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-lexicographic-order.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the {{visible anchor|lexicographical order on the Cartesian product|Lexicographic order on Cartesian products}} <math>A \\times B</math> is defined as"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the {{visible anchor|lexicographical order on the Cartesian product|Lexicographic order on Cartesian products}} <math>A \\times B</math> is defined as",
+     "note": "The comparison rule is displayed as mathematics; not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Specifically, given two [[partially ordered set]]s <math>A</math> and <math>B,</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "<math>A \\times B</math> is defined as"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "this order is a total order if and only if all factors of the Cartesian product are totally ordered.",
+     "note": "Preservation of well-orders for products of two is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374724941"
+   }
+  },
+  {
+   "id": "D7-204",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for interval algebras (no Wikipedia page by that title)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-205",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-continuous-lattice.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Continuous Lattice Retraction\" is not a name the fetched source uses."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is [[isomorphic]] to the [[image (mathematics)|image]] of a [[Scott-continuous]] [[idempotent map]]",
+     "note": "The source states retracts of powers of the two-point lattice {0,1}, which are algebraic lattices: the fill's parenthetical. Powers of [0,1] are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Let <math>L</math> be a [[complete lattice]]. Then the following conditions are equivalent."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is [[isomorphic]] to the [[image (mathematics)|image]] of a [[Scott-continuous]] [[idempotent map]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Injectivity in T0 spaces is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1114750496"
+   }
+  },
+  {
+   "id": "D7-206",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-algebraic-poset.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "Nonstandard name; no fetched source names it."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "A poset in which every element is the supremum of the directed set formed by the compact elements below it is called an ''algebraic poset''.",
+     "note": "The ideal completion of the compact elements is not stated in the fetched source."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "If the poset ''P'' additionally is a [[semilattice|join-semilattice]]"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the '''compact elements''' or '''finite elements''' of a [[partially ordered set]] are those elements that cannot be subsumed by a [[supremum]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375338724"
+   }
+  },
+  {
+   "id": "D7-207",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-scott-continuity.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The Scott-open subsets of a partially ordered set ''P'' form a [[topological space|topology]] on ''P,'' the '''Scott topolo"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is called '''Scott-open''' if it is an [[upper set]] and if it is '''inaccessible by directed joins'''",
+     "note": "That continuous maps are exactly the Scott-continuous ones is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The Scott topology was first defined by Dana Scott for [[complete lattice]]s and later defined for arbitrary partially ordered sets."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The Scott-open subsets of a partially ordered set ''P'' form a [[topological space|topology]] on ''P,'' the '''Scott topolo"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The order relation of a dcpo ''D'' can be reconstructed from the Scott-open sets as the specialization order induced by the Scott topology."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "it satisfies the [[T0 separation axiom|T<sub>0</sub> separation axiom]])",
+     "note": "T0; that it is not Hausdorff in general is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384071998"
+   }
+  },
+  {
+   "id": "D7-208",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-lawson-topology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The Lawson topology on ''P'' is the smallest common refinement of the lower topology and the [[Scott topology]] on&nbsp;''P''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The Lawson topology on ''P'' is the smallest common refinement of the lower topology and the [[Scott topology]] on&nbsp;''P''.",
+     "note": "Compact Hausdorff on continuous lattices is not in the fetched stub; it gives complete T1."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The Lawson topology on ''P''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is the smallest common refinement of the lower topology and the [[Scott topology]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1266264127"
+   }
+  },
+  {
+   "id": "D7-209",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-modular-lattice.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}",
+     "note": "The fill's law, with a, x, b renamed x, y, z."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "a '''modular lattice''' is a [[lattice (order)|lattice]] that satisfies the following self-[[duality (order theory)|dual]] condition,"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}",
+     "note": "An identity: the value is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354333116"
+   }
+  },
+  {
+   "id": "D7-210",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-distributive-lattice.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": ": ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'')."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": ": ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'').",
+     "note": "The normal form (join of meets) is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": ": ''x'' ∨ (''y'' ∧ ''z'') = (''x'' ∨ ''y'') ∧ (''x'' ∨ ''z'') &nbsp; for all ''x'', ''y'', and ''z'' in ''L''."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The normal form is not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": ": ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'')."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353478499"
+   }
+  },
+  {
+   "id": "D7-211",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-semimodular-lattice.txt",
+    "g": "excerpts/wikipedia-geometric-lattice.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''semimodular lattice''', is a [[lattice (order)|lattice]] that satisfies the following condition:",
+     "note": "\"Transformation\" is the fill's word."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "A lattice is sometimes called '''weakly semimodular''' if it satisfies the following condition due to [[Garrett Birkhoff]]:",
+     "note": "The fill's condition (a and b both cover their meet, then their join covers both) is Birkhoff's condition, weak semimodularity. Semimodularity is the stronger law (a ^ b covered by a implies b covered by a v b); the two agree for lattices of finite length. The matroid correspondence is right for finite atomistic semimodular lattices.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "Every semimodular lattice is weakly semimodular. The converse is true for lattices of finite length"
+      },
+      {
+       "src": "g",
+       "quote": "a '''geometric lattice''' is a [[finite set|finite]] [[Atom (order theory)|atomistic]] [[semimodular lattice]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''semimodular lattice''', is a [[lattice (order)|lattice]] that satisfies the following condition:"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "A rank function as output is not stated."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The Jordan-Dedekind condition is not stated in the fetched windows."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371018293",
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353775762"
+   }
+  },
+  {
+   "id": "D7-212",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-graded-poset.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "The name Jordan-Dedekind is not used in the fetched source; the condition is."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "admits a grading [[if and only if]] all [[maximal chain]]s in ''P'' have the same length",
+     "note": "Stated for bounded posets."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A [[bounded poset]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a '''graded poset''' is a [[partially-ordered set]] (poset) ''P'' equipped with a '''rank function'''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "admits a grading [[if and only if]] all [[maximal chain]]s in ''P'' have the same length"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344462353"
+   }
+  },
+  {
+   "id": "D7-213",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-mobius-inversion-formula.txt",
+    "i": "excerpts/wikipedia-incidence-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]], with Möbius' classical formula applying"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]",
+     "note": "Rota's theory per the source."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "an arbitrary [[Locally finite poset|locally finite partially ordered set]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The [[multiplicative inverse]] of the zeta function is the '''Möbius function''' ''μ''(''a, b'')"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra",
+     "note": "An invertible transform."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing\" is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1326604822",
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047"
+   }
+  },
+  {
+   "id": "D7-214",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-incidence-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Incidence algebras of locally finite posets were treated in a number of papers of [[Gian-Carlo Rota]] beginning in 1964"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra (with respect to the convolution defined above).",
+     "more": [
+      {
+       "src": "i",
+       "quote": "The [[multiplicative inverse]] of the zeta function is the '''Möbius function''' ''μ''(''a, b'')"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Incidence algebras of locally finite posets"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The incidence algebra of ≤ is then [[isomorphic]] to the algebra of upper-triangular matrices"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "That the incidence algebra determines P is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047"
+   }
+  },
+  {
+   "id": "D7-215",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-chain-complex.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A '''chain complex''' <math>(A_\\bullet, d_\\bullet)</math> is a sequence of abelian groups or modules"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Explicitly, the differentials satisfy <math>d_n\\circ d_{n+1}=0</math> for all <math>n</math>, or, concisely, <math>d^2=0</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "theorem d_comp_d (C : HomologicalComplex V c) (i j k : ι) : C.d i j ≫ C.d j k = 0"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms (called '''boundary operators''' or '''differentials''')"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev ChainComplex (α : Type*) [AddRightCancelSemigroup α] [One α] : Type _ :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Associated to a chain complex is its [[Homology (mathematics)|homology]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomologicalComplex.lean"
+   }
+  },
+  {
+   "id": "D7-216",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-chain-complex.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\\to A^{n+1}</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\\to A^{n+1}</math> satisfying <math>d^{n+1}\\circ d^{n}=0</mat"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "It consists of a sequence of abelian groups or modules <math>\\cdots, A^0, A^1, A^2,\\dots</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev CochainComplex (α : Type*) [AddRightCancelSemigroup α] [One α] : Type _ :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The homology of a cochain complex is called its [[cohomology]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomologicalComplex.lean"
+   }
+  },
+  {
+   "id": "D7-217",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-chain-complex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms (called '''boundary operators''' or '''differentials''')"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The elements in the kernel of <math>d</math> are called '''(co)cycles''' (or '''closed''' elements), and the elements in the image of ''d'' are called '''(co)boundaries''' (or '''exact''' elements)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A '''chain complex''' <math>(A_\\bullet, d_\\bullet)</math> is a sequence of abelian groups or modules"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms (called '''boundary operators''' or '''differentials''')"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Explicitly, the differentials satisfy <math>d_n\\circ d_{n+1}=0</math> for all <math>n</math>, or, concisely, <math>d^2=0</math>."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Interior of the chain\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415"
+   }
+  },
+  {
+   "id": "D7-218",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-chain-complex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\\to A^{n+1}</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\\to A^{n+1}</math>",
+     "note": "The de Rham case is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\\to A^{n+1}</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\\to A^{n+1}</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "satisfying <math>d^{n+1}\\circ d^{n}=0</mat"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415"
+   }
+  },
+  {
+   "id": "D7-219",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-homology-mathematics.txt",
+    "c": "excerpts/wikipedia-chain-complex.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.HomologicalComplex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Associated to a chain complex is its [[Homology (mathematics)|homology]], which is (loosely speaking) a measure of the failure of a chain complex to be [[Exact sequence|exact]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "a '''cycle''' is any element of the [[Kernel (category theory)|kernel]]",
+     "more": [
+      {
+       "src": "h",
+       "quote": "The statement that the boundary of a boundary is trivial is equivalent to the statement that <math>\\operatorname{im}(\\partial_{n+1})\\subseteq\\ker(\\partial_n)</math>"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Associated to a chain complex is its [[Homology (mathematics)|homology]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def homology := (K.sc i).homology"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and is a commonly used [[topological invariant|invariant]] of a topological space.",
+     "note": "Homotopy and quasi-isomorphism invariance are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383111498",
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/HomologicalComplex.lean"
+   }
+  },
+  {
+   "id": "D7-220",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-chain-complex.txt",
+    "o": "excerpts/wikipedia-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The homology of a cochain complex is called its [[cohomology]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The homology of a cochain complex is called its [[cohomology]].",
+     "more": [
+      {
+       "src": "o",
+       "quote": "The most important cohomology theories have a product, the [[cup product]], which gives them a [[ring (mathematics)|ring]] structure."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The homology of a cochain complex is called its [[cohomology]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "into a [[graded ring]], called the '''[[cohomology ring]]''' of <math>X</math>."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Quasi-isomorphism invariance is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Massey products are not discussed in the fetched windows."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415",
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377746958"
+   }
+  },
+  {
+   "id": "D7-221",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''",
+     "note": "Modules; enough projectives in general is not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure ProjectiveResolution (Z : C) where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Projective resolution of a module <math>M</math> is unique up to a [[chain homotopy]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean"
+   }
+  },
+  {
+   "id": "D7-222",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Dually, every <math>R</math>-module possesses an injective resolution."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure InjectiveResolution (Z : C) where"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Uniqueness up to homotopy is quoted for projective resolutions only."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean"
+   }
+  },
+  {
+   "id": "D7-223",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458"
+   }
+  },
+  {
+   "id": "D7-224",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cartan-eilenberg-resolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Then a '''Cartan–Eilenberg resolution''' of <math>A_{*}</math> is an upper half-plane [[double complex]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Then a '''Cartan–Eilenberg resolution''' of <math>A_{*}</math> is an upper half-plane [[double complex]]",
+     "more": [
+      {
+       "src": "c",
+       "quote": "It can be used to construct [[#Hyper-derived functors|hyper-derived functors]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "be an [[Abelian category]] with [[enough projectives]], and let <math>A_{*}</math> be a chain complex with objects in <math>\\mathcal{A}</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is an upper half-plane [[double complex]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "It can be used to construct [[#Hyper-derived functors|hyper-derived functors]].",
+     "note": "Hypertor and hyperext as instances; the homology of the complex is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1190110659"
+   }
+  },
+  {
+   "id": "D7-225",
+   "batch": 9,
+   "why": "Fill review, batch 9: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-horseshoe-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "It says that if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>, then a resolution of <math>A</math> can be built up"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "It says that if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>, then a resolution of <math>A</math> can be built up"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "then a resolution of <math>A</math> can be built up"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Then the [[snake lemma]] is invoked to show that the simultaneous resolution constructed so far has exact rows.",
+     "note": "Long exact sequences of derived functors are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1349920892"
+   }
   }
  ]
 }

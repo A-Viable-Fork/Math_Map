@@ -217,6 +217,12 @@ const CORRECTIONS = [
     receipts: [R("excerpts/wikipedia-galois-connection-r.txt", "known as the associated [[closure operator]], and {{math|''FG'' : ''B'' → ''B''}}, known as the associated kernel operator.", "description"),
       R("excerpts/wikipedia-galois-connection-r.txt", "are the associated closure operators; they are monotone idempotent maps with the property", "description"),
       R("excerpts/wikipedia-galois-connection-r.txt", "but every Galois connection gives rise to an isomorphism of certain sub-posets", "description")] },
+  { id: "D7-211", name: "Semimodularity Transformation",
+    fields: { description: "Tests or uses (upper) semimodularity: a ^ b covered by a implies b covered by a v b. The weaker two-sided form (if a and b both cover a ^ b then a v b covers both) is Birkhoff's condition, weak semimodularity, equivalent to semimodularity for lattices of finite length. Geometric lattices, the finite atomistic semimodular lattices, are the lattices of flats of matroids." },
+    reason: "Fill review, batch 9: description graded imprecise. The landed fill gave Birkhoff's condition (weak semimodularity) as the definition of semimodularity; the two agree only for lattices of finite length.",
+    receipts: [R("excerpts/wikipedia-semimodular-lattice.txt", "A lattice is sometimes called '''weakly semimodular''' if it satisfies the following condition due to [[Garrett Birkhoff]]:", "description"),
+      R("excerpts/wikipedia-semimodular-lattice.txt", "Every semimodular lattice is weakly semimodular. The converse is true for lattices of finite length", "description"),
+      R("excerpts/wikipedia-geometric-lattice.txt", "a '''geometric lattice''' is a [[finite set|finite]] [[Atom (order theory)|atomistic]] [[semimodular lattice]]", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 200 of 416 D7 stubs, 0 of 79 homes; 200 entries in 8 batches.
+Reviewed: 225 of 416 D7 stubs, 0 of 79 homes; 225 entries in 9 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (200 entries)
+### D7 stubs (225 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 190 | 0 | 0 | 10 |
-| description | 185 | 5 | 0 | 10 |
-| input | 180 | 3 | 0 | 17 |
-| output | 181 | 0 | 0 | 19 |
-| preserved | 148 | 2 | 0 | 50 |
-| broken | 87 | 3 | 0 | 110 |
-| **all** | 971 | 13 | 0 | 216 |
+| name | 211 | 0 | 0 | 14 |
+| description | 208 | 6 | 0 | 11 |
+| input | 204 | 3 | 0 | 18 |
+| output | 202 | 0 | 0 | 23 |
+| preserved | 164 | 2 | 0 | 59 |
+| broken | 89 | 3 | 0 | 133 |
+| **all** | 1078 | 14 | 0 | 258 |
 
 ## 2. Recall against source
 
@@ -36,7 +36,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 6 | 25 | 128 | 0 | 0% |
 | 7 | 25 | 119 | 0 | 0% |
 | 8 | 25 | 108 | 0 | 0% |
-| **all** | 200 | 984 | 3 | 0% |
+| 9 | 25 | 108 | 0 | 0% |
+| **all** | 225 | 1092 | 3 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -46,8 +47,9 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-123 input: sample confirmed, review unsupported.
 - D7-123 preserved: sample confirmed, review unsupported.
 - D7-192 broken: sample unsupported, review confirmed.
+- D7-212 name: sample confirmed, review unsupported.
 
-Agreement: 26 of 30 fields.
+Agreement: 31 of 36 fields.
 
 ## 4. Sources in disagreement
 
@@ -184,6 +186,30 @@ Every field not confirmed, with the reason.
 - **D7-198 Chain Evaluation** (batch 8): *broken* unsupported: Not stated.
 - **D7-199 Zorn's Lemma Maximization** (batch 8): *broken* unsupported: Non-constructivity and non-uniqueness are not stated in the fetched windows.
 - **D7-200 Well-Ordering Transformation** (batch 8): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-201 Ordinal Arithmetic Operation** (batch 9): *preserved* unsupported: That the results are well-orders (ordinals) is not quoted.
+- **D7-202 Cardinal Arithmetic Operation** (batch 9): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-203 Lexicographical Product Construction** (batch 9): *broken* unsupported: Not stated.
+- **D7-204 Interval Algebra Construction** (batch 9): *name* unsupported: No fetched source for interval algebras (no Wikipedia page by that title). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-205 Continuous Lattice Retraction** (batch 9): *name* unsupported: "Continuous Lattice Retraction" is not a name the fetched source uses. *preserved* unsupported: Injectivity in T0 spaces is not stated in the fetched source. *broken* unsupported: Not stated.
+- **D7-206 Algebraic Lattice Compactification** (batch 9): *name* unsupported: Nonstandard name; no fetched source names it. *output* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-208 Lawson Topology Construction** (batch 9): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-209 Modular Law Reduction** (batch 9): *broken* unsupported: Not stated.
+- **D7-210 Distributive Law Reduction** (batch 9): *output* unsupported: The normal form is not quoted. *broken* unsupported: Not stated.
+- **D7-211 Semimodularity Transformation** (batch 9): *description* imprecise: The fill's condition (a and b both cover their meet, then their join covers both) is Birkhoff's condition, weak semimodularity. Semimodularity is the stronger law (a ^ b covered by a implies b covered by a v b); the two agree for lattices of finite length. The matroid correspondence is right for finite atomistic semimodular lattices. *output* unsupported: A rank function as output is not stated. *preserved* unsupported: The Jordan-Dedekind condition is not stated in the fetched windows. *broken* unsupported: Not stated.
+- **D7-212 Jordan-Dedekind Chain Reduction** (batch 9): *name* unsupported: The name Jordan-Dedekind is not used in the fetched source; the condition is. *broken* unsupported: Not stated.
+- **D7-213 M\u00f6bius Inversion** (batch 9): *broken* unsupported: "Nothing" is not stated.
+- **D7-214 Incidence Algebra Construction** (batch 9): *preserved* unsupported: That the incidence algebra determines P is not stated in the fetched source. *broken* unsupported: Not stated.
+- **D7-215 Chain Complex Construction** (batch 9): *broken* unsupported: Not stated.
+- **D7-216 Cochain Complex Construction** (batch 9): *broken* unsupported: Not stated.
+- **D7-217 Boundary Operator Application** (batch 9): *broken* unsupported: "Interior of the chain" is a gloss.
+- **D7-218 Coboundary Operator Application** (batch 9): *broken* unsupported: Not stated.
+- **D7-219 Homology Group Extraction** (batch 9): *broken* unsupported: Not stated.
+- **D7-220 Cohomology Group Extraction** (batch 9): *preserved* unsupported: Quasi-isomorphism invariance is not quoted. *broken* unsupported: Massey products are not discussed in the fetched windows.
+- **D7-221 Projective Resolution Construction** (batch 9): *broken* unsupported: Not stated.
+- **D7-222 Injective Resolution Construction** (batch 9): *preserved* unsupported: Uniqueness up to homotopy is quoted for projective resolutions only. *broken* unsupported: Not stated.
+- **D7-223 Flat Resolution Construction** (batch 9): *broken* unsupported: Not stated.
+- **D7-224 Cartan-Eilenberg Resolution** (batch 9): *broken* unsupported: Not stated.
+- **D7-225 Horseshoe Lemma Construction** (batch 9): *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -2675,4 +2701,312 @@ actions defining an optic"
 - recalled: name: Standard (Zermelo); description: Every set can be well-ordered (choice); input: Set; output: Well-order; preserved: Cardinality; broken: Canonicity
 
   w: excerpts/wikipedia-well-ordering-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1344684772)
+
+### D7-201 Ordinal Arithmetic Operation (batch 9)
+
+- name: **confirmed** [o] "Ordinal addition is, in general, not [[commutative]]."
+- description: **confirmed** [o] "For example, {{math|1=3 + ''ω'' = ''ω''}} since the order relation for {{math|3 + ''ω''}} is" [o] "Multiplication of ordinals is not in general commutative." *The fill's example 1 + omega = omega is the same phenomenon with 1 for 3.*
+- input: **confirmed** [o] "Ordinal addition on the [[natural numbers]] is the same as standard addition."
+- output: **confirmed** [o] "The first transfinite ordinal is {{mvar|ω}}, the set of all natural numbers, followed by {{math|''ω'' + 1}}, {{math|''ω'' + 2}}, etc."
+- preserved: **unsupported** *That the results are well-orders (ordinals) is not quoted.*
+- broken: **confirmed** [o] "Ordinal addition is, in general, not [[commutative]]."
+- recalled: name: Standard; description: Sum by concatenation, product lexicographic, powers by limits; noncommutative (1 + omega = omega); input: Ordinals; output: Ordinal; preserved: Well-ordering; broken: Commutativity
+
+  o: excerpts/wikipedia-ordinal-arithmetic.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379889185)
+
+### D7-202 Cardinal Arithmetic Operation (batch 9)
+
+- name: **confirmed** [c] ":<math>\kappa + \mu = \max\{\kappa, \mu\}\,."
+- description: **confirmed** [c] ":<math>\kappa\cdot\mu = \max\{\kappa, \mu\}." [c] "The properties of other aleph numbers and of [[Transfinite number|infinite cardinal number]]s in general depend on statements [[Independence (mathematical logic)|independent]] of [[Zermelo–Fraenkel set theory]]"
+- input: **confirmed** [c] ":<math>\kappa + \mu = \max\{\kappa, \mu\}\,."
+- output: **confirmed** [c] ":<math>\kappa\cdot\mu = \max\{\kappa, \mu\}."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: kappa + lambda = kappa lambda = max for infinite (choice); powers independent of ZFC (Easton); input: Cardinals; output: Cardinal; preserved: Size; broken: Order structure
+
+  c: excerpts/wikipedia-cardinal-number.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383146059)
+
+### D7-203 Lexicographical Product Construction (batch 9)
+
+- name: **confirmed** [l] "the {{visible anchor|lexicographical order on the Cartesian product|Lexicographic order on Cartesian products}} <math>A \times B</math> is defined as"
+- description: **confirmed** [l] "the {{visible anchor|lexicographical order on the Cartesian product|Lexicographic order on Cartesian products}} <math>A \times B</math> is defined as" *The comparison rule is displayed as mathematics; not quoted.*
+- input: **confirmed** [l] "Specifically, given two [[partially ordered set]]s <math>A</math> and <math>B,</math>"
+- output: **confirmed** [l] "<math>A \times B</math> is defined as"
+- preserved: **confirmed** [l] "this order is a total order if and only if all factors of the Cartesian product are totally ordered." *Preservation of well-orders for products of two is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Compare first coordinates, then second; input: Two orders; output: Lexicographic order; preserved: Totality; well-ordering; broken: Independence of coordinates
+
+  l: excerpts/wikipedia-lexicographic-order.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374724941)
+
+### D7-204 Interval Algebra Construction (batch 9)
+
+- name: **unsupported** *No fetched source for interval algebras (no Wikipedia page by that title).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Mostowski and Tarski); also Allen's; description: Boolean algebra generated by half-open intervals; every countable Boolean algebra is one; input: Linear order; output: Interval algebra; preserved: Order up to the algebra; broken: Points
+
+
+### D7-205 Continuous Lattice Retraction (batch 9)
+
+- name: **unsupported** *"Continuous Lattice Retraction" is not a name the fetched source uses.*
+- description: **confirmed** [c] "is [[isomorphic]] to the [[image (mathematics)|image]] of a [[Scott-continuous]] [[idempotent map]]" *The source states retracts of powers of the two-point lattice {0,1}, which are algebraic lattices: the fill's parenthetical. Powers of [0,1] are not checked.*
+- input: **confirmed** [c] "Let <math>L</math> be a [[complete lattice]]. Then the following conditions are equivalent."
+- output: **confirmed** [c] "is [[isomorphic]] to the [[image (mathematics)|image]] of a [[Scott-continuous]] [[idempotent map]]"
+- preserved: **unsupported** *Injectivity in T0 spaces is not stated in the fetched source.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Nonstandard name; continuous lattices as retracts (Scott); description: Continuous lattices are the Scott-continuous retracts of algebraic lattices; injective T0 spaces; input: Continuous lattice; output: Retraction; preserved: Scott continuity; injectivity; broken: Algebraicity
+
+  c: excerpts/wikipedia-continuous-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1114750496)
+
+### D7-206 Algebraic Lattice Compactification (batch 9)
+
+- name: **unsupported** *Nonstandard name; no fetched source names it.*
+- description: **confirmed** [a] "A poset in which every element is the supremum of the directed set formed by the compact elements below it is called an ''algebraic poset''." *The ideal completion of the compact elements is not stated in the fetched source.*
+- input: **confirmed** [a] "If the poset ''P'' additionally is a [[semilattice|join-semilattice]]"
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [a] "the '''compact elements''' or '''finite elements''' of a [[partially ordered set]] are those elements that cannot be subsumed by a [[supremum]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Nonstandard name; description: An algebraic lattice is the ideal completion of its compact elements; input: Join-semilattice with 0 or algebraic lattice; output: Ideal lattice or compact elements; preserved: Order; broken: Nothing
+
+  a: excerpts/wikipedia-algebraic-poset.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375338724)
+
+### D7-207 Scott Topology Construction (batch 9)
+
+- name: **confirmed** [s] "The Scott-open subsets of a partially ordered set ''P'' form a [[topological space|topology]] on ''P,'' the '''Scott topolo"
+- description: **confirmed** [s] "is called '''Scott-open''' if it is an [[upper set]] and if it is '''inaccessible by directed joins'''" *That continuous maps are exactly the Scott-continuous ones is not quoted.*
+- input: **confirmed** [s] "The Scott topology was first defined by Dana Scott for [[complete lattice]]s and later defined for arbitrary partially ordered sets."
+- output: **confirmed** [s] "The Scott-open subsets of a partially ordered set ''P'' form a [[topological space|topology]] on ''P,'' the '''Scott topolo"
+- preserved: **confirmed** [s] "The order relation of a dcpo ''D'' can be reconstructed from the Scott-open sets as the specialization order induced by the Scott topology."
+- broken: **confirmed** [s] "it satisfies the [[T0 separation axiom|T<sub>0</sub> separation axiom]])" *T0; that it is not Hausdorff in general is not quoted.*
+- recalled: name: Standard; description: Open sets: up-sets inaccessible by directed joins; Scott-continuous maps are continuous; input: dcpo; output: Scott space; preserved: Specialization order is the order; broken: Only T0
+
+  s: excerpts/wikipedia-scott-continuity.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384071998)
+
+### D7-208 Lawson Topology Construction (batch 9)
+
+- name: **confirmed** [l] "The Lawson topology on ''P'' is the smallest common refinement of the lower topology and the [[Scott topology]] on&nbsp;''P''."
+- description: **confirmed** [l] "The Lawson topology on ''P'' is the smallest common refinement of the lower topology and the [[Scott topology]] on&nbsp;''P''." *Compact Hausdorff on continuous lattices is not in the fetched stub; it gives complete T1.*
+- input: **confirmed** [l] "The Lawson topology on ''P''"
+- output: **confirmed** [l] "is the smallest common refinement of the lower topology and the [[Scott topology]]"
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Join of Scott and lower topologies; compact Hausdorff on continuous lattices; input: Continuous lattice or domain; output: Lawson space; preserved: Order; broken: Unclear
+
+  l: excerpts/wikipedia-lawson-topology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1266264127)
+
+### D7-209 Modular Law Reduction (batch 9)
+
+- name: **confirmed** [m] ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}"
+- description: **confirmed** [m] ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}" *The fill's law, with a, x, b renamed x, y, z.*
+- input: **confirmed** [m] "a '''modular lattice''' is a [[lattice (order)|lattice]] that satisfies the following self-[[duality (order theory)|dual]] condition,"
+- output: **confirmed** [m] ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}"
+- preserved: **confirmed** [m] ";'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}" *An identity: the value is kept.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: x <= z implies x v (y ^ z) = (x v y) ^ z; input: Modular lattice term; output: Equal term; preserved: Value; broken: Nothing
+
+  m: excerpts/wikipedia-modular-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354333116)
+
+### D7-210 Distributive Law Reduction (batch 9)
+
+- name: **confirmed** [d] ": ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'')."
+- description: **confirmed** [d] ": ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'')." *The normal form (join of meets) is not quoted.*
+- input: **confirmed** [d] ": ''x'' ∨ (''y'' ∧ ''z'') = (''x'' ∨ ''y'') ∧ (''x'' ∨ ''z'') &nbsp; for all ''x'', ''y'', and ''z'' in ''L''."
+- output: **unsupported** *The normal form is not quoted.*
+- preserved: **confirmed** [d] ": ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'')."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Distribute meets over joins; disjunctive normal form; input: Distributive lattice term; output: Normal form; preserved: Value; broken: Shape
+
+  d: excerpts/wikipedia-distributive-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353478499)
+
+### D7-211 Semimodularity Transformation (batch 9)
+
+- name: **confirmed** [s] "a '''semimodular lattice''', is a [[lattice (order)|lattice]] that satisfies the following condition:" *"Transformation" is the fill's word.*
+- description: **imprecise** [s] "A lattice is sometimes called '''weakly semimodular''' if it satisfies the following condition due to [[Garrett Birkhoff]]:" [s] "Every semimodular lattice is weakly semimodular. The converse is true for lattices of finite length" [g] "a '''geometric lattice''' is a [[finite set|finite]] [[Atom (order theory)|atomistic]] [[semimodular lattice]]" *The fill's condition (a and b both cover their meet, then their join covers both) is Birkhoff's condition, weak semimodularity. Semimodularity is the stronger law (a ^ b covered by a implies b covered by a v b); the two agree for lattices of finite length. The matroid correspondence is right for finite atomistic semimodular lattices.*
+- input: **confirmed** [s] "a '''semimodular lattice''', is a [[lattice (order)|lattice]] that satisfies the following condition:"
+- output: **unsupported** *A rank function as output is not stated.*
+- preserved: **unsupported** *The Jordan-Dedekind condition is not stated in the fetched windows.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Nonstandard name; semimodular lattices standard; description: Covering condition; geometric lattices = semimodular atomistic = flats of matroids; input: Lattice; output: Verdict; rank; preserved: Jordan-Dedekind condition; broken: Nothing
+
+  s: excerpts/wikipedia-semimodular-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371018293)
+  g: excerpts/wikipedia-geometric-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353775762)
+
+### D7-212 Jordan-Dedekind Chain Reduction (batch 9)
+
+- name: **unsupported** *The name Jordan-Dedekind is not used in the fetched source; the condition is.*
+- description: **confirmed** [p] "admits a grading [[if and only if]] all [[maximal chain]]s in ''P'' have the same length" *Stated for bounded posets.*
+- input: **confirmed** [p] "A [[bounded poset]]"
+- output: **confirmed** [p] "a '''graded poset''' is a [[partially-ordered set]] (poset) ''P'' equipped with a '''rank function'''"
+- preserved: **confirmed** [p] "admits a grading [[if and only if]] all [[maximal chain]]s in ''P'' have the same length"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: All maximal chains between two elements have equal length; graded, rank function; input: Lattice or poset; output: Rank function; preserved: Chain lengths; broken: Nothing
+
+  p: excerpts/wikipedia-graded-poset.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1344462353)
+
+### D7-213 M\u00f6bius Inversion (batch 9)
+
+- name: **confirmed** [m] "A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]], with Möbius' classical formula applying"
+- description: **confirmed** [m] "A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]" *Rota's theory per the source.*
+- input: **confirmed** [m] "an arbitrary [[Locally finite poset|locally finite partially ordered set]]"
+- output: **confirmed** [i] "The [[multiplicative inverse]] of the zeta function is the '''Möbius function''' ''μ''(''a, b'')"
+- preserved: **confirmed** [i] "One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra" *An invertible transform.*
+- broken: **unsupported** *"Nothing" is not stated.*
+- recalled: name: Standard (Rota); description: Inversion over a locally finite poset with the Moebius function; input: Locally finite poset and function; output: Inverted function; preserved: Invertible; broken: Nothing
+
+  m: excerpts/wikipedia-mobius-inversion-formula.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1326604822)
+  i: excerpts/wikipedia-incidence-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047)
+
+### D7-214 Incidence Algebra Construction (batch 9)
+
+- name: **confirmed** [i] "Incidence algebras of locally finite posets were treated in a number of papers of [[Gian-Carlo Rota]] beginning in 1964"
+- description: **confirmed** [i] "One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra (with respect to the convolution defined above)." [i] "The [[multiplicative inverse]] of the zeta function is the '''Möbius function''' ''μ''(''a, b'')"
+- input: **confirmed** [i] "Incidence algebras of locally finite posets"
+- output: **confirmed** [i] "The incidence algebra of ≤ is then [[isomorphic]] to the algebra of upper-triangular matrices"
+- preserved: **unsupported** *That the incidence algebra determines P is not stated in the fetched source.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Functions on intervals with convolution; zeta and Moebius inverse; input: Locally finite poset and ring; output: Incidence algebra; preserved: Determines P; broken: Nothing
+
+  i: excerpts/wikipedia-incidence-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047)
+
+### D7-215 Chain Complex Construction (batch 9)
+
+- name: **confirmed** [c] "A '''chain complex''' <math>(A_\bullet, d_\bullet)</math> is a sequence of abelian groups or modules"
+- description: **confirmed** [c] "Explicitly, the differentials satisfy <math>d_n\circ d_{n+1}=0</math> for all <math>n</math>, or, concisely, <math>d^2=0</math>." [m] "theorem d_comp_d (C : HomologicalComplex V c) (i j k : ι) : C.d i j ≫ C.d j k = 0"
+- input: **confirmed** [c] "connected by homomorphisms (called '''boundary operators''' or '''differentials''')"
+- output: **confirmed** [m] "abbrev ChainComplex (α : Type*) [AddRightCancelSemigroup α] [One α] : Type _ :="
+- preserved: **confirmed** [c] "Associated to a chain complex is its [[Homology (mathematics)|homology]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Objects and maps with d d = 0; input: Sequence; output: Chain complex; preserved: Homology; broken: Nothing
+
+  c: excerpts/wikipedia-chain-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomologicalComplex.lean)
+
+### D7-216 Cochain Complex Construction (batch 9)
+
+- name: **confirmed** [c] "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math>"
+- description: **confirmed** [c] "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math> satisfying <math>d^{n+1}\circ d^{n}=0</mat"
+- input: **confirmed** [c] "It consists of a sequence of abelian groups or modules <math>\cdots, A^0, A^1, A^2,\dots</math>"
+- output: **confirmed** [m] "abbrev CochainComplex (α : Type*) [AddRightCancelSemigroup α] [One α] : Type _ :="
+- preserved: **confirmed** [c] "The homology of a cochain complex is called its [[cohomology]]."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Dual with degree-raising differential; input: Sequence; output: Cochain complex; preserved: Cohomology; broken: Nothing
+
+  c: excerpts/wikipedia-chain-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomologicalComplex.lean)
+
+### D7-217 Boundary Operator Application (batch 9)
+
+- name: **confirmed** [c] "connected by homomorphisms (called '''boundary operators''' or '''differentials''')"
+- description: **confirmed** [c] "The elements in the kernel of <math>d</math> are called '''(co)cycles''' (or '''closed''' elements), and the elements in the image of ''d'' are called '''(co)boundaries''' (or '''exact''' elements)."
+- input: **confirmed** [c] "A '''chain complex''' <math>(A_\bullet, d_\bullet)</math> is a sequence of abelian groups or modules"
+- output: **confirmed** [c] "connected by homomorphisms (called '''boundary operators''' or '''differentials''')"
+- preserved: **confirmed** [c] "Explicitly, the differentials satisfy <math>d_n\circ d_{n+1}=0</math> for all <math>n</math>, or, concisely, <math>d^2=0</math>."
+- broken: **unsupported** *"Interior of the chain" is a gloss.*
+- recalled: name: Standard; description: Apply d; cycles kernel, boundaries image; input: Chain; output: Chain of lower degree; preserved: d d = 0; broken: Unclear
+
+  c: excerpts/wikipedia-chain-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415)
+
+### D7-218 Coboundary Operator Application (batch 9)
+
+- name: **confirmed** [c] "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math>"
+- description: **confirmed** [c] "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math>" *The de Rham case is not checked.*
+- input: **confirmed** [c] "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math>"
+- output: **confirmed** [c] "connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math>"
+- preserved: **confirmed** [c] "satisfying <math>d^{n+1}\circ d^{n}=0</mat"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Coboundary; exterior derivative for de Rham; input: Cochain; output: Cochain of higher degree; preserved: d d = 0; broken: Unclear
+
+  c: excerpts/wikipedia-chain-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415)
+
+### D7-219 Homology Group Extraction (batch 9)
+
+- name: **confirmed** [c] "Associated to a chain complex is its [[Homology (mathematics)|homology]], which is (loosely speaking) a measure of the failure of a chain complex to be [[Exact sequence|exact]]."
+- description: **confirmed** [h] "a '''cycle''' is any element of the [[Kernel (category theory)|kernel]]" [h] "The statement that the boundary of a boundary is trivial is equivalent to the statement that <math>\operatorname{im}(\partial_{n+1})\subseteq\ker(\partial_n)</math>"
+- input: **confirmed** [c] "Associated to a chain complex is its [[Homology (mathematics)|homology]]"
+- output: **confirmed** [m] "noncomputable def homology := (K.sc i).homology"
+- preserved: **confirmed** [c] "and is a commonly used [[topological invariant|invariant]] of a topological space." *Homotopy and quasi-isomorphism invariance are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: ker d / im d; input: Chain complex; output: Homology; preserved: Homotopy and quasi-isomorphism invariance; broken: Chain-level detail
+
+  h: excerpts/wikipedia-homology-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383111498)
+  c: excerpts/wikipedia-chain-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.HomologicalComplex.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ShortComplex/HomologicalComplex.lean)
+
+### D7-220 Cohomology Group Extraction (batch 9)
+
+- name: **confirmed** [c] "The homology of a cochain complex is called its [[cohomology]]."
+- description: **confirmed** [c] "The homology of a cochain complex is called its [[cohomology]]." [o] "The most important cohomology theories have a product, the [[cup product]], which gives them a [[ring (mathematics)|ring]] structure."
+- input: **confirmed** [c] "The homology of a cochain complex is called its [[cohomology]]."
+- output: **confirmed** [o] "into a [[graded ring]], called the '''[[cohomology ring]]''' of <math>X</math>."
+- preserved: **unsupported** *Quasi-isomorphism invariance is not quoted.*
+- broken: **unsupported** *Massey products are not discussed in the fetched windows.*
+- recalled: name: Standard; description: ker d / im d; cup product ring; input: Cochain complex; output: Cohomology; preserved: Quasi-isomorphism invariance; broken: Massey products
+
+  c: excerpts/wikipedia-chain-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415)
+  o: excerpts/wikipedia-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377746958)
+
+### D7-221 Projective Resolution Construction (batch 9)
+
+- name: **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- description: **confirmed** [r] "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+- input: **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''" *Modules; enough projectives in general is not quoted.*
+- output: **confirmed** [m] "structure ProjectiveResolution (Z : C) where"
+- preserved: **confirmed** [r] "Projective resolution of a module <math>M</math> is unique up to a [[chain homotopy]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Exact complex of projectives over M; unique up to homotopy; input: Object with enough projectives; output: Projective resolution; preserved: Unique up to homotopy; broken: One object becomes a complex
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean)
+
+### D7-222 Injective Resolution Construction (batch 9)
+
+- name: **confirmed** [r] "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+- description: **confirmed** [r] "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+- input: **confirmed** [r] "Dually, every <math>R</math>-module possesses an injective resolution."
+- output: **confirmed** [m] "structure InjectiveResolution (Z : C) where"
+- preserved: **unsupported** *Uniqueness up to homotopy is quoted for projective resolutions only.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Dual with injectives; input: Object with enough injectives; output: Injective resolution; preserved: Unique up to homotopy; broken: Same
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean)
+
+### D7-223 Flat Resolution Construction (batch 9)
+
+- name: **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- description: **confirmed** [r] "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s."
+- input: **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- output: **confirmed** [r] "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+- preserved: **confirmed** [r] "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Resolution by flat modules; computes Tor; input: Module; output: Flat resolution; preserved: Tor; broken: Uniqueness up to homotopy
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+
+### D7-224 Cartan-Eilenberg Resolution (batch 9)
+
+- name: **confirmed** [c] "Then a '''Cartan–Eilenberg resolution''' of <math>A_{*}</math> is an upper half-plane [[double complex]]"
+- description: **confirmed** [c] "Then a '''Cartan–Eilenberg resolution''' of <math>A_{*}</math> is an upper half-plane [[double complex]]" [c] "It can be used to construct [[#Hyper-derived functors|hyper-derived functors]]."
+- input: **confirmed** [c] "be an [[Abelian category]] with [[enough projectives]], and let <math>A_{*}</math> be a chain complex with objects in <math>\mathcal{A}</math>."
+- output: **confirmed** [c] "is an upper half-plane [[double complex]]"
+- preserved: **confirmed** [c] "It can be used to construct [[#Hyper-derived functors|hyper-derived functors]]." *Hypertor and hyperext as instances; the homology of the complex is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Cartan and Eilenberg); description: Double complex resolving terms, cycles, boundaries and homology; hyperderived functors; input: Complex in abelian category; output: Double complex; preserved: Hyperhomology; broken: Nothing
+
+  c: excerpts/wikipedia-cartan-eilenberg-resolution.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1190110659)
+
+### D7-225 Horseshoe Lemma Construction (batch 9)
+
+- name: **confirmed** [h] "It says that if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>, then a resolution of <math>A</math> can be built up"
+- description: **confirmed** [h] "It says that if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>, then a resolution of <math>A</math> can be built up"
+- input: **confirmed** [h] "if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>"
+- output: **confirmed** [h] "then a resolution of <math>A</math> can be built up"
+- preserved: **confirmed** [h] "Then the [[snake lemma]] is invoked to show that the simultaneous resolution constructed so far has exact rows." *Long exact sequences of derived functors are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Resolution of the middle term from resolutions of the ends; input: Short exact sequence and resolutions; output: Compatible resolution; preserved: Long exact sequences; broken: Nothing
+
+  h: excerpts/wikipedia-horseshoe-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1349920892)
 

@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Incidence algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0b19206a3b6bcf84f9f572071514c8bb4d3859dc9068bf5605ea3b3c7e40acb0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The [[multiplicative inverse]] of the zeta function is the '''Möbius function''' ''μ''(''a, b'')
+
+One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra
+
+Incidence algebras of locally finite posets were treated in a number of papers of [[Gian-Carlo Rota]] beginning in 1964
+
+One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra (with respect to the convolution defined above).
+
+Incidence algebras of locally finite posets
+
+The incidence algebra of ≤ is then [[isomorphic]] to the algebra of upper-triangular matrices

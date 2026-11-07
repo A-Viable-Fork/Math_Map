@@ -4,3 +4,7 @@ Fetched: 2026-11-07. SHA-256 of the page source as fetched: a3a0eb9b5f9fd8eb1bbd
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 A poset in which every element is the supremum of the directed set formed by the compact elements below it is called an ''algebraic poset''.
+
+If the poset ''P'' additionally is a [[semilattice|join-semilattice]]
+
+the '''compact elements''' or '''finite elements''' of a [[partially ordered set]] are those elements that cannot be subsumed by a [[supremum]]

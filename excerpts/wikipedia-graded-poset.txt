@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Graded poset (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1344462353
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5b7321656a9fda817839f5ba125541fe4955b11dc352266550d2f87f88a70a9f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+admits a grading [[if and only if]] all [[maximal chain]]s in ''P'' have the same length
+
+A [[bounded poset]]
+
+a '''graded poset''' is a [[partially-ordered set]] (poset) ''P'' equipped with a '''rank function'''
