@@ -23577,6 +23577,802 @@
    "sources": {
     "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1363413194"
    }
+  },
+  {
+   "id": "D7-402",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-killing-form-r.txt",
+    "c": "excerpts/mathlib-Mathlib.Algebra.Lie.CartanCriterion.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the '''Killing form''', named after [[Wilhelm Killing]], is a [[symmetric bilinear form]]",
+     "note": "The source says Cartan introduced it in 1894; the name came later."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": ":<math>B(x, y) = \\operatorname{trace}(\\operatorname{ad}(x) \\circ \\operatorname{ad}(y)),</math>",
+     "more": [
+      {
+       "src": "k",
+       "quote": "* The [[Cartan criterion]] states that a Lie algebra is [[semisimple Lie algebra|semisimple]] if and only if the Killing form is [[degenerate form|non-degenerate]]."
+      },
+      {
+       "src": "c",
+       "quote": "HasTrivialRadical R L ↔ IsKilling R L"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Now, supposing <math>\\mathfrak g</math> is of finite dimension, the [[trace of a matrix|trace]] of the composition of two such endomorphisms defines a [[symmetric bilinear form]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "* The Killing form {{math|''B''}} is bilinear and symmetric."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "* The Killing form is an invariant form",
+     "more": [
+      {
+       "src": "k",
+       "quote": "::<math>B([x, y], z) = B(x, [y, z])</math>"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369246472",
+    "c": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/CartanCriterion.lean"
+   }
+  },
+  {
+   "id": "D7-403",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cartan-subalgebra-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''Cartan subalgebra''', often abbreviated as '''CSA''', is a [[nilpotent Lie algebra|nilpotent]] [[subalgebra]] <math>\\mathfrak{h}</math> of a [[Lie algebra]] <math>\\mathfrak{g}</math> that is [[self-normalising]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''Cartan subalgebra''', often abbreviated as '''CSA''', is a [[nilpotent Lie algebra|nilpotent]] [[subalgebra]] <math>\\mathfrak{h}</math> of a [[Lie algebra]] <math>\\mathfrak{g}</math> that is [[self-normalising]]",
+     "more": [
+      {
+       "src": "c",
+       "quote": "a Cartan subalgebra can also be defined as a maximal toral subalgebra."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "of a [[Lie algebra]] <math>\\mathfrak{g}</math> that is [[self-normalising]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''Cartan subalgebra''', often abbreviated as '''CSA'''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The common dimension of a Cartan subalgebra is then called the"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374197769"
+   }
+  },
+  {
+   "id": "D7-404",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-dynkin-diagram.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Dynkin diagram''', named for [[Eugene Dynkin]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The fundamental interest in Dynkin diagrams is that they classify [[semisimple Lie algebra]]s over [[algebraically closed field]]s.",
+     "note": "The source classifies semisimple algebras; the fill says simple.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "* <math>A_n</math>: <math>\\mathfrak {sl}_{n+1}</math>, the [[special linear Lie algebra]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "One classifies such Lie algebras via their [[root system]], which can be represented by a Dynkin diagram."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "One classifies such Lie algebras via their [[root system]], which can be represented by a Dynkin diagram."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The fundamental interest in Dynkin diagrams is that they classify [[semisimple Lie algebra]]s",
+     "note": "A classifying invariant keeps the isomorphism class."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376814181"
+   }
+  },
+  {
+   "id": "D7-405",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-highest-weight-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''theorem of the highest weight''' classifies the"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "from the set of \"dominant integral elements\" to the set of equivalence classes of irreducible representations"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "*For each dominant integral element <math>\\lambda</math>, there exists a finite-dimensional irreducible representation with highest weight <math>\\lambda</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "*For each dominant integral element <math>\\lambda</math>, there exists a finite-dimensional irreducible representation with highest weight <math>\\lambda</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "then <math>V</math> has a unique highest weight, and this highest weight is dominant integral."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354564531"
+   }
+  },
+  {
+   "id": "D7-406",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-schurs-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "{{Short description|Homomorphisms between simple modules over the same ring are isomorphisms or zero}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Homomorphisms between simple modules over the same ring are isomorphisms or zero",
+     "more": [
+      {
+       "src": "s",
+       "quote": "then the only nontrivial {{nowrap|''G''-linear}} maps are the identity, and scalar multiples of the identity."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "be irreducible representations of ''G'' on ''V'' and ''W'' respectively."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "then either ''φ'' is [[invertible function|invertible]], or ''φ'' = 0."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1363731042"
+   }
+  },
+  {
+   "id": "D7-407",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quillens-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "'''Quillen's lemma''' states that an [[endomorphism]] of a [[simple module]] over the [[universal enveloping algebra|enveloping algebra]] of a finite-dimensional [[Lie algebra]] over a [[field (mathematics)|field]] ''k'' is algebraic over&nbsp;''k''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "'''Quillen's lemma''' states that an [[endomorphism]] of a [[simple module]] over the [[universal enveloping algebra|enveloping algebra]] of a finite-dimensional [[Lie algebra]] over a [[field (mathematics)|field]] ''k'' is algebraic over&nbsp;''k''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "of a [[simple module]] over the [[universal enveloping algebra|enveloping algebra]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "is algebraic over&nbsp;''k''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Central characters are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1306765112"
+   }
+  },
+  {
+   "id": "D7-408",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-whiteheads-lemma-lie.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "'''Whitehead's lemmas''' (named after [[J. H. C. Whitehead]])"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "this is, by definition, equivalent to the fact that <math>H^1(\\mathfrak{g},V) = 0</math> for every such representation.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "Similarly, Whitehead's second lemma states that under the conditions of the first lemma, also <math>H^2(\\mathfrak{g},V) = 0</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Let <math>\\mathfrak{g}</math> be a finite-dimensional, semisimple Lie [[algebra over a field]] of characteristic zero, ''V'' a finite-dimensional [[Lie_algebra_representation#Formal_definition|module]] over it"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Similarly, Whitehead's second lemma states that under the conditions of the first lemma, also <math>H^2(\\mathfrak{g},V) = 0</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The first Whitehead lemma is an important step toward the proof of [[Weyl's theorem on complete reducibility]].",
+     "note": "A consequence the fill files as preserved; the Levi decomposition is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1335064604"
+   }
+  },
+  {
+   "id": "D7-409",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-verma-module.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "'''Verma modules''', named after [[Daya-Nand Verma]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": ": <math>W_\\lambda := U(\\mathfrak{g}) \\otimes_{U(\\mathfrak{b})} F_\\lambda</math>.",
+     "note": "Universality is not quoted.",
+     "more": [
+      {
+       "src": "v",
+       "quote": "We let <math>\\mathfrak{b}</math> be the subalgebra of <math>\\mathfrak{g}</math> spanned by <math>\\mathfrak{h}</math> and the root vectors <math>X_\\alpha</math> with <math>\\alpha\\in R^+</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "Now let <math>\\lambda\\in\\mathfrak{h}^*</math> be an arbitrary linear functional, not necessarily dominant or integral."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": ": <math>W_\\lambda := U(\\mathfrak{g}) \\otimes_{U(\\mathfrak{b})} F_\\lambda</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "Our goal is to construct a representation <math>W_\\lambda</math> of <math>\\mathfrak{g}</math> with highest weight <math>\\lambda</math>"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "<math>W_\\lambda</math> contains a unique maximal [[submodule]], and its quotient is the unique (up to [[isomorphism]]) [[irreducible representation]] with highest weight <math>\\lambda.</math>",
+     "note": "The irreducible is a proper quotient when the maximal submodule is nonzero."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365071954"
+   }
+  },
+  {
+   "id": "D7-410",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-weyls-theorem-complete-reducibility.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "'''Weyl's theorem on complete reducibility''' is a fundamental result"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The theorem states that every finite-dimensional module over <math>\\mathfrak{g}</math> is [[semisimple representation|semisimple]] as a module (i.e., a direct sum of simple modules.)",
+     "note": "Compact groups are not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "every finite-dimensional module over <math>\\mathfrak{g}</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "(i.e., a direct sum of simple modules.)"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Characters are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1366424424"
+   }
+  },
+  {
+   "id": "D7-411",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-borel-subalgebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "a '''Borel subalgebra''' of a [[Lie algebra]] <math>\\mathfrak{g}</math> is a maximal [[solvable Lie algebra|solvable]] subalgebra."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "a '''Borel subalgebra''' of a [[Lie algebra]] <math>\\mathfrak{g}</math> is a maximal [[solvable Lie algebra|solvable]] subalgebra.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "Then <math>\\mathfrak b = \\mathfrak h \\oplus \\mathfrak n^+</math> is the Borel subalgebra relative to the above setup."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Let <math>\\mathfrak g</math> be a complex [[semisimple Lie algebra]], <math>\\mathfrak h</math> a [[Cartan subalgebra]] and ''R'' the [[root system]] associated to them."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Then <math>\\mathfrak b = \\mathfrak h \\oplus \\mathfrak n^+</math> is the Borel subalgebra relative to the above setup."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Choosing a base of ''R'' gives the notion of positive roots."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Then <math>\\mathfrak g</math> has the decomposition <math>\\mathfrak g = \\mathfrak n^- \\oplus \\mathfrak h \\oplus \\mathfrak n^+</math>",
+     "note": "The Borel subalgebra omits n^-, the negative root spaces."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1223580331"
+   }
+  },
+  {
+   "id": "D7-412",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-levi-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''Levi decomposition''', conjectured by [[Wilhelm Killing]]",
+     "more": [
+      {
+       "src": "l",
+       "quote": "| first proof by = [[Eugenio Elia Levi]]"
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "states that any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero is the [[semidirect product]] of a [[solvable Lie algebra|solvable]] ideal and a [[semisimple Lie algebra|semisimple]] subalgebra."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "One is its [[radical of a Lie algebra|'''radical''']], a maximal solvable ideal, and the other is a semisimple subalgebra, called a '''Levi subalgebra'''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Moreover, [[Malcev]] (1942) showed that any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form",
+     "note": "Unique up to conjugacy, so not unique."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1348071378"
+   }
+  },
+  {
+   "id": "D7-413",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-levi-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source calls Levi conjugacy a Mal'cev decomposition."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Moreover, [[Malcev]] (1942) showed that any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form",
+     "note": "The source credits Malcev (1942), calling it the Levi-Malcev theorem; Harish-Chandra and the group completion are not quoted.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "where ''z'' is in the [[Nilradical of a Lie algebra|nilradical]] ('''Levi–Malcev theorem''')."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1348071378"
+   }
+  },
+  {
+   "id": "D7-414",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-ados-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "'''Ado's theorem''' is a theorem characterizing finite-dimensional [[Lie algebra]]s.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "The theorem was proved in 1935 by [[Igor Dmitrievich Ado]]"
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the theorem states that ''L'' has a [[linear representation]] ρ over ''K'', on a [[finite-dimensional vector space]] ''V'', that is a [[faithful representation]]",
+     "note": "Iwasawa later removed the characteristic restriction, per the source."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "every finite-dimensional [[Lie algebra]] ''L'' over a [[field (mathematics)|field]] ''K'' of [[characteristic zero]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "that is a [[faithful representation]], making ''L'' isomorphic to a subalgebra of the [[endomorphism]]s of ''V''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "can be viewed as a Lie algebra of [[square matrices]] under the [[commutator bracket]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1339152559"
+   }
+  },
+  {
+   "id": "D7-415",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-iwasawa-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the '''Iwasawa decomposition''' (aka '''KAN''' from its expression) of a [[semisimple Lie group]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": ":<math>G=KAN</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "*''G'' is a connected semisimple real [[Lie group]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is a [[nilpotent Lie algebra]] given as the  sum of the root spaces of Σ<sup>+</sup>",
+     "note": "K compact is said for the disconnected case; the abelian and nilpotent factors are quoted.",
+     "more": [
+      {
+       "src": "i",
+       "quote": "is a maximal abelian subalgebra of <math> \\mathfrak{p}_0 </math>"
+      },
+      {
+       "src": "i",
+       "quote": "where ''K'' becomes a (disconnected) [[maximal compact subgroup]]"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "meaning there is an analytic [[diffeomorphism]] (but not a group homomorphism) from the [[manifold]] <math> K \\times A \\times N </math> to the Lie group <math> G </math>"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "(but not a group homomorphism)"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378613303"
+   }
+  },
+  {
+   "id": "D7-416",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-kazhdan-lusztig.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a '''Kazhdan–Lusztig polynomial''' <math>P_{y,w}(q)</math> is a member of a family of integral polynomials introduced by"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The elements <math>C'_w</math> form a basis of the Hecke algebra as a <math>\\mathbb{Z}[q^{1/2}, q^{-1/2}]</math>-module, called the Kazhdan–Lusztig basis.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "In their first paper Kazhdan and Lusztig mentioned that their polynomials were related to the failure of local [[Poincaré duality]] for [[Schubert variety|Schubert varieties]]."
+      },
+      {
+       "src": "k",
+       "quote": "so the dimensions of all such [[Ext groups]] in category ''O'' are determined in terms of coefficients of Kazhdan–Lusztig polynomials."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Fix a Coxeter group ''W'' with generating set ''S''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a '''Kazhdan–Lusztig polynomial''' <math>P_{y,w}(q)</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "*They are 0 unless ''y'' ≤ ''w'' (in the [[Bruhat order]] of ''W''), 1 if ''y'' = ''w''",
+     "note": "Positivity and its proof by Elias and Williamson are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1368588081"
+   }
+  },
+  {
+   "id": "D7-465",
+   "batch": 17,
+   "why": "Fill review, batch 17: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-mobius-inversion.txt",
+    "n": "excerpts/wikipedia-incidence-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]",
+     "note": "The poset reading the fill takes."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Multiplying by ''μ'' is analogous to [[derivative|differentiation]], and is called [[Möbius inversion]].",
+     "note": "The complex Moebius map, the other reading, is not graded."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Multiplying by ''μ'' is analogous to [[derivative|differentiation]], and is called [[Möbius inversion]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra",
+     "note": "Invertible, so no information is lost."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1326604822",
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047"
+   }
   }
  ]
 }

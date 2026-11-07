@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Dynkin diagram (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376814181
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b1bea72b62284498d7babd7dd98ee9b520f3f32b26c9df0f1c65d6c4d274a822
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Dynkin diagram''', named for [[Eugene Dynkin]]
+
+The fundamental interest in Dynkin diagrams is that they classify [[semisimple Lie algebra]]s over [[algebraically closed field]]s.
+
+* <math>A_n</math>: <math>\mathfrak {sl}_{n+1}</math>, the [[special linear Lie algebra]].
+
+One classifies such Lie algebras via their [[root system]], which can be represented by a Dynkin diagram.
+
+The fundamental interest in Dynkin diagrams is that they classify [[semisimple Lie algebra]]s

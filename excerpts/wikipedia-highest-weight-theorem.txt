@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Theorem of the highest weight (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354564531
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 51e52f678de385ab24d9a637de08e0c131822699d4ba5e78b9d5360ef15b1390
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''theorem of the highest weight''' classifies the
+
+from the set of "dominant integral elements" to the set of equivalence classes of irreducible representations
+
+*For each dominant integral element <math>\lambda</math>, there exists a finite-dimensional irreducible representation with highest weight <math>\lambda</math>.
+
+then <math>V</math> has a unique highest weight, and this highest weight is dominant integral.

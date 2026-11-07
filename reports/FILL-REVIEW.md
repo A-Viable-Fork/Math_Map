@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 400 of 416 D7 stubs, 0 of 79 homes; 400 entries in 16 batches.
+Reviewed: 416 of 416 D7 stubs, 0 of 79 homes; 416 entries in 17 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (400 entries)
+### D7 stubs (416 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 367 | 0 | 0 | 33 |
-| description | 363 | 7 | 0 | 30 |
-| input | 336 | 3 | 0 | 61 |
-| output | 338 | 0 | 0 | 62 |
-| preserved | 261 | 2 | 0 | 137 |
-| broken | 121 | 4 | 0 | 275 |
-| **all** | 1786 | 16 | 0 | 598 |
+| name | 382 | 0 | 0 | 34 |
+| description | 379 | 7 | 0 | 30 |
+| input | 352 | 3 | 0 | 61 |
+| output | 354 | 0 | 0 | 62 |
+| preserved | 272 | 2 | 0 | 142 |
+| broken | 125 | 4 | 0 | 287 |
+| **all** | 1864 | 16 | 0 | 616 |
 
 ## 2. Recall against source
 
@@ -44,7 +44,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 14 | 25 | 113 | 0 | 0% |
 | 15 | 25 | 106 | 1 | 1% |
 | 16 | 25 | 94 | 0 | 0% |
-| **all** | 400 | 1802 | 6 | 0% |
+| 17 | 16 | 78 | 0 | 0% |
+| **all** | 416 | 1880 | 6 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -63,7 +64,7 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-376 description: sample unsupported, review confirmed.
 - D7-376 output: sample unsupported, review confirmed.
 
-Agreement: 72 of 84 fields.
+Agreement: 78 of 90 fields.
 
 ## 4. Sources in disagreement
 
@@ -382,6 +383,19 @@ Every field not confirmed, with the reason.
 - **D7-399 Jordan-Chevalley Decomposition** (batch 16): *broken* unsupported: Not stated.
 - **D7-400 Root Space Decomposition** (batch 16): *preserved* unsupported: Not stated.
 - **D7-401 Weyl Character Formula Application** (batch 16): *broken* unsupported: Not stated.
+- **D7-402 Killing Form Evaluation** (batch 17): *broken* unsupported: Not stated.
+- **D7-403 Cartan Subalgebra Extraction** (batch 17): *broken* unsupported: Not stated.
+- **D7-404 Dynkin Diagram Classification** (batch 17): *broken* unsupported: Not stated.
+- **D7-405 Highest Weight Representation** (batch 17): *broken* unsupported: Not stated.
+- **D7-406 Schur's Lemma Application** (batch 17): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-407 Quillen's Lemma Application** (batch 17): *preserved* unsupported: Central characters are not quoted. *broken* unsupported: Not stated.
+- **D7-408 Whitehead's Lemma Resolution** (batch 17): *broken* unsupported: Not stated.
+- **D7-410 Weyl's Complete Reducibility Transformation** (batch 17): *preserved* unsupported: Characters are not quoted. *broken* unsupported: Not stated.
+- **D7-412 Levi Decomposition** (batch 17): *preserved* unsupported: Not stated.
+- **D7-413 Mal'cev Decomposition** (batch 17): *name* unsupported: No fetched source calls Levi conjugacy a Mal'cev decomposition. *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-414 Ado's Theorem Matrix Embedding** (batch 17): *broken* unsupported: Not stated.
+- **D7-416 Kazhdan-Lusztig Polynomial Transformation** (batch 17): *broken* unsupported: Not stated.
+- **D7-465 M\u00f6bius Transform** (batch 17): *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -5309,4 +5323,198 @@ actions defining an optic"
 - recalled: name: Standard (Weyl); description: Alternating sum over Weyl group over Weyl denominator; input: Highest weight; output: Character; preserved: Multiplicities; broken: Nothing
 
   w: excerpts/wikipedia-weyl-character-formula.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363413194)
+
+### D7-402 Killing Form Evaluation (batch 17)
+
+- name: **confirmed** [k] "the '''Killing form''', named after [[Wilhelm Killing]], is a [[symmetric bilinear form]]" *The source says Cartan introduced it in 1894; the name came later.*
+- description: **confirmed** [k] ":<math>B(x, y) = \operatorname{trace}(\operatorname{ad}(x) \circ \operatorname{ad}(y)),</math>" [k] "* The [[Cartan criterion]] states that a Lie algebra is [[semisimple Lie algebra|semisimple]] if and only if the Killing form is [[degenerate form|non-degenerate]]." [c] "HasTrivialRadical R L ↔ IsKilling R L"
+- input: **confirmed** [k] "Now, supposing <math>\mathfrak g</math> is of finite dimension, the [[trace of a matrix|trace]] of the composition of two such endomorphisms defines a [[symmetric bilinear form]]"
+- output: **confirmed** [k] "* The Killing form {{math|''B''}} is bilinear and symmetric."
+- preserved: **confirmed** [k] "* The Killing form is an invariant form" [k] "::<math>B([x, y], z) = B(x, [y, z])</math>"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: B(x,y) = tr(ad x ad y); Cartan's criterion: nondegenerate iff semisimple (char 0); input: Lie algebra; output: Invariant symmetric form; preserved: Invariance; broken: Nothing
+
+  k: excerpts/wikipedia-killing-form-r.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369246472)
+  c: excerpts/mathlib-Mathlib.Algebra.Lie.CartanCriterion.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/CartanCriterion.lean)
+
+### D7-403 Cartan Subalgebra Extraction (batch 17)
+
+- name: **confirmed** [c] "a '''Cartan subalgebra''', often abbreviated as '''CSA''', is a [[nilpotent Lie algebra|nilpotent]] [[subalgebra]] <math>\mathfrak{h}</math> of a [[Lie algebra]] <math>\mathfrak{g}</math> that is [[self-normalising]]"
+- description: **confirmed** [c] "a '''Cartan subalgebra''', often abbreviated as '''CSA''', is a [[nilpotent Lie algebra|nilpotent]] [[subalgebra]] <math>\mathfrak{h}</math> of a [[Lie algebra]] <math>\mathfrak{g}</math> that is [[self-normalising]]" [c] "a Cartan subalgebra can also be defined as a maximal toral subalgebra."
+- input: **confirmed** [c] "of a [[Lie algebra]] <math>\mathfrak{g}</math> that is [[self-normalising]]"
+- output: **confirmed** [c] "a '''Cartan subalgebra''', often abbreviated as '''CSA'''"
+- preserved: **confirmed** [c] "The common dimension of a Cartan subalgebra is then called the"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Nilpotent self-normalizing subalgebra; maximal toral for semisimple; input: Lie algebra; output: Cartan subalgebra; preserved: Rank; broken: Off-diagonal part
+
+  c: excerpts/wikipedia-cartan-subalgebra-r.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374197769)
+
+### D7-404 Dynkin Diagram Classification (batch 17)
+
+- name: **confirmed** [d] "a '''Dynkin diagram''', named for [[Eugene Dynkin]]"
+- description: **confirmed** [d] "The fundamental interest in Dynkin diagrams is that they classify [[semisimple Lie algebra]]s over [[algebraically closed field]]s." [d] "* <math>A_n</math>: <math>\mathfrak {sl}_{n+1}</math>, the [[special linear Lie algebra]]." *The source classifies semisimple algebras; the fill says simple.*
+- input: **confirmed** [d] "One classifies such Lie algebras via their [[root system]], which can be represented by a Dynkin diagram."
+- output: **confirmed** [d] "One classifies such Lie algebras via their [[root system]], which can be represented by a Dynkin diagram."
+- preserved: **confirmed** [d] "The fundamental interest in Dynkin diagrams is that they classify [[semisimple Lie algebra]]s" *A classifying invariant keeps the isomorphism class.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Simple roots and Cartan matrix; classification A to G; input: Root system; output: Dynkin diagram; preserved: Isomorphism class; broken: Nothing
+
+  d: excerpts/wikipedia-dynkin-diagram.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376814181)
+
+### D7-405 Highest Weight Representation (batch 17)
+
+- name: **confirmed** [h] "the '''theorem of the highest weight''' classifies the"
+- description: **confirmed** [h] "from the set of "dominant integral elements" to the set of equivalence classes of irreducible representations"
+- input: **confirmed** [h] "*For each dominant integral element <math>\lambda</math>, there exists a finite-dimensional irreducible representation with highest weight <math>\lambda</math>."
+- output: **confirmed** [h] "*For each dominant integral element <math>\lambda</math>, there exists a finite-dimensional irreducible representation with highest weight <math>\lambda</math>."
+- preserved: **confirmed** [h] "then <math>V</math> has a unique highest weight, and this highest weight is dominant integral."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Cartan; Weyl); description: Irreducibles classified by dominant integral highest weights; input: Dominant weight; output: Irreducible representation; preserved: Weights; broken: Nothing
+
+  h: excerpts/wikipedia-highest-weight-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354564531)
+
+### D7-406 Schur's Lemma Application (batch 17)
+
+- name: **confirmed** [s] "{{Short description|Homomorphisms between simple modules over the same ring are isomorphisms or zero}}"
+- description: **confirmed** [s] "Homomorphisms between simple modules over the same ring are isomorphisms or zero" [s] "then the only nontrivial {{nowrap|''G''-linear}} maps are the identity, and scalar multiples of the identity."
+- input: **confirmed** [s] "be irreducible representations of ''G'' on ''V'' and ''W'' respectively."
+- output: **confirmed** [s] "then either ''φ'' is [[invertible function|invertible]], or ''φ'' = 0."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Schur); description: Maps between simple modules are zero or isomorphisms; scalars over algebraically closed fields; input: Simple modules; output: Hom; preserved: Simplicity; broken: Nothing
+
+  s: excerpts/wikipedia-schurs-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363731042)
+
+### D7-407 Quillen's Lemma Application (batch 17)
+
+- name: **confirmed** [q] "'''Quillen's lemma''' states that an [[endomorphism]] of a [[simple module]] over the [[universal enveloping algebra|enveloping algebra]] of a finite-dimensional [[Lie algebra]] over a [[field (mathematics)|field]] ''k'' is algebraic over&nbsp;''k''."
+- description: **confirmed** [q] "'''Quillen's lemma''' states that an [[endomorphism]] of a [[simple module]] over the [[universal enveloping algebra|enveloping algebra]] of a finite-dimensional [[Lie algebra]] over a [[field (mathematics)|field]] ''k'' is algebraic over&nbsp;''k''."
+- input: **confirmed** [q] "of a [[simple module]] over the [[universal enveloping algebra|enveloping algebra]]"
+- output: **confirmed** [q] "is algebraic over&nbsp;''k''."
+- preserved: **unsupported** *Central characters are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Quillen 1969); description: Endomorphisms of simple U(g)-modules are algebraic; input: Simple U(g)-module; output: Endomorphism ring; preserved: Central character; broken: Nothing
+
+  q: excerpts/wikipedia-quillens-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1306765112)
+
+### D7-408 Whitehead's Lemma Resolution (batch 17)
+
+- name: **confirmed** [w] "'''Whitehead's lemmas''' (named after [[J. H. C. Whitehead]])"
+- description: **confirmed** [w] "this is, by definition, equivalent to the fact that <math>H^1(\mathfrak{g},V) = 0</math> for every such representation." [w] "Similarly, Whitehead's second lemma states that under the conditions of the first lemma, also <math>H^2(\mathfrak{g},V) = 0</math>."
+- input: **confirmed** [w] "Let <math>\mathfrak{g}</math> be a finite-dimensional, semisimple Lie [[algebra over a field]] of characteristic zero, ''V'' a finite-dimensional [[Lie_algebra_representation#Formal_definition|module]] over it"
+- output: **confirmed** [w] "Similarly, Whitehead's second lemma states that under the conditions of the first lemma, also <math>H^2(\mathfrak{g},V) = 0</math>."
+- preserved: **confirmed** [w] "The first Whitehead lemma is an important step toward the proof of [[Weyl's theorem on complete reducibility]]." *A consequence the fill files as preserved; the Levi decomposition is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Whitehead); description: H^1 and H^2 vanish for finite-dimensional modules of semisimple Lie algebras (char 0); input: Semisimple Lie algebra and module; output: Vanishing; preserved: Complete reducibility; Levi; broken: Nothing
+
+  w: excerpts/wikipedia-whiteheads-lemma-lie.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1335064604)
+
+### D7-409 Verma Module Construction (batch 17)
+
+- name: **confirmed** [v] "'''Verma modules''', named after [[Daya-Nand Verma]]"
+- description: **confirmed** [v] ": <math>W_\lambda := U(\mathfrak{g}) \otimes_{U(\mathfrak{b})} F_\lambda</math>." [v] "We let <math>\mathfrak{b}</math> be the subalgebra of <math>\mathfrak{g}</math> spanned by <math>\mathfrak{h}</math> and the root vectors <math>X_\alpha</math> with <math>\alpha\in R^+</math>." *Universality is not quoted.*
+- input: **confirmed** [v] "Now let <math>\lambda\in\mathfrak{h}^*</math> be an arbitrary linear functional, not necessarily dominant or integral."
+- output: **confirmed** [v] ": <math>W_\lambda := U(\mathfrak{g}) \otimes_{U(\mathfrak{b})} F_\lambda</math>."
+- preserved: **confirmed** [v] "Our goal is to construct a representation <math>W_\lambda</math> of <math>\mathfrak{g}</math> with highest weight <math>\lambda</math>"
+- broken: **confirmed** [v] "<math>W_\lambda</math> contains a unique maximal [[submodule]], and its quotient is the unique (up to [[isomorphism]]) [[irreducible representation]] with highest weight <math>\lambda.</math>" *The irreducible is a proper quotient when the maximal submodule is nonzero.*
+- recalled: name: Standard (Verma); description: U(g) tensored over U(b) with C_lambda; universal highest weight module; input: Weight; output: Verma module; preserved: Highest weight; broken: Irreducibility
+
+  v: excerpts/wikipedia-verma-module.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1365071954)
+
+### D7-410 Weyl's Complete Reducibility Transformation (batch 17)
+
+- name: **confirmed** [w] "'''Weyl's theorem on complete reducibility''' is a fundamental result"
+- description: **confirmed** [w] "The theorem states that every finite-dimensional module over <math>\mathfrak{g}</math> is [[semisimple representation|semisimple]] as a module (i.e., a direct sum of simple modules.)" *Compact groups are not quoted.*
+- input: **confirmed** [w] "every finite-dimensional module over <math>\mathfrak{g}</math>"
+- output: **confirmed** [w] "(i.e., a direct sum of simple modules.)"
+- preserved: **unsupported** *Characters are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Weyl); description: Finite-dimensional representations of semisimple Lie algebras are completely reducible; input: Representation; output: Sum of irreducibles; preserved: Character; broken: Extensions
+
+  w: excerpts/wikipedia-weyls-theorem-complete-reducibility.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1366424424)
+
+### D7-411 Borel Subalgebra Extraction (batch 17)
+
+- name: **confirmed** [b] "a '''Borel subalgebra''' of a [[Lie algebra]] <math>\mathfrak{g}</math> is a maximal [[solvable Lie algebra|solvable]] subalgebra."
+- description: **confirmed** [b] "a '''Borel subalgebra''' of a [[Lie algebra]] <math>\mathfrak{g}</math> is a maximal [[solvable Lie algebra|solvable]] subalgebra." [b] "Then <math>\mathfrak b = \mathfrak h \oplus \mathfrak n^+</math> is the Borel subalgebra relative to the above setup."
+- input: **confirmed** [b] "Let <math>\mathfrak g</math> be a complex [[semisimple Lie algebra]], <math>\mathfrak h</math> a [[Cartan subalgebra]] and ''R'' the [[root system]] associated to them."
+- output: **confirmed** [b] "Then <math>\mathfrak b = \mathfrak h \oplus \mathfrak n^+</math> is the Borel subalgebra relative to the above setup."
+- preserved: **confirmed** [b] "Choosing a base of ''R'' gives the notion of positive roots."
+- broken: **confirmed** [b] "Then <math>\mathfrak g</math> has the decomposition <math>\mathfrak g = \mathfrak n^- \oplus \mathfrak h \oplus \mathfrak n^+</math>" *The Borel subalgebra omits n^-, the negative root spaces.*
+- recalled: name: Standard; description: Maximal solvable subalgebra; Cartan plus positive root spaces; input: Semisimple Lie algebra; output: Borel subalgebra; preserved: Positive system; broken: Negative roots
+
+  b: excerpts/wikipedia-borel-subalgebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1223580331)
+
+### D7-412 Levi Decomposition (batch 17)
+
+- name: **confirmed** [l] "the '''Levi decomposition''', conjectured by [[Wilhelm Killing]]" [l] "| first proof by = [[Eugenio Elia Levi]]"
+- description: **confirmed** [l] "states that any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero is the [[semidirect product]] of a [[solvable Lie algebra|solvable]] ideal and a [[semisimple Lie algebra|semisimple]] subalgebra."
+- input: **confirmed** [l] "any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero"
+- output: **confirmed** [l] "One is its [[radical of a Lie algebra|'''radical''']], a maximal solvable ideal, and the other is a semisimple subalgebra, called a '''Levi subalgebra'''."
+- preserved: **unsupported** *Not stated.*
+- broken: **confirmed** [l] "Moreover, [[Malcev]] (1942) showed that any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form" *Unique up to conjugacy, so not unique.*
+- recalled: name: Standard (Levi); description: Radical semidirect a semisimple subalgebra, char 0; input: Lie algebra; output: Radical and Levi factor; preserved: Structure; broken: Uniqueness only up to conjugacy
+
+  l: excerpts/wikipedia-levi-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1348071378)
+
+### D7-413 Mal'cev Decomposition (batch 17)
+
+- name: **unsupported** *No fetched source calls Levi conjugacy a Mal'cev decomposition.*
+- description: **confirmed** [l] "Moreover, [[Malcev]] (1942) showed that any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form" [l] "where ''z'' is in the [[Nilradical of a Lie algebra|nilradical]] ('''Levi–Malcev theorem''')." *The source credits Malcev (1942), calling it the Levi-Malcev theorem; Harish-Chandra and the group completion are not quoted.*
+- input: **confirmed** [l] "any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero"
+- output: **confirmed** [l] "any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form"
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Several meanings (Mal'cev); description: Levi factors conjugate (Malcev, Harish-Chandra); Malcev completion; input: Lie algebra or nilpotent group; output: Conjugacy or completion; preserved: Structure; broken: Nothing
+
+  l: excerpts/wikipedia-levi-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1348071378)
+
+### D7-414 Ado's Theorem Matrix Embedding (batch 17)
+
+- name: **confirmed** [a] "'''Ado's theorem''' is a theorem characterizing finite-dimensional [[Lie algebra]]s." [a] "The theorem was proved in 1935 by [[Igor Dmitrievich Ado]]"
+- description: **confirmed** [a] "the theorem states that ''L'' has a [[linear representation]] ρ over ''K'', on a [[finite-dimensional vector space]] ''V'', that is a [[faithful representation]]" *Iwasawa later removed the characteristic restriction, per the source.*
+- input: **confirmed** [a] "every finite-dimensional [[Lie algebra]] ''L'' over a [[field (mathematics)|field]] ''K'' of [[characteristic zero]]"
+- output: **confirmed** [a] "that is a [[faithful representation]], making ''L'' isomorphic to a subalgebra of the [[endomorphism]]s of ''V''."
+- preserved: **confirmed** [a] "can be viewed as a Lie algebra of [[square matrices]] under the [[commutator bracket]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Ado; Iwasawa in char p); description: Faithful finite-dimensional representation, char 0; input: Finite-dimensional Lie algebra; output: Faithful representation; preserved: Bracket; broken: Nothing
+
+  a: excerpts/wikipedia-ados-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1339152559)
+
+### D7-415 Iwasawa Decomposition (batch 17)
+
+- name: **confirmed** [i] "the '''Iwasawa decomposition''' (aka '''KAN''' from its expression) of a [[semisimple Lie group]]"
+- description: **confirmed** [i] ":<math>G=KAN</math>"
+- input: **confirmed** [i] "*''G'' is a connected semisimple real [[Lie group]]."
+- output: **confirmed** [i] "is a [[nilpotent Lie algebra]] given as the  sum of the root spaces of Σ<sup>+</sup>" [i] "is a maximal abelian subalgebra of <math> \mathfrak{p}_0 </math>" [i] "where ''K'' becomes a (disconnected) [[maximal compact subgroup]]" *K compact is said for the disconnected case; the abelian and nilpotent factors are quoted.*
+- preserved: **confirmed** [i] "meaning there is an analytic [[diffeomorphism]] (but not a group homomorphism) from the [[manifold]] <math> K \times A \times N </math> to the Lie group <math> G </math>"
+- broken: **confirmed** [i] "(but not a group homomorphism)"
+- recalled: name: Standard (Iwasawa); description: G = KAN, diffeomorphism K x A x N to G; input: Real semisimple Lie group; output: Factors; preserved: Diffeomorphism; broken: Group structure
+
+  i: excerpts/wikipedia-iwasawa-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378613303)
+
+### D7-416 Kazhdan-Lusztig Polynomial Transformation (batch 17)
+
+- name: **confirmed** [k] "a '''Kazhdan–Lusztig polynomial''' <math>P_{y,w}(q)</math> is a member of a family of integral polynomials introduced by"
+- description: **confirmed** [k] "The elements <math>C'_w</math> form a basis of the Hecke algebra as a <math>\mathbb{Z}[q^{1/2}, q^{-1/2}]</math>-module, called the Kazhdan–Lusztig basis." [k] "In their first paper Kazhdan and Lusztig mentioned that their polynomials were related to the failure of local [[Poincaré duality]] for [[Schubert variety|Schubert varieties]]." [k] "so the dimensions of all such [[Ext groups]] in category ''O'' are determined in terms of coefficients of Kazhdan–Lusztig polynomials."
+- input: **confirmed** [k] "Fix a Coxeter group ''W'' with generating set ''S''"
+- output: **confirmed** [k] "a '''Kazhdan–Lusztig polynomial''' <math>P_{y,w}(q)</math>"
+- preserved: **confirmed** [k] "*They are 0 unless ''y'' ≤ ''w'' (in the [[Bruhat order]] of ''W''), 1 if ''y'' = ''w''" *Positivity and its proof by Elias and Williamson are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Kazhdan and Lusztig 1979); description: From the KL basis of the Hecke algebra; category O multiplicities; IC of Schubert varieties; positivity (Elias and Williamson); input: Coxeter group elements; output: Polynomial; preserved: Bruhat order; positivity; broken: Nothing
+
+  k: excerpts/wikipedia-kazhdan-lusztig.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1368588081)
+
+### D7-465 M\u00f6bius Transform (batch 17)
+
+- name: **confirmed** [m] "A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]" *The poset reading the fill takes.*
+- description: **confirmed** [n] "Multiplying by ''μ'' is analogous to [[derivative|differentiation]], and is called [[Möbius inversion]]." *The complex Moebius map, the other reading, is not graded.*
+- input: **confirmed** [m] "applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]"
+- output: **confirmed** [n] "Multiplying by ''μ'' is analogous to [[derivative|differentiation]], and is called [[Möbius inversion]]."
+- preserved: **confirmed** [n] "One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algebra" *Invertible, so no information is lost.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Ambiguous; description: Moebius inversion in an incidence algebra; input: Function on a locally finite poset; output: Inverted function; preserved: Information; broken: Nothing
+
+  m: excerpts/wikipedia-mobius-inversion.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1326604822)
+  n: excerpts/wikipedia-incidence-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1315840047)
 

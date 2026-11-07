@@ -14,3 +14,5 @@ One can show that ζ is [[unit (ring theory)|invertible]] in the incidence algeb
 Incidence algebras of locally finite posets
 
 The incidence algebra of ≤ is then [[isomorphic]] to the algebra of upper-triangular matrices
+
+Multiplying by ''μ'' is analogous to [[derivative|differentiation]], and is called [[Möbius inversion]].

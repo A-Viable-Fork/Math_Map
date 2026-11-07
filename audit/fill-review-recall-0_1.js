@@ -428,6 +428,23 @@ const RECALL = [
   k("D7-399", 16, "Standard", "Semisimple plus nilpotent, commuting, polynomials in the operator", "Operator over perfect field", "Parts", "Commutation, uniqueness", "Nothing"),
   k("D7-400", 16, "Standard", "Root spaces under a Cartan subalgebra", "Semisimple Lie algebra and Cartan", "Root system", "Isomorphism class", "Choice of Cartan"),
   k("D7-401", 16, "Standard (Weyl)", "Alternating sum over Weyl group over Weyl denominator", "Highest weight", "Character", "Multiplicities", "Nothing"),
+  // Batch 17: D7-402 to D7-416 and D7-465, written 2026-11-07 before the batch's sources were fetched.
+  k("D7-402", 17, "Standard", "B(x,y) = tr(ad x ad y); Cartan's criterion: nondegenerate iff semisimple (char 0)", "Lie algebra", "Invariant symmetric form", "Invariance", "Nothing"),
+  k("D7-403", 17, "Standard", "Nilpotent self-normalizing subalgebra; maximal toral for semisimple", "Lie algebra", "Cartan subalgebra", "Rank", "Off-diagonal part"),
+  k("D7-404", 17, "Standard", "Simple roots and Cartan matrix; classification A to G", "Root system", "Dynkin diagram", "Isomorphism class", "Nothing"),
+  k("D7-405", 17, "Standard (Cartan; Weyl)", "Irreducibles classified by dominant integral highest weights", "Dominant weight", "Irreducible representation", "Weights", "Nothing"),
+  k("D7-406", 17, "Standard (Schur)", "Maps between simple modules are zero or isomorphisms; scalars over algebraically closed fields", "Simple modules", "Hom", "Simplicity", "Nothing"),
+  k("D7-407", 17, "Standard (Quillen 1969)", "Endomorphisms of simple U(g)-modules are algebraic", "Simple U(g)-module", "Endomorphism ring", "Central character", "Nothing"),
+  k("D7-408", 17, "Standard (Whitehead)", "H^1 and H^2 vanish for finite-dimensional modules of semisimple Lie algebras (char 0)", "Semisimple Lie algebra and module", "Vanishing", "Complete reducibility; Levi", "Nothing"),
+  k("D7-409", 17, "Standard (Verma)", "U(g) tensored over U(b) with C_lambda; universal highest weight module", "Weight", "Verma module", "Highest weight", "Irreducibility"),
+  k("D7-410", 17, "Standard (Weyl)", "Finite-dimensional representations of semisimple Lie algebras are completely reducible", "Representation", "Sum of irreducibles", "Character", "Extensions"),
+  k("D7-411", 17, "Standard", "Maximal solvable subalgebra; Cartan plus positive root spaces", "Semisimple Lie algebra", "Borel subalgebra", "Positive system", "Negative roots"),
+  k("D7-412", 17, "Standard (Levi)", "Radical semidirect a semisimple subalgebra, char 0", "Lie algebra", "Radical and Levi factor", "Structure", "Uniqueness only up to conjugacy"),
+  k("D7-413", 17, "Several meanings (Mal'cev)", "Levi factors conjugate (Malcev, Harish-Chandra); Malcev completion", "Lie algebra or nilpotent group", "Conjugacy or completion", "Structure", "Nothing"),
+  k("D7-414", 17, "Standard (Ado; Iwasawa in char p)", "Faithful finite-dimensional representation, char 0", "Finite-dimensional Lie algebra", "Faithful representation", "Bracket", "Nothing"),
+  k("D7-415", 17, "Standard (Iwasawa)", "G = KAN, diffeomorphism K x A x N to G", "Real semisimple Lie group", "Factors", "Diffeomorphism", "Group structure"),
+  k("D7-416", 17, "Standard (Kazhdan and Lusztig 1979)", "From the KL basis of the Hecke algebra; category O multiplicities; IC of Schubert varieties; positivity (Elias and Williamson)", "Coxeter group elements", "Polynomial", "Bruhat order; positivity", "Nothing"),
+  k("D7-465", 17, "Ambiguous", "Moebius inversion in an incidence algebra", "Function on a locally finite poset", "Inverted function", "Information", "Nothing"),
 ];
 
 module.exports = { RECALL };

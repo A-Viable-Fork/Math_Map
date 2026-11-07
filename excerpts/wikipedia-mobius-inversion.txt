@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Möbius inversion formula (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1326604822
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: cb6d51062702e46b67fbdd55bc5499bd52976f03e068770dfb41b05ebceae074
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A large generalization of this formula applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]
+
+applies to summation over an arbitrary [[Locally finite poset|locally finite partially ordered set]]
