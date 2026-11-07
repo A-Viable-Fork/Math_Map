@@ -11938,6 +11938,1158 @@
     "k": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/KrullDimension/Polynomial.lean",
     "x": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
    }
+  },
+  {
+   "id": "D7-151",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-formal-power-series.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "formal power series can be viewed as a generalization of [[polynomial]]s where the number of terms is allowed to be infinite"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "(It can be seen as the [[I-adic topology#Completion|{{math|(''x'')}}-adic completion]] of the [[polynomial ring]] <math>R[x],</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "(It can be seen as the [[I-adic topology#Completion|{{math|(''x'')}}-adic completion]] of the [[polynomial ring]] <math>R[x],</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "formal power series can be viewed as a generalization of [[polynomial]]s where the number of terms is allowed to be infinite"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "* if <math>R</math> is [[noetherian ring|Noetherian]], then so is <math>R[[X]]</math> (a version of the [[Hilbert basis theorem]]),",
+     "more": [
+      {
+       "src": "f",
+       "quote": "the [[field of fractions]] of the [[integral domain]] <math>K[[X]]</math>."
+      },
+      {
+       "src": "f",
+       "quote": "the ring <math>K[[X_1, \\ldots, X_r]]</math> is often used as the \"standard, most general\" complete local ring over ''K'' in algebra."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "and differ from usual [[power series]] by the absence of convergence requirements"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378903847"
+   }
+  },
+  {
+   "id": "D7-152",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-algebraic-closure.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''algebraic closure''' of a [[field (mathematics)|field]] ''K'' is an [[algebraic extension]] of ''K'' that is [[algebraically closed field|algebraically closed]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "and that the algebraic closure of a field ''K'' is unique [[up to]] an [[isomorphism]] that [[fixed point (mathematics)|fixes]] every member of ''K''.",
+     "note": "That the isomorphism is not unique is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''algebraic closure''' of a [[field (mathematics)|field]] ''K''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''algebraic closure''' of a [[field (mathematics)|field]] ''K'' is an [[algebraic extension]] of ''K'' that is [[algebraically closed field|algebraically closed]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an [[isomorphism]] that [[fixed point (mathematics)|fixes]] every member of ''K''.",
+     "note": "K embeds; the characteristic is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Because of this essential uniqueness, one often speaks of ''the'' algebraic closure of ''K'', rather than ''an'' algebraic closure of ''K''.",
+     "note": "Unique only up to isomorphism: no canonical choice."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377101931"
+   }
+  },
+  {
+   "id": "D7-153",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-separable-extension.txt",
+    "g": "excerpts/wikipedia-absolute-galois-group.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The separable closure of {{math|''F''}} in an [[algebraic closure]] of {{math|''F''}} is simply called the '''[[separable closure]]''' of {{math|''F''}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is the [[Galois group]] of <math>K^\\textrm{sep}</math> over <math>K</math>, where <math>K^\\textrm{sep}</math> is a [[separable closure]] of <math>K</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The separable closure of {{math|''F''}} in an [[algebraic closure]] of {{math|''F''}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is simply called the '''[[separable closure]]''' of {{math|''F''}}."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is the [[Galois group]] of <math>K^\\textrm{sep}</math> over <math>K</math>, where <math>K^\\textrm{sep}</math> is a [[separable closure]] of <math>K</math>."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "every algebraic extension may be decomposed uniquely as a purely inseparable extension of  a separable extension.",
+     "note": "Purely inseparable elements (which occur only in positive characteristic) lie outside the separable closure."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1373059862",
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1347064602"
+   }
+  },
+  {
+   "id": "D7-154",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-splitting-field.txt",
+    "m": "excerpts/mathlib-Mathlib.FieldTheory.SplittingField.Construction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]] is the smallest [[field extension]] of that field over which the polynomial ''splits''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]] is the smallest [[field extension]] of that field over which the polynomial ''splits''"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is the smallest [[field extension]] of that field over which the polynomial ''splits''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "An extension ''L'' that is a [[Algebraic closure#Existence of an algebraic closure and splitting fields|splitting field for a set of polynomials]] ''p''(''X'') over ''K'' is called a",
+     "note": "Splitting fields are normal extensions; uniqueness up to isomorphism is not quoted here."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No canonical order of roots is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376262341",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/SplittingField/Construction.lean"
+   }
+  },
+  {
+   "id": "D7-155",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-fundamental-theorem-of-galois-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "there is a [[one-to-one correspondence]] between its intermediate fields and [["
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "In its most basic form, the theorem asserts that given a field extension <math>E/F</math> that is [[finite extension|finite]] and [[Galois extension|Galois]], there is a [[one-to-one correspondence]] between its intermediate fields and [["
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "given a field extension <math>E/F</math> that is [[finite extension|finite]] and [[Galois extension|Galois]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "to <math>\\{\\text{subfields of } E/F\\}</math>",
+     "note": "Gal(L/K) is the group of automorphisms of E fixing F (the subgroups of Aut(E/F) in the quote)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The fundamental theorem says that this correspondence is a one-to-one correspondence if (and only if) <math>E/F</math> is a [[Galois extension]].",
+     "note": "That the correspondence reverses inclusion is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345286594"
+   }
+  },
+  {
+   "id": "D7-156",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-sylow-theorems.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A '''Sylow ''p''-subgroup''' of a group <math>G</math> is a [[Maximal subgroup|maximal]] <math>p</math>-subgroup"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Furthermore, the number of Sylow <math>p</math>-subgroups of a group for a given prime <math>p</math> is congruent to 1 (mod <math>p</math>).",
+     "more": [
+      {
+       "src": "s",
+       "quote": "* <math>n_p</math> divides {{mvar|m}}, which is the [[index of a subgroup|index]] of the Sylow {{mvar|p}}-subgroup in {{mvar|G}}."
+      },
+      {
+       "src": "s",
+       "quote": "are [[Conjugacy class|conjugate]] to ea"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "for every [[prime factor]] ''<math>p</math>'' of the order of a finite group <math>G</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "there exists a Sylow <math>p</math>-subgroup of <math>G</math> of order <math>p^n</math>, the highest power of <ma"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* <math>n_p = |G:N_G (P)|</math>, where {{mvar|P}} is any Sylow {{mvar|p}}-subgroup of {{mvar|G}}",
+     "note": "Counts are stated; \"p-local structure\" is a gloss."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379917705"
+   }
+  },
+  {
+   "id": "D7-157",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/wikipedia-normal-closure-group-theory.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The normal closure <math>\\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The normal closure <math>\\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>",
+     "note": "The field-theoretic normal closure is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The normal closure <math>\\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The subgroup <math>\\operatorname{ncl}_G(S)</math> is the subgroup [[Generating set of a group|generated]] by the set"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is the smallest normal subgroup of <math>G</math> containing <math>S,</math>"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "of all [[Conjugacy class|conjugates]] of ele",
+     "note": "S and its conjugates generate the same normal closure."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370315617",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-158",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-centralizer-and-normalizer.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The centralizer of a subset of a ring ''R'' is a [[subring]] of ''R''.",
+     "note": "Groups and rings."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The centralizer of a subset of a ring ''R'' is a [[subring]] of ''R''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055"
+   }
+  },
+  {
+   "id": "D7-159",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-centralizer-and-normalizer.txt",
+    "s": "excerpts/wikipedia-sylow-theorems.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* If ''H'' is a subgroup of ''G'', then the largest subgroup of ''G'' in which ''H'' is normal is the subgroup N<sub>''G''</sub>(''H'')."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* If ''H'' is a subgroup of ''G'', then the largest subgroup of ''G'' in which ''H'' is normal is the subgroup N<sub>''G''</sub>(''H'')."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* If ''H'' is a subgroup of ''G''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is the subgroup N<sub>''G''</sub>(''H'')."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "* <math>n_p = |G:N_G (P)|</math>, where {{mvar|P}} is any Sylow {{mvar|p}}-subgroup of {{mvar|G}}",
+     "note": "Stated for Sylow subgroups; the general count of conjugates (orbit-stabilizer) is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055",
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379917705"
+   }
+  },
+  {
+   "id": "D7-160",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-commutator-subgroup.txt",
+    "m": "excerpts/mathlib-Mathlib.GroupTheory.Commutator.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the '''commutator subgroup''' or '''derived subgroup''' of a [[group (mathematics)|group]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the '''commutator subgroup''' or '''derived subgroup''' of a [[group (mathematics)|group]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "This motivates the definition of the '''commutator subgroup''' <math>[G, G]</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "[''G'',''G''] is a [[fully characteristic subgroup]] of ''G'', a property considerably stronger than normality."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Abelian information (in G/G')\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377919281",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Commutator/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-161",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-group-extension.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "They form a short exact sequence <math>1\\to N\\;\\overset{\\iota}{\\to}\\;G\\;\\overset{\\pi}{\\to}\\;Q \\to 1</math>."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>.",
+     "note": "The source states the central case; the fill's general abelian kernel (with a given action) is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "They form a short exact sequence <math>1\\to N\\;\\overset{\\iota}{\\to}\\;G\\;\\overset{\\pi}{\\to}\\;Q \\to 1</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "They form a short exact sequence <math>1\\to N\\;\\overset{\\iota}{\\to}\\;G\\;\\overset{\\pi}{\\to}\\;Q \\to 1</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "They form a short exact sequence <math>1\\to N\\;\\overset{\\iota}{\\to}\\;G\\;\\overset{\\pi}{\\to}\\;Q \\to 1</math>."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Split extensions are very easy to classify, because an extension is split [[if and only if]] the group <math>G</math> is a [[semidirect product]]",
+     "note": "An extension need not split, and extensions differ by cohomology classes (central case quoted above)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979"
+   }
+  },
+  {
+   "id": "D7-162",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-semidirect-product.txt",
+    "m": "excerpts/mathlib-Mathlib.GroupTheory.SemidirectProduct.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the concept of a '''semidirect product''' is a generalization of a [[direct product of groups|direct product]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "of groups (which is also known as a [[Group_extension#Classifying_split_extensions | split extension]] of <math>H</math> by <math>N</math>)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure SemidirectProduct (φ : G →* MulAut N) where"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In other words, there is a split [[exact sequence]] <math display=\"block\">1 \\to N \\to G \\to H \\to 1</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an ''inner'' semidirect product is a particular way in which a [[Group (mathematics)|group]] can be made up of two [[subgroup]]s, one of which is a [[normal subgroup]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of commutation between N and H is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379502512",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/SemidirectProduct.lean"
+   }
+  },
+  {
+   "id": "D7-163",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-wreath-product.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "This is also known as the ''Krasner–Kaloujnine embedding theorem''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "This is also known as the ''Krasner–Kaloujnine embedding theorem''.",
+     "note": "The construction A^X x| H is the page's subject; \"universal for imprimitive actions\" and hierarchical symmetry are not checked."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "If <math>G</math> is an [[Group extension|extension]] of <math>A</math> by <math>H</math>, then there exists a subgroup of the unrestricted wreath product <math>A\\wr H</math> which is isomorphic to <math>G</math>.",
+     "note": "Into the unrestricted wreath product."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380815775"
+   }
+  },
+  {
+   "id": "D7-164",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-zassenhaus-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the '''butterfly lemma''' or '''Zassenhaus lemma''', named after [[Hans Zassenhaus]]",
+     "note": "The attribution is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "Zassenhaus [[mathematical proof|proved]] this lemma specifically to give the most direct proof of the [[Schreier refinement theorem]].",
+     "note": "The isomorphism statement itself is typeset as mathematics; not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "is a technical result on the [[lattice of subgroups]] of a [[group (mathematics)|group]]"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The isomorphism of the butterfly quotients is not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1361076493"
+   }
+  },
+  {
+   "id": "D7-165",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-schreier-refinement-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''Schreier refinement theorem''' of [[group theory]] states that any two [[subnormal series]] of [[subgroup]]s of a given group have equivalent refinements"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''Schreier refinement theorem''' of [[group theory]] states that any two [[subnormal series]] of [[subgroup]]s of a given group have equivalent refinements"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "any two [[subnormal series]] of [[subgroup]]s of a given group"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "have equivalent refinements"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "where two series are equivalent if there is a [[bijectio",
+     "note": "Equivalence is a bijection of factor groups."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1223978298"
+   }
+  },
+  {
+   "id": "D7-166",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-composition-series.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a group of results known under the general name '''Jordan–Hölder theorem''' asserts that whenever composition series exist, the ''[[isomorphism class]]es'' of simple pieces"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a group of results known under the general name '''Jordan–Hölder theorem''' asserts that whenever composition series exist, the ''[[isomorphism class]]es'' of simple pieces"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A composition series may not exist, and when it does, it need not be unique."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A subnormal series is a composition series [[if and only if]] it is of maximal length."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the ''[[isomorphism class]]es'' of simple pieces (although, perhaps, not their ''location'' in t"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of the gluing data is not stated in the fetched text."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353739230"
+   }
+  },
+  {
+   "id": "D7-167",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-rewriting.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A ''rewrite rule'' is a pair of [[Term (logic)|terms]], commonly written as <math>l \\rightarrow r</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Schematic triangle diagram of application of a rewrite rule <math>l \\longrightarrow r</math> at position <math>p</math> in a term, with matching substitution <math>\\sigma</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "A ''rewrite rule'' is a pair of [[Term (logic)|terms]], commonly written as <math>l \\rightarrow r</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "to indicate that the left-hand side {{math|''l''}} can be replaced by the right-hand side {{math|''r''}}."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Preservation of the equational class is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383624965"
+   }
+  },
+  {
+   "id": "D7-168",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-abstract-rewriting-system.txt",
+    "n": "excerpts/wikipedia-newmans-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "In its simplest form, an ARS is simply a [[set (mathematics)|set]] (of \"objects\") together with a [[binary relation]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an ARS is sufficient to describe important properties of rewriting systems like [[Normal form (abstract rewriting)|normal form]]s, [[Termination (term rewriting)|termination]], and various notions of",
+     "more": [
+      {
+       "src": "n",
+       "quote": "It states that [[Confluence (abstract rewriting)#Local confluence|local confluence]] is a sufficient condition for confluence, provided that the system is also"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "An ARS is a [[set (mathematics)|set]] ''A'', whose elements are usually called objects, together with a [[binary relation]] on ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "otherwise it is called ''irreducible'' or a ''normal form''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The generated equivalence is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378824802",
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1352342600"
+   }
+  },
+  {
+   "id": "D7-169",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-knuth-bendix-completion-algorithm.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "[[algorithm]] for transforming a set of [[equation]]s (over [[term (logic)|terms]]) into a [[Confluence (term rewriting)|confluent]] [[term rewriting system]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "and attempts to construct a confluent and terminating term rewriting system ''R'' that"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The Knuth–Bendix algorithm takes a set ''E'' of equations between [[term (logic)|terms]], and a [[reduction ordering]] (>) on the set of all terms"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "and attempts to construct a confluent and terminating term rewriting system ''R'' that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "When the algorithm succeeds, it effectively solves the [[word problem (mathematics)|word problem]] for the specified [[algebra]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "is a [[semidecidable|semi-decision]]",
+     "note": "A semi-decision procedure: it need not terminate."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374771357"
+   }
+  },
+  {
+   "id": "D7-170",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-buchbergers-algorithm.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": ":# Reduce ''S''<sub>''ij''</sub>, with the [[multivariate division algorithm]] relative to the set ''G'' until the result is not further reducible.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "If the result is non-zero, add it to ''G''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "which is another set of polynomials that have the same common zeros and are mor"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "which is another set of polynomials that have the same common zeros and are mor",
+     "note": "The source quotes common zeros; the ideal itself is not named in the window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1359915802"
+   }
+  },
+  {
+   "id": "D7-171",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-grobner-basis.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the leading monomial of every polynomial in {{mvar|I}} is a multiple of the leading monomial of some polynomial in {{mvar|G}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the leading monomial of every polynomial in {{mvar|I}} is a multiple of the leading monomial of some polynomial in {{mvar|G}}.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "It is for dealing with the problems set by this non-uniqueness that [[Bruno Buchberger|Buchberger]] introduced Gröbner bases and {{mvar|S}}-polynomials."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "For every admissible monomial ordering and every finite set {{mvar|G}} of polynomials"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "condition 3 provides an algorithm for testing [[ideal membership problem|ideal membership]]"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal.",
+     "note": "The generators change; doubly exponential complexity is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743"
+   }
+  },
+  {
+   "id": "D7-172",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-critical-pair-term-rewriting.txt",
+    "k": "excerpts/wikipedia-knuth-bendix-completion-algorithm.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A '''critical pair''' arises in a [[term rewriting system]] when two rewrite rules overlap to yield two different terms."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A '''critical pair''' arises in a [[term rewriting system]] when two rewrite rules overlap to yield two different terms.",
+     "note": "That unjoinable pairs become new rules is the completion step, not quoted here."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "arises in a [[term rewriting system]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The [[critical pair lemma]] states that a term rewriting system is [[confluence (term rewriting)|locally confluent]] (or weakly confluent) if and only if all its [[critical pair (logic)|critical pairs]] are convergent."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Preservation of the equational theory is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1312991159",
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374771357"
+   }
+  },
+  {
+   "id": "D7-173",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/wikipedia-newmans-lemma.txt",
+    "b": "excerpts/wikipedia-bergmans-diamond-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "'''Newman's lemma''', also commonly called the '''diamond lemma'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "It states that [[Confluence (abstract rewriting)#Local confluence|local confluence]] is a sufficient condition for confluence, provided that the system is also",
+     "note": "Newman 1942 per the source; Bergman's version for algebras is the second source's.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "It is an extension of [[Gröbner basis|Gröbner bases]] to non-commutative [[Ring (mathematics)|rings]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "provided that the system is also [[Abstract rewriting system#Termination and convergence|terminating]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is a sufficient condition for confluence"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1352342600",
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351364215"
+   }
+  },
+  {
+   "id": "D7-174",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "Squier's theorem: no fetched source (no Wikipedia or nLab page)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-175",
+   "batch": 7,
+   "why": "Fill review, batch 7: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-infimum-and-supremum.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The '''supremum''' (abbreviated '''sup'''; {{plural abbr}}: '''suprema''') of a subset <math>S</math> of a partially ordered set <math>P</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is the [[least element]] in <math>P</math> that is greater than or equ"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "of a subset <math>S</math> of a partially ordered set <math>P</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "is the [[least element]] in <math>P</math> that is greater than or equ"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "If the infimum of <math>S</math> exists, it is unique",
+     "note": "Stated for the infimum; dually for the supremum."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279"
+   }
   }
  ]
 }

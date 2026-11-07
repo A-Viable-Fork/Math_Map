@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Semidirect product (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379502512
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: fa5f1fda38eaa0dc841318719a2f1be009853063ed3ff928679f6bd6e97d84d6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the concept of a '''semidirect product''' is a generalization of a [[direct product of groups|direct product]].
+
+of groups (which is also known as a [[Group_extension#Classifying_split_extensions | split extension]] of <math>H</math> by <math>N</math>).
+
+In other words, there is a split [[exact sequence]] <math display="block">1 \to N \to G \to H \to 1</math>
+
+an ''inner'' semidirect product is a particular way in which a [[Group (mathematics)|group]] can be made up of two [[subgroup]]s, one of which is a [[normal subgroup]].

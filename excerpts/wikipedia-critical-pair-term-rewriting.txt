@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Critical pair (term rewriting) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1312991159
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dc674cbd889746f0a2d783e9e644810e7f9b596400ee239dd3c2af33187da600
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A '''critical pair''' arises in a [[term rewriting system]] when two rewrite rules overlap to yield two different terms.
+
+arises in a [[term rewriting system]]

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Algebraic closure (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377101931
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7c6e4676e462416a8a787a4bed5ca289cbbded5a8b19ca19dd4c56647aa4f145
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''algebraic closure''' of a [[field (mathematics)|field]] ''K'' is an [[algebraic extension]] of ''K'' that is [[algebraically closed field|algebraically closed]].
+
+and that the algebraic closure of a field ''K'' is unique [[up to]] an [[isomorphism]] that [[fixed point (mathematics)|fixes]] every member of ''K''.
+
+an '''algebraic closure''' of a [[field (mathematics)|field]] ''K''
+
+an [[isomorphism]] that [[fixed point (mathematics)|fixes]] every member of ''K''.
+
+Because of this essential uniqueness, one often speaks of ''the'' algebraic closure of ''K'', rather than ''an'' algebraic closure of ''K''.

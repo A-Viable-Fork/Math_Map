@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Normal closure (group theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370315617
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 685622548332c24a055c0bf66109542f42cc69f0c1365fa485a96c17047a7ac4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The normal closure <math>\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>
+
+The subgroup <math>\operatorname{ncl}_G(S)</math> is the subgroup [[Generating set of a group|generated]] by the set
+
+is the smallest normal subgroup of <math>G</math> containing <math>S,</math>
+
+of all [[Conjugacy class|conjugates]] of ele

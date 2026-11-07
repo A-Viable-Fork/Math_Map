@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Zassenhaus lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361076493
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: eac80eea005e56d4806065df91c62c4450b3de3dbb2462379e45af206f4c4861
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''butterfly lemma''' or '''Zassenhaus lemma''', named after [[Hans Zassenhaus]]
+
+Zassenhaus [[mathematical proof|proved]] this lemma specifically to give the most direct proof of the [[Schreier refinement theorem]].
+
+is a technical result on the [[lattice of subgroups]] of a [[group (mathematics)|group]]

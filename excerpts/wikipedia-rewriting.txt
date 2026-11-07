@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Rewriting (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383624965
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 57426c4cd8ab90ce5f830076f03dd3681f7af7002a57e3f65b5ee72f9e75f60d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A ''rewrite rule'' is a pair of [[Term (logic)|terms]], commonly written as <math>l \rightarrow r</math>
+
+Schematic triangle diagram of application of a rewrite rule <math>l \longrightarrow r</math> at position <math>p</math> in a term, with matching substitution <math>\sigma</math>
+
+to indicate that the left-hand side {{math|''l''}} can be replaced by the right-hand side {{math|''r''}}.

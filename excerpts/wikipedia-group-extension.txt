@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Group extension (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0084be5cafded0dd5b04134c3c5da407969a12f865ebe96d5e229d04d638bcf5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>.
+
+Split extensions are very easy to classify, because an extension is split [[if and only if]] the group <math>G</math> is a [[semidirect product]]
+
+They form a short exact sequence <math>1\to N\;\overset{\iota}{\to}\;G\;\overset{\pi}{\to}\;Q \to 1</math>.

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Absolute Galois group (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1347064602
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7b4daba68b2903e08bc96826ccdf11fb66b143e09e6f005f0495e27a09575570
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is the [[Galois group]] of <math>K^\textrm{sep}</math> over <math>K</math>, where <math>K^\textrm{sep}</math> is a [[separable closure]] of <math>K</math>.

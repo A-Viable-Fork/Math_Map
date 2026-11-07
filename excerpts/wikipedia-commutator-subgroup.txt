@@ -12,3 +12,9 @@ The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianizat
 is universal for homomorphisms from <math>G</math> to an abelian group <math>H</math>
 
 So in some sense it provides a measure of how far the group is fr
+
+the '''commutator subgroup''' or '''derived subgroup''' of a [[group (mathematics)|group]]
+
+This motivates the definition of the '''commutator subgroup''' <math>[G, G]</math>
+
+[''G'',''G''] is a [[fully characteristic subgroup]] of ''G'', a property considerably stronger than normality.

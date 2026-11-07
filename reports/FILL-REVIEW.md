@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 150 of 416 D7 stubs, 0 of 79 homes; 150 entries in 6 batches.
+Reviewed: 175 of 416 D7 stubs, 0 of 79 homes; 175 entries in 7 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (150 entries)
+### D7 stubs (175 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 142 | 0 | 0 | 8 |
-| description | 138 | 5 | 0 | 7 |
-| input | 136 | 3 | 0 | 11 |
-| output | 138 | 0 | 0 | 12 |
-| preserved | 118 | 2 | 0 | 30 |
-| broken | 72 | 3 | 0 | 75 |
-| **all** | 744 | 13 | 0 | 143 |
+| name | 166 | 0 | 0 | 9 |
+| description | 162 | 5 | 0 | 8 |
+| input | 159 | 3 | 0 | 13 |
+| output | 160 | 0 | 0 | 15 |
+| preserved | 137 | 2 | 0 | 36 |
+| broken | 79 | 3 | 0 | 93 |
+| **all** | 863 | 13 | 0 | 174 |
 
 ## 2. Recall against source
 
@@ -34,7 +34,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 4 | 25 | 132 | 1 | 1% |
 | 5 | 25 | 83 | 0 | 0% |
 | 6 | 25 | 128 | 0 | 0% |
-| **all** | 150 | 757 | 3 | 0% |
+| 7 | 25 | 119 | 0 | 0% |
+| **all** | 175 | 876 | 3 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -143,6 +144,24 @@ Every field not confirmed, with the reason.
 - **D7-146 Group Ring Construction** (batch 6): *broken* unsupported: Recovering G from R[G] is not discussed in the fetched source.
 - **D7-147 Monoid Ring Construction** (batch 6): *broken* unsupported: Not stated.
 - **D7-148 Matrix Ring Construction** (batch 6): *broken* unsupported: Loss of commutativity is not stated in the fetched text.
+- **D7-154 Splitting Field Construction** (batch 7): *broken* unsupported: No canonical order of roots is not stated.
+- **D7-155 Galois Group Extraction** (batch 7): *broken* unsupported: Not stated.
+- **D7-156 Sylow Subgroup Extraction** (batch 7): *broken* unsupported: Not stated.
+- **D7-158 Centralizer Construction** (batch 7): *broken* unsupported: Not stated.
+- **D7-159 Normalizer Construction** (batch 7): *broken* unsupported: Not stated.
+- **D7-160 Derived Subgroup Evaluation** (batch 7): *broken* unsupported: "Abelian information (in G/G')" is a gloss.
+- **D7-162 Semidirect Product Construction** (batch 7): *broken* unsupported: Loss of commutation between N and H is not stated.
+- **D7-163 Wreath Product Construction** (batch 7): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-164 Zassenhaus Lemma Reduction** (batch 7): *output* unsupported: The isomorphism of the butterfly quotients is not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-165 Schreier Refinement** (batch 7): *broken* unsupported: Not stated.
+- **D7-166 Jordan-H\u00f6lder Decomposition** (batch 7): *broken* unsupported: Loss of the gluing data is not stated in the fetched text.
+- **D7-167 Term Rewriting Step** (batch 7): *preserved* unsupported: Preservation of the equational class is not stated. *broken* unsupported: Not stated.
+- **D7-168 Abstract Reduction** (batch 7): *preserved* unsupported: The generated equivalence is not quoted. *broken* unsupported: Not stated.
+- **D7-170 Buchberger Algorithm Application** (batch 7): *broken* unsupported: Not stated.
+- **D7-172 Critical Pair Resolution** (batch 7): *preserved* unsupported: Preservation of the equational theory is not stated. *broken* unsupported: Not stated.
+- **D7-173 Diamond Lemma Application** (batch 7): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-174 Squier's Theorem Homotopy Construction** (batch 7): *name* unsupported: Squier's theorem: no fetched source (no Wikipedia or nLab page). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-175 Supremum Evaluation** (batch 7): *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -2018,4 +2037,312 @@ actions defining an optic"
   u: excerpts/mathlib-Mathlib.RingTheory.Polynomial.UniqueFactorization.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/UniqueFactorization.lean)
   k: excerpts/mathlib-Mathlib.RingTheory.KrullDimension.Polynomial.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/KrullDimension/Polynomial.lean)
   x: excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean)
+
+### D7-151 Formal Power Series Extension (batch 7)
+
+- name: **confirmed** [f] "formal power series can be viewed as a generalization of [[polynomial]]s where the number of terms is allowed to be infinite"
+- description: **confirmed** [f] "(It can be seen as the [[I-adic topology#Completion|{{math|(''x'')}}-adic completion]] of the [[polynomial ring]] <math>R[x],</math>"
+- input: **confirmed** [f] "(It can be seen as the [[I-adic topology#Completion|{{math|(''x'')}}-adic completion]] of the [[polynomial ring]] <math>R[x],</math>"
+- output: **confirmed** [f] "formal power series can be viewed as a generalization of [[polynomial]]s where the number of terms is allowed to be infinite"
+- preserved: **confirmed** [f] "* if <math>R</math> is [[noetherian ring|Noetherian]], then so is <math>R[[X]]</math> (a version of the [[Hilbert basis theorem]])," [f] "the [[field of fractions]] of the [[integral domain]] <math>K[[X]]</math>." [f] "the ring <math>K[[X_1, \ldots, X_r]]</math> is often used as the "standard, most general" complete local ring over ''K'' in algebra."
+- broken: **confirmed** [f] "and differ from usual [[power series]] by the absence of convergence requirements"
+- recalled: name: Standard; description: Infinite sums; completion of R[x] at (x); input: A ring; output: R[[x]]; preserved: Noetherian, domain; local over a field; broken: No evaluation at general points
+
+  f: excerpts/wikipedia-formal-power-series.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378903847)
+
+### D7-152 Algebraic Closure Construction (batch 7)
+
+- name: **confirmed** [a] "an '''algebraic closure''' of a [[field (mathematics)|field]] ''K'' is an [[algebraic extension]] of ''K'' that is [[algebraically closed field|algebraically closed]]."
+- description: **confirmed** [a] "and that the algebraic closure of a field ''K'' is unique [[up to]] an [[isomorphism]] that [[fixed point (mathematics)|fixes]] every member of ''K''." *That the isomorphism is not unique is not quoted.*
+- input: **confirmed** [a] "an '''algebraic closure''' of a [[field (mathematics)|field]] ''K''"
+- output: **confirmed** [a] "an '''algebraic closure''' of a [[field (mathematics)|field]] ''K'' is an [[algebraic extension]] of ''K'' that is [[algebraically closed field|algebraically closed]]."
+- preserved: **confirmed** [a] "an [[isomorphism]] that [[fixed point (mathematics)|fixes]] every member of ''K''." *K embeds; the characteristic is not quoted.*
+- broken: **confirmed** [a] "Because of this essential uniqueness, one often speaks of ''the'' algebraic closure of ''K'', rather than ''an'' algebraic closure of ''K''." *Unique only up to isomorphism: no canonical choice.*
+- recalled: name: Standard; description: Algebraic extension in which every polynomial splits; unique up to non-unique isomorphism (needs Zorn); input: A field; output: Algebraic closure; preserved: Characteristic; K embeds; broken: Canonical choice
+
+  a: excerpts/wikipedia-algebraic-closure.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377101931)
+
+### D7-153 Separable Closure Construction (batch 7)
+
+- name: **confirmed** [s] "The separable closure of {{math|''F''}} in an [[algebraic closure]] of {{math|''F''}} is simply called the '''[[separable closure]]''' of {{math|''F''}}."
+- description: **confirmed** [g] "is the [[Galois group]] of <math>K^\textrm{sep}</math> over <math>K</math>, where <math>K^\textrm{sep}</math> is a [[separable closure]] of <math>K</math>."
+- input: **confirmed** [s] "The separable closure of {{math|''F''}} in an [[algebraic closure]] of {{math|''F''}}"
+- output: **confirmed** [s] "is simply called the '''[[separable closure]]''' of {{math|''F''}}."
+- preserved: **confirmed** [g] "is the [[Galois group]] of <math>K^\textrm{sep}</math> over <math>K</math>, where <math>K^\textrm{sep}</math> is a [[separable closure]] of <math>K</math>."
+- broken: **confirmed** [s] "every algebraic extension may be decomposed uniquely as a purely inseparable extension of  a separable extension." *Purely inseparable elements (which occur only in positive characteristic) lie outside the separable closure.*
+- recalled: name: Standard; description: All separable algebraic elements; Galois group is the absolute Galois group; input: A field; output: Separable closure; preserved: Galois theory; broken: Purely inseparable elements
+
+  s: excerpts/wikipedia-separable-extension.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1373059862)
+  g: excerpts/wikipedia-absolute-galois-group.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1347064602)
+
+### D7-154 Splitting Field Construction (batch 7)
+
+- name: **confirmed** [s] "a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]] is the smallest [[field extension]] of that field over which the polynomial ''splits''"
+- description: **confirmed** [s] "a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]] is the smallest [[field extension]] of that field over which the polynomial ''splits''"
+- input: **confirmed** [s] "a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]]"
+- output: **confirmed** [s] "is the smallest [[field extension]] of that field over which the polynomial ''splits''"
+- preserved: **confirmed** [s] "An extension ''L'' that is a [[Algebraic closure#Existence of an algebraic closure and splitting fields|splitting field for a set of polynomials]] ''p''(''X'') over ''K'' is called a" *Splitting fields are normal extensions; uniqueness up to isomorphism is not quoted here.*
+- broken: **unsupported** *No canonical order of roots is not stated.*
+- recalled: name: Standard; description: Smallest extension where f splits; unique up to isomorphism; input: Field and polynomial; output: Splitting field; preserved: Normal; unique; broken: Order of roots
+
+  s: excerpts/wikipedia-splitting-field.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376262341)
+  m: excerpts/mathlib-Mathlib.FieldTheory.SplittingField.Construction.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/SplittingField/Construction.lean)
+
+### D7-155 Galois Group Extraction (batch 7)
+
+- name: **confirmed** [f] "there is a [[one-to-one correspondence]] between its intermediate fields and [["
+- description: **confirmed** [f] "In its most basic form, the theorem asserts that given a field extension <math>E/F</math> that is [[finite extension|finite]] and [[Galois extension|Galois]], there is a [[one-to-one correspondence]] between its intermediate fields and [["
+- input: **confirmed** [f] "given a field extension <math>E/F</math> that is [[finite extension|finite]] and [[Galois extension|Galois]]"
+- output: **confirmed** [f] "to <math>\{\text{subfields of } E/F\}</math>" *Gal(L/K) is the group of automorphisms of E fixing F (the subgroups of Aut(E/F) in the quote).*
+- preserved: **confirmed** [f] "The fundamental theorem says that this correspondence is a one-to-one correspondence if (and only if) <math>E/F</math> is a [[Galois extension]]." *That the correspondence reverses inclusion is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Automorphisms fixing K; Galois correspondence reverses inclusion; input: Galois extension; output: Galois group; preserved: Intermediate field lattice; broken: Elements
+
+  f: excerpts/wikipedia-fundamental-theorem-of-galois-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1345286594)
+
+### D7-156 Sylow Subgroup Extraction (batch 7)
+
+- name: **confirmed** [s] "A '''Sylow ''p''-subgroup''' of a group <math>G</math> is a [[Maximal subgroup|maximal]] <math>p</math>-subgroup"
+- description: **confirmed** [s] "Furthermore, the number of Sylow <math>p</math>-subgroups of a group for a given prime <math>p</math> is congruent to 1 (mod <math>p</math>)." [s] "* <math>n_p</math> divides {{mvar|m}}, which is the [[index of a subgroup|index]] of the Sylow {{mvar|p}}-subgroup in {{mvar|G}}." [s] "are [[Conjugacy class|conjugate]] to ea"
+- input: **confirmed** [s] "for every [[prime factor]] ''<math>p</math>'' of the order of a finite group <math>G</math>"
+- output: **confirmed** [s] "there exists a Sylow <math>p</math>-subgroup of <math>G</math> of order <math>p^n</math>, the highest power of <ma"
+- preserved: **confirmed** [s] "* <math>n_p = |G:N_G (P)|</math>, where {{mvar|P}} is any Sylow {{mvar|p}}-subgroup of {{mvar|G}}" *Counts are stated; "p-local structure" is a gloss.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Sylow theorems); description: Maximal p-subgroups exist, are conjugate, number is 1 mod p and divides the index; input: Finite group and prime; output: Sylow subgroup; preserved: p-local structure; broken: Other primes
+
+  s: excerpts/wikipedia-sylow-theorems.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379917705)
+
+### D7-157 Normal Closure Construction (batch 7)
+
+- name: **confirmed** [n] "The normal closure <math>\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>"
+- description: **confirmed** [n] "The normal closure <math>\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>" *The field-theoretic normal closure is not checked.*
+- input: **confirmed** [n] "The normal closure <math>\operatorname{ncl}_G(S)</math> is the smallest normal subgroup of <math>G</math> containing <math>S,</math>"
+- output: **confirmed** [n] "The subgroup <math>\operatorname{ncl}_G(S)</math> is the subgroup [[Generating set of a group|generated]] by the set"
+- preserved: **confirmed** [n] "is the smallest normal subgroup of <math>G</math> containing <math>S,</math>"
+- broken: **confirmed** [n] "of all [[Conjugacy class|conjugates]] of ele" *S and its conjugates generate the same normal closure.*
+- recalled: name: Standard; description: Smallest normal subgroup containing S; field version; input: Group and subset; output: Normal closure; preserved: Normality; broken: S versus conjugates
+
+  n: excerpts/wikipedia-normal-closure-group-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1370315617)
+  m: excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean)
+
+### D7-158 Centralizer Construction (batch 7)
+
+- name: **confirmed** [c] "elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''"
+- description: **confirmed** [c] "elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''"
+- input: **confirmed** [c] "The centralizer of a subset of a ring ''R'' is a [[subring]] of ''R''." *Groups and rings.*
+- output: **confirmed** [c] "The centralizer of a subset of a ring ''R'' is a [[subring]] of ''R''."
+- preserved: **confirmed** [c] "elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Elements commuting with every element of S; input: Group or ring and subset; output: Centralizer; preserved: Commutation; broken: Non-commuting elements
+
+  c: excerpts/wikipedia-centralizer-and-normalizer.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055)
+
+### D7-159 Normalizer Construction (batch 7)
+
+- name: **confirmed** [c] "* If ''H'' is a subgroup of ''G'', then the largest subgroup of ''G'' in which ''H'' is normal is the subgroup N<sub>''G''</sub>(''H'')."
+- description: **confirmed** [c] "* If ''H'' is a subgroup of ''G'', then the largest subgroup of ''G'' in which ''H'' is normal is the subgroup N<sub>''G''</sub>(''H'')."
+- input: **confirmed** [c] "* If ''H'' is a subgroup of ''G''"
+- output: **confirmed** [c] "is the subgroup N<sub>''G''</sub>(''H'')."
+- preserved: **confirmed** [s] "* <math>n_p = |G:N_G (P)|</math>, where {{mvar|P}} is any Sylow {{mvar|p}}-subgroup of {{mvar|G}}" *Stated for Sylow subgroups; the general count of conjugates (orbit-stabilizer) is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Largest subgroup in which H is normal; conjugates counted by the index; input: Group and subgroup; output: Normalizer; preserved: H normal in it; broken: Non-normalizing elements
+
+  c: excerpts/wikipedia-centralizer-and-normalizer.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055)
+  s: excerpts/wikipedia-sylow-theorems.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379917705)
+
+### D7-160 Derived Subgroup Evaluation (batch 7)
+
+- name: **confirmed** [c] "the '''commutator subgroup''' or '''derived subgroup''' of a [[group (mathematics)|group]]"
+- description: **confirmed** [c] "The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>"
+- input: **confirmed** [c] "the '''commutator subgroup''' or '''derived subgroup''' of a [[group (mathematics)|group]]"
+- output: **confirmed** [c] "This motivates the definition of the '''commutator subgroup''' <math>[G, G]</math>"
+- preserved: **confirmed** [c] "[''G'',''G''] is a [[fully characteristic subgroup]] of ''G'', a property considerably stronger than normality."
+- broken: **unsupported** *"Abelian information (in G/G')" is a gloss.*
+- recalled: name: Standard; description: Generated by commutators; quotient abelianization; input: Group; output: Derived subgroup; preserved: Characteristic; broken: Abelian information
+
+  c: excerpts/wikipedia-commutator-subgroup.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377919281)
+  m: excerpts/mathlib-Mathlib.GroupTheory.Commutator.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Commutator/Basic.lean)
+
+### D7-161 Group Extension (batch 7)
+
+- name: **confirmed** [e] "They form a short exact sequence <math>1\to N\;\overset{\iota}{\to}\;G\;\overset{\pi}{\to}\;Q \to 1</math>."
+- description: **confirmed** [e] "The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>." *The source states the central case; the fill's general abelian kernel (with a given action) is not quoted.*
+- input: **confirmed** [e] "They form a short exact sequence <math>1\to N\;\overset{\iota}{\to}\;G\;\overset{\pi}{\to}\;Q \to 1</math>."
+- output: **confirmed** [e] "They form a short exact sequence <math>1\to N\;\overset{\iota}{\to}\;G\;\overset{\pi}{\to}\;Q \to 1</math>."
+- preserved: **confirmed** [e] "They form a short exact sequence <math>1\to N\;\overset{\iota}{\to}\;G\;\overset{\pi}{\to}\;Q \to 1</math>."
+- broken: **confirmed** [e] "Split extensions are very easy to classify, because an extension is split [[if and only if]] the group <math>G</math> is a [[semidirect product]]" *An extension need not split, and extensions differ by cohomology classes (central case quoted above).*
+- recalled: name: Standard; description: Short exact sequence of groups; H^2 classifies with abelian kernel; input: N, Q, action, cocycle; output: Extension; preserved: N and Q; broken: Splitting, uniqueness
+
+  e: excerpts/wikipedia-group-extension.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979)
+
+### D7-162 Semidirect Product Construction (batch 7)
+
+- name: **confirmed** [s] "the concept of a '''semidirect product''' is a generalization of a [[direct product of groups|direct product]]."
+- description: **confirmed** [s] "of groups (which is also known as a [[Group_extension#Classifying_split_extensions | split extension]] of <math>H</math> by <math>N</math>)."
+- input: **confirmed** [m] "structure SemidirectProduct (φ : G →* MulAut N) where"
+- output: **confirmed** [s] "In other words, there is a split [[exact sequence]] <math display="block">1 \to N \to G \to H \to 1</math>"
+- preserved: **confirmed** [s] "an ''inner'' semidirect product is a particular way in which a [[Group (mathematics)|group]] can be made up of two [[subgroup]]s, one of which is a [[normal subgroup]]."
+- broken: **unsupported** *Loss of commutation between N and H is not stated.*
+- recalled: name: Standard; description: Split extensions via an action; input: N, H, action; output: Semidirect product; preserved: N normal, H complement; broken: Commutation
+
+  s: excerpts/wikipedia-semidirect-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379502512)
+  m: excerpts/mathlib-Mathlib.GroupTheory.SemidirectProduct.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/SemidirectProduct.lean)
+
+### D7-163 Wreath Product Construction (batch 7)
+
+- name: **confirmed** [w] "This is also known as the ''Krasner–Kaloujnine embedding theorem''."
+- description: **confirmed** [w] "This is also known as the ''Krasner–Kaloujnine embedding theorem''." *The construction A^X x| H is the page's subject; "universal for imprimitive actions" and hierarchical symmetry are not checked.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [w] "If <math>G</math> is an [[Group extension|extension]] of <math>A</math> by <math>H</math>, then there exists a subgroup of the unrestricted wreath product <math>A\wr H</math> which is isomorphic to <math>G</math>." *Into the unrestricted wreath product.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Kaloujnine-Krasner embedding); description: A^X x| H; every extension of A by H embeds in the regular wreath product; input: A, H, H-set; output: Wreath product; preserved: Universal embedding; broken: Direct product structure
+
+  w: excerpts/wikipedia-wreath-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380815775)
+
+### D7-164 Zassenhaus Lemma Reduction (batch 7)
+
+- name: **confirmed** [z] "the '''butterfly lemma''' or '''Zassenhaus lemma''', named after [[Hans Zassenhaus]]" *The attribution is the source's.*
+- description: **confirmed** [z] "Zassenhaus [[mathematical proof|proved]] this lemma specifically to give the most direct proof of the [[Schreier refinement theorem]]." *The isomorphism statement itself is typeset as mathematics; not quoted.*
+- input: **confirmed** [z] "is a technical result on the [[lattice of subgroups]] of a [[group (mathematics)|group]]"
+- output: **unsupported** *The isomorphism of the butterfly quotients is not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (butterfly lemma); description: Isomorphism of the two butterfly quotients; input: Nested subgroup pairs; output: Isomorphism; preserved: Isomorphism type; broken: Nothing
+
+  z: excerpts/wikipedia-zassenhaus-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1361076493)
+
+### D7-165 Schreier Refinement (batch 7)
+
+- name: **confirmed** [s] "the '''Schreier refinement theorem''' of [[group theory]] states that any two [[subnormal series]] of [[subgroup]]s of a given group have equivalent refinements"
+- description: **confirmed** [s] "the '''Schreier refinement theorem''' of [[group theory]] states that any two [[subnormal series]] of [[subgroup]]s of a given group have equivalent refinements"
+- input: **confirmed** [s] "any two [[subnormal series]] of [[subgroup]]s of a given group"
+- output: **confirmed** [s] "have equivalent refinements"
+- preserved: **confirmed** [s] "where two series are equivalent if there is a [[bijectio" *Equivalence is a bijection of factor groups.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Schreier refinement theorem); description: Two subnormal series have equivalent refinements; input: Two series; output: Equivalent refinements; preserved: Factors up to permutation; broken: Original lengths
+
+  s: excerpts/wikipedia-schreier-refinement-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1223978298)
+
+### D7-166 Jordan-H\u00f6lder Decomposition (batch 7)
+
+- name: **confirmed** [c] "a group of results known under the general name '''Jordan–Hölder theorem''' asserts that whenever composition series exist, the ''[[isomorphism class]]es'' of simple pieces"
+- description: **confirmed** [c] "a group of results known under the general name '''Jordan–Hölder theorem''' asserts that whenever composition series exist, the ''[[isomorphism class]]es'' of simple pieces"
+- input: **confirmed** [c] "A composition series may not exist, and when it does, it need not be unique."
+- output: **confirmed** [c] "A subnormal series is a composition series [[if and only if]] it is of maximal length."
+- preserved: **confirmed** [c] "the ''[[isomorphism class]]es'' of simple pieces (although, perhaps, not their ''location'' in t"
+- broken: **unsupported** *Loss of the gluing data is not stated in the fetched text.*
+- recalled: name: Standard; description: Composition factors unique up to permutation and isomorphism; input: Finite-length object; output: Composition series; preserved: Factors, length; broken: Extension data
+
+  c: excerpts/wikipedia-composition-series.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353739230)
+
+### D7-167 Term Rewriting Step (batch 7)
+
+- name: **confirmed** [w] "A ''rewrite rule'' is a pair of [[Term (logic)|terms]], commonly written as <math>l \rightarrow r</math>"
+- description: **confirmed** [w] "Schematic triangle diagram of application of a rewrite rule <math>l \longrightarrow r</math> at position <math>p</math> in a term, with matching substitution <math>\sigma</math>"
+- input: **confirmed** [w] "A ''rewrite rule'' is a pair of [[Term (logic)|terms]], commonly written as <math>l \rightarrow r</math>"
+- output: **confirmed** [w] "to indicate that the left-hand side {{math|''l''}} can be replaced by the right-hand side {{math|''r''}}."
+- preserved: **unsupported** *Preservation of the equational class is not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Apply l to r at a position under a matching substitution; input: Term and rule; output: Rewritten term; preserved: Equational class; broken: Shape
+
+  w: excerpts/wikipedia-rewriting.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383624965)
+
+### D7-168 Abstract Reduction (batch 7)
+
+- name: **confirmed** [a] "In its simplest form, an ARS is simply a [[set (mathematics)|set]] (of "objects") together with a [[binary relation]]"
+- description: **confirmed** [a] "an ARS is sufficient to describe important properties of rewriting systems like [[Normal form (abstract rewriting)|normal form]]s, [[Termination (term rewriting)|termination]], and various notions of" [n] "It states that [[Confluence (abstract rewriting)#Local confluence|local confluence]] is a sufficient condition for confluence, provided that the system is also"
+- input: **confirmed** [a] "An ARS is a [[set (mathematics)|set]] ''A'', whose elements are usually called objects, together with a [[binary relation]] on ''A''"
+- output: **confirmed** [a] "otherwise it is called ''irreducible'' or a ''normal form''."
+- preserved: **unsupported** *The generated equivalence is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (abstract rewriting systems); description: Binary relation; termination, confluence, normal forms; Newman's lemma; input: Set with relation; output: Normal forms; preserved: Equivalence closure; broken: Paths
+
+  a: excerpts/wikipedia-abstract-rewriting-system.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378824802)
+  n: excerpts/wikipedia-newmans-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1352342600)
+
+### D7-169 Knuth-Bendix Completion (batch 7)
+
+- name: **confirmed** [k] "[[algorithm]] for transforming a set of [[equation]]s (over [[term (logic)|terms]]) into a [[Confluence (term rewriting)|confluent]] [[term rewriting system]]."
+- description: **confirmed** [k] "and attempts to construct a confluent and terminating term rewriting system ''R'' that"
+- input: **confirmed** [k] "The Knuth–Bendix algorithm takes a set ''E'' of equations between [[term (logic)|terms]], and a [[reduction ordering]] (>) on the set of all terms"
+- output: **confirmed** [k] "and attempts to construct a confluent and terminating term rewriting system ''R'' that"
+- preserved: **confirmed** [k] "When the algorithm succeeds, it effectively solves the [[word problem (mathematics)|word problem]] for the specified [[algebra]]."
+- broken: **confirmed** [k] "is a [[semidecidable|semi-decision]]" *A semi-decision procedure: it need not terminate.*
+- recalled: name: Standard; description: Orient equations, add critical pairs; may fail or not terminate; input: Equations and reduction order; output: Convergent system or failure; preserved: Equational theory; decides word problem on success; broken: Termination of the procedure
+
+  k: excerpts/wikipedia-knuth-bendix-completion-algorithm.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374771357)
+
+### D7-170 Buchberger Algorithm Application (batch 7)
+
+- name: **confirmed** [b] "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+- description: **confirmed** [b] ":# Reduce ''S''<sub>''ij''</sub>, with the [[multivariate division algorithm]] relative to the set ''G'' until the result is not further reducible." [b] "If the result is non-zero, add it to ''G''."
+- input: **confirmed** [b] "is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+- output: **confirmed** [b] "which is another set of polynomials that have the same common zeros and are mor"
+- preserved: **confirmed** [b] "which is another set of polynomials that have the same common zeros and are mor" *The source quotes common zeros; the ideal itself is not named in the window.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Add reduced S-polynomials until all reduce to zero; input: Generators and monomial order; output: Groebner basis; preserved: The ideal; broken: Original generators
+
+  b: excerpts/wikipedia-buchbergers-algorithm.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1359915802)
+
+### D7-171 Gr\u00f6bner Basis Computation (batch 7)
+
+- name: **confirmed** [g] "the leading monomial of every polynomial in {{mvar|I}} is a multiple of the leading monomial of some polynomial in {{mvar|G}}."
+- description: **confirmed** [g] "the leading monomial of every polynomial in {{mvar|I}} is a multiple of the leading monomial of some polynomial in {{mvar|G}}." [g] "It is for dealing with the problems set by this non-uniqueness that [[Bruno Buchberger|Buchberger]] introduced Gröbner bases and {{mvar|S}}-polynomials."
+- input: **confirmed** [g] "For every admissible monomial ordering and every finite set {{mvar|G}} of polynomials"
+- output: **confirmed** [g] "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+- preserved: **confirmed** [g] "condition 3 provides an algorithm for testing [[ideal membership problem|ideal membership]]"
+- broken: **confirmed** [g] "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal." *The generators change; doubly exponential complexity is not quoted.*
+- recalled: name: Standard; description: Leading terms generate the initial ideal; unique remainders; doubly exponential worst case; input: Ideal and order; output: Groebner basis; preserved: Ideal; membership decidable; broken: Generators; complexity
+
+  g: excerpts/wikipedia-grobner-basis.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743)
+
+### D7-172 Critical Pair Resolution (batch 7)
+
+- name: **confirmed** [c] "A '''critical pair''' arises in a [[term rewriting system]] when two rewrite rules overlap to yield two different terms."
+- description: **confirmed** [c] "A '''critical pair''' arises in a [[term rewriting system]] when two rewrite rules overlap to yield two different terms." *That unjoinable pairs become new rules is the completion step, not quoted here.*
+- input: **confirmed** [c] "arises in a [[term rewriting system]]"
+- output: **confirmed** [k] "The [[critical pair lemma]] states that a term rewriting system is [[confluence (term rewriting)|locally confluent]] (or weakly confluent) if and only if all its [[critical pair (logic)|critical pairs]] are convergent."
+- preserved: **unsupported** *Preservation of the equational theory is not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Overlaps of left-hand sides; local confluence iff all critical pairs join; input: Rewriting system; output: Critical pairs; preserved: Equational theory; broken: Nothing
+
+  c: excerpts/wikipedia-critical-pair-term-rewriting.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1312991159)
+  k: excerpts/wikipedia-knuth-bendix-completion-algorithm.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374771357)
+
+### D7-173 Diamond Lemma Application (batch 7)
+
+- name: **confirmed** [n] "'''Newman's lemma''', also commonly called the '''diamond lemma'''"
+- description: **confirmed** [n] "It states that [[Confluence (abstract rewriting)#Local confluence|local confluence]] is a sufficient condition for confluence, provided that the system is also" [b] "It is an extension of [[Gröbner basis|Gröbner bases]] to non-commutative [[Ring (mathematics)|rings]]." *Newman 1942 per the source; Bergman's version for algebras is the second source's.*
+- input: **confirmed** [n] "provided that the system is also [[Abstract rewriting system#Termination and convergence|terminating]]."
+- output: **confirmed** [n] "is a sufficient condition for confluence"
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Newman 1942; Bergman 1978); description: Termination and local confluence give confluence; Bergman's ring-theoretic version; input: Terminating locally confluent system; output: Confluence; preserved: Equivalence classes; broken: Nothing
+
+  n: excerpts/wikipedia-newmans-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1352342600)
+  b: excerpts/wikipedia-bergmans-diamond-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351364215)
+
+### D7-174 Squier's Theorem Homotopy Construction (batch 7)
+
+- name: **unsupported** *Squier's theorem: no fetched source (no Wikipedia or nLab page).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Squier 1987); description: Finite convergent presentation implies FP_3 and finite derivation type; obstruction; input: Finite convergent monoid presentation; output: FDT, FP_3; preserved: The monoid; broken: Nothing
+
+
+### D7-175 Supremum Evaluation (batch 7)
+
+- name: **confirmed** [i] "The '''supremum''' (abbreviated '''sup'''; {{plural abbr}}: '''suprema''') of a subset <math>S</math> of a partially ordered set <math>P</math>"
+- description: **confirmed** [i] "is the [[least element]] in <math>P</math> that is greater than or equ"
+- input: **confirmed** [i] "of a subset <math>S</math> of a partially ordered set <math>P</math>"
+- output: **confirmed** [i] "is the [[least element]] in <math>P</math> that is greater than or equ"
+- preserved: **confirmed** [i] "If the infimum of <math>S</math> exists, it is unique" *Stated for the infimum; dually for the supremum.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Least upper bound; input: Poset and subset; output: Supremum if it exists; preserved: Order; broken: Elements
+
+  i: excerpts/wikipedia-infimum-and-supremum.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279)
 

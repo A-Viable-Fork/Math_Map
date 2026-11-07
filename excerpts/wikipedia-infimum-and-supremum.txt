@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Infimum and supremum (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377589279
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d2f91452bf95258a07df7d7c3940ca4907238684e6ed243ff5629c49d0ee090f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''supremum''' (abbreviated '''sup'''; {{plural abbr}}: '''suprema''') of a subset <math>S</math> of a partially ordered set <math>P</math>
+
+is the [[least element]] in <math>P</math> that is greater than or equ
+
+of a subset <math>S</math> of a partially ordered set <math>P</math>
+
+If the infimum of <math>S</math> exists, it is unique

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Sylow theorems (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379917705
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 437a52b07839639b8d810d08f8a0b6431715d2581991d7fe3ba983b12be558bb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A '''Sylow ''p''-subgroup''' of a group <math>G</math> is a [[Maximal subgroup|maximal]] <math>p</math>-subgroup
+
+Furthermore, the number of Sylow <math>p</math>-subgroups of a group for a given prime <math>p</math> is congruent to 1 (mod <math>p</math>).
+
+* <math>n_p</math> divides {{mvar|m}}, which is the [[index of a subgroup|index]] of the Sylow {{mvar|p}}-subgroup in {{mvar|G}}.
+
+are [[Conjugacy class|conjugate]] to ea
+
+for every [[prime factor]] ''<math>p</math>'' of the order of a finite group <math>G</math>
+
+there exists a Sylow <math>p</math>-subgroup of <math>G</math> of order <math>p^n</math>, the highest power of <ma
+
+* <math>n_p = |G:N_G (P)|</math>, where {{mvar|P}} is any Sylow {{mvar|p}}-subgroup of {{mvar|G}}
