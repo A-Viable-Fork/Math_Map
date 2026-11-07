@@ -152,6 +152,32 @@ const CORRECTIONS = [
     receipts: [R("excerpts/wikipedia-doob-h-transform.txt", "Let <math>h:E\\to[0,\\infty]</math> be an ''excessive'' function", "description", "input"),
       R("excerpts/wikipedia-doob-h-transform.txt", "can also be used to condition the process <math>X</math> on hitting a distinct point", "description"),
       R("excerpts/arxiv-2103.12179.txt", "[0,∞), using the harmonic function h(x) =x.", "description")] },
+  // The fill review (audit/fill-review-0_1.js): fill fields graded imprecise or wrong. The fill's text is kept on
+  // the entry as its landed text (corrected.landed), beside the replacement.
+  { id: "D7-001", name: "Functor Application",
+    fields: { broken: "Distinctions between parallel morphisms, where F is not faithful (faithful means injective on each hom-set); a functor that is not full misses morphisms between images rather than identifying any" },
+    reason: "Fill review, batch 1: broken graded imprecise. Only non-faithfulness loses distinctions; non-fullness is a failure of surjectivity on hom-sets, and injectivity on objects belongs to neither notion.",
+    receipts: [R("excerpts/nlab-faithful-functor.txt", "its [[function]] $F_{x,y}$ on [[hom-sets]] is [[injection|injective]]", "broken"),
+      R("excerpts/nlab-full-functor.txt", "between [[hom sets]] is [[surjective]].", "broken")] },
+  { id: "D7-003", name: "Left Adjoint Construction",
+    fields: { input: "Functor G: D to C that preserves limits, with D complete and locally small and G satisfying the solution set condition (Freyd's general adjoint functor theorem)" },
+    reason: "Fill review, batch 1: input graded imprecise. The solution set condition alone does not give a left adjoint; Freyd's theorem also needs limit preservation and a complete, locally small domain.",
+    receipts: [R("excerpts/nlab-adjoint-functor-theorem.txt", "with all small limits has a left adjoint if it preserves these [[limit]]s and satisfies the [[solution set condition]].", "input")] },
+  { id: "D7-004", name: "Right Adjoint Construction",
+    fields: { input: "Functor F: C to D that preserves colimits, under the dual hypotheses (C cocomplete and locally small, the dual solution set condition)" },
+    reason: "Fill review, batch 1: input graded imprecise. Dually to the left adjoint, F must preserve colimits; the dual solution set condition alone is not enough.",
+    receipts: [R("excerpts/nlab-adjoint-functor-theorem.txt", "and that a functor that [[preserved colimit|preserves]] [[colimits]] is a [[left adjoint]].", "input")] },
+  { id: "D7-017", name: "Coproduct Formation",
+    fields: { preserved: "Each summand maps in by its coprojection; in Set (disjoint union) and wherever coproducts are disjoint the coprojections are monomorphisms, but in general they need not be",
+      broken: "In Set nothing is identified; in general a coprojection need not be a monomorphism, so a summand can be partly identified" },
+    reason: "Fill review, batch 1: preserved and broken graded imprecise. \"Each summand embeds\" and \"nothing is identified\" hold for disjoint unions; in general the coprojections need not be monomorphisms.",
+    receipts: [R("excerpts/nlab-coproduct.txt", "although in general they may not be [[monomorphisms]]", "preserved", "broken"),
+      R("excerpts/nlab-coproduct.txt", "especially when it is [[disjoint coproduct|disjoint]]", "preserved"),
+      R("excerpts/nlab-coproduct.txt", "The notion of _coproduct_ is a generalization to arbitrary [[categories]] of the notion of [[disjoint union]] in the category [[Set]].", "broken")] },
+  { id: "D7-024", name: "Freyd's Adjoint Functor Construction",
+    fields: { broken: "Constructivity: the left adjoint's value at each object is an initial object obtained from a small limit over the solution set, not an explicit formula" },
+    reason: "Fill review, batch 1: broken graded imprecise. The solution set condition replaces the large limit by a small one; the landed fill said the adjoint is a large limit.",
+    receipts: [R("excerpts/nlab-adjoint-functor-theorem.txt", "Now an initial object is the limit of the identity functor, but this is generally a large limit; we replace this with some small limit conditions that guarantee existence of an initial object.", "broken")] },
 ];
 
 module.exports = { CORRECTIONS };

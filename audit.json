@@ -4628,5 +4628,1393 @@
    }
   }
  ],
- "fillReview": []
+ "fillReview": [
+  {
+   "id": "D7-001",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-functor.txt",
+    "f": "excerpts/nlab-faithful-functor.txt",
+    "u": "excerpts/nlab-full-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Functor.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* A *functor* is a [[homomorphism]] of [[categories]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "a component-[[function]] of the [[classes]] of [[objects]];",
+     "note": "\"The basic structure-transporting move\" is a gloss."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* A functor between [[small categories]] is a [[homomorphism]] of the [[underlying]] [[graphs]] that respects the [[composition]] of [[edges]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "map : ∀ {X Y : C}, (X ⟶ Y) → ((obj X) ⟶ (obj Y))",
+     "more": [
+      {
+       "src": "m",
+       "quote": "obj : C → D"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* $F$ preserves [[commuting diagrams]].",
+     "more": [
+      {
+       "src": "n",
+       "quote": "* it respects [[composition]]: the image of the composite of two morphisms under $F$ is the composite of their images."
+      },
+      {
+       "src": "m",
+       "quote": "map_id : ∀ X : C, map (𝟙 X) = 𝟙 (obj X)"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "its [[function]] $F_{x,y}$ on [[hom-sets]] is [[injection|injective]]",
+     "note": "Distinctions are lost only where F is not faithful (a faithful functor is injective on hom-sets). A functor that is not full misses morphisms between images; it identifies nothing. Injectivity on objects is no part of either notion.",
+     "more": [
+      {
+       "src": "u",
+       "quote": "between [[hom sets]] is [[surjective]]."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/functor",
+    "f": "https://ncatlab.org/nlab/source/faithful+functor",
+    "u": "https://ncatlab.org/nlab/source/full+functor",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-002",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-natural-transformation.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.NatTrans.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "a natural transformation is a [[2-morphism]] between two functors."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "naturality ⦃X Y : C⦄ (f : X ⟶ Y) : F.map f ≫ app Y = app X ≫ G.map f",
+     "more": [
+      {
+       "src": "n",
+       "quote": "the following [[diagram]] [[commuting diagram|commutes]] in $D$:"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure NatTrans (F G : C ⥤ D) : Type max u₁ v₂ where"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "app (X : C) : F.obj X ⟶ G.obj X"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "naturality ⦃X Y : C⦄ (f : X ⟶ Y) : F.map f ≫ app Y = app X ≫ G.map f"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "A gloss (\"the identity of the two functors\"); no source states what a natural transformation loses."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/natural+transformation",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/NatTrans.lean"
+   }
+  },
+  {
+   "id": "D7-003",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/nlab-adjoint-functor.txt",
+    "t": "excerpts/nlab-adjoint-functor-theorem.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "if there exists a [[natural isomorphism]] between the [[hom-functors]] of the following form:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "if there exists a [[natural isomorphism]] between the [[hom-functors]] of the following form:",
+     "note": "\"Best approximation from below\" is a gloss."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "with all small limits has a left adjoint if it preserves these [[limit]]s and satisfies the [[solution set condition]].",
+     "note": "The solution set condition alone does not give a left adjoint: Freyd's theorem also needs G to preserve limits and its domain to be complete and locally small."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is the _[[unit of an adjunction|unit morphism]]_ of the adjunction at that object, denoted"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "lemma leftAdjoint_preservesColimits : PreservesColimitsOfSize.{v, u} F"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source states that left adjoints fail to preserve limits; \"the extra structure is freely added\" is a gloss."
+    }
+   },
+   "contra": [
+    "input"
+   ],
+   "sources": {
+    "a": "https://ncatlab.org/nlab/source/adjoint+functor",
+    "t": "https://ncatlab.org/nlab/source/adjoint+functor+theorem",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+   }
+  },
+  {
+   "id": "D7-004",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/nlab-adjoint-functor.txt",
+    "t": "excerpts/nlab-adjoint-functor-theorem.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "if there exists a [[natural isomorphism]] between the [[hom-functors]] of the following form:"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is the _[[counit of an adjunction|counit morphism]]_ of the adjunction at that object, denoted"
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "and that a functor that [[preserved colimit|preserves]] [[colimits]] is a [[left adjoint]].",
+     "note": "As for the left adjoint, dually: F must preserve colimits, with a cocomplete, locally small domain; the dual solution set condition alone is not enough."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is the _[[counit of an adjunction|counit morphism]]_ of the adjunction at that object, denoted"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "lemma rightAdjoint_preservesLimits : PreservesLimitsOfSize.{v, u} G"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source states that right adjoints fail to preserve colimits."
+    }
+   },
+   "contra": [
+    "input"
+   ],
+   "sources": {
+    "a": "https://ncatlab.org/nlab/source/adjoint+functor",
+    "t": "https://ncatlab.org/nlab/source/adjoint+functor+theorem",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+   }
+  },
+  {
+   "id": "D7-005",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kan-extension.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Functor.KanExtension.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "class IsLeftKanExtension : Prop where"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "nonempty_isUniversal : Nonempty (LeftExtension.mk F' α).IsUniversal",
+     "note": "The pointwise formula is a colimit over the comma category (K over d), for ordinary locally small categories.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "there is an expression of a weighted (co)limit and hence a pointwise Kan extension as an ordinary (&quot;conical&quot;, meaning: in terms of [[cone]]s) (co)limit over a [[comma category]]:"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "If the [[codomain]] category $D$ admits certain [[limit|(co)limits]], then left and right Kan extensions can be constructed"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the universal transformation $F\\to (Lan_p F)p$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "* the left Kan extension operation forms the [[colimit]] of a functor;",
+     "note": "Along the functor to the terminal category. \"Universal property\" restates the definition."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "(Lan_p F)(c&#39;) \\coloneqq colim^{C&#39;(p(-),c&#39;)} F",
+     "note": "Each value is this colimit, so values off the image of K are determined by F and K, not given; \"freely generated\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kan+extension",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-006",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kan-extension.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Functor.KanExtension.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "class IsRightKanExtension : Prop where"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "nonempty_isUniversal : Nonempty (RightExtension.mk F' α).IsUniversal",
+     "note": "Pointwise, a limit over the comma category (d over K).",
+     "more": [
+      {
+       "src": "k",
+       "quote": "there is an expression of a weighted (co)limit and hence a pointwise Kan extension as an ordinary (&quot;conical&quot;, meaning: in terms of [[cone]]s) (co)limit over a [[comma category]]:"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "If the [[codomain]] category $D$ admits certain [[limit|(co)limits]], then left and right Kan extensions can be constructed"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Then these objects fit together into a functor $Ran_p F$ which is a right Kan extension of $F$ along $p$.",
+     "note": "The counit is not quoted; the output functor is."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "* the right Kan extension operation forms the [[limit]] of a functor."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "(Ran_p F)(c&#39;) \\coloneqq lim^{C&#39;(c&#39;,p(-))} F",
+     "note": "Values are determined by this limit; \"cofreely\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kan+extension",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-007",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/nlab-yoneda-embedding.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The **Yoneda embedding** for $C$ a [[locally small category]] is the [[functor]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The [[Yoneda lemma]] implies that this functor is [[full and faithful functor|full and faithful]] and hence realizes $C$ as a [[full subcategory]] inside its category of presheaves."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "For $C$ a [[locally small category]], every [[object]] $X$ of $C$ induces a [[presheaf]] on $C$: the [[representable presheaf]] $h_X$ represented by $X$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "This assignment extends to a [[functor]] $C \\to [C^{op}, Set]$ from $C$ to its [[category of presheaves]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The Yoneda embedding $y \\colon \\mathcal{C} \\longrightarrow Func(\\mathcal{C}^{op}, Set)$ [[preserved limit|preserves]] [[limits]], hence is a [[continuous functor]].",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def fullyFaithful : (yoneda (C := C)).FullyFaithful where"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "In contrast, the Yoneda embedding does not in general preserve [[colimits]].",
+     "note": "\"Smallness of the ambient category\" is not checked.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "Instead, the Yoneda embedding of a [[small category]] $\\mathcal{C}$ is its *[[free cocompletion]]*."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "y": "https://ncatlab.org/nlab/source/Yoneda+embedding",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean"
+   }
+  },
+  {
+   "id": "D7-008",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-co-yoneda-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "What is sometimes called the _co-Yoneda lemma_ or _density formula_ is a basic fact about [[presheaves]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "it says that every [[presheaf]] is a [[colimit]] of [[representable functor|representables]]",
+     "more": [
+      {
+       "src": "c",
+       "quote": "Under [[duality|abstract duality]] an [[end]] turns into a [[coend]], so a co-Yoneda lemma ought to be a similarly fundamental expression for $F(c)$ in terms of a [[coend]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "## Every presheaf is a colimit of representables"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Yet another way to state this is as a [[colimit]] over the [[comma category]] $(Y,F)$, for $Y$ the [[Yoneda embedding]] (the [[category of elements]] of $F$):"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is canonically presented as a colimit of representables, we exhibit a natural isomorphism"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "it is the &quot;colimit over itself of all the representables contained in it&quot;",
+     "note": "Every element contributes a representable: the presentation is canonical, not economical."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/co-Yoneda+lemma"
+   }
+  },
+  {
+   "id": "D7-009",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-grothendieck-construction.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Grothendieck.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The **Grothendieck construction** describes this in the context of [[Cat]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "* the [[objects]] of $\\int F$ are pairs $(c,a)$, where $c \\in Obj(C)$ and $a \\in Obj(F(c))$,",
+     "more": [
+      {
+       "src": "m",
+       "quote": "fiber : F.obj base"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is encoded in a [[pseudofunctor]]/[[2-functor]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The essential image of this functor consists of [[Grothendieck fibration]]s and this establishes an [[equivalence of 2-categories]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The essential image of this functor consists of [[Grothendieck fibration]]s and this establishes an [[equivalence of 2-categories]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "A gloss; no source states what the construction loses beyond the change of presentation."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/Grothendieck+construction",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Grothendieck.lean"
+   }
+  },
+  {
+   "id": "D7-010",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-limit.txt",
+    "t": "excerpts/nlab-adjoint-functor-theorem.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Moreover, the limit $lim F$ is the _universal_ object with this property"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is called the **universal cone** over $F$, because,"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A limit is taken over a [[functor]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is an [[object]] $lim F$ of $C$ equipped with morphisms to the objects $F(d)$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A basic result of [[category theory]] is that right [[adjoint functors]] [[preserved limit|preserve]] all [[limits]] that exist in their [[domain]]",
+     "more": [
+      {
+       "src": "m",
+       "quote": "lemma rightAdjoint_preservesLimits : PreservesLimitsOfSize.{v, u} G"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Information not shared by all parts of the diagram\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/limit",
+    "t": "https://ncatlab.org/nlab/source/adjoint+functor+theorem",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+   }
+  },
+  {
+   "id": "D7-011",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-colimit.txt",
+    "l": "excerpts/nlab-limit.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The intuitive general idea of a colimit is that it defines an object obtained by sewing together the objects of the diagram"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The intuitive general idea of a colimit is that it defines an object obtained by sewing together the objects of the diagram"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "according to the instructions given by the morphisms of the diagram."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The corresponding universal object for morphisms _out_ of the diagram is the [[colimit]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "**([[adjoints preserve (co-)limits|left adjoint functors preserve colimits]])**",
+     "more": [
+      {
+       "src": "m",
+       "quote": "lemma leftAdjoint_preservesColimits : PreservesColimitsOfSize.{v, u} F"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "sewing together the objects of the diagram, according to the instructions given by the morphisms of the diagram",
+     "note": "Sewing along the diagram's morphisms identifies what they relate."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/colimit",
+    "l": "https://ncatlab.org/nlab/source/limit",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+   }
+  },
+  {
+   "id": "D7-012",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-pullback.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Pullback.Mono.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a pullback is sometimes called a __fibered product__ (or _fiber product_ or _fibre product_)."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "consisting of pairs $(a,b)$ such that the [[equation]] $f(a) = g(b)$ holds.",
+     "note": "In Set. Intersections and inverse images as special cases are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Such a diagram is also called a **pullback diagram** or a [[cospan]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If the [[limit]] exists, we obtain a commutative square"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Pullbacks preserve [[monomorphisms]] and [[isomorphisms]]:",
+     "more": [
+      {
+       "src": "m",
+       "quote": "instance pullback.fst_of_mono {X Y Z : C} {f : X ⟶ Z} {g : Y ⟶ Z} [HasPullback f g] [Mono g] :"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "consisting of pairs $(a,b)$ such that the [[equation]] $f(a) = g(b)$ holds.",
+     "note": "In Set, elements of X and Y with no common image in Z drop out."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/pullback",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean"
+   }
+  },
+  {
+   "id": "D7-013",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-pushout.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Pullback.Mono.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "or more simply an __[[amalgamation]]__ (or __amalgam__) of $a$ and $b$."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "In the category [[Set]] a &#39;pushout&#39; is a quotient of the disjoint union of two sets.",
+     "note": "Attaching cells is not checked.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "A [[pushout]] of [[injections]] of [[Sets]] is called the [[union]] of the sets."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Such a diagram is called a [[span]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If the colimit exists, we obtain a [[commutative square]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Pushouts preserve [[epimorphisms]] and [[isomorphisms]]:",
+     "more": [
+      {
+       "src": "m",
+       "quote": "instance pushout.inl_of_epi {X Y Z : C} {f : X ⟶ Y} {g : X ⟶ Z} [HasPushout f g] [Epi g] :"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "identifying $a \\in A$ with $b \\in B$ if there exists $x \\in C$ such that $f(x) = a$ and $g(x) = b$",
+     "note": "The two images of Z are identified."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/pushout",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean"
+   }
+  },
+  {
+   "id": "D7-014",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-equalizer.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Equalizers.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "over a parallel pair i.e. of the [[diagram]] of the shape"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "* In $C =$ [[Set]] the equalizer of two functions of sets is the subset of elements of $c$ on which both functions coincide."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "two [[parallel morphisms]] in a [[category]] $C$, their equalizer is, if it exists"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Then $e$ is a [[monomorphism]].",
+     "more": [
+      {
+       "src": "m",
+       "quote": "instance equalizer.ι_mono : Mono (equalizer.ι f g)"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Then $e$ is a [[monomorphism]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "* In $C =$ [[Set]] the equalizer of two functions of sets is the subset of elements of $c$ on which both functions coincide."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/equalizer",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean"
+   }
+  },
+  {
+   "id": "D7-015",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/nlab-coequalizer.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Equalizers.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the **coequalizer** $coeq(f,g)$ of two [[parallel morphisms]] $f$ and $g$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "is (if it exists), the _[[colimit]]_ under the [[diagram]] formed by these two morphisms"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the **coequalizer** $coeq(f,g)$ of two [[parallel morphisms]] $f$ and $g$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Morphisms that coequalize some pair of [[parallel morphisms]] are called *[[regular epimorphisms]]*.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "instance coequalizer.π_epi : Epi (coequalizer.π f g)"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "instance coequalizer.π_epi : Epi (coequalizer.π f g)"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "This means that the [[quotient]] function",
+     "note": "In Set, the quotient by the equivalence relation generated by f(x) ~ g(x)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://ncatlab.org/nlab/source/coequalizer",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean"
+   }
+  },
+  {
+   "id": "D7-016",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/nlab-cartesian-product.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "(as a special case of a category-theoretic _[[limit]]_)"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "(as a special case of a category-theoretic _[[limit]]_)",
+     "more": [
+      {
+       "src": "p",
+       "quote": "such that it is [[universal property|universal with this property]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "(the _[[projections]]_), for each $i"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "(the _[[projections]]_), for each $i"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "\"Each factor recoverable when the others are nonempty\" is a fact about sets; no fetched source states it, or what product formation preserves in general."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Independence is imposed\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://ncatlab.org/nlab/source/cartesian+product"
+   }
+  },
+  {
+   "id": "D7-017",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-coproduct.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The notion of _coproduct_ is a generalization to arbitrary [[categories]] of the notion of [[disjoint union]] in the category [[Set]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A coproduct is thus the [[colimit]] over the [[diagram]] that consists of just two objects.",
+     "note": "Binary in the quote; the family case is the same colimit over a discrete diagram."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A coproduct is thus the [[colimit]] over the [[diagram]] that consists of just two objects."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "are called [[coprojections]] or sometimes &quot;injections&quot; or &quot;inclusions&quot;"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "although in general they may not be [[monomorphisms]]",
+     "note": "\"Each summand embeds\" is stated without its condition: in general the coprojections need not be monomorphisms. They are in Set and wherever coproducts are disjoint.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "especially when it is [[disjoint coproduct|disjoint]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "although in general they may not be [[monomorphisms]]",
+     "note": "\"Nothing is identified\" holds for disjoint unions; in general a coprojection that is not a monomorphism identifies parts of its summand."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/coproduct"
+   }
+  },
+  {
+   "id": "D7-018",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-cartesian-closed-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The [[internal hom]] $[S,X]$ in a cartesian closed category is often called [[exponential object|exponentiation]] and is denoted $X^S$.",
+     "note": "\"Cartesian Closed Structure Evaluation\" is not a standard name; the source names the structure and its evaluation map."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "There is an evaluation map $ev_{X, Y}: Y^X \\times X \\to Y$, which by definition is the map corresponding to the identity map $Y^X \\to Y^X$ under the bijection."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The [[internal hom]] $[S,X]$ in a cartesian closed category is often called [[exponential object|exponentiation]] and is denoted $X^S$."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "There is an evaluation map $ev_{X, Y}: Y^X \\times X \\to Y$, which by definition is the map corresponding to the identity map $Y^X \\to Y^X$ under the bijection."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* The [[internal logic]] of cartesian closed categories is [[minimal logic]] or the [[typed lambda-calculus]].",
+     "more": [
+      {
+       "src": "c",
+       "quote": "the bijection $\\hom(Z, Y^X) \\to \\hom(Z \\times X, Y)$"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the bijection $\\hom(Z, Y^X) \\to \\hom(Z \\times X, Y)$",
+     "note": "A bijection of hom-sets loses nothing."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/cartesian+closed+category"
+   }
+  },
+  {
+   "id": "D7-019",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "x": "excerpts/nlab-exponential-object.txt",
+    "c": "excerpts/nlab-cartesian-closed-category.txt",
+    "t": "excerpts/nlab-adjoint-functor-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "An __exponential object__ $X^Y$ is an [[internal hom]] $[Y,X]$ in a [[cartesian closed category]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "an exponential object $X^Y$ is a [[representing object]] for the functor $\\hom(- \\times Y, X)$.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "the product functors $A \\times -$ have [[right adjoints]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "Let $X$ and $Y$ be objects of a [[category]] $C$ such that all binary [[products]] with $Y$ exist.",
+     "note": "Binary products with B suffice; the fill asks for all finite products."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "an __exponential object__ is an object $X^Y$ equipped with an __[[evaluation map]]__"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "an exponential object $X^Y$ is a [[representing object]] for the functor $\\hom(- \\times Y, X)$.",
+     "note": "\"Limits in C\" read as: (-)^B, a right adjoint, preserves limits.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "A basic result of [[category theory]] is that right [[adjoint functors]] [[preserved limit|preserve]] all [[limits]] that exist in their [[domain]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "an exponential object $X^Y$ is a [[representing object]] for the functor $\\hom(- \\times Y, X)$.",
+     "note": "It exists exactly when hom(- x B, C) is representable."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "x": "https://ncatlab.org/nlab/source/exponential+object",
+    "c": "https://ncatlab.org/nlab/source/cartesian+closed+category",
+    "t": "https://ncatlab.org/nlab/source/adjoint+functor+theorem"
+   }
+  },
+  {
+   "id": "D7-020",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-subobject-classifier.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Subobject.Classifier.Defs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In a [[category]] $C$ with [[finite limit]]s, a **subobject classifier** is a [[monomorphism]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is the [[pullback]] of this morphism along a unique morphism (the [[characteristic morphism]] of $A$)",
+     "more": [
+      {
+       "src": "m",
+       "quote": "truth : Ω₀ ⟶ Ω"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In a [[category]] $C$ with [[finite limit]]s, a **subobject classifier** is a [[monomorphism]]",
+     "note": "Finite limits suffice for the definition; a topos is the usual setting."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is the [[pullback]] of this morphism along a unique morphism (the [[characteristic morphism]] of $A$)"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In this case the representing object is [[generalized the|the]] subobject classifier: there is a [[natural isomorphism]]",
+     "note": "The Heyting algebra structure of Omega is not checked."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "It is not usually true in [[toposes]] that $\\Omega$ is the [[coproduct]] $\\mathbf{2} = 1 + 1$",
+     "note": "The source speaks to Booleanness (Omega = 1 + 1). Two-valuedness (exactly two global truth values) is a different condition, which the fill runs together with it; not checked here."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/subobject+classifier",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean"
+   }
+  },
+  {
+   "id": "D7-021",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-cauchy-complete-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The basic idea is that the Cauchy [[completion]] of a [[category]] is the closure of a category under what are called &quot;[[absolute limit]]s&quot;"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Equivalently, the Cauchy completion is the closure with respect to [[absolute colimit]]s.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "the Cauchy completion of $\\mathcal{V}$-enriched category is its completion under _finite direct sums and idempotent splitting_."
+      },
+      {
+       "src": "c",
+       "quote": "The Cauchy completion is the usual completion under _Cauchy nets_ or _Cauchy filters_."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "All of these concepts generalize straightforwardly to the context of general $V$-[[enriched category theory|enriched categories]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "It contains $C$ as a [[full subcategory]] because the [[Yoneda embedding]] is a [[full and faithful functor]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and we say that $C$ and $\\bar{C}$ are **Morita equivalent**.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "$$Set^{C^{op}} \\simeq Set^{\\bar{C}^{op}}$$"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the inclusion $C \\hookrightarrow \\overline{C}$ is an [[equivalence of categories]] precisely if already every [[idempotent]] in $C$ splits;",
+     "note": "Nothing is removed; objects are added only where idempotents do not yet split."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/Cauchy+complete+category"
+   }
+  },
+  {
+   "id": "D7-022",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-karoubi-envelope.txt",
+    "c": "excerpts/nlab-cauchy-complete-category.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Idempotents.Karoubi.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The _Karoubi envelope_ or _idempotent completion_ of a [[category]] is the [[universal construction|universal]] enlargement of the category with the property that every [[idempotent]] is a [[split idempotent]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "comm : P.p ≫ f ≫ Q.p = f",
+     "more": [
+      {
+       "src": "m",
+       "quote": "idem : p ≫ p = p"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The _Karoubi envelope_ or _idempotent completion_ of a [[category]] is the [[universal construction|universal]] enlargement of the category with the property that every [[idempotent]] is a [[split idempotent]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def toKaroubi : C ⥤ Karoubi C where",
+     "note": "Full faithfulness of the embedding is stated in the nLab's characterization.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "For a fully faithful embedding $i \\colon \\mathcal{C} \\to \\mathcal{D}$ to exhibit an idempotent(-splitting) completion of $\\mathcal{C}$, it suffices that"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "$$Set^{C^{op}} \\simeq Set^{\\bar{C}^{op}}$$",
+     "note": "The Karoubi envelope is the Cauchy completion of an ordinary category, so presheaves are kept."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "which are [[retracts]] of objects in",
+     "note": "Nothing is removed; retracts are added."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Karoubi+envelope",
+    "c": "https://ncatlab.org/nlab/source/Cauchy+complete+category",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Idempotents/Karoubi.lean"
+   }
+  },
+  {
+   "id": "D7-023",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-karoubi-envelope.txt",
+    "c": "excerpts/nlab-cauchy-complete-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The _Karoubi envelope_ or _idempotent completion_ of a [[category]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Thus, the Karoubi envelope is a [[completion]] operation into such categories."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The _Karoubi envelope_ or _idempotent completion_ of a [[category]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "In particular the idempotent completion always exists and is unique up to [[equivalence of categories]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "$$Set^{C^{op}} \\simeq Set^{\\bar{C}^{op}}$$"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "which are [[retracts]] of objects in",
+     "note": "Nothing is removed; retracts are added."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Karoubi+envelope",
+    "c": "https://ncatlab.org/nlab/source/Cauchy+complete+category"
+   }
+  },
+  {
+   "id": "D7-024",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/nlab-adjoint-functor-theorem.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.AdjointFunctorTheorems.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "This is Freyd&#39;s original version, sometimes called the &quot;**General Adjoint Functor Theorem**&quot;.",
+     "note": "The attribution to Freyd is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "with all small limits has a left adjoint if it preserves these [[limit]]s and satisfies the [[solution set condition]].",
+     "more": [
+      {
+       "src": "m",
+       "quote": "lemma isRightAdjoint_of_preservesLimits_of_solutionSetCondition [HasLimitsOfSize.{w, w} D]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "* $C$ is [[complete category|complete]] and [[locally small category|locally small]], and $R$ satisfies the [[solution set condition]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "with all small limits has a left adjoint if it preserves these [[limit]]s and satisfies the [[solution set condition]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Sufficient conditions for a limit-preserving functor $R \\colon C \\to D$ to be a [[right adjoint]] include:",
+     "note": "G's limit preservation is a hypothesis, kept; the adjunction bijection is the conclusion."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "Now an initial object is the limit of the identity functor, but this is generally a large limit; we replace this with some small limit conditions that guarantee existence of an initial object.",
+     "note": "The solution set condition exists to replace the large limit by a small one: the left adjoint's value is an initial object built from a small limit over the solution set. Non-constructivity is fair; \"a large limit\" is the wrong half."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://ncatlab.org/nlab/source/adjoint+functor+theorem",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean"
+   }
+  },
+  {
+   "id": "D7-025",
+   "batch": 1,
+   "why": "Fill review, batch 1: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-dedekind-macneille-completion.txt",
+    "n": "excerpts/nlab-macneille-completion.txt",
+    "m": "excerpts/mathlib-Mathlib.Order.Completion.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "It is named after [[Holbrook Mann MacNeille]] whose 1937 paper first defined and constructed it",
+     "note": "The attribution to MacNeille (and Dedekind) is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "define a ''cut'' to be a pair of sets {{math|(''A'', ''B'')}} for which {{math|1=''A''<sup>u</sup> = ''B''}}",
+     "more": [
+      {
+       "src": "w",
+       "quote": "is the smallest [[complete lattice]] that contains it."
+      },
+      {
+       "src": "m",
+       "quote": "def factorEmbedding (f : β ↪o α) : DedekindCut β ↪o α :="
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "is the smallest [[complete lattice]] that contains it."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev DedekindCut [Preorder α] := Concept α α (· ≤ ·)"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "that preserves all least upper bounds (joins) and greatest lower bounds (meets) existing in $L$.",
+     "note": "The nLab states it for a lattice L; for a poset the density claim is Wikipedia's.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "is join-dense and meet-dense in the Dedekind–MacNeille completion"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "However, the completion of a [[distributive lattice]] need not itself be distributive"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377697498",
+    "n": "https://ncatlab.org/nlab/source/MacNeille+completion",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean"
+   }
+  }
+ ]
 }

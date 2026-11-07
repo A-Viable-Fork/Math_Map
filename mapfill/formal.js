@@ -379,6 +379,26 @@ const FORMAL = [
   K("D2-074", "output", "Ideal.Quotient.mk", "Mathlib/RingTheory/Ideal/Quotient/Defs.lean", "exact",
     "The quotient ring homomorphism R →+* R ⧸ I (the ring R ⧸ I is the HasQuotient instance of the same file).", { whole: true }),
   K("D2-074", "broken", "Ideal.Quotient.eq_zero_iff_mem", "Mathlib/RingTheory/Ideal/Quotient/Defs.lean", "exact", "An element maps to zero exactly when it lies in I."),
+  // The fill review (audit/fill-review-0_1.js), batch 1: links made where Mathlib states a fill's claim.
+  K("D7-001", "preserved", "CategoryTheory.Functor", "Mathlib/CategoryTheory/Functor/Basic.lean", "exact", "The structure's fields map_id and map_comp: a functor preserves identities and composition."),
+  K("D7-002", "description", "CategoryTheory.NatTrans", "Mathlib/CategoryTheory/NatTrans.lean", "exact", "Components app X : F.obj X ⟶ G.obj X with the naturality square F.map f ≫ app Y = app X ≫ G.map f.", { whole: true }),
+  K("D7-003", "preserved", "CategoryTheory.Adjunction.leftAdjoint_preservesColimits", ADJ, "exact", "A left adjoint preserves colimits of every size.", { whole: true }),
+  K("D7-004", "preserved", "CategoryTheory.Adjunction.rightAdjoint_preservesLimits", ADJ, "exact", "A right adjoint preserves limits of every size.", { whole: true }),
+  K("D7-005", "description", "CategoryTheory.Functor.IsLeftKanExtension", "Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean", "exact", "F' with α : F ⟶ L ⋙ F' is a left Kan extension when the left extension it forms is universal. The pointwise colimit formula is a separate notion (IsPointwiseLeftKanExtension), not linked here."),
+  K("D7-006", "description", "CategoryTheory.Functor.IsRightKanExtension", "Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean", "exact", "The dual: the right extension (F', α) is universal."),
+  K("D7-007", "preserved", "CategoryTheory.Yoneda.fullyFaithful", "Mathlib/CategoryTheory/Yoneda.lean", "exact", "The Yoneda embedding is fully faithful. The fill's other preserved claim, limits, is not linked here."),
+  K("D7-009", "description", "CategoryTheory.Grothendieck", "Mathlib/CategoryTheory/Grothendieck.lean", "special", "Objects are pairs of a base object and an object of its fibre, for a covariant functor C ⥤ Cat (the fill's \"or C to Cat\" case); the contravariant, fibred version is not this declaration."),
+  K("D7-012", "preserved", "CategoryTheory.Limits.pullback.fst_of_mono", "Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean", "exact", "The pullback of a monomorphism is a monomorphism: the fill's \"monomorphisms stable under pullback\"."),
+  K("D7-013", "preserved", "CategoryTheory.Limits.pushout.inl_of_epi", "Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean", "exact", "The pushout of an epimorphism is an epimorphism."),
+  K("D7-014", "output", "CategoryTheory.Limits.equalizer.ι_mono", "Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean", "exact", "The equalizer's inclusion is a monomorphism."),
+  K("D7-015", "output", "CategoryTheory.Limits.coequalizer.π_epi", "Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean", "exact", "The coequalizer's projection is an epimorphism."),
+  K("D7-020", "description", "CategoryTheory.Subobject.Classifier", "Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean", "exact", "Every monomorphism has a characteristic map χ m, the only map forming a pullback square with truth. Mathlib lets the domain Ω₀ of truth be any object; the fill's true: 1 to Omega is the case of a terminal Ω₀."),
+  K("D7-022", "description", "CategoryTheory.Idempotents.Karoubi", "Mathlib/CategoryTheory/Idempotents/Karoubi.lean", "exact", "Objects are pairs of an object and an idempotent p ≫ p = p."),
+  K("D7-022", "description", "CategoryTheory.Idempotents.Karoubi.Hom", "Mathlib/CategoryTheory/Idempotents/Karoubi.lean", "exact", "Morphisms f with P.p ≫ f ≫ Q.p = f: the fill's f = e' f e."),
+  K("D7-022", "output", "CategoryTheory.Idempotents.toKaroubi", "Mathlib/CategoryTheory/Idempotents/Karoubi.lean", "ingredient", "The embedding C ⥤ Karoubi C, X to (X, 𝟙 X); its full faithfulness is stated by instances in the same file, not linked here."),
+  K("D7-024", "description", "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition", "Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean", "exact", "Freyd's general adjoint functor theorem: a limit-preserving G out of a complete, locally small category with the solution set condition is a right adjoint."),
+  K("D7-025", "output", "DedekindCut", "Mathlib/Order/Completion.lean", "exact", "The Dedekind-MacNeille completion of a preorder, as the concept lattice of ≤."),
+  K("D7-025", "description", "DedekindCut.factorEmbedding", "Mathlib/Order/Completion.lean", "exact", "Any order embedding of the poset into a complete lattice factors through the completion: it is the smallest."),
 ];
 
 module.exports = { MATHLIB, FORMAL };

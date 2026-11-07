@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, cartesian closed category (page source)
+URL: https://ncatlab.org/nlab/source/cartesian+closed+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 32971b266a90ca5ee612f15979268c664154129504dc478c0badf50159462f26
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The [[internal hom]] $[S,X]$ in a cartesian closed category is often called [[exponential object|exponentiation]] and is denoted $X^S$.
+
+There is an evaluation map $ev_{X, Y}: Y^X \times X \to Y$, which by definition is the map corresponding to the identity map $Y^X \to Y^X$ under the bijection.
+
+* The [[internal logic]] of cartesian closed categories is [[minimal logic]] or the [[typed lambda-calculus]].
+
+the bijection $\hom(Z, Y^X) \to \hom(Z \times X, Y)$
+
+the product functors $A \times -$ have [[right adjoints]]

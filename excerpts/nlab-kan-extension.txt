@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: nLab, Kan extension (page source)
+URL: https://ncatlab.org/nlab/source/Kan+extension
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5eead993f71d25b378cb38127aa6b2db31e58aaafc76065e99a1f111799019d6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+there is an expression of a weighted (co)limit and hence a pointwise Kan extension as an ordinary (&quot;conical&quot;, meaning: in terms of [[cone]]s) (co)limit over a [[comma category]]:
+
+If the [[codomain]] category $D$ admits certain [[limit|(co)limits]], then left and right Kan extensions can be constructed
+
+the universal transformation $F\to (Lan_p F)p$
+
+* the left Kan extension operation forms the [[colimit]] of a functor;
+
+(Lan_p F)(c&#39;) \coloneqq colim^{C&#39;(p(-),c&#39;)} F
+
+Then these objects fit together into a functor $Ran_p F$ which is a right Kan extension of $F$ along $p$.
+
+* the right Kan extension operation forms the [[limit]] of a functor.
+
+(Ran_p F)(c&#39;) \coloneqq lim^{C&#39;(c&#39;,p(-))} F

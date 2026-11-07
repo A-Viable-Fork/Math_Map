@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, adjoint functor theorem (page source)
+URL: https://ncatlab.org/nlab/source/adjoint+functor+theorem
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 79b87cf22d9bbceba91194c80ab88c54cce0ebd3f58f9ff50e603871fa7e6801
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+with all small limits has a left adjoint if it preserves these [[limit]]s and satisfies the [[solution set condition]].
+
+and that a functor that [[preserved colimit|preserves]] [[colimits]] is a [[left adjoint]].
+
+A basic result of [[category theory]] is that right [[adjoint functors]] [[preserved limit|preserve]] all [[limits]] that exist in their [[domain]]
+
+This is Freyd&#39;s original version, sometimes called the &quot;**General Adjoint Functor Theorem**&quot;.
+
+* $C$ is [[complete category|complete]] and [[locally small category|locally small]], and $R$ satisfies the [[solution set condition]].
+
+Sufficient conditions for a limit-preserving functor $R \colon C \to D$ to be a [[right adjoint]] include:
+
+Now an initial object is the limit of the identity functor, but this is generally a large limit; we replace this with some small limit conditions that guarantee existence of an initial object.

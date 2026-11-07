@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "0a3c92b9d0dc6f59a8b1bd4af183e3fa149f4916"
+  "commit": "be3466b7566cb01dd94312f20bfa5a510d3be375"
  },
  "domains": {
   "D1": {
@@ -748,21 +748,21 @@
   },
   "byTier": {
    "landed": 1337,
-   "audited": 116,
-   "authored": 494,
+   "audited": 141,
+   "authored": 469,
    "receipted": 74,
    "flagged": 1,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 22,
+  "corrected": 27,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 100,
-   "unchecked": 11236,
+   "unsupported": 107,
+   "unchecked": 11086,
    "imprecise": 20,
-   "sourced": 961,
-   "formal": 79
+   "sourced": 1101,
+   "formal": 82
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -782,15 +782,15 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 94,
-   "links": 248,
+   "entries": 110,
+   "links": 267,
    "byMatch": {
-    "exact": 189,
+    "exact": 206,
     "conflicts": 4,
     "related": 14,
-    "special": 17,
+    "special": 18,
     "general": 17,
-    "ingredient": 7
+    "ingredient": 8
    }
   }
  },
@@ -37093,20 +37093,57 @@
    "input": "Category C, functor F: C to D, object or morphism of C",
    "output": "Object or morphism of D",
    "preserved": "Composition and identities; commutative diagrams map to commutative diagrams",
-   "broken": "Injectivity on objects and morphisms (non-faithful or non-full functors lose distinctions)",
+   "broken": "Distinctions between parallel morphisms, where F is not faithful (faithful means injective on each hom-set); a functor that is not full misses morphisms between images rather than identifying any",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Injectivity on objects and morphisms (non-faithful or non-full functors lose distinctions)"
+    },
+    "reason": "Fill review, batch 1: broken graded imprecise. Only non-faithfulness loses distinctions; non-fullness is a failure of surjectivity on hom-sets, and injectivity on objects belongs to neither notion.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-faithful-functor.txt",
+      "quote": "its [[function]] $F_{x,y}$ on [[hom-sets]] is [[injection|injective]]",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-full-functor.txt",
+      "quote": "between [[hom sets]] is [[surjective]].",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Functor",
+     "file": "Mathlib/CategoryTheory/Functor/Basic.lean",
+     "match": "exact",
+     "note": "The structure's fields map_id and map_comp: a functor preserves identities and composition.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-002",
@@ -37126,14 +37163,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "formal",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.NatTrans",
+     "file": "Mathlib/CategoryTheory/NatTrans.lean",
+     "match": "exact",
+     "note": "Components app X : F.obj X ⟶ G.obj X with the naturality square F.map f ≫ app Y = app X ≫ G.map f.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/NatTrans.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-003",
@@ -37144,7 +37192,7 @@
     "construction"
    ],
    "description": "Builds F left adjoint to a given G: Hom(F X, Y) = Hom(X, G Y) naturally. The free, best-approximation-from-below construction.",
-   "input": "Functor G: D to C satisfying the solution-set condition",
+   "input": "Functor G: D to C that preserves limits, with D complete and locally small and G satisfying the solution set condition (Freyd's general adjoint functor theorem)",
    "output": "Functor F: C to D with unit X to G F X",
    "preserved": "Colimits (left adjoints preserve all colimits)",
    "broken": "Limits in general; the extra structure is freely added, not determined by X",
@@ -37153,14 +37201,44 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Functor G: D to C satisfying the solution-set condition"
+    },
+    "reason": "Fill review, batch 1: input graded imprecise. The solution set condition alone does not give a left adjoint; Freyd's theorem also needs limit preservation and a complete, locally small domain.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-adjoint-functor-theorem.txt",
+      "quote": "with all small limits has a left adjoint if it preserves these [[limit]]s and satisfies the [[solution set condition]].",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Adjunction.leftAdjoint_preservesColimits",
+     "file": "Mathlib/CategoryTheory/Adjunction/Limits.lean",
+     "match": "exact",
+     "note": "A left adjoint preserves colimits of every size.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-004",
@@ -37171,7 +37249,7 @@
     "construction"
    ],
    "description": "Builds G right adjoint to a given F: Hom(F X, Y) = Hom(X, G Y). The cofree, best-approximation-from-above construction.",
-   "input": "Functor F: C to D satisfying the dual solution-set condition",
+   "input": "Functor F: C to D that preserves colimits, under the dual hypotheses (C cocomplete and locally small, the dual solution set condition)",
    "output": "Functor G: D to C with counit F G Y to Y",
    "preserved": "Limits (right adjoints preserve all limits)",
    "broken": "Colimits in general",
@@ -37180,14 +37258,44 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Functor F: C to D satisfying the dual solution-set condition"
+    },
+    "reason": "Fill review, batch 1: input graded imprecise. Dually to the left adjoint, F must preserve colimits; the dual solution set condition alone is not enough.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-adjoint-functor-theorem.txt",
+      "quote": "and that a functor that [[preserved colimit|preserves]] [[colimits]] is a [[left adjoint]].",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Adjunction.rightAdjoint_preservesLimits",
+     "file": "Mathlib/CategoryTheory/Adjunction/Limits.lean",
+     "match": "exact",
+     "note": "A right adjoint preserves limits of every size.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-005",
@@ -37208,14 +37316,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Functor.IsLeftKanExtension",
+     "file": "Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean",
+     "match": "exact",
+     "note": "F' with α : F ⟶ L ⋙ F' is a left Kan extension when the left extension it forms is universal. The pointwise colimit formula is a separate notion (IsPointwiseLeftKanExtension), not linked here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-006",
@@ -37236,14 +37355,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Functor.IsRightKanExtension",
+     "file": "Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean",
+     "match": "exact",
+     "note": "The dual: the right extension (F', α) is universal.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-007",
@@ -37263,14 +37393,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Yoneda.fullyFaithful",
+     "file": "Mathlib/CategoryTheory/Yoneda.lean",
+     "match": "exact",
+     "note": "The Yoneda embedding is fully faithful. The fill's other preserved claim, limits, is not linked here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Yoneda.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-008",
@@ -37290,14 +37431,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-009",
@@ -37317,14 +37459,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Grothendieck",
+     "file": "Mathlib/CategoryTheory/Grothendieck.lean",
+     "match": "special",
+     "note": "Objects are pairs of a base object and an object of its fibre, for a covariant functor C ⥤ Cat (the fill's \"or C to Cat\" case); the contravariant, fibred version is not this declaration.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Grothendieck.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-010",
@@ -37344,14 +37497,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-011",
@@ -37371,14 +37525,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-012",
@@ -37398,14 +37553,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Limits.pullback.fst_of_mono",
+     "file": "Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean",
+     "match": "exact",
+     "note": "The pullback of a monomorphism is a monomorphism: the fill's \"monomorphisms stable under pullback\".",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-013",
@@ -37425,14 +37591,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Limits.pushout.inl_of_epi",
+     "file": "Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean",
+     "match": "exact",
+     "note": "The pushout of an epimorphism is an epimorphism.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-014",
@@ -37452,14 +37629,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Limits.equalizer.ι_mono",
+     "file": "Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean",
+     "match": "exact",
+     "note": "The equalizer's inclusion is a monomorphism.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-015",
@@ -37479,14 +37667,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Limits.coequalizer.π_epi",
+     "file": "Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean",
+     "match": "exact",
+     "note": "The coequalizer's projection is an epimorphism.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Equalizers.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-016",
@@ -37506,14 +37705,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-017",
@@ -37526,21 +37726,58 @@
    "description": "Forms the colimit of a discrete family: the object receiving each summand, morphisms out of it determined summandwise.",
    "input": "Family of objects (X_i)",
    "output": "Coproduct sum X_i with injections",
-   "preserved": "Each summand embeds (in extensive categories, disjointly)",
-   "broken": "Nothing is identified; relations between summands are absent",
+   "preserved": "Each summand maps in by its coprojection; in Set (disjoint union) and wherever coproducts are disjoint the coprojections are monomorphisms, but in general they need not be",
+   "broken": "In Set nothing is identified; in general a coprojection need not be a monomorphism, so a summand can be partly identified",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "preserved",
+     "broken"
+    ],
+    "landed": {
+     "preserved": "Each summand embeds (in extensive categories, disjointly)",
+     "broken": "Nothing is identified; relations between summands are absent"
+    },
+    "reason": "Fill review, batch 1: preserved and broken graded imprecise. \"Each summand embeds\" and \"nothing is identified\" hold for disjoint unions; in general the coprojections need not be monomorphisms.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-coproduct.txt",
+      "quote": "although in general they may not be [[monomorphisms]]",
+      "fields": [
+       "preserved",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-coproduct.txt",
+      "quote": "especially when it is [[disjoint coproduct|disjoint]]",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-coproduct.txt",
+      "quote": "The notion of _coproduct_ is a generalization to arbitrary [[categories]] of the notion of [[disjoint union]] in the category [[Set]].",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-018",
@@ -37560,14 +37797,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-019",
@@ -37587,14 +37825,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-020",
@@ -37614,14 +37853,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Subobject.Classifier",
+     "file": "Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean",
+     "match": "exact",
+     "note": "Every monomorphism has a characteristic map χ m, the only map forming a pullback square with truth. Mathlib lets the domain Ω₀ of truth be any object; the fill's true: 1 to Omega is the case of a terminal Ω₀.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-021",
@@ -37641,14 +37891,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-022",
@@ -37668,14 +37919,41 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Idempotents.Karoubi",
+     "file": "Mathlib/CategoryTheory/Idempotents/Karoubi.lean",
+     "match": "exact",
+     "note": "Objects are pairs of an object and an idempotent p ≫ p = p.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Idempotents/Karoubi.lean"
+    },
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Idempotents.Karoubi.Hom",
+     "file": "Mathlib/CategoryTheory/Idempotents/Karoubi.lean",
+     "match": "exact",
+     "note": "Morphisms f with P.p ≫ f ≫ Q.p = f: the fill's f = e' f e.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Idempotents/Karoubi.lean"
+    },
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Idempotents.toKaroubi",
+     "file": "Mathlib/CategoryTheory/Idempotents/Karoubi.lean",
+     "match": "ingredient",
+     "note": "The embedding C ⥤ Karoubi C, X to (X, 𝟙 X); its full faithfulness is stated by instances in the same file, not linked here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Idempotents/Karoubi.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-023",
@@ -37695,14 +37973,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-024",
@@ -37716,20 +37995,50 @@
    "input": "Continuous functor G: D to C, D complete and locally small, with solution sets",
    "output": "Left adjoint F: C to D",
    "preserved": "G's limit preservation; the adjunction bijection",
-   "broken": "Constructivity: the adjoint is a large limit, not an explicit formula",
+   "broken": "Constructivity: the left adjoint's value at each object is an initial object obtained from a small limit over the solution set, not an explicit formula",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Constructivity: the adjoint is a large limit, not an explicit formula"
+    },
+    "reason": "Fill review, batch 1: broken graded imprecise. The solution set condition replaces the large limit by a small one; the landed fill said the adjoint is a large limit.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-adjoint-functor-theorem.txt",
+      "quote": "Now an initial object is the limit of the identity functor, but this is generally a large limit; we replace this with some small limit conditions that guarantee existence of an initial object.",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition",
+     "file": "Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean",
+     "match": "exact",
+     "note": "Freyd's general adjoint functor theorem: a limit-preserving G out of a complete, locally small category with the solution set condition is a right adjoint.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-025",
@@ -37749,14 +38058,33 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "DedekindCut",
+     "file": "Mathlib/Order/Completion.lean",
+     "match": "exact",
+     "note": "The Dedekind-MacNeille completion of a preorder, as the concept lattice of ≤.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean"
+    },
+    {
+     "field": "description",
+     "decl": "DedekindCut.factorEmbedding",
+     "file": "Mathlib/Order/Completion.lean",
+     "match": "exact",
+     "note": "Any order embedding of the poset into a complete lattice factors through the completion: it is the smallest.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-026",

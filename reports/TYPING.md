@@ -6,9 +6,9 @@ Entries: 2022.
 
 | Typed | Entries | Share |
 |---|---|---|
-| Every operand, with existing kinds only | 722 | 35.7% |
+| Every operand, with existing kinds only | 720 | 35.6% |
 | Every operand, using candidate kinds | 40 | 2.0% |
-| At least one input and one output kind | 145 | 7.2% |
+| At least one input and one output kind | 147 | 7.3% |
 | Neither side | 1115 | 55.1% |
 
 ## By domain
@@ -21,7 +21,7 @@ Entries: 2022.
 | D4 | 439 | 183 | 38 | 218 |
 | D5 | 160 | 51 | 11 | 98 |
 | D6 | 163 | 76 | 8 | 79 |
-| D7 | 487 | 205 | 33 | 249 |
+| D7 | 487 | 203 | 35 | 249 |
 | D8 | 255 | 77 | 15 | 163 |
 
 ## Kinds used
@@ -96,4 +96,4 @@ Entries: 2022.
 
 Where the word list is thinnest: the next kinds to add, or senses to split.
 
-geometric 23, transformed 21, family 15, original 14, continuous 13, angle 12, cohomology 12, class 11, figure 11, solution 11, center 10, finite 9, normal 9, real 9, unique 9, algorithm 8, complex 8, discrete 8, evolved 8, fibration 8, ground 8, point 8, region 8, standard 8, target 8, algebraic 7, binary 7, gaussian 7, modified 7, new 7, qubit 7, signature 7, theta 7, unitary 7, alpha 6, block 6, complete 6, dual 6, image 6, kernel 6, lambda 6, linear 6, mapping 6, mother 6, pair 6, partition 6, permutation 6, scale 6, scaled 6, semiring 6, upper 6, vertical 6, boolean 5, chain 5, composite 5, delta 5, homology 5, hypersequent 5, join 5, monad 5.
+geometric 23, transformed 21, family 15, original 14, continuous 13, angle 12, cohomology 12, class 11, figure 11, solution 11, center 10, finite 9, normal 9, real 9, unique 9, algorithm 8, complex 8, discrete 8, evolved 8, fibration 8, ground 8, point 8, region 8, standard 8, target 8, algebraic 7, binary 7, complete 7, gaussian 7, modified 7, new 7, qubit 7, signature 7, theta 7, unitary 7, alpha 6, block 6, dual 6, image 6, kernel 6, lambda 6, linear 6, mapping 6, mother 6, pair 6, partition 6, permutation 6, scale 6, scaled 6, semiring 6, upper 6, vertical 6, boolean 5, chain 5, composite 5, delta 5, homology 5, hypersequent 5, join 5, monad 5.
