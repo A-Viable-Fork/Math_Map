@@ -1,0 +1,79 @@
+// Role: the misalignment lead finder. Lists every landed entry with content of its own whose description and type and
+//   invariant fields share no significant word with its name: the shape of the shift-by-one damage in D8, where a
+//   row carries a neighbour's content under its own name (mapfill/flags.js). Leads already read are settled by
+//   mapfill/alignment.js; the rest are open.
+// Contract: `node scripts/misalign.mjs` writes reports/MISALIGN.md; `--check` prints it without writing; exports
+//   leads(P?) and render(L). Each lead carries hints: neighbours within three rows, and entries it cites by id, whose
+//   distinctive name words its content matches. A lead is open until a sweep in mapfill/alignment.js reads it, or a
+//   flag in mapfill/flags.js withholds it.
+// Invariant: read-only; a lead never flags. Pointer and clone entries are skipped (their content is another entry's
+//   by design). A misaligned row whose content happens to share a word with its own name is missed: the finder
+//   catches content that is wholly another entry's, and only reading settles a lead.
+import { writeFileSync } from "node:fs";
+import { createRequire } from "node:module";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseLanded } from "./mathmap.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const require = createRequire(import.meta.url);
+const WINDOW = 3;
+const STOP = new Set("transformation transform transforms decomposition operation operator map mapping construction the of and a an to on in for by with from via into its as or at is are be form forms method algorithm reduction functor theorem lemma type types see domain home entry same general generalized standard data".split(" "));
+const fold = (s) => (s || "").replace(/\\u([0-9a-fA-F]{4})/g, (_, h) => String.fromCharCode(parseInt(h, 16))).normalize("NFD").replace(/[^\x00-\x7f]/g, "").toLowerCase();
+const stem = (w) => w.replace(/(ies|es|s|ing|ed|ation|ization|isation|al|ic)$/, "").slice(0, 6);
+const words = (s) => [...new Set(fold(s).split(/[^a-z0-9]+/).filter((w) => w.length > 2 && !STOP.has(w)).map(stem))];
+const content = (e) => [e.description, e.input, e.output, e.preserved, e.broken].filter(Boolean).join(" ");
+const isPointer = (e) => /^See\b/.test(e.description) || /^Same as D\d-\d{3}\b/.test(e.description) || /Clone/.test(e.iso || "") || !e.input || e.input === "-";
+// The share of a name's distinctive words found in a text; a word in four or more of a domain's names ("graph" in D1)
+// says nothing about which entry a text belongs to.
+const score = (name, bag, common) => { const n = words(name).filter((w) => !common.has(w)); return n.length ? n.filter((w) => bag.has(w)).length / n.length : 0; };
+
+export function leads(P = parseLanded()) {
+  const flagged = new Set(require("../mapfill/flags.js").FLAGS.map((f) => f.id));
+  const { SWEEPS, HELD } = require("../mapfill/alignment.js");
+  const read = new Map(SWEEPS.flatMap((s) => s.aligned.map((id) => [id, s.date])));
+  const held = Object.fromEntries(HELD.map((h) => [h.id, h]));
+  const byId = Object.fromEntries(P.entries.map((e) => [e.id, e]));
+  const out = [];
+  for (const d of [...new Set(P.entries.map((e) => e.domain))]) {
+    const E = P.entries.filter((e) => e.domain === d);
+    const df = {};
+    for (const x of E) for (const w of words(x.name)) df[w] = (df[w] || 0) + 1;
+    const common = new Set(Object.keys(df).filter((w) => df[w] >= 4));
+    E.forEach((e, i) => {
+      if (isPointer(e)) return;
+      const bag = new Set(words(content(e)));
+      if (words(e.name).some((w) => bag.has(w))) return;
+      const hints = [];
+      for (let j = Math.max(0, i - WINDOW); j <= Math.min(E.length - 1, i + WINDOW); j++) {
+        if (j !== i && score(E[j].name, bag, common) >= 0.5) hints.push(`${E[j].id} ${E[j].name}`);
+      }
+      for (const m of new Set([...content(e).matchAll(/\b(D\d-\d{3})\b/g)].map((x) => x[1]))) {
+        const o = byId[m];
+        if (o && o.id !== e.id && score(o.name, bag, new Set()) >= 0.5 && !hints.some((h) => h.startsWith(o.id))) hints.push(`${o.id} ${o.name} (cited)`);
+      }
+      const state = flagged.has(e.id) ? "flagged" : held[e.id] ? "held" : read.has(e.id) ? "aligned" : "open";
+      out.push({ id: e.id, name: e.name, description: e.description, hints, state, note: held[e.id]?.note, read: read.get(e.id) });
+    });
+  }
+  return out;
+}
+
+export function render(L) {
+  const by = (s) => L.filter((l) => l.state === s);
+  const cell = (s) => (s || "").replace(/\\u([0-9a-fA-F]{4})/g, (_, h) => String.fromCharCode(parseInt(h, 16))).replace(/\|/g, "\\|");
+  const table = (rows, last, f) => rows.length ? [`| Entry | Landed name | ${last} |`, "|---|---|---|", ...rows.map((l) => `| ${l.id} | ${cell(l.name)} | ${cell(f(l))} |`)] : ["None."];
+  const domains = [...new Set(L.map((l) => l.id.slice(0, 2)))].sort();
+  return ["# Misalignment leads", "",
+    "Generated by `scripts/misalign.mjs`. A lead is a landed entry whose own content shares no significant word with its name, the shape of a row carrying a neighbour's content. Most leads are aligned (a proper-noun name, or content written in symbols); reading settles each one, recorded in `mapfill/alignment.js`, and a misaligned one is flagged in `mapfill/flags.js`. Hints name neighbours within three rows, and cited entries, whose distinctive name words the content matches.", "",
+    `Leads: ${L.length} (${domains.map((d) => `${d} ${L.filter((l) => l.id.startsWith(d)).length}`).join(", ")}). Open ${by("open").length}, held ${by("held").length}, flagged ${by("flagged").length}, read and aligned ${by("aligned").length}.`, "",
+    "## Open", "", ...table(by("open"), "Landed description, then hints", (l) => `${l.description.slice(0, 120)}${l.hints.length ? ` [hints: ${l.hints.join("; ")}]` : ""}`), "",
+    "## Held", "", ...table(by("held"), "Why it is held", (l) => l.note), "",
+    "## Flagged", "", ...table(by("flagged"), "Hints", (l) => l.hints.join("; ") || "-")].join("\n");
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const out = render(leads());
+  if (process.argv.includes("--check")) console.log(out);
+  else { writeFileSync(join(ROOT, "reports/MISALIGN.md"), out + "\n"); console.log("wrote reports/MISALIGN.md"); }
+}
