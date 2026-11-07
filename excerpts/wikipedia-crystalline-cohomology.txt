@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Crystalline cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382700732
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5f1554df1d649ca69d887189f1e2676208f36e42658c9cc5531b6feee4c9cd61
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was introduced by [[Alexander Grothendieck]]
+
+and developed by [[Pierre Berthelot]].
+
+The idea of crystalline cohomology, roughly, is to replace the [[Zariski topology|Zariski open sets]] of a scheme by infinitesimal thickenings of Zariski open sets with  [[divided power structure]]s.
+
+Its values <math>H^n(X/W)</math> are [[module (mathematics)|modules]] over the [[ring (mathematics)|ring]] <math>W</math> of [[Witt vector]]s over <math>k</math>.

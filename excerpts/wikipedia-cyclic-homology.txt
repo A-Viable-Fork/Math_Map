@@ -12,3 +12,5 @@ and [[Alain Connes]] (cohomology)
 certain (co)homology theories for [[associative algebra]]s
 
 '''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories
+
+Then the components of the Connes complex are defined as

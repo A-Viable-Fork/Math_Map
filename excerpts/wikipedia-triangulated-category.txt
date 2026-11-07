@@ -1,0 +1,24 @@
+Excerpts, verbatim, from: Wikipedia, Triangulated category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1365868114
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: abfb0340194e3e9fe57be166e0d2b07afe4db46fe51597c7fe466a2c51af06a4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])
+
+a '''triangulated category''' is a [[category (mathematics)|category]] with the additional structure of a "translation functor"
+
+A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism
+
+is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])
+
+called '''exact triangles'''
+
+It follows from the other axioms that an exact triangle (and in particular the object ''Z'') is determined up to isomorphism by the morphism <math>X\to Y</math>, although not always up to a unique isomorphism.
+
+is determined up to isomorphism by the morphism <math>X\to Y</math>
+
+(or '''distinguished triangles''')
+
+Triangulated categories admit a notion of cohomology, and every triangulated category has a large supply of cohomological functors.
+
+although not always up to a unique isomorphism.

@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 250 of 416 D7 stubs, 0 of 79 homes; 250 entries in 10 batches.
+Reviewed: 275 of 416 D7 stubs, 0 of 79 homes; 275 entries in 11 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (250 entries)
+### D7 stubs (275 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 235 | 0 | 0 | 15 |
-| description | 230 | 7 | 0 | 13 |
-| input | 226 | 3 | 0 | 21 |
-| output | 222 | 0 | 0 | 28 |
-| preserved | 179 | 2 | 0 | 69 |
-| broken | 90 | 3 | 0 | 157 |
-| **all** | 1182 | 15 | 0 | 303 |
+| name | 257 | 0 | 0 | 18 |
+| description | 252 | 7 | 0 | 16 |
+| input | 246 | 3 | 0 | 26 |
+| output | 241 | 0 | 0 | 34 |
+| preserved | 189 | 2 | 0 | 84 |
+| broken | 94 | 3 | 0 | 178 |
+| **all** | 1279 | 15 | 0 | 356 |
 
 ## 2. Recall against source
 
@@ -38,7 +38,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 8 | 25 | 108 | 0 | 0% |
 | 9 | 25 | 108 | 0 | 0% |
 | 10 | 25 | 105 | 1 | 1% |
-| **all** | 250 | 1197 | 4 | 0% |
+| 11 | 25 | 97 | 0 | 0% |
+| **all** | 275 | 1294 | 4 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -49,8 +50,11 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-123 preserved: sample confirmed, review unsupported.
 - D7-192 broken: sample unsupported, review confirmed.
 - D7-212 name: sample confirmed, review unsupported.
+- D7-252 input: sample unsupported, review confirmed.
+- D7-252 output: sample unsupported, review confirmed.
+- D7-275 preserved: sample unsupported, review confirmed.
 
-Agreement: 37 of 42 fields.
+Agreement: 46 of 54 fields.
 
 ## 4. Sources in disagreement
 
@@ -237,6 +241,29 @@ Every field not confirmed, with the reason.
 - **D7-249 Topological Hochschild Homology Transformation** (batch 10): *output* unsupported: The circle action is not quoted. *preserved* unsupported: TC and trace methods are not quoted. *broken* unsupported: Not stated.
 - **D7-250 Group Homology Construction** (batch 10): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
 - **D7-251 Group Cohomology Construction** (batch 10): *broken* unsupported: Not stated.
+- **D7-252 Galois Cohomology Transformation** (batch 11): *broken* unsupported: Not stated.
+- **D7-253 \u010cech Cohomology Computation** (batch 11): *preserved* unsupported: Agreement with sheaf cohomology for acyclic covers is not quoted.
+- **D7-254 Sheaf Cohomology Computation** (batch 11): *preserved* unsupported: "Local-to-global obstruction data" is a gloss. *broken* unsupported: Not stated.
+- **D7-255 Crystalline Cohomology Transformation** (batch 11): *input* unsupported: Smooth proper over a perfect field is not quoted. *preserved* unsupported: Frobenius action and Betti analogues are not quoted. *broken* unsupported: Not stated.
+- **D7-257 Spectral Sequence Initialization** (batch 11): *preserved* unsupported: Not quoted. *broken* unsupported: Extension problems are not quoted.
+- **D7-258 Spectral Sequence Page Differential Application** (batch 11): *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-259 Spectral Sequence Convergence Limit** (batch 11): *broken* unsupported: Extension data between graded pieces is not quoted.
+- **D7-260 Serre Spectral Sequence** (batch 11): *broken* unsupported: Not stated.
+- **D7-261 Grothendieck Spectral Sequence** (batch 11): *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-262 Leray Spectral Sequence** (batch 11): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-263 Eilenberg-Moore Spectral Sequence** (batch 11): *preserved* unsupported: Not quoted.
+- **D7-264 K\u00fcnneth Spectral Sequence** (batch 11): *broken* unsupported: Not stated.
+- **D7-265 Adams Spectral Sequence** (batch 11): *preserved* unsupported: p-completion is not quoted. *broken* unsupported: Not stated.
+- **D7-266 Atiyah-Hirzebruch Spectral Sequence** (batch 11): *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-267 Bockstein Spectral Sequence** (batch 11): *preserved* unsupported: Torsion orders are not quoted. *broken* unsupported: Not stated.
+- **D7-268 Connes Spectral Sequence** (batch 11): *name* unsupported: A "Connes spectral sequence" is not named in the fetched source. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-269 Hyperhomology Spectral Sequence** (batch 11): *description* unsupported: The two spectral sequences of a double complex are not quoted. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-270 Gersten-Witt Spectral Sequence** (batch 11): *name* unsupported: No fetched source for the Gersten-Witt spectral sequence. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-271 Green's Spectral Sequence** (batch 11): *name* unsupported: Unidentified, as the fill records; no source found. *description* unsupported: The fill states no claim (Unknown). *input* unsupported: Unknown in the fill. *output* unsupported: Unknown in the fill. *preserved* unsupported: Unknown in the fill. *broken* unsupported: Unknown in the fill.
+- **D7-272 Exact Couple Construction** (batch 11): *broken* unsupported: Not stated.
+- **D7-273 Derived Category Construction** (batch 11): *broken* unsupported: Loss of abelianness is not stated in the fetched windows.
+- **D7-274 Triangulated Category Shift Functor** (batch 11): *broken* unsupported: Not stated.
+- **D7-276 T-Structure Truncation** (batch 11): *output* unsupported: Truncations and the triangle are not quoted. *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -3344,4 +3371,303 @@ actions defining an optic"
 
   g: excerpts/wikipedia-group-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214)
   e: excerpts/wikipedia-group-extension.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979)
+
+### D7-252 Galois Cohomology Transformation (batch 11)
+
+- name: **confirmed** [g] "'''Galois cohomology''' is the study of the [[group cohomology]] of [[Galois module]]s"
+- description: **confirmed** [g] "'''Galois cohomology''' is the study of the [[group cohomology]] of [[Galois module]]s, that is, the application of [[homological algebra]] to [[module (mathematics)|modules]] for [[Galois group]]s." [g] "In another direction, that of [[torsor]]s" *Torsors appear in the source's history; that H^1 classifies them and forms is not stated as such.*
+- input: **confirmed** [g] "A Galois group ''G'' associated with a [[field extension]] ''L''/''K'' acts in a natural way on some [[abelian group]]s"
+- output: **confirmed** [g] "the application of [[homological algebra]] to [[module (mathematics)|modules]] for [[Galois group]]s."
+- preserved: **confirmed** [g] "The corresponding result for the [[multiplicative group]] is known as [[Hilbert's Theorem 90]], and was known before 1900." *Arithmetic of forms and torsors: Hilbert 90 is the source's instance.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Cohomology of the absolute Galois group; H^1 classifies torsors and forms (Hilbert 90); input: Field and Galois module; output: Galois cohomology groups; preserved: Arithmetic of forms; broken: Nothing
+
+  g: excerpts/wikipedia-galois-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1357453616)
+
+### D7-253 \u010cech Cohomology Computation (batch 11)
+
+- name: **confirmed** [c] "The idea of Čech cohomology is that, for an open cover <math>\mathcal{U}</math> consisting of sufficiently small open sets"
+- description: **confirmed** [c] "The idea of Čech cohomology is that, for an open cover <math>\mathcal{U}</math> consisting of sufficiently small open sets" [c] "This idea can be formalized by the notion of a [[good cover]]."
+- input: **confirmed** [c] "Let ''X'' be a topological space, and let <math>\mathcal{U}</math> be an open cover of ''X''."
+- output: **confirmed** [c] "from Čech cohomology to [[sheaf cohomology]]." *The comparison map; agreement for acyclic covers is not quoted.*
+- preserved: **unsupported** *Agreement with sheaf cohomology for acyclic covers is not quoted.*
+- broken: **confirmed** [c] "a more general approach is to take the [[direct limit]] of the cohomology groups of the nerve over the system of all possible open covers of ''X'', ordered by [[Open cover#Refinement|refinement]]." *Cover dependence removed by passing to the limit over refinements.*
+- recalled: name: Standard; description: Cochains on intersections of a cover; equals sheaf cohomology for Leray covers; input: Space, cover, sheaf; output: Cech cohomology; preserved: Sheaf cohomology for acyclic covers; broken: Cover dependence
+
+  c: excerpts/wikipedia-cech-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1314439779)
+
+### D7-254 Sheaf Cohomology Computation (batch 11)
+
+- name: **confirmed** [s] "are defined as the right [[derived functor]]s of the functor ''E'' ↦ ''E''(''X'')."
+- description: **confirmed** [s] "are defined as the right [[derived functor]]s of the functor ''E'' ↦ ''E''(''X'')."
+- input: **confirmed** [s] "where ''H''<sup>0</sup>(''X'',''A'') is the group ''A''(''X'') of global sections of ''A'' on ''X''."
+- output: **confirmed** [s] "This makes it automatic that ''H''<sup>''i''</sup>(''X'',''E'') is zero for ''i'' < 0"
+- preserved: **unsupported** *"Local-to-global obstruction data" is a gloss.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Right derived functors of global sections; input: Space or site and sheaf; output: Sheaf cohomology; preserved: Local-to-global data; broken: Nothing
+
+  s: excerpts/wikipedia-sheaf-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369789745)
+
+### D7-255 Crystalline Cohomology Transformation (batch 11)
+
+- name: **confirmed** [c] "It was introduced by [[Alexander Grothendieck]]" [c] "and developed by [[Pierre Berthelot]]." *Grothendieck, developed by Berthelot, per the source.*
+- description: **confirmed** [c] "The idea of crystalline cohomology, roughly, is to replace the [[Zariski topology|Zariski open sets]] of a scheme by infinitesimal thickenings of Zariski open sets with  [[divided power structure]]s."
+- input: **unsupported** *Smooth proper over a perfect field is not quoted.*
+- output: **confirmed** [c] "Its values <math>H^n(X/W)</math> are [[module (mathematics)|modules]] over the [[ring (mathematics)|ring]] <math>W</math> of [[Witt vector]]s over <math>k</math>."
+- preserved: **unsupported** *Frobenius action and Betti analogues are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Grothendieck, Berthelot); description: p-adic cohomology via divided powers; values in W(k)-modules with Frobenius; input: Smooth proper variety in characteristic p; output: Crystalline cohomology; preserved: Frobenius; Betti analogues; broken: Torsion subtleties
+
+  c: excerpts/wikipedia-crystalline-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382700732)
+
+### D7-256 Motif Extraction (batch 11)
+
+- name: **confirmed** [m] "should arise as different realizations of the same underlying object." *Motif read as motive, as the fill's reading says.*
+- description: **confirmed** [m] "The idea is that theories such as [[Betti cohomology]], [[de Rham cohomology]], [[etale cohomology]], and [[crystalline cohomology]] should arise as different realizations of the same underlying object." [m] "[[Vladimir Voevodsky]] constructed [[triangulated category|triangulated categories]] of motives"
+- input: **confirmed** [m] "For [[smooth variety|smooth varieties]], ''pure motives'' can be constructed from [[correspondence (algebraic geometry)|algebraic correspondences]]"
+- output: **confirmed** [m] "For [[smooth variety|smooth varieties]], ''pure motives'' can be constructed from [[correspondence (algebraic geometry)|algebraic correspondences]] and [[idempotent]] projections."
+- preserved: **confirmed** [m] "The morphisms are [[correspondence (algebraic geometry)|correspondences]]."
+- broken: **confirmed** [m] "the (partially conjectural) theory of ''mixed motives''" *Partly conjectural; the standard conjectures by name are not quoted.*
+- recalled: name: Standard (motive; Grothendieck, Voevodsky); description: Universal cohomology through which realizations factor; conjectural in part; input: Smooth projective variety; output: Motive; preserved: Correspondences; broken: Conjectural (standard conjectures)
+
+  m: excerpts/wikipedia-motive-algebraic-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380465246)
+
+### D7-257 Spectral Sequence Initialization (batch 11)
+
+- name: **confirmed** [s] "Filtered complexes, which are common in [[abstract algebra]], give rise to exact couples."
+- description: **confirmed** [s] "Another technique for constructing spectral sequences is [[William Schumacher Massey|William Massey]]'s method of exact couples." *Filtered complexes and exact couples are quoted; double complexes are not.*
+- input: **confirmed** [s] "Filtered complexes, which are common in [[abstract algebra]], give rise to exact couples."
+- output: **confirmed** [s] "To get <math> E_1 </math>, we take the homology of <math> E_0 </math>."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Extension problems are not quoted.*
+- recalled: name: Standard; description: First page from a filtered complex, double complex or exact couple; input: Filtered or double complex or exact couple; output: A page; preserved: Convergence data; broken: Extension problems
+
+  s: excerpts/wikipedia-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459)
+
+### D7-258 Spectral Sequence Page Differential Application (batch 11)
+
+- name: **confirmed** [s] "In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}, so they decrease ''n'' by one."
+- description: **confirmed** [s] "In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}, so they decrease ''n'' by one."
+- input: **confirmed** [s] "In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}"
+- output: **confirmed** [s] "To get <math> E_1 </math>, we take the homology of <math> E_0 </math>." *Each page is the homology of the previous.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Apply d_r of bidegree (-r, r - 1), take homology; input: Page and differential; output: Next page; preserved: Target; broken: Cycles killed
+
+  s: excerpts/wikipedia-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459)
+
+### D7-259 Spectral Sequence Convergence Limit (batch 11)
+
+- name: **confirmed** [s] "is a natural candidate for the abutment of this spectral sequence."
+- description: **confirmed** [s] "To get the second grading, we will take the associated graded object with respect to the filtration."
+- input: **confirmed** [s] "to mean that whenever ''p'' + ''q'' = ''n'', <math>E_r^{p,q}</math> converges to <math>E_\infty^{p,q}</math>."
+- output: **confirmed** [s] "Then <math>E_{r(p,q)}^{p,q} = E_\infty^{p,q}</math> is the limiting term."
+- preserved: **confirmed** [s] "To get the second grading, we will take the associated graded object with respect to the filtration."
+- broken: **unsupported** *Extension data between graded pieces is not quoted.*
+- recalled: name: Standard; description: E_infinity is the associated graded of a filtration on the target; input: Convergent spectral sequence; output: E_infinity; preserved: Associated graded; broken: Extensions
+
+  s: excerpts/wikipedia-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459)
+
+### D7-260 Serre Spectral Sequence (batch 11)
+
+- name: **confirmed** [s] "It expresses, in the language of [[homological algebra]], the singular (co)homology of the total space ''X'' of a (Serre) [[fibration]]"
+- description: **confirmed** [s] "the singular (co)homology of the total space ''X'' of a (Serre) [[fibration]] in terms of the (co)homology of the [[base space]] ''B'' and the fiber ''F''."
+- input: **confirmed** [s] "Let <math>f\colon X\to B</math> be a [[fibration#Serre fibrations|Serre fibration]] of topological spaces"
+- output: **confirmed** [s] "It expresses, in the language of [[homological algebra]], the singular (co)homology of the total space ''X''"
+- preserved: **confirmed** [s] "what is meant is cohomology with respect to the [[local coefficient system]] on ''B'' given by the cohomology of the various fibers." *Multiplicative structure is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Serre); description: H_p(B; H_q(F)) converges to H_{p+q}(E), local coefficients; input: Fibration; output: Spectral sequence; preserved: Multiplicative structure; broken: Extensions
+
+  s: excerpts/wikipedia-serre-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1373949739)
+
+### D7-261 Grothendieck Spectral Sequence (batch 11)
+
+- name: **confirmed** [g] "the '''Grothendieck spectral sequence''', introduced by [[Alexander Grothendieck]] in his [[Grothendieck's Tôhoku paper|''Tôhoku'' paper]]"
+- description: **confirmed** [g] "sends injective <math>\mathcal{O}</math>-modules to flasque sheaves" [g] "which are <math>\Gamma(X, -)</math>-acyclic." *The acyclicity hypothesis, in the source's example; the general statement is displayed as mathematics.*
+- input: **confirmed** [g] "is a  [[spectral sequence" *Composable functors per the source's statement; not quoted in full.*
+- output: **confirmed** [g] "is a  [[spectral sequence"
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Grothendieck); description: R^p G R^q F converges to R^{p+q}(GF) when F sends injectives to G-acyclics; input: Composable left exact functors; output: Spectral sequence; preserved: Derived functors; broken: Extensions
+
+  g: excerpts/wikipedia-grothendieck-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1286716238)
+
+### D7-262 Leray Spectral Sequence (batch 11)
+
+- name: **confirmed** [l] "the higher direct image functor <math>R^pf_*(F)</math> is the sheafification of the presheaf"
+- description: **confirmed** [l] "the higher direct image functor <math>R^pf_*(F)</math> is the sheafification of the presheaf" *The E_2 term is displayed as mathematics; not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Leray); description: H^p(Y, R^q f_* F) converges to H^{p+q}(X, F); input: Map and sheaf; output: Spectral sequence; preserved: Cohomology; broken: Extensions
+
+  l: excerpts/wikipedia-leray-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353225412)
+
+### D7-263 Eilenberg-Moore Spectral Sequence (batch 11)
+
+- name: **confirmed** [e] "the '''Eilenberg–Moore spectral sequence''' addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]"
+- description: **confirmed** [e] "the '''Eilenberg–Moore spectral sequence''' addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]" *The Tor E_2 term is displayed as mathematics; loop spaces are not checked.*
+- input: **confirmed** [e] "where ''p'' is a [[fibration]] of topological spaces and the base ''B'' is [[simply connected]]."
+- output: **confirmed** [e] "addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]"
+- preserved: **unsupported** *Not quoted.*
+- broken: **confirmed** [e] "generalizes the above isomorphism to the situation where ''p'' is a [[fibration]] of topological spaces and the base ''B'' is [[simply connected]]." *Simple connectivity of the base is the condition.*
+- recalled: name: Standard (Eilenberg and Moore); description: Tor over the base's cohomology computes the pullback's; simply connected base; input: Fibration and map to base; output: Spectral sequence; preserved: Cohomology; broken: Convergence conditions
+
+  e: excerpts/wikipedia-eilenberg-moore-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1306717620)
+
+### D7-264 K\u00fcnneth Spectral Sequence (batch 11)
+
+- name: **confirmed** [k] "== The Künneth spectral sequence =="
+- description: **confirmed** [k] ":<math>E_{pq}^2 = \bigoplus_{q_1 + q_2 = q} \mathrm{Tor}^R_p(H_{q_1}(X; R), H_{q_2}(Y; R)) \Rightarrow H_{p+q}(X \times Y; R).</math>"
+- input: **confirmed** [k] "the homology of ''X'' and ''Y'' is related to the homology of their product by a  Künneth [[spectral sequence]]"
+- output: **confirmed** [k] ":<math>E_{pq}^2 = \bigoplus_{q_1 + q_2 = q} \mathrm{Tor}^R_p(H_{q_1}(X; R), H_{q_2}(Y; R)) \Rightarrow H_{p+q}(X \times Y; R).</math>"
+- preserved: **confirmed** [k] "In the cases described above, this spectral sequence collapses to give an isomorphism or a short exact sequence."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Tor of homologies converges to homology of the tensor product; input: Complexes or spaces; output: Spectral sequence; preserved: Homology; broken: Extensions
+
+  k: excerpts/wikipedia-kunneth-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299684721)
+
+### D7-265 Adams Spectral Sequence (batch 11)
+
+- name: **confirmed** [a] "which computes the [[stable homotopy theory|stable homotopy groups]] of [[topological spaces]]." *Adams (1958) per the source.*
+- description: **confirmed** [a] "But we can now consider the derived functors of Hom in the category of ''A''-modules, [[Ext functor|Ext]]<sub>''A''</sub><sup>''r''</sup>(''H''<sup>*</sup>(''Y''), ''H''<sup>*</sup>(''X''))."
+- input: **confirmed** [a] "more modern treatments of this topic begin with the concept of a [[Spectrum (homotopy theory)|spectrum]]."
+- output: **confirmed** [a] "which computes the [[stable homotopy theory|stable homotopy groups]] of [[topological spaces]]."
+- preserved: **unsupported** *p-completion is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Adams); description: Ext over the Steenrod algebra converges to p-complete stable maps; input: Spectra; output: Spectral sequence; preserved: p-complete stable homotopy; broken: Other primes
+
+  a: excerpts/wikipedia-adams-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383572600)
+
+### D7-266 Atiyah-Hirzebruch Spectral Sequence (batch 11)
+
+- name: **confirmed** [a] "the '''Atiyah–Hirzebruch spectral sequence''' is a [[spectral sequence]] for calculating [[generalized cohomology]]"
+- description: **confirmed** [a] "the <math>E_2</math> term of the spectral sequence is <math>H^p(X;E^q(pt))</math>, and the spectral sequence converges conditionally to <math>E^{p+q}(X)</math>." *The source says the convergence is conditional.*
+- input: **confirmed** [a] "is a [[spectral sequence]] for calculating [[generalized cohomology]]"
+- output: **confirmed** [a] "converges conditionally to <math>E^{p+q}(X)</math>."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: H^p(X; h^q(pt)) converges to h^{p+q}(X); input: CW complex and cohomology theory; output: Spectral sequence; preserved: Filtration; broken: Extensions
+
+  a: excerpts/wikipedia-atiyah-hirzebruch-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1331219458)
+
+### D7-267 Bockstein Spectral Sequence (batch 11)
+
+- name: **confirmed** [b] "It is named after [[Meyer Bockstein]]." *The attribution is the source's.*
+- description: **confirmed** [b] "the '''Bockstein spectral sequence''' is a [[spectral sequence]] relating the homology with mod&nbsp;''p'' coefficients and the homology reduced mod&nbsp;''p''."
+- input: **confirmed** [b] "Let ''C'' be a [[chain complex]] of [[torsion-free abelian group]]s and ''p'' a [[prime number]]." *Torsion-free chain groups, per the source.*
+- output: **confirmed** [b] "relating the homology with mod&nbsp;''p'' coefficients and the homology reduced mod&nbsp;''p''."
+- preserved: **unsupported** *Torsion orders are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Starts at mod p homology, detects higher torsion; input: Complex over Z and prime; output: Spectral sequence; preserved: Torsion orders; broken: Nothing
+
+  b: excerpts/wikipedia-bockstein-spectral-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1357399682)
+
+### D7-268 Connes Spectral Sequence (batch 11)
+
+- name: **unsupported** *A "Connes spectral sequence" is not named in the fetched source.*
+- description: **confirmed** [c] "Then the components of the Connes complex are defined as" *The Connes complex is quoted; a spectral sequence from Hochschild to cyclic homology is not.*
+- input: **confirmed** [c] "certain (co)homology theories for [[associative algebra]]s"
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Connes); description: From Hochschild to cyclic homology via the (b, B) bicomplex; input: Algebra; output: Spectral sequence; preserved: Cyclic homology; broken: Extensions
+
+  c: excerpts/wikipedia-cyclic-homology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342267018)
+
+### D7-269 Hyperhomology Spectral Sequence (batch 11)
+
+- name: **confirmed** [h] "One application of hypercohomology spectral sequences are in the study of [[Gerbe|gerbes]]."
+- description: **unsupported** *The two spectral sequences of a double complex are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Two spectral sequences of a Cartan-Eilenberg double complex; input: Functor and complex; output: Two spectral sequences; preserved: Hyperderived functors; broken: Extensions
+
+  h: excerpts/wikipedia-hyperhomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1365289135)
+
+### D7-270 Gersten-Witt Spectral Sequence (batch 11)
+
+- name: **unsupported** *No fetched source for the Gersten-Witt spectral sequence.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Balmer and Walter); description: Coniveau spectral sequence for Witt groups; Gersten conjecture; input: Regular scheme; output: Spectral sequence; preserved: Witt groups; broken: Extensions
+
+
+### D7-271 Green's Spectral Sequence (batch 11)
+
+- name: **unsupported** *Unidentified, as the fill records; no source found.*
+- description: **unsupported** *The fill states no claim (Unknown).*
+- input: **unsupported** *Unknown in the fill.*
+- output: **unsupported** *Unknown in the fill.*
+- preserved: **unsupported** *Unknown in the fill.*
+- broken: **unsupported** *Unknown in the fill.*
+- recalled: name: Unidentified; description: Unknown; input: Unknown; output: Unknown; preserved: Unknown; broken: Unknown
+
+
+### D7-272 Exact Couple Construction (batch 11)
+
+- name: **confirmed** [e] "an '''exact couple''', due to {{harvs|txt|last=Massey|first=William S." *The attribution to Massey (1952) is the source's.*
+- description: **confirmed** [e] "is a general source of [[spectral sequence]]s."
+- input: **confirmed** [e] "for example, [[Serre spectral sequence]] can be constructed by first constructing an exact couple." *Long exact sequences as input are not quoted.*
+- output: **confirmed** [e] "an '''exact couple''', due to {{harvs|txt|last=Massey|first=William S."
+- preserved: **confirmed** [e] "is a general source of [[spectral sequence]]s."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Massey); description: D to D to E to D exact; deriving gives a spectral sequence; input: Long exact sequences; output: Exact couple; preserved: Spectral sequence; broken: Nothing
+
+  e: excerpts/wikipedia-exact-couple.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1352137195)
+
+### D7-273 Derived Category Construction (batch 11)
+
+- name: **confirmed** [d] "the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''"
+- description: **confirmed** [d] "The universal property of the derived category is that it is a [[localization of a category|localization]] of the category of complexes with respect to quasi-isomorphisms."
+- input: **confirmed** [d] "the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''"
+- output: **confirmed** [d] "The axiomatics required an innovation, the concept of [[triangulated category]]"
+- preserved: **confirmed** [d] "is a construction of [[homological algebra]] introduced to refine and in a certain sense to simplify the theory of [[derived" *Derived functors are the motivation; homology is not quoted.*
+- broken: **unsupported** *Loss of abelianness is not stated in the fetched windows.*
+- recalled: name: Standard (Verdier); description: Localize the homotopy category at quasi-isomorphisms; input: Abelian category; output: Triangulated derived category; preserved: Homology; derived functors; broken: Abelianness
+
+  d: excerpts/wikipedia-derived-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364615062)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean)
+
+### D7-274 Triangulated Category Shift Functor (batch 11)
+
+- name: **confirmed** [t] "A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])"
+- description: **confirmed** [t] "A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])"
+- input: **confirmed** [t] "a '''triangulated category''' is a [[category (mathematics)|category]] with the additional structure of a "translation functor""
+- output: **confirmed** [t] "A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism"
+- preserved: **confirmed** [t] "is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Suspension autoequivalence; input: Triangulated category and object; output: Shifted object; preserved: Autoequivalence; broken: Degree
+
+  t: excerpts/wikipedia-triangulated-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1365868114)
+
+### D7-275 Distinguished Triangle Formation (batch 11)
+
+- name: **confirmed** [t] "called '''exact triangles'''"
+- description: **confirmed** [t] "It follows from the other axioms that an exact triangle (and in particular the object ''Z'') is determined up to isomorphism by the morphism <math>X\to Y</math>, although not always up to a unique isomorphism."
+- input: **confirmed** [t] "is determined up to isomorphism by the morphism <math>X\to Y</math>"
+- output: **confirmed** [t] "(or '''distinguished triangles''')"
+- preserved: **confirmed** [t] "Triangulated categories admit a notion of cohomology, and every triangulated category has a large supply of cohomological functors." *Long exact sequences are what cohomological functors give; not quoted.*
+- broken: **confirmed** [t] "although not always up to a unique isomorphism." *So the cone is not functorial.*
+- recalled: name: Standard; description: Complete a morphism to a triangle; cone unique up to non-unique isomorphism; input: Morphism; output: Triangle; preserved: Long exact sequences; broken: Functoriality of the cone
+
+  t: excerpts/wikipedia-triangulated-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1365868114)
+
+### D7-276 T-Structure Truncation (batch 11)
+
+- name: **confirmed** [t] "a '''''t''-structure''' is a way to axiomatize the properties of an [[abelian category|abelian subcategory]] of a [[derived category]]."
+- description: **confirmed** [t] "The heart of a ''t''-structure is an [[abelian category]] (whereas a triangulated category is additive but almost never abelian)" *Truncation functors are not quoted in this window.*
+- input: **confirmed** [t] "a '''''t''-structure''' is a way to axiomatize the properties of an [[abelian category|abelian subcategory]] of a [[derived category]]."
+- output: **unsupported** *Truncations and the triangle are not quoted.*
+- preserved: **confirmed** [t] "The heart of a ''t''-structure is an [[abelian category]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Beilinson, Bernstein, Deligne); description: Truncation triangle; abelian heart; input: Triangulated category with t-structure; output: Truncations; preserved: Heart cohomology; broken: Parts outside the range
+
+  t: excerpts/wikipedia-t-structure.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375329989)
 

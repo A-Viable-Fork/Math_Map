@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Grothendieck spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1286716238
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 32d05b607e5bf5bf940595f1a656aad54d212353f2c67185a433e3bea25384d2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Grothendieck spectral sequence''', introduced by [[Alexander Grothendieck]] in his [[Grothendieck's Tôhoku paper|''Tôhoku'' paper]]
+
+sends injective <math>\mathcal{O}</math>-modules to flasque sheaves
+
+which are <math>\Gamma(X, -)</math>-acyclic.
+
+is a  [[spectral sequence

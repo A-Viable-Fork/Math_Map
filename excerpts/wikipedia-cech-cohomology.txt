@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Čech cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1314439779
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 77a52bd04023102e484535d4784c4f9c61e7c60f0323960348c526e764d19b8b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The idea of Čech cohomology is that, for an open cover <math>\mathcal{U}</math> consisting of sufficiently small open sets
+
+This idea can be formalized by the notion of a [[good cover]].
+
+Let ''X'' be a topological space, and let <math>\mathcal{U}</math> be an open cover of ''X''.
+
+from Čech cohomology to [[sheaf cohomology]].
+
+a more general approach is to take the [[direct limit]] of the cohomology groups of the nerve over the system of all possible open covers of ''X'', ordered by [[Open cover#Refinement|refinement]].

@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "d21fe1a8d2f502bc5110c320115802a6ec1c7894"
+  "commit": "4f0609a49b13a77eaff7364eec4290a802c68020"
  },
  "domains": {
   "D1": {
@@ -748,8 +748,8 @@
   },
   "byTier": {
    "landed": 1337,
-   "audited": 356,
-   "authored": 254,
+   "audited": 379,
+   "authored": 231,
    "receipted": 74,
    "flagged": 1,
    "generated": 44
@@ -758,10 +758,10 @@
   "corrected": 36,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 395,
-   "unchecked": 9813,
+   "unsupported": 444,
+   "unchecked": 9676,
    "imprecise": 19,
-   "sourced": 2087,
+   "sourced": 2175,
    "formal": 82
   },
   "lean": {
@@ -45315,8 +45315,8 @@
    "evidence": {
     "name": "sourced",
     "description": "sourced",
-    "input": "unsupported",
-    "output": "unsupported",
+    "input": "sourced",
+    "output": "sourced",
     "preserved": "sourced",
     "broken": "unsupported"
    },
@@ -45341,14 +45341,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-254",
@@ -45368,14 +45369,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-255",
@@ -45395,14 +45397,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-256",
@@ -45423,14 +45426,15 @@
    "anchorable": true,
    "reading": "Motif read as motive in Grothendieck's sense.",
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-257",
@@ -45451,14 +45455,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-258",
@@ -45478,14 +45483,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-259",
@@ -45506,14 +45512,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-260",
@@ -45534,14 +45541,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-261",
@@ -45562,14 +45570,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-262",
@@ -45590,14 +45599,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-263",
@@ -45618,14 +45628,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-264",
@@ -45646,14 +45657,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-265",
@@ -45674,14 +45686,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-266",
@@ -45702,14 +45715,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-267",
@@ -45730,14 +45744,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-268",
@@ -45758,14 +45773,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-269",
@@ -45786,14 +45802,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-270",
@@ -45814,14 +45831,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-271",
@@ -45844,14 +45862,15 @@
    "reading": "Could not identify this name with confidence. Fields left as Unknown rather than invented.",
    "unknown": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-272",
@@ -45871,14 +45890,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-273",
@@ -45898,12 +45918,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -45931,7 +45951,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-274",
@@ -45951,14 +45972,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-275",
@@ -45982,11 +46004,11 @@
     "description": "sourced",
     "input": "sourced",
     "output": "sourced",
-    "preserved": "unsupported",
+    "preserved": "sourced",
     "broken": "sourced"
    },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-276",
@@ -46006,14 +46028,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-277",

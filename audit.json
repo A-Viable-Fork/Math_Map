@@ -16543,6 +16543,1103 @@
     "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214",
     "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979"
    }
+  },
+  {
+   "id": "D7-252",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-galois-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "'''Galois cohomology''' is the study of the [[group cohomology]] of [[Galois module]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "'''Galois cohomology''' is the study of the [[group cohomology]] of [[Galois module]]s, that is, the application of [[homological algebra]] to [[module (mathematics)|modules]] for [[Galois group]]s.",
+     "note": "Torsors appear in the source's history; that H^1 classifies them and forms is not stated as such.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "In another direction, that of [[torsor]]s"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A Galois group ''G'' associated with a [[field extension]] ''L''/''K'' acts in a natural way on some [[abelian group]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the application of [[homological algebra]] to [[module (mathematics)|modules]] for [[Galois group]]s."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The corresponding result for the [[multiplicative group]] is known as [[Hilbert's Theorem 90]], and was known before 1900.",
+     "note": "Arithmetic of forms and torsors: Hilbert 90 is the source's instance."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1357453616"
+   }
+  },
+  {
+   "id": "D7-253",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cech-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The idea of Čech cohomology is that, for an open cover <math>\\mathcal{U}</math> consisting of sufficiently small open sets"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The idea of Čech cohomology is that, for an open cover <math>\\mathcal{U}</math> consisting of sufficiently small open sets",
+     "more": [
+      {
+       "src": "c",
+       "quote": "This idea can be formalized by the notion of a [[good cover]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Let ''X'' be a topological space, and let <math>\\mathcal{U}</math> be an open cover of ''X''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "from Čech cohomology to [[sheaf cohomology]].",
+     "note": "The comparison map; agreement for acyclic covers is not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Agreement with sheaf cohomology for acyclic covers is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a more general approach is to take the [[direct limit]] of the cohomology groups of the nerve over the system of all possible open covers of ''X'', ordered by [[Open cover#Refinement|refinement]].",
+     "note": "Cover dependence removed by passing to the limit over refinements."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1314439779"
+   }
+  },
+  {
+   "id": "D7-254",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-sheaf-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "are defined as the right [[derived functor]]s of the functor ''E'' ↦ ''E''(''X'')."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "are defined as the right [[derived functor]]s of the functor ''E'' ↦ ''E''(''X'')."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "where ''H''<sup>0</sup>(''X'',''A'') is the group ''A''(''X'') of global sections of ''A'' on ''X''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "This makes it automatic that ''H''<sup>''i''</sup>(''X'',''E'') is zero for ''i'' < 0"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "\"Local-to-global obstruction data\" is a gloss."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369789745"
+   }
+  },
+  {
+   "id": "D7-255",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-crystalline-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "It was introduced by [[Alexander Grothendieck]]",
+     "note": "Grothendieck, developed by Berthelot, per the source.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "and developed by [[Pierre Berthelot]]."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The idea of crystalline cohomology, roughly, is to replace the [[Zariski topology|Zariski open sets]] of a scheme by infinitesimal thickenings of Zariski open sets with  [[divided power structure]]s."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Smooth proper over a perfect field is not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Its values <math>H^n(X/W)</math> are [[module (mathematics)|modules]] over the [[ring (mathematics)|ring]] <math>W</math> of [[Witt vector]]s over <math>k</math>."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Frobenius action and Betti analogues are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382700732"
+   }
+  },
+  {
+   "id": "D7-256",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-motive-algebraic-geometry.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "should arise as different realizations of the same underlying object.",
+     "note": "Motif read as motive, as the fill's reading says."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The idea is that theories such as [[Betti cohomology]], [[de Rham cohomology]], [[etale cohomology]], and [[crystalline cohomology]] should arise as different realizations of the same underlying object.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "[[Vladimir Voevodsky]] constructed [[triangulated category|triangulated categories]] of motives"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "For [[smooth variety|smooth varieties]], ''pure motives'' can be constructed from [[correspondence (algebraic geometry)|algebraic correspondences]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "For [[smooth variety|smooth varieties]], ''pure motives'' can be constructed from [[correspondence (algebraic geometry)|algebraic correspondences]] and [[idempotent]] projections."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The morphisms are [[correspondence (algebraic geometry)|correspondences]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "the (partially conjectural) theory of ''mixed motives''",
+     "note": "Partly conjectural; the standard conjectures by name are not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380465246"
+   }
+  },
+  {
+   "id": "D7-257",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Filtered complexes, which are common in [[abstract algebra]], give rise to exact couples."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Another technique for constructing spectral sequences is [[William Schumacher Massey|William Massey]]'s method of exact couples.",
+     "note": "Filtered complexes and exact couples are quoted; double complexes are not."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Filtered complexes, which are common in [[abstract algebra]], give rise to exact couples."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "To get <math> E_1 </math>, we take the homology of <math> E_0 </math>."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Extension problems are not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459"
+   }
+  },
+  {
+   "id": "D7-258",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}, so they decrease ''n'' by one."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}, so they decrease ''n'' by one."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "To get <math> E_1 </math>, we take the homology of <math> E_0 </math>.",
+     "note": "Each page is the homology of the previous."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459"
+   }
+  },
+  {
+   "id": "D7-259",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is a natural candidate for the abutment of this spectral sequence."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "To get the second grading, we will take the associated graded object with respect to the filtration."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "to mean that whenever ''p'' + ''q'' = ''n'', <math>E_r^{p,q}</math> converges to <math>E_\\infty^{p,q}</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Then <math>E_{r(p,q)}^{p,q} = E_\\infty^{p,q}</math> is the limiting term."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "To get the second grading, we will take the associated graded object with respect to the filtration."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Extension data between graded pieces is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459"
+   }
+  },
+  {
+   "id": "D7-260",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-serre-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "It expresses, in the language of [[homological algebra]], the singular (co)homology of the total space ''X'' of a (Serre) [[fibration]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular (co)homology of the total space ''X'' of a (Serre) [[fibration]] in terms of the (co)homology of the [[base space]] ''B'' and the fiber ''F''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Let <math>f\\colon X\\to B</math> be a [[fibration#Serre fibrations|Serre fibration]] of topological spaces"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "It expresses, in the language of [[homological algebra]], the singular (co)homology of the total space ''X''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "what is meant is cohomology with respect to the [[local coefficient system]] on ''B'' given by the cohomology of the various fibers.",
+     "note": "Multiplicative structure is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1373949739"
+   }
+  },
+  {
+   "id": "D7-261",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-grothendieck-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the '''Grothendieck spectral sequence''', introduced by [[Alexander Grothendieck]] in his [[Grothendieck's Tôhoku paper|''Tôhoku'' paper]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "sends injective <math>\\mathcal{O}</math>-modules to flasque sheaves",
+     "note": "The acyclicity hypothesis, in the source's example; the general statement is displayed as mathematics.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "which are <math>\\Gamma(X, -)</math>-acyclic."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is a  [[spectral sequence",
+     "note": "Composable functors per the source's statement; not quoted in full."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "is a  [[spectral sequence"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1286716238"
+   }
+  },
+  {
+   "id": "D7-262",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-leray-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the higher direct image functor <math>R^pf_*(F)</math> is the sheafification of the presheaf"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the higher direct image functor <math>R^pf_*(F)</math> is the sheafification of the presheaf",
+     "note": "The E_2 term is displayed as mathematics; not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353225412"
+   }
+  },
+  {
+   "id": "D7-263",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-eilenberg-moore-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''Eilenberg–Moore spectral sequence''' addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''Eilenberg–Moore spectral sequence''' addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]",
+     "note": "The Tor E_2 term is displayed as mathematics; loop spaces are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "where ''p'' is a [[fibration]] of topological spaces and the base ''B'' is [[simply connected]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "generalizes the above isomorphism to the situation where ''p'' is a [[fibration]] of topological spaces and the base ''B'' is [[simply connected]].",
+     "note": "Simple connectivity of the base is the condition."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1306717620"
+   }
+  },
+  {
+   "id": "D7-264",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-kunneth-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "== The Künneth spectral sequence =="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": ":<math>E_{pq}^2 = \\bigoplus_{q_1 + q_2 = q} \\mathrm{Tor}^R_p(H_{q_1}(X; R), H_{q_2}(Y; R)) \\Rightarrow H_{p+q}(X \\times Y; R).</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the homology of ''X'' and ''Y'' is related to the homology of their product by a  Künneth [[spectral sequence]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": ":<math>E_{pq}^2 = \\bigoplus_{q_1 + q_2 = q} \\mathrm{Tor}^R_p(H_{q_1}(X; R), H_{q_2}(Y; R)) \\Rightarrow H_{p+q}(X \\times Y; R).</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "In the cases described above, this spectral sequence collapses to give an isomorphism or a short exact sequence."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299684721"
+   }
+  },
+  {
+   "id": "D7-265",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-adams-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "which computes the [[stable homotopy theory|stable homotopy groups]] of [[topological spaces]].",
+     "note": "Adams (1958) per the source."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "But we can now consider the derived functors of Hom in the category of ''A''-modules, [[Ext functor|Ext]]<sub>''A''</sub><sup>''r''</sup>(''H''<sup>*</sup>(''Y''), ''H''<sup>*</sup>(''X''))."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "more modern treatments of this topic begin with the concept of a [[Spectrum (homotopy theory)|spectrum]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "which computes the [[stable homotopy theory|stable homotopy groups]] of [[topological spaces]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "p-completion is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383572600"
+   }
+  },
+  {
+   "id": "D7-266",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-atiyah-hirzebruch-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the '''Atiyah–Hirzebruch spectral sequence''' is a [[spectral sequence]] for calculating [[generalized cohomology]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the <math>E_2</math> term of the spectral sequence is <math>H^p(X;E^q(pt))</math>, and the spectral sequence converges conditionally to <math>E^{p+q}(X)</math>.",
+     "note": "The source says the convergence is conditional."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is a [[spectral sequence]] for calculating [[generalized cohomology]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "converges conditionally to <math>E^{p+q}(X)</math>."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1331219458"
+   }
+  },
+  {
+   "id": "D7-267",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-bockstein-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "It is named after [[Meyer Bockstein]].",
+     "note": "The attribution is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''Bockstein spectral sequence''' is a [[spectral sequence]] relating the homology with mod&nbsp;''p'' coefficients and the homology reduced mod&nbsp;''p''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Let ''C'' be a [[chain complex]] of [[torsion-free abelian group]]s and ''p'' a [[prime number]].",
+     "note": "Torsion-free chain groups, per the source."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "relating the homology with mod&nbsp;''p'' coefficients and the homology reduced mod&nbsp;''p''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Torsion orders are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1357399682"
+   }
+  },
+  {
+   "id": "D7-268",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cyclic-homology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "A \"Connes spectral sequence\" is not named in the fetched source."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Then the components of the Connes complex are defined as",
+     "note": "The Connes complex is quoted; a spectral sequence from Hochschild to cyclic homology is not."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "certain (co)homology theories for [[associative algebra]]s"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342267018"
+   }
+  },
+  {
+   "id": "D7-269",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hyperhomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "One application of hypercohomology spectral sequences are in the study of [[Gerbe|gerbes]]."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The two spectral sequences of a double complex are not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365289135"
+   }
+  },
+  {
+   "id": "D7-270",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for the Gersten-Witt spectral sequence."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-271",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "Unidentified, as the fill records; no source found."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The fill states no claim (Unknown)."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Unknown in the fill."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Unknown in the fill."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Unknown in the fill."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Unknown in the fill."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-272",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-exact-couple.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "an '''exact couple''', due to {{harvs|txt|last=Massey|first=William S.",
+     "note": "The attribution to Massey (1952) is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is a general source of [[spectral sequence]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "for example, [[Serre spectral sequence]] can be constructed by first constructing an exact couple.",
+     "note": "Long exact sequences as input are not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "an '''exact couple''', due to {{harvs|txt|last=Massey|first=William S."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is a general source of [[spectral sequence]]s."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1352137195"
+   }
+  },
+  {
+   "id": "D7-273",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-derived-category.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The universal property of the derived category is that it is a [[localization of a category|localization]] of the category of complexes with respect to quasi-isomorphisms."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The axiomatics required an innovation, the concept of [[triangulated category]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "is a construction of [[homological algebra]] introduced to refine and in a certain sense to simplify the theory of [[derived",
+     "note": "Derived functors are the motivation; homology is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of abelianness is not stated in the fetched windows."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364615062",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-274",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-triangulated-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''triangulated category''' is a [[category (mathematics)|category]] with the additional structure of a \"translation functor\""
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A '''shift''' or '''translation functor''' on a category ''D'' is an additive automorphism"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is an additive automorphism  (or for some authors, an auto-[[equivalence of categories|equivalence]])"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365868114"
+   }
+  },
+  {
+   "id": "D7-275",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-triangulated-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "called '''exact triangles'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "It follows from the other axioms that an exact triangle (and in particular the object ''Z'') is determined up to isomorphism by the morphism <math>X\\to Y</math>, although not always up to a unique isomorphism."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is determined up to isomorphism by the morphism <math>X\\to Y</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "(or '''distinguished triangles''')"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Triangulated categories admit a notion of cohomology, and every triangulated category has a large supply of cohomological functors.",
+     "note": "Long exact sequences are what cohomological functors give; not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "although not always up to a unique isomorphism.",
+     "note": "So the cone is not functorial."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365868114"
+   }
+  },
+  {
+   "id": "D7-276",
+   "batch": 11,
+   "why": "Fill review, batch 11: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-t-structure.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''''t''-structure''' is a way to axiomatize the properties of an [[abelian category|abelian subcategory]] of a [[derived category]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The heart of a ''t''-structure is an [[abelian category]] (whereas a triangulated category is additive but almost never abelian)",
+     "note": "Truncation functors are not quoted in this window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''''t''-structure''' is a way to axiomatize the properties of an [[abelian category|abelian subcategory]] of a [[derived category]]."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Truncations and the triangle are not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The heart of a ''t''-structure is an [[abelian category]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375329989"
+   }
   }
  ]
 }
