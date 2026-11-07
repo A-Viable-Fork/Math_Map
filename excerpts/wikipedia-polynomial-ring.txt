@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Polynomial ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377240266
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8ddfcf07c90d028854770984100a8f66657fcbefb85ee0229b64839d86581a69
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}.

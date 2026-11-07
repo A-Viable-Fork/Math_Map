@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 125 of 416 D7 stubs, 0 of 79 homes; 125 entries in 5 batches.
+Reviewed: 150 of 416 D7 stubs, 0 of 79 homes; 150 entries in 6 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (125 entries)
+### D7 stubs (150 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 118 | 0 | 0 | 7 |
-| description | 113 | 5 | 0 | 7 |
-| input | 114 | 3 | 0 | 8 |
-| output | 115 | 0 | 0 | 10 |
-| preserved | 97 | 2 | 0 | 26 |
-| broken | 59 | 3 | 0 | 63 |
-| **all** | 616 | 13 | 0 | 121 |
+| name | 142 | 0 | 0 | 8 |
+| description | 138 | 5 | 0 | 7 |
+| input | 136 | 3 | 0 | 11 |
+| output | 138 | 0 | 0 | 12 |
+| preserved | 118 | 2 | 0 | 30 |
+| broken | 72 | 3 | 0 | 75 |
+| **all** | 744 | 13 | 0 | 143 |
 
 ## 2. Recall against source
 
@@ -33,7 +33,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 3 | 25 | 139 | 0 | 0% |
 | 4 | 25 | 132 | 1 | 1% |
 | 5 | 25 | 83 | 0 | 0% |
-| **all** | 125 | 629 | 3 | 0% |
+| 6 | 25 | 128 | 0 | 0% |
+| **all** | 150 | 757 | 3 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -43,7 +44,7 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-123 input: sample confirmed, review unsupported.
 - D7-123 preserved: sample confirmed, review unsupported.
 
-Agreement: 9 of 12 fields.
+Agreement: 15 of 18 fields.
 
 ## 4. Sources in disagreement
 
@@ -127,6 +128,21 @@ Every field not confirmed, with the reason.
 - **D7-123 Siggers Term Evaluation** (batch 5): *description* unsupported: The 6-ary identity and the equivalence with a Taylor term are not stated in the fetched abstracts; the second source names the two dichotomy proofs (Bulatov, Zhuk) without the Siggers term. *input* unsupported: Not quoted. *preserved* unsupported: Equivalence with Taylor terms is not stated in the fetched abstracts. *broken* unsupported: Not stated.
 - **D7-124 Absorption Law Reduction** (batch 5): *broken* unsupported: Not stated.
 - **D7-125 Idempotent Reduction** (batch 5): *output* unsupported: The idempotent reduct is not stated in the fetched source. *preserved* unsupported: The tractability class in CSP is not stated in the fetched source. *broken* unsupported: Not stated.
+- **D7-126 Arity Reduction** (batch 6): *name* unsupported: "Arity Reduction" is not a name any fetched source uses. *input* unsupported: Not stated in a fetched source. *output* unsupported: Not stated in a fetched source. *preserved* unsupported: Not stated.
+- **D7-127 Nullary Operation Insertion** (batch 6): *input* unsupported: Not stated. *preserved* unsupported: Not stated. *broken* unsupported: That homomorphisms must preserve the constant and that empty algebras are excluded is not stated in the fetched source.
+- **D7-128 Unary Operation Composition** (batch 6): *broken* unsupported: "Nothing" is not stated.
+- **D7-129 Binary Operation Distribution** (batch 6): *broken* unsupported: Term length and shape are not discussed.
+- **D7-130 Ring Commutator Evaluation** (batch 6): *broken* unsupported: Not stated.
+- **D7-133 Ore Condition Application** (batch 6): *broken* unsupported: S-torsion is not discussed in the fetched source.
+- **D7-136 Krull Dimension Reduction** (batch 6): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-137 Nilradical Extraction** (batch 6): *preserved* unsupported: That Spec R and Spec R/N are homeomorphic is not stated in the fetched source.
+- **D7-138 Jacobson Radical Extraction** (batch 6): *broken* unsupported: Not stated.
+- **D7-141 Module Tensor Product** (batch 6): *input* unsupported: Not quoted. *output* unsupported: Not quoted.
+- **D7-142 Exterior Algebra Generation** (batch 6): *broken* unsupported: Not stated.
+- **D7-143 Symmetric Algebra Generation** (batch 6): *broken* unsupported: Not stated.
+- **D7-146 Group Ring Construction** (batch 6): *broken* unsupported: Recovering G from R[G] is not discussed in the fetched source.
+- **D7-147 Monoid Ring Construction** (batch 6): *broken* unsupported: Not stated.
+- **D7-148 Matrix Ring Construction** (batch 6): *broken* unsupported: Loss of commutativity is not stated in the fetched text.
 
 ## 6. Receipts
 
@@ -1693,4 +1709,313 @@ actions defining an optic"
 - recalled: name: Standard notion; nonstandard as an operation; description: f(x,...,x) = x; idempotent reduct; input: Term or algebra; output: Simplified term or reduct; preserved: Values; CSP reduces to idempotent; broken: Non-idempotent operations
 
   i: excerpts/wikipedia-idempotence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382059785)
+
+### D7-126 Arity Reduction (batch 6)
+
+- name: **unsupported** *"Arity Reduction" is not a name any fetched source uses.*
+- description: **confirmed** [p] "The lattice is [[countably infinite]], and all its members are finitely generated." *Post's result, as the fill cites it: every clone on two elements is finitely generated, hence by operations of bounded arity. Currying is not checked.*
+- input: **unsupported** *Not stated in a fetched source.*
+- output: **unsupported** *Not stated in a fetched source.*
+- preserved: **unsupported** *Not stated.*
+- broken: **confirmed** [p] "The relative simplicity of Post's lattice is in stark contrast to the lattice of clones on a three-element (or larger) set, which has the [[cardinality of the continuum]]" *On three or more elements some clones are not finitely generated (continuum many clones), so a bounded-arity presentation can fail.*
+- recalled: name: Nonstandard name; description: Express operations by lower-arity ones; Post: every clone on two elements is finitely generated; currying; input: An n-ary operation; output: Composite of lower-arity operations; preserved: Values; broken: Minimal presentation
+
+  p: excerpts/wikipedia-posts-lattice.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374905377)
+
+### D7-127 Nullary Operation Insertion (batch 6)
+
+- name: **confirmed** [a] "A [[constant (mathematics)|constant]] can be treated as the output of an operation of arity 0, called a ''nullary operation''."
+- description: **confirmed** [a] "A [[constant (mathematics)|constant]] can be treated as the output of an operation of arity 0, called a ''nullary operation''."
+- input: **unsupported** *Not stated.*
+- output: **confirmed** [a] "A [[constant (mathematics)|constant]] can be treated as the output of an operation of arity 0, called a ''nullary operation''."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *That homomorphisms must preserve the constant and that empty algebras are excluded is not stated in the fetched source.*
+- recalled: name: Nonstandard name; constants are standard; description: Adding a constant symbol; input: Signature and algebra; output: Expanded signature; preserved: Existing operations; broken: Homomorphisms must preserve the constant; no empty algebras
+
+  a: excerpts/wikipedia-arity.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375536476)
+
+### D7-128 Unary Operation Composition (batch 6)
+
+- name: **confirmed** [t] "a '''transformation semigroup''' (or '''composition semigroup''') is a collection of [[Transformation (function)|transformations]]"
+- description: **confirmed** [t] "If ''S'' includes the identity transformation of ''X'', then it is called a '''transformation monoid'''."
+- input: **confirmed** [t] "a '''transformation semigroup''' (or '''composition semigroup''') is a collection of [[Transformation (function)|transformations]]"
+- output: **confirmed** [t] "that is [[closure (mathematics)|closed]] under [[function composition]]."
+- preserved: **confirmed** [t] "that is [[closure (mathematics)|closed]] under [[function composition]]." *Associativity of composition makes it a semigroup.*
+- broken: **unsupported** *"Nothing" is not stated.*
+- recalled: name: Nonstandard name; description: Composition of unary maps; transformation monoid; input: Unary operations; output: Composite; preserved: Associativity; broken: Nothing
+
+  t: excerpts/wikipedia-transformation-semigroup.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378037079)
+
+### D7-129 Binary Operation Distribution (batch 6)
+
+- name: **confirmed** [d] "<math display="block">x \cdot (y + z) = x \cdot y + x \cdot z</math>" *"Binary Operation Distribution" is not a standard name; the distributive law is.*
+- description: **confirmed** [d] "<math display="block">x \cdot (y + z) = x \cdot y + x \cdot z</math>"
+- input: **confirmed** [d] "This basic property of numbers is part of the definition of most [[algebraic structure]]s that have two operations called addition and multiplication"
+- output: **confirmed** [d] "<math display="block">x \cdot (y + z) = x \cdot y + x \cdot z</math>"
+- preserved: **confirmed** [d] "<math display="block">x \cdot (y + z) = x \cdot y + x \cdot z</math>" *An equation: the value is unchanged.*
+- broken: **unsupported** *Term length and shape are not discussed.*
+- recalled: name: Nonstandard name; distributivity standard; description: x(y + z) = xy + xz; input: Term; output: Expanded or factored term; preserved: Value; broken: Shape
+
+  d: excerpts/wikipedia-distributive-property.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371443742)
+
+### D7-130 Ring Commutator Evaluation (batch 6)
+
+- name: **confirmed** [c] ": <math>[a, b] = ab - ba.</math>"
+- description: **confirmed** [m] "theorem of_associative_ring_bracket (x y : A) : ⁅x, y⁆ = x * y - y * x" [m] "def ofAssociativeRing : LieRing A where"
+- input: **confirmed** [c] "There are different definitions used in [[group theory]] and [[ring theory]]."
+- output: **confirmed** [m] "def ofAssociativeRing : LieRing A where"
+- preserved: **confirmed** [c] "Relation (3) is called [[anticommutativity]], while (4) is the [[Jacobi identity]]." [c] "In other words, the map ad<sub>''A''</sub> defines a [[derivation (abstract algebra)|derivation]] on the ring ''R''."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: [a, b] = ab - ba; an associative algebra becomes a Lie algebra; input: Associative ring; output: Commutator, Lie structure; preserved: Jacobi identity; derivation (Leibniz) rule; broken: Associative product
+
+  c: excerpts/wikipedia-commutator.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380799528)
+  m: excerpts/mathlib-Mathlib.Algebra.Lie.OfAssociative.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/OfAssociative.lean)
+
+### D7-131 Field of Fractions Construction (batch 6)
+
+- name: **confirmed** [f] "the '''field of fractions''' of an [[integral domain]] is the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]]."
+- description: **confirmed** [f] "the '''field of fractions''' of an [[integral domain]] is the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]]."
+- input: **confirmed** [f] "the '''field of fractions''' of an [[integral domain]]"
+- output: **confirmed** [f] "The field of fractions of an integral domain <math>R</math> is sometimes denoted by <math>\operatorname{Frac}(R)</math>"
+- preserved: **confirmed** [f] "the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]]." *R embeds, so its ring operations are kept injectively.*
+- broken: **confirmed** [f] "Intuitively, it consists of ratios between integral domain elements." *Every nonzero element becomes invertible.*
+- recalled: name: Standard; description: Fractions of an integral domain; smallest field containing it; input: Integral domain; output: Field of fractions; preserved: Embedding of R; broken: Non-units become invertible
+
+  f: excerpts/wikipedia-field-of-fractions.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1372290847)
+
+### D7-132 Ring Localization (batch 6)
+
+- name: **confirmed** [l] "is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}."
+- description: **confirmed** [l] "is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}." [l] "a ''localization'' by a multiplicative set may be viewed as the restriction of the spectrum of a ring to the subspace of the prime ideals that do not intersect the multiplicative set."
+- input: **confirmed** [l] "The localization of a [[commutative ring]] {{mvar|R}} by a [[multiplicatively closed set]]  {{mvar|S}}"
+- output: **confirmed** [l] "is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}."
+- preserved: **confirmed** [l] "In other words, localization is an [[exact functor]], and <math>S^{-1}R</math> is a [[flat module|flat {{mvar|R}}-module]]." [l] "* There is a [[bijection]] between the set of prime ideals of <math>S^{-1}R</math> and the set of prime ideals of <math>R</math> that are [[Disjoint sets|disjoint]] from <math>S</math>."
+- broken: **confirmed** [l] "* There is a [[bijection]] between the set of prime ideals of <math>S^{-1}R</math> and the set of prime ideals of <math>R</math> that are [[Disjoint sets|disjoint]] from <math>S</math>." *Primes meeting S are lost; the S-torsion part is not quoted.*
+- recalled: name: Standard; description: S^-1 R; localization at a prime; input: Commutative ring and multiplicative set; output: Localized ring; preserved: Exactness; primes disjoint from S; broken: Primes meeting S; S-torsion killed
+
+  l: excerpts/wikipedia-localization-commutative-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380772468)
+
+### D7-133 Ore Condition Application (batch 6)
+
+- name: **confirmed** [o] "the '''Ore condition''' is a condition introduced by [[Øystein Ore]], in connection with the question of extending beyond [[commutative ring]]s the construction of a [[field of fractions]]" *The attribution to Ore is the source's.*
+- description: **confirmed** [o] "such that every element of ''D'' is of the form ''rs''<sup>−1</sup> for ''r'' in ''R'' and ''s'' nonzero in ''R''." *Shown for Ore domains; general Ore sets are mentioned ("a different, stronger version").*
+- input: **confirmed** [o] "or more generally [[localization of a ring]]."
+- output: **confirmed** [o] "Such a division ring ''D'' is called a '''ring of right fractions''' of ''R''"
+- preserved: **confirmed** [o] "is a right Ore domain if and only if ''D'' is a [[flat module|flat]] left ''R''-module" *Stated for subrings of division rings.*
+- broken: **unsupported** *S-torsion is not discussed in the fetched source.*
+- recalled: name: Standard (Ore); description: Noncommutative localization when S satisfies the Ore condition; input: Ring and Ore set; output: Ore localization; preserved: Flatness; broken: S-torsion
+
+  o: excerpts/wikipedia-ore-condition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380394804)
+
+### D7-134 Integral Closure Transformation (batch 6)
+
+- name: **confirmed** [i] "The set of elements of <math>B</math> that are integral over <math>A</math> is called the '''integral closure''' of <math>A</math> in <math>B.</math>"
+- description: **confirmed** [i] "if ''b'' is a [[root of a polynomial|root]] of some [[monic polynomial]] over ''A''."
+- input: **confirmed** [i] "an element ''b'' of a [[commutative ring]] ''B'' is said to be '''integral over''' a [[subring]] ''A'' of ''B''"
+- output: **confirmed** [i] "The integral closure of any subring <math>A</math> in <math>B</math> is, itself, a subring of <math>B</math> and contains <math>A.</math>"
+- preserved: **confirmed** [i] "In particular, the [[Krull dimension]]s of ''A'' and ''B'' are the same." *For an integral extension; the fraction field is not quoted.*
+- broken: **confirmed** [i] "It is the first step in [[resolution of singularities]] since it gives a process for resolving singularities of [[codimension]] 1."
+- recalled: name: Standard; description: Elements integral over A in B; input: Ring extension; output: Integral closure; preserved: Going up; dimension; broken: Singularities in codimension one (normalization)
+
+  i: excerpts/wikipedia-integral-element.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381774461)
+
+### D7-135 Ring Completion (batch 6)
+
+- name: **confirmed** [c] "The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,"
+- description: **confirmed** [c] ": <math> \widehat{R}_I=\varprojlim (R/I^n) </math>"
+- input: **confirmed** [c] "The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,"
+- output: **confirmed** [c] ": <math> \widehat{R}_I=\varprojlim (R/I^n) </math>"
+- preserved: **confirmed** [c] "* The completion of a [[Noetherian ring]] <math>R</math> is a [[flat module]] over <math>R</math>." *The associated graded ring is not quoted.*
+- broken: **confirmed** [c] "The kernel of the canonical map {{pi}} from the ring to its completion is the intersection of the powers of ''I''." *What survives is local to V(I): elements in every power of I are killed. "Global information" is the fill's gloss.*
+- recalled: name: Standard; description: I-adic completion, inverse limit of R/I^n; input: Ring and ideal; output: Completion; preserved: Flat over Noetherian R; associated graded; broken: Global information
+
+  c: excerpts/wikipedia-completion-of-a-ring-r.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899860)
+
+### D7-136 Krull Dimension Reduction (batch 6)
+
+- name: **confirmed** [k] "the '''Krull dimension''' of a [[commutative ring]] ''R'', named after [[Wolfgang Krull]], is the [[supremum]] of the lengths of all [[chain (order theory)|chain]]s of [[prime ideals]]." *"Reduction" is not a standard name.*
+- description: **confirmed** [k] "We define the '''Krull dimension''' of <math>R</math> to be the supremum of the lengths of all chains of prime ideals in <math>R</math>." *Lowering dimension by a parameter is not checked.*
+- input: **confirmed** [k] "The Krull dimension need not be finite even for a [[Noetherian ring]]." *The definition does not need Noetherian rings.*
+- output: **confirmed** [k] "We define the '''Krull dimension''' of <math>R</math> to be the supremum of the lengths of all chains of prime ideals in <math>R</math>."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Nonstandard name; Krull dimension standard; description: Sup of lengths of chains of primes; input: Noetherian ring; output: Dimension or a smaller-dimensional quotient; preserved: Prime chains; broken: Spectrum direction
+
+  k: excerpts/wikipedia-krull-dimension.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374476368)
+
+### D7-137 Nilradical Extraction (batch 6)
+
+- name: **confirmed** [n] "{{Short description|Ideal of the nilpotent elements}}"
+- description: **confirmed** [n] "The nilradical of a commutative ring is the intersection of all [[prime ideal]]s."
+- input: **confirmed** [n] "The nilradical of a commutative ring is the set of all [[nilpotent element]]s"
+- output: **confirmed** [n] "If the nilradical is the zero ideal, the ring is called a [[reduced ring]]."
+- preserved: **unsupported** *That Spec R and Spec R/N are homeomorphic is not stated in the fetched source.*
+- broken: **confirmed** [n] "The nilradical of a commutative ring is the set of all [[nilpotent element]]s"
+- recalled: name: Standard; description: Nilpotent elements; intersection of all primes; input: Commutative ring; output: Nilradical, reduced quotient; preserved: Spec as a space; broken: Nilpotents
+
+  n: excerpts/wikipedia-nilradical-of-a-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371809981)
+
+### D7-138 Jacobson Radical Extraction (batch 6)
+
+- name: **confirmed** [j] "the '''Jacobson radical''' of a [[Ring (mathematics)|ring]] <math>R</math> is the [[ideal (ring theory)|ideal]]"
+- description: **confirmed** [j] "It is also true that J(''R'') equals the intersection of all maximal left ideals within the ring." [j] "The Jacobson radical plays a prominent role in many ring- and module-theoretic results, such as [[Nakayama's lemma]]."
+- input: **confirmed** [j] "For a general ring with unity <math>R</math>"
+- output: **confirmed** [j] "It is also true that J(''R'') equals the intersection of all maximal left ideals within the ring." *The semiprimitive quotient is not quoted.*
+- preserved: **confirmed** [j] "the Jacobson radical <math>J(R)</math> is defined as the ideal of all elements <math>r\in R</math> such that <math>rM=0</math> whenever <math>M</math> is a [[simple module|simple]] <math>R</math>-module." *J(R) acts as zero on simple modules, so they are modules over R/J. Lifting of units is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Intersection of maximal left ideals; Nakayama; input: Ring; output: Jacobson radical; preserved: Simple modules; broken: J(R)
+
+  j: excerpts/wikipedia-jacobson-radical.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379844793)
+
+### D7-139 Prime Spectrum Construction (batch 6)
+
+- name: **confirmed** [s] "the '''prime spectrum''' (or simply the '''spectrum''') of a [[commutative ring]] <math>R</math> is the set of all [[prime ideal]]s"
+- description: **confirmed** [s] "This defines a functor in the opposite direction, and these two functors make the two categories [[dually equivalent]]." [s] "called the ''structure sheaf'', which makes it a [[ringed space]]"
+- input: **confirmed** [s] "the '''prime spectrum''' (or simply the '''spectrum''') of a [[commutative ring]] <math>R</math>"
+- output: **confirmed** [s] "is a [[contravariant functor]] from the category of commutative rings to that of affine schemes."
+- preserved: **confirmed** [s] "these facts motivate defining the ring of global sections of affine scheme <math>\operatorname{Spec}(R)</m"
+- broken: **confirmed** [s] "This defines a functor in the opposite direction, and these two functors make the two categories [[dually equivalent]]."
+- recalled: name: Standard; description: Prime ideals with Zariski topology and structure sheaf; anti-equivalence with affine schemes; input: Commutative ring; output: Affine scheme; preserved: R as global sections; broken: Nothing
+
+  s: excerpts/wikipedia-spectrum-of-a-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382513632)
+
+### D7-140 Maximal Spectrum Construction (batch 6)
+
+- name: **confirmed** [m] "The set of maximal ideals of a commutative ring ''R'' is known as the '''maximal spectrum''' of ''R''"
+- description: **confirmed** [m] "This result is known as the weak [[Nullstellensatz]]." *The Gelfand spectrum is not checked.*
+- input: **confirmed** [m] "The set of maximal ideals of a commutative ring ''R''"
+- output: **confirmed** [m] "it is the subspace of the [[closed point]]s  of the [[prime spectrum]] Spec ''R''"
+- preserved: **confirmed** [m] "This result is known as the weak [[Nullstellensatz]]." *The C*-algebra case is not checked.*
+- broken: **confirmed** [m] "it is the subspace of the [[closed point]]s  of the [[prime spectrum]] Spec ''R''" *Only closed points are kept; generic points are dropped.*
+- recalled: name: Standard; description: Maximal ideals; Nullstellensatz; Gelfand; input: Commutative ring or algebra; output: Max spectrum; preserved: Points of finite-type algebras; broken: Non-closed points
+
+  m: excerpts/wikipedia-maximal-ideal.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1361064253)
+
+### D7-141 Module Tensor Product (batch 6)
+
+- name: **confirmed** [t] "are always [[right exact functor]]s, but not necessarily left exact" *The tensor product of modules is the page's subject.*
+- description: **confirmed** [t] "are always [[right exact functor]]s, but not necessarily left exact" *The universal property for bilinear maps is not quoted from this revision.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **confirmed** [t] "are always [[right exact functor]]s, but not necessarily left exact"
+- broken: **confirmed** [t] "is exact but not after taking the tensor with <math>\Z_n</math>)" *Left exactness fails; torsion can vanish. Tor is not quoted.*
+- recalled: name: Standard; description: Universal for bilinear maps; input: Right and left modules; output: Tensor product; preserved: Right exact; broken: Left exactness, Tor
+
+  t: excerpts/wikipedia-tensor-product-of-modules.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1362505653)
+
+### D7-142 Exterior Algebra Generation (batch 6)
+
+- name: **confirmed** [e] "its [[alternating algebra|alternating property]] that <math>v\wedge v=0</math>"
+- description: **confirmed** [e] "its [[alternating algebra|alternating property]] that <math>v\wedge v=0</math>" [m] "CliffordAlgebra (0 : QuadraticForm R M)" *The quotient of the tensor algebra is Mathlib's construction via the zero quadratic form.*
+- input: **confirmed** [e] "we can define the exterior algebra <math>\textstyle \bigwedge(M)</math> just as above"
+- output: **confirmed** [m] "abbrev ExteriorAlgebra :="
+- preserved: **confirmed** [e] "The binomial coefficient produces the correct result, even for exceptional cases"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Tensor algebra modulo v (x) v; input: Module; output: Exterior algebra; preserved: Binomial dimensions; broken: Symmetric information
+
+  e: excerpts/wikipedia-exterior-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382602035)
+  m: excerpts/mathlib-Mathlib.LinearAlgebra.ExteriorAlgebra.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/ExteriorAlgebra/Basic.lean)
+
+### D7-143 Symmetric Algebra Generation (batch 6)
+
+- name: **confirmed** [s] "the '''symmetric algebra''' {{math|''S''(''V'')}}"
+- description: **confirmed** [s] "can be defined as the [[quotient associative algebra|quotient algebra]] of {{math|''T''(''V'')}} by the two-sided ideal generated by the [[commutator]]s" [s] "the symmetric algebra over {{mvar|V}} can be viewed as a "coordinate free" polynomial ring over {{mvar|V}}."
+- input: **confirmed** [s] "on a [[vector space]] {{math|''V''}} over a [[field (mathematics)|field]] {{math|''K''}}"
+- output: **confirmed** [s] "the symmetric algebra over {{mvar|V}} can be viewed as a "coordinate free" polynomial ring over {{mvar|V}}."
+- preserved: **confirmed** [s] "for every [[linear map]] {{mvar|f}} from {{mvar|V}} to a commutative algebra {{mvar|A}}, there is a unique [[algebra homomorphism]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Tensor algebra modulo commutators; polynomial ring; input: Module; output: Symmetric algebra; preserved: Universal for maps to commutative algebras; broken: Order of factors
+
+  s: excerpts/wikipedia-symmetric-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380664856)
+
+### D7-144 Clifford Algebra Generation (batch 6)
+
+- name: **confirmed** [c] "Clifford algebras are closely related to [[exterior algebra]]s."
+- description: **confirmed** [c] "if {{math|1=''Q'' = 0}} then the Clifford algebra {{math|Cl(''V'', ''Q'')}} is just the exterior algebra {{math|⋀''V''}}." *The defining relation v v = q(v) is not quoted; spinors are not checked.*
+- input: **confirmed** [c] "Cl(''V'', ''Q'')"
+- output: **confirmed** [c] "Cl(''V'', ''Q'')"
+- preserved: **confirmed** [c] "<math display="block">\dim \operatorname{Cl}(V, Q) = \sum_{k=0}^n \binom{n}{k} = 2^n." *The Z/2 grading and the orthogonal group action are not quoted.*
+- broken: **confirmed** [c] "The Clifford algebra is a [[filtered algebra]]; the [[associated graded algebra]] is the exterior algebra."
+- recalled: name: Standard; description: Tensor algebra modulo v v = q(v); input: Quadratic space; output: Clifford algebra; preserved: Z/2 grading, dimension 2^n; broken: Z-grading (filtered, associated graded the exterior algebra)
+
+  c: excerpts/wikipedia-clifford-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376559182)
+
+### D7-145 Universal Enveloping Algebra Construction (batch 6)
+
+- name: **confirmed** [u] "the '''universal enveloping algebra''' of a [[Lie algebra]] is the [[unital algebra|unital]] [[associative algebra|associative]] algebra whose [[Algebra representation|representations]] correspond precisely"
+- description: **confirmed** [u] "constructing the universal enveloping algebra as a quotient of the tensor algebra over <math>\mathfrak g</math>." [m] "def UniversalEnvelopingAlgebra := (UniversalEnvelopingAlgebra.ringCon R L).Quotient"
+- input: **confirmed** [u] "the '''universal enveloping algebra''' of a [[Lie algebra]]"
+- output: **confirmed** [m] "def UniversalEnvelopingAlgebra := (UniversalEnvelopingAlgebra.ringCon R L).Quotient"
+- preserved: **confirmed** [u] "The [[Poincaré–Birkhoff–Witt theorem]], discussed below, asserts that these elements are linearly independent and thus form a basis for the universal enveloping algebra."
+- broken: **confirmed** [u] "The Poincaré–Birkhoff–Witt theorem implies, in particular, that the elements <math>x_1,\ldots, x_n</math> themselves are linearly independent." *g embeds.*
+- recalled: name: Standard; description: T(g) modulo xy - yx = [x, y]; modules are g-modules; input: Lie algebra; output: Universal enveloping algebra; preserved: PBW; broken: Nothing (g embeds)
+
+  u: excerpts/wikipedia-universal-enveloping-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363419142)
+  m: excerpts/mathlib-Mathlib.Algebra.Lie.UniversalEnveloping.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/UniversalEnveloping.lean)
+
+### D7-146 Group Ring Construction (batch 6)
+
+- name: **confirmed** [g] "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]], constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+- description: **confirmed** [g] "As a ring, its addition law is that of the free module and its multiplication extends "by linearity" the given group law on the basis."
+- input: **confirmed** [g] "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+- output: **confirmed** [g] "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]"
+- preserved: **confirmed** [g] "Thus, representations of the group correspond exactly to representations of the algebra, and the two theories are essentially equivalent."
+- broken: **unsupported** *Recovering G from R[G] is not discussed in the fetched source.*
+- recalled: name: Standard; description: Formal combinations with convolution; modules are representations; input: Ring and group; output: Group ring; preserved: Representations; broken: Group linearized
+
+  g: excerpts/wikipedia-group-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1370986299)
+
+### D7-147 Monoid Ring Construction (batch 6)
+
+- name: **confirmed** [o] "a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]], just as a [[group ring]] is constructed from a ring and a [[group (mathematics)|group]]."
+- description: **confirmed** [o] "The monoid '''N'''<sup>''n''</sup> (with the addition) gives the polynomial ring with ''n'' variables"
+- input: **confirmed** [o] "constructed from a ring and a [[monoid]]"
+- output: **confirmed** [m] "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
+- preserved: **confirmed** [o] "a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]]" *The monoid's multiplication becomes the ring's on the basis, as in the group ring.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Monoid ring; polynomials as N^n; input: Ring and monoid; output: Monoid ring; preserved: Monoid multiplication; broken: Linearized
+
+  o: excerpts/wikipedia-monoid-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1228471520)
+  m: excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean)
+
+### D7-148 Matrix Ring Construction (batch 6)
+
+- name: **confirmed** [m] "* The previous ideal correspondence actually arises from the fact that the rings ''R'' and M<sub>''n''</sub>(''R'') are [[Morita equivalent]]."
+- description: **confirmed** [m] "* The previous ideal correspondence actually arises from the fact that the rings ''R'' and M<sub>''n''</sub>(''R'') are [[Morita equivalent]]."
+- input: **confirmed** [m] "M<sub>''n''</sub>(''R'')"
+- output: **confirmed** [m] "M<sub>''n''</sub>(''R'')"
+- preserved: **confirmed** [m] "* There is a bijection between the two-sided [[ideal (ring theory)|ideals]] of M<sub>''n''</sub>(''R'') and the two-sided ideals of ''R''."
+- broken: **unsupported** *Loss of commutativity is not stated in the fetched text.*
+- recalled: name: Standard; description: n x n matrices; Morita equivalent to R; input: Ring; output: Matrix ring; preserved: Module category; ideals; broken: Commutativity
+
+  m: excerpts/wikipedia-matrix-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380487437)
+
+### D7-149 Opposite Ring Dualization (batch 6)
+
+- name: **confirmed** [o] "the '''opposite''' of a [[ring (mathematics)|ring]] is another ring with the same elements and addition operation, but with the multiplication performed in the reverse order"
+- description: **confirmed** [o] "* A left module over a ring is a right module over its opposite, and vice versa."
+- input: **confirmed** [o] "the '''opposite''' of a [[ring (mathematics)|ring]]"
+- output: **confirmed** [o] "is another ring with the same elements and addition operation"
+- preserved: **confirmed** [o] "is another ring with the same elements and addition operation" *Ideals with sides swapped are not quoted.*
+- broken: **confirmed** [o] "but with the multiplication performed in the reverse order"
+- recalled: name: Standard; description: Reversed multiplication; left R-modules are right R^op-modules; input: Ring; output: Opposite ring; preserved: Additive structure; broken: Order
+
+  o: excerpts/wikipedia-opposite-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382908951)
+
+### D7-150 Polynomial Ring Extension (batch 6)
+
+- name: **confirmed** [p] "It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}." *The polynomial ring is the page's subject.*
+- description: **confirmed** [p] "It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}." *Adjoining a commuting variable is the construction; quoted here through its properties.*
+- input: **confirmed** [h] "if <math>R</math> is Noetherian, the same must be true for <math>R[X]</math>." *Any ring R.*
+- output: **confirmed** [m] "protected theorem Polynomial.isNoetherianRing [inst : IsNoetherianRing R] : IsNoetherianRing R[X]"
+- preserved: **confirmed** [m] "protected theorem Polynomial.isNoetherianRing [inst : IsNoetherianRing R] : IsNoetherianRing R[X]" [p] "It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}." [u] "instance (priority := 100) uniqueFactorizationMonoid : UniqueFactorizationMonoid D[X]"
+- broken: **confirmed** [k] "lemma ringKrullDim_of_isNoetherianRing : ringKrullDim R[X] = ringKrullDim R + 1" [x] "theorem not_isUnit_X : ¬IsUnit (X : R[X])" *For Noetherian R; X is never a unit, so a field does not stay a field.*
+- recalled: name: Standard; description: Adjoin a commuting variable; input: Ring; output: R[x]; preserved: Noetherian (Hilbert), domain, UFD; broken: Field property; dimension rises by one
+
+  h: excerpts/wikipedia-hilberts-basis-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1362191078)
+  p: excerpts/wikipedia-polynomial-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377240266)
+  m: excerpts/mathlib-Mathlib.RingTheory.Polynomial.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Basic.lean)
+  u: excerpts/mathlib-Mathlib.RingTheory.Polynomial.UniqueFactorization.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/UniqueFactorization.lean)
+  k: excerpts/mathlib-Mathlib.RingTheory.KrullDimension.Polynomial.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/KrullDimension/Polynomial.lean)
+  x: excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean)
 

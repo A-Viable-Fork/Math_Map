@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "3cba2d44d400e68804d93de6528133bc3c0a6b7a"
+  "commit": "71fe51fed916d3ddc9a0b28cd460d89c7c12b3aa"
  },
  "domains": {
   "D1": {
@@ -748,8 +748,8 @@
   },
   "byTier": {
    "landed": 1337,
-   "audited": 238,
-   "authored": 372,
+   "audited": 262,
+   "authored": 348,
    "receipted": 74,
    "flagged": 1,
    "generated": 44
@@ -758,10 +758,10 @@
   "corrected": 34,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 220,
-   "unchecked": 10505,
+   "unsupported": 241,
+   "unchecked": 10366,
    "imprecise": 19,
-   "sourced": 1570,
+   "sourced": 1688,
    "formal": 82
   },
   "lean": {
@@ -41272,14 +41272,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-127",
@@ -41299,14 +41300,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-128",
@@ -41326,14 +41328,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-129",
@@ -41381,12 +41384,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -41406,7 +41409,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/OfAssociative.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-131",
@@ -41426,14 +41430,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-132",
@@ -41453,14 +41458,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-133",
@@ -41480,14 +41486,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-134",
@@ -41507,14 +41514,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-135",
@@ -41534,14 +41542,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-136",
@@ -41561,14 +41570,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-137",
@@ -41588,14 +41598,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-138",
@@ -41615,14 +41626,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-139",
@@ -41642,14 +41654,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-140",
@@ -41669,14 +41682,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-141",
@@ -41696,14 +41710,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-142",
@@ -41724,12 +41739,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -41741,7 +41756,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/ExteriorAlgebra/Basic.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-143",
@@ -41762,14 +41778,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-144",
@@ -41790,14 +41807,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-145",
@@ -41817,12 +41835,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "formal": [
     {
@@ -41842,7 +41860,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/UniversalEnveloping.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-146",
@@ -41862,14 +41881,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-147",
@@ -41889,12 +41909,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -41930,7 +41950,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MvPolynomial/Basic.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-148",
@@ -41950,14 +41971,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-149",
@@ -41977,14 +41999,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-150",
@@ -42005,12 +42028,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "formal": [
     {
@@ -42070,7 +42093,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-151",

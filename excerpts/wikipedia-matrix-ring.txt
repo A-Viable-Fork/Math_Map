@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Matrix ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380487437
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f39a6bd7a5a9adc1107b988546ec57bb9fc969feebd5c500f486a957d99da693
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* The previous ideal correspondence actually arises from the fact that the rings ''R'' and M<sub>''n''</sub>(''R'') are [[Morita equivalent]].
+
+M<sub>''n''</sub>(''R'')
+
+* There is a bijection between the two-sided [[ideal (ring theory)|ideals]] of M<sub>''n''</sub>(''R'') and the two-sided ideals of ''R''.

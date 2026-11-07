@@ -4,3 +4,5 @@ Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7e5c6b9843e1a7baf502
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 are always [[right exact functor]]s, but not necessarily left exact
+
+is exact but not after taking the tensor with <math>\Z_n</math>)

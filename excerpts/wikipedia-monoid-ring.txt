@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Monoid ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1228471520
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1af71569bed4f988adc05c6141910276f3cf2151206ff1df04b7334a35f21bcd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]], just as a [[group ring]] is constructed from a ring and a [[group (mathematics)|group]].
+
+The monoid '''N'''<sup>''n''</sup> (with the addition) gives the polynomial ring with ''n'' variables
+
+constructed from a ring and a [[monoid]]
+
+a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]]

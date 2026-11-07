@@ -10737,6 +10737,1207 @@
    "sources": {
     "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382059785"
    }
+  },
+  {
+   "id": "D7-126",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-posts-lattice.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Arity Reduction\" is not a name any fetched source uses."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The lattice is [[countably infinite]], and all its members are finitely generated.",
+     "note": "Post's result, as the fill cites it: every clone on two elements is finitely generated, hence by operations of bounded arity. Currying is not checked."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not stated in a fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not stated in a fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The relative simplicity of Post's lattice is in stark contrast to the lattice of clones on a three-element (or larger) set, which has the [[cardinality of the continuum]]",
+     "note": "On three or more elements some clones are not finitely generated (continuum many clones), so a bounded-arity presentation can fail."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374905377"
+   }
+  },
+  {
+   "id": "D7-127",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-arity.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "A [[constant (mathematics)|constant]] can be treated as the output of an operation of arity 0, called a ''nullary operation''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "A [[constant (mathematics)|constant]] can be treated as the output of an operation of arity 0, called a ''nullary operation''."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "A [[constant (mathematics)|constant]] can be treated as the output of an operation of arity 0, called a ''nullary operation''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "That homomorphisms must preserve the constant and that empty algebras are excluded is not stated in the fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375536476"
+   }
+  },
+  {
+   "id": "D7-128",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-transformation-semigroup.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''transformation semigroup''' (or '''composition semigroup''') is a collection of [[Transformation (function)|transformations]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "If ''S'' includes the identity transformation of ''X'', then it is called a '''transformation monoid'''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''transformation semigroup''' (or '''composition semigroup''') is a collection of [[Transformation (function)|transformations]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "that is [[closure (mathematics)|closed]] under [[function composition]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "that is [[closure (mathematics)|closed]] under [[function composition]].",
+     "note": "Associativity of composition makes it a semigroup."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing\" is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378037079"
+   }
+  },
+  {
+   "id": "D7-129",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-distributive-property.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "<math display=\"block\">x \\cdot (y + z) = x \\cdot y + x \\cdot z</math>",
+     "note": "\"Binary Operation Distribution\" is not a standard name; the distributive law is."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "<math display=\"block\">x \\cdot (y + z) = x \\cdot y + x \\cdot z</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "This basic property of numbers is part of the definition of most [[algebraic structure]]s that have two operations called addition and multiplication"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "<math display=\"block\">x \\cdot (y + z) = x \\cdot y + x \\cdot z</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "<math display=\"block\">x \\cdot (y + z) = x \\cdot y + x \\cdot z</math>",
+     "note": "An equation: the value is unchanged."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Term length and shape are not discussed."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371443742"
+   }
+  },
+  {
+   "id": "D7-130",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-commutator.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Lie.OfAssociative.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ": <math>[a, b] = ab - ba.</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "theorem of_associative_ring_bracket (x y : A) : ⁅x, y⁆ = x * y - y * x",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def ofAssociativeRing : LieRing A where"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "There are different definitions used in [[group theory]] and [[ring theory]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def ofAssociativeRing : LieRing A where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Relation (3) is called [[anticommutativity]], while (4) is the [[Jacobi identity]].",
+     "more": [
+      {
+       "src": "c",
+       "quote": "In other words, the map ad<sub>''A''</sub> defines a [[derivation (abstract algebra)|derivation]] on the ring ''R''."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380799528",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/OfAssociative.lean"
+   }
+  },
+  {
+   "id": "D7-131",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-field-of-fractions.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the '''field of fractions''' of an [[integral domain]] is the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the '''field of fractions''' of an [[integral domain]] is the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the '''field of fractions''' of an [[integral domain]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The field of fractions of an integral domain <math>R</math> is sometimes denoted by <math>\\operatorname{Frac}(R)</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]].",
+     "note": "R embeds, so its ring operations are kept injectively."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Intuitively, it consists of ratios between integral domain elements.",
+     "note": "Every nonzero element becomes invertible."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1372290847"
+   }
+  },
+  {
+   "id": "D7-132",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-localization-commutative-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "a ''localization'' by a multiplicative set may be viewed as the restriction of the spectrum of a ring to the subspace of the prime ideals that do not intersect the multiplicative set."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The localization of a [[commutative ring]] {{mvar|R}} by a [[multiplicatively closed set]]  {{mvar|S}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "In other words, localization is an [[exact functor]], and <math>S^{-1}R</math> is a [[flat module|flat {{mvar|R}}-module]].",
+     "more": [
+      {
+       "src": "l",
+       "quote": "* There is a [[bijection]] between the set of prime ideals of <math>S^{-1}R</math> and the set of prime ideals of <math>R</math> that are [[Disjoint sets|disjoint]] from <math>S</math>."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "* There is a [[bijection]] between the set of prime ideals of <math>S^{-1}R</math> and the set of prime ideals of <math>R</math> that are [[Disjoint sets|disjoint]] from <math>S</math>.",
+     "note": "Primes meeting S are lost; the S-torsion part is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380772468"
+   }
+  },
+  {
+   "id": "D7-133",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-ore-condition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "the '''Ore condition''' is a condition introduced by [[Øystein Ore]], in connection with the question of extending beyond [[commutative ring]]s the construction of a [[field of fractions]]",
+     "note": "The attribution to Ore is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "such that every element of ''D'' is of the form ''rs''<sup>−1</sup> for ''r'' in ''R'' and ''s'' nonzero in ''R''.",
+     "note": "Shown for Ore domains; general Ore sets are mentioned (\"a different, stronger version\")."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "or more generally [[localization of a ring]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "Such a division ring ''D'' is called a '''ring of right fractions''' of ''R''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is a right Ore domain if and only if ''D'' is a [[flat module|flat]] left ''R''-module",
+     "note": "Stated for subrings of division rings."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "S-torsion is not discussed in the fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380394804"
+   }
+  },
+  {
+   "id": "D7-134",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-integral-element.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The set of elements of <math>B</math> that are integral over <math>A</math> is called the '''integral closure''' of <math>A</math> in <math>B.</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "if ''b'' is a [[root of a polynomial|root]] of some [[monic polynomial]] over ''A''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "an element ''b'' of a [[commutative ring]] ''B'' is said to be '''integral over''' a [[subring]] ''A'' of ''B''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The integral closure of any subring <math>A</math> in <math>B</math> is, itself, a subring of <math>B</math> and contains <math>A.</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "In particular, the [[Krull dimension]]s of ''A'' and ''B'' are the same.",
+     "note": "For an integral extension; the fraction field is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "It is the first step in [[resolution of singularities]] since it gives a process for resolving singularities of [[codimension]] 1."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381774461"
+   }
+  },
+  {
+   "id": "D7-135",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-completion-of-a-ring-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ": <math> \\widehat{R}_I=\\varprojlim (R/I^n) </math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ": <math> \\widehat{R}_I=\\varprojlim (R/I^n) </math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* The completion of a [[Noetherian ring]] <math>R</math> is a [[flat module]] over <math>R</math>.",
+     "note": "The associated graded ring is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The kernel of the canonical map {{pi}} from the ring to its completion is the intersection of the powers of ''I''.",
+     "note": "What survives is local to V(I): elements in every power of I are killed. \"Global information\" is the fill's gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899860"
+   }
+  },
+  {
+   "id": "D7-136",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-krull-dimension.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the '''Krull dimension''' of a [[commutative ring]] ''R'', named after [[Wolfgang Krull]], is the [[supremum]] of the lengths of all [[chain (order theory)|chain]]s of [[prime ideals]].",
+     "note": "\"Reduction\" is not a standard name."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "We define the '''Krull dimension''' of <math>R</math> to be the supremum of the lengths of all chains of prime ideals in <math>R</math>.",
+     "note": "Lowering dimension by a parameter is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "The Krull dimension need not be finite even for a [[Noetherian ring]].",
+     "note": "The definition does not need Noetherian rings."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "We define the '''Krull dimension''' of <math>R</math> to be the supremum of the lengths of all chains of prime ideals in <math>R</math>."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374476368"
+   }
+  },
+  {
+   "id": "D7-137",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/wikipedia-nilradical-of-a-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "{{Short description|Ideal of the nilpotent elements}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The nilradical of a commutative ring is the intersection of all [[prime ideal]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The nilradical of a commutative ring is the set of all [[nilpotent element]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "If the nilradical is the zero ideal, the ring is called a [[reduced ring]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "That Spec R and Spec R/N are homeomorphic is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The nilradical of a commutative ring is the set of all [[nilpotent element]]s"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371809981"
+   }
+  },
+  {
+   "id": "D7-138",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "j": "excerpts/wikipedia-jacobson-radical.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "the '''Jacobson radical''' of a [[Ring (mathematics)|ring]] <math>R</math> is the [[ideal (ring theory)|ideal]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "It is also true that J(''R'') equals the intersection of all maximal left ideals within the ring.",
+     "more": [
+      {
+       "src": "j",
+       "quote": "The Jacobson radical plays a prominent role in many ring- and module-theoretic results, such as [[Nakayama's lemma]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "For a general ring with unity <math>R</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "It is also true that J(''R'') equals the intersection of all maximal left ideals within the ring.",
+     "note": "The semiprimitive quotient is not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "the Jacobson radical <math>J(R)</math> is defined as the ideal of all elements <math>r\\in R</math> such that <math>rM=0</math> whenever <math>M</math> is a [[simple module|simple]] <math>R</math>-module.",
+     "note": "J(R) acts as zero on simple modules, so they are modules over R/J. Lifting of units is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379844793"
+   }
+  },
+  {
+   "id": "D7-139",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-spectrum-of-a-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''prime spectrum''' (or simply the '''spectrum''') of a [[commutative ring]] <math>R</math> is the set of all [[prime ideal]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "This defines a functor in the opposite direction, and these two functors make the two categories [[dually equivalent]].",
+     "more": [
+      {
+       "src": "s",
+       "quote": "called the ''structure sheaf'', which makes it a [[ringed space]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''prime spectrum''' (or simply the '''spectrum''') of a [[commutative ring]] <math>R</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is a [[contravariant functor]] from the category of commutative rings to that of affine schemes."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "these facts motivate defining the ring of global sections of affine scheme <math>\\operatorname{Spec}(R)</m"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "This defines a functor in the opposite direction, and these two functors make the two categories [[dually equivalent]]."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382513632"
+   }
+  },
+  {
+   "id": "D7-140",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-maximal-ideal.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The set of maximal ideals of a commutative ring ''R'' is known as the '''maximal spectrum''' of ''R''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "This result is known as the weak [[Nullstellensatz]].",
+     "note": "The Gelfand spectrum is not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The set of maximal ideals of a commutative ring ''R''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "it is the subspace of the [[closed point]]s  of the [[prime spectrum]] Spec ''R''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "This result is known as the weak [[Nullstellensatz]].",
+     "note": "The C*-algebra case is not checked."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "it is the subspace of the [[closed point]]s  of the [[prime spectrum]] Spec ''R''",
+     "note": "Only closed points are kept; generic points are dropped."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1361064253"
+   }
+  },
+  {
+   "id": "D7-141",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-tensor-product-of-modules.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "are always [[right exact functor]]s, but not necessarily left exact",
+     "note": "The tensor product of modules is the page's subject."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "are always [[right exact functor]]s, but not necessarily left exact",
+     "note": "The universal property for bilinear maps is not quoted from this revision."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "are always [[right exact functor]]s, but not necessarily left exact"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is exact but not after taking the tensor with <math>\\Z_n</math>)",
+     "note": "Left exactness fails; torsion can vanish. Tor is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1362505653"
+   }
+  },
+  {
+   "id": "D7-142",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-exterior-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.LinearAlgebra.ExteriorAlgebra.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "its [[alternating algebra|alternating property]] that <math>v\\wedge v=0</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "its [[alternating algebra|alternating property]] that <math>v\\wedge v=0</math>",
+     "note": "The quotient of the tensor algebra is Mathlib's construction via the zero quadratic form.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "CliffordAlgebra (0 : QuadraticForm R M)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "we can define the exterior algebra <math>\\textstyle \\bigwedge(M)</math> just as above"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "abbrev ExteriorAlgebra :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The binomial coefficient produces the correct result, even for exceptional cases"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382602035",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/ExteriorAlgebra/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-143",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-symmetric-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''symmetric algebra''' {{math|''S''(''V'')}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "can be defined as the [[quotient associative algebra|quotient algebra]] of {{math|''T''(''V'')}} by the two-sided ideal generated by the [[commutator]]s",
+     "more": [
+      {
+       "src": "s",
+       "quote": "the symmetric algebra over {{mvar|V}} can be viewed as a \"coordinate free\" polynomial ring over {{mvar|V}}."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "on a [[vector space]] {{math|''V''}} over a [[field (mathematics)|field]] {{math|''K''}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the symmetric algebra over {{mvar|V}} can be viewed as a \"coordinate free\" polynomial ring over {{mvar|V}}."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "for every [[linear map]] {{mvar|f}} from {{mvar|V}} to a commutative algebra {{mvar|A}}, there is a unique [[algebra homomorphism]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380664856"
+   }
+  },
+  {
+   "id": "D7-144",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-clifford-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Clifford algebras are closely related to [[exterior algebra]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "if {{math|1=''Q'' = 0}} then the Clifford algebra {{math|Cl(''V'', ''Q'')}} is just the exterior algebra {{math|⋀''V''}}.",
+     "note": "The defining relation v v = q(v) is not quoted; spinors are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Cl(''V'', ''Q'')"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Cl(''V'', ''Q'')"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "<math display=\"block\">\\dim \\operatorname{Cl}(V, Q) = \\sum_{k=0}^n \\binom{n}{k} = 2^n.",
+     "note": "The Z/2 grading and the orthogonal group action are not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The Clifford algebra is a [[filtered algebra]]; the [[associated graded algebra]] is the exterior algebra."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376559182"
+   }
+  },
+  {
+   "id": "D7-145",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "u": "excerpts/wikipedia-universal-enveloping-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Lie.UniversalEnveloping.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "the '''universal enveloping algebra''' of a [[Lie algebra]] is the [[unital algebra|unital]] [[associative algebra|associative]] algebra whose [[Algebra representation|representations]] correspond precisely"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "constructing the universal enveloping algebra as a quotient of the tensor algebra over <math>\\mathfrak g</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def UniversalEnvelopingAlgebra := (UniversalEnvelopingAlgebra.ringCon R L).Quotient"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "the '''universal enveloping algebra''' of a [[Lie algebra]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def UniversalEnvelopingAlgebra := (UniversalEnvelopingAlgebra.ringCon R L).Quotient"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "The [[Poincaré–Birkhoff–Witt theorem]], discussed below, asserts that these elements are linearly independent and thus form a basis for the universal enveloping algebra."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "The Poincaré–Birkhoff–Witt theorem implies, in particular, that the elements <math>x_1,\\ldots, x_n</math> themselves are linearly independent.",
+     "note": "g embeds."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1363419142",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/UniversalEnveloping.lean"
+   }
+  },
+  {
+   "id": "D7-146",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-group-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]], constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "As a ring, its addition law is that of the free module and its multiplication extends \"by linearity\" the given group law on the basis."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Thus, representations of the group correspond exactly to representations of the algebra, and the two theories are essentially equivalent."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Recovering G from R[G] is not discussed in the fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370986299"
+   }
+  },
+  {
+   "id": "D7-147",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-monoid-ring.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]], just as a [[group ring]] is constructed from a ring and a [[group (mathematics)|group]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The monoid '''N'''<sup>''n''</sup> (with the addition) gives the polynomial ring with ''n'' variables"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "constructed from a ring and a [[monoid]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]]",
+     "note": "The monoid's multiplication becomes the ring's on the basis, as in the group ring."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1228471520",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+   }
+  },
+  {
+   "id": "D7-148",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* The previous ideal correspondence actually arises from the fact that the rings ''R'' and M<sub>''n''</sub>(''R'') are [[Morita equivalent]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* The previous ideal correspondence actually arises from the fact that the rings ''R'' and M<sub>''n''</sub>(''R'') are [[Morita equivalent]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "M<sub>''n''</sub>(''R'')"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "M<sub>''n''</sub>(''R'')"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* There is a bijection between the two-sided [[ideal (ring theory)|ideals]] of M<sub>''n''</sub>(''R'') and the two-sided ideals of ''R''."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Loss of commutativity is not stated in the fetched text."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380487437"
+   }
+  },
+  {
+   "id": "D7-149",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-opposite-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "the '''opposite''' of a [[ring (mathematics)|ring]] is another ring with the same elements and addition operation, but with the multiplication performed in the reverse order"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* A left module over a ring is a right module over its opposite, and vice versa."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "the '''opposite''' of a [[ring (mathematics)|ring]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is another ring with the same elements and addition operation"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is another ring with the same elements and addition operation",
+     "note": "Ideals with sides swapped are not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "but with the multiplication performed in the reverse order"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382908951"
+   }
+  },
+  {
+   "id": "D7-150",
+   "batch": 6,
+   "why": "Fill review, batch 6: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hilberts-basis-theorem.txt",
+    "p": "excerpts/wikipedia-polynomial-ring.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Polynomial.Basic.txt",
+    "u": "excerpts/mathlib-Mathlib.RingTheory.Polynomial.UniqueFactorization.txt",
+    "k": "excerpts/mathlib-Mathlib.RingTheory.KrullDimension.Polynomial.txt",
+    "x": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}.",
+     "note": "The polynomial ring is the page's subject."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}.",
+     "note": "Adjoining a commuting variable is the construction; quoted here through its properties."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "if <math>R</math> is Noetherian, the same must be true for <math>R[X]</math>.",
+     "note": "Any ring R."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "protected theorem Polynomial.isNoetherianRing [inst : IsNoetherianRing R] : IsNoetherianRing R[X]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "protected theorem Polynomial.isNoetherianRing [inst : IsNoetherianRing R] : IsNoetherianRing R[X]",
+     "more": [
+      {
+       "src": "p",
+       "quote": "It follows immediately that, if {{math|''K''}} is an integral domain, then so is {{math|''K''[''X'']}}."
+      },
+      {
+       "src": "u",
+       "quote": "instance (priority := 100) uniqueFactorizationMonoid : UniqueFactorizationMonoid D[X]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "lemma ringKrullDim_of_isNoetherianRing : ringKrullDim R[X] = ringKrullDim R + 1",
+     "note": "For Noetherian R; X is never a unit, so a field does not stay a field.",
+     "more": [
+      {
+       "src": "x",
+       "quote": "theorem not_isUnit_X : ¬IsUnit (X : R[X])"
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1362191078",
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377240266",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Basic.lean",
+    "u": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/UniqueFactorization.lean",
+    "k": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/KrullDimension/Polynomial.lean",
+    "x": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean"
+   }
   }
  ]
 }
