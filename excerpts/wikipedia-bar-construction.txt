@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Bar complex (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382284047
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1789776e86d959c323c6a2a72e2bd7610f97a90a9f8299c058102f1a4498b5bc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''bar complex''', also called the '''bar resolution''', '''bar construction''', '''standard resolution''', or '''standard complex''',
+
+is a way of constructing [[resolution (algebra)|resolutions]] in [[homological algebra]].

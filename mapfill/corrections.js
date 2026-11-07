@@ -223,6 +223,12 @@ const CORRECTIONS = [
     receipts: [R("excerpts/wikipedia-semimodular-lattice.txt", "A lattice is sometimes called '''weakly semimodular''' if it satisfies the following condition due to [[Garrett Birkhoff]]:", "description"),
       R("excerpts/wikipedia-semimodular-lattice.txt", "Every semimodular lattice is weakly semimodular. The converse is true for lattices of finite length", "description"),
       R("excerpts/wikipedia-geometric-lattice.txt", "a '''geometric lattice''' is a [[finite set|finite]] [[Atom (order theory)|atomistic]] [[semimodular lattice]]", "description")] },
+  { id: "D7-228", name: "Nine Lemma Reduction",
+    fields: { description: "In a 3x3 commutative diagram with exact columns: if two adjacent rows (the top two or the bottom two) are exact, so is the third; if the top and bottom rows are exact and the composite through the middle row is zero, the middle row is exact." },
+    reason: "Fill review, batch 10: description graded imprecise. \"Exactness of two rows implies the third\" fails for the middle row without the extra condition that its composite is zero.",
+    receipts: [R("excerpts/wikipedia-nine-lemma.txt", "* If all columns as well as the two bottom rows are exact, then the top row is exact.", "description"),
+      R("excerpts/wikipedia-nine-lemma.txt", "* If all columns as well as the two top rows are exact, then the bottom row is exact.", "description"),
+      R("excerpts/wikipedia-nine-lemma.txt", "* If all columns as well as the top and bottom rows are exact, and <math>A_2 \\to C_2</math> is the zero morphism, then the middle row is exact.", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

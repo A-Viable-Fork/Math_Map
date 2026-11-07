@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "15317f0616eab38ce5f44229df01dd6782c31558"
+  "commit": "d21fe1a8d2f502bc5110c320115802a6ec1c7894"
  },
  "domains": {
   "D1": {
@@ -748,20 +748,20 @@
   },
   "byTier": {
    "landed": 1337,
-   "audited": 332,
-   "authored": 278,
+   "audited": 356,
+   "authored": 254,
    "receipted": 74,
    "flagged": 1,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 35,
+  "corrected": 36,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 351,
-   "unchecked": 9953,
+   "unsupported": 395,
+   "unchecked": 9813,
    "imprecise": 19,
-   "sourced": 1991,
+   "sourced": 2087,
    "formal": 82
   },
   "lean": {
@@ -44469,14 +44469,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-227",
@@ -44496,14 +44497,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-228",
@@ -44513,7 +44515,7 @@
    "tags": [
     "compression"
    ],
-   "description": "In a 3x3 diagram with exact columns, exactness of two rows implies the third.",
+   "description": "In a 3x3 commutative diagram with exact columns: if two adjacent rows (the top two or the bottom two) are exact, so is the third; if the top and bottom rows are exact and the composite through the middle row is zero, the middle row is exact.",
    "input": "3x3 commutative diagram",
    "output": "Exactness of the remaining row",
    "preserved": "Exactness",
@@ -44523,14 +44525,48 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "In a 3x3 diagram with exact columns, exactness of two rows implies the third."
+    },
+    "reason": "Fill review, batch 10: description graded imprecise. \"Exactness of two rows implies the third\" fails for the middle row without the extra condition that its composite is zero.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-nine-lemma.txt",
+      "quote": "* If all columns as well as the two bottom rows are exact, then the top row is exact.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-nine-lemma.txt",
+      "quote": "* If all columns as well as the two top rows are exact, then the bottom row is exact.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-nine-lemma.txt",
+      "quote": "* If all columns as well as the top and bottom rows are exact, and <math>A_2 \\to C_2</math> is the zero morphism, then the middle row is exact.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-229",
@@ -44550,14 +44586,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-230",
@@ -44577,12 +44614,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -44602,7 +44639,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/LeftDerived.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-231",
@@ -44622,12 +44660,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -44647,7 +44685,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/RightDerived.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-232",
@@ -44667,12 +44706,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -44684,7 +44723,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Tor.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-233",
@@ -44704,12 +44744,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -44721,7 +44761,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-234",
@@ -44741,12 +44782,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -44766,7 +44807,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCofiber.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-235",
@@ -44814,12 +44856,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
    "formal": [
     {
@@ -44831,7 +44873,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/Homotopy.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-237",
@@ -44851,14 +44894,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-238",
@@ -44878,14 +44922,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-239",
@@ -44905,14 +44950,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-240",
@@ -44959,14 +45005,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-242",
@@ -44986,14 +45033,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-243",
@@ -45013,14 +45061,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-244",
@@ -45040,14 +45089,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-245",
@@ -45067,14 +45117,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-246",
@@ -45094,14 +45145,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-247",
@@ -45121,14 +45173,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-248",
@@ -45148,14 +45201,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-249",
@@ -45175,14 +45229,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-250",
@@ -45202,14 +45257,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-251",
@@ -45229,14 +45285,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-252",

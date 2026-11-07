@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 225 of 416 D7 stubs, 0 of 79 homes; 225 entries in 9 batches.
+Reviewed: 250 of 416 D7 stubs, 0 of 79 homes; 250 entries in 10 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (225 entries)
+### D7 stubs (250 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 211 | 0 | 0 | 14 |
-| description | 208 | 6 | 0 | 11 |
-| input | 204 | 3 | 0 | 18 |
-| output | 202 | 0 | 0 | 23 |
-| preserved | 164 | 2 | 0 | 59 |
-| broken | 89 | 3 | 0 | 133 |
-| **all** | 1078 | 14 | 0 | 258 |
+| name | 235 | 0 | 0 | 15 |
+| description | 230 | 7 | 0 | 13 |
+| input | 226 | 3 | 0 | 21 |
+| output | 222 | 0 | 0 | 28 |
+| preserved | 179 | 2 | 0 | 69 |
+| broken | 90 | 3 | 0 | 157 |
+| **all** | 1182 | 15 | 0 | 303 |
 
 ## 2. Recall against source
 
@@ -37,7 +37,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 7 | 25 | 119 | 0 | 0% |
 | 8 | 25 | 108 | 0 | 0% |
 | 9 | 25 | 108 | 0 | 0% |
-| **all** | 225 | 1092 | 3 | 0% |
+| 10 | 25 | 105 | 1 | 1% |
+| **all** | 250 | 1197 | 4 | 0% |
 
 ## 3. Second reading of the sample
 
@@ -49,7 +50,7 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D7-192 broken: sample unsupported, review confirmed.
 - D7-212 name: sample confirmed, review unsupported.
 
-Agreement: 31 of 36 fields.
+Agreement: 37 of 42 fields.
 
 ## 4. Sources in disagreement
 
@@ -57,6 +58,7 @@ Fields where two sources disagree. Both are recorded; the grade states which sou
 
 - **D7-067 Essential Image Reduction**, description: Mathlib takes the full subcategory on objects isomorphic to some F c, as the fill does. The nLab defines the essential image as the smallest replete subcategory containing the image, which need not be full. Both are recorded. Against: [e] "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$."
 - **D7-067 Essential Image Reduction**, output: As the description: Mathlib's is full, the nLab's need not be. Against: [e] "is the smallest [[replete subcategory]] of the target $n$-category $B$ containing the __image__ of $F$."
+- **D7-248 Factorization Homology Computation**, description: The sources disagree on who introduced it: the nLab credits Francis (2011) and equates the notion with Lurie's topological chiral homology; Wikipedia credits Ayala, Francis and Rozenblyum. The fill's "Ayala, Francis; Lurie" matches neither exactly. Both recorded; neither picked. Against: [w] "It was introduced by David Ayala, John Francis, and Nick Rozenblyum."
 
 ## 5. Findings
 
@@ -210,6 +212,31 @@ Every field not confirmed, with the reason.
 - **D7-223 Flat Resolution Construction** (batch 9): *broken* unsupported: Not stated.
 - **D7-224 Cartan-Eilenberg Resolution** (batch 9): *broken* unsupported: Not stated.
 - **D7-225 Horseshoe Lemma Construction** (batch 9): *broken* unsupported: Not stated.
+- **D7-226 Snake Lemma Connecting Homomorphism** (batch 10): *broken* unsupported: Not stated.
+- **D7-227 Zig-Zag Lemma Application** (batch 10): *broken* unsupported: Not stated.
+- **D7-228 Nine Lemma Reduction** (batch 10): *description* imprecise: "Two exact rows give the third" holds as stated for the top and bottom rows; for the middle row the composite A_2 to C_2 must also be zero. *broken* unsupported: Not stated.
+- **D7-229 Five Lemma Reduction** (batch 10): *broken* unsupported: Not stated.
+- **D7-230 Left Derived Functor Computation** (batch 10): *broken* unsupported: Not stated.
+- **D7-231 Right Derived Functor Computation** (batch 10): *broken* unsupported: Not stated.
+- **D7-232 Tor Functor Evaluation** (batch 10): *broken* unsupported: Not stated.
+- **D7-233 Ext Functor Evaluation** (batch 10): *preserved* unsupported: Balance and the Yoneda product are not quoted. *broken* unsupported: Not stated.
+- **D7-234 Mapping Cone Construction** (batch 10): *broken* unsupported: Non-unique isomorphism in the derived category is not stated.
+- **D7-235 Mapping Cylinder Construction** (batch 10): *broken* unsupported: Not stated.
+- **D7-236 Chain Homotopy Equivalence** (batch 10): *broken* unsupported: Not stated.
+- **D7-237 Quasi-Isomorphism Reduction** (batch 10): *broken* unsupported: Not stated.
+- **D7-238 Euler Characteristic Computation** (batch 10): *output* unsupported: K-theory classes as output are not quoted. *broken* unsupported: Not stated.
+- **D7-239 Betti Number Extraction** (batch 10): *preserved* unsupported: Rational homology is not quoted.
+- **D7-241 Koszul Complex Construction** (batch 10): *broken* unsupported: Not stated.
+- **D7-242 Koszul Cohomology Evaluation** (batch 10): *preserved* unsupported: Betti tables and syzygies are not quoted. *broken* unsupported: Not stated.
+- **D7-243 Bar Construction** (batch 10): *input* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-244 Cobar Construction** (batch 10): *name* unsupported: No fetched source for the cobar construction (no Wikipedia or nLab page found). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-245 Hochschild Homology Computation** (batch 10): *output* unsupported: Not quoted. *preserved* unsupported: Morita invariance is not quoted. *broken* unsupported: Not stated.
+- **D7-246 Hochschild Cohomology Computation** (batch 10): *description* unsupported: Ext over the enveloping algebra, derivations, deformations and the Gerstenhaber bracket are not quoted. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-247 Cyclic Homology Computation** (batch 10): *preserved* unsupported: Morita invariance and the SBI sequence are not quoted. *broken* unsupported: Not stated.
+- **D7-248 Factorization Homology Computation** (batch 10): *broken* unsupported: Not stated.
+- **D7-249 Topological Hochschild Homology Transformation** (batch 10): *output* unsupported: The circle action is not quoted. *preserved* unsupported: TC and trace methods are not quoted. *broken* unsupported: Not stated.
+- **D7-250 Group Homology Construction** (batch 10): *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-251 Group Cohomology Construction** (batch 10): *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -3009,4 +3036,312 @@ actions defining an optic"
 - recalled: name: Standard; description: Resolution of the middle term from resolutions of the ends; input: Short exact sequence and resolutions; output: Compatible resolution; preserved: Long exact sequences; broken: Nothing
 
   h: excerpts/wikipedia-horseshoe-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1349920892)
+
+### D7-226 Snake Lemma Connecting Homomorphism (batch 10)
+
+- name: **confirmed** [s] "Homomorphisms constructed with its help are generally called ''connecting homomorphisms''."
+- description: **confirmed** [s] "The '''snake lemma''' is a tool used in [[mathematics]], particularly [[homological algebra]], to  construct [[long exact sequence]]s." *The six-term sequence through ker c to coker a is displayed in the source.*
+- input: **confirmed** [s] "where the rows are [[exact sequence]]s and 0 is the [[zero object]]."
+- output: **confirmed** [s] "to  construct [[long exact sequence]]s."
+- preserved: **confirmed** [s] "to  construct [[long exact sequence]]s."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Six-term exact sequence with connecting map ker c to coker a; input: Map of short exact sequences; output: Exact sequence; preserved: Exactness; broken: Nothing
+
+  s: excerpts/wikipedia-snake-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375057256)
+
+### D7-227 Zig-Zag Lemma Application (batch 10)
+
+- name: **confirmed** [z] "the '''zig-zag lemma''' asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s of certain [[chain complex]]es."
+- description: **confirmed** [z] "the '''zig-zag lemma''' asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s of certain [[chain complex]]es."
+- input: **confirmed** [z] "of certain [[chain complex]]es." *Short exact sequences of complexes, in the source's statement.*
+- output: **confirmed** [z] "asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s"
+- preserved: **confirmed** [z] "asserts the existence of a particular [[long exact sequence]]"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Short exact sequence of complexes gives long exact homology sequence; input: Short exact sequence of complexes; output: Long exact sequence; preserved: Exactness; broken: Nothing
+
+  z: excerpts/wikipedia-zig-zag-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1321868056)
+
+### D7-228 Nine Lemma Reduction (batch 10)
+
+- name: **confirmed** [n] "the '''nine lemma''' (or 3×3 lemma) is a statement about [[commutative diagram]]s and [[exact sequence]]s"
+- description: **imprecise** [n] "* If all columns as well as the top and bottom rows are exact, and <math>A_2 \to C_2</math> is the zero morphism, then the middle row is exact." [n] "* If all columns as well as the two bottom rows are exact, then the top row is exact." *"Two exact rows give the third" holds as stated for the top and bottom rows; for the middle row the composite A_2 to C_2 must also be zero.* (recall contradicted)
+- input: **confirmed** [n] "is a statement about [[commutative diagram]]s and [[exact sequence]]s valid in the category of [[group (mathematics)|group]]s and any [[abelian category]]."
+- output: **confirmed** [n] "* If all columns as well as the two top rows are exact, then the bottom row is exact."
+- preserved: **confirmed** [n] "* If all columns as well as the two bottom rows are exact, then the top row is exact."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (3 x 3 lemma); description: Exact columns and two exact rows give the third; input: 3 x 3 diagram; output: Exactness of third row; preserved: Exactness; broken: Nothing
+
+  n: excerpts/wikipedia-nine-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1372029050)
+
+### D7-229 Five Lemma Reduction (batch 10)
+
+- name: **confirmed** [f] "The five lemma states that, if the rows are [[exact sequence|exact]]"
+- description: **confirmed** [f] "The five lemma states that, if the rows are [[exact sequence|exact]], ''m'' and ''p'' are [[isomorphism]]s, ''l'' is an [[epimorphism]], and ''q'' is a [[monomorphism]], then ''n'' is also an isomorphism." *The fill's four isomorphisms are a special case of the source's sharper hypotheses (epi, iso, iso, mono).*
+- input: **confirmed** [f] "if the rows are [[exact sequence|exact]]"
+- output: **confirmed** [f] "then ''n'' is also an isomorphism."
+- preserved: **confirmed** [f] "then ''n'' is also an isomorphism."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Outer four isomorphisms (or epi, iso, iso, mono) give middle isomorphism; input: Map of exact rows; output: Middle isomorphism; preserved: Isomorphism; broken: Nothing
+
+  f: excerpts/wikipedia-five-lemma-r.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376671102)
+
+### D7-230 Left Derived Functor Computation (batch 10)
+
+- name: **confirmed** [m] "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+- description: **confirmed** [m] "F.leftDerivedToHomotopyCategory ⋙ HomotopyCategory.homologyFunctor D _ n" *Homology of F applied to a projective resolution, in Mathlib's homotopy-category form.*
+- input: **confirmed** [m] "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :=" *Mathlib asks for an additive F; right exactness is what makes L_0 F = F.*
+- output: **confirmed** [m] "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+- preserved: **confirmed** [m] "noncomputable def leftDerivedZeroIsoSelf : F.leftDerived 0 ≅ F :=" [d] "It was noted in various quite different settings that a [[short exact sequence]] often gives rise to a "long exact sequence"."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: H_n(F(P)) for a projective resolution; L_0 F = F for right exact F; input: Right exact F and object; output: Derived objects; preserved: L_0 = F; long exact sequences; broken: Nothing
+
+  d: excerpts/wikipedia-derived-functor.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/LeftDerived.lean)
+
+### D7-231 Right Derived Functor Computation (batch 10)
+
+- name: **confirmed** [m] "noncomputable def Functor.rightDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+- description: **confirmed** [d] "where the ''I''<sup>&nbsp;''i''</sup> are all injective (this is known as an ''[[injective resolution]]'' of ''X'')."
+- input: **confirmed** [d] "Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]"
+- output: **confirmed** [m] "noncomputable def Functor.rightDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+- preserved: **confirmed** [m] "noncomputable def rightDerivedZeroIsoSelf : F.rightDerived 0 ≅ F :=" [d] "and one could ask how to continue this sequence to the right to form a long exact sequence."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: H^n(F(I)) for an injective resolution; input: Left exact F; output: Derived objects; preserved: R^0 = F; broken: Nothing
+
+  d: excerpts/wikipedia-derived-functor.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/RightDerived.lean)
+
+### D7-232 Tor Functor Evaluation (batch 10)
+
+- name: **confirmed** [t] "The name comes from a relation between the first Tor group Tor<sub>1</sub> and the [[torsion subgroup]] of an [[abelian group]]."
+- description: **confirmed** [t] "taking the left derived functors of the right exact functor <math>G(B)=A\otimes_RB</math>." [t] "if either <math>A</math> or <math>B</math> is [[flat module|flat]]"
+- input: **confirmed** [t] "taking the left derived functors of the right exact functor <math>G(B)=A\otimes_RB</math>."
+- output: **confirmed** [m] "obj X := Functor.leftDerived ((tensoringLeft C).obj X) n"
+- preserved: **confirmed** [t] "In fact, one can compute Tor using a flat resolution of either <math>A</math> or <math>B</math>" *Balance: either side may be resolved.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Left derived functors of tensor; balanced; Tor_1 detects torsion and flatness; input: Modules; output: Tor groups; preserved: Balance; broken: Nothing
+
+  t: excerpts/wikipedia-tor-functor.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1337789189)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Tor.lean)
+
+### D7-233 Ext Functor Evaluation (batch 10)
+
+- name: **confirmed** [e] "The name comes from the fact that the first Ext group Ext<sup>1</sup> classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another."
+- description: **confirmed** [e] "There is a one-to-one correspondence between [[equivalence class]]es of extensions of <math>A</math> by <math>B</math> and elements of <math>\operatorname{Ext}_R^1(A,B)</math>."
+- input: **confirmed** [e] "classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another."
+- output: **confirmed** [m] "def Ext (X Y : C) (n : ℕ) : Type w :="
+- preserved: **unsupported** *Balance and the Yoneda product are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Right derived functors of Hom; Ext^1 classifies extensions; input: Modules; output: Ext groups; preserved: Balance; Yoneda product; broken: Nothing
+
+  e: excerpts/wikipedia-ext-functor.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380841038)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean)
+
+### D7-234 Mapping Cone Construction (batch 10)
+
+- name: **confirmed** [m] "noncomputable def mappingCone : CochainComplex C ℤ := homotopyCofiber φ"
+- description: **confirmed** [c] "The main use of the cone is to identify [[quasi-isomorphism]]s: if the cone is [[acyclic complex|acyclic]], then the map is a quasi-isomorphism." [c] "In the theory of [[triangulated categories]] it is a kind of combined [[kernel (category theory)|kernel]] and [[cokernel]]" *The quoted direction; the converse is not in this sentence.*
+- input: **confirmed** [c] "a category whose morphisms form abelian groups and in which we may construct a [[direct sum]] of any two objects)."
+- output: **confirmed** [m] "noncomputable def mappingCone : CochainComplex C ℤ := homotopyCofiber φ"
+- preserved: **confirmed** [c] "where the maps <math>B \to C(f), C(f) \to A[1]</math> are given by the direct summands"
+- broken: **unsupported** *Non-unique isomorphism in the derived category is not stated.*
+- recalled: name: Standard; description: Y + X[1] with twisted differential; f quasi-iso iff cone acyclic; triangles; input: Chain map; output: Cone; preserved: Long exact sequence; broken: Non-functoriality in the derived category
+
+  c: excerpts/wikipedia-mapping-cone-homological-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean)
+
+### D7-235 Mapping Cylinder Construction (batch 10)
+
+- name: **confirmed** [y] "Mapping cylinders are central to the definition of [[cofibration]]s."
+- description: **confirmed** [y] "The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>."
+- input: **confirmed** [y] "The map <math>f:X \to Y</math> is a [[homotopy equivalence]] if and only if"
+- output: **confirmed** [y] "The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>."
+- preserved: **confirmed** [y] "The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Factor f through a cylinder homotopy equivalent to Y; input: Map; output: Mapping cylinder; preserved: Homotopy type of Y; broken: Strictness
+
+  y: excerpts/wikipedia-mapping-cylinder.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1344396108)
+
+### D7-236 Chain Homotopy Equivalence (batch 10)
+
+- name: **confirmed** [h] "A morphism <math>f : A \rightarrow B</math> which is an isomorphism in ''K(A)'' is called a '''(chain) homotopy equivalence'''."
+- description: **confirmed** [m] "structure HomotopyEquiv (C D : HomologicalComplex V c) where"
+- input: **confirmed** [h] "of chain complexes in an [[additive category]] ''A''"
+- output: **confirmed** [m] "structure HomotopyEquiv (C D : HomologicalComplex V c) where"
+- preserved: **confirmed** [h] "namely actually havi" *Homotopy equivalences are quasi-isomorphisms "for a good reason": homology is kept. Images under additive functors are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: f, g with composites homotopic to identities; input: Complexes and maps; output: Homotopy equivalence; preserved: Homology; additive functors preserve it; broken: Chain-level identity
+
+  h: excerpts/wikipedia-chain-homotopy.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1362508169)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.Homotopy.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/Homotopy.lean)
+
+### D7-237 Quasi-Isomorphism Reduction (batch 10)
+
+- name: **confirmed** [q] "of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''."
+- description: **confirmed** [h] "while ''D(A)'' turns into isomorphisms any maps of complexes that are [[quasi-isomorphism]]s in ''Kom(A)''"
+- input: **confirmed** [q] "of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''."
+- output: **confirmed** [h] "while ''D(A)'' turns into isomorphisms any maps of complexes that are [[quasi-isomorphism]]s in ''Kom(A)''"
+- preserved: **confirmed** [q] "of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Map inducing homology isomorphisms; inverted in the derived category; input: Chain map; output: Derived isomorphism; preserved: Homology; broken: Chain-level structure
+
+  q: excerpts/wikipedia-quasi-isomorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1349081515)
+  h: excerpts/wikipedia-chain-homotopy.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1362508169)
+
+### D7-238 Euler Characteristic Computation (batch 10)
+
+- name: **confirmed** [e] "the alternating sum of ranks of reduced homology groups."
+- description: **confirmed** [e] "the alternating sum of ranks of reduced homology groups." *Stated for the reduced characteristic; additivity on exact sequences is not quoted.*
+- input: **confirmed** [e] "This quantity is well-defined if the Betti numbers are all finite and if they are zero beyond a certain index&nbsp;''n''<sub>0</sub>."
+- output: **unsupported** *K-theory classes as output are not quoted.*
+- preserved: **confirmed** [e] "It follows that the Euler characteristic is also a homotopy invariant."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Alternating sum of ranks; additive; homotopy invariant; input: Finite complex or space; output: Integer; preserved: Homotopy invariance; broken: All but one number
+
+  e: excerpts/wikipedia-euler-characteristic.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1368656473)
+
+### D7-239 Betti Number Extraction (batch 10)
+
+- name: **confirmed** [b] "The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]"
+- description: **confirmed** [b] "The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]"
+- input: **confirmed** [b] "of the ''n''th [[homology group]], denoted ''H''<sub>''n''</sub>"
+- output: **confirmed** [b] "The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]"
+- preserved: **unsupported** *Rational homology is not quoted.*
+- broken: **confirmed** [b] "These finite components of the homology groups are their [[torsion subgroup]]s, and they are denoted by '''torsion coefficients'''." *Torsion is not counted by the rank. The ring structure is not quoted.*
+- recalled: name: Standard; description: Ranks of homology groups; input: Space or complex; output: Betti numbers; preserved: Rational homology; broken: Torsion
+
+  b: excerpts/wikipedia-betti-number.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1344154640)
+
+### D7-241 Koszul Complex Construction (batch 10)
+
+- name: **confirmed** [k] "As a tool, its homology can be used to tell when a set of elements of a (local) ring is an [[Regular sequence#Definitions|M-regular sequence]]"
+- description: **confirmed** [k] "When <math>s_1, \dots, s_r</math> form a [[regular sequence]], the map <math>K_s \to A/(s_1, \dots, s_r)</math> is a quasi-isomorphism" [k] "We write <math>\bigwedge^i E</math> for the ''i''-th [[exterior power]] of ''E''."
+- input: **confirmed** [k] "When <math>s_1, \dots, s_r</math> form a [[regular sequence]]"
+- output: **confirmed** [k] "the map <math>K_s \to A/(s_1, \dots, s_r)</math> is a quasi-isomorphism"
+- preserved: **confirmed** [k] "and hence it can be used to prove basic facts about the [[Depth (ring theory)|depth"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Exterior powers with contraction differential; resolution for regular sequences; input: Ring and sequence; output: Koszul complex; preserved: Depth; resolution of R/(x); broken: Nothing
+
+  k: excerpts/wikipedia-koszul-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1361641570)
+
+### D7-242 Koszul Cohomology Evaluation (batch 10)
+
+- name: **confirmed** [k] "They were introduced by [[Mark Lee Green]]" *The attribution to Green is the source's.*
+- description: **confirmed** [k] "the '''Koszul cohomology''' groups <math>K_{p,q}(X,L)</math> are [[group (mathematics)|group]]s associated to a [[projective variety]] <math>X</math> with a [[line bundle]] <math>L</math>."
+- input: **confirmed** [k] "If <math>L</math> is a line bundle over a projective variety <math>X</math>, then the Koszul cohomology <math>K_{p,q}(X,L)</math> is given by the Koszul cohomology <math>K_{p,q}(M,V)</math> of the graded module"
+- output: **confirmed** [k] "the '''Koszul cohomology''' groups <math>K_{p,q}(X,L)</math>"
+- preserved: **unsupported** *Betti tables and syzygies are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Green); description: Koszul cohomology of graded modules or line bundles; syzygies; input: Graded module or line bundle; output: Koszul cohomology; preserved: Betti tables; broken: Nothing
+
+  k: excerpts/wikipedia-koszul-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383508976)
+
+### D7-243 Bar Construction (batch 10)
+
+- name: **confirmed** [b] "the '''bar complex''', also called the '''bar resolution''', '''bar construction''', '''standard resolution''', or '''standard complex''',"
+- description: **confirmed** [b] "is a way of constructing [[resolution (algebra)|resolutions]] in [[homological algebra]]." *Classifying spaces BG are not checked.*
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [b] "is a way of constructing [[resolution (algebra)|resolutions]] in [[homological algebra]]."
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Tensor powers with alternating faces; bar resolution; classifying spaces; input: Algebra, monoid, group; output: Bar construction; preserved: Tor, group homology; broken: Size
+
+  b: excerpts/wikipedia-bar-construction.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382284047)
+
+### D7-244 Cobar Construction (batch 10)
+
+- name: **unsupported** *No fetched source for the cobar construction (no Wikipedia or nLab page found).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Adams); description: Dual for coalgebras; cobar of bar resolves A; loop space homology; input: Coalgebra; output: Cobar complex; preserved: Ext; loop spaces; broken: Size
+
+
+### D7-245 Hochschild Homology Computation (batch 10)
+
+- name: **confirmed** [h] "The enveloping algebra of ''A'' is the tensor product <math>A^e=A\otimes A^o</math> of ''A'' with its [[opposite ring|opposite algebra]]."
+- description: **confirmed** [h] "Bimodules over ''A'' are essentially the same as modules over the enveloping algebra of ''A''" [h] "An elementary introduction to [[noncommutative geometry]] which uses Hochschild homology to generalize differential forms)." *The Tor formula and HKR are not quoted from this revision.*
+- input: **confirmed** [h] "The enveloping algebra of ''A'' is the tensor product <math>A^e=A\otimes A^o</math>"
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Morita invariance is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Tor over A (x) A^op of A with A; HKR; input: Associative algebra; output: Hochschild homology; preserved: Morita invariance; broken: Nothing
+
+  h: excerpts/wikipedia-hochschild-homology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354296765)
+
+### D7-246 Hochschild Cohomology Computation (batch 10)
+
+- name: **confirmed** [h] "The enveloping algebra of ''A'' is the tensor product <math>A^e=A\otimes A^o</math>" *The page covers Hochschild cohomology with homology.*
+- description: **unsupported** *Ext over the enveloping algebra, derivations, deformations and the Gerstenhaber bracket are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Gerstenhaber); description: Ext of A with A; deformations; Gerstenhaber bracket; input: Associative algebra; output: Hochschild cohomology; preserved: Morita invariance; broken: Nothing
+
+  h: excerpts/wikipedia-hochschild-homology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354296765)
+
+### D7-247 Cyclic Homology Computation (batch 10)
+
+- name: **confirmed** [c] "'''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories for [[associative algebra]]s which generalize the [[de Rham cohomology|de Rh"
+- description: **confirmed** [c] "These notions were independently introduced by [[Boris Tsygan]] (homology)" [c] "and [[Alain Connes]] (cohomology)" *Tsygan and Connes, per the source; the SBI sequence is not quoted.*
+- input: **confirmed** [c] "certain (co)homology theories for [[associative algebra]]s"
+- output: **confirmed** [c] "'''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories"
+- preserved: **unsupported** *Morita invariance and the SBI sequence are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Connes, Tsygan); description: Cyclic invariants; SBI sequence; noncommutative de Rham; input: Algebra; output: Cyclic homology; preserved: Morita invariance; broken: Nothing
+
+  c: excerpts/wikipedia-cyclic-homology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342267018)
+
+### D7-248 Factorization Homology Computation (batch 10)
+
+- name: **confirmed** [n] "_Factorization homology_  is a notion of [[homology theory]] for [[framed manifold|framed]] $n$-[[dimension|dimensional]] [[manifolds]] with coefficients in [[En-algebras]]"
+- description: **confirmed** [n] "due to [Francis 2011](#Francis)." [n] "In fact the definition of factorization homology turns out to be equivalent to that of [[topological chiral homology]]" Against: [w] "It was introduced by David Ayala, John Francis, and Nick Rozenblyum." *The sources disagree on who introduced it: the nLab credits Francis (2011) and equates the notion with Lurie's topological chiral homology; Wikipedia credits Ayala, Francis and Rozenblyum. The fill's "Ayala, Francis; Lurie" matches neither exactly. Both recorded; neither picked.*
+- input: **confirmed** [n] "for [[framed manifold|framed]] $n$-[[dimension|dimensional]] [[manifolds]] with coefficients in [[En-algebras]]"
+- output: **confirmed** [n] "is a notion of [[homology theory]]"
+- preserved: **confirmed** [n] "which are &quot;[[cosheaves]]&quot; in that for any decomposition of a manifold $X$ into submanifolds" *Excision, in the source's cosheaf condition. The circle case (Hochschild homology) is not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Ayala-Francis, Lurie); description: Integrate an E_n-algebra over an n-manifold; excision; circle gives HH; input: E_n-algebra and framed manifold; output: Factorization homology; preserved: Excision; broken: Nothing
+
+  n: excerpts/nlab-factorization-homology.txt (https://ncatlab.org/nlab/source/factorization+homology)
+  w: excerpts/wikipedia-factorization-homology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1117924325)
+
+### D7-249 Topological Hochschild Homology Transformation (batch 10)
+
+- name: **confirmed** [t] "'''Topological Hochschild homology''' is a topological refinement of [[Hochschild homology]]"
+- description: **confirmed** [t] "using the monoidal product in ring spectra, namely, <math>\wedge_\mathbb{S}</math>" *Over the sphere spectrum; the attribution to Boekstedt is not quoted.*
+- input: **confirmed** [t] "using the monoidal product in ring spectra"
+- output: **unsupported** *The circle action is not quoted.*
+- preserved: **unsupported** *TC and trace methods are not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Bokstedt); description: Hochschild over the sphere spectrum; circle action; TC and trace methods; input: Ring spectrum; output: THH; preserved: Trace to K-theory; broken: Nothing
+
+  t: excerpts/wikipedia-topological-hochschild-homology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1319983387)
+
+### D7-250 Group Homology Construction (batch 10)
+
+- name: **confirmed** [g] "Then ''H''<sub>''n''</sub>(''G'', ''M'') are the homology groups of this chain complex, <math>H_n(G,M)=H_n(F\otimes_{\Z[G]}M)</math> for ''n'' ≥ 0."
+- description: **confirmed** [g] "<math>H_n(G,M)=H_n(F\otimes_{\Z[G]}M)</math> for ''n'' ≥ 0." *Homology of F tensored over Z[G], F a projective resolution of Z: Tor. The homology of BG is quoted for cohomology only.*
+- input: **confirmed** [g] "Then ''H''<sub>''n''</sub>(''G'', ''M'') are the homology groups of this chain complex"
+- output: **confirmed** [g] "<math>H_n(G,M)=H_n(F\otimes_{\Z[G]}M)</math> for ''n'' ≥ 0."
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Tor over Z[G] of Z and M; homology of BG; input: Group and module; output: Group homology; preserved: Homological information; broken: Nonabelian detail
+
+  g: excerpts/wikipedia-group-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214)
+
+### D7-251 Group Cohomology Construction (batch 10)
+
+- name: **confirmed** [g] ":<math>H^{n}(G,M) = \operatorname{Ext}^{n}_{\Z [G]}(\Z, M)."
+- description: **confirmed** [g] ":<math>H^{n}(G,M) = \operatorname{Ext}^{n}_{\Z [G]}(\Z, M)." [g] "The first cohomology group is the quotient of the so-called ''crossed homomorphisms''" [e] "The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>."
+- input: **confirmed** [g] ":<math>H^{n}(G,M) = \operatorname{Ext}^{n}_{\Z [G]}(\Z, M)."
+- output: **confirmed** [g] ":<math>H^{n}(G,M) = \operatorname{Ext}^{n}_{\Z [G]}(\Z, M)."
+- preserved: **confirmed** [e] "The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>." *The central case.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Ext over Z[G]; H^2 classifies extensions, H^1 crossed homomorphisms; input: Group and module; output: Group cohomology; preserved: Extensions; broken: Nonabelian detail
+
+  g: excerpts/wikipedia-group-cohomology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214)
+  e: excerpts/wikipedia-group-extension.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979)
 

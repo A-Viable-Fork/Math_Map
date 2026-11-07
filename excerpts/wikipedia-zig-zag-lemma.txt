@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Zig-zag lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1321868056
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: aac7ca5bd0cd0bac74f97b6974fcb325b65c4bb0bd7d8d4f9aa558bfe696d3f0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''zig-zag lemma''' asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s of certain [[chain complex]]es.
+
+of certain [[chain complex]]es.
+
+asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s
+
+asserts the existence of a particular [[long exact sequence]]

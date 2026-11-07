@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Betti number (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1344154640
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0446aa4108cf7e20dfebff9fddff18f48ea8732cf7aa69e579e3f006cf6d35e7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]
+
+of the ''n''th [[homology group]], denoted ''H''<sub>''n''</sub>
+
+These finite components of the homology groups are their [[torsion subgroup]]s, and they are denoted by '''torsion coefficients'''.

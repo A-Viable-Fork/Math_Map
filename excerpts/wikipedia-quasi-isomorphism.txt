@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Quasi-isomorphism (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1349081515
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3ec1bc3742b86ecc86b43fa9871125ecc6181bde7cdeca8efe42a349b7d429ce
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''.

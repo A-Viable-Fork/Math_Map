@@ -15381,6 +15381,1168 @@
    "sources": {
     "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1349920892"
    }
+  },
+  {
+   "id": "D7-226",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-snake-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Homomorphisms constructed with its help are generally called ''connecting homomorphisms''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The '''snake lemma''' is a tool used in [[mathematics]], particularly [[homological algebra]], to  construct [[long exact sequence]]s.",
+     "note": "The six-term sequence through ker c to coker a is displayed in the source."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "where the rows are [[exact sequence]]s and 0 is the [[zero object]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "to  construct [[long exact sequence]]s."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "to  construct [[long exact sequence]]s."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1375057256"
+   }
+  },
+  {
+   "id": "D7-227",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-zig-zag-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the '''zig-zag lemma''' asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s of certain [[chain complex]]es."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "the '''zig-zag lemma''' asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s of certain [[chain complex]]es."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "of certain [[chain complex]]es.",
+     "note": "Short exact sequences of complexes, in the source's statement."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "asserts the existence of a particular [[long exact sequence]] in the [[homology group]]s"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "asserts the existence of a particular [[long exact sequence]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1321868056"
+   }
+  },
+  {
+   "id": "D7-228",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/wikipedia-nine-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "the '''nine lemma''' (or 3×3 lemma) is a statement about [[commutative diagram]]s and [[exact sequence]]s"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "n",
+     "quote": "* If all columns as well as the top and bottom rows are exact, and <math>A_2 \\to C_2</math> is the zero morphism, then the middle row is exact.",
+     "note": "\"Two exact rows give the third\" holds as stated for the top and bottom rows; for the middle row the composite A_2 to C_2 must also be zero.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "* If all columns as well as the two bottom rows are exact, then the top row is exact."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is a statement about [[commutative diagram]]s and [[exact sequence]]s valid in the category of [[group (mathematics)|group]]s and any [[abelian category]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* If all columns as well as the two top rows are exact, then the bottom row is exact."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* If all columns as well as the two bottom rows are exact, then the top row is exact."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1372029050"
+   }
+  },
+  {
+   "id": "D7-229",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-five-lemma-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The five lemma states that, if the rows are [[exact sequence|exact]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The five lemma states that, if the rows are [[exact sequence|exact]], ''m'' and ''p'' are [[isomorphism]]s, ''l'' is an [[epimorphism]], and ''q'' is a [[monomorphism]], then ''n'' is also an isomorphism.",
+     "note": "The fill's four isomorphisms are a special case of the source's sharper hypotheses (epi, iso, iso, mono)."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "if the rows are [[exact sequence|exact]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "then ''n'' is also an isomorphism."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "then ''n'' is also an isomorphism."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376671102"
+   }
+  },
+  {
+   "id": "D7-230",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-derived-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "F.leftDerivedToHomotopyCategory ⋙ HomotopyCategory.homologyFunctor D _ n",
+     "note": "Homology of F applied to a projective resolution, in Mathlib's homotopy-category form."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :=",
+     "note": "Mathlib asks for an additive F; right exactness is what makes L_0 F = F."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def leftDerivedZeroIsoSelf : F.leftDerived 0 ≅ F :=",
+     "more": [
+      {
+       "src": "d",
+       "quote": "It was noted in various quite different settings that a [[short exact sequence]] often gives rise to a \"long exact sequence\"."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/LeftDerived.lean"
+   }
+  },
+  {
+   "id": "D7-231",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-derived-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def Functor.rightDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "where the ''I''<sup>&nbsp;''i''</sup> are all injective (this is known as an ''[[injective resolution]]'' of ''X'')."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def Functor.rightDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def rightDerivedZeroIsoSelf : F.rightDerived 0 ≅ F :=",
+     "more": [
+      {
+       "src": "d",
+       "quote": "and one could ask how to continue this sequence to the right to form a long exact sequence."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/RightDerived.lean"
+   }
+  },
+  {
+   "id": "D7-232",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-tor-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The name comes from a relation between the first Tor group Tor<sub>1</sub> and the [[torsion subgroup]] of an [[abelian group]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "taking the left derived functors of the right exact functor <math>G(B)=A\\otimes_RB</math>.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "if either <math>A</math> or <math>B</math> is [[flat module|flat]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "taking the left derived functors of the right exact functor <math>G(B)=A\\otimes_RB</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "obj X := Functor.leftDerived ((tensoringLeft C).obj X) n"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "In fact, one can compute Tor using a flat resolution of either <math>A</math> or <math>B</math>",
+     "note": "Balance: either side may be resolved."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1337789189",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Tor.lean"
+   }
+  },
+  {
+   "id": "D7-233",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-ext-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The name comes from the fact that the first Ext group Ext<sup>1</sup> classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "There is a one-to-one correspondence between [[equivalence class]]es of extensions of <math>A</math> by <math>B</math> and elements of <math>\\operatorname{Ext}_R^1(A,B)</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def Ext (X Y : C) (n : ℕ) : Type w :="
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Balance and the Yoneda product are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380841038",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean"
+   }
+  },
+  {
+   "id": "D7-234",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-mapping-cone-homological-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def mappingCone : CochainComplex C ℤ := homotopyCofiber φ"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The main use of the cone is to identify [[quasi-isomorphism]]s: if the cone is [[acyclic complex|acyclic]], then the map is a quasi-isomorphism.",
+     "note": "The quoted direction; the converse is not in this sentence.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "In the theory of [[triangulated categories]] it is a kind of combined [[kernel (category theory)|kernel]] and [[cokernel]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a category whose morphisms form abelian groups and in which we may construct a [[direct sum]] of any two objects)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def mappingCone : CochainComplex C ℤ := homotopyCofiber φ"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "where the maps <math>B \\to C(f), C(f) \\to A[1]</math> are given by the direct summands"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Non-unique isomorphism in the derived category is not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean"
+   }
+  },
+  {
+   "id": "D7-235",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-mapping-cylinder.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "Mapping cylinders are central to the definition of [[cofibration]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The map <math>f:X \\to Y</math> is a [[homotopy equivalence]] if and only if"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344396108"
+   }
+  },
+  {
+   "id": "D7-236",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-chain-homotopy.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.Homotopy.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A morphism <math>f : A \\rightarrow B</math> which is an isomorphism in ''K(A)'' is called a '''(chain) homotopy equivalence'''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure HomotopyEquiv (C D : HomologicalComplex V c) where"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "of chain complexes in an [[additive category]] ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure HomotopyEquiv (C D : HomologicalComplex V c) where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "namely actually havi",
+     "note": "Homotopy equivalences are quasi-isomorphisms \"for a good reason\": homology is kept. Images under additive functors are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1362508169",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/Homotopy.lean"
+   }
+  },
+  {
+   "id": "D7-237",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quasi-isomorphism.txt",
+    "h": "excerpts/wikipedia-chain-homotopy.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "while ''D(A)'' turns into isomorphisms any maps of complexes that are [[quasi-isomorphism]]s in ''Kom(A)''"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "while ''D(A)'' turns into isomorphisms any maps of complexes that are [[quasi-isomorphism]]s in ''Kom(A)''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "of [[homology (mathematics)|homology]] groups (respectively, of cohomology groups) are [[isomorphism]]s for all ''n''."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1349081515",
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1362508169"
+   }
+  },
+  {
+   "id": "D7-238",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/wikipedia-euler-characteristic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the alternating sum of ranks of reduced homology groups."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the alternating sum of ranks of reduced homology groups.",
+     "note": "Stated for the reduced characteristic; additivity on exact sequences is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "This quantity is well-defined if the Betti numbers are all finite and if they are zero beyond a certain index&nbsp;''n''<sub>0</sub>."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "K-theory classes as output are not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "It follows that the Euler characteristic is also a homotopy invariant."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1368656473"
+   }
+  },
+  {
+   "id": "D7-239",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-betti-number.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "of the ''n''th [[homology group]], denoted ''H''<sub>''n''</sub>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "The ''n''th Betti number represents the [[Rank of a group|rank]] of the ''n''th [[homology group]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Rational homology is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "These finite components of the homology groups are their [[torsion subgroup]]s, and they are denoted by '''torsion coefficients'''.",
+     "note": "Torsion is not counted by the rank. The ring structure is not quoted."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344154640"
+   }
+  },
+  {
+   "id": "D7-241",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-koszul-complex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "As a tool, its homology can be used to tell when a set of elements of a (local) ring is an [[Regular sequence#Definitions|M-regular sequence]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "When <math>s_1, \\dots, s_r</math> form a [[regular sequence]], the map <math>K_s \\to A/(s_1, \\dots, s_r)</math> is a quasi-isomorphism",
+     "more": [
+      {
+       "src": "k",
+       "quote": "We write <math>\\bigwedge^i E</math> for the ''i''-th [[exterior power]] of ''E''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "When <math>s_1, \\dots, s_r</math> form a [[regular sequence]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the map <math>K_s \\to A/(s_1, \\dots, s_r)</math> is a quasi-isomorphism"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "and hence it can be used to prove basic facts about the [[Depth (ring theory)|depth"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1361641570"
+   }
+  },
+  {
+   "id": "D7-242",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/wikipedia-koszul-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "They were introduced by [[Mark Lee Green]]",
+     "note": "The attribution to Green is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the '''Koszul cohomology''' groups <math>K_{p,q}(X,L)</math> are [[group (mathematics)|group]]s associated to a [[projective variety]] <math>X</math> with a [[line bundle]] <math>L</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "If <math>L</math> is a line bundle over a projective variety <math>X</math>, then the Koszul cohomology <math>K_{p,q}(X,L)</math> is given by the Koszul cohomology <math>K_{p,q}(M,V)</math> of the graded module"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the '''Koszul cohomology''' groups <math>K_{p,q}(X,L)</math>"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Betti tables and syzygies are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383508976"
+   }
+  },
+  {
+   "id": "D7-243",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-bar-construction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bar complex''', also called the '''bar resolution''', '''bar construction''', '''standard resolution''', or '''standard complex''',"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "is a way of constructing [[resolution (algebra)|resolutions]] in [[homological algebra]].",
+     "note": "Classifying spaces BG are not checked."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "is a way of constructing [[resolution (algebra)|resolutions]] in [[homological algebra]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382284047"
+   }
+  },
+  {
+   "id": "D7-244",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for the cobar construction (no Wikipedia or nLab page found)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-245",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hochschild-homology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The enveloping algebra of ''A'' is the tensor product <math>A^e=A\\otimes A^o</math> of ''A'' with its [[opposite ring|opposite algebra]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Bimodules over ''A'' are essentially the same as modules over the enveloping algebra of ''A''",
+     "note": "The Tor formula and HKR are not quoted from this revision.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "An elementary introduction to [[noncommutative geometry]] which uses Hochschild homology to generalize differential forms)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The enveloping algebra of ''A'' is the tensor product <math>A^e=A\\otimes A^o</math>"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Morita invariance is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354296765"
+   }
+  },
+  {
+   "id": "D7-246",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hochschild-homology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The enveloping algebra of ''A'' is the tensor product <math>A^e=A\\otimes A^o</math>",
+     "note": "The page covers Hochschild cohomology with homology."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "Ext over the enveloping algebra, derivations, deformations and the Gerstenhaber bracket are not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1354296765"
+   }
+  },
+  {
+   "id": "D7-247",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cyclic-homology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories for [[associative algebra]]s which generalize the [[de Rham cohomology|de Rh"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "These notions were independently introduced by [[Boris Tsygan]] (homology)",
+     "note": "Tsygan and Connes, per the source; the SBI sequence is not quoted.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "and [[Alain Connes]] (cohomology)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "certain (co)homology theories for [[associative algebra]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Morita invariance and the SBI sequence are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342267018"
+   }
+  },
+  {
+   "id": "D7-248",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/nlab-factorization-homology.txt",
+    "w": "excerpts/wikipedia-factorization-homology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "_Factorization homology_  is a notion of [[homology theory]] for [[framed manifold|framed]] $n$-[[dimension|dimensional]] [[manifolds]] with coefficients in [[En-algebras]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "due to [Francis 2011](#Francis).",
+     "note": "The sources disagree on who introduced it: the nLab credits Francis (2011) and equates the notion with Lurie's topological chiral homology; Wikipedia credits Ayala, Francis and Rozenblyum. The fill's \"Ayala, Francis; Lurie\" matches neither exactly. Both recorded; neither picked.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "In fact the definition of factorization homology turns out to be equivalent to that of [[topological chiral homology]]"
+      }
+     ],
+     "against": [
+      {
+       "src": "w",
+       "quote": "It was introduced by David Ayala, John Francis, and Nick Rozenblyum."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "for [[framed manifold|framed]] $n$-[[dimension|dimensional]] [[manifolds]] with coefficients in [[En-algebras]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is a notion of [[homology theory]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "which are &quot;[[cosheaves]]&quot; in that for any decomposition of a manifold $X$ into submanifolds",
+     "note": "Excision, in the source's cosheaf condition. The circle case (Hochschild homology) is not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/factorization+homology",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1117924325"
+   }
+  },
+  {
+   "id": "D7-249",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-topological-hochschild-homology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Topological Hochschild homology''' is a topological refinement of [[Hochschild homology]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "using the monoidal product in ring spectra, namely, <math>\\wedge_\\mathbb{S}</math>",
+     "note": "Over the sphere spectrum; the attribution to Boekstedt is not quoted."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "using the monoidal product in ring spectra"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The circle action is not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "TC and trace methods are not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1319983387"
+   }
+  },
+  {
+   "id": "D7-250",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-group-cohomology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Then ''H''<sub>''n''</sub>(''G'', ''M'') are the homology groups of this chain complex, <math>H_n(G,M)=H_n(F\\otimes_{\\Z[G]}M)</math> for ''n'' ≥ 0."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "<math>H_n(G,M)=H_n(F\\otimes_{\\Z[G]}M)</math> for ''n'' ≥ 0.",
+     "note": "Homology of F tensored over Z[G], F a projective resolution of Z: Tor. The homology of BG is quoted for cohomology only."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Then ''H''<sub>''n''</sub>(''G'', ''M'') are the homology groups of this chain complex"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "<math>H_n(G,M)=H_n(F\\otimes_{\\Z[G]}M)</math> for ''n'' ≥ 0."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214"
+   }
+  },
+  {
+   "id": "D7-251",
+   "batch": 10,
+   "why": "Fill review, batch 10: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-group-cohomology.txt",
+    "e": "excerpts/wikipedia-group-extension.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": ":<math>H^{n}(G,M) = \\operatorname{Ext}^{n}_{\\Z [G]}(\\Z, M)."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": ":<math>H^{n}(G,M) = \\operatorname{Ext}^{n}_{\\Z [G]}(\\Z, M).",
+     "more": [
+      {
+       "src": "g",
+       "quote": "The first cohomology group is the quotient of the so-called ''crossed homomorphisms''"
+      },
+      {
+       "src": "e",
+       "quote": "The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": ":<math>H^{n}(G,M) = \\operatorname{Ext}^{n}_{\\Z [G]}(\\Z, M)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": ":<math>H^{n}(G,M) = \\operatorname{Ext}^{n}_{\\Z [G]}(\\Z, M)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The set of isomorphism classes of central extensions of <math>G</math> by <math>A</math> is in one-to-one correspondence with the [[Group cohomology|cohomology]] group <math>H^2(G,A)</math>.",
+     "note": "The central case."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214",
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358894979"
+   }
   }
  ]
 }
