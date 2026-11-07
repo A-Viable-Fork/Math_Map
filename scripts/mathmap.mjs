@@ -266,7 +266,16 @@ export function check(P = parse()) {
     for (const r of c.receipts || []) { const x = inFile(r); if (x) F.push(`${c.id}: ${x}`); }
     for (const k of c.counterexamples || []) { if (!k.case) F.push(`${c.id}: a counterexample needs a case`); if (k.receipt) { const x = inFile(k.receipt); if (x) F.push(`${c.id}: ${x}`); } }
   }
-  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
+  // The fill review's receipts: every quote of a graded field occurs in the excerpt file its source names.
+  const { REVIEW } = require("../audit/fill-review-0_1.js");
+  for (const g of REVIEW) for (const [k, v] of Object.entries(g.fields || {})) for (const x of [v, ...(v.more || [])]) {
+    if (!x.quote) continue;
+    const file = g.files?.[x.src];
+    if (!file) { F.push(`review ${g.id}.${k}: receipt ${x.src} names no excerpt file`); continue; }
+    const m = inFile({ file, quote: x.quote }); if (m) F.push(`review ${g.id}.${k}: ${m}`);
+  }
+  // A grade on a home's reviewed entry is a finding for every entry it covers (the same fill).
+  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED, ...REVIEW.flatMap((g) => [g, ...(g.covers || []).map((id) => ({ ...g, id }))])].map((g) => [g.id, g]));
   const CF = ["description", "input", "output", "preserved", "broken"], xids = new Set();
   for (const c of P.corrections) {
     const e = landedById[c.id], at = `correction ${c.id}`;
