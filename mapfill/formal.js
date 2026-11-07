@@ -399,6 +399,11 @@ const FORMAL = [
   K("D7-024", "description", "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition", "Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean", "exact", "Freyd's general adjoint functor theorem: a limit-preserving G out of a complete, locally small category with the solution set condition is a right adjoint."),
   K("D7-025", "output", "DedekindCut", "Mathlib/Order/Completion.lean", "exact", "The Dedekind-MacNeille completion of a preorder, as the concept lattice of ≤."),
   K("D7-025", "description", "DedekindCut.factorEmbedding", "Mathlib/Order/Completion.lean", "exact", "Any order embedding of the poset into a complete lattice factors through the completion: it is the smallest."),
+  // Fill review, batch 2.
+  K("D7-029", "preserved", "CategoryTheory.Monad.forgetCreatesLimits", "Mathlib/CategoryTheory/Monad/Limits.lean", "exact", "The forgetful functor from algebras creates limits of every size."),
+  K("D7-045", "preserved", "CategoryTheory.Comma.hasLimitsOfShape", "Mathlib/CategoryTheory/Limits/Comma.lean", "conflicts", "Limits of shape J exist in Comma L R when the source categories have them and R, the functor on the target side of the arrows (the fill's G), preserves them. The fill puts the condition on F; F's preservation of colimits is what gives colimits (hasColimitsOfShape)."),
+  K("D7-045", "preserved", "CategoryTheory.Comma.hasColimitsOfShape", "Mathlib/CategoryTheory/Limits/Comma.lean", "related", "The dual: colimits exist when L, the source-side functor (the fill's F), preserves them."),
+  K("D7-049", "output", "CategoryTheory.skeletonEquivalence", "Mathlib/CategoryTheory/Skeletal.lean", "exact", "The skeleton is equivalent to C (noncomputable: the construction chooses representatives)."),
 ];
 
 module.exports = { MATHLIB, FORMAL };

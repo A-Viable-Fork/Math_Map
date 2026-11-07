@@ -6015,6 +6015,1264 @@
     "n": "https://ncatlab.org/nlab/source/MacNeille+completion",
     "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean"
    }
+  },
+  {
+   "id": "D7-026",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/nlab-day-convolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "This was first observed by ([Day 70](#Day70))",
+     "note": "The attribution to Day is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The [[category of functors]] on a [[monoidal category]] canonically inherits itself a monoidal category structure via a [[categorification|categorified]] [[convolution product]]",
+     "note": "The coend formula follows the source's \"is given by the following [[coend]]\".",
+     "more": [
+      {
+       "src": "d",
+       "quote": "is given by the following [[coend]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "For $(\\mathcal{C}, \\otimes_{\\mathcal{C}}, I)$ a [[small category|small]] [[monoidal category|monoidal]] $V$-[[enriched category]]",
+     "note": "The source asks for a small monoidal category; the fill omits smallness."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "is a [[closed monoidal category]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The [[Yoneda embedding]] constitutes a  [[strong monoidal functor]]",
+     "note": "Symmetry and braiding are not checked."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Finiteness of values; strictness\": no fetched source states either."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://ncatlab.org/nlab/source/Day+convolution"
+   }
+  },
+  {
+   "id": "D7-027",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/nlab-isbell-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "this is called **Isbell conjugation** or **Isbell duality** (after [[John Isbell]])."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "\\mathcal{O}(X) \\colon c \\mapsto [C^{op}, \\mathcal{V}](X, C(-,c))",
+     "note": "The adjunction and the algebra-geometry reading are right, but both formulas are mis-typed: O(X)(c) is the natural transformations from X to the representable C(-, c), not to C(c, -), and Spec(Y)(c) is those from Y to C(c, -), not from C(-, c) to Y.",
+     "more": [
+      {
+       "src": "i",
+       "quote": "Spec(A) \\colon c \\mapsto [C, \\mathcal{V}]^{op}(C(c,-),A)"
+      },
+      {
+       "src": "i",
+       "quote": "Isbell duality is the archetype of the [[duality]] between [[geometry]] and [[algebra]] that permeates mathematics"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "**Lemma 1:** $Spec(C(c,-)) \\simeq C(-,c)$",
+     "note": "Representables go to representables. The restriction to an equivalence on the self-dual objects is the general fact about fixed points of an adjunction; the source names those objects.",
+     "more": [
+      {
+       "src": "i",
+       "quote": "are called __Isbell self-dual__."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "are called __Isbell self-dual__.",
+     "note": "Objects outside the fixed points change under O then Spec."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://ncatlab.org/nlab/source/Isbell+duality"
+   }
+  },
+  {
+   "id": "D7-028",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/nlab-opposite-category.txt",
+    "c": "excerpts/nlab-colimit.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is the category obtained by formally reversing the direction of all its [[morphisms]] (while retaining their original composition law)."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "is the category obtained by formally reversing the direction of all its [[morphisms]] (while retaining their original composition law).",
+     "more": [
+      {
+       "src": "o",
+       "quote": "Passing to the opposite category is a realization of abstract [[duality]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "For a [[category]] $C$, its _opposite category_, $C^{op}$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "For a [[category]] $C$, its _opposite category_, $C^{op}$"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "has the same [[objects]] as $C$"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A [[colimit]] in a [[category]] $C$ is the same as a [[limit]] in the [[opposite category]], $C^{op}$.",
+     "note": "Monos to epis is not quoted; limits to colimits is."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://ncatlab.org/nlab/source/opposite+category",
+    "c": "https://ncatlab.org/nlab/source/colimit"
+   }
+  },
+  {
+   "id": "D7-029",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "e": "excerpts/nlab-eilenberg-moore-category.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is traditionally called its _Eilenberg--Moore category_ (EM)."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The functor $U^T \\colon C^T \\to C$ is the [[terminal object]] of this category."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "The category of [[algebras over a monad]] (also: &quot;modules over a monad&quot;) is traditionally called its _Eilenberg--Moore category_ (EM)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "By construction, there is a [[forgetful functor]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "has all [[limits]] which exist in $C$, and they are [[created limit|created]] by the forgetful functor.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "noncomputable instance forgetCreatesLimits : CreatesLimitsOfSize (forget T)"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The source calls colimits of algebras \"less easy\" without saying they may fail to exist."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://ncatlab.org/nlab/source/Eilenberg-Moore+category",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Limits.lean"
+   }
+  },
+  {
+   "id": "D7-030",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kleisli-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "then its _Kleisli category_ is the [[full subcategory]] of the [[Eilenberg-Moore category]] of $T$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "a morphism $X \\to Y$ in the Kleisli category is a morphism in $\\mathcal{C}$ of the form $X \\to T(Y)$ in $\\mathcal{C}$.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "Given a [[monad]] $T$ on some [[category]] $\\mathcal{C}$, then its _Kleisli category_"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "the Kleisli category is used to model [[call-by-value]] functions with [[side effects]] and [[computation]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "on those that are *[free](algebra+over+a+monad#FreeAlgebras)* [[algebra for a monad|T-algebras]]"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kleisli+category"
+   }
+  },
+  {
+   "id": "D7-031",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "k": "excerpts/nlab-kleisli-category.txt",
+    "e": "excerpts/nlab-eilenberg-moore-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "we might ask if every monad may be construed as arising from an adjunction. This is in fact true"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$.",
+     "more": [
+      {
+       "src": "e",
+       "quote": "The functor $U^T \\colon C^T \\to C$ is the [[terminal object]] of this category."
+      },
+      {
+       "src": "k",
+       "quote": "the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "we might ask if every monad may be construed as arising from an adjunction. This is in fact true"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$.",
+     "note": "A category of resolutions with distinct initial and terminal objects: the resolving adjunction is not unique."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "k": "https://ncatlab.org/nlab/source/Kleisli+category",
+    "e": "https://ncatlab.org/nlab/source/Eilenberg-Moore+category"
+   }
+  },
+  {
+   "id": "D7-032",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-comonad.txt",
+    "e": "excerpts/nlab-eilenberg-moore-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A **[[coalgebra over a comonad]]** (or **comodule**) over a comonad $C$ on a category $A$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The category of coalgebras is called its (co-)[[Eilenberg-Moore category]] and satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad",
+     "more": [
+      {
+       "src": "c",
+       "quote": "[[co-Kleisli morphisms]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A **[[coalgebra over a comonad]]** (or **comodule**) over a comonad $C$ on a category $A$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Dually, the EM category of a [[comonad]] is its category of coalgebras (co-modules)."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad",
+     "note": "By the duality the source states."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad",
+     "note": "By duality with monad resolution."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/comonad",
+    "e": "https://ncatlab.org/nlab/source/Eilenberg-Moore+category"
+   }
+  },
+  {
+   "id": "D7-033",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/nlab-monadicity-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "**(Beck&#39;s monadicity theorem,  tripleability theorem)**",
+     "note": "The attribution to Beck is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "1. $U$ [[created limit|creates]] [[coequalizers]] of $U$-split pairs, def. \\ref{CreationOfCoequalizersOfuSplitPairs}.",
+     "note": "Reflecting isomorphisms belongs to the variant the source also gives (with preservation of those coequalizers); with creation it is implied.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "1. $U$ reflects [[isomorphisms]] (i.e. it is [[conservative functor|conservative]]), and"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "1. $U$ has a [[left adjoint]], and"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "concluding that the comparison functor is an *isomorphism* of categories, rather than merely an equivalence."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "\"Algebraic structure of D over C\" is a gloss no source states."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No source states what the theorem's application loses."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://ncatlab.org/nlab/source/monadicity+theorem"
+   }
+  },
+  {
+   "id": "D7-034",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-lawvere-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "dissertation]], Bill Lawvere introduced a new categorical method for doing [[universal algebra]]",
+     "note": "The attribution to Lawvere's 1963 dissertation is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "finite product theories with the property that every object is isomorphic to a product of finitely many copies of a given object $x$.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "is a product-preserving [[functor]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "alternative to the usual way of presenting an algebraic concept by means of its logical [[signature (in logic)|signature]] (with generating operations satisfying equational axioms)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "is a product-preserving [[functor]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "1. If $C$ is a category with finite products, then a group (object) in $C$ may be defined as a product-preserving functor",
+     "note": "Interpretation in any category with finite products is stated; the variety up to equivalence is not checked."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "alternative to the usual way of presenting an algebraic concept by means of its logical [[signature (in logic)|signature]] (with generating operations satisfying equational axioms).",
+     "note": "The theory forgets the particular presentation."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/Lawvere+theory"
+   }
+  },
+  {
+   "id": "D7-035",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/nlab-localization.txt",
+    "f": "excerpts/nlab-category-of-fractions.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "This construction is known as a __[[category of fractions]]__ and also ambiguously as a __[[localization of a category]]__."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the result of universally making all morphisms in $W$ into [[isomorphisms]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the _localization_ $\\mathcal{C}[W^{-1}]$ of a [[category]] $\\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the _localization_ $\\mathcal{C}[W^{-1}]$ of a [[category]] $\\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the result of universally making all morphisms in $W$ into [[isomorphisms]].",
+     "note": "That the objects are kept is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The rub is that the localization might not be locally small, even if $C$ is.",
+     "note": "Computability is not checked."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://ncatlab.org/nlab/source/localization",
+    "f": "https://ncatlab.org/nlab/source/category+of+fractions"
+   }
+  },
+  {
+   "id": "D7-036",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-calculus-of-fractions.txt",
+    "f": "excerpts/nlab-category-of-fractions.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is said to admit a **calculus of fractions** if it satisfies some axioms ensuring that its [[localization]] $C[W^{-1}]$ can be constructed in a particular"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "since its morphisms are two-step zigzags",
+     "more": [
+      {
+       "src": "f",
+       "quote": "If the class $W$ admits a [[calculus of fractions]], then there is a simpler description of $C[W^{-1}]$ in terms of [[span|spans]] instead of zig-zags."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* (right Ore condition) Given a [[morphism]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "If the class $W$ admits a [[calculus of fractions]], then there is a simpler description of $C[W^{-1}]$ in terms of [[span|spans]] instead of zig-zags."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states that left fractions make the localization preserve finite limits."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing beyond the localization itself\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/calculus+of+fractions",
+    "f": "https://ncatlab.org/nlab/source/category+of+fractions"
+   }
+  },
+  {
+   "id": "D7-037",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-category-of-fractions.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "[[Pierre Gabriel]], [[Michel Zisman]], §I.1 in: _[[Calculus of fractions and homotopy theory]]_, _Ergebnisse der Mathematik und ihrer Grenzgebiete_ **35**, Springer (1967)",
+     "note": "The attribution and the year are the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "in terms of [[span|spans]] instead of zig-zags.",
+     "note": "The general construction is by zig-zags, which the calculus of fractions shortens."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the _localization_ $\\mathcal{C}[W^{-1}]$ of a [[category]] $\\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Some authors call any localization of a category a _category of fractions_  ([Gabriel &amp; Zisman, §1.1](#GabrielZisman67)"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the result of universally making all morphisms in $W$ into [[isomorphisms]].",
+     "note": "That the objects are kept is not quoted."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The rub is that the localization might not be locally small, even if $C$ is."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/category+of+fractions"
+   }
+  },
+  {
+   "id": "D7-038",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-catamorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "denotes the unique [[homomorphism]] from an [[initial algebra]] into some other algebra."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Catamorphisms provide generalizations of ''[[Fold (higher-order function)|folds]]'' of [[List (computing)|lists]] to arbitrary [[algebraic data type]]s"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Consider an [[Initial algebra|initial]] [[F-algebra|<math>F</math>-algebra]] <math>(A, in)</math> for some [[endofunctor]] <math>F</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "denotes the unique [[homomorphism]] from an [[initial algebra]] into some other algebra."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Fusion laws are not stated in the fetched source; \"structure of recursion\" is a gloss."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"The recursive structure itself (collapsed into A)\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170645"
+   }
+  },
+  {
+   "id": "D7-039",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-anamorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "an '''anamorphism''' is a generalization of the concept of ''[[Fold (higher-order function)|unfolds]]'' on coinductive [[List (computing)|lists]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Behaviour up to bisimulation is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Seed identity beyond behavior\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381168143"
+   }
+  },
+  {
+   "id": "D7-040",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hylomorphism-computer-science.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "corresponding to the [[function composition|composition]] of an [[anamorphism]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Fusion of these two recursive computations into a single recursive pattern then avoids building the intermediate [[data structure]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The anamorphic part can be defined in terms of a [[arity|unary]] function"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A hylomorphism <math>h : A \\rightarrow C</math> can be defined in terms of its separate anamorphic and catamorphic parts.",
+     "note": "The equation h = a F(h) c is not quoted."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Fusion of these two recursive computations into a single recursive pattern then avoids building the intermediate [[data structure]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Termination is not discussed in the fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1312860849"
+   }
+  },
+  {
+   "id": "D7-041",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-paramorphism.txt",
+    "a": "excerpts/wikipedia-apomorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "is an extension of the concept of [[catamorphism]] first introduced by [[Lambert Meertens]]",
+     "note": "The attribution to Meertens is the source's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "it gives the combining step function immediate access not only to the result value recursively computed from each recursive subobject, but the original subobject itself as well.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "Whereas a paramorphism models [[primitive recursion]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "para :: (a -> ([a], b) -> b) -> b -> [a] ->  b",
+     "note": "Shown for lists: the step sees the substructure and the recursive result, F(mu F x A) to A."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "para :: (a -> ([a], b) -> b) -> b -> [a] ->  b"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "it gives the combining step function immediate access not only to the result value recursively computed from each recursive subobject, but the original subobject itself as well."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing relative to general recursion\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379971371",
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170408"
+   }
+  },
+  {
+   "id": "D7-042",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-apomorphism.txt",
+    "p": "excerpts/wikipedia-paramorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The term \"apomorphism\" was introduced in ''Functional Programming with Apomorphisms (Corecursion)''.",
+     "note": "Introduced by Vene and Uustalu, per the source's citation."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is the [[categorical dual]] of a [[paramorphism]] and",
+     "more": [
+      {
+       "src": "p",
+       "quote": "(a, Left  as) -> a : as"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "apo  :: (b -> (a, Either [a] b))  ->  b  -> [a]",
+     "note": "Shown for lists: the coalgebra may return a finished structure (Left) or a new seed (Right), A to F(nu F + A)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "apo  :: (b -> (a, Either [a] b))  ->  b  -> [a]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an apomorphism models primitive [[corecursion]] over a coinductive data type.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "(a, Left  as) -> a : as"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing relative to general corecursion\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170408",
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379971371"
+   }
+  },
+  {
+   "id": "D7-043",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The natural [[tensor product]] operation on [[finite abelian category|finite abelian categories]] is known as the _Deligne tensor product_ or _Deligne box product_"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "right [[exact functors]] of the form $A \\boxtimes B \\to C$ are equivalent to functors $A \\times B \\to C$ that are right exact in each argument separately.",
+     "note": "Deligne's case is checked; the plain product of categories and Kelly's product for locally presentable categories are not."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "d",
+     "quote": "This tensor product exists for [[finite abelian categories]] but not generally on all [[abelian categories]].",
+     "note": "\"Possibly enriched or cocomplete\" leaves out when the product exists: Deligne's exists for finite abelian categories, not for all abelian ones; the general variant uses categories with finite colimits.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "instead of abelian categories one can consider categories with [[finite colimits]]"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "their Deligne tensor product $A \\boxtimes B$ is the abelian category such that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "right [[exact functors]] of the form $A \\boxtimes B \\to C$ are equivalent to functors $A \\times B \\to C$ that are right exact in each argument separately."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual structure of C and D is mixed\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://ncatlab.org/nlab/source/Deligne+tensor+product+of+abelian+categories"
+   }
+  },
+  {
+   "id": "D7-044",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/nlab-functor-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the **functor category**  -- written $D^C$ or $[C,D]$ -- is the category whose"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "* [[morphisms]] are [[natural transformations]] between these functors."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Given [[category|categories]] $C$ and $D$, the **functor category**",
+     "note": "Smallness of C is not required by the definition; the source uses it for closure results."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the **functor category**  -- written $D^C$ or $[C,D]$ -- is the category whose"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "If $D$ has [[limits]] or [[colimits]] of a certain shape, then so does $[C,D]$ and they are computed pointwise."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Size control is not discussed in the fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://ncatlab.org/nlab/source/functor+category"
+   }
+  },
+  {
+   "id": "D7-045",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/nlab-comma-category.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "their **comma category** is the [[category]] $(f/g)$ whose"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* [[objects]] are [[triples]] $(c,d,\\alpha)$ where $c\\in C$, $d\\in D$, and",
+     "note": "Slices and arrow categories are the source's examples; categories of elements are not checked here.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "then $(f/g)$ is the [[over category|slice category]] $C/c$."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The _comma category_ of two [[functors]] $f : C \\to E$ and $g : D \\to E$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "they are the projections from the summit of the &quot;appropriate&quot; 2-categorical limit."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "[PreservesLimitsOfShape J R] : HasLimitsOfShape J (Comma L R)",
+     "note": "The universal 2-cell is right (the comma category is a 2-limit). Limits exist where the target-side functor G preserves them, not F; F's preservation gives colimits.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "[PreservesColimitsOfShape J L] : HasColimitsOfShape J (Comma L R)"
+      },
+      {
+       "src": "c",
+       "quote": "It can also be seen a kind of [[2-limit]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing; it adds structure\" is a gloss no source states."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://ncatlab.org/nlab/source/comma+category",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Comma.lean"
+   }
+  },
+  {
+   "id": "D7-046",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/nlab-over-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The **slice category** or **over category** $\\mathbf{C}/c$ of a [[category]] $\\mathbf{C}$ over an object $c \\in \\mathbf{C}$ has"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* objects that are all arrows $f \\in \\mathbf{C}$ such that $cod(f) = c$, and"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The **slice category** or **over category** $\\mathbf{C}/c$ of a [[category]] $\\mathbf{C}$ over an object $c \\in \\mathbf{C}$ has"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The **slice category** or **over category** $\\mathbf{C}/c$ of a [[category]] $\\mathbf{C}$ over an object $c \\in \\mathbf{C}$ has"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* The [[fundamental theorem of topos theory]] states that the slice category over any object in a topos is itself a topos.",
+     "note": "Local Cartesian closure is not checked."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* The [[terminal object]] of $\\mathcal{C}_{/X}$ is $\\mathrm{id}_X$."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://ncatlab.org/nlab/source/over+category"
+   }
+  },
+  {
+   "id": "D7-047",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "u": "excerpts/nlab-under-category.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "the __under category__ (also called __coslice category__)"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "* the category of [[pointed sets]], is the coslice of [[Set]] under the [[singleton]] set,"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "Given a [[category]] $C$ and an [[object]] $c \\in C$, the __under category__"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "The under category $c\\downarrow C$ is a kind of [[comma category]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states which limits or colimits of X/C are computed in C. Recalled, unchecked: only connected colimits are, so \"colimits (via C)\" would need that qualifier."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source states that the initial object of X/C is id_X."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "u": "https://ncatlab.org/nlab/source/under+category"
+   }
+  },
+  {
+   "id": "D7-048",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/nlab-quotient-category.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Quotient.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "one of the more useful is the quotient of the homsets of a category by equivalence relations compatible with composition."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "one of the more useful is the quotient of the homsets of a category by equivalence relations compatible with composition."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "equivalence : ∀ {X Y}, _root_.Equivalence (@r X Y)"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "instance full_functor : (functor r).Full"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "structure Quotient (r : HomRel C) where",
+     "note": "Objects of the quotient are those of C (the field as : C)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "(functor r).map f = (functor r).map f' ↔ r f f'"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://ncatlab.org/nlab/source/quotient+category",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean"
+   }
+  },
+  {
+   "id": "D7-049",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/nlab-skeletal-category.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Skeletal.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A __skeleton__ of a category $C$ is defined to be a skeletal [[subcategory]] of $C$"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is called __skeletal__ if any two [[objects]] that are [[isomorphism|isomorphic]] are actually already [[equality|equal]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A __skeleton__ of a category $C$ is defined to be a skeletal [[subcategory]] of $C$"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "whose [[inclusion functor]] exhibits it as [[equivalence of categories|equivalent]] to $C$.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "noncomputable def skeletonEquivalence : Skeleton C ≌ C where"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "whose [[inclusion functor]] exhibits it as [[equivalence of categories|equivalent]] to $C$.",
+     "note": "Invariance under equivalence follows from the equivalence."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "If the [[axiom of choice]] holds, then every category $C$ has a skeleton (in the strongest sense)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://ncatlab.org/nlab/source/skeletal+category",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Skeletal.lean"
+   }
+  },
+  {
+   "id": "D7-050",
+   "batch": 2,
+   "why": "Fill review, batch 2: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/nlab-core-groupoid.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "its *core* is the maximal [[groupoid]] inside it"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "For $\\mathcal{C}$ any [[category]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "its *core* is the maximal [[groupoid]] inside it"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://ncatlab.org/nlab/source/core+groupoid"
+   }
   }
  ]
 }

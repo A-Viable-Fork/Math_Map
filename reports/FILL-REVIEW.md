@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 25 of 416 D7 stubs, 0 of 79 homes; 25 entries in 1 batches.
+Reviewed: 50 of 416 D7 stubs, 0 of 79 homes; 50 entries in 2 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (25 entries)
+### D7 stubs (50 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 25 | 0 | 0 | 0 |
-| description | 25 | 0 | 0 | 0 |
-| input | 23 | 2 | 0 | 0 |
-| output | 25 | 0 | 0 | 0 |
-| preserved | 23 | 1 | 0 | 1 |
-| broken | 16 | 3 | 0 | 6 |
-| **all** | 137 | 6 | 0 | 7 |
+| name | 50 | 0 | 0 | 0 |
+| description | 49 | 1 | 0 | 0 |
+| input | 47 | 3 | 0 | 0 |
+| output | 50 | 0 | 0 | 0 |
+| preserved | 42 | 2 | 0 | 6 |
+| broken | 28 | 3 | 0 | 19 |
+| **all** | 266 | 9 | 0 | 25 |
 
 ## 2. Recall against source
 
@@ -29,7 +29,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | Batch | Entries | Fields settled | Recall contradicted | Rate |
 |---|---|---|---|---|
 | 1 | 25 | 143 | 2 | 1% |
-| **all** | 25 | 143 | 2 | 1% |
+| 2 | 25 | 132 | 0 | 0% |
+| **all** | 50 | 275 | 2 | 1% |
 
 ## 3. Findings
 
@@ -44,6 +45,20 @@ Every field not confirmed, with the reason.
 - **D7-016 Product Formation** (batch 1): *preserved* unsupported: "Each factor recoverable when the others are nonempty" is a fact about sets; no fetched source states it, or what product formation preserves in general. *broken* unsupported: "Independence is imposed" is a gloss no source states.
 - **D7-017 Coproduct Formation** (batch 1): *preserved* imprecise: "Each summand embeds" is stated without its condition: in general the coprojections need not be monomorphisms. They are in Set and wherever coproducts are disjoint. *broken* imprecise: "Nothing is identified" holds for disjoint unions; in general a coprojection that is not a monomorphism identifies parts of its summand.
 - **D7-024 Freyd's Adjoint Functor Construction** (batch 1): *broken* imprecise: The solution set condition exists to replace the large limit by a small one: the left adjoint's value is an initial object built from a small limit over the solution set. Non-constructivity is fair; "a large limit" is the wrong half.
+- **D7-026 Day Convolution** (batch 2): *broken* unsupported: "Finiteness of values; strictness": no fetched source states either.
+- **D7-027 Isbell Duality Transformation** (batch 2): *description* imprecise: The adjunction and the algebra-geometry reading are right, but both formulas are mis-typed: O(X)(c) is the natural transformations from X to the representable C(-, c), not to C(c, -), and Spec(Y)(c) is those from Y to C(c, -), not from C(-, c) to Y.
+- **D7-029 Eilenberg-Moore Category Construction** (batch 2): *broken* unsupported: The source calls colimits of algebras "less easy" without saying they may fail to exist.
+- **D7-033 Beck's Monadicity Theorem Application** (batch 2): *preserved* unsupported: "Algebraic structure of D over C" is a gloss no source states. *broken* unsupported: No source states what the theorem's application loses.
+- **D7-036 Calculus of Fractions Application** (batch 2): *preserved* unsupported: No fetched source states that left fractions make the localization preserve finite limits. *broken* unsupported: "Nothing beyond the localization itself" is a gloss.
+- **D7-038 Catamorphism** (batch 2): *preserved* unsupported: Fusion laws are not stated in the fetched source; "structure of recursion" is a gloss. *broken* unsupported: "The recursive structure itself (collapsed into A)" is a gloss no source states.
+- **D7-039 Anamorphism** (batch 2): *preserved* unsupported: Behaviour up to bisimulation is not stated in the fetched source. *broken* unsupported: "Seed identity beyond behavior" is a gloss no source states.
+- **D7-040 Hylomorphism** (batch 2): *broken* unsupported: Termination is not discussed in the fetched source.
+- **D7-041 Paramorphism** (batch 2): *broken* unsupported: "Nothing relative to general recursion" is a gloss no source states.
+- **D7-042 Apomorphism** (batch 2): *broken* unsupported: "Nothing relative to general corecursion" is a gloss no source states.
+- **D7-043 Tensor Product of Categories** (batch 2): *input* imprecise: "Possibly enriched or cocomplete" leaves out when the product exists: Deligne's exists for finite abelian categories, not for all abelian ones; the general variant uses categories with finite colimits. *broken* unsupported: "Individual structure of C and D is mixed" is a gloss no source states.
+- **D7-044 Functor Category Construction** (batch 2): *broken* unsupported: Size control is not discussed in the fetched source.
+- **D7-045 Comma Category Construction** (batch 2): *preserved* imprecise: The universal 2-cell is right (the comma category is a 2-limit). Limits exist where the target-side functor G preserves them, not F; F's preservation gives colimits. *broken* unsupported: "Nothing; it adds structure" is a gloss no source states.
+- **D7-047 Coslice Category Construction** (batch 2): *preserved* unsupported: No fetched source states which limits or colimits of X/C are computed in C. Recalled, unchecked: only connected colimits are, so "colimits (via C)" would need that qualifier. *broken* unsupported: No fetched source states that the initial object of X/C is id_X.
 
 ## 4. Receipts
 
@@ -375,4 +390,315 @@ Every field not confirmed, with the reason.
   w: excerpts/wikipedia-dedekind-macneille-completion.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377697498)
   n: excerpts/nlab-macneille-completion.txt (https://ncatlab.org/nlab/source/MacNeille+completion)
   m: excerpts/mathlib-Mathlib.Order.Completion.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/Completion.lean)
+
+### D7-026 Day Convolution (batch 2)
+
+- name: **confirmed** [d] "This was first observed by ([Day 70](#Day70))" *The attribution to Day is the source's.*
+- description: **confirmed** [d] "The [[category of functors]] on a [[monoidal category]] canonically inherits itself a monoidal category structure via a [[categorification|categorified]] [[convolution product]]" [d] "is given by the following [[coend]]" *The coend formula follows the source's "is given by the following [[coend]]".*
+- input: **confirmed** [d] "For $(\mathcal{C}, \otimes_{\mathcal{C}}, I)$ a [[small category|small]] [[monoidal category|monoidal]] $V$-[[enriched category]]" *The source asks for a small monoidal category; the fill omits smallness.*
+- output: **confirmed** [d] "is a [[closed monoidal category]]."
+- preserved: **confirmed** [d] "The [[Yoneda embedding]] constitutes a  [[strong monoidal functor]]" *Symmetry and braiding are not checked.*
+- broken: **unsupported** *"Finiteness of values; strictness": no fetched source states either.*
+- recalled: name: Standard (Brian Day); description: Extends a monoidal structure on a small C to presheaves by a coend formula; input: A small monoidal (or promonoidal) category; output: A closed monoidal structure on presheaves; preserved: Yoneda strong monoidal; symmetry; broken: Nothing stated in sources I recall
+
+  d: excerpts/nlab-day-convolution.txt (https://ncatlab.org/nlab/source/Day+convolution)
+
+### D7-027 Isbell Duality Transformation (batch 2)
+
+- name: **confirmed** [i] "this is called **Isbell conjugation** or **Isbell duality** (after [[John Isbell]])."
+- description: **imprecise** [i] "\mathcal{O}(X) \colon c \mapsto [C^{op}, \mathcal{V}](X, C(-,c))" [i] "Spec(A) \colon c \mapsto [C, \mathcal{V}]^{op}(C(c,-),A)" [i] "Isbell duality is the archetype of the [[duality]] between [[geometry]] and [[algebra]] that permeates mathematics" *The adjunction and the algebra-geometry reading are right, but both formulas are mis-typed: O(X)(c) is the natural transformations from X to the representable C(-, c), not to C(c, -), and Spec(Y)(c) is those from Y to C(c, -), not from C(-, c) to Y.*
+- input: **confirmed** [i] "relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$"
+- output: **confirmed** [i] "relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$"
+- preserved: **confirmed** [i] "**Lemma 1:** $Spec(C(c,-)) \simeq C(-,c)$" [i] "are called __Isbell self-dual__." *Representables go to representables. The restriction to an equivalence on the self-dual objects is the general fact about fixed points of an adjunction; the source names those objects.*
+- broken: **confirmed** [i] "are called __Isbell self-dual__." *Objects outside the fixed points change under O then Spec.*
+- recalled: name: Standard (Isbell); description: An adjunction between presheaves and the opposite of copresheaves, O left of Spec; input: A small category and a presheaf or copresheaf; output: Its Isbell conjugate; preserved: Representables are fixed; equivalence on the fixed points (reflexive objects); broken: Non-reflexive objects
+
+  i: excerpts/nlab-isbell-duality.txt (https://ncatlab.org/nlab/source/Isbell+duality)
+
+### D7-028 Opposite Category Dualization (batch 2)
+
+- name: **confirmed** [o] "is the category obtained by formally reversing the direction of all its [[morphisms]] (while retaining their original composition law)."
+- description: **confirmed** [o] "is the category obtained by formally reversing the direction of all its [[morphisms]] (while retaining their original composition law)." [o] "Passing to the opposite category is a realization of abstract [[duality]]."
+- input: **confirmed** [o] "For a [[category]] $C$, its _opposite category_, $C^{op}$"
+- output: **confirmed** [o] "For a [[category]] $C$, its _opposite category_, $C^{op}$"
+- preserved: **confirmed** [o] "has the same [[objects]] as $C$"
+- broken: **confirmed** [c] "A [[colimit]] in a [[category]] $C$ is the same as a [[limit]] in the [[opposite category]], $C^{op}$." *Monos to epis is not quoted; limits to colimits is.*
+- recalled: name: Standard; description: Reverse all morphisms; every statement dualizes; input: A category; output: Its opposite; preserved: Objects and hom-sets with reversed direction; broken: Direction: limits become colimits
+
+  o: excerpts/nlab-opposite-category.txt (https://ncatlab.org/nlab/source/opposite+category)
+  c: excerpts/nlab-colimit.txt (https://ncatlab.org/nlab/source/colimit)
+
+### D7-029 Eilenberg-Moore Category Construction (batch 2)
+
+- name: **confirmed** [e] "is traditionally called its _Eilenberg--Moore category_ (EM)."
+- description: **confirmed** [e] "The functor $U^T \colon C^T \to C$ is the [[terminal object]] of this category."
+- input: **confirmed** [e] "The category of [[algebras over a monad]] (also: &quot;modules over a monad&quot;) is traditionally called its _Eilenberg--Moore category_ (EM)."
+- output: **confirmed** [e] "By construction, there is a [[forgetful functor]]"
+- preserved: **confirmed** [e] "has all [[limits]] which exist in $C$, and they are [[created limit|created]] by the forgetful functor." [m] "noncomputable instance forgetCreatesLimits : CreatesLimitsOfSize (forget T)"
+- broken: **unsupported** *The source calls colimits of algebras "less easy" without saying they may fail to exist.*
+- recalled: name: Standard; description: Category of T-algebras; the terminal adjunction resolving T; input: A monad; output: Algebras with free-forgetful adjunction; preserved: Limits created by the forgetful functor; broken: Colimits not created in general
+
+  e: excerpts/nlab-eilenberg-moore-category.txt (https://ncatlab.org/nlab/source/Eilenberg-Moore+category)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Limits.lean)
+
+### D7-030 Kleisli Category Construction (batch 2)
+
+- name: **confirmed** [k] "then its _Kleisli category_ is the [[full subcategory]] of the [[Eilenberg-Moore category]] of $T$"
+- description: **confirmed** [k] "a morphism $X \to Y$ in the Kleisli category is a morphism in $\mathcal{C}$ of the form $X \to T(Y)$ in $\mathcal{C}$." [k] "the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint."
+- input: **confirmed** [k] "Given a [[monad]] $T$ on some [[category]] $\mathcal{C}$, then its _Kleisli category_"
+- output: **confirmed** [k] "the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint."
+- preserved: **confirmed** [k] "the Kleisli category is used to model [[call-by-value]] functions with [[side effects]] and [[computation]]."
+- broken: **confirmed** [k] "on those that are *[free](algebra+over+a+monad#FreeAlgebras)* [[algebra for a monad|T-algebras]]"
+- recalled: name: Standard; description: Free algebras: morphisms X to T Y, the initial resolution; input: A monad; output: Kleisli category with adjunction; preserved: The monad; computational effects (Moggi); broken: Non-free algebras
+
+  k: excerpts/nlab-kleisli-category.txt (https://ncatlab.org/nlab/source/Kleisli+category)
+
+### D7-031 Monad Resolution (batch 2)
+
+- name: **confirmed** [k] "we might ask if every monad may be construed as arising from an adjunction. This is in fact true"
+- description: **confirmed** [e] "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$." [e] "The functor $U^T \colon C^T \to C$ is the [[terminal object]] of this category." [k] "the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint."
+- input: **confirmed** [k] "we might ask if every monad may be construed as arising from an adjunction. This is in fact true"
+- output: **confirmed** [e] "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$."
+- preserved: **confirmed** [e] "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$."
+- broken: **confirmed** [e] "For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$." *A category of resolutions with distinct initial and terminal objects: the resolving adjunction is not unique.*
+- recalled: name: Standard; description: Adjunctions inducing T form a category, Kleisli initial, Eilenberg-Moore terminal; input: A monad; output: An adjunction; preserved: The monad; broken: Uniqueness of the adjunction
+
+  k: excerpts/nlab-kleisli-category.txt (https://ncatlab.org/nlab/source/Kleisli+category)
+  e: excerpts/nlab-eilenberg-moore-category.txt (https://ncatlab.org/nlab/source/Eilenberg-Moore+category)
+
+### D7-032 Comonad Resolution (batch 2)
+
+- name: **confirmed** [c] "A **[[coalgebra over a comonad]]** (or **comodule**) over a comonad $C$ on a category $A$"
+- description: **confirmed** [c] "The category of coalgebras is called its (co-)[[Eilenberg-Moore category]] and satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad" [c] "[[co-Kleisli morphisms]]"
+- input: **confirmed** [c] "A **[[coalgebra over a comonad]]** (or **comodule**) over a comonad $C$ on a category $A$"
+- output: **confirmed** [e] "Dually, the EM category of a [[comonad]] is its category of coalgebras (co-modules)."
+- preserved: **confirmed** [c] "satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad" *By the duality the source states.*
+- broken: **confirmed** [c] "satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad" *By duality with monad resolution.*
+- recalled: name: Standard; description: Dual; input: A comonad; output: An adjunction; preserved: The comonad; broken: Uniqueness
+
+  c: excerpts/nlab-comonad.txt (https://ncatlab.org/nlab/source/comonad)
+  e: excerpts/nlab-eilenberg-moore-category.txt (https://ncatlab.org/nlab/source/Eilenberg-Moore+category)
+
+### D7-033 Beck's Monadicity Theorem Application (batch 2)
+
+- name: **confirmed** [b] "**(Beck&#39;s monadicity theorem,  tripleability theorem)**" *The attribution to Beck is the source's.*
+- description: **confirmed** [b] "1. $U$ [[created limit|creates]] [[coequalizers]] of $U$-split pairs, def. \ref{CreationOfCoequalizersOfuSplitPairs}." [b] "1. $U$ reflects [[isomorphisms]] (i.e. it is [[conservative functor|conservative]]), and" *Reflecting isomorphisms belongs to the variant the source also gives (with preservation of those coequalizers); with creation it is implied.*
+- input: **confirmed** [b] "1. $U$ has a [[left adjoint]], and"
+- output: **confirmed** [b] "concluding that the comparison functor is an *isomorphism* of categories, rather than merely an equivalence."
+- preserved: **unsupported** *"Algebraic structure of D over C" is a gloss no source states.*
+- broken: **unsupported** *No source states what the theorem's application loses.*
+- recalled: name: Standard (Beck); description: A right adjoint is monadic iff it reflects isomorphisms and creates coequalizers of G-split pairs; input: An adjunction; output: Equivalence with the Eilenberg-Moore category, or failure; preserved: Algebraic structure; broken: Nothing
+
+  b: excerpts/nlab-monadicity-theorem.txt (https://ncatlab.org/nlab/source/monadicity+theorem)
+
+### D7-034 Lawvere Theory Functorial Semantics (batch 2)
+
+- name: **confirmed** [l] "dissertation]], Bill Lawvere introduced a new categorical method for doing [[universal algebra]]" *The attribution to Lawvere's 1963 dissertation is the source's.*
+- description: **confirmed** [l] "finite product theories with the property that every object is isomorphic to a product of finitely many copies of a given object $x$." [l] "is a product-preserving [[functor]]"
+- input: **confirmed** [l] "alternative to the usual way of presenting an algebraic concept by means of its logical [[signature (in logic)|signature]] (with generating operations satisfying equational axioms)."
+- output: **confirmed** [l] "is a product-preserving [[functor]]"
+- preserved: **confirmed** [l] "1. If $C$ is a category with finite products, then a group (object) in $C$ may be defined as a product-preserving functor" *Interpretation in any category with finite products is stated; the variety up to equivalence is not checked.*
+- broken: **confirmed** [l] "alternative to the usual way of presenting an algebraic concept by means of its logical [[signature (in logic)|signature]] (with generating operations satisfying equational axioms)." *The theory forgets the particular presentation.*
+- recalled: name: Standard (Lawvere 1963); description: A category with finite products generated by one object; models are product-preserving functors to Set; input: A Lawvere theory; output: Category of models; preserved: The variety; models in any category with finite products; broken: The presentation
+
+  l: excerpts/nlab-lawvere-theory.txt (https://ncatlab.org/nlab/source/Lawvere+theory)
+
+### D7-035 Localization of a Category (batch 2)
+
+- name: **confirmed** [l] "This construction is known as a __[[category of fractions]]__ and also ambiguously as a __[[localization of a category]]__."
+- description: **confirmed** [f] "the result of universally making all morphisms in $W$ into [[isomorphisms]]."
+- input: **confirmed** [f] "the _localization_ $\mathcal{C}[W^{-1}]$ of a [[category]] $\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]"
+- output: **confirmed** [f] "the _localization_ $\mathcal{C}[W^{-1}]$ of a [[category]] $\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]"
+- preserved: **confirmed** [f] "the result of universally making all morphisms in $W$ into [[isomorphisms]]." *That the objects are kept is not quoted.*
+- broken: **confirmed** [f] "The rub is that the localization might not be locally small, even if $C$ is." *Computability is not checked.*
+- recalled: name: Standard; description: Formally inverts W; universal functor sending W to isomorphisms; input: A category and a class W; output: C[W^-1] with localization functor; preserved: Objects; universal property; broken: Hom-sets may be large
+
+  l: excerpts/nlab-localization.txt (https://ncatlab.org/nlab/source/localization)
+  f: excerpts/nlab-category-of-fractions.txt (https://ncatlab.org/nlab/source/category+of+fractions)
+
+### D7-036 Calculus of Fractions Application (batch 2)
+
+- name: **confirmed** [c] "is said to admit a **calculus of fractions** if it satisfies some axioms ensuring that its [[localization]] $C[W^{-1}]$ can be constructed in a particular"
+- description: **confirmed** [c] "since its morphisms are two-step zigzags" [f] "If the class $W$ admits a [[calculus of fractions]], then there is a simpler description of $C[W^{-1}]$ in terms of [[span|spans]] instead of zig-zags."
+- input: **confirmed** [c] "* (right Ore condition) Given a [[morphism]]"
+- output: **confirmed** [f] "If the class $W$ admits a [[calculus of fractions]], then there is a simpler description of $C[W^{-1}]$ in terms of [[span|spans]] instead of zig-zags."
+- preserved: **unsupported** *No fetched source states that left fractions make the localization preserve finite limits.*
+- broken: **unsupported** *"Nothing beyond the localization itself" is a gloss.*
+- recalled: name: Standard (Gabriel-Zisman); description: Ore-type conditions make morphisms roofs (spans) with an equivalence; input: A category and W admitting a calculus of fractions; output: Explicit C[W^-1]; preserved: Finite limits or colimits by the localization functor, depending on the side; broken: Nothing beyond the localization
+
+  c: excerpts/nlab-calculus-of-fractions.txt (https://ncatlab.org/nlab/source/calculus+of+fractions)
+  f: excerpts/nlab-category-of-fractions.txt (https://ncatlab.org/nlab/source/category+of+fractions)
+
+### D7-037 Gabriel-Zisman Localization (batch 2)
+
+- name: **confirmed** [f] "[[Pierre Gabriel]], [[Michel Zisman]], §I.1 in: _[[Calculus of fractions and homotopy theory]]_, _Ergebnisse der Mathematik und ihrer Grenzgebiete_ **35**, Springer (1967)" *The attribution and the year are the source's.*
+- description: **confirmed** [f] "in terms of [[span|spans]] instead of zig-zags." *The general construction is by zig-zags, which the calculus of fractions shortens.*
+- input: **confirmed** [f] "the _localization_ $\mathcal{C}[W^{-1}]$ of a [[category]] $\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]"
+- output: **confirmed** [f] "Some authors call any localization of a category a _category of fractions_  ([Gabriel &amp; Zisman, §1.1](#GabrielZisman67)"
+- preserved: **confirmed** [f] "the result of universally making all morphisms in $W$ into [[isomorphisms]]." *That the objects are kept is not quoted.*
+- broken: **confirmed** [f] "The rub is that the localization might not be locally small, even if $C$ is."
+- recalled: name: Standard (Gabriel and Zisman 1967); description: General construction of C[W^-1] by zigzags; input: A category and W; output: Category of fractions; preserved: Objects; universal property; broken: Local smallness
+
+  f: excerpts/nlab-category-of-fractions.txt (https://ncatlab.org/nlab/source/category+of+fractions)
+
+### D7-038 Catamorphism (batch 2)
+
+- name: **confirmed** [w] "denotes the unique [[homomorphism]] from an [[initial algebra]] into some other algebra."
+- description: **confirmed** [w] "Catamorphisms provide generalizations of ''[[Fold (higher-order function)|folds]]'' of [[List (computing)|lists]] to arbitrary [[algebraic data type]]s"
+- input: **confirmed** [w] "Consider an [[Initial algebra|initial]] [[F-algebra|<math>F</math>-algebra]] <math>(A, in)</math> for some [[endofunctor]] <math>F</math>"
+- output: **confirmed** [w] "denotes the unique [[homomorphism]] from an [[initial algebra]] into some other algebra."
+- preserved: **unsupported** *Fusion laws are not stated in the fetched source; "structure of recursion" is a gloss.*
+- broken: **unsupported** *"The recursive structure itself (collapsed into A)" is a gloss no source states.*
+- recalled: name: Standard (Meijer, Fokkinga, Paterson); description: The unique algebra map from the initial algebra: a fold; input: Initial algebra and an algebra; output: The unique map; preserved: Fusion laws; broken: The structure is collapsed
+
+  w: excerpts/wikipedia-catamorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170645)
+
+### D7-039 Anamorphism (batch 2)
+
+- name: **confirmed** [w] "denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]]."
+- description: **confirmed** [w] "an '''anamorphism''' is a generalization of the concept of ''[[Fold (higher-order function)|unfolds]]'' on coinductive [[List (computing)|lists]]."
+- input: **confirmed** [w] "denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]]."
+- output: **confirmed** [w] "denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]]."
+- preserved: **unsupported** *Behaviour up to bisimulation is not stated in the fetched source.*
+- broken: **unsupported** *"Seed identity beyond behavior" is a gloss no source states.*
+- recalled: name: Standard; description: The unique coalgebra map into the terminal coalgebra: an unfold; input: Terminal coalgebra and a coalgebra; output: The unique map; preserved: Behaviour; broken: Identity of states beyond behaviour
+
+  w: excerpts/wikipedia-anamorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381168143)
+
+### D7-040 Hylomorphism (batch 2)
+
+- name: **confirmed** [h] "corresponding to the [[function composition|composition]] of an [[anamorphism]]"
+- description: **confirmed** [h] "Fusion of these two recursive computations into a single recursive pattern then avoids building the intermediate [[data structure]]."
+- input: **confirmed** [h] "The anamorphic part can be defined in terms of a [[arity|unary]] function"
+- output: **confirmed** [h] "A hylomorphism <math>h : A \rightarrow C</math> can be defined in terms of its separate anamorphic and catamorphic parts." *The equation h = a F(h) c is not quoted.*
+- preserved: **confirmed** [h] "Fusion of these two recursive computations into a single recursive pattern then avoids building the intermediate [[data structure]]."
+- broken: **unsupported** *Termination is not discussed in the fetched source.*
+- recalled: name: Standard; description: An unfold followed by a fold, fused (no intermediate structure); input: A coalgebra and an algebra; output: A map A to B; preserved: The result; broken: Termination in general
+
+  h: excerpts/wikipedia-hylomorphism-computer-science.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1312860849)
+
+### D7-041 Paramorphism (batch 2)
+
+- name: **confirmed** [p] "is an extension of the concept of [[catamorphism]] first introduced by [[Lambert Meertens]]" *The attribution to Meertens is the source's.*
+- description: **confirmed** [p] "it gives the combining step function immediate access not only to the result value recursively computed from each recursive subobject, but the original subobject itself as well." [a] "Whereas a paramorphism models [[primitive recursion]]"
+- input: **confirmed** [p] "para :: (a -> ([a], b) -> b) -> b -> [a] ->  b" *Shown for lists: the step sees the substructure and the recursive result, F(mu F x A) to A.*
+- output: **confirmed** [p] "para :: (a -> ([a], b) -> b) -> b -> [a] ->  b"
+- preserved: **confirmed** [p] "it gives the combining step function immediate access not only to the result value recursively computed from each recursive subobject, but the original subobject itself as well."
+- broken: **unsupported** *"Nothing relative to general recursion" is a gloss no source states.*
+- recalled: name: Standard (Meertens); description: Fold that also sees the substructures: primitive recursion; input: Initial algebra and an algebra on F(mu F x A); output: Map mu F to A; preserved: Access to substructures; broken: Nothing
+
+  p: excerpts/wikipedia-paramorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379971371)
+  a: excerpts/wikipedia-apomorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170408)
+
+### D7-042 Apomorphism (batch 2)
+
+- name: **confirmed** [a] "The term "apomorphism" was introduced in ''Functional Programming with Apomorphisms (Corecursion)''." *Introduced by Vene and Uustalu, per the source's citation.*
+- description: **confirmed** [a] "is the [[categorical dual]] of a [[paramorphism]] and" [p] "(a, Left  as) -> a : as"
+- input: **confirmed** [p] "apo  :: (b -> (a, Either [a] b))  ->  b  -> [a]" *Shown for lists: the coalgebra may return a finished structure (Left) or a new seed (Right), A to F(nu F + A).*
+- output: **confirmed** [p] "apo  :: (b -> (a, Either [a] b))  ->  b  -> [a]"
+- preserved: **confirmed** [a] "an apomorphism models primitive [[corecursion]] over a coinductive data type." [p] "(a, Left  as) -> a : as"
+- broken: **unsupported** *"Nothing relative to general corecursion" is a gloss no source states.*
+- recalled: name: Standard (Vene and Uustalu); description: Dual of paramorphism: unfold that can stop early; input: Coalgebra A to F(nu F + A); output: Map A to nu F; preserved: Early termination; broken: Nothing
+
+  a: excerpts/wikipedia-apomorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170408)
+  p: excerpts/wikipedia-paramorphism.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379971371)
+
+### D7-043 Tensor Product of Categories (batch 2)
+
+- name: **confirmed** [d] "The natural [[tensor product]] operation on [[finite abelian category|finite abelian categories]] is known as the _Deligne tensor product_ or _Deligne box product_"
+- description: **confirmed** [d] "right [[exact functors]] of the form $A \boxtimes B \to C$ are equivalent to functors $A \times B \to C$ that are right exact in each argument separately." *Deligne's case is checked; the plain product of categories and Kelly's product for locally presentable categories are not.*
+- input: **imprecise** [d] "This tensor product exists for [[finite abelian categories]] but not generally on all [[abelian categories]]." [d] "instead of abelian categories one can consider categories with [[finite colimits]]" *"Possibly enriched or cocomplete" leaves out when the product exists: Deligne's exists for finite abelian categories, not for all abelian ones; the general variant uses categories with finite colimits.*
+- output: **confirmed** [d] "their Deligne tensor product $A \boxtimes B$ is the abelian category such that"
+- preserved: **confirmed** [d] "right [[exact functors]] of the form $A \boxtimes B \to C$ are equivalent to functors $A \times B \to C$ that are right exact in each argument separately."
+- broken: **unsupported** *"Individual structure of C and D is mixed" is a gloss no source states.*
+- recalled: name: Several notions: product of categories, Deligne and Kelly tensor products; description: Universal bilinear (right exact in each variable) product; input: Categories, linear or finitely cocomplete; output: Tensor product category; preserved: Universal property; broken: Unclear
+
+  d: excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt (https://ncatlab.org/nlab/source/Deligne+tensor+product+of+abelian+categories)
+
+### D7-044 Functor Category Construction (batch 2)
+
+- name: **confirmed** [f] "the **functor category**  -- written $D^C$ or $[C,D]$ -- is the category whose"
+- description: **confirmed** [f] "* [[morphisms]] are [[natural transformations]] between these functors."
+- input: **confirmed** [f] "Given [[category|categories]] $C$ and $D$, the **functor category**" *Smallness of C is not required by the definition; the source uses it for closure results.*
+- output: **confirmed** [f] "the **functor category**  -- written $D^C$ or $[C,D]$ -- is the category whose"
+- preserved: **confirmed** [f] "If $D$ has [[limits]] or [[colimits]] of a certain shape, then so does $[C,D]$ and they are computed pointwise."
+- broken: **unsupported** *Size control is not discussed in the fetched source.*
+- recalled: name: Standard; description: Objects functors, morphisms natural transformations; input: Categories C (small) and D; output: Functor category; preserved: Limits and colimits computed pointwise; broken: Size if C is large
+
+  f: excerpts/nlab-functor-category.txt (https://ncatlab.org/nlab/source/functor+category)
+
+### D7-045 Comma Category Construction (batch 2)
+
+- name: **confirmed** [c] "their **comma category** is the [[category]] $(f/g)$ whose"
+- description: **confirmed** [c] "* [[objects]] are [[triples]] $(c,d,\alpha)$ where $c\in C$, $d\in D$, and" [c] "then $(f/g)$ is the [[over category|slice category]] $C/c$." *Slices and arrow categories are the source's examples; categories of elements are not checked here.*
+- input: **confirmed** [c] "The _comma category_ of two [[functors]] $f : C \to E$ and $g : D \to E$"
+- output: **confirmed** [c] "they are the projections from the summit of the &quot;appropriate&quot; 2-categorical limit."
+- preserved: **imprecise** [m] "[PreservesLimitsOfShape J R] : HasLimitsOfShape J (Comma L R)" [m] "[PreservesColimitsOfShape J L] : HasColimitsOfShape J (Comma L R)" [c] "It can also be seen a kind of [[2-limit]]" *The universal 2-cell is right (the comma category is a 2-limit). Limits exist where the target-side functor G preserves them, not F; F's preservation gives colimits.*
+- broken: **unsupported** *"Nothing; it adds structure" is a gloss no source states.*
+- recalled: name: Standard (Lawvere); description: Objects (a, b, h: F a to G b), morphisms commuting squares; slices and arrow categories as cases; input: Functors F and G into C; output: Comma category with projections; preserved: Universal property; broken: Nothing
+
+  c: excerpts/nlab-comma-category.txt (https://ncatlab.org/nlab/source/comma+category)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Comma.lean)
+
+### D7-046 Slice Category Construction (batch 2)
+
+- name: **confirmed** [o] "The **slice category** or **over category** $\mathbf{C}/c$ of a [[category]] $\mathbf{C}$ over an object $c \in \mathbf{C}$ has"
+- description: **confirmed** [o] "* objects that are all arrows $f \in \mathbf{C}$ such that $cod(f) = c$, and"
+- input: **confirmed** [o] "The **slice category** or **over category** $\mathbf{C}/c$ of a [[category]] $\mathbf{C}$ over an object $c \in \mathbf{C}$ has"
+- output: **confirmed** [o] "The **slice category** or **over category** $\mathbf{C}/c$ of a [[category]] $\mathbf{C}$ over an object $c \in \mathbf{C}$ has"
+- preserved: **confirmed** [o] "* The [[fundamental theorem of topos theory]] states that the slice category over any object in a topos is itself a topos." *Local Cartesian closure is not checked.*
+- broken: **confirmed** [o] "* The [[terminal object]] of $\mathcal{C}_{/X}$ is $\mathrm{id}_X$."
+- recalled: name: Standard; description: Objects over X; input: A category and an object; output: Slice category; preserved: A slice of a topos is a topos; broken: The terminal object becomes id_X
+
+  o: excerpts/nlab-over-category.txt (https://ncatlab.org/nlab/source/over+category)
+
+### D7-047 Coslice Category Construction (batch 2)
+
+- name: **confirmed** [u] "the __under category__ (also called __coslice category__)"
+- description: **confirmed** [u] "* the category of [[pointed sets]], is the coslice of [[Set]] under the [[singleton]] set,"
+- input: **confirmed** [u] "Given a [[category]] $C$ and an [[object]] $c \in C$, the __under category__"
+- output: **confirmed** [u] "The under category $c\downarrow C$ is a kind of [[comma category]]"
+- preserved: **unsupported** *No fetched source states which limits or colimits of X/C are computed in C. Recalled, unchecked: only connected colimits are, so "colimits (via C)" would need that qualifier.*
+- broken: **unsupported** *No fetched source states that the initial object of X/C is id_X.*
+- recalled: name: Standard; description: Objects under X; pointed sets for X = 1; input: A category and an object; output: Coslice; preserved: Colimits created; broken: Initial object becomes id_X
+
+  u: excerpts/nlab-under-category.txt (https://ncatlab.org/nlab/source/under+category)
+
+### D7-048 Quotient Category Construction (batch 2)
+
+- name: **confirmed** [q] "one of the more useful is the quotient of the homsets of a category by equivalence relations compatible with composition."
+- description: **confirmed** [q] "one of the more useful is the quotient of the homsets of a category by equivalence relations compatible with composition."
+- input: **confirmed** [m] "equivalence : ∀ {X Y}, _root_.Equivalence (@r X Y)"
+- output: **confirmed** [m] "instance full_functor : (functor r).Full"
+- preserved: **confirmed** [m] "structure Quotient (r : HomRel C) where" *Objects of the quotient are those of C (the field as : C).*
+- broken: **confirmed** [m] "(functor r).map f = (functor r).map f' ↔ r f f'"
+- recalled: name: Standard; description: Quotient of hom-sets by a congruence, objects kept; input: A category with a congruence; output: Quotient category with a full functor; preserved: Objects; broken: Distinctions between congruent morphisms
+
+  q: excerpts/nlab-quotient-category.txt (https://ncatlab.org/nlab/source/quotient+category)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Quotient.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean)
+
+### D7-049 Skeleton Category Reduction (batch 2)
+
+- name: **confirmed** [s] "A __skeleton__ of a category $C$ is defined to be a skeletal [[subcategory]] of $C$"
+- description: **confirmed** [s] "is called __skeletal__ if any two [[objects]] that are [[isomorphism|isomorphic]] are actually already [[equality|equal]]"
+- input: **confirmed** [s] "A __skeleton__ of a category $C$ is defined to be a skeletal [[subcategory]] of $C$"
+- output: **confirmed** [s] "whose [[inclusion functor]] exhibits it as [[equivalence of categories|equivalent]] to $C$." [m] "noncomputable def skeletonEquivalence : Skeleton C ≌ C where"
+- preserved: **confirmed** [s] "whose [[inclusion functor]] exhibits it as [[equivalence of categories|equivalent]] to $C$." *Invariance under equivalence follows from the equivalence.*
+- broken: **confirmed** [s] "If the [[axiom of choice]] holds, then every category $C$ has a skeleton (in the strongest sense)."
+- recalled: name: Standard; description: One object per isomorphism class; equivalent to C (uses choice); input: A category; output: Its skeleton; preserved: Everything invariant under equivalence; broken: The choice of representatives
+
+  s: excerpts/nlab-skeletal-category.txt (https://ncatlab.org/nlab/source/skeletal+category)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Skeletal.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Skeletal.lean)
+
+### D7-050 Core Category Reduction (batch 2)
+
+- name: **confirmed** [g] "its *core* is the maximal [[groupoid]] inside it"
+- description: **confirmed** [g] "the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$."
+- input: **confirmed** [g] "For $\mathcal{C}$ any [[category]]"
+- output: **confirmed** [g] "its *core* is the maximal [[groupoid]] inside it"
+- preserved: **confirmed** [g] "the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$."
+- broken: **confirmed** [g] "the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$."
+- recalled: name: Standard; description: The maximal subgroupoid: all objects, only isomorphisms; input: A category; output: Its core; preserved: Objects, isomorphisms; broken: Non-invertible morphisms
+
+  g: excerpts/nlab-core-groupoid.txt (https://ncatlab.org/nlab/source/core+groupoid)
 

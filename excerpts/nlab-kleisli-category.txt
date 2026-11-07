@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, Kleisli category (page source)
+URL: https://ncatlab.org/nlab/source/Kleisli+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d4f196159faa6d3cc3ebd669e16c7cd42b55b91b3476f5fa05af3b9044e6f5e4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+then its _Kleisli category_ is the [[full subcategory]] of the [[Eilenberg-Moore category]] of $T$
+
+a morphism $X \to Y$ in the Kleisli category is a morphism in $\mathcal{C}$ of the form $X \to T(Y)$ in $\mathcal{C}$.
+
+the [[initial object|initial]] such adjunction in the [[adjoint functor#RelationToMonads|category of adjunctions]] for the given monad has the Kleisli category as the codomain of its left adjoint.
+
+Given a [[monad]] $T$ on some [[category]] $\mathcal{C}$, then its _Kleisli category_
+
+the Kleisli category is used to model [[call-by-value]] functions with [[side effects]] and [[computation]].
+
+on those that are *[free](algebra+over+a+monad#FreeAlgebras)* [[algebra for a monad|T-algebras]]
+
+we might ask if every monad may be construed as arising from an adjunction. This is in fact true

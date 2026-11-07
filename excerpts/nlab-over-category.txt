@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, over category (page source)
+URL: https://ncatlab.org/nlab/source/over+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dd3f75602ac95105068859335b05590aff6be68eb619ca4b25e2e7c028a3b09f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The **slice category** or **over category** $\mathbf{C}/c$ of a [[category]] $\mathbf{C}$ over an object $c \in \mathbf{C}$ has
+
+* objects that are all arrows $f \in \mathbf{C}$ such that $cod(f) = c$, and
+
+* The [[fundamental theorem of topos theory]] states that the slice category over any object in a topos is itself a topos.
+
+* The [[terminal object]] of $\mathcal{C}_{/X}$ is $\mathrm{id}_X$.

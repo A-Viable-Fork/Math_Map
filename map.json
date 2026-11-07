@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "be3466b7566cb01dd94312f20bfa5a510d3be375"
+  "commit": "629af37c8467435d026b1a6b2721183b3ced05c2"
  },
  "domains": {
   "D1": {
@@ -748,20 +748,20 @@
   },
   "byTier": {
    "landed": 1337,
-   "audited": 141,
-   "authored": 469,
+   "audited": 166,
+   "authored": 444,
    "receipted": 74,
    "flagged": 1,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 27,
+  "corrected": 30,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 107,
-   "unchecked": 11086,
+   "unsupported": 125,
+   "unchecked": 10937,
    "imprecise": 20,
-   "sourced": 1101,
+   "sourced": 1232,
    "formal": 82
   },
   "lean": {
@@ -782,12 +782,12 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 110,
-   "links": 267,
+   "entries": 113,
+   "links": 271,
    "byMatch": {
-    "exact": 206,
-    "conflicts": 4,
-    "related": 14,
+    "exact": 208,
+    "conflicts": 5,
+    "related": 15,
     "special": 18,
     "general": 17,
     "ingredient": 8
@@ -38104,14 +38104,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-027",
@@ -38121,7 +38122,7 @@
    "tags": [
     "duality"
    ],
-   "description": "The adjunction between presheaves and copresheaves on C, O(X)(c) = Nat(X, C(c, -)) and Spec(Y)(c) = Nat(C(-, c), Y). Generalizes algebra-geometry duality.",
+   "description": "The adjunction O left of Spec between presheaves and (the opposite of) copresheaves on C: O(X)(c) = Nat(X, C(-, c)) and Spec(Y)(c) = Nat(Y, C(c, -)). The archetype of the duality between geometry and algebra.",
    "input": "Presheaf or copresheaf on small category C",
    "output": "Copresheaf or presheaf (its Isbell conjugate)",
    "preserved": "Representables are fixed; restricts to an equivalence on the Isbell-reflexive objects",
@@ -38131,14 +38132,48 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "The adjunction between presheaves and copresheaves on C, O(X)(c) = Nat(X, C(c, -)) and Spec(Y)(c) = Nat(C(-, c), Y). Generalizes algebra-geometry duality."
+    },
+    "reason": "Fill review, batch 2: description graded imprecise. The landed formulas pair a presheaf with a copresheaf (O(X)(c) = Nat(X, C(c, -)), Spec(Y)(c) = Nat(C(-, c), Y)); the source has the representable C(-, c) in O and C(c, -) in Spec.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-isbell-duality.txt",
+      "quote": "\\mathcal{O}(X) \\colon c \\mapsto [C^{op}, \\mathcal{V}](X, C(-,c))",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-isbell-duality.txt",
+      "quote": "Spec(A) \\colon c \\mapsto [C, \\mathcal{V}]^{op}(C(c,-),A)",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-isbell-duality.txt",
+      "quote": "Isbell duality is the archetype of the [[duality]] between [[geometry]] and [[algebra]] that permeates mathematics",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-028",
@@ -38158,14 +38193,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-029",
@@ -38185,14 +38221,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Monad.forgetCreatesLimits",
+     "file": "Mathlib/CategoryTheory/Monad/Limits.lean",
+     "match": "exact",
+     "note": "The forgetful functor from algebras creates limits of every size.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monad/Limits.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-030",
@@ -38212,14 +38259,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-031",
@@ -38239,14 +38287,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-032",
@@ -38266,14 +38315,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-033",
@@ -38293,14 +38343,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-034",
@@ -38320,14 +38371,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-035",
@@ -38347,14 +38399,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-036",
@@ -38374,14 +38427,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-037",
@@ -38401,14 +38455,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-038",
@@ -38428,14 +38483,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-039",
@@ -38455,14 +38511,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-040",
@@ -38482,14 +38539,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-041",
@@ -38509,14 +38567,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-042",
@@ -38536,14 +38595,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-043",
@@ -38554,7 +38614,7 @@
     "composition"
    ],
    "description": "Forms a tensor of categories: for plain categories the Cartesian product C x D; for linear or locally presentable categories a universal bilinear or cocontinuous-in-each-variable product (Deligne, Kelly).",
-   "input": "Categories C, D, possibly enriched or cocomplete",
+   "input": "Categories C, D of a kind for which the product exists: finite abelian categories for Deligne's product (it need not exist for all abelian categories), or categories with finite colimits for the general variant",
    "output": "Category C (x) D",
    "preserved": "Bilinearity universal property; enrichment",
    "broken": "Individual structure of C and D is mixed",
@@ -38563,14 +38623,41 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Categories C, D, possibly enriched or cocomplete"
+    },
+    "reason": "Fill review, batch 2: input graded imprecise. \"Possibly enriched or cocomplete\" left out when the product exists.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt",
+      "quote": "This tensor product exists for [[finite abelian categories]] but not generally on all [[abelian categories]].",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt",
+      "quote": "instead of abelian categories one can consider categories with [[finite colimits]]",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-044",
@@ -38590,14 +38677,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-045",
@@ -38610,21 +38698,73 @@
    "description": "Forms (F / G): objects (a, b, h: F a to G b), morphisms commuting squares. Generalizes slices, arrow categories, categories of elements.",
    "input": "Functors F: A to C, G: B to C",
    "output": "Comma category (F / G) with projections to A and B",
-   "preserved": "Universal 2-cell; limits where F preserves them",
+   "preserved": "Universal 2-cell (the comma category is a 2-limit in Cat); limits computed from those of A and B where G preserves them, colimits where F preserves them",
    "broken": "Nothing; it adds structure",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Universal 2-cell; limits where F preserves them"
+    },
+    "reason": "Fill review, batch 2: preserved graded imprecise, and Mathlib's limits in comma categories conflict with it. The landed fill put the limit condition on F; it belongs to G, the target-side functor.",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt",
+      "quote": "[PreservesLimitsOfShape J R] : HasLimitsOfShape J (Comma L R)",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt",
+      "quote": "[PreservesColimitsOfShape J L] : HasColimitsOfShape J (Comma L R)",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-comma-category.txt",
+      "quote": "It can also be seen a kind of [[2-limit]]",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Comma.hasLimitsOfShape",
+     "file": "Mathlib/CategoryTheory/Limits/Comma.lean",
+     "match": "conflicts",
+     "note": "Limits of shape J exist in Comma L R when the source categories have them and R, the functor on the target side of the arrows (the fill's G), preserves them. The fill puts the condition on F; F's preservation of colimits is what gives colimits (hasColimitsOfShape).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Comma.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Comma.hasColimitsOfShape",
+     "file": "Mathlib/CategoryTheory/Limits/Comma.lean",
+     "match": "related",
+     "note": "The dual: colimits exist when L, the source-side functor (the fill's F), preserves them.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Comma.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D7-046",
@@ -38644,14 +38784,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-047",
@@ -38671,14 +38812,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D7-048",
@@ -38698,12 +38840,12 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
     "output": "formal",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "preserved": "sourced",
+    "broken": "sourced"
    },
    "formal": [
     {
@@ -38739,7 +38881,8 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Quotient.lean"
     }
    ],
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-049",
@@ -38759,14 +38902,25 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.skeletonEquivalence",
+     "file": "Mathlib/CategoryTheory/Skeletal.lean",
+     "match": "exact",
+     "note": "The skeleton is equivalent to C (noncomputable: the construction chooses representatives).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Skeletal.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-050",
@@ -38786,14 +38940,15 @@
    "origin": "fill",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D7-051",

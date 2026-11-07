@@ -34,7 +34,7 @@ Entries: 2022.
 | morphism | 139 | carrier |
 | space | 133 | carrier |
 | manifold | 112 | carrier |
-| category | 108 | carrier |
+| category | 109 | carrier |
 | set | 97 | carrier |
 | matrix | 97 | carrier |
 | element | 92 | carrier |

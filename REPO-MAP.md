@@ -230,6 +230,7 @@
 | `excerpts/mathlib-Mathlib.CategoryTheory.Functor.KanExtension.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Grothendieck.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Idempotents.Karoubi.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Equalizers.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Pullback.Mono.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Adjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -245,6 +246,7 @@
 | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.LeftExact.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Skeletal.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Subobject.Classifier.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Dual.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -308,38 +310,57 @@
 | `excerpts/nlab-aufhebung-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung-modalities.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-aufhebung.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-calculus-of-fractions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-closed-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-product.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-category-of-fractions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cauchy-complete-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-closure-operator.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-co-yoneda-lemma.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coequalizer.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-colimit.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-comma-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-comonad.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-coproduct.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-core-groupoid.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-day-convolution.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-eilenberg-moore-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-equalizer.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-essential-geometric-morphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-exponential-object.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-faithful-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-full-functor.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-functor-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-functor.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-geometric-morphism.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-grothendieck-construction.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-isbell-duality.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-kan-extension.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-karoubi-envelope.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-kleisli-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-lawvere-theory.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-tierney-definition.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-tierney-meet.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-lawvere-tierney.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-level-of-a-topos.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-limit.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-localization.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-macneille-completion.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-monadicity-theorem.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-natural-transformation.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-opposite-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-over-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-pullback.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-pushout.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-quotient-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-reflective-subcategory-colimits.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-reflective-subcategory.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-skeletal-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subdivision.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subobject-classifier-meet.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-subobject-classifier.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-under-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-yoneda-embedding.txt` | Verbatim windows from an nLab page. |
 | `excerpts/openai-math-OAI.Computability.UniqueGames.Analysis.MatrixEnergy.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
 | `excerpts/openai-math-OAI.Computability.UniqueGames.Decoding.ActualMatrixContradiction.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
@@ -399,6 +420,8 @@
 | `excerpts/openai-math-unique-games-paper-introduction.txt` | Verbatim windows from the Unique Games preprint's TeX source in openai/math at commit fd4aeeb. |
 | `excerpts/pos-ffp14-210.txt` | Verbatim windows from a Proceedings of Science paper. |
 | `excerpts/wikipedia-accelerating-expansion-1998.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-anamorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-apomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birational-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-blowing-up.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -406,6 +429,7 @@
 | `excerpts/wikipedia-cartans-criterion-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cartans-criterion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-castelnuovo.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-catamorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-completion-of-a-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cone-topology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -430,6 +454,7 @@
 | `excerpts/wikipedia-history-lorentz-transformations.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hodge-projection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hodge-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-hylomorphism-computer-science.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-implementation-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-infinitesimal-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-inverse-gaussian.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -458,6 +483,7 @@
 | `excerpts/wikipedia-newton-cartan-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-old-quantum-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-paramorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-poisson-bracket-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -748,6 +774,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/arxiv-2103.12179.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt` |
+| `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.ModelTheory.Fraisse.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.Order.GaloisConnection.Defs.txt` |
@@ -756,9 +783,12 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.Topology.Bases.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.Topology.Compactification.StoneCech.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-adjoint-functor-theorem.txt` |
+| `mapfill/corrections.js` | names | `excerpts/nlab-comma-category.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-coproduct.txt` |
+| `mapfill/corrections.js` | names | `excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-faithful-functor.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-full-functor.txt` |
+| `mapfill/corrections.js` | names | `excerpts/nlab-isbell-duality.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-blowing-up.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-castelnuovo.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-cech-complex.txt` |
@@ -933,37 +963,65 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Functor.KanExtension.Basic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Grothendieck.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Idempotents.Karoubi.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Equalizers.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Pullback.Mono.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.NatTrans.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Quotient.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Skeletal.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Subobject.Classifier.Defs.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Order.Completion.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-adjoint-functor-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-adjoint-functor.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-calculus-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-closed-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cartesian-product.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-category-of-fractions.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-cauchy-complete-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-co-yoneda-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coequalizer.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-colimit.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-comma-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-comonad.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-coproduct.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-core-groupoid.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-day-convolution.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-eilenberg-moore-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-equalizer.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-exponential-object.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-faithful-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-full-functor.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-functor-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-grothendieck-construction.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-isbell-duality.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kan-extension.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-karoubi-envelope.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-kleisli-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-lawvere-theory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-limit.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-localization.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-macneille-completion.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-monadicity-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-natural-transformation.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-opposite-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-over-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-pullback.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-pushout.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-quotient-category.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-skeletal-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-subobject-classifier.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/nlab-under-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-yoneda-embedding.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-anamorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-apomorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-catamorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dedekind-macneille-completion.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hylomorphism-computer-science.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-paramorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `scripts/audit.mjs` |
 | `reports/FILL-REVIEW.md` | names | `scripts/mathmap.mjs` |
 | `reports/FORMAL-QUEUE.md` | names | `mapfill/formal.js` |

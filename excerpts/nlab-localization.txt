@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, localization (page source)
+URL: https://ncatlab.org/nlab/source/localization
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e0ebbd14161cc11afea1e9210c51a1fcbf3245b3b2ac0a37539261be816328a4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This construction is known as a __[[category of fractions]]__ and also ambiguously as a __[[localization of a category]]__.

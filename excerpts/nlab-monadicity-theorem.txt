@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, monadicity theorem (page source)
+URL: https://ncatlab.org/nlab/source/monadicity+theorem
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b735d6acde11e0c6aef961312dd7c87bab5c7ff4f07f15e2acafc8a12002d9b5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+**(Beck&#39;s monadicity theorem,  tripleability theorem)**
+
+1. $U$ [[created limit|creates]] [[coequalizers]] of $U$-split pairs, def. \ref{CreationOfCoequalizersOfuSplitPairs}.
+
+1. $U$ reflects [[isomorphisms]] (i.e. it is [[conservative functor|conservative]]), and
+
+1. $U$ has a [[left adjoint]], and
+
+concluding that the comparison functor is an *isomorphism* of categories, rather than merely an equivalence.

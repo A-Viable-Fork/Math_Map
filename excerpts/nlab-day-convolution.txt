@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, Day convolution (page source)
+URL: https://ncatlab.org/nlab/source/Day+convolution
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 740638939de263fe5461fa4440ef4536d0bef40dc63076508f8e9f99d871df64
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This was first observed by ([Day 70](#Day70))
+
+The [[category of functors]] on a [[monoidal category]] canonically inherits itself a monoidal category structure via a [[categorification|categorified]] [[convolution product]]
+
+is given by the following [[coend]]
+
+For $(\mathcal{C}, \otimes_{\mathcal{C}}, I)$ a [[small category|small]] [[monoidal category|monoidal]] $V$-[[enriched category]]
+
+is a [[closed monoidal category]].
+
+The [[Yoneda embedding]] constitutes a  [[strong monoidal functor]]

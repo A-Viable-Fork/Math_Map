@@ -10,3 +10,5 @@ according to the instructions given by the morphisms of the diagram.
 **([[adjoints preserve (co-)limits|left adjoint functors preserve colimits]])**
 
 sewing together the objects of the diagram, according to the instructions given by the morphisms of the diagram
+
+A [[colimit]] in a [[category]] $C$ is the same as a [[limit]] in the [[opposite category]], $C^{op}$.

@@ -178,6 +178,23 @@ const CORRECTIONS = [
     fields: { broken: "Constructivity: the left adjoint's value at each object is an initial object obtained from a small limit over the solution set, not an explicit formula" },
     reason: "Fill review, batch 1: broken graded imprecise. The solution set condition replaces the large limit by a small one; the landed fill said the adjoint is a large limit.",
     receipts: [R("excerpts/nlab-adjoint-functor-theorem.txt", "Now an initial object is the limit of the identity functor, but this is generally a large limit; we replace this with some small limit conditions that guarantee existence of an initial object.", "broken")] },
+  { id: "D7-027", name: "Isbell Duality Transformation",
+    fields: { description: "The adjunction O left of Spec between presheaves and (the opposite of) copresheaves on C: O(X)(c) = Nat(X, C(-, c)) and Spec(Y)(c) = Nat(Y, C(c, -)). The archetype of the duality between geometry and algebra." },
+    reason: "Fill review, batch 2: description graded imprecise. The landed formulas pair a presheaf with a copresheaf (O(X)(c) = Nat(X, C(c, -)), Spec(Y)(c) = Nat(C(-, c), Y)); the source has the representable C(-, c) in O and C(c, -) in Spec.",
+    receipts: [R("excerpts/nlab-isbell-duality.txt", String.raw`\mathcal{O}(X) \colon c \mapsto [C^{op}, \mathcal{V}](X, C(-,c))`, "description"),
+      R("excerpts/nlab-isbell-duality.txt", String.raw`Spec(A) \colon c \mapsto [C, \mathcal{V}]^{op}(C(c,-),A)`, "description"),
+      R("excerpts/nlab-isbell-duality.txt", "Isbell duality is the archetype of the [[duality]] between [[geometry]] and [[algebra]] that permeates mathematics", "description")] },
+  { id: "D7-043", name: "Tensor Product of Categories",
+    fields: { input: "Categories C, D of a kind for which the product exists: finite abelian categories for Deligne's product (it need not exist for all abelian categories), or categories with finite colimits for the general variant" },
+    reason: "Fill review, batch 2: input graded imprecise. \"Possibly enriched or cocomplete\" left out when the product exists.",
+    receipts: [R("excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt", "This tensor product exists for [[finite abelian categories]] but not generally on all [[abelian categories]].", "input"),
+      R("excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt", "instead of abelian categories one can consider categories with [[finite colimits]]", "input")] },
+  { id: "D7-045", name: "Comma Category Construction",
+    fields: { preserved: "Universal 2-cell (the comma category is a 2-limit in Cat); limits computed from those of A and B where G preserves them, colimits where F preserves them" },
+    reason: "Fill review, batch 2: preserved graded imprecise, and Mathlib's limits in comma categories conflict with it. The landed fill put the limit condition on F; it belongs to G, the target-side functor.",
+    receipts: [R("excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt", "[PreservesLimitsOfShape J R] : HasLimitsOfShape J (Comma L R)", "preserved"),
+      R("excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt", "[PreservesColimitsOfShape J L] : HasColimitsOfShape J (Comma L R)", "preserved"),
+      R("excerpts/nlab-comma-category.txt", "It can also be seen a kind of [[2-limit]]", "preserved")] },
 ];
 
 module.exports = { CORRECTIONS };
