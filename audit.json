@@ -9659,6 +9659,1084 @@
     "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024",
     "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
    }
+  },
+  {
+   "id": "D7-101",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-subdirect-product.txt",
+    "i": "excerpts/wikipedia-subdirectly-irreducible-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The '''subdirect representation theorem''' of universal algebra states that every algebra is subdirectly representable by its subdirectly irreducible [[quotient]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Birkhoff (1944) proved that every algebra all of whose operations are of finite arity is isomorphic to a subdirect product of subdirectly irreducible algebras.",
+     "note": "The source asks for finitary operations. \"The prime factorization of universal algebra\" matches the source's analogy.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "Subdirect irreducibles are to subdirect product of algebras roughly as primes are to multiplication of integers."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "every algebra all of whose operations are of finite arity"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "every algebra is subdirectly representable by its subdirectly irreducible [[quotient]]s."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is isomorphic to a subdirect product of subdirectly irreducible algebras.",
+     "note": "Identities pass to subalgebras of products; not quoted here."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Non-uniqueness of the decomposition is not stated in the fetched sources."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024",
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1249052338"
+   }
+  },
+  {
+   "id": "D7-102",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-reduced-product.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The domain of the reduced product is the [[quotient set|quotient]] of the [[Cartesian product]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "by a certain [[equivalence relation]]&nbsp;~: two elements (''a<sub>i</sub>'') and (''b<sub>i</sub>'') of the Cartesian product are equivalent if"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "and let ''U'' be a proper [[filter (mathematics)|filter]] on ''I''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The domain of the reduced product is the [[quotient set|quotient]] of the [[Cartesian product]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Preservation of Horn sentences is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The source does not say which sentences fail without an ultrafilter."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299176928"
+   }
+  },
+  {
+   "id": "D7-103",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "u": "excerpts/wikipedia-ultraproduct.txt",
+    "p": "excerpts/wikipedia-reduced-product.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "It states that any [[first-order predicate calculus|first-order]] formula is true in the ultraproduct if and only if the set of indices <math>i</math> such that the formula is true in <math>M_i</math> is a membe",
+     "note": "The attribution of the theorem to Los is the source's."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "It states that any [[first-order predicate calculus|first-order]] formula is true in the ultraproduct if and only if the set of indices <math>i</math> such that the formula is true in <math>M_i</math> is a membe"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "u",
+     "quote": "one can define [[nonstandard integer]]s, [[nonstandard complex numbers]], etc., by taking the ultraproduct of copies of the corresponding structures.",
+     "note": "Nonstandard elements: quoted. Loss of countable cardinality is not checked."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "u": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371262511",
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299176928"
+   }
+  },
+  {
+   "id": "D7-104",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "Foster's Boolean power: no fetched source (Wikipedia has no page; none found on the nLab)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-105",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for bounded Boolean powers."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source. Recalled, unchecked: continuous maps from a compact Stone space to a discrete set already have finite range, so the stated distinction needs a source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-106",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quotient-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\\mathcal{A}</math>, such that it is a congruence"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "<math> \\langle E \\rangle_{\\mathcal{A}} = \\bigcap \\{ F \\in \\mathrm{Con}(\\mathcal{A}) \\mid E \\subseteq F \\}</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\\mathcal{A}</math>, such that it is a congruence"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Note that the closure of a binary relation is a congruence"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the compatibility conditions are used to give the classes an algebraic structure."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Everything forced\" is a gloss; not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094"
+   }
+  },
+  {
+   "id": "D7-107",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quotient-universal-algebra.txt",
+    "l": "excerpts/wikipedia-congruence-lattice-problem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "\"Principal congruence\" is not defined in the fetched sources."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\\mathcal{A}</math>, such that it is a congruence",
+     "note": "With E a single pair; the principal case itself is not named."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\\mathcal{A}</math>, such that it is a congruence"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Note that the closure of a binary relation is a congruence"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A congruence of an [[Universal algebra|algebra]] ''A'' is finitely generated [[if and only if]] it is a [[compact element]] of Con ''A''."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094",
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382056256"
+   }
+  },
+  {
+   "id": "D7-108",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-congruence-lattice-problem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The congruence lattice Con ''A'' of any algebra ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Distributivity is quoted for lattices (\"The congruence lattice of any lattice is distributive\"), but the fill's claim is about Mal'cev varieties, whose modularity is not stated in the fetched sources."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382056256"
+   }
+  },
+  {
+   "id": "D7-109",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quotient-universal-algebra.txt",
+    "v": "excerpts/wikipedia-variety-universal-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient algebra''' is the result of [[Partition of a set|partition]]ing the elements of an [[algebraic structure]] using a [[congruence relation]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "The quotient algebra has these classes as its elements, and the compatibility conditions are used to give the classes an algebraic structure."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient algebra''' is the result of [[Partition of a set|partition]]ing the elements of an [[algebraic structure]] using a [[congruence relation]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Quotient algebras are also called '''factor algebras'''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions.",
+     "note": "A quotient is a homomorphic image."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094",
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066"
+   }
+  },
+  {
+   "id": "D7-110",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-congruence-permutable-algebra.txt",
+    "l": "excerpts/arxiv-1701.00260.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Such a term is called a '''Maltsev term''' and congruence-permutable varieties are also known as '''Maltsev varieties''' in his honor.",
+     "note": "The fill's example is Maltsev's theorem; Maltsev conditions in general are the subject of the second source.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "We discuss such Maltsev conditions that consist of just one linear equation"
+      }
+     ]
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\mathcal{V}\\models q(x,y,y)\\approx x\\approx q(y,y,x)</math>.",
+     "note": "The fill's p(x,x,y) = y = p(y,x,x) is the same pair of identities with the variables renamed."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Suppose that <math>\\mathcal{V}</math> is a variety of algebras. The following are equivalent:"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "|1= The variety <math>\\mathcal{V}</math> is congruence-permutable."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Behaviour under interpretations between varieties is not stated in the fetched sources."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=994781352",
+    "l": "https://export.arxiv.org/abs/1701.00260"
+   }
+  },
+  {
+   "id": "D7-111",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "The commutator of congruences (Smith, Hagemann and Herrmann) has no fetched source."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-112",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/wikipedia-center-group-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "{{Short description|Set of elements that commute with every element of a group}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "{{Short description|Set of elements that commute with every element of a group}}",
+     "note": "The group case is checked; the central congruence of an algebra and the ring case are not."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "The center is a [[normal subgroup]], <math>Z(G)\\triangleleft G</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "The center is a [[normal subgroup]], <math>Z(G)\\triangleleft G</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "{{Short description|Set of elements that commute with every element of a group}}"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1372987594"
+   }
+  },
+  {
+   "id": "D7-113",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-commutator-subgroup.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is an abelian group called the '''abelianization''' of <math>G</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The commutator subgroup is important because it is the [[Universal property|smallest]] [[normal subgroup]] such that the [[quotient group]] of the original group by this subgroup is [[abelian group|abelian]].",
+     "note": "The group case is checked; the commutator of congruences in a modular variety is not."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>",
+     "note": "Groups only."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is universal for homomorphisms from <math>G</math> to an abelian group <math>H</math>"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "So in some sense it provides a measure of how far the group is fr"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377919281"
+   }
+  },
+  {
+   "id": "D7-114",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "n": "excerpts/wikipedia-nilpotent-group.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "a '''nilpotent group''' is a [[Group (mathematics)|group]] that has an [[upper central series]] that terminates with itself."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "or its [[lower central series]] terminates with the [[trivial group]].",
+     "note": "Groups only; rings and algebras are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "is called the '''nilpotency class''' of <math>G</math>"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The quotient by a lower central series term is not stated in the fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381454118"
+   }
+  },
+  {
+   "id": "D7-115",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-solvable-group.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''solvable group''' or '''soluble group''' is a [[group (mathematics)|group]] that can be constructed from [[abelian group]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Equivalently, a solvable group is a group whose [[derived series]] terminates in the [[trivial subgroup]].",
+     "note": "Groups only."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Equivalently, a solvable group is a group whose [[derived series]] terminates in the [[trivial subgroup]]."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The quotient by a derived series term is not stated in the fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378177221"
+   }
+  },
+  {
+   "id": "D7-116",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-clone-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "*''C'' contains all the [[projection (set theory)|projection]]s",
+     "note": "\"The smallest clone containing\" given operations is not quoted.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "*''C'' is closed under [[generalized composition|(finitary multiple) composition]] (or \"superposition\")"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the set of operations on its carrier definable by a ''σ''-[[first-order logic#Formation rules|term]] (the ''term functions'') is a clone."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1368870620"
+   }
+  },
+  {
+   "id": "D7-117",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "z": "excerpts/arxiv-1704.01914.txt",
+    "b": "excerpts/arxiv-2104.11808.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "z",
+     "quote": "It was conjectured that if a constraint language has a weak near unanimity polymorphism then the corresponding constraint satisfaction problem is tractable"
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The definition (operations preserving every relation) is not quoted; the sources use polymorphisms for the CSP without defining them in the abstract."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The Pol-Inv duality is not stated in the fetched sources."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "z": "https://export.arxiv.org/abs/1704.01914",
+    "b": "https://export.arxiv.org/abs/2104.11808"
+   }
+  },
+  {
+   "id": "D7-118",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source for invariant relations or the Pol-Inv Galois connection."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-119",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-galois-connection-r.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "In this article, we will refer to them as '''(monotone) Galois connections''' and '''antitone Galois connections'''."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "g",
+     "quote": "known as the associated [[closure operator]], and {{math|''FG'' : ''B'' → ''B''}}, known as the associated kernel operator.",
+     "note": "The condition f(a) <= b iff a <= g(b) is the monotone convention, under which one composite is a closure operator and the other a kernel operator. Closure operators on both sides belong to the antitone convention, which the fill also names. The two conventions are run together.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "are the associated closure operators; they are monotone idempotent maps with the property"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "be two [[partially ordered set]]s."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "known as the associated [[closure operator]], and {{math|''FG'' : ''B'' → ''B''}}, known as the associated kernel operator."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "but every Galois connection gives rise to an isomorphism of certain sub-posets"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "but every Galois connection gives rise to an isomorphism of certain sub-posets",
+     "note": "Only the closed elements correspond."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364444923"
+   }
+  },
+  {
+   "id": "D7-120",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-birkhoffs-representation-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "'''Birkhoff's representation theorem''' for [[distributive lattice]]s states that the elements of any finite distributive lattice can be represented as [[finite set]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the elements of any finite distributive lattice may be associated with lower sets of a partial order in the same way.",
+     "note": "That the partial order is the join-irreducibles is in the source's construction (\"''join-irreducible''\" is defined there); not quoted as one sentence.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "In a lattice, an element <math>x</math> is called ''join-irreducible'' if <math>x</math> is not the join of a finite set of other elements."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the elements of any finite distributive lattice can be represented as [[finite set]]s"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the elements of any finite distributive lattice may be associated with lower sets of a partial order in the same way."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "in such a way that the lattice operations correspond to [[Union (set theory)|unions]] and [[Intersection (set theory)|intersections]] of sets."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Nothing; a duality\" is not stated in the fetched text."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377981990"
+   }
+  },
+  {
+   "id": "D7-121",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "Jonsson's lemma: no fetched source (no Wikipedia page)."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D7-122",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/arxiv-2104.11808.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "Unifying the Three Algebraic Approaches to the CSP via Minimal Taylor Algebras"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "This class of algebras is broad enough that it suffices to verify the CSP Dichotomy Theorem on this class only",
+     "note": "Taylor algebras carry the dichotomy, per the source; the defining identities are not quoted."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://export.arxiv.org/abs/2104.11808"
+   }
+  },
+  {
+   "id": "D7-123",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/arxiv-1701.00260.txt",
+    "b": "excerpts/arxiv-2104.11808.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "It follows that the Siggers term is the weakest non-trivial loop condition."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The 6-ary identity and the equivalence with a Taylor term are not stated in the fetched abstracts; the second source names the two dichotomy proofs (Bulatov, Zhuk) without the Siggers term."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Not quoted."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "We discuss such Maltsev conditions that consist of just one linear equation, we call them loop conditions."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Equivalence with Taylor terms is not stated in the fetched abstracts."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://export.arxiv.org/abs/1701.00260",
+    "b": "https://export.arxiv.org/abs/2104.11808"
+   }
+  },
+  {
+   "id": "D7-124",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-absorption-law.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the '''absorption law''' or '''absorption identity''' is an [[Identity (mathematics)|identity]] linking a pair of [[binary operations]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ":''a'' ¤ (''a'' ⁂ ''b'') = ''a'' ⁂ (''a'' ¤ ''b'') = ''a''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "=== Lattices ==="
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ":''a'' ¤ (''a'' ⁂ ''b'') = ''a'' ⁂ (''a'' ¤ ''b'') = ''a''.",
+     "note": "The shorter term follows from the identity."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "A [[Set (mathematics)|set]] equipped with two [[commutative]] and [[associative]] binary operations",
+     "note": "The identity holds in every lattice by definition."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1373730955"
+   }
+  },
+  {
+   "id": "D7-125",
+   "batch": 5,
+   "why": "Fill review, batch 5: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-idempotence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The ''binary operation'' <math>\\cdot</math> is said to be ''idempotent'' if"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The ''binary operation'' <math>\\cdot</math> is said to be ''idempotent'' if",
+     "note": "Idempotent reducts of algebras are not checked."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The ''binary operation'' <math>\\cdot</math> is said to be ''idempotent'' if"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "The idempotent reduct is not stated in the fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "The tractability class in CSP is not stated in the fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Not stated."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382059785"
+   }
   }
  ]
 }

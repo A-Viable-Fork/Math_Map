@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Solvable group (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378177221
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ffd0c057431222bc6115661c9662fbe7e4a841c20e1e3a2fa746152907e14db2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''solvable group''' or '''soluble group''' is a [[group (mathematics)|group]] that can be constructed from [[abelian group]]s
+
+Equivalently, a solvable group is a group whose [[derived series]] terminates in the [[trivial subgroup]].

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Ultraproduct (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371262511
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: de16085f721be79668d9d7d9335cf13e1b3f4b5e4de2f1d78fcb53a17d55203a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It states that any [[first-order predicate calculus|first-order]] formula is true in the ultraproduct if and only if the set of indices <math>i</math> such that the formula is true in <math>M_i</math> is a membe
+
+one can define [[nonstandard integer]]s, [[nonstandard complex numbers]], etc., by taking the ultraproduct of copies of the corresponding structures.

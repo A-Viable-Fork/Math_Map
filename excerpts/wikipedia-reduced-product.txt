@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Reduced product (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1299176928
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0e1a62f629fa35e6ab7eab56d0bf5b390fad9daade6228cb31acd718c1b1ba75
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The domain of the reduced product is the [[quotient set|quotient]] of the [[Cartesian product]]
+
+by a certain [[equivalence relation]]&nbsp;~: two elements (''a<sub>i</sub>'') and (''b<sub>i</sub>'') of the Cartesian product are equivalent if
+
+and let ''U'' be a proper [[filter (mathematics)|filter]] on ''I''.
+
+If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct.

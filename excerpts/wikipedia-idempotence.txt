@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Idempotence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382059785
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2d177168605d7d6f6021bc73124af0ba10fe9b9766c457aa0cccad7b49561e92
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The ''binary operation'' <math>\cdot</math> is said to be ''idempotent'' if

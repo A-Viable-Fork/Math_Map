@@ -167,10 +167,13 @@
 | `excerpts/arxiv-1112.3246.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1603.04641.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1608.02921.txt` | Verbatim windows from an arXiv paper. |
+| `excerpts/arxiv-1701.00260.txt` | Verbatim windows from an arXiv paper. |
+| `excerpts/arxiv-1704.01914.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1711.06111-references.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-1711.06111.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-2001.07488.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-2103.12179.txt` | Verbatim windows from an arXiv paper. |
+| `excerpts/arxiv-2104.11808.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-hep-th-0410212.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/econometrica-jackson-1991.txt` | Verbatim windows from a journal article. |
 | `excerpts/mathlib-Mathlib.Algebra.Algebra.Subalgebra.Lattice.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -453,11 +456,13 @@
 | `excerpts/openai-math-OAI.Computability.UniqueGames.Theorem.txt` | Lean declaration statements from openai/math at commit fd4aeeb (its Unique Games formalization), proofs omitted, with each file's hash (Apache 2.0). |
 | `excerpts/openai-math-unique-games-paper-introduction.txt` | Verbatim windows from the Unique Games preprint's TeX source in openai/math at commit fd4aeeb. |
 | `excerpts/pos-ffp14-210.txt` | Verbatim windows from a Proceedings of Science paper. |
+| `excerpts/wikipedia-absorption-law.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-accelerating-expansion-1998.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-anamorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-apomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birational-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-birkhoffs-representation-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-blowing-up.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-canonical-commutation-relation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cartans-criterion-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -465,8 +470,13 @@
 | `excerpts/wikipedia-castelnuovo.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-catamorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-center-group-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-clone-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-commutator-subgroup.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-completion-of-a-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cone-topology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-congruence-lattice-problem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-congruence-permutable-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-data-transformation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-dedekind-macneille-completion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-direct-product.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -482,6 +492,7 @@
 | `excerpts/wikipedia-fraisse-limit.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-free-object.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galilean-transformation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-galois-connection-r.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galois-connection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-gibbard-satterthwaite.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-contraction-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -496,6 +507,7 @@
 | `excerpts/wikipedia-hom-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-homomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hylomorphism-computer-science.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-idempotence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-implementation-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-infinitesimal-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-institution-computer-science.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -527,6 +539,7 @@
 | `excerpts/wikipedia-nerve-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-newton-cartan-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-nilpotent-group.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nyquist-shannon-sampling.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-old-quantum-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-paramorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -534,14 +547,18 @@
 | `excerpts/wikipedia-poisson-bracket-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quasivariety.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-quotient-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-reduced-product.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-resolution-of-singularities.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-robust-pca.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-rotation-matrix.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-schrodinger-equation-galilean.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-solvable-group.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-special-relativity-1905.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-subalgebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-subdirect-product.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-subdirectly-irreducible-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-sylvesters-law-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-takens-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-tensor-hom-adjunction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -549,6 +566,7 @@
 | `excerpts/wikipedia-term-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-sorting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-transition-state-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-ultraproduct.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-variety-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-whitehead-lemma-lie.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-wiener-generator.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -856,6 +874,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-exact-category.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-five-lemma.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-fraisse-limit.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-galois-connection-r.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-galois-connection.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hermite-transform.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hodge-projection.txt` |
@@ -1004,10 +1023,13 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1112.3246.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1603.04641.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1608.02921.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/arxiv-1701.00260.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/arxiv-1704.01914.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1711.06111-references.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-1711.06111.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-2001.07488.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-2103.12179.txt` |
+| `reports/CATALOGUE.md` | names | `excerpts/arxiv-2104.11808.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/arxiv-hep-th-0410212.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/econometrica-jackson-1991.txt` |
 | `reports/CATALOGUE.md` | names | `excerpts/openai-math-unique-games-paper-introduction.txt` |
@@ -1018,7 +1040,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `audit/fill-review-0_1.js` |
 | `reports/FILL-REVIEW.md` | names | `audit/fill-review-recall-0_1.js` |
 | `reports/FILL-REVIEW.md` | names | `audit/grades-0_1.js` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/arxiv-1701.00260.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/arxiv-1704.01914.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/arxiv-2001.07488.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/arxiv-2104.11808.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.AdjointFunctorTheorems.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.EssentialImage.txt` |
@@ -1111,31 +1136,46 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-whiskering.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-yoneda-embedding.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/nlab-zero-object.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-absorption-law.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-anamorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-apomorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-birkhoffs-representation-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-catamorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-center-group-theory.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-clone-algebra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-commutator-subgroup.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-congruence-lattice-problem.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-congruence-permutable-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dedekind-macneille-completion.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-direct-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-eckmann-hilton-argument.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-end-category-theory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-exact-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-free-object.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-galois-connection-r.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hom-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-homomorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hylomorphism-computer-science.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-idempotence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-institution-computer-science.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-inverse-limit.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-krull-schmidt-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mac-lanes-coherence-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-natural-transformation.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-nilpotent-group.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-paramorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-pointwise.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quasivariety.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quotient-universal-algebra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-reduced-product.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-solvable-group.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-subalgebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-subdirect-product.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-subdirectly-irreducible-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-tensor-hom-adjunction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-tensor-product-of-modules.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-term-algebra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ultraproduct.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-variety-universal-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `scripts/audit.mjs` |
 | `reports/FILL-REVIEW.md` | names | `scripts/mathmap.mjs` |

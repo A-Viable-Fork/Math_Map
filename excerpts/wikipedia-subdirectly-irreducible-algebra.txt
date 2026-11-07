@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Subdirectly irreducible algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1249052338
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 808f669a71717770f1eeff32013636fc7d654ef3f48227134b3b9c5908106269
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''subdirect representation theorem''' of universal algebra states that every algebra is subdirectly representable by its subdirectly irreducible [[quotient]]s.
+
+every algebra is subdirectly representable by its subdirectly irreducible [[quotient]]s.

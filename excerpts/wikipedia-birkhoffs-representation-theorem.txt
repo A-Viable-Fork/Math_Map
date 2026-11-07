@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Birkhoff's representation theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377981990
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 62662fd8d4429694e7269ff0114fe4ab92e35f60bc20988540801f53f0efc670
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Birkhoff's representation theorem''' for [[distributive lattice]]s states that the elements of any finite distributive lattice can be represented as [[finite set]]s
+
+the elements of any finite distributive lattice may be associated with lower sets of a partial order in the same way.
+
+In a lattice, an element <math>x</math> is called ''join-irreducible'' if <math>x</math> is not the join of a finite set of other elements.
+
+the elements of any finite distributive lattice can be represented as [[finite set]]s
+
+in such a way that the lattice operations correspond to [[Union (set theory)|unions]] and [[Intersection (set theory)|intersections]] of sets.

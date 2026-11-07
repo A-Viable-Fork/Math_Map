@@ -211,6 +211,12 @@ const CORRECTIONS = [
     reason: "Fill review, batch 4: description graded imprecise. The Freyd-Mitchell embedding the landed fill names takes an abelian category to modules; it does not abelianize an additive or exact one.",
     receipts: [R("excerpts/wikipedia-exact-category.txt", "Conversely, if '''E''' is any exact category, we can take '''A''' to be the category of [[exact functor|left-exact functor]]s from '''E''' into the category of [[abelian group]]s", "description"),
       R("excerpts/nlab-freyd-mitchell-embedding-theorem.txt", "Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor to the category $R$[[Mod]] for some [[ring]] $R$.", "description")] },
+  { id: "D7-119", name: "Galois Connection Formulation",
+    fields: { description: "Establishes a pair of maps between two posets. Monotone convention: f(a) <= b iff a <= g(b); then g after f is a closure operator and f after g a kernel operator. Antitone convention: both composites are closure operators. Either way the closed elements correspond bijectively." },
+    reason: "Fill review, batch 5: description graded imprecise. The landed fill gave the monotone condition with the antitone convention's conclusion (closure operators on both sides).",
+    receipts: [R("excerpts/wikipedia-galois-connection-r.txt", "known as the associated [[closure operator]], and {{math|''FG'' : ''B'' → ''B''}}, known as the associated kernel operator.", "description"),
+      R("excerpts/wikipedia-galois-connection-r.txt", "are the associated closure operators; they are monotone idempotent maps with the property", "description"),
+      R("excerpts/wikipedia-galois-connection-r.txt", "but every Galois connection gives rise to an isomorphism of certain sub-posets", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

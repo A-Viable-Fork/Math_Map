@@ -10,3 +10,11 @@ such that every induced projection (the composite ''p<sub>j</sub>s'': ''A'' → 
 A '''subdirect product''' is a [[subalgebra]] (in the sense of [[universal algebra]]) ''A'' of a [[direct product]]
 
 without however necessarily being the whole direct product.
+
+Birkhoff (1944) proved that every algebra all of whose operations are of finite arity is isomorphic to a subdirect product of subdirectly irreducible algebras.
+
+Subdirect irreducibles are to subdirect product of algebras roughly as primes are to multiplication of integers.
+
+every algebra all of whose operations are of finite arity
+
+is isomorphic to a subdirect product of subdirectly irreducible algebras.

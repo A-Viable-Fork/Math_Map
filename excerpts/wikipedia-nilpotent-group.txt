@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Nilpotent group (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381454118
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2d127697bac99220c52265c7a80ee6e541bd37636c94c06331bde9e218338a3b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''nilpotent group''' is a [[Group (mathematics)|group]] that has an [[upper central series]] that terminates with itself.
+
+or its [[lower central series]] terminates with the [[trivial group]].
+
+is called the '''nilpotency class''' of <math>G</math>

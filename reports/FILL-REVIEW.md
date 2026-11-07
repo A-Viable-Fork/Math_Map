@@ -4,23 +4,23 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 100 of 416 D7 stubs, 0 of 79 homes; 100 entries in 4 batches.
+Reviewed: 125 of 416 D7 stubs, 0 of 79 homes; 125 entries in 5 batches.
 
 ## 1. Verdicts by field
 
 Each population's fields, counted by verdict. The domain is the reviewed entry's own.
 
-### D7 stubs (100 entries)
+### D7 stubs (125 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 99 | 0 | 0 | 1 |
-| description | 96 | 4 | 0 | 0 |
-| input | 97 | 3 | 0 | 0 |
-| output | 100 | 0 | 0 | 0 |
-| preserved | 86 | 2 | 0 | 12 |
-| broken | 56 | 3 | 0 | 41 |
-| **all** | 534 | 12 | 0 | 54 |
+| name | 118 | 0 | 0 | 7 |
+| description | 113 | 5 | 0 | 7 |
+| input | 114 | 3 | 0 | 8 |
+| output | 115 | 0 | 0 | 10 |
+| preserved | 97 | 2 | 0 | 26 |
+| broken | 59 | 3 | 0 | 63 |
+| **all** | 616 | 13 | 0 | 121 |
 
 ## 2. Recall against source
 
@@ -32,14 +32,18 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 2 | 25 | 132 | 0 | 0% |
 | 3 | 25 | 139 | 0 | 0% |
 | 4 | 25 | 132 | 1 | 1% |
-| **all** | 100 | 546 | 3 | 1% |
+| 5 | 25 | 83 | 0 | 0% |
+| **all** | 125 | 629 | 3 | 0% |
 
 ## 3. Second reading of the sample
 
 Fills in the audit's fixed sample, first graded by the fills' author against live URLs (`audit/grades-0_1.js`, kept for the sample's estimates), graded again here against excerpt files. Fields where the two readings differ:
 
+- D7-123 description: sample confirmed, review unsupported.
+- D7-123 input: sample confirmed, review unsupported.
+- D7-123 preserved: sample confirmed, review unsupported.
 
-Agreement: 6 of 6 fields.
+Agreement: 9 of 12 fields.
 
 ## 4. Sources in disagreement
 
@@ -100,6 +104,29 @@ Every field not confirmed, with the reason.
 - **D7-090 Groupoidification** (batch 4): *preserved* unsupported: Connected components and pi_1 of the nerve are not stated in the fetched sources.
 - **D7-096 Quasivariety Generation** (batch 4): *broken* unsupported: The source does not say that homomorphic images may leave a quasivariety (it gives cancellative semigroups as a quasivariety without the argument).
 - **D7-098 Subalgebra Generation** (batch 4): *broken* unsupported: No source states what is not reached.
+- **D7-101 Subdirect Decomposition** (batch 5): *broken* unsupported: Non-uniqueness of the decomposition is not stated in the fetched sources.
+- **D7-102 Reduced Product Construction** (batch 5): *preserved* unsupported: Preservation of Horn sentences is not stated in the fetched source. *broken* unsupported: The source does not say which sentences fail without an ultrafilter.
+- **D7-104 Boolean Power Construction** (batch 5): *name* unsupported: Foster's Boolean power: no fetched source (Wikipedia has no page; none found on the nLab). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-105 Bounded Boolean Power Construction** (batch 5): *name* unsupported: No fetched source for bounded Boolean powers. *description* unsupported: No fetched source. Recalled, unchecked: continuous maps from a compact Stone space to a discrete set already have finite range, so the stated distinction needs a source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-106 Congruence Generation** (batch 5): *broken* unsupported: "Everything forced" is a gloss; not stated.
+- **D7-107 Principal Congruence Construction** (batch 5): *name* unsupported: "Principal congruence" is not defined in the fetched sources. *broken* unsupported: Not stated.
+- **D7-108 Congruence Lattice Evaluation** (batch 5): *preserved* unsupported: Distributivity is quoted for lattices ("The congruence lattice of any lattice is distributive"), but the fill's claim is about Mal'cev varieties, whose modularity is not stated in the fetched sources. *broken* unsupported: Not stated.
+- **D7-109 Quotient Algebra Formation** (batch 5): *broken* unsupported: Not stated.
+- **D7-110 Mal'cev Condition Application** (batch 5): *preserved* unsupported: Behaviour under interpretations between varieties is not stated in the fetched sources. *broken* unsupported: Not stated.
+- **D7-111 Commutator Construction** (batch 5): *name* unsupported: The commutator of congruences (Smith, Hagemann and Herrmann) has no fetched source. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-112 Center Construction** (batch 5): *broken* unsupported: Not stated.
+- **D7-114 Nilpotent Reduction** (batch 5): *output* unsupported: The quotient by a lower central series term is not stated in the fetched source. *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-115 Solvable Reduction** (batch 5): *output* unsupported: The quotient by a derived series term is not stated in the fetched source. *preserved* unsupported: Not stated. *broken* unsupported: Not stated.
+- **D7-116 Clone Generation** (batch 5): *broken* unsupported: Not stated.
+- **D7-117 Polymorphism Extraction** (batch 5): *description* unsupported: The definition (operations preserving every relation) is not quoted; the sources use polymorphisms for the CSP without defining them in the abstract. *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: The Pol-Inv duality is not stated in the fetched sources. *broken* unsupported: Not stated.
+- **D7-118 Invariant Relation Extraction** (batch 5): *name* unsupported: No fetched source for invariant relations or the Pol-Inv Galois connection. *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-119 Galois Connection Formulation** (batch 5): *description* imprecise: The condition f(a) <= b iff a <= g(b) is the monotone convention, under which one composite is a closure operator and the other a kernel operator. Closure operators on both sides belong to the antitone convention, which the fill also names. The two conventions are run together.
+- **D7-120 Birkhoff Representation** (batch 5): *broken* unsupported: "Nothing; a duality" is not stated in the fetched text.
+- **D7-121 J\u00f3nsson Lemma Application** (batch 5): *name* unsupported: Jonsson's lemma: no fetched source (no Wikipedia page). *description* unsupported: No fetched source. *input* unsupported: No fetched source. *output* unsupported: No fetched source. *preserved* unsupported: No fetched source. *broken* unsupported: No fetched source.
+- **D7-122 Taylor Term Evaluation** (batch 5): *input* unsupported: Not quoted. *output* unsupported: Not quoted. *preserved* unsupported: Not quoted. *broken* unsupported: Not stated.
+- **D7-123 Siggers Term Evaluation** (batch 5): *description* unsupported: The 6-ary identity and the equivalence with a Taylor term are not stated in the fetched abstracts; the second source names the two dichotomy proofs (Bulatov, Zhuk) without the Siggers term. *input* unsupported: Not quoted. *preserved* unsupported: Equivalence with Taylor terms is not stated in the fetched abstracts. *broken* unsupported: Not stated.
+- **D7-124 Absorption Law Reduction** (batch 5): *broken* unsupported: Not stated.
+- **D7-125 Idempotent Reduction** (batch 5): *output* unsupported: The idempotent reduct is not stated in the fetched source. *preserved* unsupported: The tractability class in CSP is not stated in the fetched source. *broken* unsupported: Not stated.
 
 ## 6. Receipts
 
@@ -1364,4 +1391,306 @@ actions defining an optic"
 
   s: excerpts/wikipedia-subdirect-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024)
   v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-101 Subdirect Decomposition (batch 5)
+
+- name: **confirmed** [i] "The '''subdirect representation theorem''' of universal algebra states that every algebra is subdirectly representable by its subdirectly irreducible [[quotient]]s."
+- description: **confirmed** [s] "Birkhoff (1944) proved that every algebra all of whose operations are of finite arity is isomorphic to a subdirect product of subdirectly irreducible algebras." [s] "Subdirect irreducibles are to subdirect product of algebras roughly as primes are to multiplication of integers." *The source asks for finitary operations. "The prime factorization of universal algebra" matches the source's analogy.*
+- input: **confirmed** [s] "every algebra all of whose operations are of finite arity"
+- output: **confirmed** [i] "every algebra is subdirectly representable by its subdirectly irreducible [[quotient]]s."
+- preserved: **confirmed** [s] "is isomorphic to a subdirect product of subdirectly irreducible algebras." *Identities pass to subalgebras of products; not quoted here.*
+- broken: **unsupported** *Non-uniqueness of the decomposition is not stated in the fetched sources.*
+- recalled: name: Standard (Birkhoff 1944); description: Every algebra is a subdirect product of subdirectly irreducible algebras; input: An algebra; output: Subdirect embedding; preserved: A up to isomorphism; identities; broken: Not unique
+
+  s: excerpts/wikipedia-subdirect-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024)
+  i: excerpts/wikipedia-subdirectly-irreducible-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1249052338)
+
+### D7-102 Reduced Product Construction (batch 5)
+
+- name: **confirmed** [p] "The domain of the reduced product is the [[quotient set|quotient]] of the [[Cartesian product]]"
+- description: **confirmed** [p] "by a certain [[equivalence relation]]&nbsp;~: two elements (''a<sub>i</sub>'') and (''b<sub>i</sub>'') of the Cartesian product are equivalent if"
+- input: **confirmed** [p] "and let ''U'' be a proper [[filter (mathematics)|filter]] on ''I''."
+- output: **confirmed** [p] "The domain of the reduced product is the [[quotient set|quotient]] of the [[Cartesian product]]"
+- preserved: **unsupported** *Preservation of Horn sentences is not stated in the fetched source.*
+- broken: **unsupported** *The source does not say which sentences fail without an ultrafilter.*
+- recalled: name: Standard; description: Product modulo a filter on the index set; input: Family and filter; output: Reduced product; preserved: Horn sentences (Chang and Keisler); broken: General first-order sentences
+
+  p: excerpts/wikipedia-reduced-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299176928)
+
+### D7-103 Ultraproduct Construction (batch 5)
+
+- name: **confirmed** [p] "If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct."
+- description: **confirmed** [u] "It states that any [[first-order predicate calculus|first-order]] formula is true in the ultraproduct if and only if the set of indices <math>i</math> such that the formula is true in <math>M_i</math> is a membe" *The attribution of the theorem to Los is the source's.*
+- input: **confirmed** [p] "If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct."
+- output: **confirmed** [p] "If ''U'' is an [[ultrafilter]], the reduced product is an ultraproduct."
+- preserved: **confirmed** [u] "It states that any [[first-order predicate calculus|first-order]] formula is true in the ultraproduct if and only if the set of indices <math>i</math> such that the formula is true in <math>M_i</math> is a membe"
+- broken: **confirmed** [u] "one can define [[nonstandard integer]]s, [[nonstandard complex numbers]], etc., by taking the ultraproduct of copies of the corresponding structures." *Nonstandard elements: quoted. Loss of countable cardinality is not checked.*
+- recalled: name: Standard (Los's theorem); description: Reduced product by an ultrafilter; Los's theorem; input: Family and ultrafilter; output: Ultraproduct; preserved: First-order sentences true U-almost everywhere; broken: Standardness; nonprincipal countable ultraproducts are finite or of size continuum
+
+  u: excerpts/wikipedia-ultraproduct.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371262511)
+  p: excerpts/wikipedia-reduced-product.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299176928)
+
+### D7-104 Boolean Power Construction (batch 5)
+
+- name: **unsupported** *Foster's Boolean power: no fetched source (Wikipedia has no page; none found on the nLab).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Foster); description: Continuous functions from the Stone space of B to discrete A; input: Algebra and Boolean algebra; output: Boolean power; preserved: Identities, universal Horn sentences; broken: Finiteness, irreducibility
+
+
+### D7-105 Bounded Boolean Power Construction (batch 5)
+
+- name: **unsupported** *No fetched source for bounded Boolean powers.*
+- description: **unsupported** *No fetched source. Recalled, unchecked: continuous maps from a compact Stone space to a discrete set already have finite range, so the stated distinction needs a source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Bounded Boolean power (Burris); unsure of the exact definition; description: Variant of the Boolean power; input: Algebra and Boolean algebra; output: Bounded Boolean power; preserved: Identities; diagonal embedding; broken: Unclear
+
+
+### D7-106 Congruence Generation (batch 5)
+
+- name: **confirmed** [q] "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\mathcal{A}</math>, such that it is a congruence"
+- description: **confirmed** [q] "<math> \langle E \rangle_{\mathcal{A}} = \bigcap \{ F \in \mathrm{Con}(\mathcal{A}) \mid E \subseteq F \}</math>"
+- input: **confirmed** [q] "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\mathcal{A}</math>, such that it is a congruence"
+- output: **confirmed** [q] "Note that the closure of a binary relation is a congruence"
+- preserved: **confirmed** [q] "the compatibility conditions are used to give the classes an algebraic structure."
+- broken: **unsupported** *"Everything forced" is a gloss; not stated.*
+- recalled: name: Standard; description: Smallest congruence containing a set of pairs; input: Algebra and pairs; output: Generated congruence; preserved: Operations descend to the quotient; broken: Forced identifications
+
+  q: excerpts/wikipedia-quotient-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094)
+
+### D7-107 Principal Congruence Construction (batch 5)
+
+- name: **unsupported** *"Principal congruence" is not defined in the fetched sources.*
+- description: **confirmed** [q] "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\mathcal{A}</math>, such that it is a congruence" *With E a single pair; the principal case itself is not named.*
+- input: **confirmed** [q] "we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\mathcal{A}</math>, such that it is a congruence"
+- output: **confirmed** [q] "Note that the closure of a binary relation is a congruence"
+- preserved: **confirmed** [l] "A congruence of an [[Universal algebra|algebra]] ''A'' is finitely generated [[if and only if]] it is a [[compact element]] of Con ''A''."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Congruence generated by one pair; input: Algebra and two elements; output: Principal congruence; preserved: Compact in the congruence lattice; broken: Distinction of a and b
+
+  q: excerpts/wikipedia-quotient-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094)
+  l: excerpts/wikipedia-congruence-lattice-problem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382056256)
+
+### D7-108 Congruence Lattice Evaluation (batch 5)
+
+- name: **confirmed** [l] "The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]]."
+- description: **confirmed** [l] "The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]]."
+- input: **confirmed** [l] "The congruence lattice Con ''A'' of any algebra ''A''"
+- output: **confirmed** [l] "The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]]."
+- preserved: **unsupported** *Distributivity is quoted for lattices ("The congruence lattice of any lattice is distributive"), but the fill's claim is about Mal'cev varieties, whose modularity is not stated in the fetched sources.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Con(A) is an algebraic lattice; every algebraic lattice arises (Gratzer and Schmidt); input: An algebra; output: Congruence lattice; preserved: Modular for congruence-permutable varieties; distributive for lattices; broken: Elements
+
+  l: excerpts/wikipedia-congruence-lattice-problem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382056256)
+
+### D7-109 Quotient Algebra Formation (batch 5)
+
+- name: **confirmed** [q] "a '''quotient algebra''' is the result of [[Partition of a set|partition]]ing the elements of an [[algebraic structure]] using a [[congruence relation]]."
+- description: **confirmed** [q] "The quotient algebra has these classes as its elements, and the compatibility conditions are used to give the classes an algebraic structure."
+- input: **confirmed** [q] "a '''quotient algebra''' is the result of [[Partition of a set|partition]]ing the elements of an [[algebraic structure]] using a [[congruence relation]]."
+- output: **confirmed** [q] "Quotient algebras are also called '''factor algebras'''."
+- preserved: **confirmed** [v] "a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions." *A quotient is a homomorphic image.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: A modulo a congruence, operations on classes; input: Algebra and congruence; output: Quotient algebra; preserved: Identities; broken: Distinctions within classes
+
+  q: excerpts/wikipedia-quotient-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094)
+  v: excerpts/wikipedia-variety-universal-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066)
+
+### D7-110 Mal'cev Condition Application (batch 5)
+
+- name: **confirmed** [c] "Such a term is called a '''Maltsev term''' and congruence-permutable varieties are also known as '''Maltsev varieties''' in his honor." [l] "We discuss such Maltsev conditions that consist of just one linear equation" *The fill's example is Maltsev's theorem; Maltsev conditions in general are the subject of the second source.*
+- description: **confirmed** [c] ":<math>\mathcal{V}\models q(x,y,y)\approx x\approx q(y,y,x)</math>." *The fill's p(x,x,y) = y = p(y,x,x) is the same pair of identities with the variables renamed.*
+- input: **confirmed** [c] "Suppose that <math>\mathcal{V}</math> is a variety of algebras. The following are equivalent:"
+- output: **confirmed** [c] "|1= The variety <math>\mathcal{V}</math> is congruence-permutable."
+- preserved: **unsupported** *Behaviour under interpretations between varieties is not stated in the fetched sources.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Mal'cev 1954); description: Property of varieties characterized by terms and identities; Mal'cev term iff congruence permutability; input: A variety; output: Whether the terms exist; preserved: Preserved under interpretations; broken: Nothing
+
+  c: excerpts/wikipedia-congruence-permutable-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=994781352)
+  l: excerpts/arxiv-1701.00260.txt (https://export.arxiv.org/abs/1701.00260)
+
+### D7-111 Commutator Construction (batch 5)
+
+- name: **unsupported** *The commutator of congruences (Smith, Hagemann and Herrmann) has no fetched source.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Smith; Hagemann and Herrmann; Freese and McKenzie); description: Commutator of congruences generalizing group commutator; input: Algebra in a congruence-modular variety; output: Congruence [alpha, beta]; preserved: Abelianness, centrality; broken: Element-level commutators
+
+
+### D7-112 Center Construction (batch 5)
+
+- name: **confirmed** [z] "{{Short description|Set of elements that commute with every element of a group}}"
+- description: **confirmed** [z] "{{Short description|Set of elements that commute with every element of a group}}" *The group case is checked; the central congruence of an algebra and the ring case are not.*
+- input: **confirmed** [z] "The center is a [[normal subgroup]], <math>Z(G)\triangleleft G</math>"
+- output: **confirmed** [z] "The center is a [[normal subgroup]], <math>Z(G)\triangleleft G</math>"
+- preserved: **confirmed** [z] "{{Short description|Set of elements that commute with every element of a group}}"
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Elements or congruence commuting with everything; input: Group, ring or algebra; output: Center; preserved: Commutation; broken: Non-central structure
+
+  z: excerpts/wikipedia-center-group-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1372987594)
+
+### D7-113 Abelianization of an Algebra (batch 5)
+
+- name: **confirmed** [c] "is an abelian group called the '''abelianization''' of <math>G</math>"
+- description: **confirmed** [c] "The commutator subgroup is important because it is the [[Universal property|smallest]] [[normal subgroup]] such that the [[quotient group]] of the original group by this subgroup is [[abelian group|abelian]]." *The group case is checked; the commutator of congruences in a modular variety is not.*
+- input: **confirmed** [c] "The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>" *Groups only.*
+- output: **confirmed** [c] "The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>"
+- preserved: **confirmed** [c] "is universal for homomorphisms from <math>G</math> to an abelian group <math>H</math>"
+- broken: **confirmed** [c] "So in some sense it provides a measure of how far the group is fr"
+- recalled: name: Standard for groups; general via the commutator; description: Largest abelian quotient G/[G,G]; input: Group or algebra; output: Abelian quotient; preserved: Maps to abelian algebras factor; broken: Noncommutative information
+
+  c: excerpts/wikipedia-commutator-subgroup.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377919281)
+
+### D7-114 Nilpotent Reduction (batch 5)
+
+- name: **confirmed** [n] "a '''nilpotent group''' is a [[Group (mathematics)|group]] that has an [[upper central series]] that terminates with itself."
+- description: **confirmed** [n] "or its [[lower central series]] terminates with the [[trivial group]]." *Groups only; rings and algebras are not checked.*
+- input: **confirmed** [n] "is called the '''nilpotency class''' of <math>G</math>"
+- output: **unsupported** *The quotient by a lower central series term is not stated in the fetched source.*
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Lower central series and nilpotent quotients; input: Group, ring or algebra; output: Nilpotent quotient; preserved: Structure up to class c; broken: Higher commutators
+
+  n: excerpts/wikipedia-nilpotent-group.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381454118)
+
+### D7-115 Solvable Reduction (batch 5)
+
+- name: **confirmed** [s] "a '''solvable group''' or '''soluble group''' is a [[group (mathematics)|group]] that can be constructed from [[abelian group]]s"
+- description: **confirmed** [s] "Equivalently, a solvable group is a group whose [[derived series]] terminates in the [[trivial subgroup]]." *Groups only.*
+- input: **confirmed** [s] "Equivalently, a solvable group is a group whose [[derived series]] terminates in the [[trivial subgroup]]."
+- output: **unsupported** *The quotient by a derived series term is not stated in the fetched source.*
+- preserved: **unsupported** *Not stated.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Derived series and solvable quotients; input: Group or algebra; output: Solvable quotient; preserved: Derived length; broken: Deeper series
+
+  s: excerpts/wikipedia-solvable-group.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378177221)
+
+### D7-116 Clone Generation (batch 5)
+
+- name: **confirmed** [c] "a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that"
+- description: **confirmed** [c] "*''C'' contains all the [[projection (set theory)|projection]]s" [c] "*''C'' is closed under [[generalized composition|(finitary multiple) composition]] (or "superposition")" *"The smallest clone containing" given operations is not quoted.*
+- input: **confirmed** [c] "a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that"
+- output: **confirmed** [c] "a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that"
+- preserved: **confirmed** [c] "the set of operations on its carrier definable by a ''σ''-[[first-order logic#Formation rules|term]] (the ''term functions'') is a clone."
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: Smallest clone: closed under composition, containing projections; input: Operations on A; output: Generated clone; preserved: Term operations; broken: Operations not composable from them
+
+  c: excerpts/wikipedia-clone-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1368870620)
+
+### D7-117 Polymorphism Extraction (batch 5)
+
+- name: **confirmed** [z] "It was conjectured that if a constraint language has a weak near unanimity polymorphism then the corresponding constraint satisfaction problem is tractable"
+- description: **unsupported** *The definition (operations preserving every relation) is not quoted; the sources use polymorphisms for the CSP without defining them in the abstract.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *The Pol-Inv duality is not stated in the fetched sources.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Geiger; Bodnarchuk et al.); description: Operations preserving all relations; Pol-Inv Galois connection; CSP; input: Relational structure; output: Polymorphism clone; preserved: Inv Pol Gamma is the pp-definable closure (finite domain); broken: Relations not pp-definable
+
+  z: excerpts/arxiv-1704.01914.txt (https://export.arxiv.org/abs/1704.01914)
+  b: excerpts/arxiv-2104.11808.txt (https://export.arxiv.org/abs/2104.11808)
+
+### D7-118 Invariant Relation Extraction (batch 5)
+
+- name: **unsupported** *No fetched source for invariant relations or the Pol-Inv Galois connection.*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard; description: Relations preserved by all operations of F; input: Operations; output: Relational clone; preserved: Galois duality; broken: Operations outside the clone
+
+
+### D7-119 Galois Connection Formulation (batch 5)
+
+- name: **confirmed** [g] "In this article, we will refer to them as '''(monotone) Galois connections''' and '''antitone Galois connections'''."
+- description: **imprecise** [g] "known as the associated [[closure operator]], and {{math|''FG'' : ''B'' → ''B''}}, known as the associated kernel operator." [g] "are the associated closure operators; they are monotone idempotent maps with the property" *The condition f(a) <= b iff a <= g(b) is the monotone convention, under which one composite is a closure operator and the other a kernel operator. Closure operators on both sides belong to the antitone convention, which the fill also names. The two conventions are run together.*
+- input: **confirmed** [g] "be two [[partially ordered set]]s."
+- output: **confirmed** [g] "known as the associated [[closure operator]], and {{math|''FG'' : ''B'' → ''B''}}, known as the associated kernel operator."
+- preserved: **confirmed** [g] "but every Galois connection gives rise to an isomorphism of certain sub-posets"
+- broken: **confirmed** [g] "but every Galois connection gives rise to an isomorphism of certain sub-posets" *Only the closed elements correspond.*
+- recalled: name: Standard; description: Monotone f(a) <= b iff a <= g(b), or antitone version; closure operators; input: Posets; output: Galois connection; preserved: Closed elements in bijection; broken: Non-closed elements
+
+  g: excerpts/wikipedia-galois-connection-r.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364444923)
+
+### D7-120 Birkhoff Representation (batch 5)
+
+- name: **confirmed** [b] "'''Birkhoff's representation theorem''' for [[distributive lattice]]s states that the elements of any finite distributive lattice can be represented as [[finite set]]s"
+- description: **confirmed** [b] "the elements of any finite distributive lattice may be associated with lower sets of a partial order in the same way." [b] "In a lattice, an element <math>x</math> is called ''join-irreducible'' if <math>x</math> is not the join of a finite set of other elements." *That the partial order is the join-irreducibles is in the source's construction ("''join-irreducible''" is defined there); not quoted as one sentence.*
+- input: **confirmed** [b] "the elements of any finite distributive lattice can be represented as [[finite set]]s"
+- output: **confirmed** [b] "the elements of any finite distributive lattice may be associated with lower sets of a partial order in the same way."
+- preserved: **confirmed** [b] "in such a way that the lattice operations correspond to [[Union (set theory)|unions]] and [[Intersection (set theory)|intersections]] of sets."
+- broken: **unsupported** *"Nothing; a duality" is not stated in the fetched text.*
+- recalled: name: Standard (Birkhoff representation theorem); description: Finite distributive lattice is the lattice of down-sets of its join-irreducibles; input: Finite distributive lattice; output: Poset and isomorphism; preserved: L up to isomorphism; broken: Nothing
+
+  b: excerpts/wikipedia-birkhoffs-representation-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377981990)
+
+### D7-121 J\u00f3nsson Lemma Application (batch 5)
+
+- name: **unsupported** *Jonsson's lemma: no fetched source (no Wikipedia page).*
+- description: **unsupported** *No fetched source.*
+- input: **unsupported** *No fetched source.*
+- output: **unsupported** *No fetched source.*
+- preserved: **unsupported** *No fetched source.*
+- broken: **unsupported** *No fetched source.*
+- recalled: name: Standard (Jonsson's lemma); description: In a congruence-distributive variety generated by K, subdirectly irreducibles lie in HSP_U(K); input: CD variety; output: Location of subdirectly irreducibles; preserved: Equational theory; broken: Nothing
+
+
+### D7-122 Taylor Term Evaluation (batch 5)
+
+- name: **confirmed** [b] "Unifying the Three Algebraic Approaches to the CSP via Minimal Taylor Algebras"
+- description: **confirmed** [b] "This class of algebras is broad enough that it suffices to verify the CSP Dichotomy Theorem on this class only" *Taylor algebras carry the dichotomy, per the source; the defining identities are not quoted.*
+- input: **unsupported** *Not quoted.*
+- output: **unsupported** *Not quoted.*
+- preserved: **unsupported** *Not quoted.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Walter Taylor); description: Idempotent term satisfying nontrivial identities; tractability in CSP; input: Idempotent algebra; output: Taylor term or not; preserved: Mal'cev condition; broken: Nothing
+
+  b: excerpts/arxiv-2104.11808.txt (https://export.arxiv.org/abs/2104.11808)
+
+### D7-123 Siggers Term Evaluation (batch 5)
+
+- name: **confirmed** [l] "It follows that the Siggers term is the weakest non-trivial loop condition."
+- description: **unsupported** *The 6-ary identity and the equivalence with a Taylor term are not stated in the fetched abstracts; the second source names the two dichotomy proofs (Bulatov, Zhuk) without the Siggers term.*
+- input: **unsupported** *Not quoted.*
+- output: **confirmed** [l] "We discuss such Maltsev conditions that consist of just one linear equation, we call them loop conditions."
+- preserved: **unsupported** *Equivalence with Taylor terms is not stated in the fetched abstracts.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard (Siggers 2010); description: 6-ary term s(x,y,x,z,y,z) = s(y,x,z,x,z,y), equivalent to Taylor for finite algebras; 4-ary version by Kearnes, Markovic, McKenzie; input: Finite algebra; output: Siggers term or not; preserved: Equivalent to Taylor; broken: Nothing
+
+  l: excerpts/arxiv-1701.00260.txt (https://export.arxiv.org/abs/1701.00260)
+  b: excerpts/arxiv-2104.11808.txt (https://export.arxiv.org/abs/2104.11808)
+
+### D7-124 Absorption Law Reduction (batch 5)
+
+- name: **confirmed** [a] "the '''absorption law''' or '''absorption identity''' is an [[Identity (mathematics)|identity]] linking a pair of [[binary operations]]."
+- description: **confirmed** [a] ":''a'' ¤ (''a'' ⁂ ''b'') = ''a'' ⁂ (''a'' ¤ ''b'') = ''a''."
+- input: **confirmed** [a] "=== Lattices ==="
+- output: **confirmed** [a] ":''a'' ¤ (''a'' ⁂ ''b'') = ''a'' ⁂ (''a'' ¤ ''b'') = ''a''." *The shorter term follows from the identity.*
+- preserved: **confirmed** [a] "A [[Set (mathematics)|set]] equipped with two [[commutative]] and [[associative]] binary operations" *The identity holds in every lattice by definition.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard; description: a or (a and b) = a, and dually; input: Lattice term; output: Shorter term; preserved: Value; broken: Nothing
+
+  a: excerpts/wikipedia-absorption-law.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1373730955)
+
+### D7-125 Idempotent Reduction (batch 5)
+
+- name: **confirmed** [i] "The ''binary operation'' <math>\cdot</math> is said to be ''idempotent'' if"
+- description: **confirmed** [i] "The ''binary operation'' <math>\cdot</math> is said to be ''idempotent'' if" *Idempotent reducts of algebras are not checked.*
+- input: **confirmed** [i] "The ''binary operation'' <math>\cdot</math> is said to be ''idempotent'' if"
+- output: **unsupported** *The idempotent reduct is not stated in the fetched source.*
+- preserved: **unsupported** *The tractability class in CSP is not stated in the fetched source.*
+- broken: **unsupported** *Not stated.*
+- recalled: name: Standard notion; nonstandard as an operation; description: f(x,...,x) = x; idempotent reduct; input: Term or algebra; output: Simplified term or reduct; preserved: Values; CSP reduces to idempotent; broken: Non-idempotent operations
+
+  i: excerpts/wikipedia-idempotence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382059785)
 

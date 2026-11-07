@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Congruence lattice problem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382056256
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7425f172e087080dc1f7bb4262d432070ce841f34fa97d961aa3d113cd284f04
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A congruence of an [[Universal algebra|algebra]] ''A'' is finitely generated [[if and only if]] it is a [[compact element]] of Con ''A''.
+
+The congruence lattice Con ''A'' of any algebra ''A'' is an [[compact element|algebraic lattice]].
+
+The congruence lattice Con ''A'' of any algebra ''A''
