@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Alignment API: confidence in a correspondence
+URL: https://moex.gitlabpages.inria.fr/alignapi/format.html
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 99b65ec77a7ca57e9c6caa156b6f722942f6cdb441ee54341f62a1e9b563e6b9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the confidence
+    that the relation holds between the first and
+    the second entity.

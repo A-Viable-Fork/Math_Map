@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: W3C SKOS: limits of mapping composition
+URL: https://www.w3.org/TR/skos-reference/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3aa00cd16ee4d86d3a19b75501bb317d0b0c134e1f4029e9f3098c4dd3669e4c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+All other SKOS mapping properties are not transitive.

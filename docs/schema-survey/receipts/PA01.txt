@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Lean reference: dependent core terms
+URL: https://lean-lang.org/doc/reference/latest/The-Type-System/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 1e40e3ae4821d69ed6713685e6daef0e05153a54dc879a142f37409a13fffe28
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Terms are a dependently typed λ-calculus: they include function abstraction, application, variables, and <code>let</code>-bindings.

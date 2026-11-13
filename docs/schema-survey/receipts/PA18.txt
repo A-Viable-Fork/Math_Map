@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: OMDoc: statement and theory modules
+URL: https://www.omdoc.org/modules/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: b7a4808ab1c5e748849272af04e94d2955e4383499340e8a2609d6bfa3aa55be
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Definitions, Theorems, Axioms, Examples, etc, and simple theories with inheritance
+
+To add inheritance via translations, theory inclusions.

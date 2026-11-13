@@ -1,0 +1,51 @@
+{
+  "kind": "wall clock readings",
+  "scope": "Observed family authoring-and-first-run intervals in this session, including encoding and fixes, after shared source preparation. Not human research labor measurements or future production estimates. Source discovery/review and common helper design are shared costs; finite fixture reuse makes later rows cheaper.",
+  "families": {
+    "C02": {
+      "start": 1794596132.137702,
+      "end": 1794596244.4593978,
+      "elapsedSeconds": 112.32169580459595,
+      "rows": 16,
+      "elapsedSecondsPerRow": 7.020105987787247
+    },
+    "C23": {
+      "start": 1794596244.4593995,
+      "end": 1794596353.2611864,
+      "elapsedSeconds": 108.80178689956665,
+      "rows": 17,
+      "elapsedSecondsPerRow": 6.400105111739215
+    },
+    "C15": {
+      "start": 1794596353.2611876,
+      "end": 1794596442.83616,
+      "elapsedSeconds": 89.57497239112854,
+      "rows": 16,
+      "elapsedSecondsPerRow": 5.598435774445534
+    },
+    "C30": {
+      "start": 1794596442.8361614,
+      "end": 1794596529.071952,
+      "elapsedSeconds": 86.2357907295227,
+      "rows": 16,
+      "elapsedSecondsPerRow": 5.389736920595169
+    },
+    "C33": {
+      "start": 1794596529.0719538,
+      "end": 1794596630.9756415,
+      "elapsedSeconds": 101.9036877155304,
+      "rows": 18,
+      "elapsedSecondsPerRow": 5.661315984196133
+    },
+    "C53": {
+      "start": 1794596630.9756432,
+      "end": 1794596728.7903197,
+      "elapsedSeconds": 97.81467652320862,
+      "rows": 20,
+      "elapsedSecondsPerRow": 4.890733826160431
+    }
+  },
+  "sharedSourceStart": 1794595847.8890564,
+  "sharedSourceEnd": 1794596132.137702,
+  "sharedSourceSeconds": 284.2486455440521
+}

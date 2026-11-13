@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: mathlib-degree, pinned source
+URL: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 1ed8ac52ee54c7b8a02fcfe0d61f3a03cf1916327885f4accc8b332405f62a14
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+variable [NoZeroDivisors R] {p q : R[X]}
+
+lemma degree_mul : degree (p * q) = degree p + degree q :=

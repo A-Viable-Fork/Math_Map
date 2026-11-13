@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Lean reference: audited axiom dependencies
+URL: https://lean-lang.org/doc/reference/latest/Axioms/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 23ae190bcc6a40b919f67cb498eed2a49e4d5a83a73c44f07eea562b7fad56a1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Lean automatically tracks the axioms that each proof depends on so that they can be audited.

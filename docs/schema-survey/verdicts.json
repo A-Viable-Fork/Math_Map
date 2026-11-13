@@ -1,0 +1,1070 @@
+{
+  "kind": "utility judgment, proposed to the operator",
+  "gradeScope": "confirmed means worth keeping at the stated bounded function; it is not a truth grade for every row or a landing ruling",
+  "rankingRule": "research and consumer value across the requested arrows, tempered by evidence burden; the first six are the selected pilot families, not a scalar confidence ordering",
+  "verdicts": [
+    {
+      "rank": 1,
+      "candidate": "C02",
+      "name": "Scoped hypothesis predicates",
+      "verdict": "confirmed",
+      "reason": "C02 evaluates sixteen explicit guards and preserves unknowns. Keep a small source-applicability mechanism; arbitrary predicate inference and full theorem applicability remain open.",
+      "arrows": "M>C; C>M; L>M; atlas",
+      "dayOneReader": "compose.mjs needs an obligation environment; Formalization reads unresolved goals",
+      "receiptRule": "Receipt every predicate and its scope in a complete theorem or stated source rule",
+      "cost": "1 to 6 obligations per claim; a small decidable fragment is checkable; no automatic corpus backfill",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA01",
+        "PA06"
+      ],
+      "pilot": "pilots/C02.json"
+    },
+    {
+      "rank": 2,
+      "candidate": "C23",
+      "name": "Intertwining rules",
+      "verdict": "confirmed",
+      "reason": "C23 distinguishes convolution domains, multiplication order and normalization. A narrow equation with conditions directly serves route use; broad analytic rules still need their own evidence.",
+      "arrows": "M>C; C>M; M>L; atlas",
+      "dayOneReader": "MCP intertwinings/routes adapter; Formalization transform intake",
+      "receiptRule": "Quote the full equation and its hypotheses, including boundary terms",
+      "cost": "2 to 10 rules per transform; exact finite checks useful, infinite rules proof-heavy",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA05",
+        "PA06"
+      ],
+      "pilot": "pilots/C23.json"
+    },
+    {
+      "rank": 3,
+      "candidate": "C15",
+      "name": "Restricted inverse relations",
+      "verdict": "plausible",
+      "reason": "C15 finds reverse routes in bounded fixtures and refuses poles/scaling errors. Universal inverse laws and a production route reader remain owed.",
+      "arrows": "M>C; M>L; atlas",
+      "dayOneReader": "MCP related/routes adapter; compose currently ignores entry relations",
+      "receiptRule": "Both inverse laws, valid domains and convention conversion, with separate receipts",
+      "cost": "One edge per pair/direction, 15 to 40 pilot rows; finite checks partial; proof debt explicit",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA04"
+      ],
+      "pilot": "pilots/C15.json"
+    },
+    {
+      "rank": 4,
+      "candidate": "C30",
+      "name": "Realization envelopes",
+      "verdict": "plausible",
+      "reason": "C30 preserves sixteen static platform claims and detects drift. Code, proof, model and empirical variants were not piloted and cannot share one assurance rule by assumption.",
+      "arrows": "M>C; C>M; C>L",
+      "dayOneReader": "Research_OS bindings.json migration adapter; platform display can read immediately with adapter",
+      "receiptRule": "Immutable artifact/source hash, symbol, contract fingerprint, check result and its scope",
+      "cost": "One row per realization, reuse 90 platform rows; source checks cheap, behavioral proofs rare",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA09",
+        "PA17",
+        "PA22"
+      ],
+      "pilot": "pilots/C30.json"
+    },
+    {
+      "rank": 5,
+      "candidate": "C33",
+      "name": "Representation translations and losses",
+      "verdict": "needs refinement",
+      "reason": "C33 identifies nine incomplete information round trips and a normalization ambiguity. Alignment annotations are generated judgments; English meaning preservation is unproved.",
+      "arrows": "M>C; C>M; M>L; L>M; C>L; L>C; atlas",
+      "dayOneReader": "MCP get_entry and Research_OS mapread need a translation projection; pilot compares loss",
+      "receiptRule": "Receipted definitions and aligned sentences on both sides; per-guarantee witnesses",
+      "cost": "2 to 6 arrows per operation; alignment review high; unknown loss never zero",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA02",
+        "PA17",
+        "PA19"
+      ],
+      "pilot": "pilots/C33.json"
+    },
+    {
+      "rank": 6,
+      "candidate": "C53",
+      "name": "Atlas transitions",
+      "verdict": "needs refinement",
+      "reason": "C53 checks eight of twenty bounded views, while loss and missing witnesses block twelve. General transitions need carrier, domain, equality and evidence beyond cluster membership.",
+      "arrows": "atlas; M>C; C>M; M>L",
+      "dayOneReader": "Disposable transition checker; future MCP atlas reader requires implementation",
+      "receiptRule": "Both definitions, inverse/transport laws and predicate-domain witnesses",
+      "cost": "One arrow per useful overlap; finite models checkable, general proofs high cost",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA04",
+        "PA05",
+        "PA16"
+      ],
+      "pilot": "pilots/C53.json"
+    },
+    {
+      "rank": 7,
+      "candidate": "C01",
+      "name": "Atomic claim records",
+      "verdict": "confirmed",
+      "reason": "The strict reading downgrades compound fields when only some parts are quoted. C02/C23 use specific claim scopes; field-wide grades need this finer target before expansion.",
+      "arrows": "M>C; M>L; L>M",
+      "dayOneReader": "evidence.mjs would need a claim-id lookup; current audit can display spans",
+      "receiptRule": "A window stating the complete proposition, or a pinned theorem plus reviewed interpretation",
+      "cost": "2 to 8 rows per entry; high semantic review; unsplit compounds remain unchecked",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA12",
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 8,
+      "candidate": "C10",
+      "name": "Convention profiles",
+      "verdict": "confirmed",
+      "reason": "DFT/Walsh scale and Mobius order controls change results with matching carriers. C33 exposes a real ambiguous recurrence. Name the convention at each representation boundary.",
+      "arrows": "M>C; C>L; L>M; atlas",
+      "dayOneReader": "formal.mjs and MCP need convention ids; pilot checks normalization",
+      "receiptRule": "Quote definitions on both sides and the explicit conversion",
+      "cost": "One profile per representation and arrows between profiles; cheap finite checks",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA19",
+        "PA14"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 9,
+      "candidate": "C40",
+      "name": "Contract fingerprints",
+      "verdict": "plausible",
+      "reason": "C30 detects input/vocabulary drift without moving on evidence-only changes. Its whole-vocabulary dependency overinvalidates, and foreign definition closure is untested.",
+      "arrows": "M>C; C>M; C>L",
+      "dayOneReader": "Research_OS bindings adapter and formal freshness can compare",
+      "receiptRule": "Deterministic digest specification and dependency closure; source pin retained",
+      "cost": "One digest per entry; near-zero claim debt, scope/version review needed",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA12"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 10,
+      "candidate": "C03",
+      "name": "Named operands and lifetimes",
+      "verdict": "plausible",
+      "reason": "The Phone freeze and Research_OS stress reading need persistent principal/authority identity. C02 facts name operands, but a full unification/resource-frame system was not piloted.",
+      "arrows": "M>C; C>M",
+      "dayOneReader": "compose.mjs requires a named environment; Phone freeze is first case",
+      "receiptRule": "Pinned contract and binding statement for each role; equality witness for aliasing",
+      "cost": "2 to 5 roles per operation; syntactic joins cheap; identity evidence adds debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA01",
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 11,
+      "candidate": "C24",
+      "name": "Invariant temporal scope",
+      "verdict": "needs refinement",
+      "reason": "The consumer reports a step fact carried beyond its step. A scope field needs an explicit propagation rule and relational controls, not a bulk class rename.",
+      "arrows": "M>C; C>M",
+      "dayOneReader": "compose.mjs already reads classes; would need scope-sensitive propagation",
+      "receiptRule": "Contract/theorem states scope; tests exercise expiration and restoration",
+      "cost": "One scope per claim; cheap metadata; checker semantics need scrutiny",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA22"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 12,
+      "candidate": "C26",
+      "name": "Claim-targeted counterexamples",
+      "verdict": "confirmed",
+      "reason": "Zero-divisor, pole, normalization and graphic-forgetting witnesses explain precise failures. Retain the attacked claim and domain so examples cannot refute unrelated statements.",
+      "arrows": "M>C; C>M; L>M",
+      "dayOneReader": "misalign/audit display and pilot evaluator can read; route checker needs hookup",
+      "receiptRule": "Exact object and evaluation or formal negation, tied to a claim id",
+      "cost": "1 to 5 cases per disputed claim; often cheap to execute; semantics still reviewed",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA09",
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 13,
+      "candidate": "C13",
+      "name": "Dependent result domains",
+      "verdict": "plausible",
+      "reason": "Inverse validity depends on the produced range; the Mobius pole and quadratic overlap make this concrete. Analytic convergence-region inference still needs proofs.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "compose.mjs needs dependent result facts; transform routes first",
+      "receiptRule": "Theorem giving the dependency, including boundary conditions",
+      "cost": "1 to 3 rows per transform; interval algebra cheap, analytic facts hard",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA01"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 14,
+      "candidate": "C31",
+      "name": "External proof links",
+      "verdict": "plausible",
+      "reason": "Research_OS and Formalization already hold relevant theorems externally. A pinned declaration plus reviewed statement/definition/axiom correspondence is needed before local evidence can read it.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "lean.mjs/evidence.mjs need an external-project adapter",
+      "receiptRule": "Pinned theorem source plus replay log and reviewed statement comparison",
+      "cost": "One row per theorem mapping; kernel runs costly; imported standing remains local",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA03",
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 15,
+      "candidate": "C19",
+      "name": "Reviewed operation identity",
+      "verdict": "needs refinement",
+      "reason": "The consumers work around duplicate anchors, and domain views recur in pilots. Same names, matching finite cases and similar signatures cannot settle canonical identity.",
+      "arrows": "M>C; C>M; M>L; atlas",
+      "dayOneReader": "Research_OS mapread/decompose needs canonical ids",
+      "receiptRule": "Definitional equality or reviewed equivalence at stated granularity; never name alone",
+      "cost": "One mapping per duplicate view; cheap indexing, expensive adjudication",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA10",
+        "PA12"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 16,
+      "candidate": "C49",
+      "name": "Stored whole-chain proofs",
+      "verdict": "plausible",
+      "reason": "compose already accepts a per-call proof citation. Persistence helps only if chain, model, policy, operand identities and axioms are bound precisely enough to prevent reuse on a different claim.",
+      "arrows": "M>C; C>M",
+      "dayOneReader": "compose.mjs already accepts per-call proofs; needs scoped store adapter",
+      "receiptRule": "External theorem, reviewed model correspondence and exact chain fingerprint",
+      "cost": "One row per proof/policy/chain version; modest indexing, high alignment cost",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA03",
+        "PA16"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 17,
+      "candidate": "C11",
+      "name": "Operator laws",
+      "verdict": "confirmed",
+      "reason": "C23's derivative, evaluation and transpose laws act on operators rather than on input invariants. Distinct law kinds prevent the preserved/broken misfiling seen by intake.",
+      "arrows": "M>C; M>L",
+      "dayOneReader": "compose.mjs needs law-kind handling; Formalization can use laws",
+      "receiptRule": "Complete law theorem with quantifiers and hypotheses",
+      "cost": "1 to 5 rows per operator; some algebraic laws executable; rest need proofs",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA05",
+        "PA06"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 18,
+      "candidate": "C37",
+      "name": "Executable semantic models",
+      "verdict": "needs refinement",
+      "reason": "The code arrow needs integer, crash, effect and runtime semantics. Finite pilot models and proposition erasure show the boundary; no deployment refinement proof was run.",
+      "arrows": "C>M; M>C; C>L",
+      "dayOneReader": "Guardians export and D9 compose need model references",
+      "receiptRule": "Pinned executable and semantic model, refinement argument and test boundary",
+      "cost": "One model per runtime/API family plus bindings; large proof debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA02",
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 19,
+      "candidate": "C05",
+      "name": "Quantitative guarantees",
+      "verdict": "plausible",
+      "reason": "Intake reports bounds and probabilities in prose. Typed parameters would enable goal constraints, but a formula field or units conversion does not discharge a probabilistic theorem.",
+      "arrows": "M>C; M>L; C>M",
+      "dayOneReader": "MCP problem query and compose would need quantity constraints",
+      "receiptRule": "Quote the complete bound with hypotheses, constants/conventions and probability space",
+      "cost": "1 to 4 bound rows per relevant claim; algebra partly decidable; many theorem-specific gaps",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA13",
+        "PA19"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 20,
+      "candidate": "C08",
+      "name": "Foundational profiles",
+      "verdict": "confirmed",
+      "reason": "Lean audits axiom dependencies and consumer proof admission is foundation-sensitive. Store explicit assumptions separately from proof correctness and statement fidelity.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "lean.mjs and external-proof adapter need axiom-set comparison",
+      "receiptRule": "Kernel axiom audit at a pin plus statement-fidelity review",
+      "cost": "One audit per proof artifact; mechanical extraction, semantic alignment debt",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA03"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 21,
+      "candidate": "C32",
+      "name": "Statement/definition fingerprints",
+      "verdict": "plausible",
+      "reason": "Name-stable changes can alter a proof's referent. Exact bytes are useful identity evidence, while canonical semantic hashing and definition closure remain unestablished here.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "formal.mjs freshness and Research_OS ingest can compare",
+      "receiptRule": "Canonicalization algorithm/version, source hash and collision/normalization tests",
+      "cost": "One digest per declaration/definition closure; cheap hashes after extraction",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA03"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 22,
+      "candidate": "C47",
+      "name": "Dependency invalidation",
+      "verdict": "plausible",
+      "reason": "The atlas paper requires regional updates on overlaps and C30 detects conservative dependency drift. A precise sparse dependency graph needs mutation coverage beyond this pilot.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "build/evidence and future atlas adapter need dependency edges",
+      "receiptRule": "Each dependency is pinned; mutation controls show exact affected set",
+      "cost": "1 to 10 dependencies per claim; graph traversal cheap, missing edges costly",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 23,
+      "candidate": "C44",
+      "name": "Consumer field-use manifests",
+      "verdict": "confirmed",
+      "reason": "mapread drops declared typing, conditions and relation metadata. A pinned projection/conformance declaration makes the day-one reader testable instead of assuming exported means consumed.",
+      "arrows": "C>L; L>C; atlas",
+      "dayOneReader": "Research_OS mapread and MCP tool server could publish capabilities",
+      "receiptRule": "Pinned parser/consumer source and executable conformance fixture",
+      "cost": "One profile per consumer version; cheap structural checks",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 24,
+      "candidate": "C42",
+      "name": "Postconditions and read-back results",
+      "verdict": "plausible",
+      "reason": "Typed.java infers some successes from absent matching output. Distinguishing command error from a checked negative observation is useful; this survey ran no Android action.",
+      "arrows": "M>C; C>M; C>L",
+      "dayOneReader": "Phone Typed.java adapter is first reader",
+      "receiptRule": "Pinned predicate and read-back program, exit/status semantics and probe tests",
+      "cost": "One spec per action variant; finite negative controls cheap; device coverage owed",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA09"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 25,
+      "candidate": "C41",
+      "name": "Independent observation ledger",
+      "verdict": "needs refinement",
+      "reason": "The operator's rule and consumer event shape are present. Build applicability, observer independence, repetitions and the crossing of assurance ladders need a dedicated device pilot.",
+      "arrows": "C>M; C>L",
+      "dayOneReader": "Phone Observe adapter and assurance reducer need mapping",
+      "receiptRule": "Hashed log, probe build, repeat ids and observer independence; instance data excluded",
+      "cost": "Two or more runs per claim/build; expensive device access; readings stay readings",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA22"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 26,
+      "candidate": "C48",
+      "name": "Verification tasks and checker prerequisites",
+      "verdict": "plausible",
+      "reason": "The kit already makes check assumptions explicit; evidence queues need comparable task identities. A recorded passing run grants only its own scoped utility claim.",
+      "arrows": "C>M; M>L; atlas",
+      "dayOneReader": "evidence.mjs and Formalization queue need task ids",
+      "receiptRule": "Hashed checker/input/output, declared checker prerequisites and assumption list",
+      "cost": "One task per obligation/run; runnable checks cheap; external checks may be expensive",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA03",
+        "PA22"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 27,
+      "candidate": "C04",
+      "name": "Entry nature and operation shape",
+      "verdict": "plausible",
+      "reason": "Intake classifies non-operations and dependent or nonunique outputs. A small reviewed distinction helps; a universal shape vocabulary would multiply classification debt.",
+      "arrows": "M>L; L>M; M>C",
+      "dayOneReader": "MCP search needs nature filters; compose must reject unsupported shapes",
+      "receiptRule": "Receipt a defining statement that identifies the shape, separate from the legacy kind",
+      "cost": "One record per reviewed home; easy syntax, moderate classification debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 28,
+      "candidate": "C20",
+      "name": "Implementation/refinement edges",
+      "verdict": "plausible",
+      "reason": "FFT/DFT already distinguish algorithm from operation, while bounded numeric equality is weaker than refinement. Keep cost/error on the realization and its bridge.",
+      "arrows": "M>C; C>M; C>L",
+      "dayOneReader": "export-guardians.mjs and realization adapter would read",
+      "receiptRule": "Correctness/refinement theorem or bounded executable validation",
+      "cost": "One or more edges per implementation; refinement proofs costly",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA17",
+        "PA19"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 29,
+      "candidate": "C22",
+      "name": "Composite DAG recipes",
+      "verdict": "plausible",
+      "reason": "Useful routes need joint operands and missing-step obligations. Existing straight-line compose is a starting reader; full DAG and external-resource semantics remain extra work.",
+      "arrows": "M>C; C>L; atlas",
+      "dayOneReader": "compose.mjs needs a DAG frontend; MCP can display expanded routes",
+      "receiptRule": "Receipt each step and its join, with whole-recipe obligations",
+      "cost": "3 to 20 step references per route; syntax easy, coverage limited by nodes",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA16"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 30,
+      "candidate": "C45",
+      "name": "Typed uses/problem classes",
+      "verdict": "plausible",
+      "reason": "Intake's routes can miss the useful rule even when the entry exists. Goal-conditioned retrieval merits a small benchmark after rules and applicability are explicit.",
+      "arrows": "L>M; M>C; M>L",
+      "dayOneReader": "MCP routes adapter; Formalization proof queue can reuse goals",
+      "receiptRule": "Receipted solved instance or theorem, with reusable applicability conditions",
+      "cost": "1 to 5 uses per operation; evidence-heavy; task names alone add debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA09",
+        "PA10"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 31,
+      "candidate": "C25",
+      "name": "Obstruction theorems",
+      "verdict": "plausible",
+      "reason": "The atlas needs route-pruning knowledge. Add a verified obstruction when a real route needs it; neither a failed search nor a missing inverse field establishes impossibility.",
+      "arrows": "M>L; L>M; atlas",
+      "dayOneReader": "MCP routes and Formalization queue need obstruction queries",
+      "receiptRule": "Counterexample or impossibility theorem with exactly stated scope",
+      "cost": "1 to 3 rows per blocked goal; proof-heavy, high pruning value",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 32,
+      "candidate": "C28",
+      "name": "Lost information and inverse obstructions",
+      "verdict": "plausible",
+      "reason": "C53's graphic map forgets isolated vertices and C15 needs image restrictions. Kernel/fiber accounts are valuable when their objects and lost laws are actually specified.",
+      "arrows": "M>C; M>L; atlas",
+      "dayOneReader": "Inverse-route adapter and Formalization can use",
+      "receiptRule": "Kernel/fiber theorem, explicit collision or noninjectivity witness",
+      "cost": "One row per lossy transform; finite collisions easy; general fibers hard",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA04"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 33,
+      "candidate": "C58",
+      "name": "Axiom dependency/discharge graph",
+      "verdict": "plausible",
+      "reason": "Axiom extraction exists in Lean. Cross-library identity, discharge and retraction propagation add obligations beyond extracting a dependency list.",
+      "arrows": "atlas; M>C; M>L",
+      "dayOneReader": "lean.mjs and Formalization can export closure; atlas reader needed",
+      "receiptRule": "Kernel dependency extraction plus axiom identity and discharge theorem",
+      "cost": "Potentially many edges; extraction cheap after build; semantic equivalence reviewed",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA03"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 34,
+      "candidate": "C34",
+      "name": "Round-trip certificates",
+      "verdict": "needs refinement",
+      "reason": "C15 and C53 verify finite loops, and C33 verifies no language equivalence. Every certificate must state its equality level, domain and stronger proof still owed.",
+      "arrows": "M>C; C>M; L>M; atlas",
+      "dayOneReader": "formal.mjs adapter and disposable round-trip checker",
+      "receiptRule": "Both arrows, domain, equality notion and proof/finite test at named scope",
+      "cost": "One certificate per loop; finite tests cheap, semantic equivalence expensive",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA04",
+        "PA07"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 35,
+      "candidate": "C51",
+      "name": "Executable atlas charts",
+      "verdict": "plausible",
+      "reason": "The paper's charts are consistent relational views over one library. A small projection with shared ids is a tractable first form; an atlas runtime is absent.",
+      "arrows": "atlas; M>L; L>M",
+      "dayOneReader": "MCP/chart exporter would need an adapter; no atlas runtime exists",
+      "receiptRule": "Pinned view definition and membership/dependency receipts",
+      "cost": "One view plus membership rows; cheap projection, semantic chart choice reviewed",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA17",
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 36,
+      "candidate": "C52",
+      "name": "Explicit overlaps",
+      "verdict": "needs refinement",
+      "reason": "The pilots require positivity, fixed-point restrictions or fixed bases. Mere shared members do not identify a valid overlap or settle its claim correspondence.",
+      "arrows": "atlas",
+      "dayOneReader": "Future chart validator; pilot overlap checker first",
+      "receiptRule": "Membership on both sides and reviewed equivalence of shared claims",
+      "cost": "One overlap per neighboring chart pair; potentially quadratic, use sparse overlaps",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA16",
+        "PA19"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 37,
+      "candidate": "C54",
+      "name": "Cocycle/coherence evidence",
+      "verdict": "needs refinement",
+      "reason": "A wrong quadratic factor is caught around one finite cycle. Global coherence requires a generating presentation and the right equality/natural-isomorphism witnesses.",
+      "arrows": "atlas",
+      "dayOneReader": "Disposable cycle checker first; no present script checks atlas cycles",
+      "receiptRule": "Transition-domain intersection plus equality/natural-isomorphism witness",
+      "cost": "Cycles grow rapidly; verify generators rather than enumerate all; high proof debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA04",
+        "PA07"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 38,
+      "candidate": "C55",
+      "name": "Analogy degradation and residuals",
+      "verdict": "confirmed",
+      "reason": "C53 retains lossy graphic abstraction and unknown comparison rows without promoting them to isomorphisms. Ontology alignment confidence cannot replace this lost-law account.",
+      "arrows": "atlas; M>L; L>M",
+      "dayOneReader": "MCP related display and transition checker need residual grades",
+      "receiptRule": "Counterexample or failed transport law and exact retained structure",
+      "cost": "One row per bridge boundary; bounded tests useful; analogy judgment persists",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA20",
+        "PA21"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 39,
+      "candidate": "C56",
+      "name": "Local retyping of imports",
+      "verdict": "plausible",
+      "reason": "The paper explicitly keeps imported standing local, while MMT supports theory interpretation. A receiver must still check the intended statement under its own foundation.",
+      "arrows": "atlas; L>M; C>M",
+      "dayOneReader": "Formalization intake and Research_OS gate would need import envelopes",
+      "receiptRule": "Original provenance plus local challenge/replay under receiving axioms",
+      "cost": "One admission per claim/foundation; expensive but bounded by use",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA03",
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 40,
+      "candidate": "C57",
+      "name": "Regional maintenance and governance",
+      "verdict": "needs refinement",
+      "reason": "The paper scopes recomputation by region/overlap. Sparse dependency work, versioning and authority over region definitions remain separate engineering/governance questions.",
+      "arrows": "atlas",
+      "dayOneReader": "Future atlas builder; existing build can prototype an invalidation index",
+      "receiptRule": "Public role/ruling and dependency receipts; replay compares affected set",
+      "cost": "One region record plus sparse edges; low compute, governance review",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 41,
+      "candidate": "C16",
+      "name": "Adjoint pairs",
+      "verdict": "plausible",
+      "reason": "The nLab gives unit/counit triangle identities as concrete data. A useful map edge must carry side, hom correspondence and hypotheses, rather than an inverse-like label.",
+      "arrows": "M>C; M>L; atlas",
+      "dayOneReader": "Formalization and an MCP related adapter",
+      "receiptRule": "Adjunction statement and unit/counit identities at a source pin",
+      "cost": "One pair plus 2 to 4 law rows; formal transport possible; high semantic review",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA08"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 42,
+      "candidate": "C17",
+      "name": "Dualities and variance",
+      "verdict": "plausible",
+      "reason": "Rocq relation signatures and typed interpretations support directed transport. Finiteness, opposite categories and double-dual restrictions need individual witnesses.",
+      "arrows": "M>C; M>L; atlas",
+      "dayOneReader": "MCP related adapter and future transport checker",
+      "receiptRule": "Duality theorem with finiteness/reflexivity and variance",
+      "cost": "One edge plus laws per duality; medium/high proof cost",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA06",
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 43,
+      "candidate": "C18",
+      "name": "Specialization/generalization",
+      "verdict": "plausible",
+      "reason": "Theory interpretations offer a rigorous form. A reviewed substitution and premise implication can extend formal match grading without claiming that naming a parent proves entailment.",
+      "arrows": "M>L; L>M; atlas",
+      "dayOneReader": "formal.mjs match grading and MCP relation search need witness fields",
+      "receiptRule": "The general theorem plus checked substitution and premise entailment",
+      "cost": "One edge per useful specialization; some substitutions cheap; long-tail debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 44,
+      "candidate": "C12",
+      "name": "Universal specifications",
+      "verdict": "plausible",
+      "reason": "Adjunction and theory-morphism precedents support structured specifications. Start with a construction a consumer needs; existence and uniqueness must both be receipted.",
+      "arrows": "M>C; M>L; atlas",
+      "dayOneReader": "Formalization intake and MCP require a universal-property query",
+      "receiptRule": "Pinned universal statement including existence and uniqueness, not the word universal",
+      "cost": "One structured property per construction; proof-heavy; imported obligations explicit",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA08",
+        "PA17"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 45,
+      "candidate": "C21",
+      "name": "Continuum/discrete convergence bridges",
+      "verdict": "needs refinement",
+      "reason": "Encoding conversion has precedents, but convergence topology, stability and rates do not follow. No such theorem was verified by these finite pilots.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "MCP routes and future numeric adapter",
+      "receiptRule": "Convergence theorem with norm/topology, mesh and stability assumptions",
+      "cost": "Several rows per method; analytic proofs expensive; likely small coverage",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA19"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 46,
+      "candidate": "C09",
+      "name": "Families and degenerations",
+      "verdict": "needs refinement",
+      "reason": "A parameter field alone cannot say what survives at a singular limit. The limiting object, topology and lost laws need a small independently checked family.",
+      "arrows": "M>C; M>L; atlas",
+      "dayOneReader": "deform.mjs can consume a family adapter; MCP can browse",
+      "receiptRule": "Source formula and range; certificate or computed limiting identity",
+      "cost": "One family plus member links; symbolic limits mixed; many new unchecked limits",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA09",
+        "PA19"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 47,
+      "candidate": "C50",
+      "name": "Branches, repeats and hyperproperties",
+      "verdict": "needs refinement",
+      "reason": "The redirect note needs bounded repetition and compose already separates hyperproperties. Extending a straight-line grammar without proof rules would introduce false preservation claims.",
+      "arrows": "M>C; C>M; C>L",
+      "dayOneReader": "compose.mjs/Guardians adapter would need control-flow IR",
+      "receiptRule": "Loop invariant/variant, branch guards and route-specific source receipts",
+      "cost": "Many obligations per program; verification expensive; do not unfold indefinitely",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA16"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 48,
+      "candidate": "C06",
+      "name": "Reproducible worked instances",
+      "verdict": "confirmed",
+      "reason": "All six pilots use exact or bounded fixtures to expose conventions and failures. Keep a few per consumed rule with the source/fixture distinction and no universal-proof promotion.",
+      "arrows": "M>C; C>L; L>M",
+      "dayOneReader": "MCP get_entry can display; a disposable evaluator executes fixtures",
+      "receiptRule": "Source example plus exact recomputation, with invented test inputs labeled",
+      "cost": "3 to 10 instances per selected entry; finite evaluation cheap; universal claims remain unchecked",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA09",
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 49,
+      "candidate": "C07",
+      "name": "Mathematical standing apart from evidence",
+      "verdict": "plausible",
+      "reason": "The uniform legacy status does not distinguish conjecture from unchecked description. A dated claim/foundation status could, but any retirement of existing status is the operator's later decision.",
+      "arrows": "M>L; L>M",
+      "dayOneReader": "MCP display and Formalization queue need this separate axis",
+      "receiptRule": "Dated primary statement, named conditions and foundation; revisions stay visible",
+      "cost": "One or more time-indexed rows per claim; ongoing review; folklore remains weak",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA03",
+        "PA12"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 50,
+      "candidate": "C46",
+      "name": "Claim provenance, rights and retraction",
+      "verdict": "confirmed",
+      "reason": "The exact-source newline correction illustrates the need for immutable source identity and correction history. References and source reliability have working precedents; entailment remains a separate review.",
+      "arrows": "L>M; M>L; atlas",
+      "dayOneReader": "catalogue.mjs/evidence.mjs need claim-source edges",
+      "receiptRule": "Immutable source hash, rights, offsets, authorship and dated retraction",
+      "cost": "One source row reused by many claims; legal/semantic checks mixed",
+      "priorArtStatus": "exists",
+      "priorArtReceipts": [
+        "PA12",
+        "PA10"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 51,
+      "candidate": "C62",
+      "name": "Consumer coverage and evidence debt",
+      "verdict": "confirmed",
+      "reason": "The survey distinguishes 103 receipt checks from bounded semantics and zero new universal proofs. Recomputable consumer-specific denominators are more useful than another undifferentiated count.",
+      "arrows": "atlas; C>L; L>M",
+      "dayOneReader": "STATUS/build reports and Research_OS gap finder can add dimensions",
+      "receiptRule": "Counts recomputed from pinned inputs, unresolved denominator explicit",
+      "cost": "Aggregate rows derived, no truth debt; interpretation remains a judgment",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA10"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 52,
+      "candidate": "C39",
+      "name": "Anchor roles and coverage fidelity",
+      "verdict": "plausible",
+      "reason": "Research_OS's own readings show broad type anchors overassign inner operations. Role metadata plus independent negative matches may help; higher clean counts alone would not confirm it.",
+      "arrows": "M>C; C>M; atlas",
+      "dayOneReader": "Research_OS decompose/mapread need role metadata",
+      "receiptRule": "Read defining declaration and sampled mappings; independent negative matches",
+      "cost": "One role per link and bounded coverage audit; moderate effort",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA03"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 53,
+      "candidate": "C35",
+      "name": "Lexicon and symbol senses",
+      "verdict": "plausible",
+      "reason": "Wikidata formula-symbol records and ontology alignments offer partial precedents. Overloaded mathematical names still need scoped senses and a retrieval precision check.",
+      "arrows": "L>M; M>L; C>L",
+      "dayOneReader": "MCP search can consume an alias table; misalign can use reviewed senses",
+      "receiptRule": "Source usage with span/context; ambiguous terms keep alternatives",
+      "cost": "2 to 10 labels per entry; lots of review; easy to inflate unchecked pile",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA14",
+        "PA19"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 54,
+      "candidate": "C36",
+      "name": "Controlled-language parses",
+      "verdict": "needs refinement",
+      "reason": "Statement markup exists, but this search established no verified language-to-claim parser for the map. C33's manual alignments cannot stand in for one.",
+      "arrows": "L>M; M>L; L>C",
+      "dayOneReader": "MCP authoring/intake adapter would be needed; no present parser",
+      "receiptRule": "Source sentence, explicit parse and formal alignment review",
+      "cost": "One parse per claim; syntactic checks easy, meaning costly",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 55,
+      "candidate": "C38",
+      "name": "Proof move skeletons",
+      "verdict": "needs refinement",
+      "reason": "OMDoc can hold structured proofs, but a cross-domain skeleton is a plan with holes. Evaluate on independently fixed goals before storing a large unchecked plan corpus.",
+      "arrows": "M>L; L>M; atlas",
+      "dayOneReader": "MCP route search and Formalization intake need a planner adapter",
+      "receiptRule": "Worked proof with step alignment; plan is generation until proof checked",
+      "cost": "5 to 30 moves per proof; annotation expensive; easy unchecked growth",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 56,
+      "candidate": "C29",
+      "name": "Open goals and independence",
+      "verdict": "plausible",
+      "reason": "Explicit foundation-relative liabilities protect against confusing unknown with false. Independence must cite a result about a named theory, not the absence of a local proof.",
+      "arrows": "M>L; L>M; atlas",
+      "dayOneReader": "Formalization queue and MCP display",
+      "receiptRule": "Primary independence result naming theory, or a dated open obligation with no truth promotion",
+      "cost": "One row per goal/foundation; proof-heavy; unknown stays unchecked",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA03",
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 57,
+      "candidate": "C27",
+      "name": "Dead routes and reopening conditions",
+      "verdict": "plausible",
+      "reason": "The atlas's negative record and generation history justify selective retention. The failed domain experiment is a useful record; a timeout can only receipt a bounded attempt.",
+      "arrows": "L>M; atlas",
+      "dayOneReader": "MCP route query and generation records need an index",
+      "receiptRule": "Negative experiment log or proved obstruction; search limits are explicit",
+      "cost": "One row per serious attempt; broad failed searches expensive; no impossibility by timeout",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA18"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 58,
+      "candidate": "C14",
+      "name": "Measurement uncertainty models",
+      "verdict": "needs refinement",
+      "reason": "Provenance and reliability records are precedents, while noise models and error propagation are additional empirical claims. No measurements were taken in this task.",
+      "arrows": "C>M; M>L",
+      "dayOneReader": "Observation consumer and quantity adapter would be needed",
+      "receiptRule": "Public experimental protocol, calibrated error model and raw-log digest",
+      "cost": "Many observations per method; statistics checkable conditional on model; high review cost",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA10",
+        "PA22"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 59,
+      "candidate": "C60",
+      "name": "Phenomenological departure and uncertified compression",
+      "verdict": "needs refinement",
+      "reason": "The paper asks for both, and empirical failure differs from a formal counterexample. Keep demand signals in domain records until the model and observation boundary is specified.",
+      "arrows": "atlas; C>M; M>L",
+      "dayOneReader": "Research_OS record and future atlas use-query",
+      "receiptRule": "Public domain protocol/observations and precise mismatch with model",
+      "cost": "Domain-specific rows and repeated measurements; large empirical debt",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA22"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 60,
+      "candidate": "C43",
+      "name": "Performance/resource envelopes",
+      "verdict": "marginal",
+      "reason": "Useful as attached realization readings when a selector needs them; expensive as a map-wide benchmark layer. These trial wall times are not asymptotic complexity or hardware-independent guarantees.",
+      "arrows": "C>M; M>L",
+      "dayOneReader": "Realization selector and MCP display would need reader code",
+      "receiptRule": "Reproducible benchmark log with public hardware class, workload and pin",
+      "cost": "Many runs per implementation; environmental drift; readings never standing",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA10",
+        "PA22"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 61,
+      "candidate": "C59",
+      "name": "Technique clusters and speculative bridges",
+      "verdict": "marginal",
+      "reason": "Useful as proposal/search material, risky as trusted transport metadata. Require demonstrated route value and departure witnesses before bulk cluster membership claims.",
+      "arrows": "atlas; L>M; M>L",
+      "dayOneReader": "MCP search adapter and generation queue",
+      "receiptRule": "Receipted worked proofs for members; clustering output is a lead",
+      "cost": "Many membership judgments; high unchecked risk; keep suggestions out of standing",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA19",
+        "PA20"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 62,
+      "candidate": "C61",
+      "name": "Computed reference/priority atlas",
+      "verdict": "marginal",
+      "reason": "The paper separates estimated reference proposals from verified theory edges. This is curatorial infrastructure with substantial corpus/credit costs, not a prerequisite for operation contracts.",
+      "arrows": "atlas; L>M",
+      "dayOneReader": "catalogue import and future reference-atlas adapter",
+      "receiptRule": "Dated content hashes and typed citation evidence; estimates labeled",
+      "cost": "Potentially dense edges; expensive corpus access and credit review",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA12"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 63,
+      "candidate": "C63",
+      "name": "Learned search scores",
+      "verdict": "marginal",
+      "reason": "Scores can order leads, but no fetched source or pilot demonstrates a gain for this map. Require a held-out relevance test against lexical/identifier retrieval; never change evidence grades.",
+      "arrows": "L>M; C>L; atlas",
+      "dayOneReader": "MCP search could read optional ranks",
+      "receiptRule": "Pinned scorer, held-out relevance judgments and leakage controls",
+      "cost": "One vector per entry/model; cheap inference, expensive evaluation",
+      "priorArtStatus": "partial",
+      "priorArtReceipts": [
+        "PA20"
+      ],
+      "pilot": null
+    },
+    {
+      "rank": 64,
+      "candidate": "C64",
+      "name": "One global truth/utility score",
+      "verdict": "dead",
+      "reason": "It mixes claim truth, preference and usefulness, conceals the weakest premise and cannot preserve consumer-specific applicability. Keep separate grades, evidence and measured readings.",
+      "arrows": "M>L; atlas",
+      "dayOneReader": "MCP could display; no semantic reader benefits identified",
+      "receiptRule": "Would require justified calibration across unrelated claims and consumers",
+      "cost": "One scalar per entry; cheap storage, costly/possibly incoherent calibration",
+      "priorArtStatus": "unknown",
+      "priorArtReceipts": [
+        "PA12",
+        "PA20"
+      ],
+      "pilot": null
+    }
+  ]
+}

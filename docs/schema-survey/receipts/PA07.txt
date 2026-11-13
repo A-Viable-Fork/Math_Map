@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: HoTT book: univalence
+URL: https://raw.githubusercontent.com/HoTT/book/578b85cc8d586b1677ec4335148adeb443057d24/basics.tex
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 516b469d7356e9d20df5539e726a0468760f9fa7b7f440b9c054981e803d7533
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In particular, univalence means that \emph{equivalent types may be identified}.

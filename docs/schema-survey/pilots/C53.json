@@ -1,0 +1,754 @@
+{
+  "candidate": "C53",
+  "mapCommit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+  "purpose": "Compose scoped atlas transitions, reject a broken cycle and preserve lossy/unknown bridges.",
+  "rows": [
+    {
+      "entry": "D4-221",
+      "name": "Legendre transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rb01f3c8c13ac326c"
+      ],
+      "cluster": "ISO-CROSS-LEG",
+      "chart": {
+        "id": "D4-221:trial-chart",
+        "view": "coefficient_a",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D5-087",
+        "from": "coefficient_a",
+        "to": "curvature_h",
+        "formula": "h=2*a",
+        "validityDomain": "f(x)=a*x^2, a>0; three coefficient/derivative/dual charts of this family only",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "quadratic",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D5-087",
+      "name": "Legendre transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R5afcd7686c285d22"
+      ],
+      "cluster": "ISO-CROSS-LEG",
+      "chart": {
+        "id": "D5-087:trial-chart",
+        "view": "curvature_h",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D6-091",
+        "from": "curvature_h",
+        "to": "dual_coefficient_b",
+        "formula": "b=1/(2*h)",
+        "validityDomain": "f(x)=a*x^2, a>0; three coefficient/derivative/dual charts of this family only",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "quadratic",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D6-091",
+      "name": "Legendre transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rf2270fe51703c958"
+      ],
+      "cluster": "ISO-CROSS-LEG",
+      "chart": {
+        "id": "D6-091:trial-chart",
+        "view": "dual_coefficient_b",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D4-221",
+        "from": "dual_coefficient_b",
+        "to": "coefficient_a",
+        "formula": "a=1/(4*b)",
+        "validityDomain": "f(x)=a*x^2, a>0; three coefficient/derivative/dual charts of this family only",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "quadratic",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-099",
+      "name": "Galois connection",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R01f2d9ca4b5c5895",
+        "Rb03b141d9719afc9"
+      ],
+      "cluster": "ISO-CROSS-GC",
+      "chart": {
+        "id": "D1-099:trial-chart",
+        "view": "fixed_P",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-100",
+        "from": "fixed_P",
+        "to": "fixed_Q",
+        "formula": "l on fixed points",
+        "validityDomain": "a specified finite monotone adjunction, restricted to its fixed-point objects",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "galois_fixed",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-100",
+      "name": "Closure operator",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Re14c17e0d70b66e5",
+        "Rb03b141d9719afc9"
+      ],
+      "cluster": "ISO-CROSS-GC",
+      "chart": {
+        "id": "D1-100:trial-chart",
+        "view": "fixed_Q",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D7-119",
+        "from": "fixed_Q",
+        "to": "canonical_closed_bit",
+        "formula": "g then bit encoding",
+        "validityDomain": "a specified finite monotone adjunction, restricted to its fixed-point objects",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "galois_fixed",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D7-119",
+      "name": "Galois Connection Formulation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R079bbac402568b39",
+        "Rb03b141d9719afc9"
+      ],
+      "cluster": "ISO-CROSS-GC",
+      "chart": {
+        "id": "D7-119:trial-chart",
+        "view": "canonical_closed_bit",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-099",
+        "from": "canonical_closed_bit",
+        "to": "fixed_P",
+        "formula": "bit decoding",
+        "validityDomain": "a specified finite monotone adjunction, restricted to its fixed-point objects",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "galois_fixed",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-020",
+      "name": "Tensor graph product",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rf7318a9a87853dad",
+        "R1eae808f4b106954"
+      ],
+      "cluster": "ISO-CROSS-TP",
+      "chart": {
+        "id": "D1-020:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D2-103",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "finite labeled graph adjacency matrices and chosen bases; topology not certified",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "tensor",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D2-103",
+      "name": "Tensor Product",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "imprecise"
+      },
+      "receiptIds": [
+        "R0237e08923494f39",
+        "R1eae808f4b106954"
+      ],
+      "cluster": "ISO-CROSS-TP",
+      "chart": {
+        "id": "D2-103:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D4-388",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "finite labeled graph adjacency matrices and chosen bases; topology not certified",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "tensor",
+      "trialStatus": "bounded transition/diagram check",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D4-388",
+      "name": "Tensor product",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R0237e08923494f39",
+        "R1eae808f4b106954"
+      ],
+      "cluster": "ISO-CROSS-TP",
+      "chart": {
+        "id": "D4-388:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-020",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "finite labeled graph adjacency matrices and chosen bases; topology not certified",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "tensor",
+      "trialStatus": "unknown: missing witness",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D3-116",
+      "name": "Sheafification",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "imprecise",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rea20fc73278697f1"
+      ],
+      "cluster": "ISO-CROSS-SHEAF",
+      "chart": {
+        "id": "D3-116:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D7-290",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "coefficient category and sheafification comparison witness not supplied",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "unknown",
+      "trialStatus": "unknown: missing witness",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D7-290",
+      "name": "Sheafification",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "formal",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "unsupported",
+        "broken": "unsupported"
+      },
+      "receiptIds": [
+        "R4835716dbcf2b8d8"
+      ],
+      "cluster": "ISO-CROSS-SHEAF",
+      "chart": {
+        "id": "D7-290:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D3-116",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "coefficient category and sheafification comparison witness not supplied",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "unknown",
+      "trialStatus": "unknown: missing witness",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D3-114",
+      "name": "Yoneda embedding",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "unsupported"
+      },
+      "receiptIds": [
+        "R8718b56906760254"
+      ],
+      "cluster": "ISO-CROSS-YON",
+      "chart": {
+        "id": "D3-114:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D4-435",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "universe, presheaf-category and embedding comparison witness not supplied",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "unknown",
+      "trialStatus": "unknown: missing witness",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D4-435",
+      "name": "Yoneda embedding",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R8718b56906760254"
+      ],
+      "cluster": "ISO-CROSS-YON",
+      "chart": {
+        "id": "D4-435:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D7-007",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "universe, presheaf-category and embedding comparison witness not supplied",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "unknown",
+      "trialStatus": "unknown: missing witness",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D7-007",
+      "name": "Yoneda Embedding",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R3498b959548857ee"
+      ],
+      "cluster": "ISO-CROSS-YON",
+      "chart": {
+        "id": "D7-007:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D3-114",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "universe, presheaf-category and embedding comparison witness not supplied",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "unknown",
+      "trialStatus": "unknown: missing witness",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-004",
+      "name": "Graph minor",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R042338247146e6a1"
+      ],
+      "cluster": "ISO-D1-INT-01",
+      "chart": {
+        "id": "D1-004:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-046",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "graphic independence abstraction; isolated vertex count is forgotten",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "graphic_forgetful",
+      "trialStatus": "blocked: lossy",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-046",
+      "name": "Edge deletion",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R46451decbf3e727c"
+      ],
+      "cluster": "ISO-D1-INT-01",
+      "chart": {
+        "id": "D1-046:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-048",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "graphic independence abstraction; isolated vertex count is forgotten",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "graphic_forgetful",
+      "trialStatus": "blocked: lossy",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-048",
+      "name": "Edge contraction",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R02700ce751b194bb"
+      ],
+      "cluster": "ISO-D1-INT-01",
+      "chart": {
+        "id": "D1-048:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-057",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "graphic independence abstraction; isolated vertex count is forgotten",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "graphic_forgetful",
+      "trialStatus": "blocked: lossy",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-057",
+      "name": "Matroid deletion (restriction)",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Radf0fc76f8757c1e"
+      ],
+      "cluster": "ISO-D1-INT-01",
+      "chart": {
+        "id": "D1-057:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-058",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "graphic independence abstraction; isolated vertex count is forgotten",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "graphic_forgetful",
+      "trialStatus": "blocked: lossy",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-058",
+      "name": "Matroid contraction",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rb742183e339fac12"
+      ],
+      "cluster": "ISO-D1-INT-01",
+      "chart": {
+        "id": "D1-058:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-060",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "graphic independence abstraction; isolated vertex count is forgotten",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "graphic_forgetful",
+      "trialStatus": "blocked: lossy",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    },
+    {
+      "entry": "D1-060",
+      "name": "Matroid minor",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R16fe90f8063722d7"
+      ],
+      "cluster": "ISO-D1-INT-01",
+      "chart": {
+        "id": "D1-060:trial-chart",
+        "view": "entry_view",
+        "objectIdentity": "shared-trial-object-v1"
+      },
+      "transition": {
+        "toEntry": "D1-004",
+        "from": "entry_view",
+        "to": "partner_view",
+        "formula": "not supplied as an isomorphism",
+        "validityDomain": "graphic independence abstraction; isolated vertex count is forgotten",
+        "equality": "exact rational equality on trial objects; tensor diagram checks only",
+        "residuals": [
+          "outside the declared finite/family fragment",
+          "global library admission and semantic alignment unproved"
+        ]
+      },
+      "model": "graphic_forgetful",
+      "trialStatus": "blocked: lossy",
+      "evidence": "read: cluster membership and entry text; generation: transition proposal; check: bounded experiment"
+    }
+  ],
+  "fixtureRule": "Inputs and proposed annotations are generated fixtures, labeled as such. Source statements remain readings."
+}

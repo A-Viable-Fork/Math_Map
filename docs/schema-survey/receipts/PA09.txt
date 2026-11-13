@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: OEIS: separate formula, example and program fields
+URL: https://oeis.org/eishelp1.html
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ab4cb01b2993c7cc99020ffa58dd946e3867d50ee72bccbdedafdfc674c6521b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+%F = Formula (if not included in %N line)
+
+%e = examples
+
+Computer program to produce the sequence
