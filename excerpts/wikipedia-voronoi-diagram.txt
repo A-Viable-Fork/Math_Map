@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Voronoi diagram (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1365615905
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ccbac1bcd21c508938f26f68a6f3bba626c91a2862ce6879a005fca727dc1321
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects.
+
+for which <math>p_k</math> is the nearest site
+
+The Voronoi diagram of a set of points is [[Duality (mathematics)|dual]] to that set's [[Delaunay triangulation]].

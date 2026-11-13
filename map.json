@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "e3413e70d79650dcad4b9fa14768c8c7462d1efd"
+  "commit": "84e26f337d0745a67e78941becc9f2600671db67"
  },
  "domains": {
   "D1": {
@@ -748,8 +748,8 @@
   },
   "byTier": {
    "landed": 1323,
-   "audited": 575,
-   "authored": 35,
+   "audited": 593,
+   "authored": 17,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
@@ -758,10 +758,10 @@
   "corrected": 43,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 732,
-   "unchecked": 8500,
-   "imprecise": 50,
-   "sourced": 3032,
+   "unsupported": 762,
+   "unchecked": 8392,
+   "imprecise": 70,
+   "sourced": 3090,
    "formal": 82
   },
   "lean": {
@@ -53695,14 +53695,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 5)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-006",
@@ -54385,14 +54386,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-037",
@@ -54850,12 +54852,12 @@
     "name": "sourced",
     "description": "sourced",
     "input": "sourced",
-    "output": "sourced",
+    "output": "imprecise",
     "preserved": "unsupported",
-    "broken": "sourced"
+    "broken": "imprecise"
    },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-059",
@@ -54907,14 +54909,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-062",
@@ -55125,14 +55128,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "imprecise",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-071",
@@ -55404,14 +55408,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 1)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-082",
@@ -55562,14 +55567,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-089",
@@ -56007,14 +56013,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "imprecise",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-106",
@@ -56137,14 +56144,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-112",
@@ -56352,14 +56360,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "unsupported",
+    "output": "imprecise",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-121",
@@ -56446,14 +56455,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D8-125",
@@ -57596,14 +57606,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 3)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "imprecise",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-167",
@@ -57659,14 +57670,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 5)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-169",
@@ -57754,14 +57766,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "imprecise",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-174",
@@ -57785,14 +57798,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 3)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "imprecise",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "imprecise",
+    "broken": "sourced"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-176",
@@ -57903,14 +57917,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 4)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-182",
@@ -58143,14 +58158,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "imprecise",
+    "output": "sourced",
+    "preserved": "imprecise",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D8-189",
@@ -58639,14 +58655,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 6)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-206",
@@ -61149,14 +61166,15 @@
     "cloneStatus": "Confirmed Clone (home: Domain 1)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "authored"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D8-228",

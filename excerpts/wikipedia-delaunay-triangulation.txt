@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Delaunay triangulation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1328127918
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e5abe2b17c411eb559bf510decdb3e1e1ed0d4a937a4f9c19e35570868fb9a65
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]
+
+into triangles whose [[Circumcircle#Triangles|circumcircle]]s do not contain any of the points
+
+This maximizes the size of the smallest angle in any of the triangles, and tends to avoid [[sliver triangle]]s.
+
+corresponds to the [[dual graph]] of the [[Voronoi diagram]] for {{math|'''P'''}}.

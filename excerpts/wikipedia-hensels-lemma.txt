@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Hensel's lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364657053
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3c285a3a635d2b33e1debf1f7d862e383e3a77b83eb405a3fa934f8949978fe8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.
+
+More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}
+
+The proof of Hensel's lemma is [[constructive proof|constructive]], and leads to an efficient algorithm for '''Hensel lifting'''

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Michał Dereziński, Zhenyu Liao, Edgar Dobriban, Michael W. Mahoney, Sparse sketches with small inversion bias, arXiv:2011.10695 (abstract page)
+URL: https://arxiv.org/abs/2011.10695
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c60ed5e0b579467e083028f858a5aa816915b8bc961aec31b3dbfe1cc6d31661
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods
+
+citation_author" content="Dereziński, Michał"

@@ -26602,6 +26602,1010 @@
    "sources": {
     "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380715096"
    }
+  },
+  {
+   "id": "D8-171",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-random-projection.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''random projection''' is a technique used to [[dimensionality reduction|reduce the dimensionality]] of a set of points which lie in [[Euclidean space]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \\in \\R^{k \\times d} </math>.",
+     "note": "Projection by a random matrix, Gaussian, is stated; sign and sparse matrices are in no window.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "The random matrix R can be generated using a Gaussian distribution."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \\in \\R^{k \\times d} </math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \\in \\R^{k \\times d} </math>."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "then they may be projected into a suitable lower-dimensional space in a way which approximately preserves pairwise distances between the points with high probability.",
+     "note": "Pairwise distances, approximately, are stated; inner products are in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that exact geometry is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370066440"
+   }
+  },
+  {
+   "id": "D8-205",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source names a sub-Gaussian sketch."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states the subspace embedding guarantee."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-222",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source names a uniform sketch."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states the coherence condition."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-120",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/arxiv-2011.10695.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods",
+     "note": "LESS embeddings from sparse embeddings and leverage-based sampling are stated, Derezinski first among the authors; matching Gaussian sketch guarantees at lower cost is in no window.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "citation_author\" content=\"Dereziński, Michał\""
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input matrix."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods",
+     "note": "A sketching technique is stated; the sketched matrix as output is not."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states a subspace geometry guarantee."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what is lost."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "l": "https://arxiv.org/abs/2011.10695"
+   }
+  },
+  {
+   "id": "D8-104",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-iterative-compression.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step.",
+     "note": "Growing the instance and reusing a small solution are stated; compressing a size k + 1 solution to size k is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step.",
+     "note": "A small solution is stated; the bound k and rejection are in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that correctness of the decision is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states it, and FPT dependence on k reads as a running time, not a loss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358364477"
+   }
+  },
+  {
+   "id": "D8-058",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-finite-difference-method.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]].",
+     "more": [
+      {
+       "src": "f",
+       "quote": "Finite difference methods convert [[ordinary differential equations]] (ODE) or [[partial differential equations]] (PDE), which may be [[Nonlinear partial differential equation|nonlinear]], into a [[system of linear equations]] that can be solved by [[matrix algebra]] techniques"
+      },
+      {
+       "src": "f",
+       "quote": "This is usually done by dividing the domain into a uniform grid (see image)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]].",
+     "more": [
+      {
+       "src": "f",
+       "quote": "This is usually done by dividing the domain into a uniform grid (see image)."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "Finite difference methods convert [[ordinary differential equations]] (ODE) or [[partial differential equations]] (PDE), which may be [[Nonlinear partial differential equation|nonlinear]], into a [[system of linear equations]] that can be solved by [[matrix algebra]] techniques",
+     "note": "A system of linear equations is stated; that it is often sparse is in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states consistency or conservation."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "[[truncation error]] or [[discretization error]], the difference between the exact solution of the original differential equation and the exact quantity assuming perfect arithmetic (no round-off).",
+     "note": "Truncation error is stated; that stability must be checked is in no window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384543215"
+   }
+  },
+  {
+   "id": "D8-061",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-automatic-differentiation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "* '''forward accumulation''' (also called '''bottom-up''', '''forward mode''', or '''tangent mode''')"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display=\"inline\">x_1,x_2,\\dots,x_n</math> a separate pass is therefore necessary",
+     "more": [
+      {
+       "src": "a",
+       "quote": "The augmented algebra is the algebra of [[dual numbers]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is a set of techniques to evaluate the [[partial derivative]] of a function specified by a computer program."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display=\"inline\">x_1,x_2,\\dots,x_n</math> a separate pass is therefore necessary"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "partial derivatives of arbitrary order can be computed automatically, accurately to working precision"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display=\"inline\">x_1,x_2,\\dots,x_n</math> a separate pass is therefore necessary"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384758862"
+   }
+  },
+  {
+   "id": "D8-088",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hensels-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The proof of Hensel's lemma is [[constructive proof|constructive]], and leads to an efficient algorithm for '''Hensel lifting'''"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.",
+     "note": "Lifting roots and coprime factorizations is stated; that the lifting is a p-adic Newton iteration is in no window.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that lifting loses nothing."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364657053"
+   }
+  },
+  {
+   "id": "D8-081",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-grobner-basis-ordering.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal.",
+     "note": "A Groebner basis of the same ideal and a change of ordering algorithm are stated; FGLM and the Groebner walk by name are in no window.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "by first computing the degrevlex basis and then using a \"change of ordering algorithm\"."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "For every admissible monomial ordering and every finite set {{mvar|G}} of polynomials"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the original generators are lost (the basis contains them)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743"
+   }
+  },
+  {
+   "id": "D8-070",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-linear-fractional-programming.txt",
+    "f": "excerpts/wikipedia-fractional-programming.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''fractional programming''' is a generalization of [[linear-fractional programming]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.",
+     "note": "Charnes-Cooper is stated, with a hypothesis the fill omits (feasible region non-empty and bounded); Dinkelbach's parametric method is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The [[objective function]] in a fractional program is a ratio of two functions that are in general nonlinear."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.",
+     "note": "The linear program is stated; the parametric program is in no window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A solution <math>\\mathbf{x}</math> to the original linear-fractional program can be translated to a solution of the transformed linear program via the equalities"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.",
+     "note": "The ratio objective becomes linear."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1333351925",
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1317651487"
+   }
+  },
+  {
+   "id": "D8-124",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-linear-programming-relaxation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the solution quality of the linear program is at least as good as that of the integer program, because any integer program solution would also be a valid linear program solution."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "an important concept is the '''integrality gap''', the maximum ratio between the solution quality of the integer program and of its relaxation."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1326322231"
+   }
+  },
+  {
+   "id": "D8-181",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source: Sherali and Adams (1990) has no free text found and Wikipedia has no page."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-111",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-additive-noise-dp.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>",
+     "more": [
+      {
+       "src": "a",
+       "quote": "To argue that the mechanism satisfies <math>\\epsilon</math>-differential privacy"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\Delta f=\\max | f(x)-f(y) |,</math>",
+     "more": [
+      {
+       "src": "a",
+       "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "where <math>\\mu</math> is the expectation of the Laplace distribution and <math>b</math> is the scale parameter.",
+     "note": "Zero-mean noise keeps the expected value.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "To argue that the mechanism satisfies <math>\\epsilon</math>-differential privacy"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>",
+     "note": "The released value is f(x) plus noise."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383227811"
+   }
+  },
+  {
+   "id": "D8-174",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-randomized-response.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''Randomised response''' is a research method used in [[Survey research|structured survey interview]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "They are then instructed to  answer \"yes\" if the coin comes up tails, and truthfully, if it comes up heads.",
+     "note": "The coin version and the estimate of the aggregate are stated; a general probability p is in no window.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "So whatever proportion of the group said \"no\", the true number who did not have sex with a prostitute is double that"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "They are then instructed to  answer \"yes\" if the coin comes up tails, and truthfully, if it comes up heads."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "They are then instructed to  answer \"yes\" if the coin comes up tails, and truthfully, if it comes up heads."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "So whatever proportion of the group said \"no\", the true number who did not have sex with a prostitute is double that",
+     "note": "The population frequency is estimable; local differential privacy is in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "the randomized response technique allows the subject to credibly say that they had not been trut"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1297027451"
+   }
+  },
+  {
+   "id": "D8-005",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-amplitude-amplification.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "'''Amplitude amplification''' is a technique in [[quantum computing]] that generalizes the idea behind [[Grover's algorithm|Grover's search algorithm]], and gives rise to a family of [[quantum algorithm]]s."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "'''Amplitude amplification''' is a technique in [[quantum computing]] that generalizes the idea behind [[Grover's algorithm|Grover's search algorithm]], and gives rise to a family of [[quantum algorithm]]s.",
+     "note": "The generalization of Grover and the iteration count (pi/4) sqrt(N/G), O(1/sqrt(a)) for a = G/N, are stated; the rotation toward the marked subspace is in no window.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "= \\left\\lfloor\\frac{\\pi}{4} \\sqrt{\\frac{N}{G}}\\right\\rfloor = O(\\sqrt{N})."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input algorithm with success amplitude sqrt(a)."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states the amplified algorithm as output."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that unitarity or the marked subspace is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states it; a quadratically better query count is a gain, not a loss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1346150076"
+   }
+  },
+  {
+   "id": "D8-165",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/arxiv-1411.4028.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.",
+     "note": "Approximate combinatorial optimization with a depth p is stated; alternating cost and mixer evolutions with tuned angles are in no window.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "positive integer p and the quality of the approximation improves as p is increased."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "positive integer p and the quality of the approximation improves as p is increased."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.",
+     "note": "Approximate solutions are stated; the parameterized state is in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the expected cost is variationally optimized."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://arxiv.org/abs/1411.4028"
+   }
+  },
+  {
+   "id": "D8-168",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quantum-phase-estimation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "q",
+     "quote": "the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]].",
+     "note": "Estimating the eigenphase with controlled-U is stated; the inverse quantum Fourier transform is in no window.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "uses of controlled-U, and this is optimal."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]].",
+     "more": [
+      {
+       "src": "q",
+       "quote": "Thus if <math>| \\psi \\rangle</math> is an [[ Eigenvalues and eigenvectors |eigenvector]] of <math>U</math>"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the algorithm returns [[with high probability]] an approximation for <math>\\theta</math>, within additive error <math>\\varepsilon</math>, using <math>n=O(\\log(1/\\varepsilon))</math> qubits in the first register"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the eigenstate is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that a superposition of eigenstates collapses."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358386192"
+   }
+  },
+  {
+   "id": "D8-036",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-delaunay-triangulation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "into triangles whose [[Circumcircle#Triangles|circumcircle]]s do not contain any of the points",
+     "more": [
+      {
+       "src": "d",
+       "quote": "corresponds to the [[dual graph]] of the [[Voronoi diagram]] for {{math|'''P'''}}."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "into triangles whose [[Circumcircle#Triangles|circumcircle]]s do not contain any of the points"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]",
+     "more": [
+      {
+       "src": "d",
+       "quote": "This maximizes the size of the smallest angle in any of the triangles, and tends to avoid [[sliver triangle]]s."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states it; \"the point set as unstructured\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1328127918"
+   }
+  },
+  {
+   "id": "D8-227",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-voronoi-diagram.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects.",
+     "more": [
+      {
+       "src": "v",
+       "quote": "for which <math>p_k</math> is the nearest site"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "for which <math>p_k</math> is the nearest site"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "for which <math>p_k</math> is the nearest site",
+     "more": [
+      {
+       "src": "v",
+       "quote": "The Voronoi diagram of a set of points is [[Duality (mathematics)|dual]] to that set's [[Delaunay triangulation]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that distances within a cell are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365615905"
+   }
+  },
+  {
+   "id": "D8-187",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-delaunay-refinement.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "* The [[circumcenter]] of a poor-quality triangle is inserted into the triangulation, unless this circumcenter lies in the diametral circle of some segment.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "In this case, the encroached segment is split instead."
+      },
+      {
+       "src": "r",
+       "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "A triangle is considered poor-quality if it has a circumradius to shortest edge ratio larger than some prescribed threshold.",
+     "note": "A planar straight-line graph is stated; the quality bound is a circumradius-to-shortest-edge ratio, not stated as an angle bound."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles.",
+     "note": "A conforming triangulation (the input kept) is stated; the bound is a ratio threshold, not stated as a minimum angle."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that mesh size minimality is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369427795"
+   }
   }
  ]
 }

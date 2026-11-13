@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Linear programming relaxation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1326322231
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 26390cbd11474a290bfd13699824451e7828a963eab099a8e30e2aafe31286b9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable.
+
+the solution quality of the linear program is at least as good as that of the integer program, because any integer program solution would also be a valid linear program solution.
+
+an important concept is the '''integrality gap''', the maximum ratio between the solution quality of the integer program and of its relaxation.

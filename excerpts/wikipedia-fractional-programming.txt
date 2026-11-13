@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Fractional programming (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1317651487
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 41d5255076c745d5b1d0c090fac631f80b533e7b54bce1cff18dc8005be1f0ae
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''fractional programming''' is a generalization of [[linear-fractional programming]].
+
+The [[objective function]] in a fractional program is a ratio of two functions that are in general nonlinear.
