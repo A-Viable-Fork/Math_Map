@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/SimpleModule/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/SimpleModule/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 866bca9cb3db2377cc8f70f0795cf61bc2ded0f73f315c4f5c914ea9ac23bf7f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- LinearMap.bijective_or_eq_zero (line 499)
+theorem bijective_or_eq_zero [IsSimpleModule R M] [IsSimpleModule R N] (f : M →ₗ[R] N) :
+    Function.Bijective f ∨ f = 0

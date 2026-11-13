@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Schreier refinement theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1223978298
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0f9586326e6e31de308ebc7e996a98881d410421d13cec30cf3cda3f67553567
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Schreier refinement theorem''' of [[group theory]] states that any two [[subnormal series]] of [[subgroup]]s of a given group have equivalent refinements
+
+any two [[subnormal series]] of [[subgroup]]s of a given group
+
+have equivalent refinements
+
+where two series are equivalent if there is a [[bijectio

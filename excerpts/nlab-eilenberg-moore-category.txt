@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, Eilenberg-Moore category (page source)
+URL: https://ncatlab.org/nlab/source/Eilenberg-Moore+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b5a5d931018db13039b18d3f87ef87153f3c4d08a980998f4c1a96d71edacfe8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is traditionally called its _Eilenberg--Moore category_ (EM).
+
+The functor $U^T \colon C^T \to C$ is the [[terminal object]] of this category.
+
+The category of [[algebras over a monad]] (also: &quot;modules over a monad&quot;) is traditionally called its _Eilenberg--Moore category_ (EM).
+
+By construction, there is a [[forgetful functor]]
+
+has all [[limits]] which exist in $C$, and they are [[created limit|created]] by the forgetful functor.
+
+For any monad $T$ on $C$ there is a full subcategory of this consisting of the adjoint pairs that compose to give $T$.
+
+Dually, the EM category of a [[comonad]] is its category of coalgebras (co-modules).

@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Subdirect product (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1299182024
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 52b5359c9c5fd4003982dcd15aeed8e425e02dfdb3b8169412195f6f30de2c53
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''subdirect product''' is a [[subalgebra]] of a [[direct product]] that depends fully on all its factors
+
+such that every induced projection (the composite ''p<sub>j</sub>s'': ''A'' → ''A<sub>j</sub>'' of a projection
+
+A '''subdirect product''' is a [[subalgebra]] (in the sense of [[universal algebra]]) ''A'' of a [[direct product]]
+
+without however necessarily being the whole direct product.
+
+Birkhoff (1944) proved that every algebra all of whose operations are of finite arity is isomorphic to a subdirect product of subdirectly irreducible algebras.
+
+Subdirect irreducibles are to subdirect product of algebras roughly as primes are to multiplication of integers.
+
+every algebra all of whose operations are of finite arity
+
+is isomorphic to a subdirect product of subdirectly irreducible algebras.

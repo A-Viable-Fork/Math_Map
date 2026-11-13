@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Lie/Weights/Cartan.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Weights/Cartan.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2024912e9fead1dde3f99742315513eb4c656904b419bf378e3519facc4781c3
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- LieAlgebra.rootSpace (line 46)
+abbrev rootSpace (χ : H → R) : LieSubmodule R H L :=
+  genWeightSpace L χ

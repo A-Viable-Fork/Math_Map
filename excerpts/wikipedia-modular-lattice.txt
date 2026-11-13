@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Modular lattice (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354333116
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d082a7ccebda717467d9021dbb0f9cc3d933436e9b92d6faf098e5ce3e315e3e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+;'''Modular law''':{{Math|''a'' ≤ ''b''}} implies {{Math|1=''a'' ∨ (''x'' ∧ ''b'') = (''a'' ∨ ''x'') ∧ ''b''}}
+
+a '''modular lattice''' is a [[lattice (order)|lattice]] that satisfies the following self-[[duality (order theory)|dual]] condition,

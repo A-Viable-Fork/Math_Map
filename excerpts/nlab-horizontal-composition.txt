@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, horizontal composition (page source)
+URL: https://ncatlab.org/nlab/source/horizontal+composition
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 38db873b9b769f1cf688f448ce1d5a637d843625c881527547515789c74b7162
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* In [[Cat]], horizontal composition is the [[Godement product]] of [[natural transformation]]s.

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Dilworth's theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383233951
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 41ab58b9de6c5c7e881595f0752ee6dec76978593100fd7e89affe974f4b9dbf
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the maximum size of an [[antichain]] of incomparable elements equals the minimum number of [[Chain (order theory)|chains]] needed to cover all elements.

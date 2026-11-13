@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Ado's theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1339152559
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3dc5e07f853aecd8e9e6b7de3102a25cc294ad6a7e74976f64bad9063a071264
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Ado's theorem''' is a theorem characterizing finite-dimensional [[Lie algebra]]s.
+
+The theorem was proved in 1935 by [[Igor Dmitrievich Ado]]
+
+the theorem states that ''L'' has a [[linear representation]] ρ over ''K'', on a [[finite-dimensional vector space]] ''V'', that is a [[faithful representation]]
+
+every finite-dimensional [[Lie algebra]] ''L'' over a [[field (mathematics)|field]] ''K'' of [[characteristic zero]]
+
+that is a [[faithful representation]], making ''L'' isomorphic to a subalgebra of the [[endomorphism]]s of ''V''.
+
+can be viewed as a Lie algebra of [[square matrices]] under the [[commutator bracket]]

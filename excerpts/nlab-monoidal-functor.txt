@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, monoidal functor (page source)
+URL: https://ncatlab.org/nlab/source/monoidal+functor
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1dd3dd721d1d65920c6133febfa6040b9ce2949805bda60636ff6bdc63809cd3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **lax monoidal functor** between them is a [[functor]]
+
+F(x) \otimes_{\mathcal{D}} F(y)
+
+\eta \;\colon\; 1_{\mathcal{D}} \longrightarrow F(1_{\mathcal{C}})
+
+If $\eta$ and all $\mu_{x,y}$ are [[isomorphisms]], then $F$ is called a **strong monoidal functor**.
+
+be two [[monoidal categories]]. A **lax monoidal functor** between them is a [[functor]]
+
+**(Lax monoidal functors send [[monoid]]s to monoids)**

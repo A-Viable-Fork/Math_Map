@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, little cubes operad (page source)
+URL: https://ncatlab.org/nlab/source/little+cubes+operad
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b91db1ba04eb69050bf53327bd8aa40ea931b5efbdfb3e142e978de979fdf18a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The **little $k$-disk operad** or **little $k$-cubes operad**
+
+whose $n$-ary operations are parameterized by rectilinear disjoint embeddings of $n$ $k$-dimensional cubes into another $k$-dimensional cube.
+
+Then $Y$ is homotopy equivalent to a $k$-fold loop space $\Omega^k X$ for some pointed topological space $X$.
+
+Specifically for $\mathcal{X} = Top$, this refines to the classical theorem by [May 1972](#May72).
+
+Let $Y$ be a [[topological space]] equipped with an action of the [[little cubes operad]] $\mathcal{C}_k$ and suppose that $Y$ is grouplike.
+
+An [[algebra over an operad]] over $E_k$ is an [[Ek-algebra]].
+
+Therefore the [[algebra over an operad|algebras over]] the $E_k$ operad are &quot;$k$-fold monoidal&quot; objects.

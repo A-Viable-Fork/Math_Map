@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Stinespring dilation theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345142488
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: fa98e665c8aadae93237e8289edc05d9d959c0b4f16a4a34d38309ffe0a29588
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+named after [[W. Forrest Stinespring]]
+
+every completely positive map <math>\Phi</math> can be "[[Lifting property|lifted]]" up to a map of the form <math>V^* (\cdot) V</math>.
+
+In particular <math>V^\ast V = \Phi(1)</math> holds so that <math>V</math> is an isometry if and only if <math>\Phi(1)=1</math>.
+
+represents any [[completely positive map]] on a [[C*-algebra]] ''A''
+
+Thus minimal Stinespring representations are unique [[up to]] a unitary transformation.

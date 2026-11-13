@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Künneth theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1299684721
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7a82a131d40e06e717a50d9044b32518470d570745ff2edeaeeca24de2c1e576
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+== The Künneth spectral sequence ==
+
+:<math>E_{pq}^2 = \bigoplus_{q_1 + q_2 = q} \mathrm{Tor}^R_p(H_{q_1}(X; R), H_{q_2}(Y; R)) \Rightarrow H_{p+q}(X \times Y; R).</math>
+
+the homology of ''X'' and ''Y'' is related to the homology of their product by a  Künneth [[spectral sequence]]
+
+In the cases described above, this spectral sequence collapses to give an isomorphism or a short exact sequence.

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Institution (computer science) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1305700908
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8b63c06e54392329ec0e8ae7b7751031dc8e9e872cf56e60c5ff8498556f65eb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion of '''institution''' was created by [[Joseph Goguen]] and [[Rod Burstall]] in the late 1970s
+
+it is assumed that signature morphisms lead to translations of sentences and models in a way that satisfaction is preserved.
+
+'''signature morphisms''' allow to extend signatures, change notation, and so on.
+
+models are translated (or better: reduced) '''against''' signature morphisms.
+
+satisfaction condition expresses that truth is invariant under change of notation

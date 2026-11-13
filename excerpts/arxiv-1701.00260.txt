@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: arXiv:1701.00260 (abstract page)
+URL: https://export.arxiv.org/abs/1701.00260
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: eb345905ea6aa7a4e16f5035f563ab72aa51346b850391a6c9caaba9d68d2024
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We discuss such Maltsev conditions that consist of just one linear equation
+
+It follows that the Siggers term is the weakest non-trivial loop condition.
+
+We discuss such Maltsev conditions that consist of just one linear equation, we call them loop conditions.

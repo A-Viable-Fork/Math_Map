@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Opposite ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382908951
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a1eb3b239edb691ef85741e9f8eb2d28a3855560c57edbbc47cc3e53c19540ab
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''opposite''' of a [[ring (mathematics)|ring]] is another ring with the same elements and addition operation, but with the multiplication performed in the reverse order
+
+* A left module over a ring is a right module over its opposite, and vice versa.
+
+the '''opposite''' of a [[ring (mathematics)|ring]]
+
+is another ring with the same elements and addition operation
+
+but with the multiplication performed in the reverse order

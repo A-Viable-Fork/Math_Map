@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Antichain (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382006498
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7949205ca6c912465d4de02b937c30d70830f229502438b89afe1e08f8003ef5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''antichain''' is a subset of a [[partially ordered set]] such that any two distinct elements in the subset are [[Incomparability|incomparable]].
+
+is a subset of a [[partially ordered set]]
+
+The size of the largest antichain in a finite partially ordered set is known as its [[Width (partial order)|'''width''']].
+
+such that any two distinct elements in the subset are [[Incomparability|incomparable]].

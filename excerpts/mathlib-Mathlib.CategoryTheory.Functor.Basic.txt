@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Functor/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 742fba4cb11d35707f29f0449d5633bc2a36f9cbaabb96ef7e45b6ac52bb9b8b
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Functor (line 40)
+structure Functor (C : Type u₁) [Category.{v₁} C] (D : Type u₂) [Category.{v₂} D] :
+    Type max v₁ v₂ u₁ u₂ where
+  /-- The action of a functor on objects. -/
+  obj : C → D
+  /-- The action of a functor on morphisms. -/
+  map : ∀ {X Y : C}, (X ⟶ Y) → ((obj X) ⟶ (obj Y))
+  /-- A functor preserves identity morphisms. -/
+  map_id : ∀ X : C, map (𝟙 X) = 𝟙 (obj X)

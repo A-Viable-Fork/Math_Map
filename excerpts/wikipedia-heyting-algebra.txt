@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Heyting algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377613483
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5281e96e5fa7bda4bc0af943b41f6ffef7152926fdc0a487dd2be61061ce3c65
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This element is the '''relative pseudo-complement''' of ''a'' with respect to ''b'', and is denoted ''a''→''b''.
+
+there is a greatest element ''x'' of ''H'' such that
+
+A Heyting algebra ''H'' is a [[lattice (order)#Bounded_lattice|bounded lattice]] such that for all ''a'' and ''b'' in ''H''
+
+and is denoted ''a''→''b''.
+
+Boolean algebras are precisely the Heyting algebras satisfying ''a'' ∨ ¬''a'' = 1 ([[excluded middle]]), equivalently ¬¬''a'' = ''a''.

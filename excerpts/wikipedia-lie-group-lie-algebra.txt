@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Lie group–Lie algebra correspondence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1353739449
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 79e3451f470fb04a24cc04b5245a22f907decd9df947f2d070b8ce0d85317251
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If <math>f: G \to H</math> is a [[Lie group homomorphism]], then its differential at the identity element
+
+If <math>f: G \to H</math> is a [[Lie group homomorphism]]
+
+:<math>df = df_e: \operatorname{Lie}(G) \to \operatorname{Lie}(H)</math>
+
+is a [[Lie algebra homomorphism]] (brackets go to brackets)
+
+For example, the Lie algebras of SO(3) and SU(2) are isomorphic

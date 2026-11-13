@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, under category (page source)
+URL: https://ncatlab.org/nlab/source/under+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7d3efed52bcfca1725c613865b4a8b62597c1d4e1da525e53fcac00c9d9ef985
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the __under category__ (also called __coslice category__)
+
+* the category of [[pointed sets]], is the coslice of [[Set]] under the [[singleton]] set,
+
+Given a [[category]] $C$ and an [[object]] $c \in C$, the __under category__
+
+The under category $c\downarrow C$ is a kind of [[comma category]]

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Weyl character formula (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1363413194
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 73ef5316c259afa0d1acd431f9913c763a0fa76fbdcd6e0e1a5104a0d5a7d2e3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Weyl character formula''' in [[representation theory]] describes the [[character theory|characters]] of [[irreducible representation]]s of [[compact Lie group]]s in terms of their [[highest weight]]s.
+
+Using the Weyl denominator formula (described below), the character formula may be rewritten as
+
+* <math>W</math> is the [[Weyl group]];
+
+This is equal to <math>(-1)^{\ell(w)}</math>
+
+* <math>\lambda</math> is the [[highest weight]] of the irreducible representation <math>\pi</math>;
+
+The character of <math>\pi</math> is then the function
+
+where <math>m_\mu</math> is the multiplicity of <math>\mu</math>.

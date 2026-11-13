@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Cardinal number (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383146059
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 93ee4497543ef435d79185c788b4670de859937736296abc10599c615988db3d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+:<math>\kappa + \mu = \max\{\kappa, \mu\}\,.
+
+:<math>\kappa\cdot\mu = \max\{\kappa, \mu\}.
+
+The properties of other aleph numbers and of [[Transfinite number|infinite cardinal number]]s in general depend on statements [[Independence (mathematical logic)|independent]] of [[Zermelo–Fraenkel set theory]]

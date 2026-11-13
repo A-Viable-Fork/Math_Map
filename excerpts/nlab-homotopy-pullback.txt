@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, homotopy pullback (page source)
+URL: https://ncatlab.org/nlab/source/homotopy+pullback
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b819c565afd3e49aa5292893d5be9356ff67a3f53a0e0222f5c30400cabf8cd7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **homotopy pullback** is a special kind of [[homotopy limit]]: the appropriate notion of [[pullback]] in the context of [[homotopy theory]].
+
+the appropriate notion of [[pullback]] in the context of [[homotopy theory]].
+
+* one of the two morphisms is a [[fibration]] and all three objects are [[fibrant objects]];
+
+the homotopy pullback of a [[co-span|cospan]] $X \to Z \leftarrow Y$ in a [[category with weak equivalences]] $C$
+
+is its image under the right [[derived functor]] of the [[base change]] functor
+
+We discuss various concrete constructions by ordinary [[pullbacks]] and ordinary [[limits]] such that under some sufficient conditions these compute homotopy pullbacks, up to weak equivalence.

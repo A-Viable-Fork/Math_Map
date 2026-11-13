@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Homology (mathematics) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383111498
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7115f0b7c16c6c9f82576eb0fd8ba636d02895af4cbfcaf3f2ba9b707c95bbed
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The statement that the boundary of a boundary is trivial is equivalent to the statement that <math>\operatorname{im}(\partial_{n+1})\subseteq\ker(\partial_n)</math>
+
+a '''cycle''' is any element of the [[Kernel (category theory)|kernel]]

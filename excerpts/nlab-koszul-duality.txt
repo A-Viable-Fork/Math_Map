@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, Koszul duality (page source)
+URL: https://ncatlab.org/nlab/source/Koszul+duality
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 62f78c93ec8ae2b127c9b089ac3dd0ddecf22b246aefa8cd2ff7bb5eb9c7684b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* [[Victor Ginzburg]], [[Mikhail Kapranov]], _Koszul duality for operads_, Duke Math. J. __76__ (1994)
+
+Koszul duality is a duality between [[quadratic operad]]s, predicted in

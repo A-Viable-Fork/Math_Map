@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Hilbert's basis theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1362191078
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f09453b348939c29882534352ac71ca432b7ec3562d42a41da082d7bc6980618
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+if <math>R</math> is Noetherian, the same must be true for <math>R[X]</math>.

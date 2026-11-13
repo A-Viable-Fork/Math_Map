@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Subobject/Classifier/Defs.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: bef27f224cfa2f4add50eba0b6e100be790221b5144e2772b71d02a9aa887b2d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Subobject.Classifier (line 81)
+structure Classifier (C : Type u) [Category.{v} C] where
+  /-- The domain of the truth morphism -/
+  Ω₀ : C
+  /-- The codomain of the truth morphism -/
+  Ω : C
+  /-- The truth morphism of the subobject classifier -/
+  truth : Ω₀ ⟶ Ω
+  /-- The truth morphism is a monomorphism -/
+  mono_truth : Mono truth

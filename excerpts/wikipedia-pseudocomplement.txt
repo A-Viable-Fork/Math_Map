@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Pseudocomplement (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1346806602
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c5548777c817284cb47da87c338cca8751bd72b04807c863fdb81aeccff7886b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an element ''x'' ∈ ''L'' is said to have a ''pseudocomplement'' if there exists a [[greatest element]]
+
+In a [[Lattice (order)|lattice]] ''L'' with [[bottom element]] 0
+
+if there exists a [[greatest element]] <math>x^*\in L</math>

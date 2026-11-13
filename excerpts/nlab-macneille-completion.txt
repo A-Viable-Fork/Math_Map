@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, MacNeille completion (page source)
+URL: https://ncatlab.org/nlab/source/MacNeille+completion
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5c7b2e93eea282d870b80eaf7caa30a69cbf41a6bbe4acdbc64cddc9695f6c0d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+that preserves all least upper bounds (joins) and greatest lower bounds (meets) existing in $L$.

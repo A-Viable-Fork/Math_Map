@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Killing form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369246472
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 04cd917328af63d79f13f970741e127ebf13dfcbf3b38114c34fb48b093c8f37
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Killing form''', named after [[Wilhelm Killing]], is a [[symmetric bilinear form]]
+
+:<math>B(x, y) = \operatorname{trace}(\operatorname{ad}(x) \circ \operatorname{ad}(y)),</math>
+
+* The [[Cartan criterion]] states that a Lie algebra is [[semisimple Lie algebra|semisimple]] if and only if the Killing form is [[degenerate form|non-degenerate]].
+
+Now, supposing <math>\mathfrak g</math> is of finite dimension, the [[trace of a matrix|trace]] of the composition of two such endomorphisms defines a [[symmetric bilinear form]]
+
+* The Killing form {{math|''B''}} is bilinear and symmetric.
+
+* The Killing form is an invariant form
+
+::<math>B([x, y], z) = B(x, [y, z])</math>

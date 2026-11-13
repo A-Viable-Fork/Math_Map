@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Levi decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1348071378
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8551405d86684c678d154ce9053505eee8feba14d7c0f341fdc81dfd8c8e7647
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Levi decomposition''', conjectured by [[Wilhelm Killing]]
+
+| first proof by = [[Eugenio Elia Levi]]
+
+states that any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero is the [[semidirect product]] of a [[solvable Lie algebra|solvable]] ideal and a [[semisimple Lie algebra|semisimple]] subalgebra.
+
+any finite-dimensional [[Lie algebra]] ''g'' over a field of [[Characteristic (algebra)|characteristic]] zero
+
+One is its [[radical of a Lie algebra|'''radical''']], a maximal solvable ideal, and the other is a semisimple subalgebra, called a '''Levi subalgebra'''.
+
+Moreover, [[Malcev]] (1942) showed that any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form
+
+where ''z'' is in the [[Nilradical of a Lie algebra|nilradical]] ('''Levi–Malcev theorem''').
+
+any two Levi subalgebras are [[conjugacy|conjugate]] by an (inner) automorphism of the form

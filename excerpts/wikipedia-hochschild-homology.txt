@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Hochschild homology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354296765
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 00f68561de8d13a2208ec2568c2ff04061e6d81ce9a88db490bcfd3f80d191f1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The enveloping algebra of ''A'' is the tensor product <math>A^e=A\otimes A^o</math> of ''A'' with its [[opposite ring|opposite algebra]].
+
+Bimodules over ''A'' are essentially the same as modules over the enveloping algebra of ''A''
+
+An elementary introduction to [[noncommutative geometry]] which uses Hochschild homology to generalize differential forms).
+
+The enveloping algebra of ''A'' is the tensor product <math>A^e=A\otimes A^o</math>

@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Galois cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1357453616
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6ce1f22b56b10b5aa717d2ef3c6efe598690c5d7e68d05fc867c7d0b2eeb0aa6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Galois cohomology''' is the study of the [[group cohomology]] of [[Galois module]]s
+
+'''Galois cohomology''' is the study of the [[group cohomology]] of [[Galois module]]s, that is, the application of [[homological algebra]] to [[module (mathematics)|modules]] for [[Galois group]]s.
+
+In another direction, that of [[torsor]]s
+
+A Galois group ''G'' associated with a [[field extension]] ''L''/''K'' acts in a natural way on some [[abelian group]]s
+
+the application of [[homological algebra]] to [[module (mathematics)|modules]] for [[Galois group]]s.
+
+The corresponding result for the [[multiplicative group]] is known as [[Hilbert's Theorem 90]], and was known before 1900.

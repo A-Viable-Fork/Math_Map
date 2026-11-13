@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Homotopy associative algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369001761
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6b5127991d7b4c218e42ff3b2c1cd67071211daea42f0d5079eb7033a48855d7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+with a multiplication operation and a series of higher homotopies giving the failure for the multiplication to be associative.
+
+One of the key properties of <math>A_\infty</math>-algebras is their structure can be transferred to other algebraic objects given the correct hypotheses.
+
+as the vanishing of <math>m_3</math> means that <math>m_2</math> is associative on the nose.

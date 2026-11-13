@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, finiteness space (page source)
+URL: https://ncatlab.org/nlab/source/finiteness+space
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b16f622a1323d81dbd813a6c6320a8e37dd2cca69ac00f4bdd52801345e6d615
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We refer to the elements of $\mathcal{U}$ as **finitary**, and the elements of $\mathcal{U}^\perp$ as **cofinitary**.
+
+* $FinSp_{rel}$ is [[star-autonomous]] (see [Ehrhard](#Ehrhard05)).
+
+We refer to the elements of $\mathcal{U}$ as **finitary**

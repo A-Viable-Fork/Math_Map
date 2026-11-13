@@ -1,0 +1,24 @@
+Excerpts, verbatim, from: Wikipedia, Categorical quantum mechanics (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383491855
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 722180c2162d77d3ccb528429cc24cf692748aa35b3566f3fe15b8611ea0e434
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was pioneered in 2004 by [[Samson Abramsky]] and [[Bob Coecke]].
+
+The primitive objects of study are physical [[Quantum process|processes]], and the different ways these can be composed.
+
+* A [[dagger compact category]] allows one to distinguish between an "input" and "output" of a process.
+
+|last=Selinger |chapter=Dagger compact closed categories and completely positive maps
+
+* Considering only the morphisms that are [[completely positive map]]s, one can also handle [[Mixed state (physics)|mixed state]]s
+
+* Special commutative dagger [[Frobenius algebra]]s model the fact that certain processes yield classical information, that can be cloned or deleted
+
+* Dagger commutative Frobenius algebras in the category of finite-dimensional Hilbert spaces correspond to [[Orthogonal basis|orthogonal bases]].
+
+* Special commutative dagger [[Frobenius algebra]]s
+
+certain processes yield classical information, that can be cloned or deleted
+
+thus capturing [[classical information channel|classical communication]]

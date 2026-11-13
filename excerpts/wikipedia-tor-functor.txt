@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Tor functor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1337789189
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f3ed76b73090f82b9168835977ef0090d6aeca5e28c4a1b4aa02f737f812dbfd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The name comes from a relation between the first Tor group Tor<sub>1</sub> and the [[torsion subgroup]] of an [[abelian group]].
+
+taking the left derived functors of the right exact functor <math>G(B)=A\otimes_RB</math>.
+
+if either <math>A</math> or <math>B</math> is [[flat module|flat]]
+
+In fact, one can compute Tor using a flat resolution of either <math>A</math> or <math>B</math>

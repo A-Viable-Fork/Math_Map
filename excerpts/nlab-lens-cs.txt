@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: nLab, lens (in computer science) (page source)
+URL: https://ncatlab.org/nlab/source/lens+%28in+computer+science%29
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8ac88e20f91870a4f754cd642fbe50ce95fe344b10dc6b91f49dabcd468a512a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+(&quot;view&quot;, &quot;read-out&quot;, &quot;forward operation&quot;)
+
+S \longrightarrow V
+
+1. a [[pair]] of [[morphisms]] of the form
+
+* (PutGet) &quot;what has just been written is read out as such&quot;:
+
+turn out to equivalently be data base types of product form $S = D \times V$ with &quot;view&quot; given by projecting onto the $V$-factor.
+
+(&quot;update&quot;, &quot;write&quot;, &quot;backward operation&quot;)
+
+V \times S \longrightarrow S
+
+* (GetPut) &quot;writing what has just been read out means no change&quot;:
+
+* (PutPut) &quot;writing means to over-write previous edits&quot;:

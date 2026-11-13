@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Nørlund–Rice integral (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370498533
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: fda5916849f80ff7da9f0d3af7dee95fc1cce26ebd49834c44b37346ad55c891
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Poisson–Mellin–Newton cycle, noted by Flajolet et al. in 1985, is the observation that the resemblance of the Nørlund–Rice integral to the [[Mellin transform]] is not accidental
+
+The Poisson–Mellin–Newton cycle, noted by Flajolet et al. in 1985
+
+let <math>\{f_n\}</math> be a [[sequence]], and let ''g''(''t'') be the corresponding [[Poisson generating function]]
+
+the integral can often be evaluated using [[asymptotic expansion]]
+
+one can then regain the original sequence by means of the Nörlund–Rice integral

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, End (category theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378029815
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1f63494ce558ac4e614087a88d0b15f89f2448319f82d9e8d99a24b3ab1aedec
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a universal [[dinatural transformation]] from an object <math>e</math> of <math>\mathbf X</math> to <math>S</math>.
+
+The definition of the '''coend''' of a functor
+
+The definition of the '''coend''' of a functor <math>S\colon \mathbf{C}^{\mathrm{op}}\times\mathbf{C}\to\mathbf{X}</math> is the dual of the definition of an end.

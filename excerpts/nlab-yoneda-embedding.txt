@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, Yoneda embedding (page source)
+URL: https://ncatlab.org/nlab/source/Yoneda+embedding
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 028b732a62e8bdca85702d618b4058c8123e821e85bf3295f27dc1c73c0808f2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The **Yoneda embedding** for $C$ a [[locally small category]] is the [[functor]]
+
+The [[Yoneda lemma]] implies that this functor is [[full and faithful functor|full and faithful]] and hence realizes $C$ as a [[full subcategory]] inside its category of presheaves.
+
+For $C$ a [[locally small category]], every [[object]] $X$ of $C$ induces a [[presheaf]] on $C$: the [[representable presheaf]] $h_X$ represented by $X$.
+
+This assignment extends to a [[functor]] $C \to [C^{op}, Set]$ from $C$ to its [[category of presheaves]].
+
+The Yoneda embedding $y \colon \mathcal{C} \longrightarrow Func(\mathcal{C}^{op}, Set)$ [[preserved limit|preserves]] [[limits]], hence is a [[continuous functor]].
+
+In contrast, the Yoneda embedding does not in general preserve [[colimits]].
+
+Instead, the Yoneda embedding of a [[small category]] $\mathcal{C}$ is its *[[free cocompletion]]*.

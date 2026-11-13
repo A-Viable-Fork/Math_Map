@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Formal power series (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378903847
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 21b0a404d248f981650e43f3819d6dd7107d6b27f73995bf5496ddf23ead01e9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+formal power series can be viewed as a generalization of [[polynomial]]s where the number of terms is allowed to be infinite
+
+(It can be seen as the [[I-adic topology#Completion|{{math|(''x'')}}-adic completion]] of the [[polynomial ring]] <math>R[x],</math>
+
+* if <math>R</math> is [[noetherian ring|Noetherian]], then so is <math>R[[X]]</math> (a version of the [[Hilbert basis theorem]]),
+
+the [[field of fractions]] of the [[integral domain]] <math>K[[X]]</math>.
+
+the ring <math>K[[X_1, \ldots, X_r]]</math> is often used as the "standard, most general" complete local ring over ''K'' in algebra.
+
+and differ from usual [[power series]] by the absence of convergence requirements

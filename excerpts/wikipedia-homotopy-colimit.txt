@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Homotopy colimit and limit (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1347520938
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e20b5b14f168a429d083c7936893f16d67db1f5cd3c8c0d5905ef3702120762b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+two copies of a [[Cylinder (geometry)|cylinder]] on ''B'' are glued together and their ends are glued to ''A'' and ''C''.
+
+The ''homotopy pushout'' of two maps <math>A \leftarrow B \rightarrow C</math> of topological spaces is defined as
+
+replacing ''A'', ''B'' and / or ''C'' by a homotopic space, the homotopy pushout ''will'' also be homotopic.
+
+if one (or more) of the spaces used to form the pushout is replaced by a weakly equivalent space, the pushout is not guaranteed to stay weakly equivalent.

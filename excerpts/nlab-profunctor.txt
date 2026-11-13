@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, profunctor (page source)
+URL: https://ncatlab.org/nlab/source/profunctor
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9ec0f5f2d7b8fdae73892bad7765118f9f02af000d2a2c58e82a9b37b251b91f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Profunctors are composed by using a [[coend]] to &quot;trace out&quot; the middle variable.
+
+Specifically, for profunctors $F : C $&amp;#8696;$ D$ and $G : D $&amp;#8696;$ E$, their composite
+
+This yields a [[bicategory]] in which

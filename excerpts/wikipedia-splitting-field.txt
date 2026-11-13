@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Splitting field (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376262341
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ed5bb8366943c587ced9233ed935342e6d187b9ffe426d4da934423e53b0b81d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]] is the smallest [[field extension]] of that field over which the polynomial ''splits''
+
+a '''splitting field''' of a [[polynomial]] with [[coefficient]]s in a [[field (mathematics)|field]]
+
+is the smallest [[field extension]] of that field over which the polynomial ''splits''
+
+An extension ''L'' that is a [[Algebraic closure#Existence of an algebraic closure and splitting fields|splitting field for a set of polynomials]] ''p''(''X'') over ''K'' is called a

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Dagger category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1319081876
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9e11d0d575d06ab397269d285f10f01c7563bd8aace6107472af708bbbc2f083
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''dagger category''' (also called '''involutive category''' or '''category with involution'''
+
+equipped with an [[Involution (mathematics)|involutive]] [[Contravariant functor|contravariant]] [[endofunctor]] <math>\dagger</math> which is the identity on [[Object (category theory)|objects]].
+
+the map <math>f^\dagger:B \rightarrow A</math> is just its [[Hermitian adjoint|adjoint]] in the usual sense.
+
+* for all [[morphism]]s <math>f: A \to B</math>, there exists its [[Hermitian adjoint|adjoint]] <math>f^\dagger: B \to A</math>
+
+* for all morphisms <math>f</math>, <math>(f^\dagger)^\dagger = f</math>
+
+<math>(g \circ f)^\dagger = f^\dagger \circ g^\dagger: C \to A</math>
+
+there exists its [[Hermitian adjoint|adjoint]] <math>f^\dagger: B \to A</math>

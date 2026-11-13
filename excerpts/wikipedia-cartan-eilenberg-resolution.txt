@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Cartan–Eilenberg resolution (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1190110659
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4153e3313181c9ac8baafcdc4391da0522430d596f3d244e07d04143d21c9b2e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Then a '''Cartan–Eilenberg resolution''' of <math>A_{*}</math> is an upper half-plane [[double complex]]
+
+It can be used to construct [[#Hyper-derived functors|hyper-derived functors]].
+
+be an [[Abelian category]] with [[enough projectives]], and let <math>A_{*}</math> be a chain complex with objects in <math>\mathcal{A}</math>.
+
+is an upper half-plane [[double complex]]

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, Deligne tensor product of abelian categories (page source)
+URL: https://ncatlab.org/nlab/source/Deligne+tensor+product+of+abelian+categories
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 24d57a2d4e58ae98d7393bdecb0b60d25be4534c59c3173a07d96c8c8c5ec968
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The natural [[tensor product]] operation on [[finite abelian category|finite abelian categories]] is known as the _Deligne tensor product_ or _Deligne box product_
+
+right [[exact functors]] of the form $A \boxtimes B \to C$ are equivalent to functors $A \times B \to C$ that are right exact in each argument separately.
+
+This tensor product exists for [[finite abelian categories]] but not generally on all [[abelian categories]].
+
+instead of abelian categories one can consider categories with [[finite colimits]]
+
+their Deligne tensor product $A \boxtimes B$ is the abelian category such that

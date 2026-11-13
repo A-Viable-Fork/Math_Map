@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: arXiv:2104.11808 (abstract page)
+URL: https://export.arxiv.org/abs/2104.11808
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1eb5038c1c72b4858ec257a96f1f024f040ae38a8d1fe10298ea321511655f59
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Unifying the Three Algebraic Approaches to the CSP via Minimal Taylor Algebras
+
+This class of algebras is broad enough that it suffices to verify the CSP Dichotomy Theorem on this class only

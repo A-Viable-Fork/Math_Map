@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Bockstein spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1357399682
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9babae9561004ea1c87c52a88c3c5a6963d8ba8fed7d5f7166d32cdd8c254043
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It is named after [[Meyer Bockstein]].
+
+the '''Bockstein spectral sequence''' is a [[spectral sequence]] relating the homology with mod&nbsp;''p'' coefficients and the homology reduced mod&nbsp;''p''.
+
+Let ''C'' be a [[chain complex]] of [[torsion-free abelian group]]s and ''p'' a [[prime number]].
+
+relating the homology with mod&nbsp;''p'' coefficients and the homology reduced mod&nbsp;''p''.

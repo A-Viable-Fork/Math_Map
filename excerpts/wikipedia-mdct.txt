@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: Wikipedia, Modified discrete cosine transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1279243458
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 179b11d1375b16b6c7756694c85c3fba4ca3f92d021eba5b8cda56ea6c692501
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''modified discrete cosine transform''' ('''MDCT''') is a transform based on the type-IV [[discrete cosine transform]] (DCT-IV), with the additional property of being [[lapped transform|lapped]]
+
+it is designed to be performed on consecutive blocks of a larger [[dataset]], where subsequent blocks are overlapped
+
+<math>F\colon \mathbf{R}^{2N} \to \mathbf{R}^N</math>
+
+it is designed to be performed on consecutive blocks of a larger [[dataset]]
+
+it has half as many outputs as inputs (instead of the same number).
+
+However, perfect invertibility is achieved by ''adding'' the overlapped IMDCTs of subsequent overlapping blocks
+
+at first glance it might seem that the MDCT should not be invertible.
+
+The MDCT was later proposed by John P. Princen, A.W. Johnson and Alan B. Bradley at the [[University of Surrey]] in 1987
+
+following earlier work by Princen and Bradley (1986)

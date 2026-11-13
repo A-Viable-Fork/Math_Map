@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Sheaf cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369789745
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ad288089fca05e2a2f33397d9b42231db755ab999f7b294652f528b57034dd33
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+are defined as the right [[derived functor]]s of the functor ''E'' ↦ ''E''(''X'').
+
+where ''H''<sup>0</sup>(''X'',''A'') is the group ''A''(''X'') of global sections of ''A'' on ''X''.
+
+This makes it automatic that ''H''<sup>''i''</sup>(''X'',''E'') is zero for ''i'' < 0

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Lie/Weights/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/Weights/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d2850032f531cca533bca17a4cd8e4d2b5851447962bacef3cc144f86f0e70ad
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- LieModule.iSup_genWeightSpace_eq_top (line 765)
+lemma iSup_genWeightSpace_eq_top [IsTriangularizable K L M] :
+    ⨆ χ : L → K, genWeightSpace M χ = ⊤

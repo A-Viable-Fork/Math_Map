@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Grothendieck construction (page source)
+URL: https://ncatlab.org/nlab/source/Grothendieck+construction
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1d3d539afd43bfe91d5d00b32ed9534ad6261aecfee495397cc080bc6064d43e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The **Grothendieck construction** describes this in the context of [[Cat]]
+
+* the [[objects]] of $\int F$ are pairs $(c,a)$, where $c \in Obj(C)$ and $a \in Obj(F(c))$,
+
+is encoded in a [[pseudofunctor]]/[[2-functor]]
+
+The essential image of this functor consists of [[Grothendieck fibration]]s and this establishes an [[equivalence of 2-categories]]

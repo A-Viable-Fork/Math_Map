@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, colimit (page source)
+URL: https://ncatlab.org/nlab/source/colimit
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2b177325a9d90ed4ffcf7299def7f6e0401e78439be4e7bdeb92f0cb455d9f7f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The intuitive general idea of a colimit is that it defines an object obtained by sewing together the objects of the diagram
+
+according to the instructions given by the morphisms of the diagram.
+
+**([[adjoints preserve (co-)limits|left adjoint functors preserve colimits]])**
+
+sewing together the objects of the diagram, according to the instructions given by the morphisms of the diagram
+
+A [[colimit]] in a [[category]] $C$ is the same as a [[limit]] in the [[opposite category]], $C^{op}$.

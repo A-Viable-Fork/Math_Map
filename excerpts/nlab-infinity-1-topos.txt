@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, (infinity,1)-topos (page source)
+URL: https://ncatlab.org/nlab/source/%28infinity%2C1%29-topos
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1fca2e661bafff94d5977f5df02b36c0550a8ead7d0c7d0350c7183f61edc360
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A [[Alexander Grothendieck|Grothendieck]]--[[Charles Rezk|Rezk]]--[[Jacob Lurie|Lurie]] **$(\infty,1)$-topos**
+
+[left exact](reflective+sub-%28infinity%2C1%29-category#ExactLocalizations) [[reflective sub-(∞,1)-category]] of an [[(∞,1)-category of (∞,1)-presheaves]]
+
+* {#ToenVezzosi05} [[Bertrand Toën]], [[Gabriele Vezzosi]], _Homotopical Algebraic Geometry I: Topos theory_
+
+* $\mathbf{H}$ is [[presentable (infinity,1)-category|presentable]];
+
+**$(\infty,1)$-topos** $\mathbf{H}$ is an
+
+* that has [[object classifiers]].

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Subalgebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1328384742
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bb488217edd03da65e619a66e2905b3f68d48c7427ed27edb37b9f26a901893b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In [[universal algebra]], a '''subalgebra''' of an [[structure (mathematical logic)|algebra]] ''A'' is a [[subset]] ''S'' of ''A''
+
+then the only thing that needs to be checked is that ''S'' is [[closure (mathematics)|''closed'']] under the operations.
+
+that also has the structure of an algebra of the same type when the algebraic operations are restricted to ''S''.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Commutator (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380799528
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 56170e80cc062275af10fab20e872f4d461f177e149454dccfad4ae17b75d839
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+: <math>[a, b] = ab - ba.</math>
+
+There are different definitions used in [[group theory]] and [[ring theory]].
+
+Relation (3) is called [[anticommutativity]], while (4) is the [[Jacobi identity]].
+
+In other words, the map ad<sub>''A''</sub> defines a [[derivation (abstract algebra)|derivation]] on the ring ''R''.

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Filter (mathematics) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381293247
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e9bb85fbe0f2a7b679daa88284bc3f29edd877797530989b04c8520a0f740249
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This upper set is a {{em|filter}}, and even a {{em|principal filter}}.
+
+then the set of elements above {{Mvar|x}} is a filter, called the principal filter at {{Mvar|x}}.
+
+For instance, if <math>x \in P</math>

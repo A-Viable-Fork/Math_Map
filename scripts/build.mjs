@@ -67,7 +67,7 @@ export function clustersOf(entries) {
 
 export function build() {
   const P = parse();
-  const gradeOf = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
+  const gradeOf = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED, ...require("../audit/fill-review-0_1.js").REVIEW.flatMap((g) => [g, ...(g.covers || []).map((id) => ({ ...g, id }))])].map((g) => [g.id, g]));
   const grades = Object.fromEntries(Object.entries(gradeOf).map(([id, g]) => [id, worst(g)]));
   const E = evidence(P);
   const { CLAIMS: LC, DEFS: LD } = require("../mapfill/lean.js"), LA = leanStatus();
@@ -110,7 +110,7 @@ export function build() {
   const { GRADES } = require("../audit/grades-0_1.js");
   const { TARGETED } = require("../audit/targeted-0_1.js");
   const audit = { sample: { seed: 20260929, note: "A fixed stratified random sample, graded field by field against cited sources.", grades: GRADES },
-    targeted: TARGETED };
+    targeted: TARGETED, fillReview: require("../audit/fill-review-0_1.js").REVIEW };
   const files = {};
   const map = { about: "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
     builtFrom: { commit }, domains: P.domains, vocabulary: P.vocab, invariants: { carriers: P.vocabulary.CARRIERS, terms: P.vocabulary.INVARIANTS, relations: P.vocabulary.RELATIONS, receiptedLinks: P.vocabulary.LINKS.filter((l) => l.receipts) },

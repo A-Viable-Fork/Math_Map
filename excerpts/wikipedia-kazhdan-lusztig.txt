@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Kazhdan–Lusztig polynomial (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1368588081
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 17e232aaeca8e9726640ffdbae758123b434086d4331d2949eac495c0ece824f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Kazhdan–Lusztig polynomial''' <math>P_{y,w}(q)</math> is a member of a family of integral polynomials introduced by
+
+The elements <math>C'_w</math> form a basis of the Hecke algebra as a <math>\mathbb{Z}[q^{1/2}, q^{-1/2}]</math>-module, called the Kazhdan–Lusztig basis.
+
+In their first paper Kazhdan and Lusztig mentioned that their polynomials were related to the failure of local [[Poincaré duality]] for [[Schubert variety|Schubert varieties]].
+
+so the dimensions of all such [[Ext groups]] in category ''O'' are determined in terms of coefficients of Kazhdan–Lusztig polynomials.
+
+Fix a Coxeter group ''W'' with generating set ''S''
+
+a '''Kazhdan–Lusztig polynomial''' <math>P_{y,w}(q)</math>
+
+*They are 0 unless ''y'' ≤ ''w'' (in the [[Bruhat order]] of ''W''), 1 if ''y'' = ''w''

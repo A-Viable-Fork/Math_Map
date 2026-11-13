@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Two-sided Laplace transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382300991
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6dd1d42b45bc23c886cb645eaf8767b609b88eb95ff39bbeea85cf7be4808fee
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''two-sided Laplace transform''' or '''bilateral Laplace transform''' is an [[integral transform]] equivalent to [[probability]]'s [[moment-generating function]].
+
+<math>\mathcal{B}\{f\}(s) = F(s) = \int_{-\infty}^\infty e^{-st} f(t)\, dt.</math>
+
+The [[Fourier transform]] can be defined in terms of the two-sided Laplace transform {{tmath|F}} of a function {{tmath|f}}:
+
+| <math> \alpha < \Re(s) < \beta </math>
+
+| <math> (f * g)(t) = \int_{-\infty}^{\infty} f(\tau)\,g(t - \tau)\,d\tau </math>
+
+then {{tmath|1= f=g }} [[almost everywhere]].
+
+Bilateral transforms do not respect [[causality]].

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, equalizer (page source)
+URL: https://ncatlab.org/nlab/source/equalizer
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7644ddab79d662bf9f22c1ed74ae7b3cb78f49f985633b5015c408a0f13cb26e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+over a parallel pair i.e. of the [[diagram]] of the shape
+
+* In $C =$ [[Set]] the equalizer of two functions of sets is the subset of elements of $c$ on which both functions coincide.
+
+two [[parallel morphisms]] in a [[category]] $C$, their equalizer is, if it exists
+
+Then $e$ is a [[monomorphism]].

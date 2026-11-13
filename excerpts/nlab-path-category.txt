@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, path category (page source)
+URL: https://ncatlab.org/nlab/source/path+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 58e1c038fafbf4bcf38a3a9d4f104e6d6c151f26a0760622bb992f2438a758df
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+giving the **[[free category]]** or **path category** of a quiver
+
+this is the [[Moore path category]].
+
+This forgetful functor has a [[left adjoint]], giving the **[[free category]]** or **path category** of a quiver
+
+Given a [[topological space]] $X$ (or some other kind of [[space]] with a notion of maps from [[intervals]] into it)
+
+there are various ways to obtain a [[small category|small]] [[strict category|strict]] [[category]] whose objects are the points of $X$ and whose morphisms are [[paths]] in $X$.

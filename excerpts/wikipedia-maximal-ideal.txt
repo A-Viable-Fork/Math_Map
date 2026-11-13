@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Maximal ideal (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361064253
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 112df0c57a5af3892d5ac6d570b38c3b0c3650e030c4c72e8c3cc1f7b8ef453f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The set of maximal ideals of a commutative ring ''R'' is known as the '''maximal spectrum''' of ''R''
+
+This result is known as the weak [[Nullstellensatz]].
+
+The set of maximal ideals of a commutative ring ''R''
+
+it is the subspace of the [[closed point]]s  of the [[prime spectrum]] Spec ''R''

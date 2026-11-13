@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, double negation (page source)
+URL: https://ncatlab.org/nlab/source/double+negation
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 78f26d1fb09e57792bf0a0569679322db782c3c44b5b62c6fcffedb986fe6126
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The _double negation topology_ closes morphisms under double negation (def.
+
+\ref{DoubleNegationSheavesFormBooleanTopos} below).
+
+This sublocale is [[dense sublocale|dense]], and in fact it is the smallest dense sublocale of $L$

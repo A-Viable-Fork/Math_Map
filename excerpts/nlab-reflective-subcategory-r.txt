@@ -1,0 +1,26 @@
+Excerpts, verbatim, from: nLab, reflective subcategory (page source)
+URL: https://ncatlab.org/nlab/source/reflective+subcategory
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1aa342531c23a7079a024cad5c9578073d51e154a4ed7220c69948a3776a12b1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This reflection is sometimes called a _[[localization]]_
+
+is term is reserved for the case when the functor $T$ is [[exact functor|left exact]].
+
+The reflector in that case is the [[sheafification]] functor.
+
+of the [[category of abelian groups]] into the [[category of groups]], whose reflector is the operation of _[[abelianization]]_.
+
+If the reflector $T$ is [[faithful functor|faithful]], the reflection is called a **[[completion]]**.
+
+The left adjoint is sometimes called the __reflector__
+
+The components of the [[unit of an adjunction|unit]]
+
+A reflective subcategory is always closed under [[limit|limits]] which exist in the ambient category
+
+2. The [[counit of an adjunction|counit]] $\varepsilon : L R \to 1_B$ of the [[adjunction]] is a [[natural isomorphism]] of functors.
+
+When the unit of the reflector is a [[monomorphism]], a reflective category is often thought of as a [[full subcategory]] of *complete* objects in some sense
+
+Of course, there are dual notions of __[[coreflective subcategory]]__, __coreflector__, and __coreflection__.

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Cartan subalgebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374197769
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4beb9435780ef242e3a46c472c6b1fbbf6989bdfdbfe1457e9da62f77db6ad29
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+there is a direct sum decomposition of <math>\mathfrak{g}</math> as:
+
+These two properties say that the operators in <math>\operatorname{ad}(\mathfrak h)</math> are simultaneously diagonalizable and that there is a direct sum decomposition of <math>\mathfrak{g}</math> as:
+
+For finite-dimensional [[semisimple Lie algebra]] <math>\mathfrak g</math> over an [[algebraically closed field]] of characteristic 0, a Cartan subalgebra <math>\mathfrak h</math> has the following properties:
+
+Then <math>\Phi</math> is a [[root system]] and, moreover, <math>\mathfrak{g}_0 = \mathfrak h</math>
+
+all Cartan subalgebras are conjugate under [[automorphism]]s of the algebra, and in particular are all [[isomorphism|isomorphic]].

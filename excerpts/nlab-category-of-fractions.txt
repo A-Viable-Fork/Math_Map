@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, category of fractions (page source)
+URL: https://ncatlab.org/nlab/source/category+of+fractions
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 294bcc1e99cdd930ba445ab349978e8f2c19ac567d37e54ab721a6daf2ee8d83
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the result of universally making all morphisms in $W$ into [[isomorphisms]].
+
+the _localization_ $\mathcal{C}[W^{-1}]$ of a [[category]] $\mathcal{C}$ at a [[class]] $W$ of its [[morphisms]]
+
+The rub is that the localization might not be locally small, even if $C$ is.
+
+If the class $W$ admits a [[calculus of fractions]], then there is a simpler description of $C[W^{-1}]$ in terms of [[span|spans]] instead of zig-zags.
+
+[[Pierre Gabriel]], [[Michel Zisman]], §I.1 in: _[[Calculus of fractions and homotopy theory]]_, _Ergebnisse der Mathematik und ihrer Grenzgebiete_ **35**, Springer (1967)
+
+in terms of [[span|spans]] instead of zig-zags.
+
+Some authors call any localization of a category a _category of fractions_  ([Gabriel &amp; Zisman, §1.1](#GabrielZisman67)

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, core groupoid (page source)
+URL: https://ncatlab.org/nlab/source/core+groupoid
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ff5c8abd25b34962b350843d496eab1d56634e91efbeb5c193d67c0be134189a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+its *core* is the maximal [[groupoid]] inside it
+
+the [[subcategory]] consisting of all objects of $C$ but with [[morphisms]] only the [[isomorphisms]] of $C$.
+
+For $\mathcal{C}$ any [[category]]

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, coherent logic (page source)
+URL: https://ncatlab.org/nlab/source/coherent+logic
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e12758a2e417a7d548d498620d6fc6465447c3a0240c689031465ad118fab19d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Coherent logic (including sequents, as above) is the [[internal logic]] of a [[coherent category]].
+
+is the [[internal logic]] of a [[coherent category]].
+
+which is not coherent since negation is not allowed in coherent formula

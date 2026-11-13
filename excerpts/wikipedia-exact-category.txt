@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Exact category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1313565396
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: fb857bc3e839978104bdf2ee122a1b629e86ee00b29dc95f4848094d186ae152
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Conversely, if '''E''' is any exact category, we can take '''A''' to be the category of [[exact functor|left-exact functor]]s from '''E''' into the category of [[abelian group]]s
+
+Conversely, if '''E''' is any exact category
+
+which is itself abelian and in which '''E''' is a natural subcatego

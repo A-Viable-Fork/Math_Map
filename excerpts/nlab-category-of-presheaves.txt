@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, category of presheaves (page source)
+URL: https://ncatlab.org/nlab/source/category+of+presheaves
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0240bd85a5efa55fb628f9962d874f09752afcc01a17d99f587f4e8b581557b3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* The category of presheaves $PSh(\mathcal{C})$ is the [[free cocompletion]] of $\mathcal{C}$.
+
+Since any category of the form $PSh(C)$ is a [[topos]], such a category is often called a **presheaf topos**.

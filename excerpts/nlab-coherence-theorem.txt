@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, coherence theorem (page source)
+URL: https://ncatlab.org/nlab/source/coherence+theorem
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 774674631ba069dbca3fa953666d55aecd39c7147cb8b518644008025ec6d1fb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a coherence theorem may provide a full or partial algorithm for deciding equality in free algebras.

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, faithful functor (page source)
+URL: https://ncatlab.org/nlab/source/faithful+functor
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8fdfb2c804c5e716ace293eee0a3674fd0240649792914a962881f7c82fe5d0b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+its [[function]] $F_{x,y}$ on [[hom-sets]] is [[injection|injective]]

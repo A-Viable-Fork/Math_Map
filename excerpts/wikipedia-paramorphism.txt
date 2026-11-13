@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Paramorphism (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379971371
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e5392ef478ab70567171f29bdca8e20da16d603f23e034dd3749ef3df36b295e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is an extension of the concept of [[catamorphism]] first introduced by [[Lambert Meertens]]
+
+it gives the combining step function immediate access not only to the result value recursively computed from each recursive subobject, but the original subobject itself as well.
+
+para :: (a -> ([a], b) -> b) -> b -> [a] ->  b
+
+(a, Left  as) -> a : as
+
+apo  :: (b -> (a, Either [a] b))  ->  b  -> [a]

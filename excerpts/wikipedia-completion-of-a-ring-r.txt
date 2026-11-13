@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Completion of a ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899860
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6adf4592b2612d24073fec1a6a7e8d2b615a3b479b0e7610ae516a7b3054ab44
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The (''I''-adic) completion is the [[inverse limit]] of the [[factor ring]]s,
+
+: <math> \widehat{R}_I=\varprojlim (R/I^n) </math>
+
+* The completion of a [[Noetherian ring]] <math>R</math> is a [[flat module]] over <math>R</math>.
+
+The kernel of the canonical map {{pi}} from the ring to its completion is the intersection of the powers of ''I''.

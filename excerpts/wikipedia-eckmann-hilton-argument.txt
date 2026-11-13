@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Eckmann–Hilton argument (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1358258783
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f7f5bb114a7be66d8ea1aafaffa3cdb1532df457b01804177ebf07787f4a9974
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Eckmann–Hilton argument''' (or '''Eckmann–Hilton principle''' or '''Eckmann–Hilton theorem''') is an [[argument]] about two [[unital magma]] structures
+
+is an [[argument]] about two [[unital magma]] structures on a [[Set (mathematics)|set]] where one is a [[homomorphism]] for the other.
+
+The above proof also has a "two-dimensional" presentation that better illustrates the application to higher [[homotopy group]]s.
+
+Given this, the structures are the same, and the resulting [[magma (algebra) |magma]] is a [[commutative monoid]].
+
+Then <math>\circ</math> and <math>\otimes</math> are the same and in fact commutative and associative.
+
+This establishes that the two operations coincide and are commutative.

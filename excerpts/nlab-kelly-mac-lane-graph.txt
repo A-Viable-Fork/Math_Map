@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Kelly-Mac Lane graph (page source)
+URL: https://ncatlab.org/nlab/source/Kelly-Mac+Lane+graph
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f36cf9b32a12286281d014bbb0d39241a26404cdf1ea5da86da1233c4e93a84d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+They have come to be known as &quot;Kelly--Mac Lane graphs&quot; principally on account of their application to coherence problems for closed categories in the treatment
+
+* {#KM71} [[Max Kelly]], [[Saunders MacLane]], _Coherence in closed categories_, JPAA 1 (1971), 97--140
+
+A diagrammatic calculus for [[closed categories]]
+
+* [[Samuel Eilenberg]], [[Max Kelly]], _A generalization of the functorial calculus_, J. Algebra 3 (1966), 366--375.

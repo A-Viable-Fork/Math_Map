@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Clifford algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376559182
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 62b364a3ea03726f31139e1458d9094713e87db86731c7ed7967e745685b4cbf
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Clifford algebras are closely related to [[exterior algebra]]s.
+
+if {{math|1=''Q'' = 0}} then the Clifford algebra {{math|Cl(''V'', ''Q'')}} is just the exterior algebra {{math|⋀''V''}}.
+
+Cl(''V'', ''Q'')
+
+<math display="block">\dim \operatorname{Cl}(V, Q) = \sum_{k=0}^n \binom{n}{k} = 2^n.
+
+The Clifford algebra is a [[filtered algebra]]; the [[associated graded algebra]] is the exterior algebra.

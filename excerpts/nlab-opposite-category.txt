@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, opposite category (page source)
+URL: https://ncatlab.org/nlab/source/opposite+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e51f4370a02fa56ee4acdfa19b28f836ee69d5fb56fcaad65377903db4b9d932
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is the category obtained by formally reversing the direction of all its [[morphisms]] (while retaining their original composition law).
+
+Passing to the opposite category is a realization of abstract [[duality]].
+
+For a [[category]] $C$, its _opposite category_, $C^{op}$
+
+has the same [[objects]] as $C$

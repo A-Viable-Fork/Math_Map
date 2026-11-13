@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Koszul duality (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371645629
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 285c41d64ba9c5c8a39e0ce0cf2dd2c60be8a80d5b7b1084a67b293bcf57462b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An extension of the above concept of Koszul duality was formulated by Ginzburg and Kapranov who introduced the notion of a quadratic [[operad]] and defined the quadratic dual of such an operad.
+
+the associative operad is self-dual, while the commutative and the Lie operad correspond to each other
+
+defined the quadratic dual of such an operad.

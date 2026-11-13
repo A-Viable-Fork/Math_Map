@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, free category (page source)
+URL: https://ncatlab.org/nlab/source/free+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: eead21cc87bbd1d56843d7a8b2ead02557cc6de2a860f77fd5a4130f91cfdf9e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The _free category_ on a &quot;set of arrows&quot;, hence on a [[directed graph]], is the ([[strict category|strict]]) [[category]] whose:
+
+whence free categories are also called *[[path categories]]*.
+
+The _free category_ on a &quot;set of arrows&quot;, hence on a [[directed graph]]
+
+and the free category construction is its [[left adjoint]]
+
+These morphisms may also be thought of as the &quot;paths&quot; traced out in the directed graph
