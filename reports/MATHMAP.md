@@ -17,9 +17,9 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D5 | PROBABILITY AND INFORMATION THEORY | 160 | 0 [0] | 160 [77] | 160 [77] |
 | D6 | ANALYSIS AND FUNCTIONAL ANALYSIS | 163 | 0 [0] | 163 [146] | 163 [146] |
 | D7 | CATEGORY THEORY AND ABSTRACT STRUCTURES | 487 | 1 [416] | 487 [0] | 486 [0] |
-| D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 255 | 1 [0] | 255 [77] | 253 [77] |
+| D8 | COMPUTATIONAL AND ALGORITHMIC METHODS | 255 | 1 [0] | 255 [77] | 239 [77] |
 | D9 | SYSTEMS AND EFFECTS | 44 | 0 [0] | 44 [0] | 44 [0] |
-| **all** | | **2066** | **2** [416] | **2066** [1118] | **2063** [1118] |
+| **all** | | **2066** | **2** [416] | **2066** [1118] | **2049** [1118] |
 
 ## 2. The fill layer
 
@@ -62,7 +62,7 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 
 - **Corrections: 42** (`mapfill/corrections.js`): landed fields a check found wrong or imprecise, replaced by receipted text (the landed text is kept on the entry). 77 fields in D1-099, D4-264, D2-117, D4-176, D2-118, D4-048, D4-075, D2-072, D2-168, D2-196, D3-035, D1-060, D2-051, D2-073, D4-373, D8-089, D8-125, D8-132, D8-133, D8-185, D8-186, D5-037, D7-001, D7-003, D7-004, D7-017, D7-024, D7-027, D7-043, D7-045, D7-061, D7-072, D7-086, D7-119, D7-211, D7-228, D7-310, D2-033, D3-167, D4-303, D8-155, D8-201; 6 flags resolved.
 
-- **Flagged entries: 7.** Landed content known to be wrong (`mapfill/flags.js`); withheld from anchoring until corrected.
+- **Flagged entries: 21.** Landed content known to be wrong (`mapfill/flags.js`); withheld from anchoring until corrected.
 
 | Entry | Name | Kind | Evidence | Status |
 |---|---|---|---|---|
@@ -73,6 +73,20 @@ Counts after the fill layer, with the landed count in brackets. *Anchorable*: ha
 | D8-185 | Robust PCA transformation | misaligned | The content is the square root transform, the subject of D8-201. | corrected |
 | D8-186 | Rotation transformation | misaligned | The content is the square transform, the subject of D8-202. | corrected |
 | D8-215 | Topological sort transformation | misaligned | The content describes a Vietoris-Rips filtration of a point cloud ("See D4-416"), not a topological sort; the operation is D8-X02. Found by the NixOS decomposition, 2026-10-11. | open |
+| D8-030 | Confluent persistence transformation | misaligned | The content describes dynamization, the subject of D8-048: a static structure made dynamic with O(log n) updates by periodic rebuilding. | open |
+| D8-051 | Exponential transform | misaligned | The content describes the Euclidean distance transform, the subject of D8-050 ("Euclidean distance transform variant with exact L2 metric"). | open |
+| D8-052 | Extended Euclidean transformation | misaligned | The content describes the exponential transform, D8-051's name: E{f}(s) = sum f(n) s^n / n!. | open |
+| D8-068 | Fractional cascading transformation | misaligned | The content describes fractal compression by an iterated function system, D8-067's name (Fractal transform). | open |
+| D8-074 | Gaussian mechanism transformation | misaligned | The content describes the Laplace mechanism, the subject of D8-111: Laplace noise scaled to L1 sensitivity for epsilon-differential privacy. | open |
+| D8-078 | Geometric hashing transformation | misaligned | The content describes the generalized Schur (QZ) decomposition, D8-077's name ("Generalizes Schur for matrix pairs (A,B). See D2-054"). | open |
+| D8-079 | Graph minor transformation | misaligned | The content describes geometric hashing, D8-078's name: points to a hash table via geometric invariants. | open |
+| D8-082 | Haar transform | misaligned | The content describes Groebner bases, D8-081's name ("Grobner basis: see D2-156"). | open |
+| D8-109 | Kernelization transformation | misaligned | The content describes the Karhunen-Loeve transform, D8-108's name ("Karhunen-Loeve / PCA ... See D5-077"). | open |
+| D8-121 | Leverage-score sampling transformation | misaligned | The content describes a leveraged random projection, read as the LESS sketch, D8-120's name; leverage-score sampling is a sampling, and its content sits on D8-122. A reading by the run, plausible rather than certain. | open |
+| D8-122 | Line graph transformation | misaligned | The content describes leverage-score sampling, D8-121's name: rows sampled by leverage scores. | open |
+| D8-207 | Succinctness transformation | misaligned | The content describes post-processing of differential privacy ("Applies any data-independent map to differentially private output"), not succinctness. | open |
+| D8-208 | Sumudu transform | misaligned | The content describes topological sort, D8-215's name: a linear ordering of a DAG. | open |
+| D8-220 | Turing (Cook) reduction | misaligned | The content describes the Tucker decomposition, D8-219's name: a core tensor times factor matrices along each mode. | open |
 
 ## 3. Functional tags
 
