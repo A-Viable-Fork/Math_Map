@@ -36,7 +36,7 @@ Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js`
 
 ## Evidence per claim
 
-Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib or this repository's Lean project states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and formal links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest.
+Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib or this repository's Lean project states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and formal links; a fill-review field read again under the strict rule (`audit/strict/`) takes that reading's verdict. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest.
 
 ## Corrections
 
