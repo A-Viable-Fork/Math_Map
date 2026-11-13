@@ -1,0 +1,1372 @@
+{
+  "receipts": [
+    {
+      "id": "Ra96d5673352e01d0",
+      "file": "excerpts/wikipedia-castelnuovo.txt",
+      "sha256": "55f051e0a685d27fdb623fbd91ba0a7a692bbee417c4037926490ed41875977b",
+      "quote": "self-intersection]] number&nbsp;&minus;1)",
+      "byteOffset": 698,
+      "byteLength": 41,
+      "role": "source statement"
+    },
+    {
+      "id": "R95da71b3313b1ba4",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Inverse of blow-up. Contracts exceptional divisor.\"",
+      "byteOffset": 277419,
+      "byteLength": 52,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R860786d63db8dbb5",
+      "file": "excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt",
+      "sha256": "8b3534502bfa57e6de3d546d3000cbbf91d697c4378f0d7af77cb3cea57e6ca5",
+      "quote": "def sheafificationAdjunction [HasWeakSheafify J A] :",
+      "byteOffset": 589,
+      "byteLength": 52,
+      "role": "source statement"
+    },
+    {
+      "id": "Rea20fc73278697f1",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Transforms presheaf into sheaf by forcing the gluing axiom. Left adjoint to inclusion of sheaves into presheaves.\"",
+      "byteOffset": 455081,
+      "byteLength": 115,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R5dcf952aac3c2603",
+      "file": "excerpts/wikipedia-nerve-complex.txt",
+      "sha256": "20b84fb2463a35998b1f13c8314eab1d64f4b67e132346c63ae33691ddceea6b",
+      "quote": "the set <math>\\bigcap_{i\\in J} U_i</math> is either empty or contractible",
+      "byteOffset": 414,
+      "byteLength": 73,
+      "role": "source statement"
+    },
+    {
+      "id": "Rfcef5fce2d769d4a",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Nerve of the ball cover: a simplex for every subset of points whose balls have a common point. When the balls form a good cover (every nonempty intersection contractible, as for balls in Euclidean space), the nerve theorem gives the homotopy type of the union of the balls.\"",
+      "byteOffset": 563479,
+      "byteLength": 275,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R87c4e1fadfc340dd",
+      "file": "lean/MathMap/Cone.lean",
+      "sha256": "b478f3d5d8301eb89833c903a323ae5b67e863b9287f689f3e834d6c598fae77",
+      "quote": "theorem Cone.contractible [Nonempty X] : ContractibleSpace (Cone X) :=",
+      "byteOffset": 3275,
+      "byteLength": 70,
+      "role": "source statement"
+    },
+    {
+      "id": "R95f033fa0009c4c1",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"CX = X × [0,1] / (X × {1}). Contractible. Used in mapping cone and suspension.\"",
+      "byteOffset": 590491,
+      "byteLength": 82,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R2e8bb33d9cab049b",
+      "file": "excerpts/wikipedia-hodge-theory.txt",
+      "sha256": "2919bd30ab8c2ba2c6621ccd1e76606aa0a41cd388ead9c29f8fbd449164a14c",
+      "quote": "on a closed Riemannian manifold as a sum of three parts in the form",
+      "byteOffset": 439,
+      "byteLength": 67,
+      "role": "source statement"
+    },
+    {
+      "id": "R5a3726e7f06dbd6b",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"On compact Riemannian manifold: Ω^k = H^k ⊕ dΩ^{k-1} ⊕ d*Ω^{k+1}. Harmonic forms represent cohomology.\"",
+      "byteOffset": 681530,
+      "byteLength": 111,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R8ae5ebe0aac9e31e",
+      "file": "excerpts/arxiv-2103.12179.txt",
+      "sha256": "fd9f3feda16a0d7602431e55e32e299a3d6a7e2bd9443d617c2d7bbdf53be471",
+      "quote": "[0,∞), using the harmonic function h(x) =x.",
+      "byteOffset": 782,
+      "byteLength": 45,
+      "role": "source statement"
+    },
+    {
+      "id": "R297edc6fc075b73c",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Transforms a Markov process by an excessive function h: the new transitions are p^h(x,dy) = h(y) p(x,dy) / h(x). A harmonic h gives a conservative process; an h built from a future event conditions the process on it (h(x) = x for Brownian motion killed at 0 conditions it to stay positive).\"",
+      "byteOffset": 940092,
+      "byteLength": 292,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0c32619369e40f90",
+      "file": "excerpts/wikipedia-lebesgue-decomposition.txt",
+      "sha256": "27b644aebae5d179b6c9675a6c2ccf43e8ea3d4905e93b397156c531841aca2a",
+      "quote": "An alternative refinement is that of the decomposition of a regular [[Borel measure]]",
+      "byteOffset": 378,
+      "byteLength": 85,
+      "role": "source statement"
+    },
+    {
+      "id": "R1d8fad2744fa8e01",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Decomposes measure mu = mu_ac + mu_sc + mu_pp into absolutely continuous, singular continuous, and pure point parts.\"",
+      "byteOffset": 1118895,
+      "byteLength": 118,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb45c27414abaa5da",
+      "file": "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt",
+      "sha256": "093db6812f667046f0c47fddcf0208a4512cfc0f1d26c96cffc4b51c9fa672b7",
+      "quote": "[SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν",
+      "byteOffset": 1090,
+      "byteLength": 63,
+      "role": "source statement"
+    },
+    {
+      "id": "R62a12a8ecfe02205",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Decomposes measure mu = mu_ac + mu_s relative to reference nu. mu_ac has density (RN derivative), mu_s is singular.\"",
+      "byteOffset": 1142373,
+      "byteLength": 117,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0c9569e3f91e7690",
+      "file": "excerpts/nlab-reflective-subcategory.txt",
+      "sha256": "8912364413efc085a405ab822b5d08864ff1cd82e186517b76c574a99ba883a0",
+      "quote": "in addition preserves [[finite limits]], then the embedding is called _exact_.",
+      "byteOffset": 424,
+      "byteLength": 78,
+      "role": "source statement"
+    },
+    {
+      "id": "Ra23ea87d3a8dfe49",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Given a full subcategory with a left adjoint to its inclusion, replaces each object by its best approximation inside (sheafification, completion, abelianization).\"",
+      "byteOffset": 1242036,
+      "byteLength": 164,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R9b027bbcbf8f030c",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+      "sha256": "363b8be51500bdb67ccb42feb01cefe033f997c732477c853988671bc59c7500",
+      "quote": "theorem degree_mul' (h : leadingCoeff p * leadingCoeff q ≠ 0) :\n    degree (p * q) = degree p + degree q",
+      "byteOffset": 668,
+      "byteLength": 106,
+      "role": "source statement"
+    },
+    {
+      "id": "R1fef369cdaa86ead",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Assigns to a polynomial the largest exponent of X with a nonzero coefficient, the maximum of its support. The zero polynomial has degree minus infinity (degree takes values in WithBot ℕ); natDegree is the same with the zero polynomial sent to 0.\"",
+      "byteOffset": 2016264,
+      "byteLength": 249,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rcb339aa68e5fed00",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+      "sha256": "363b8be51500bdb67ccb42feb01cefe033f997c732477c853988671bc59c7500",
+      "quote": "theorem leadingCoeff_add_of_degree_lt (h : degree p < degree q) :\n    leadingCoeff (p + q) = leadingCoeff q",
+      "byteOffset": 967,
+      "byteLength": 107,
+      "role": "source statement"
+    },
+    {
+      "id": "Rcc3f925ed964ceb3",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"The coefficient of the highest power present, coeff p (natDegree p). A polynomial is monic when its leading coefficient is 1. Erasing the leading term leaves eraseLead p, with p = eraseLead p + (leading coefficient) X^(natDegree p) and, for p ≠ 0, deg(eraseLead p) < deg p.\"",
+      "byteOffset": 2026927,
+      "byteLength": 277,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R7536c04bdc2b20b0",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt",
+      "sha256": "8814ede2bbbf40862813ce0c19cd98deb10b89c090cdbd03d95c8741f0972519",
+      "quote": "theorem degree_map_eq_of_injective {f : R →+* S} (hf : Function.Injective f) (p : Polynomial R) :",
+      "byteOffset": 697,
+      "byteLength": 99,
+      "role": "source statement"
+    },
+    {
+      "id": "R893a9261886161dc",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Applies a ring homomorphism f: R → S to every coefficient: map f p = eval₂ (C ∘ f) X p, a ring homomorphism R[X] → S[X] sending X to X.\"",
+      "byteOffset": 2033146,
+      "byteLength": 145,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb98708a5fde0229a",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+      "sha256": "93a8cc79a0ffd0fd6bd19a12c1c009493c30af0dd737d2b7e8f94c44db3ab2d4",
+      "quote": "def eval₂RingHom' (f : R →+* S) (x : S) (hf : ∀ a, Commute (f a) x) : R[X] →+* S where",
+      "byteOffset": 1748,
+      "byteLength": 94,
+      "role": "source statement"
+    },
+    {
+      "id": "R0a3e77309c889e0c",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Substitutes a value for X. eval₂ f x p = Σ f(a_i) x^i along a ring homomorphism f: R → S at x in S; eval x p takes f the identity; aeval x is the R-algebra homomorphism R[X] → A sending X to x, for any R-algebra A, commutative or not.\"",
+      "byteOffset": 2039387,
+      "byteLength": 243,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R9d4e0007a3d6cc5a",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+      "sha256": "695d6c4503bc988edbc24aa3d5f442f578ddaef8224fb42290c98f3beaa5862b",
+      "quote": "theorem natDegree_derivative_lt {p : R[X]} (hp : p.natDegree ≠ 0) :",
+      "byteOffset": 1415,
+      "byteLength": 69,
+      "role": "source statement"
+    },
+    {
+      "id": "R723a332a4d48f23e",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Sends Σ a_i X^i to Σ i·a_i X^(i-1), defined by the formula over any semiring, with no limit. The algebraic counterpart of the analytic derivative (D6-028).\"",
+      "byteOffset": 2046472,
+      "byteLength": 160,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re8de48bfe75c1ab5",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+      "sha256": "534e531b617ba38002abb6f16476431d929b299f125f25dd3b8bd7c7475ac001",
+      "quote": "theorem mem_roots (hp : p ≠ 0) : a ∈ p.roots ↔ IsRoot p a",
+      "byteOffset": 1117,
+      "byteLength": 63,
+      "role": "source statement"
+    },
+    {
+      "id": "R036628f868c9162d",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"IsRoot p a says p(a) = 0. rootMultiplicity a p is the largest n with (X - a)^n dividing p (0 for p = 0). Over a commutative domain, roots p is the multiset of roots, each counted with its multiplicity.\"",
+      "byteOffset": 2052717,
+      "byteLength": 203,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R69efaf8b5aae54a6",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt",
+      "sha256": "621f57e52146bd0ba7dfc32c6dd65948a65057d30e6c6896ea1026b15f79378f",
+      "quote": "theorem splits_mul (hf₀ : f ≠ 0) (hg₀ : g ≠ 0) :\n    Splits (f * g) ↔ Splits f ∧ Splits g",
+      "byteOffset": 965,
+      "byteLength": 101,
+      "role": "source statement"
+    },
+    {
+      "id": "R8228bd8489ca2a6b",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Tests whether p is a product of constants and monic linear polynomials X + a, over the ring it lives in (Mathlib's definition, for any semiring). Splitting over a larger ring is splitting of the image: p splits along i: R → S when map i p splits.\"",
+      "byteOffset": 2065468,
+      "byteLength": 250,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rf9d7acf28dc0086a",
+      "file": "docs/schema-survey/receipts/PS08.txt",
+      "sha256": "ee40a7b846a81155d2c3c16efe9776a4340bfd09b81cad7c6f4fb98186bca249",
+      "quote": "variable [NoZeroDivisors R] {p q : R[X]}\n\nlemma degree_mul : degree (p * q) = degree p + degree q :=",
+      "byteOffset": 430,
+      "byteLength": 100,
+      "role": "fetched source window"
+    },
+    {
+      "id": "R4aa7015010497a81",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt",
+      "sha256": "6410deb2d4248de762112aca099ebb0e140f7f2efbc95b3397e1bf2a4ed6cc9f",
+      "quote": "theorem coeff_add (p q : R[X]) (n : ℕ) : coeff (p + q) n = coeff p n + coeff q n",
+      "byteOffset": 548,
+      "byteLength": 82,
+      "role": "source statement"
+    },
+    {
+      "id": "Rd0f1c5707230e98c",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt",
+      "sha256": "363b8be51500bdb67ccb42feb01cefe033f997c732477c853988671bc59c7500",
+      "quote": "lemma leadingCoeff_mul (p q : R[X]) : leadingCoeff (p * q) = leadingCoeff p * leadingCoeff q",
+      "byteOffset": 818,
+      "byteLength": 92,
+      "role": "source statement"
+    },
+    {
+      "id": "Rc32f0a73b0dcc6cc",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+      "sha256": "695d6c4503bc988edbc24aa3d5f442f578ddaef8224fb42290c98f3beaa5862b",
+      "quote": "theorem derivative_map [Semiring S] (p : R[X]) (f : R →+* S) :\n    derivative (p.map f) = p.derivative.map f",
+      "byteOffset": 564,
+      "byteLength": 110,
+      "role": "source statement"
+    },
+    {
+      "id": "R511feaba12b9375b",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+      "sha256": "93a8cc79a0ffd0fd6bd19a12c1c009493c30af0dd737d2b7e8f94c44db3ab2d4",
+      "quote": "def eval₂RingHom (f : R →+* S) (x : S) : R[X] →+* S :=\n  { eval₂AddMonoidHom f x with\n    map_one' := eval₂_one _ _\n    map_mul' := fun _ _ => eval₂_mul _ _ }",
+      "byteOffset": 1535,
+      "byteLength": 170,
+      "role": "source statement"
+    },
+    {
+      "id": "R7a860b8621ab27ee",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt",
+      "sha256": "695d6c4503bc988edbc24aa3d5f442f578ddaef8224fb42290c98f3beaa5862b",
+      "quote": "theorem derivative_mul {f g : R[X]} : derivative (f * g) = derivative f * g + f * derivative g",
+      "byteOffset": 988,
+      "byteLength": 94,
+      "role": "source statement"
+    },
+    {
+      "id": "R4715d750aaeefd53",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt",
+      "sha256": "534e531b617ba38002abb6f16476431d929b299f125f25dd3b8bd7c7475ac001",
+      "quote": "theorem roots_mul {p q : R[X]} (hpq : p * q ≠ 0) : (p * q).roots = p.roots + q.roots",
+      "byteOffset": 994,
+      "byteLength": 86,
+      "role": "source statement"
+    },
+    {
+      "id": "R6cce2f3eb07f51fb",
+      "file": "excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt",
+      "sha256": "93a8cc79a0ffd0fd6bd19a12c1c009493c30af0dd737d2b7e8f94c44db3ab2d4",
+      "quote": "def comp (p q : R[X]) : R[X] :=\n  p.eval₂ C q",
+      "byteOffset": 2149,
+      "byteLength": 47,
+      "role": "source statement"
+    },
+    {
+      "id": "R14c9fc722ff5b4fd",
+      "file": "docs/schema-survey/receipts/PS02.txt",
+      "sha256": "fb50569c043556b64e2885879c6db338c744d3fa3eb8b9bce6b0732337ba38aa",
+      "quote": "Compute the 1-D discrete Fourier Transform.\n\nNormalization mode. Default is \"backward\", meaning no normalization on\n        the forward transforms and scaling by ``1/n`` on the `ifft`.",
+      "byteOffset": 344,
+      "byteLength": 184,
+      "role": "fetched source window"
+    },
+    {
+      "id": "Rd2a1993b8bdc26a8",
+      "file": "docs/schema-survey/receipts/PS03.txt",
+      "sha256": "22acd91ffdcd945082175456b17158137ac1b001942133bc124060e38298493c",
+      "quote": "that a convolution in the time domain is equivalent to a point-by-point\nmultiplication in the frequency domain.",
+      "byteOffset": 345,
+      "byteLength": 111,
+      "role": "fetched source window"
+    },
+    {
+      "id": "Rb016d3365017ce87",
+      "file": "docs/schema-survey/receipts/PS04.txt",
+      "sha256": "2feea07e1785c7d0db27998962c99311bbaedb9e952eb1d877a9b5faaf37f45a",
+      "quote": "The reverse is a graph with the same nodes and edges\n        but with the directions of the edges reversed.",
+      "byteOffset": 370,
+      "byteLength": 107,
+      "role": "fetched source window"
+    },
+    {
+      "id": "R5a294294f12c2b81",
+      "file": "docs/schema-survey/receipts/PS05.txt",
+      "sha256": "dae7b557c7839e24d88c8277aab087934c1ec4be5e7bed22b8f7da13b9894d35",
+      "quote": "Returns the graph complement of G.",
+      "byteOffset": 379,
+      "byteLength": 34,
+      "role": "fetched source window"
+    },
+    {
+      "id": "R291fe4374cfcc253",
+      "file": "docs/schema-survey/receipts/PS07.txt",
+      "sha256": "03b36a7fb611bbd944d7e29643a9c7d66ea6d85da419b62e3b3c82968402615c",
+      "quote": "theorem log_mul (hx : x ≠ 0) (hy : y ≠ 0) : log (x * y) = log x + log y :=",
+      "byteOffset": 426,
+      "byteLength": 78,
+      "role": "fetched source window"
+    },
+    {
+      "id": "Re0da075e09084669",
+      "file": "docs/schema-survey/receipts/PS01.txt",
+      "sha256": "0ab68c0f1665d1f285092624edf81cd8f4e3858a4ddfa0f07a1d7475c4009799",
+      "quote": "Constructs an n-by-n Hadamard matrix, using Sylvester's\n    construction. `n` must be a power of 2.\n\nH = np.array([[1]], dtype=dtype)",
+      "byteOffset": 363,
+      "byteLength": 133,
+      "role": "fetched source window"
+    },
+    {
+      "id": "Radbcf02eeee7a058",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Reads the coefficient of X^n in p. A polynomial is determined by its coefficients; the exponents with a nonzero coefficient form its support, a finite set.\"",
+      "byteOffset": 2022051,
+      "byteLength": 157,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re2cd23881ed840c0",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Substitutes q for X in p: p.comp q = eval₂ C q p = Σ a_i q^i.\"",
+      "byteOffset": 2060178,
+      "byteLength": 66,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0467b66ae884923b",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"DFT: X_k = sum_{n=0}^{N-1} x_n e^{-2pi ikn/N}. N-point. Assumes periodicity.\"",
+      "byteOffset": 504126,
+      "byteLength": 78,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Ra22cad9657889ab1",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Cooley-Tukey: divide-and-conquer factorization of DFT matrix into sparse factors. Reduces O(N^2) to O(N log N).\"",
+      "byteOffset": 505177,
+      "byteLength": 113,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0f37ff5a8ce2f0e3",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Reverses all edge orientations in a directed graph. Each directed edge (u,v) becomes (v,u).\"",
+      "byteOffset": 33051,
+      "byteLength": 93,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R8a82aa83487f2fc7",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Produces the graph on the same vertex set where two vertices are adjacent if and only if they are not adjacent in the original.\"",
+      "byteOffset": 33993,
+      "byteLength": 129,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rf5bdc1e080e93b87",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Slides every point by the same displacement vector.\"",
+      "byteOffset": 153427,
+      "byteLength": 53,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R61475ec776a95c18",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Y=log(X). Right-skew correction, linearizes growth.\"",
+      "byteOffset": 993495,
+      "byteLength": 53,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R53b5e3d512b23f55",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"(az+b)/(cz+d), ad-bc != 0. Conformal auto of Riemann sphere. Preserves circles/lines.\"",
+      "byteOffset": 999236,
+      "byteLength": 87,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R9b615cde361e9fdc",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Recursive +1/-1 matrix. Sequency analysis. Only addition/subtraction needed.\"",
+      "byteOffset": 1036291,
+      "byteLength": 78,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R5bd6e20e9b9578cd",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Reverses every edge of a directed graph.\"",
+      "byteOffset": 1774797,
+      "byteLength": 42,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R869a3246608d70af",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Applies both reversal (reading entries in reverse order) and complementation (replacing entry i with n+1-i) to a tableau or permutation.\"",
+      "byteOffset": 122596,
+      "byteLength": 138,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R03622d845e026c91",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Slides figure along displacement vector.\"",
+      "byteOffset": 165807,
+      "byteLength": 42,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rc820da83d8cf48fe",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Shifts every point by a fixed vector.\"",
+      "byteOffset": 1168497,
+      "byteLength": 39,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R5e4a0d4172e9a70b",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Maps each point to its mirror image across a hyperplane (line in 2D, plane in 3D).\"",
+      "byteOffset": 154306,
+      "byteLength": 84,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R402e586f68d0c67b",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Mirror image across axis/hyperplane.\"",
+      "byteOffset": 166651,
+      "byteLength": 38,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re868c5288e0a00ea",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Reflects across a line or hyperplane: an involutive isometry reversing orientation.\"",
+      "byteOffset": 1146186,
+      "byteLength": 85,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R4cb690550a0fbef9",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Maps each point by rotating about a center point (2D) or axis (3D) by a specified angle.\"",
+      "byteOffset": 155257,
+      "byteLength": 90,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rd93b4f8e58eb83c2",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Turns figure around center/axis by angle.\"",
+      "byteOffset": 167491,
+      "byteLength": 43,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R4e9797c63a8c59fc",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Applies a rotation matrix: an orthogonal matrix with determinant 1, rotating vectors about the origin.\"",
+      "byteOffset": 1747876,
+      "byteLength": 104,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R8f741fd65fed19b4",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"H=(1/sqrt2)[[1,1],[1,-1]]. |0>->|+>, |1>->|->. Self-inverse.\"",
+      "byteOffset": 960344,
+      "byteLength": 62,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R5a346feea47e90a2",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X01\", api: \"sendto(int, const void*, size_t, int, const struct sockaddr*, socklen_t)\", path: \"bionic/libc/SYSCALLS.TXT\",\n    permissions: [\"android.permission.INTERNET\"], appOps: [], enforcementPoint: \"packages/modules/Connectivity/service/src/com/android/server/BpfNetMaps.java; system/netd/server/NetdNativeService.cpp; system/sepolicy/private/app.te\",\n    parameters: {\"jointOperands\":\"payload bytes, socket, actual destination, actor credentials, current network policy\",\"destination\":\"Outside B permits explicit egress; loopback or local peer can remain inside B. Connected socket routing, VPN/proxy and all replicas matter.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-local\",\"e9-noegress\"], unestablished: [\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\",\"e9-sig\"], note: \"Bionic exposes the syscall; kernel and UID network rules govern access, not byte ancestry. No OP_INTERNET. Kernel/device implementation is separately pinned; failures can follow partial/earlier delivery and do not undo trace events.\",\n    sources: [\"bionic/libc/SYSCALLS.TXT\",\"packages/modules/Connectivity/service/src/com/android/server/BpfNetMaps.java\",\"system/netd/server/NetdNativeService.cpp\",\"system/sepolicy/private/app.te\"], generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 14871,
+      "byteLength": 1461,
+      "role": "source statement"
+    },
+    {
+      "id": "R31fe82773cf8fb89",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Deliver an immutable envelope to the explicitly bound endpoint through a chosen handler; rejection has no external effect.\"",
+      "byteOffset": 2069493,
+      "byteLength": 124,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R89b240823c24073a",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X02\", api: \"android.content.Context#openFileOutput(java.lang.String, int)\", path: \"frameworks/base/core/java/android/content/Context.java\",\n    permissions: [], appOps: [], enforcementPoint: \"frameworks/base/core/java/android/app/ContextImpl.java; bionic/libc/bionic/open.cpp; system/sepolicy/private/app.te\",\n    parameters: {\"jointOperands\":\"name, mode, bytes subsequently written, owning UID/user, backup and replica configuration\",\"mode\":\"MODE_PRIVATE targets app-private storage; append versus truncate changes history. This call obtains an output stream; its writes realize Store.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-erase\",\"e9-audit\"], unestablished: [\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\",\"e9-sig\"], note: \"Private placement is enforceable against ordinary apps; content labels, backup inventory and atomic effect-plus-log are absent. A local file does not prove every copy of W data remains local.\",\n    sources: [\"frameworks/base/core/java/android/content/Context.java\",\"frameworks/base/core/java/android/app/ContextImpl.java\",\"bionic/libc/bionic/open.cpp\",\"system/sepolicy/private/app.te\"], generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 23728,
+      "byteLength": 1369,
+      "role": "source statement"
+    },
+    {
+      "id": "Rbf0d6ab4b7735251",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Write an immutable labeled value to a named resource; this is an ordinary write, not an atomic compare-and-swap.\"",
+      "byteOffset": 2081495,
+      "byteLength": 114,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R47d399476b53899c",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X03\", api: \"android.hardware.SensorManager#registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int)\", path: \"frameworks/base/core/java/android/hardware/SensorManager.java\",\n    permissions: [\"android.permission.HIGH_SAMPLING_RATE_SENSORS\"], appOps: [], enforcementPoint: \"frameworks/base/core/java/android/hardware/SystemSensorManager.java; frameworks/native/services/sensorservice/SensorService.cpp; frameworks/native/services/sensorservice/SensorEventConnection.cpp\",\n    parameters: {\"jointOperands\":\"listener, concrete sensor, samplingPeriodUs, caller UID/package, targetSdk, sensor privacy state\",\"sensor\":\"Ordinary accelerometer access has no RECORD_AUDIO permission or OP_RECORD_AUDIO. Protected sensor types use their own requiredPermission and requiredAppOp.\",\"rate\":\"At targetSdk >=31 capped sensor set is rate-limited without HIGH_SAMPLING_RATE_SENSORS; privileged settings and microphone privacy also matter.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-gfree\",\"e9-ini\",\"e9-tni\"], unestablished: [\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"], note: \"SensorService controls admission/rates/UID activity, so zero permission is not zero mediation. Samples identify sensor hardware/type and time, not the compartment whose speech or computation physically caused them. HIGH_SAMPLING_RATE_SENSORS is conditional, not needed for an ordinary <=200 Hz accelerometer stream.\",\n    sources: [\"frameworks/base/core/java/android/hardware/SensorManager.java\",\"frameworks/base/core/java/android/hardware/SystemSensorManager.java\",\"frameworks/native/services/sensorservice/SensorService.cpp\",\"frameworks/native/services/sensorservice/SensorEventConnection.cpp\"], gradingNote: \"Added in grading (read at the tag, SensorService.cpp lines 911 to 924): a root shell can cut one app's sensors with cmd sensorservice set-uid-state <package> idle, gated on MANAGE_SENSORS; the generator did not find it.\",\n    generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 29236,
+      "byteLength": 2180,
+      "role": "source statement"
+    },
+    {
+      "id": "R00aaf467d1647805",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Capture a reading through an authenticated sensor adapter and introduce its modeled ingress provenance.\"",
+      "byteOffset": 2089833,
+      "byteLength": 105,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rebd1e2c0cb10b3c5",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X04\", api: \"android.os.UserManager#createProfile(java.lang.String, java.lang.String, java.util.Set)\", path: \"frameworks/base/core/java/android/os/UserManager.java\",\n    permissions: [\"android.permission.MANAGE_USERS\",\"android.permission.CREATE_USERS\"], appOps: [], enforcementPoint: \"frameworks/base/services/core/java/com/android/server/pm/UserManagerService.java; frameworks/base/services/core/java/com/android/server/pm/UserTypeFactory.java; system/sepolicy/private/seapp_contexts\",\n    parameters: {\"jointOperands\":\"name, userType, disallowedPackages, parent user, creator authority, sharing restrictions\",\"type\":\"USER_TYPE_PROFILE_MANAGED and USER_TYPE_PROFILE_PRIVATE differ in lifecycle/UI. Permission list is any-of subject to flags/system policy; user types and capacity may be disabled by product configuration.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-tni\"], unestablished: [\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"], note: \"System API; UID/user and data-directory separation are structural confinement only. Profiles share hardware, scheduler and authorized cross-profile brokers. Creating a profile does not install the D9 gate or certify noninterference.\",\n    sources: [\"frameworks/base/core/java/android/os/UserManager.java\",\"frameworks/base/services/core/java/com/android/server/pm/UserManagerService.java\",\"frameworks/base/services/core/java/com/android/server/pm/UserTypeFactory.java\",\"system/sepolicy/private/seapp_contexts\"], generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 35913,
+      "byteLength": 1706,
+      "role": "source statement"
+    },
+    {
+      "id": "R3a044002ead425e8",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Create an execution compartment with explicit memory, capability, handler and channel boundaries.\"",
+      "byteOffset": 2097867,
+      "byteLength": 99,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb7d7c3444832f72c",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X05\", api: \"android.app.PendingIntent#getBroadcast(android.content.Context, int, android.content.Intent, int)\", path: \"frameworks/base/core/java/android/app/PendingIntent.java\",\n    permissions: [], appOps: [], enforcementPoint: \"frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java; frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java\",\n    parameters: {\"jointOperands\":\"creator context, requestCode, Intent, flags, intended recipient and lifetime policy\",\"flags\":\"Existing matching token may be returned; FLAG_CANCEL_CURRENT replaces a prior token. FLAG_IMMUTABLE limits holder mutation; FLAG_ONE_SHOT limits sends. Creator can still update under FLAG_UPDATE_CURRENT.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-local\",\"e9-noegress\",\"e9-ini\"], unestablished: [\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"], note: \"Creates an authentic system-held token for specified action identity, but not a generic fresh capability generation with explicit expiry and reduced ambient rights. Sending can execute with creator authority; extra bytes and URI grants require independent review.\",\n    sources: [\"frameworks/base/core/java/android/app/PendingIntent.java\",\"frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java\",\"frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java\"], generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 39164,
+      "byteLength": 1642,
+      "role": "source statement"
+    },
+    {
+      "id": "R2f6133f14d8663e1",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Issue fresh authority for an existing target from an explicitly authorized issuer root.\"",
+      "byteOffset": 2107259,
+      "byteLength": 89,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rdba5a0c09d3502c6",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X06\", api: \"android.app.PendingIntent#cancel()\", path: \"frameworks/base/core/java/android/app/PendingIntent.java\",\n    permissions: [], appOps: [], enforcementPoint: \"frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java; frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java\",\n    parameters: {\"jointOperands\":\"creator authority, exact PendingIntent token/record, current cancellation state\",\"ordering\":\"Cancellation prevents later accepted sends through that record; already dispatched work and independent tokens are distinct.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-audit\"], unestablished: [\"e9-audit\",\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"], note: \"System record sharing is a useful restricted revocation mechanism. No expected-version CAS or authenticated atomic audit is supplied; cancellation is not rollback of past effects.\",\n    sources: [\"frameworks/base/core/java/android/app/PendingIntent.java\",\"frameworks/base/services/core/java/com/android/server/am/ActivityManagerService.java\",\"frameworks/base/services/core/java/com/android/server/am/PendingIntentRecord.java\"], generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 42507,
+      "byteLength": 1403,
+      "role": "source statement"
+    },
+    {
+      "id": "R3c45db74eb89abad",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Attempt an atomic update that disables one shared capability generation for subsequent effect commits.\"",
+      "byteOffset": 2112911,
+      "byteLength": 104,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb1f46f81c8209f3c",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X07\", api: \"android.content.Context#openFileInput(java.lang.String)\", path: \"frameworks/base/core/java/android/content/Context.java\",\n    permissions: [], appOps: [], enforcementPoint: \"frameworks/base/core/java/android/app/ContextImpl.java; system/sepolicy/private/app.te\",\n    parameters: {\"jointOperands\":\"file name, UID/user, actual stored version, subsequently read bytes\",\"read\":\"Private storage access can be local; read timing and any earlier external ingress remain relevant.\"},\n    platformAssurance: \"enforced\", contractAssurance: \"unknown\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [\"e9-gfree\",\"e9-tni\"], unestablished: [\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\",\"e9-sig\"], note: \"No protected provenance/signature envelope is compulsory. Hashing or parsing an envelope does not authenticate historical dependencies without a trusted writer.\",\n    sources: [\"frameworks/base/core/java/android/content/Context.java\",\"frameworks/base/core/java/android/app/ContextImpl.java\",\"system/sepolicy/private/app.te\"], generatorVerdict: \"MARGINAL\" },",
+      "byteOffset": 46907,
+      "byteLength": 1204,
+      "role": "source statement"
+    },
+    {
+      "id": "R3e0f38b0a0cf6b77",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Read a named resource and its protected provenance/signature envelope without altering the underlying bytes.\"",
+      "byteOffset": 2119136,
+      "byteLength": 110,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Reb47f6bc0114eeb7",
+      "file": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "quote": "  { entry: \"D9-X08\", api: null, path: null,\n    permissions: [], appOps: [], enforcementPoint: \"No Android gate implements this abstract contract.\",\n    parameters: {\"jointOperands\":\"typed total expression, every data operand, PC-origin set, protected runtime, declared observation model\"},\n    platformAssurance: \"not observable\", contractAssurance: \"not observable\", invariantAssurance: {\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\",\"e9-gfree\":\"unknown\",\"e9-mediated\":\"unknown\",\"e9-audit\":\"unknown\"},\n    breaks: [], unestablished: [\"e9-audit\",\"e9-auth\",\"e9-ebnd\",\"e9-fresh\",\"e9-local\",\"e9-mediated\",\"e9-noegress\",\"e9-orig\",\"e9-owner\",\"e9-prov\",\"e9-revoke\"], note: \"Ordinary Kotlin/Java/native evaluation does not supply purity, totality or dependency-union proofs. Build a restricted interpreter; Thread/Handler is not its replacement.\",\n    sources: [], generatorVerdict: \"UNVERIFIED\" },",
+      "byteOffset": 51833,
+      "byteLength": 900,
+      "role": "source statement"
+    },
+    {
+      "id": "R42b500bb6dca7ed5",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Run an effect-free total expression over explicit operands; derive new labels by union of data and program-counter dependencies.\"",
+      "byteOffset": 2125639,
+      "byteLength": 130,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0cacd5ba859792b5",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X09\",\"variant\":\"exclusive-file\",\"mechanism\":\"openat(O_CREAT|O_EXCL) or kernel fresh object allocation\",\"nixosOptions\":[\"systemd.services.<name>.serviceConfig.RootDirectory\",\"systemd.services.<name>.serviceConfig.ReadWritePaths\",\"systemd.services.<name>.serviceConfig.UMask\"],\"path\":\"nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11\",\"kernel\":{\"feature\":\"VFS exclusive create\",\"since\":\"present in 6.18.55; earliest introduction not verified\",\"version\":\"6.18.55\",\"source\":\"https://raw.githubusercontent.com/gregkh/linux/v6.18.55/fs/namei.c\"},\"enforcementPoint\":\"atomic directory-entry creation/open\",\"attributes\":\"task credentials, directory/inode; no global approval nonce scope\",\"parameters\":{\"directory\":\"private local filesystem inside B vs remote mount\",\"identity\":\"fresh in live namespace, not globally forever unique\",\"initialization\":\"file create and later write are separate effects\"},\"platformAssurance\":\"enforced\",\"contractAssurance\":\"unknown\",\"breaks\":[\"e9-erase\",\"e9-audit\"],\"unestablished\":[\"e9-auth\",\"e9-fresh\",\"e9-local\",\"e9-mediated\",\"e9-noegress\",\"e9-orig\",\"e9-owner\",\"e9-prov\",\"e9-revoke\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[RESULT] O_EXCL supplies atomic freshness relative to an existing directory entry (with filesystem/symlink rules), not initialization+labeling+all monitor updates in one transaction. Locality requires the resource to be in B and no replication/export.\",\"sources\":[\"nixpkgs:nixos/modules/system/boot/systemd.nix\",\"nixpkgs:nixos/lib/systemd-unit-options.nix\",\"linux:fs/namei.c\",\"systemd:man/systemd.exec.xml\",\"linux:fs/read_write.c\"],\"verdict\":\"MARGINAL\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"RESULT\"},",
+      "byteOffset": 50046,
+      "byteLength": 1760,
+      "role": "source statement"
+    },
+    {
+      "id": "Reb55636c3bafa4d4",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Allocate a fresh local object identity and initialize its explicit authority and labels.\"",
+      "byteOffset": 2131615,
+      "byteLength": 90,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R318f26bdc800e107",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X10\",\"variant\":\"no-stock-declassification\",\"mechanism\":null,\"nixosOptions\":[],\"path\":null,\"kernel\":{\"feature\":null,\"since\":null,\"version\":null,\"source\":null},\"enforcementPoint\":\"none identified\",\"attributes\":\"none\",\"parameters\":{\"release\":\"who/what/where/when plus unchanged historical origins\"},\"platformAssurance\":\"not observable\",\"contractAssurance\":\"not observable\",\"breaks\":[],\"unestablished\":[\"e9-auth\",\"e9-fresh\",\"e9-gfree\",\"e9-local\",\"e9-mediated\",\"e9-noegress\",\"e9-orig\",\"e9-owner\",\"e9-prov\",\"e9-revoke\",\"e9-sig\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[GENERATED] chmod, polkit and permission grants change access. They do not create a protected weaker confidentiality view while retaining mandatory historical labels. A labeled runtime with authorized release metadata is required.\",\"sources\":[\"nixpkgs:nixos/modules/security/polkit.nix\",\"nixpkgs:nixos/modules/config/users-groups.nix\"],\"verdict\":\"UNVERIFIED\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"GENERATED\"},",
+      "byteOffset": 51807,
+      "byteLength": 1053,
+      "role": "source statement"
+    },
+    {
+      "id": "R96537da220b64dba",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Create a value view with explicitly authorized weaker confidentiality restrictions while retaining historical origins.\"",
+      "byteOffset": 2137269,
+      "byteLength": 120,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R43b792aa2b32f1e8",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X11\",\"variant\":\"no-stock-endorsement\",\"mechanism\":null,\"nixosOptions\":[],\"path\":null,\"kernel\":{\"feature\":null,\"since\":null,\"version\":null,\"source\":null},\"enforcementPoint\":\"none identified\",\"attributes\":\"none\",\"parameters\":{\"validation\":\"exact byte predicate and trusted-decision scope\"},\"platformAssurance\":\"not observable\",\"contractAssurance\":\"not observable\",\"breaks\":[],\"unestablished\":[\"e9-auth\",\"e9-fresh\",\"e9-gfree\",\"e9-local\",\"e9-mediated\",\"e9-noegress\",\"e9-orig\",\"e9-owner\",\"e9-prov\",\"e9-revoke\",\"e9-sig\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[GENERATED] A signature or successful polkit action is not scoped integrity endorsement with preserved guest origins. No stock protected endorsement carrier was verified; this is a trusted-runtime operation.\",\"sources\":[\"nixpkgs:nixos/modules/security/polkit.nix\",\"linux:security/keys/keyctl_pkey.c\"],\"verdict\":\"UNVERIFIED\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"GENERATED\"},",
+      "byteOffset": 52861,
+      "byteLength": 1010,
+      "role": "source statement"
+    },
+    {
+      "id": "R2a29a8b322fe1ab3",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Permit a value to influence a specified trusted decision after an explicit authorized validation, without rewriting its origin.\"",
+      "byteOffset": 2142429,
+      "byteLength": 129,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rfece08a41437f96e",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X12\",\"variant\":\"readonly-descriptor-subset\",\"mechanism\":\"open a read-only descriptor to the same protected file object\",\"nixosOptions\":[\"systemd.services.<name>.serviceConfig.ReadOnlyPaths\",\"systemd.services.<name>.serviceConfig.NoNewPrivileges\"],\"path\":\"nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11\",\"kernel\":{\"feature\":\"file description access mode\",\"since\":\"present in 6.18.55; earliest introduction not verified\",\"version\":\"6.18.55\",\"source\":\"https://raw.githubusercontent.com/gregkh/linux/v6.18.55/fs/namei.c\"},\"enforcementPoint\":\"open permission and later fd access-mode checks\",\"attributes\":\"task and file object, not protected generic capability pair\",\"parameters\":{\"target\":\"same inode/object must be fixed, not a raced pathname\",\"rights\":\"O_RDONLY vs write; ioctl/other file semantics separately listed\",\"lifetime\":\"no generic attenuated lifetime field\",\"ambient\":\"existing writable fd/group authority remains\"},\"platformAssurance\":\"enforced\",\"contractAssurance\":\"unknown\",\"breaks\":[],\"unestablished\":[\"e9-atten\",\"e9-auth\",\"e9-fresh\",\"e9-local\",\"e9-mediated\",\"e9-noegress\",\"e9-orig\",\"e9-owner\",\"e9-prov\",\"e9-revoke\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[RESULT] A verified same-object read-only fd is a rights reduction for ordinary file read/write, but dup() preserves flags and rights. It does not reduce all ambient rights or introduce an expected generation/lifetime witness. Full D9 attenuation needs a guarded broker constructor.\",\"sources\":[\"nixpkgs:nixos/modules/system/boot/systemd.nix\",\"nixpkgs:nixos/lib/systemd-unit-options.nix\",\"linux:fs/namei.c\",\"linux:fs/read_write.c\",\"systemd:man/systemd.exec.xml\"],\"verdict\":\"MARGINAL\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"RESULT\"},",
+      "byteOffset": 53872,
+      "byteLength": 1815,
+      "role": "source statement"
+    },
+    {
+      "id": "Ra7fccc59507d9a9a",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Derive a protected capability for the same target with reduced declared rights, bounds and lifetime.\"",
+      "byteOffset": 2147246,
+      "byteLength": 102,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R591dc4a5eac9cc94",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X13\",\"variant\":\"fd-delegation\",\"mechanism\":\"sendmsg(SCM_RIGHTS) over AF_UNIX\",\"nixosOptions\":[\"systemd.services.<name>.serviceConfig.PrivateNetwork\",\"systemd.services.<name>.serviceConfig.RootDirectory\",\"systemd.services.<name>.serviceConfig.RestrictAddressFamilies\"],\"path\":\"nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11\",\"kernel\":{\"feature\":\"Unix descriptor passing\",\"since\":\"present in 6.18.55; earliest introduction not verified\",\"version\":\"6.18.55\",\"source\":\"https://raw.githubusercontent.com/gregkh/linux/v6.18.55/net/unix/af_unix.c\"},\"enforcementPoint\":\"Unix socket send/receive and ancillary fd installation\",\"attributes\":\"socket peers and credentials; underlying open-file authority persists\",\"parameters\":{\"recipient\":\"same B service vs external broker\",\"rights\":\"SCM_RIGHTS normally duplicates existing open-file description unchanged\",\"attenuation\":\"separately verified subset handle before transfer\"},\"platformAssurance\":\"enforced\",\"contractAssurance\":\"unknown\",\"breaks\":[\"e9-local\",\"e9-noegress\",\"e9-atten\"],\"unestablished\":[\"e9-atten\",\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[RESULT] SCM_RIGHTS delegates existing fd authority; it does not itself attenuate it. Unix DAC/LSM and namespaces control admission but may not bind a stable intended callee or downstream effects. Labels and root/generation are absent from ordinary descriptors.\",\"sources\":[\"nixpkgs:nixos/modules/system/boot/systemd.nix\",\"nixpkgs:nixos/lib/systemd-unit-options.nix\",\"linux:net/unix/af_unix.c\",\"systemd:man/systemd.exec.xml\",\"linux:fs/namei.c\"],\"verdict\":\"MARGINAL\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"RESULT\"},",
+      "byteOffset": 55688,
+      "byteLength": 1787,
+      "role": "source statement"
+    },
+    {
+      "id": "Rc8750f0ec2f528c7",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Attenuate an existing capability and deliver it to an explicitly named recipient.\"",
+      "byteOffset": 2152806,
+      "byteLength": 83,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rf1291e804d2d5a0c",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X14\",\"variant\":\"fork-exec-service\",\"mechanism\":\"clone/fork/exec or privileged systemd service launch\",\"nixosOptions\":[\"systemd.services.<name>.serviceConfig.User\",\"systemd.services.<name>.serviceConfig.Group\",\"systemd.services.<name>.serviceConfig.NoNewPrivileges\",\"systemd.services.<name>.serviceConfig.RestrictNamespaces\",\"systemd.services.<name>.serviceConfig.CapabilityBoundingSet\",\"systemd.services.<name>.serviceConfig.AmbientCapabilities\",\"systemd.services.<name>.serviceConfig.KillMode\"],\"path\":\"nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11\",\"kernel\":{\"feature\":\"task/namespace creation\",\"since\":\"present in 6.18.55; earliest introduction not verified\",\"version\":\"6.18.55\",\"source\":\"https://raw.githubusercontent.com/gregkh/linux/v6.18.55/kernel/nsproxy.c\"},\"enforcementPoint\":\"task creation and inherited credentials/fds/namespace/seccomp; systemd applies sandbox before exec\",\"attributes\":\"PID/task credentials and cgroup; process-incarnation labels not supplied\",\"parameters\":{\"inheritance\":\"fds, mappings, env and filter/profile inheritance\",\"service\":\"unit runs as designated UID; agent cannot arbitrarily start privileged unit\",\"prefix\":\"systemd privileged execution prefixes can change sandbox applicability\"},\"platformAssurance\":\"enforced\",\"contractAssurance\":\"unknown\",\"breaks\":[\"e9-local\",\"e9-noegress\",\"e9-gfree\"],\"unestablished\":[\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[RESULT] Forked children inherit many restrictions but also open authority and secret memory. exec replaces memory without establishing a clean origin context. New systemd units can use different credentials and brokers, so policy must authorize launch and inheritance. No whole child effect trace is authenticated.\",\"sources\":[\"nixpkgs:nixos/modules/system/boot/systemd.nix\",\"nixpkgs:nixos/lib/systemd-unit-options.nix\",\"linux:kernel/nsproxy.c\",\"systemd:man/systemd.exec.xml\",\"linux:Documentation/userspace-api/seccomp_filter.rst\",\"linux:Documentation/userspace-api/landlock.rst\"],\"verdict\":\"MARGINAL\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"RESULT\"},",
+      "byteOffset": 57476,
+      "byteLength": 2225,
+      "role": "source statement"
+    },
+    {
+      "id": "Rb001c5473ff2feb0",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Start a task with explicitly inherited data, authority, compartment and handler environment.\"",
+      "byteOffset": 2158488,
+      "byteLength": 94,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R9762a293e468420f",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X15\",\"variant\":\"wait-is-not-labeled-join\",\"mechanism\":\"waitid/waitpid plus explicit result IPC\",\"nixosOptions\":[\"systemd.services.<name>.serviceConfig.KillMode\"],\"path\":\"nixos/modules/system/boot/systemd.nix @ 7c8764b7c7b09b34f632464276218ef9090eaa11\",\"kernel\":{\"feature\":\"task identity/parent wait relation\",\"since\":\"present in 6.18.55; earliest introduction not verified\",\"version\":\"6.18.55\",\"source\":\"https://raw.githubusercontent.com/gregkh/linux/v6.18.55/kernel/exit.c\"},\"enforcementPoint\":\"parent-child wait/status operation; result bytes on separately authorized channel\",\"attributes\":\"child PID/status, not complete child dependency history\",\"parameters\":{\"task\":\"pidfd/stable incarnation vs numeric PID reuse\",\"result\":\"wait status is not an arbitrary labeled task value\",\"ipc\":\"explicit pipe/socket/file result needed\"},\"platformAssurance\":\"enforced\",\"contractAssurance\":\"unknown\",\"breaks\":[\"e9-gfree\",\"e9-ini\"],\"unestablished\":[\"e9-fresh\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[RESULT] Waiting reports exit state and reaps a child; it neither imports an authenticated execution trace nor reconstructs complete origins of result bytes. Cancellation/error and divergence remain distinct. Provenance-aware join needs runtime accounting.\",\"sources\":[\"nixpkgs:nixos/modules/system/boot/systemd.nix\",\"nixpkgs:nixos/lib/systemd-unit-options.nix\",\"linux:kernel/exit.c\",\"systemd:man/systemd.exec.xml\",\"linux:net/unix/af_unix.c\"],\"verdict\":\"MARGINAL\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"RESULT\"},",
+      "byteOffset": 59702,
+      "byteLength": 1615,
+      "role": "source statement"
+    },
+    {
+      "id": "R674d22e60d44c6e3",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Await a specified task and collect its labeled result and accounted execution history.\"",
+      "byteOffset": 2164061,
+      "byteLength": 88,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re9369acd2a20b3e9",
+      "file": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "quote": "  {\"entry\":\"D9-X16\",\"variant\":\"no-stock-algebraic-handler\",\"mechanism\":null,\"nixosOptions\":[],\"path\":null,\"kernel\":{\"feature\":null,\"since\":null,\"version\":null,\"source\":null},\"enforcementPoint\":\"none identified\",\"attributes\":\"none\",\"parameters\":{\"scope\":\"lexical D9 effect signature/interpreter and resumption semantics\"},\"platformAssurance\":\"not observable\",\"contractAssurance\":\"not observable\",\"breaks\":[],\"unestablished\":[\"e9-auth\",\"e9-fresh\",\"e9-mediated\",\"e9-orig\",\"e9-prov\",\"e9-revoke\"],\"invariantAssurance\":{\"e9-prov\":\"not observable\",\"e9-orig\":\"not observable\"},\"note\":\"[GENERATED] A syscall filter or D-Bus routing policy is not a lexical effect-handler installation operation. An application interpreter can implement it, but no source-audited stock NixOS runtime for the attached semantics was identified.\",\"sources\":[\"linux:Documentation/userspace-api/seccomp_filter.rst\",\"nixpkgs:nixos/modules/services/system/dbus.nix\"],\"verdict\":\"UNVERIFIED\",\"excluded\":[\"e9-tni\",\"physical channels\"],\"evidenceClass\":\"GENERATED\"},",
+      "byteOffset": 61318,
+      "byteLength": 1027,
+      "role": "source statement"
+    },
+    {
+      "id": "R9f9df31342d1773e",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Install an explicit interpreter for subsequent effect requests in a lexical scope.\"",
+      "byteOffset": 2168492,
+      "byteLength": 84,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R8903fc9557a9fd19",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"deg(p + q) ≤ max(deg p, deg q) and deg(pq) ≤ deg p + deg q over any semiring; deg(pq) = deg p + deg q when R has no zero divisors, and then natDeg(p ∘ q) = natDeg p · natDeg q\"",
+      "byteOffset": 2016647,
+      "byteLength": 184,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R251d7a68f129567b",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Polynomial p in R[X], R a semiring\"",
+      "byteOffset": 2016527,
+      "byteLength": 36,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re1ae97b04bf82d06",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Additivity: coeff (p + q) n = coeff p n + coeff q n, and coeff at n is an R-linear map; two polynomials with the same coefficients are equal; the coefficient of a product is the sum over i + j = n of coeff p i · coeff q j\"",
+      "byteOffset": 2022359,
+      "byteLength": 224,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R06ceae5146ef41bd",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Polynomial p in R[X], R a semiring; an exponent n\"",
+      "byteOffset": 2022222,
+      "byteLength": 51,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rd87e783086bb4b83",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Multiplicative when R has no zero divisors: lc(pq) = lc p · lc q; a product of monic polynomials is monic over any semiring; lc 0 = 0\"",
+      "byteOffset": 2027349,
+      "byteLength": 136,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R22eb3c74f57f5cbc",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"It is a ring homomorphism (mapRingHom); evaluating map f p at x is eval₂ f x p, so at f a it is f (eval a p); it commutes with the derivative and with composition; degree is kept when f is injective\"",
+      "byteOffset": 2033420,
+      "byteLength": 202,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rc9ccd431a4bc56b2",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Ring homomorphism f: R → S of semirings; polynomial p in R[X]\"",
+      "byteOffset": 2033305,
+      "byteLength": 65,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R7dd619aedf627371",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"eval₂ f x is a ring homomorphism when S is commutative, and when x commutes with every f(a) in general (eval₂RingHom'); aeval x is the unique R-algebra homomorphism sending X to x\"",
+      "byteOffset": 2039824,
+      "byteLength": 185,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0c341e31708f3ba0",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Polynomial p in R[X]; a point x in S, or in an R-algebra A (R commutative); for eval₂, a ring homomorphism f: R → S\"",
+      "byteOffset": 2039644,
+      "byteLength": 121,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R79bf7989068c681d",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"R-linearity; the Leibniz rule (pq)' = p'q + pq' over any semiring; the chain rule (p ∘ q)' = q' · (p' ∘ q) over a commutative semiring\"",
+      "byteOffset": 2046737,
+      "byteLength": 141,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R00dc9ff202f19f89",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"card (roots p) ≤ natDegree p; roots (pq) = roots p + roots q when pq ≠ 0; for p ≠ 0, a is in roots p iff it is a root; the count of a in roots p is its multiplicity; X - a divides p iff a is a root (the factor theorem, R commutative)\"",
+      "byteOffset": 2053135,
+      "byteLength": 241,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rbbe92b3f44a61cf5",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Polynomial p in R[X]; R a commutative domain for roots, a ring for rootMultiplicity\"",
+      "byteOffset": 2052934,
+      "byteLength": 85,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R2885c09e2a872530",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Associative over a commutative semiring, with X a two-sided identity; eval x (p ∘ q) = eval (eval x q) p over a commutative semiring; additive in p over any semiring and multiplicative in p over a commutative semiring; natDeg(p ∘ q) = natDeg p · natDeg q when R has no zero divisors\"",
+      "byteOffset": 2060349,
+      "byteLength": 289,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re52212484e69a037",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Polynomials p, q in R[X], R a semiring\"",
+      "byteOffset": 2060258,
+      "byteLength": 40,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rec69b968a37f413e",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Splitting persists along any ring homomorphism; a product of splitting polynomials splits, and over a commutative domain a product of nonzero polynomials splits iff each factor does; over a commutative domain p splits iff it has natDegree p roots counted with multiplicity\"",
+      "byteOffset": 2065886,
+      "byteLength": 274,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R06b6297056ce8f20",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Polynomial p in R[X], R a semiring; for splitting along i, a ring homomorphism i: R → S and map i p\"",
+      "byteOffset": 2065732,
+      "byteLength": 103,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R5d822ef60d217905",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Parseval, periodicity assumption, convolution -> multiplication\"",
+      "byteOffset": 504328,
+      "byteLength": 65,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R4238bf6fd56a1443",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Finite sequence {x_0,...,x_{N-1}}\"",
+      "byteOffset": 504218,
+      "byteLength": 35,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R7c5f1a8031dd7f76",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Same as DFT (implementation, not mathematically distinct)\"",
+      "byteOffset": 505401,
+      "byteLength": 59,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R9357e56b413f8c1c",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Sequence of length N (preferably power of 2)\"",
+      "byteOffset": 505304,
+      "byteLength": 46,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rc0aa8c9bec54e187",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Vertex set, strongly connected components (as sets), degree sequence (in/out swapped)\"",
+      "byteOffset": 33280,
+      "byteLength": 87,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R40ca8348fdc339e5",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Directed graph G = (V, E)\"",
+      "byteOffset": 33158,
+      "byteLength": 27,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R18d0a0219e06619c",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Vertex set, vertex count\"",
+      "byteOffset": 34232,
+      "byteLength": 26,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rcd3815500db8d550",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Simple graph G = (V, E)\"",
+      "byteOffset": 34136,
+      "byteLength": 25,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R294d83636c08d5ec",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"All distances, angles, size, shape, orientation\"",
+      "byteOffset": 153586,
+      "byteLength": 49,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rd9d5ceec97ba6441",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Geometric figure + displacement vector\"",
+      "byteOffset": 153494,
+      "byteLength": 40,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R40b5fb319f2d3265",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Order, monotonicity\"",
+      "byteOffset": 993622,
+      "byteLength": 21,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R30a2604de0f96a92",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Positive data\"",
+      "byteOffset": 993562,
+      "byteLength": 15,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rebd5965fd40506a8",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Circles/lines (mapped to circles/lines), cross-ratio, conformality\"",
+      "byteOffset": 999428,
+      "byteLength": 68,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R229b1d59483c7f10",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"z in C union {inf} + matrix [[a,b],[c,d]]\"",
+      "byteOffset": 999337,
+      "byteLength": 43,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R759d8cb613e3333a",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Sequency decomposition, O(N log N) with no multiplication\"",
+      "byteOffset": 1036472,
+      "byteLength": 59,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R97974af7995614d7",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Binary sequence of length 2^n\"",
+      "byteOffset": 1036383,
+      "byteLength": 31,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R10b2fe1aee725435",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Parseval, self-inverse (up to scaling), only +/- operations\"",
+      "byteOffset": 511567,
+      "byteLength": 61,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R6993c471fda3f765",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"H_N = (1/sqrt(N)) [[H_{N/2}, H_{N/2}],[H_{N/2},-H_{N/2}]]. Recursive +/-1 matrix. = Walsh-Hadamard.\"",
+      "byteOffset": 511357,
+      "byteLength": 101,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb01f3c8c13ac326c",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Maps points to hyperplanes and curves to duals. Contact transformation bridging configuration and momentum spaces.\"",
+      "byteOffset": 721094,
+      "byteLength": 116,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R5afcd7686c285d22",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Convex conjugate: f*(p)=sup{px-f(x)}. Cumulant->rate function in probability.\"",
+      "byteOffset": 989932,
+      "byteLength": 79,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rf2270fe51703c958",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"f*(p) = sup_x{px - f(x)}. Convex conjugate. Involution on convex functions.\"",
+      "byteOffset": 1120953,
+      "byteLength": 77,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb03b141d9719afc9",
+      "file": "docs/schema-survey/receipts/PS09.txt",
+      "sha256": "838b4c4b8f1572fcc0fb3616c3063bd5f76d96a8cf62b1367d4a4fb852fc1383",
+      "quote": "def GaloisConnection [Preorder α] [Preorder β] (l : α → β) (u : β → α) :=\n  ∀ a b, l a ≤ b ↔ a ≤ u b",
+      "byteOffset": 421,
+      "byteLength": 118,
+      "role": "fetched source window"
+    },
+    {
+      "id": "R01f2d9ca4b5c5895",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"A pair of order-reversing (antitone) maps f: P -> Q and g: Q -> P with a ≤ g(f(a)) for all a in P and b ≤ f(g(b)) for all b in Q. Both composites g∘f and f∘g are closure operators. Captures dual relationships between posets without a bijection. (The monotone convention instead has f(a) ≤ b iff a ≤ g(b), giving a ≤ g(f(a)) and f(g(b)) ≤ b.)\"",
+      "byteOffset": 138285,
+      "byteLength": 359,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Re14c17e0d70b66e5",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Unary transformation on a poset mapping each element to its minimum bounding element. Must satisfy three axioms: extensive (x ≤ cl(x)), monotone (x ≤ y implies cl(x) ≤ cl(y)), and idempotent (cl(cl(x)) = cl(x)). Maps onto the lattice of flats in matroid theory, bridging algebra and geometric independence.\"",
+      "byteOffset": 143972,
+      "byteLength": 314,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R079bbac402568b39",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Establishes an antitone (or monotone adjoint) pair between two posets, f(a) <= b iff a <= g(b), giving closure operators on each side and a bijection of closed elements.\"",
+      "byteOffset": 1288013,
+      "byteLength": 171,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R1eae808f4b106954",
+      "file": "docs/schema-survey/receipts/PS06.txt",
+      "sha256": "f906b67c22dd31524a071764ccedd552a90b87ee0d4f7d6e59edea1d741bb9bc",
+      "quote": "$P$ has an edge $((u,v), (x,y))$ if and only if $(u,x)$ is an edge in $G$\n    and $(v,y)$ is an edge in $H$.",
+      "byteOffset": 383,
+      "byteLength": 108,
+      "role": "fetched source window"
+    },
+    {
+      "id": "Rf7318a9a87853dad",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Binary operation where (u_1,u_2) and (v_1,v_2) are adjacent iff u_1~v_1 AND u_2~v_2. Adjacencies require simultaneous adjacency in both factors. The categorical product in the category of graphs.\"",
+      "byteOffset": 53957,
+      "byteLength": 197,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R0237e08923494f39",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"M ⊗_R N. Universal property for bilinear maps.\"",
+      "byteOffset": 261150,
+      "byteLength": 50,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R4835716dbcf2b8d8",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Left adjoint to the inclusion of sheaves into presheaves; the plus construction applied twice.\"",
+      "byteOffset": 1458711,
+      "byteLength": 96,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R8718b56906760254",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Embeds category C into presheaf category [C^op, Set] via y(A) = Hom(-,A). Objects determined entirely by their morphisms.\"",
+      "byteOffset": 452438,
+      "byteLength": 123,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R3498b959548857ee",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Sends each object c to its representable presheaf Hom(-, c). Fully faithful: an object is determined up to isomorphism by the morphisms into it.\"",
+      "byteOffset": 1186806,
+      "byteLength": 146,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R042338247146e6a1",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"A graph H obtained from G by any sequence of edge deletions, vertex deletions, and edge contractions. The Graph Minor Theorem (Robertson-Seymour) establishes that the minor ordering is a well-quasi-ordering, enabling forbidden minor characterizations of graph families.\"",
+      "byteOffset": 37280,
+      "byteLength": 271,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R46451decbf3e727c",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Removes a specified edge from the graph, preserving all vertices. Elementary graph surgery.\"",
+      "byteOffset": 79835,
+      "byteLength": 93,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R02700ce751b194bb",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Removes an edge and merges its two endpoints into a single vertex, inheriting all adjacencies of both. Fundamental operation in graph minor theory.\"",
+      "byteOffset": 81747,
+      "byteLength": 149,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Radf0fc76f8757c1e",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Removes an element from the ground set. Independent sets of the result are exactly the independent sets of the original that do not contain the deleted element. In matrix representation, corresponds to column removal.\"",
+      "byteOffset": 91318,
+      "byteLength": 219,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "Rb742183e339fac12",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Contracts an element: the resulting matroid has ground set E \\\\ {e} with rank function r'(A) = r(A ∪ {e}) - r({e}). In matrix representation, corresponds to projecting remaining vectors onto quotient space. Dual to matroid deletion in M*.\"",
+      "byteOffset": 92629,
+      "byteLength": 242,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    },
+    {
+      "id": "R16fe90f8063722d7",
+      "file": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "quote": "\"Result of any sequence of deletion and contraction operations. Gives rise to forbidden-minor characterizations of matroid classes. Minors are not well-quasi-ordered on all matroids; for matroids representable over a fixed finite field, well-quasi-ordering is a conjecture of Robertson and Seymour, proved for bounded branchwidth (Geelen, Gerards and Whittle announced a proof of the related Rota conjecture in 2014, unpublished).\"",
+      "byteOffset": 97582,
+      "byteLength": 431,
+      "role": "read map field; its mathematical truth keeps the original map evidence level"
+    }
+  ]
+}

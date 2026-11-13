@@ -1,0 +1,178 @@
+{
+  "fetches": [
+    {
+      "id": "scipy-hadamard",
+      "url": "https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/linalg/_special_matrices.py",
+      "status": "fetched",
+      "bytes": 41201,
+      "elapsedSeconds": 4.302000522613525
+    },
+    {
+      "id": "scipy-fft",
+      "url": "https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/fft/_basic.py",
+      "status": "fetched",
+      "bytes": 64353,
+      "elapsedSeconds": 4.370433807373047
+    },
+    {
+      "id": "scipy-real",
+      "url": "https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/fft/_realtransforms.py",
+      "status": "fetched",
+      "bytes": 26450,
+      "elapsedSeconds": 4.355390787124634
+    },
+    {
+      "id": "numpy-fft",
+      "url": "https://raw.githubusercontent.com/numpy/numpy/v2.3.5/numpy/fft/__init__.py",
+      "status": "fetched",
+      "bytes": 8291,
+      "elapsedSeconds": 4.285116672515869
+    },
+    {
+      "id": "networkx-unary",
+      "url": "https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/unary.py",
+      "status": "fetched",
+      "bytes": 1795,
+      "elapsedSeconds": 4.3234336376190186
+    },
+    {
+      "id": "networkx-digraph",
+      "url": "https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/classes/digraph.py",
+      "status": "fetched",
+      "bytes": 48101,
+      "elapsedSeconds": 4.366106033325195
+    },
+    {
+      "id": "networkx-product",
+      "url": "https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/product.py",
+      "status": "fetched",
+      "bytes": 19632,
+      "elapsedSeconds": 4.362135887145996
+    },
+    {
+      "id": "mathlib-log",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "status": "fetched",
+      "bytes": 28172,
+      "elapsedSeconds": 3.7085909843444824
+    },
+    {
+      "id": "mathlib-degree",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+      "status": "fetched",
+      "bytes": 31518,
+      "elapsedSeconds": 3.69317889213562
+    },
+    {
+      "id": "mathlib-galois",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean",
+      "status": "fetched",
+      "bytes": 12899,
+      "elapsedSeconds": 3.669450044631958
+    }
+  ],
+  "excerptRuns": [
+    {
+      "id": "PS01",
+      "path": "docs/schema-survey/receipts/PS01.txt",
+      "url": "https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/linalg/_special_matrices.py",
+      "windows": [
+        "Constructs an n-by-n Hadamard matrix, using Sylvester's\n    construction. `n` must be a power of 2.",
+        "H = np.array([[1]], dtype=dtype)"
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 4.698288917541504,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS01.txt (2 windows from https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/linalg/_special_matrices.py)\n"
+    },
+    {
+      "id": "PS02",
+      "path": "docs/schema-survey/receipts/PS02.txt",
+      "url": "https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/fft/_basic.py",
+      "windows": [
+        "Compute the 1-D discrete Fourier Transform.",
+        "Normalization mode. Default is \"backward\", meaning no normalization on\n        the forward transforms and scaling by ``1/n`` on the `ifft`."
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 4.500715255737305,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS02.txt (2 windows from https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/fft/_basic.py)\n"
+    },
+    {
+      "id": "PS03",
+      "path": "docs/schema-survey/receipts/PS03.txt",
+      "url": "https://raw.githubusercontent.com/numpy/numpy/v2.3.5/numpy/fft/__init__.py",
+      "windows": [
+        "that a convolution in the time domain is equivalent to a point-by-point\nmultiplication in the frequency domain."
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 3.501981735229492,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS03.txt (1 windows from https://raw.githubusercontent.com/numpy/numpy/v2.3.5/numpy/fft/__init__.py)\n"
+    },
+    {
+      "id": "PS04",
+      "path": "docs/schema-survey/receipts/PS04.txt",
+      "url": "https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/classes/digraph.py",
+      "windows": [
+        "The reverse is a graph with the same nodes and edges\n        but with the directions of the edges reversed."
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 3.6043946743011475,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS04.txt (1 windows from https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/classes/digraph.py)\n"
+    },
+    {
+      "id": "PS05",
+      "path": "docs/schema-survey/receipts/PS05.txt",
+      "url": "https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/unary.py",
+      "windows": [
+        "Returns the graph complement of G."
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 4.102967262268066,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS05.txt (1 windows from https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/unary.py)\n"
+    },
+    {
+      "id": "PS06",
+      "path": "docs/schema-survey/receipts/PS06.txt",
+      "url": "https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/product.py",
+      "windows": [
+        "$P$ has an edge $((u,v), (x,y))$ if and only if $(u,x)$ is an edge in $G$\n    and $(v,y)$ is an edge in $H$."
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 4.316873788833618,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS06.txt (1 windows from https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/product.py)\n"
+    },
+    {
+      "id": "PS07",
+      "path": "docs/schema-survey/receipts/PS07.txt",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "windows": [
+        "theorem log_mul (hx : x \u2260 0) (hy : y \u2260 0) : log (x * y) = log x + log y :="
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 4.538525104522705,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS07.txt (1 windows from https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean)\n"
+    },
+    {
+      "id": "PS08",
+      "path": "docs/schema-survey/receipts/PS08.txt",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean",
+      "windows": [
+        "variable [NoZeroDivisors R] {p q : R[X]}",
+        "lemma degree_mul : degree (p * q) = degree p + degree q :="
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 4.025604486465454,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS08.txt (2 windows from https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Degree/Operations.lean)\n"
+    },
+    {
+      "id": "PS09",
+      "path": "docs/schema-survey/receipts/PS09.txt",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean",
+      "windows": [
+        "def GaloisConnection [Preorder \u03b1] [Preorder \u03b2] (l : \u03b1 \u2192 \u03b2) (u : \u03b2 \u2192 \u03b1) :=\n  \u2200 a b, l a \u2264 b \u2194 a \u2264 u b"
+      ],
+      "status": "fetched",
+      "elapsedSeconds": 3.337892770767212,
+      "log": "excerpt: wrote docs/schema-survey/receipts/PS09.txt (1 windows from https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Order/GaloisConnection/Defs.lean)\n"
+    }
+  ]
+}

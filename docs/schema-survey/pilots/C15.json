@@ -1,0 +1,396 @@
+{
+  "candidate": "C15",
+  "mapCommit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+  "purpose": "Discover a reverse route through explicitly scoped inverse edges and check both round trips.",
+  "rows": [
+    {
+      "entry": "D1-001",
+      "name": "Transpose graph",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R0f37ff5a8ce2f0e3",
+        "Rb016d3365017ce87"
+      ],
+      "model": "transpose_graph",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D1-001",
+      "parameterMap": "same",
+      "domain": "loopless directed graph on three labeled vertices",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D8-217",
+      "name": "Transpose graph transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R5bd6e20e9b9578cd",
+        "Rb016d3365017ce87"
+      ],
+      "model": "transpose_graph",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D8-217",
+      "parameterMap": "same",
+      "domain": "loopless directed graph on three labeled vertices",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D1-002",
+      "name": "Complement graph",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R8a82aa83487f2fc7",
+        "R5a294294f12c2b81"
+      ],
+      "model": "complement",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D1-002",
+      "parameterMap": "same",
+      "domain": "simple loopless undirected graph on three fixed vertices",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D1-082",
+      "name": "Reverse-complement operator",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R869a3246608d70af"
+      ],
+      "model": "reverse_complement",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D1-082",
+      "parameterMap": "same",
+      "domain": "permutations of 1,2,3; no tableau assertion",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D1-109",
+      "name": "Translation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rf5bdc1e080e93b87"
+      ],
+      "model": "translation",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D1-109",
+      "parameterMap": "negate displacement",
+      "domain": "rational points and a fixed displacement vector",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D2-001",
+      "name": "Translation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R03622d845e026c91"
+      ],
+      "model": "translation",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D2-001",
+      "parameterMap": "negate displacement",
+      "domain": "rational points and a fixed displacement vector",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D6-145",
+      "name": "Translation transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rc820da83d8cf48fe"
+      ],
+      "model": "translation",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D6-145",
+      "parameterMap": "negate displacement",
+      "domain": "rational points and a fixed displacement vector",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D1-110",
+      "name": "Reflection",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R5e4a0d4172e9a70b"
+      ],
+      "model": "reflection",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D1-110",
+      "parameterMap": "same",
+      "domain": "reflection in the fixed x-axis of QQ^2",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D2-002",
+      "name": "Reflection",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R402e586f68d0c67b"
+      ],
+      "model": "reflection",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D2-002",
+      "parameterMap": "same",
+      "domain": "reflection in the fixed x-axis of QQ^2",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D6-119",
+      "name": "Reflection transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Re868c5288e0a00ea"
+      ],
+      "model": "reflection",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D6-119",
+      "parameterMap": "same",
+      "domain": "reflection in the fixed x-axis of QQ^2",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D1-111",
+      "name": "Rotation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R4cb690550a0fbef9"
+      ],
+      "model": "rotation",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D1-111",
+      "parameterMap": "negate angle",
+      "domain": "90-degree rotation around the origin in QQ^2",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D2-003",
+      "name": "Rotation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rd93b4f8e58eb83c2"
+      ],
+      "model": "rotation",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D2-003",
+      "parameterMap": "negate angle",
+      "domain": "90-degree rotation around the origin in QQ^2",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D8-186",
+      "name": "Rotation transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R4e9797c63a8c59fc"
+      ],
+      "model": "rotation",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D8-186",
+      "parameterMap": "negate angle",
+      "domain": "90-degree rotation around the origin in QQ^2",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D6-101",
+      "name": "Mobius transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R53b5e3d512b23f55"
+      ],
+      "model": "mobius",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D6-101",
+      "parameterMap": "adjugate matrix",
+      "domain": "nonzero determinant, rational points away from both poles",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D6-148",
+      "name": "Walsh-Hadamard transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R9b615cde361e9fdc",
+        "Re0da075e09084669"
+      ],
+      "model": "walsh",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D6-148",
+      "parameterMap": "same matrix divided by N",
+      "domain": "N=4, unnormalized Sylvester matrix, fixed ordering",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    },
+    {
+      "entry": "D5-055",
+      "name": "Hadamard gate",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R8f741fd65fed19b4"
+      ],
+      "model": "hadamard_gate",
+      "relation": "two-sided inverse on stated trial domain",
+      "target": "D5-055",
+      "parameterMap": "same",
+      "domain": "one-qubit normalized Hadamard on two coordinates",
+      "equality": "exact on rational finite models; tolerance 1e-10 for the normalized two-coordinate gate",
+      "canonicalIdentity": "not decided; repeated domain views are separate entry rows",
+      "evidence": "read definitions, generated inverse edge, finite trial only"
+    }
+  ],
+  "fixtureRule": "Inputs and proposed annotations are generated fixtures, labeled as such. Source statements remain readings."
+}

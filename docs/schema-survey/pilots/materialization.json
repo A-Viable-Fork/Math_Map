@@ -1,0 +1,32 @@
+{
+  "C02": {
+    "rows": 16,
+    "distinctEntries": 16,
+    "materializeSeconds": 0.0006724230001964315
+  },
+  "C23": {
+    "rows": 17,
+    "distinctEntries": 17,
+    "materializeSeconds": 0.00047814099980314495
+  },
+  "C15": {
+    "rows": 16,
+    "distinctEntries": 16,
+    "materializeSeconds": 0.0004372490002424456
+  },
+  "C30": {
+    "rows": 16,
+    "distinctEntries": 16,
+    "materializeSeconds": 0.0005593530004261993
+  },
+  "C33": {
+    "rows": 18,
+    "distinctEntries": 18,
+    "materializeSeconds": 0.001100697999845579
+  },
+  "C53": {
+    "rows": 20,
+    "distinctEntries": 20,
+    "materializeSeconds": 0.0006303700001808465
+  }
+}
