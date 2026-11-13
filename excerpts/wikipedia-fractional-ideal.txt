@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Fractional ideal (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899807
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 874ba19d28701886f756486b2666ce87a95b45f047e2b624ba4b1ef61443834b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the concept of '''fractional ideal''' is introduced in the context of [[integral domain]]s
+
+fractional ideals of an integral domain are like [[ideal (ring theory)|ideal]]s where [[denominator]]s are allowed.
+
+Let <math>R</math> be an [[integral domain]], and let <math>K = \operatorname{Frac}R</math> be its [[field of fractions]].
+
+A '''fractional ideal''' of <math>R</math> is an <math>R</math>-[[submodule]] <math>I</math> of <math>K</math> such that there exists a non-zero <math>r \in R</math> such that <math>rI\subseteq R</math>.
+
+The set of invertible fractional ideals forms a [[commutative group]] with respect to the above product, where the identity is the [[unit ideal]] <math>(1) = R</math> itself. This group is called the '''group of fractional ideals''' of <math>R</math>.
+
+An integral domain is a Dedekind domain if and only if every non-zero fractional ideal is invertible.

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Henselian.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Henselian.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 5a74e28736ff8928ad9aa5be57d71d47826b1a9e8a691bb8efd921a5c20052dc
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- HenselianLocalRing (line 108)
+class HenselianLocalRing (R : Type*) [CommRing R] : Prop extends IsLocalRing R where
+  is_henselian :
+    ∀ (f : R[X]) (_ : f.Monic) (a₀ : R) (_ : f.eval a₀ ∈ maximalIdeal R)
+      (_ : IsUnit (f.derivative.eval a₀)), ∃ a : R, f.IsRoot a ∧ a - a₀ ∈ maximalIdeal R

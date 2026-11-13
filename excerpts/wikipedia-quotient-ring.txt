@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Quotient ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1366975432
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 28422b42efe08f8f21d08d04a7b7687c2f02e8d0a06d100d6c1dd7e3b6323440
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''quotient ring''', also known as '''factor ring'''
+
+Given a ring <math>R</math> and a two-sided ideal <math>I</math> in {{tmath|1= R }}
+
+(Here one has to check that these definitions are [[well-defined]]. Compare [[coset]] and [[quotient group]].) The zero-element of <math>R\ /\ I</math> is {{tmath|1= \bar{0} = 0 + I = I }}
+
+is a [[surjective]] [[ring homomorphism]], sometimes called the '''''natural quotient map'''''
+
+The ring of real-valued polynomial functions defined on <math>V</math> can be identified with the quotient ring

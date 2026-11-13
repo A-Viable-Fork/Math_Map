@@ -6,25 +6,23 @@ The landed entries (origin map, tier landed: as written, never reviewed) graded 
 
 The strict rule [ruling: operator, 2026-11-13]: **confirmed** only when a quoted window states the field's claim itself, not merely names the object; a claim with several parts is confirmed only when every part is quoted. **imprecise**: right idea with a part unquoted or a detail off (the note names it); **wrong**: a window contradicts it; **unsupported**: no window states it. Every imprecise or wrong content field carries a receipted correction in `mapfill/corrections.js` (the landed text kept beside it) or a flag. Before each batch's sources were read, the reviewer committed what each field should be (`audit/landed-review-recall-0_1.js`, recalled: a lead, never evidence).
 
-Graded: 25 of 993 entries in 1 batches. By domain: D2 25 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
-
-Recall committed, grades pending: batch 2 (D2-055, D2-056, D2-060, D2-062, D2-063, D2-064, D2-065, D2-066, D2-068, D2-069, D2-074, D2-076, D2-077, D2-079, D2-081, D2-082, D2-083, D2-084, D2-085, D2-086, D2-087, D2-088, D2-089, D2-090, D2-091).
+Graded: 50 of 993 entries in 2 batches. By domain: D2 50 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
 
 ## 1. Verdicts by field
 
 Each domain's fields, counted by verdict.
 
-### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (25 entries)
+### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (50 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 24 | 1 | 0 | 0 |
-| description | 17 | 8 | 0 | 0 |
-| input | 20 | 5 | 0 | 0 |
-| output | 25 | 0 | 0 | 0 |
-| preserved | 13 | 7 | 0 | 5 |
-| broken | 7 | 2 | 1 | 15 |
-| **all** | 106 | 23 | 1 | 20 |
+| name | 49 | 1 | 0 | 0 |
+| description | 38 | 12 | 0 | 0 |
+| input | 43 | 7 | 0 | 0 |
+| output | 49 | 1 | 0 | 0 |
+| preserved | 29 | 10 | 0 | 11 |
+| broken | 14 | 3 | 1 | 32 |
+| **all** | 222 | 34 | 1 | 43 |
 
 ## 2. By batch
 
@@ -33,6 +31,7 @@ Per batch: imprecise and wrong fields found, scaled to 25 entries, and the share
 | Batch | Domain | Entries | Imprecise | Wrong | Per 25 entries | Entries with a finding | Fields settled | Recall contradicted | Rate |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | D2 | 25 | 23 | 1 | 24.0 | 20 | 130 | 12 | 9% |
+| 2 | D2 | 25 | 11 | 0 | 11.0 | 8 | 127 | 10 | 8% |
 
 ## 3. Blind re-grades
 
@@ -46,12 +45,15 @@ Every tenth entry: its most specific claim (a hypothesis, a formula, an attribut
 
 - **D2-010 Collineation**, description: All collineations are semilinear. *Attempt:* Looked for collineations with no semilinear map behind them: on a projective line every bijection of the points is a collineation, and non-Desarguesian planes have collineations but no underlying vector space. *Outcome:* falsified.
 - **D2-047 QR Decomposition**, description: QR gives numerically stable least squares. *Attempt:* Checked whether stability holds however Q and R are computed: the source says the Gram-Schmidt process is inherently numerically unstable, while Householder reflections give a stable algorithm. *Outcome:* falsified.
+- **D2-063 Sinkhorn Normal Form**, input: A nonnegative matrix with positive permanent has a Sinkhorn form D1 A D2. *Attempt:* Tried the 2 by 2 matrix [[1, 1], [0, 1]], permanent 1: D1 A D2 keeps the zero in position (2, 1), so its first column sums to its (1, 1) entry and its second row to its (2, 2) entry, both 1, and row one then forces the (1, 2) entry to 0, which a positive scaling of 1 cannot be. *Outcome:* falsified.
+- **D2-081 Fractional Ideal Construction**, description: The fractional ideals of an integral domain form a group. *Attempt:* Looked for fractional ideals with no inverse: the source makes the group the invertible ones, and says every nonzero fractional ideal is invertible exactly in a Dedekind domain, so outside Dedekind domains some have no inverse. *Outcome:* falsified.
+- **D2-091 Mapping Cone Construction**, description: The cone detects quasi-isomorphisms. *Attempt:* Checked both directions against the source: an acyclic cone gives a quasi-isomorphism through the long exact sequence, and the same sequence gives the converse. *Outcome:* survived.
 
 ## 5. Findings
 
 Corrections, flags and Mathlib conflicts on reviewed entries.
 
-### Corrections (19 entries, 23 fields)
+### Corrections (27 entries, 34 fields)
 
 - **D2-003 Rotation** (broken): Landed review, batch 1: broken graded imprecise. In space the axis of rotation is a line of fixed points, so not every non-centre point moves.
 - **D2-004 Dilation (Scaling)** (description): Landed review, batch 1: description graded imprecise. "Not isometric" fails for |k| = 1: k = -1 is the point reflection, an isometry.
@@ -72,6 +74,14 @@ Corrections, flags and Mathlib conflicts on reviewed entries.
 - **D2-050 Jordan Normal Form** (description, broken): Landed review, batch 1: description graded imprecise (the form is not only for non-diagonalizable matrices) and broken graded wrong (diagonalizability is a similarity invariant, kept).
 - **D2-052 Schur Decomposition** (description): Landed review, batch 1: description graded imprecise. No fetched window says the decomposition is numerically stable; the claim is dropped.
 - **D2-053 Real Schur Decomposition** (description): Landed review, batch 1: description graded imprecise. That the 2 by 2 blocks carry the complex eigenvalue pairs is not in a fetched window and is dropped.
+- **D2-056 Complete Orthogonal Decomposition** (description, preserved): Landed review, batch 2: description and preserved graded imprecise. "Robust" is not stated (the SVD has the stronger rank-revealing property); the subspaces are not stated in a fetched window and are dropped.
+- **D2-063 Sinkhorn Normal Form** (input): Landed review, batch 2: input graded imprecise. Sinkhorn's theorem assumes strictly positive entries; a positive permanent is not enough ([[1, 1], [0, 1]] has none, worked by hand).
+- **D2-064 Sectoral Decomposition** (description, input, output): Landed review, batch 2: description, input and output graded imprecise. The hypothesis is on the numerical range, not the eigenvalues, and the output factors are C and Z.
+- **D2-065 Williamson's Normal Form** (description): Landed review, batch 2: description graded imprecise. That D carries the symplectic eigenvalues is not in a fetched window and is dropped.
+- **D2-068 Hermite Normal Form** (preserved): Landed review, batch 2: preserved graded imprecise. The determinant is kept up to sign, not exactly.
+- **D2-076 Product of Rings** (broken): Landed review, batch 2: broken graded imprecise. "Irreducibility" names obliquely what the source states: zero divisors appear.
+- **D2-081 Fractional Ideal Construction** (description): Landed review, batch 2: description graded imprecise. Only the invertible fractional ideals form a group; all nonzero ones do only for Dedekind domains.
+- **D2-087 Projective Resolution** (preserved): Landed review, batch 2: preserved graded imprecise. An isomorphism in the derived category is not stated in a fetched window and is dropped.
 
 ### Flags (0)
 
@@ -87,15 +97,15 @@ Links this review added in `mapfill/formal.js` (its LANDED list), by match grade
 
 | Match | Links |
 |---|---|
-| exact | 3 |
-| general | 5 |
-| special | 6 |
+| exact | 13 |
+| general | 8 |
+| special | 7 |
 | related | 4 |
-| ingredient | 1 |
+| ingredient | 2 |
 | conflicts | 0 |
-| **all** | 19 on 11 entries |
+| **all** | 34 on 22 entries |
 
-No link (14):
+No link (27):
 
 - D2-005 Vertical Shift: Searched graph shifts and Function.comp with addition: Mathlib states no graph transformations as such (f (x + c) is composition with a translation); no declaration states this entry's claims.
 - D2-006 Horizontal Shift: Searched as for D2-005: no graph-transformation declarations at the pin.
@@ -111,6 +121,19 @@ No link (14):
 - D2-052 Schur Decomposition: Searched Schur, triangulation and IsUpperTriangular: Mathlib has the determinant and characteristic polynomial of triangular matrices, but no Schur decomposition at the pin.
 - D2-053 Real Schur Decomposition: Searched as for D2-052: no real Schur form at the pin.
 - D2-054 QZ Decomposition (Generalized Schur): Searched generalized Schur and matrix pencils: none at the pin.
+- D2-055 Hessenberg Decomposition: Searched Hessenberg: none at the pin.
+- D2-056 Complete Orthogonal Decomposition: Searched complete orthogonal and UTV decompositions: none at the pin.
+- D2-060 Polar Decomposition: Searched polar decomposition: none for matrices at the pin.
+- D2-062 Mostow's Decomposition: Searched Mostow decomposition: none at the pin.
+- D2-063 Sinkhorn Normal Form: Searched Sinkhorn and doubly stochastic scaling: Mathlib has doubly stochastic matrices (doublyStochastic) but no Sinkhorn theorem at the pin.
+- D2-064 Sectoral Decomposition: Searched sectoral decomposition and numerical range: none at the pin.
+- D2-065 Williamson's Normal Form: Searched Williamson and symplectic congruence: Mathlib defines the symplectic group (Matrix.symplecticGroup) but no Williamson normal form at the pin.
+- D2-068 Hermite Normal Form: Searched Hermite normal form: none at the pin.
+- D2-069 Rational Canonical Form (Frobenius Normal Form): Searched rational canonical form and Frobenius normal form: none at the pin.
+- D2-083 Tensor Product of Fields: Searched tensor products of fields: Mathlib has the tensor product of algebras (linked on D2-084) but no statement on when K x L is a field at the pin.
+- D2-086 Strict Henselization: Searched strict Henselization: Mathlib has HenselianLocalRing (linked on D2-085) but no strict Henselization at the pin.
+- D2-089 Free Resolution: Searched free resolutions: Mathlib has projective resolutions (linked on D2-087) but no free resolutions or Betti numbers of modules at the pin.
+- D2-090 Flat Resolution: Searched flat resolutions: none at the pin (Mathlib has flat modules, Module.Flat, but no flat resolutions).
 
 ## 7. Receipts
 
@@ -466,4 +489,352 @@ No link (14):
 - mathlib: none. Searched generalized Schur and matrix pencils: none at the pin.
 
   s: excerpts/wikipedia-schur-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233)
+
+### D2-055 Hessenberg Decomposition (batch 2)
+
+- name (landed: Hessenberg Decomposition): **confirmed** [h] "A '''Hessenberg decomposition''' is a [[matrix decomposition]]"
+- description (landed: A = PHP* with H upper Hessenberg (zero below first subdiagonal). Precursor to Schur.): **confirmed** [m] "*Decomposition: <math>A=PHP^*</math> where <math>H</math> is the [[Hessenberg matrix]] and <math>P</math> is a [[unitary matrix]]." [h] "an '''upper Hessenberg matrix''' has zero entries below the first [[diagonal#Matrices|subdiagonal]]" [m] "*Comment: often the first step in the Schur decomposition."
+- input (landed: Square matrix A): **confirmed** [m] "*Applicable to: [[square matrix]] A."
+- output (landed: P * H * P* (H Hessenberg)): **confirmed** [h] "into a [[unitary matrix]] <math>P</math> and a Hessenberg matrix <math>H</math> such that <math display=block>PHP^*=A</math>"
+- preserved (landed: Eigenvalues): **confirmed** [h] "any matrix can be transformed to an upper Hessenberg matrix by a similarity transformation" [s] "Since ''U'' is [[similar (linear algebra)|similar]] to ''A'', it has the same [[Spectrum of a matrix|spectrum]]" *Similar matrices have the same spectrum.*
+- broken (landed: Full matrix structure): **unsupported** *"Full matrix structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: A = P H P* with P unitary, H zero below the first subdiagonal; the first step of the QR algorithm; input: ok; output: ok; preserved: ok: similarity keeps eigenvalues; broken: thin
+- mathlib: none. Searched Hessenberg: none at the pin.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+  h: excerpts/wikipedia-hessenberg-matrix.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383020821)
+  s: excerpts/wikipedia-schur-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233)
+
+### D2-056 Complete Orthogonal Decomposition (batch 2)
+
+- name (landed: Complete Orthogonal Decomposition): **confirmed** [c] "the '''complete orthogonal decomposition''' is a [[matrix decomposition]]."
+- description (landed: A = UTV* with T triangular, U,V unitary. Robust SVD generalization.): **imprecise** [c] "<math>A = U T V^*</math>, where <math>U</math> and <math>V^*</math> are [[unitary matrix|unitary matrices]] and <math>T</math> is a [[triangular matrix]]." [c] "is a special case of the UTV decomposition.  Computing the SVD is slightly more expensive than the UTV decomposition" [c] "but has a stronger rank-revealing property." *A = UTV* with T triangular and U, V unitary, and the SVD is its special case, as stated; "robust" is not: the source says the SVD costs more but has the stronger rank-revealing property.*
+- input (landed: Arbitrary m x n matrix): **confirmed** [m] "*Applicable to: ''m''-by-''n'' matrix ''A''."
+- output (landed: U * T * V*): **confirmed** [c] "<math>A = U T V^*</math>, where <math>U</math> and <math>V^*</math> are [[unitary matrix|unitary matrices]] and <math>T</math> is a [[triangular matrix]]."
+- preserved (landed: Rank, subspaces): **imprecise** [c] "For a matrix <math>A</math> of [[matrix rank|rank]] <math>r</math>, the triangular matrix <math>T</math> can be chosen such that only its top-left <math>r\times r</math> block is nonzero, making the decomposition rank-revealing." *Rank is stated (the decomposition is rank-revealing); the subspaces are not stated in a fetched window.* (recall contradicted)
+- broken (landed: Full matrix): **unsupported** *"Full matrix" is a gloss; no source states it.*
+- recalled: name: ok; description: off: T is triangular padded with zeros; it is a cheaper rank-revealing alternative to the SVD, not a generalization of it; input: ok; output: ok; preserved: ok: rank and the four fundamental subspaces; broken: thin
+- mathlib: none. Searched complete orthogonal and UTV decompositions: none at the pin.
+
+  c: excerpts/wikipedia-complete-orthogonal-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1263424223)
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+
+### D2-060 Polar Decomposition (batch 2)
+
+- name (landed: Polar Decomposition): **confirmed** [m] "=== Polar decomposition ==="
+- description (landed: A = UP with U unitary, P positive-semidefinite Hermitian. Matrix polar form.): **confirmed** [m] "*Decomposition: <math>A=UP</math> (right polar decomposition) or <math>A=P'U</math> (left polar decomposition), where ''U'' is a [[unitary matrix]] and ''P'' and ''P''' are [[positive semidefinite matrix|positive semidefinite]] [[Hermitian matrices]]."
+- input (landed: Square complex matrix A): **confirmed** [m] "*Applicable to: any square complex matrix ''A''."
+- output (landed: U (unitary) * P (pos-semidef Hermitian)): **confirmed** [m] "where ''U'' is a [[unitary matrix]] and ''P'' and ''P''' are [[positive semidefinite matrix|positive semidefinite]] [[Hermitian matrices]]."
+- preserved (landed: Unitary/scaling separation): **confirmed** [p] "expresses the transformation defined by <math>A</math> as a rotation (<math>R</math>) followed by a scaling (<math>P</math>) along certain orthogonal directions." *Stated for real matrices, rotation for the unitary factor.*
+- broken (landed: Combined structure): **unsupported** *"Combined structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: A = UP, U unitary, P = sqrt(A*A) positive semidefinite; input: ok: square complex matrix (also rectangular and operator versions); output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched polar decomposition: none for matrices at the pin.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+  p: excerpts/wikipedia-polar-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381001479)
+
+### D2-062 Mostow's Decomposition (batch 2)
+
+- name (landed: Mostow's Decomposition): **confirmed** [m] "=== Mostow's decomposition ==="
+- description (landed: A = U * e^{iM} * e^S (U unitary, M antisymmetric, S symmetric).): **confirmed** [m] "* Decomposition: <math>A=Ue^{iM}e^{S}</math>, where ''U'' is unitary, ''M'' is real anti-symmetric and ''S'' is real symmetric." *The source makes M and S real.*
+- input (landed: Non-singular complex square matrix): **confirmed** [m] "* Applicable to: square, complex, non-singular matrix ''A''."
+- output (landed: Three-factor decomposition): **confirmed** [m] "* Decomposition: <math>A=Ue^{iM}e^{S}</math>"
+- preserved (landed: Unitary, rotation, scaling separated): **unsupported** *No fetched window describes the three factors as a separation of unitary, rotation and scaling parts.*
+- broken (landed: Single matrix form): **unsupported** *"Single matrix form" is a gloss; no source states it.*
+- recalled: name: ok: Mostow; description: ok: A = U e^{iK} e^{S} with K real antisymmetric and S real symmetric; input: ok: nonsingular; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched Mostow decomposition: none at the pin.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+
+### D2-063 Sinkhorn Normal Form (batch 2)
+
+- name (landed: Sinkhorn Normal Form): **confirmed** [m] "=== Sinkhorn normal form ==="
+- description (landed: Iterative row/column normalization to doubly stochastic form.): **confirmed** [k] "A simple [[iterative method]] to approach the double [[stochastic matrix]] is to alternately rescale all rows and all columns of ''A'' to sum to 1."
+- input (landed: Nonneg matrix with positive permanent): **imprecise** [k] "If ''A'' is an [[Matrix (mathematics)#Square matrices|''n'' &times; ''n'' matrix]] with strictly positive elements" *The theorem's hypothesis is strictly positive entries. A positive permanent is not enough: [[1, 1], [0, 1]] has permanent 1, but any D1 A D2 keeps its zero, and a doubly stochastic matrix with that pattern would need its (1, 2) entry to vanish (worked by hand, inferred).*
+- output (landed: D_1 A D_2 (doubly stochastic)): **confirmed** [k] "such that ''D''<sub>1</sub>''AD''<sub>2</sub> is [[Doubly stochastic matrix|doubly stochastic]]."
+- preserved (landed: Permanent positivity): **unsupported** *"Permanent positivity": no source states it.*
+- broken (landed: Row/column sums): **confirmed** [k] "to alternately rescale all rows and all columns of ''A'' to sum to 1." *The original row and column sums give way to 1.* (recall contradicted)
+- recalled: name: ok: Sinkhorn's theorem; description: ok: alternate row and column scaling (Sinkhorn-Knopp); input: off: positive entries for Sinkhorn's theorem; for nonnegative matrices total support is needed, not only a positive permanent; output: ok: D1 A D2 doubly stochastic; preserved: thin; broken: thin
+- mathlib: none. Searched Sinkhorn and doubly stochastic scaling: Mathlib has doubly stochastic matrices (doublyStochastic) but no Sinkhorn theorem at the pin.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+  k: excerpts/wikipedia-sinkhorns-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363957487)
+
+### D2-064 Sectoral Decomposition (batch 2)
+
+- name (landed: Sectoral Decomposition): **confirmed** [m] "=== Sectoral decomposition ==="
+- description (landed: Decomposes matrix by angular eigenvalue properties.): **imprecise** [m] "*Applicable to: square, complex matrix ''A'' with [[numerical range]] contained in the sector" [m] "*Decomposition: <math>A = CZC^*</math>, where ''C'' is an invertible complex matrix and <math>Z = \operatorname{diag}\left(e^{i\theta_1},\ldots,e^{i\theta_n}\right)</math> with all <math>\left|\theta_j\right| \le \alpha </math>." *The condition is on the numerical range, and the decomposition is a congruence A = CZC* with Z diagonal and unimodular; the angles of Z are bounded by the sector, they are not A's eigenvalue angles.*
+- input (landed: Matrix with sector-constrained eigenvalues): **imprecise** [m] "*Applicable to: square, complex matrix ''A'' with [[numerical range]] contained in the sector" *The hypothesis is that the numerical range lies in the sector; eigenvalues in the sector is a weaker condition.*
+- output (landed: Sectoral components): **imprecise** [m] "*Decomposition: <math>A = CZC^*</math>, where ''C'' is an invertible complex matrix and <math>Z = \operatorname{diag}\left(e^{i\theta_1},\ldots,e^{i\theta_n}\right)</math> with all <math>\left|\theta_j\right| \le \alpha </math>." *"Sectoral components" names no factor; the output is C and the unimodular diagonal Z.*
+- preserved (landed: Eigenvalue angular properties): **unsupported** *No fetched source states which eigenvalue angles are preserved; the decomposition bounds the angles of Z, not of A's eigenvalues.*
+- broken (landed: Specific entries): **unsupported** *"Specific entries" is a gloss; no source states it.*
+- recalled: name: ok; description: off: about the numerical range lying in a sector, not eigenvalues; input: off: the numerical range, not the eigenvalues, lies in the sector; output: thin; preserved: thin; broken: thin
+- mathlib: none. Searched sectoral decomposition and numerical range: none at the pin.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+
+### D2-065 Williamson's Normal Form (batch 2)
+
+- name (landed: Williamson's Normal Form): **confirmed** [m] "=== Williamson's normal form ==="
+- description (landed: Symplectic congruence of 2n x 2n pos-def matrix to diagonal form with symplectic eigenvalues.): **imprecise** [m] "* Decomposition: <math>A=S^\mathsf{T}\operatorname{diag}(D,D)S</math>, where <math>S \in \text{Sp}(2n)</math> is a [[symplectic matrix]] and ''D'' is a nonnegative ''n''-by-''n'' diagonal matrix." *Symplectic congruence of a 2n by 2n positive-definite matrix to diag(D, D), as stated; that the diagonal entries are the symplectic eigenvalues is not in a fetched window.* (recall contradicted)
+- input (landed: Pos-def real symmetric 2n x 2n matrix): **confirmed** [m] "* Applicable to: square, [[Positive-definite matrix|positive-definite]] real matrix ''A'' with order 2''n''×2''n''."
+- output (landed: S^T A S = diag(d_1,d_1,...,d_n,d_n)): **confirmed** [m] "* Decomposition: <math>A=S^\mathsf{T}\operatorname{diag}(D,D)S</math>" *The landed S^T A S = diag(d1, d1, ..., dn, dn) is this with S replaced by its inverse and the coordinates reordered.*
+- preserved (landed: Symplectic eigenvalues): **unsupported** *No fetched window names the symplectic eigenvalues or says they are invariant.*
+- broken (landed: Original structure): **unsupported** *"Original structure" is a gloss; no source states it.*
+- recalled: name: ok: Williamson's theorem; description: ok; input: ok; output: ok; preserved: ok: symplectic eigenvalues are invariants; broken: thin
+- mathlib: none. Searched Williamson and symplectic congruence: Mathlib defines the symplectic group (Matrix.symplecticGroup) but no Williamson normal form at the pin.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+
+### D2-066 Matrix Square Root (batch 2)
+
+- name (landed: Matrix Square Root): **confirmed** [m] "===Matrix square root==="
+- description (landed: Finds B with B^2 = A.): **confirmed** [m] "* Decomposition: <math>A=BB</math>, not unique in general."
+- input (landed: Positive semidefinite matrix A): **confirmed** [m] "* In the case of positive semidefinite <math>A</math>, there is a unique positive semidefinite <math>B</math> such that <math>A=B^*B=BB</math>."
+- output (landed: Matrix B with B^2 = A): **confirmed** [m] "* Decomposition: <math>A=BB</math>" [q] "lemma sq_sqrt (a : A) (ha : 0 ≤ a := by cfc_tac) : (sqrt a) ^ 2 = a"
+- preserved (landed: Positive semidefiniteness): **confirmed** [m] "there is a unique positive semidefinite <math>B</math> such that <math>A=B^*B=BB</math>." [q] "lemma sqrt_nonneg (a : A) : 0 ≤ sqrt a"
+- broken (landed: Uniqueness (multiple roots possible)): **confirmed** [m] "* Decomposition: <math>A=BB</math>, not unique in general."
+- recalled: name: ok; description: ok; input: ok: PSD gives a unique PSD root; roots exist more widely; output: ok; preserved: ok: the principal root is PSD; broken: ok: roots are not unique in general
+- mathlib (general, output): `CFC.sq_sqrt`. In any C*-algebra with the continuous functional calculus, a nonnegative a has (sqrt a)^2 = a; positive semidefinite matrices are the case of matrices.
+- mathlib (general, preserved): `CFC.sqrt_nonneg`. The functional-calculus square root is nonnegative: the root of a positive semidefinite matrix is positive semidefinite.
+
+  m: excerpts/wikipedia-matrix-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678)
+  q: excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean)
+
+### D2-068 Hermite Normal Form (batch 2)
+
+- name (landed: Hermite Normal Form): **confirmed** [h] "the '''Hermite normal form''' is an analogue of [[reduced echelon form]] for [[matrix (mathematics)|matrices]] over the [[integer]]s"
+- description (landed: Integer row echelon form via unimodular row ops. Unique canonical lattice basis.): **confirmed** [h] "has a (row) Hermite normal form <math>H</math> if there is a square [[unimodular matrix]] <math>U</math> such that <math>H=UA</math>" [h] "is an analogue of [[reduced echelon form]]" [h] "Because the Hermite normal form is unique, it can be used to answer many questions about two lattice descriptions." *Uniqueness is stated for full row rank, and as a general fact where the page turns to lattices.*
+- input (landed: Integer matrix): **confirmed** [h] "A matrix <math>A \in \mathbb{Z}^{m \times n}</math> has a (row) Hermite normal form"
+- output (landed: Upper triangular H with reduced entries): **confirmed** [h] "# <math>H</math> is upper triangular (that is, <math>h_{ij}=0</math> for <math>i>j</math>), and any rows of zeros are located below any other row." [h] "# The elements below pivots are zero and elements above pivots are nonnegative and strictly smaller than the pivot."
+- preserved (landed: Integer lattice, determinant): **imprecise** [h] "A unimodular matrix is a square [[integer matrix]] whose [[determinant]] is 1 or −1 (and hence [[Invertible matrix|invertible]]). In fact, a unimodular matrix is invertible over the integers" *H = UA with U invertible over the integers keeps the row lattice; the determinant is kept only up to sign, since det U is 1 or -1.* (recall contradicted)
+- broken (landed: Original rows): **unsupported** *"Original rows" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: row echelon form by unimodular row operations, unique; input: ok; output: ok; preserved: ok: the row lattice; determinant up to sign; broken: thin
+- mathlib: none. Searched Hermite normal form: none at the pin.
+
+  h: excerpts/wikipedia-hermite-normal-form.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1345542222)
+
+### D2-069 Rational Canonical Form (Frobenius Normal Form) (batch 2)
+
+- name (landed: Rational Canonical Form (Frobenius Normal Form)): **confirmed** [f] "the '''Frobenius normal form''' or  '''rational canonical form''' of a [[square matrix|square]] [[matrix (mathematics)|matrix]] ''A'' with entries in a [[field (mathematics)|field]] ''F''"
+- description (landed: Block diagonal of companion matrices for invariant factors. Works over any field.): **confirmed** [f] "For each invariant factor ''f<sub>i</sub>'' one takes its [[companion matrix]] ''C''<sub>''f<sub>i</sub>''</sub>, and the block diagonal matrix formed from these blocks yields the '''rational canonical form''' of ''A''." [f] "is a [[canonical form]] for matrices obtained by conjugation by [[invertible matrices]] over ''F''."
+- input (landed: Square matrix over field F): **confirmed** [f] "matrix]] ''A'' with entries in a [[field (mathematics)|field]] ''F''"
+- output (landed: Block diag of companion matrices): **confirmed** [f] "and the block diagonal matrix formed from these blocks yields the '''rational canonical form''' of ''A''."
+- preserved (landed: Minimal polynomial, invariant factors): **confirmed** [f] "The last of these factors ''f<sub>k</sub>'' is then the minimal polynomial" [f] "For each invariant factor ''f<sub>i</sub>'' one takes its [[companion matrix]]" *The form is built from A's invariant factors and is conjugate to A.*
+- broken (landed: Eigenvalue decomposition): **confirmed** [f] "The Frobenius normal form does not reflect any form of factorization of the characteristic polynomial, even if it does exist over the ground field ''F''." *So the eigenvalues are not displayed.* (recall contradicted)
+- recalled: name: ok; description: ok: companion matrices of the invariant factors, over any field; input: ok; output: ok; preserved: ok: invariant factors determine the similarity class; minimal polynomial is the last; broken: thin
+- mathlib: none. Searched rational canonical form and Frobenius normal form: none at the pin.
+
+  f: excerpts/wikipedia-frobenius-normal-form.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374115939)
+
+### D2-074 Quotient Ring Construction (batch 2)
+
+- name (landed: Quotient Ring Construction): **confirmed** [q] "a '''quotient ring''', also known as '''factor ring'''"
+- description (landed: R/I: elements of I become zero. Geometrically restricts to subvariety.): **confirmed** [q] "The zero-element of <math>R\ /\ I</math> is {{tmath|1= \bar{0} = 0 + I = I }}" [q] "The ring of real-valued polynomial functions defined on <math>V</math> can be identified with the quotient ring" *Geometrically: the coordinate ring of a variety is the quotient by its ideal, the functions restricted to it.*
+- input (landed: Ring R + ideal I): **confirmed** [q] "Given a ring <math>R</math> and a two-sided ideal <math>I</math> in {{tmath|1= R }}"
+- output (landed: Quotient ring R/I): **confirmed** [m] "def mk : R →+* R ⧸ I where"
+- preserved (landed: Ring axioms, coset structure): **confirmed** [q] "is a [[surjective]] [[ring homomorphism]], sometimes called the '''''natural quotient map'''''" [q] "Compare [[coset]] and [[quotient group]]."
+- broken (landed: Elements of I): **confirmed** [m] "theorem eq_zero_iff_mem : mk I a = 0 ↔ a ∈ I"
+- recalled: name: ok; description: ok: I goes to zero; V(I) is the subvariety; input: ok; output: ok; preserved: ok; broken: ok
+- mathlib (exact, output): `Ideal.Quotient.mk`. The quotient ring homomorphism R →+* R ⧸ I (the ring R ⧸ I is the HasQuotient instance of the same file).
+- mathlib (exact, broken): `Ideal.Quotient.eq_zero_iff_mem`. An element maps to zero exactly when it lies in I.
+
+  q: excerpts/wikipedia-quotient-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1366975432)
+  m: excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Defs.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Defs.lean)
+
+### D2-076 Product of Rings (batch 2)
+
+- name (landed: Product of Rings): **confirmed** [p] "a '''product of rings''' or '''direct product of rings'''"
+- description (landed: Direct product R x S, componentwise.): **confirmed** [p] "equipped with [[componentwise operation]]s."
+- input (landed: Rings R, S): **confirmed** [p] "formed by the [[Cartesian product]] of the underlying sets of several rings"
+- output (landed: R x S): **confirmed** [p] "is a [[ring (mathematics)|ring]] that is formed by the [[Cartesian product]] of the underlying sets of several rings"
+- preserved (landed: Individual ring structures): **confirmed** [p] "we have a [[surjective]] [[ring homomorphism]] {{nowrap|''p<sub>i</sub>'' : ''R'' → ''R<sub>i</sub>''}} which projects the product on the ''i''th coordinate." [m] "def fst : R × S →+* R :="
+- broken (landed: Irreducibility): **imprecise** [p] "A product of two or more non-trivial rings always has nonzero [[zero divisors]]" *What breaks is being an integral domain: nonzero zero divisors appear. "Irreducibility" names it obliquely.*
+- recalled: name: ok; description: ok: componentwise operations; input: ok; output: ok; preserved: ok: projections are ring maps; broken: thin: a product of nonzero rings has zero divisors
+- mathlib (exact, preserved): `RingHom.fst`. The projection R x S to R is a ring homomorphism (RingHom.snd likewise): each factor's structure survives.
+
+  p: excerpts/wikipedia-product-of-rings.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1291091832)
+  m: excerpts/mathlib-Mathlib.Algebra.Ring.Prod.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Ring/Prod.lean)
+
+### D2-077 Annihilator Construction (batch 2)
+
+- name (landed: Annihilator Construction): **confirmed** [a] "the '''annihilator''' of a [[subset]] {{mvar|S}} of a [[module (mathematics)|module]] over a [[ring (mathematics)|ring]] is the [[ideal (ring theory)|ideal]]"
+- description (landed: Ann(M) = {r: rM = 0}.): **confirmed** [a] "<math>\mathrm{Ann}_R(S)=\{r\in R\mid rs = 0</math> for all <math> s\in S \}</math>" [m] "theorem Module.mem_annihilator {r} : r ∈ Module.annihilator R M ↔ ∀ m : M, r • m = 0"
+- input (landed: R-module M): **confirmed** [a] "Let ''R'' be a [[ring (mathematics)|ring]], and let ''M'' be a left ''R''-[[module (mathematics)|module]]."
+- output (landed: Ideal Ann(M)): **confirmed** [a] "is the [[ideal (ring theory)|ideal]] formed by the elements of the ring that always give zero when multiplied by each element of {{mvar|S}}."
+- preserved (landed: Torsion characterization): **confirmed** [a] "Over an [[integral domain]], a module that has a nonzero annihilator is a [[torsion module]], and a [[finitely generated module|finitely generated]] torsion module has a nonzero annihilator." *Over an integral domain, and for finitely generated modules in one direction.* (recall contradicted)
+- broken (landed: Module elements): **unsupported** *"Module elements" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok: an ideal; preserved: thin; broken: thin
+- mathlib (exact, description): `Module.annihilator`. The ideal of r with r acting as zero on M, defined as the kernel of R to the endomorphisms of M.
+- mathlib (exact, description): `Module.mem_annihilator`. r lies in the annihilator iff r m = 0 for every m.
+
+  a: excerpts/wikipedia-annihilator-ring-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1359643125)
+  m: excerpts/mathlib-Mathlib.RingTheory.Ideal.Maps.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Maps.lean)
+
+### D2-079 Primary Decomposition (batch 2)
+
+- name (landed: Primary Decomposition): **confirmed** [p] "states that every [[Noetherian ring]] is a '''Lasker ring'''"
+- description (landed: Lasker-Noether: ideal = intersection of primary ideals. Geometric: irreducible component decomposition.): **confirmed** [p] "which means that every ideal can be decomposed as an intersection, called '''primary decomposition''', of finitely many ''[[primary ideal]]s''" [p] "by asserting that every [[algebraic set]] may be uniquely decomposed into a finite union of [[irreducible component]]s." [m] "lemma isLasker : IsLasker R M" (recall contradicted)
+- input (landed: Proper ideal I in Noetherian ring): **confirmed** [p] "states that every [[Noetherian ring]] is a '''Lasker ring''', which means that every ideal can be decomposed"
+- output (landed: I = Q_1 ∩ ... ∩ Q_k): **confirmed** [p] "of finitely many ''[[primary ideal]]s''"
+- preserved (landed: Ideal, associated primes): **confirmed** [p] "*The set <math>\{ \sqrt{Q_i} \mid i \}</math> is uniquely determined by <math>I</math>, and" [p] "is also the set of associated primes of the <math>R</math>-module" *The ideal is the intersection itself; the primes are its associated primes.*
+- broken (landed: Unified description): **unsupported** *"Unified description" is a gloss; no source states it.*
+- recalled: name: ok: Lasker-Noether; description: off: geometric side includes embedded components, not only irreducible ones; input: ok: Noetherian ring; output: ok; preserved: ok: the associated primes are unique; broken: thin
+- mathlib (general, description): `Submodule.isLasker`. Lasker-Noether for modules: every submodule of a Noetherian module is a finite intersection of primary submodules; the ideals of a Noetherian ring are the case of R as a module over itself.
+
+  p: excerpts/wikipedia-primary-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376651815)
+  m: excerpts/mathlib-Mathlib.RingTheory.Lasker.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Lasker.lean)
+
+### D2-081 Fractional Ideal Construction (batch 2)
+
+- name (landed: Fractional Ideal Construction): **confirmed** [f] "the concept of '''fractional ideal''' is introduced in the context of [[integral domain]]s"
+- description (landed: Group of fractional ideals of integral domain.): **imprecise** [f] "The set of invertible fractional ideals forms a [[commutative group]] with respect to the above product, where the identity is the [[unit ideal]] <math>(1) = R</math> itself. This group is called the '''group of fractional ideals''' of <math>R</math>." [f] "An integral domain is a Dedekind domain if and only if every non-zero fractional ideal is invertible." [m] "noncomputable abbrev commGroupWithZero : CommGroupWithZero (FractionalIdeal A⁰ K) where" *The group is that of the invertible fractional ideals; all nonzero fractional ideals are invertible exactly when R is a Dedekind domain.*
+- input (landed: Integral domain R): **confirmed** [f] "Let <math>R</math> be an [[integral domain]], and let <math>K = \operatorname{Frac}R</math> be its [[field of fractions]]."
+- output (landed: Fractional ideals of R): **confirmed** [f] "A '''fractional ideal''' of <math>R</math> is an <math>R</math>-[[submodule]] <math>I</math> of <math>K</math> such that there exists a non-zero <math>r \in R</math> such that <math>rI\subseteq R</math>."
+- preserved (landed: Multiplicative structure): **confirmed** [f] "forms a [[commutative group]] with respect to the above product" *The product of fractional ideals; the invertible ones form a group under it.*
+- broken (landed: Containment in R): **confirmed** [f] "fractional ideals of an integral domain are like [[ideal (ring theory)|ideal]]s where [[denominator]]s are allowed." [f] "is an <math>R</math>-[[submodule]] <math>I</math> of <math>K</math>" *A fractional ideal is a submodule of the fraction field, not of R.* (recall contradicted)
+- recalled: name: ok; description: off: fractional ideals form a group only for Dedekind domains; in general the invertible ones do; input: ok; output: ok; preserved: ok: multiplication of fractional ideals; broken: thin
+- mathlib (special, description): `IsDedekindDomainInv.commGroupWithZero`. When every nonzero fractional ideal is invertible (a Dedekind domain), the fractional ideals form a commutative group with zero: the case where the landed claim holds.
+
+  f: excerpts/wikipedia-fractional-ideal.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899807)
+  m: excerpts/mathlib-Mathlib.RingTheory.DedekindDomain.Ideal.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/DedekindDomain/Ideal/Basic.lean)
+
+### D2-082 I-adic Topology Construction (batch 2)
+
+- name (landed: I-adic Topology Construction): **confirmed** [i] "determines a topology on {{mvar|M}} called the {{math|𝔞}}-adic topology"
+- description (landed: Topology on R with I^n as neighborhood basis of 0.): **confirmed** [i] "The family <math display=block>\{x+\mathfrak{a}^nM:x\in M,n\in\mathbb{Z}^+\}</math> is a [[basis (topology)|basis]] for this topology." [m] "theorem adic_basis (I : Ideal R) : SubmodulesRingBasis fun n : ℕ => (I ^ n • ⊤ : Ideal R)"
+- input (landed: Ring R + ideal I): **confirmed** [i] "Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology" *R commutative; the ring is the case M = R.*
+- output (landed: Topological ring (R, I-adic)): **confirmed** [m] "def adicTopology (I : Ideal R) : TopologicalSpace R :="
+- preserved (landed: Continuity of ring ops): **confirmed** [i] "With respect to the topology, the module operations of addition and scalar multiplication are [[Continuity (topology)|continuous]]" *With M = R, scalar multiplication is the ring's multiplication.*
+- broken (landed: Other topologies): **unsupported** *"Other topologies" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: ring operations continuous; broken: thin
+- mathlib (exact, description): `Ideal.adic_basis`. The powers I^n form a basis of neighbourhoods of 0 for a ring topology (a submodules ring basis).
+- mathlib (exact, output): `Ideal.adicTopology`. The I-adic topology on R, defined from that basis.
+
+  i: excerpts/wikipedia-i-adic-topology.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351898474)
+  m: excerpts/mathlib-Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean)
+
+### D2-083 Tensor Product of Fields (batch 2)
+
+- name (landed: Tensor Product of Fields): **confirmed** [t] "the '''tensor product''' of two [[field (mathematics)|fields]]  is their [[tensor product of algebras|tensor product]] as [[algebra over a field|algebras]] over a common [[subfield (mathematics)|subfield]]."
+- description (landed: K ⊗_k L. May not be a field.): **confirmed** [t] "The tensor product of two fields is sometimes a field, and often a [[product ring|direct product]] of fields; in some cases, it can contain non-zero [[nilpotent element]]s."
+- input (landed: Field extensions K/k, L/k): **confirmed** [t] "as [[algebra over a field|algebras]] over a common [[subfield (mathematics)|subfield]]."
+- output (landed: K ⊗_k L): **confirmed** [t] "is their [[tensor product of algebras|tensor product]] as [[algebra over a field|algebras]]"
+- preserved (landed: k-algebra from both): **confirmed** [a] "There are natural [[homomorphism]]s from ''A'' and ''B'' to" *Both fields map into the tensor product, an algebra over the common subfield.*
+- broken (landed: Field axioms (may fail)): **confirmed** [t] "The tensor product of two fields is sometimes a field"
+- recalled: name: ok; description: ok: need not be a field (or even a domain); input: ok; output: ok; preserved: ok; broken: ok
+- mathlib: none. Searched tensor products of fields: Mathlib has the tensor product of algebras (linked on D2-084) but no statement on when K x L is a field at the pin.
+
+  t: excerpts/wikipedia-tensor-product-of-fields.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1345533112)
+  a: excerpts/wikipedia-tensor-product-of-algebras.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380323046)
+
+### D2-084 Tensor Product of Algebras (batch 2)
+
+- name (landed: Tensor Product of Algebras): **confirmed** [a] "This gives the '''tensor product of algebras'''."
+- description (landed: A ⊗_k B with componentwise multiplication.): **confirmed** [a] ":<math>(a_1\otimes b_1)(a_2\otimes b_2) = a_1 a_2\otimes b_1b_2</math>" [m] "a₁ ⊗ₜ[R] b₁ * a₂ ⊗ₜ[R] b₂ = (a₁ * a₂) ⊗ₜ[R] (b₁ * b₂)"
+- input (landed: k-algebras A, B): **confirmed** [a] "Let ''R'' be a commutative ring and let ''A'' and ''B'' be ''R''-algebras."
+- output (landed: A ⊗_k B): **confirmed** [a] "This ring is an ''R''-algebra, [[associative algebra|associative]] and unital with the identity element given by"
+- preserved (landed: k-algebra from both): **confirmed** [a] "There are natural [[homomorphism]]s from ''A'' and ''B'' to" [m] "def includeLeft [SMulCommClass R S A] : A →ₐ[S] A ⊗[R] B :="
+- broken (landed: Individual identities): **unsupported** *"Individual identities" is a gloss; the source gives the identity as 1 x 1 and states nothing broken.*
+- recalled: name: ok; description: ok: (a x b)(a' x b') = aa' x bb'; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib (exact, description): `Algebra.TensorProduct.tmul_mul_tmul`. (a1 x b1)(a2 x b2) = (a1 a2) x (b1 b2): the product on pure tensors.
+- mathlib (exact, preserved): `Algebra.TensorProduct.includeLeft`. a goes to a x 1 as an algebra homomorphism A to A x B; includeRight likewise for B.
+
+  a: excerpts/wikipedia-tensor-product-of-algebras.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380323046)
+  m: excerpts/mathlib-Mathlib.RingTheory.TensorProduct.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/TensorProduct/Basic.lean)
+
+### D2-085 Henselization (batch 2)
+
+- name (landed: Henselization): **confirmed** [h] "called the '''Henselization''' of ''A''"
+- description (landed: Smallest local extension satisfying Hensel's lemma.): **confirmed** [h] "For any local ring ''A'' there is a universal Henselian ring ''B'' generated by ''A''" [h] "such that any [[local homomorphism]] from ''A'' to a Henselian ring can be extended uniquely to ''B''." *"Smallest" read as the universal property: every local homomorphism to a Henselian ring extends uniquely.*
+- input (landed: Local ring (R,m)): **confirmed** [h] "For any local ring ''A''"
+- output (landed: Henselian R^h): **confirmed** [h] "there is a universal Henselian ring ''B'' generated by ''A''"
+- preserved (landed: Hensel's lemma): **confirmed** [h] "* A local ring ''R'' with [[maximal ideal]] ''m'' is called '''Henselian''' if  Hensel's lemma holds." [m] "class HenselianLocalRing (R : Type*) [CommRing R] : Prop extends IsLocalRing R where"
+- broken (landed: Non-Henselian failures): **unsupported** *"Non-Henselian failures" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: universal Henselian local ring under R; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib (ingredient, preserved): `HenselianLocalRing`. The Henselian property of a local ring, defined; Henselization itself is not at the pin.
+
+  h: excerpts/wikipedia-henselian-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353497841)
+  m: excerpts/mathlib-Mathlib.RingTheory.Henselian.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Henselian.lean)
+
+### D2-086 Strict Henselization (batch 2)
+
+- name (landed: Strict Henselization): **confirmed** [h] "called the '''strict Henselization''' of ''A''."
+- description (landed: Henselization + separably closed residue field.): **confirmed** [h] "* A Henselian local ring is called '''strictly Henselian''' if its [[residue field]] is [[separable extension|separably closed]]." [h] "Similarly there is a strictly Henselian ring generated by ''A''"
+- input (landed: Local ring (R,m)): **confirmed** [h] "For any local ring ''A''"
+- output (landed: Strictly Henselian R^sh): **confirmed** [h] "Similarly there is a strictly Henselian ring generated by ''A''"
+- preserved (landed: Hensel's lemma, sep. closed residue): **confirmed** [h] "* A Henselian local ring is called '''strictly Henselian''' if its [[residue field]] is [[separable extension|separably closed]]."
+- broken (landed: Residue field structure): **confirmed** [h] "More precisely it depends on the choice of a separable algebraic closure of the residue field of ''A''" *The residue field is replaced by a separable closure.* (recall contradicted)
+- recalled: name: ok; description: ok: residue field a separable closure; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib: none. Searched strict Henselization: Mathlib has HenselianLocalRing (linked on D2-085) but no strict Henselization at the pin.
+
+  h: excerpts/wikipedia-henselian-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1353497841)
+
+### D2-087 Projective Resolution (batch 2)
+
+- name (landed: Projective Resolution): **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- description (landed: ...->P_2->P_1->P_0->M->0. Replaces module with projective complex.): **confirmed** [r] "is an [[exact sequence]] of [[module (mathematics)|module]]s" [r] "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]" [m] "projective : ∀ n, Projective (complex.X n)"
+- input (landed: R-module M): **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- output (landed: Exact sequence of projectives over M): **confirmed** [m] "complex : ChainComplex C ℕ" [m] "projective : ∀ n, Projective (complex.X n)"
+- preserved (landed: Derived category iso, Ext groups): **imprecise** [r] "Any injective (projective) resolution is ''F''-acyclic for any left exact (right exact, respectively) functor." [r] "can be obtained from as the homology of ''F''-acyclic resolutions" [r] "Projective resolution of a module <math>M</math> is unique up to a [[chain homotopy]]" *Derived functors (Ext through Hom, Tor through the tensor product) are computed from it, as stated; an isomorphism in the derived category is not stated in a fetched window.* (recall contradicted)
+- broken (landed: Specific module structure): **unsupported** *"Specific module structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: quasi-isomorphic to M; computes Ext; broken: thin
+- mathlib (exact, output): `CategoryTheory.ProjectiveResolution`. A chain complex of projectives indexed by the naturals with a quasi-isomorphism to Z in degree 0.
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean)
+
+### D2-088 Injective Resolution (batch 2)
+
+- name (landed: Injective Resolution): **confirmed** [r] "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+- description (landed: 0->M->I^0->I^1->... Dual of projective resolution.): **confirmed** [r] "dually a '''coresolution''' or '''right resolution'''" [r] "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+- input (landed: R-module M): **confirmed** [r] "Dually, every <math>R</math>-module possesses an injective resolution."
+- output (landed: Exact sequence of injectives from M): **confirmed** [m] "cocomplex : CochainComplex C ℕ" [m] "injective : ∀ n, Injective (cocomplex.X n)"
+- preserved (landed: Derived category iso): **unsupported** *No fetched window states an isomorphism in the derived category.*
+- broken (landed: Module structure): **unsupported** *"Module structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib (exact, output): `CategoryTheory.InjectiveResolution`. A cochain complex of injectives indexed by the naturals with a quasi-isomorphism from Z in degree 0.
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean)
+
+### D2-089 Free Resolution (batch 2)
+
+- name (landed: Free Resolution): **confirmed** [r] "a ''free resolution'' of a module <math>M</math> is a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules."
+- description (landed: Projective resolution with all free modules. Always exists.): **confirmed** [r] "a ''free resolution'' of a module <math>M</math> is a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules." [r] "Every <math>R</math>-module possesses a free left resolution."
+- input (landed: R-module M): **confirmed** [r] "Every <math>R</math>-module possesses a free left resolution."
+- output (landed: Exact sequence of free modules over M): **confirmed** [r] "a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules."
+- preserved (landed: Betti numbers, Hilbert series): **unsupported** *No fetched window states Betti numbers or the Hilbert series as invariants of a free resolution.*
+- broken (landed: Module presentation): **unsupported** *"Module presentation" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: free resolutions always exist; input: ok; output: ok; preserved: ok: graded Betti numbers and Hilbert series from a minimal graded resolution; broken: thin
+- mathlib: none. Searched free resolutions: Mathlib has projective resolutions (linked on D2-087) but no free resolutions or Betti numbers of modules at the pin.
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+
+### D2-090 Flat Resolution (batch 2)
+
+- name (landed: Flat Resolution): **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- description (landed: Resolution using flat modules.): **confirmed** [r] "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+- input (landed: R-module M): **confirmed** [r] "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+- output (landed: Exact sequence of flat modules over M): **confirmed** [r] "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+- preserved (landed: Tor functors, flat dimension): **confirmed** [r] "Every flat resolution is acyclic with respect to this functor." [r] "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s." [r] "Resolutions are used to define [[homological dimension (disambiguation)|homological dimension]]s." [r] "Similarly, flat dimension is used to define [[weak global dimension]]." *Tor: derived functors of the tensor product are the homology of acyclic resolutions. Flat dimension: resolutions define homological dimensions, flat dimension among them.*
+- broken (landed: Module structure): **unsupported** *"Module structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: Tor computed by flat resolutions; broken: thin
+- mathlib: none. Searched flat resolutions: none at the pin (Mathlib has flat modules, Module.Flat, but no flat resolutions).
+
+  r: excerpts/wikipedia-resolution-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458)
+
+### D2-091 Mapping Cone Construction (batch 2)
+
+- name (landed: Mapping Cone Construction): **confirmed** [c] "the '''mapping cone''' is a construction on a map of [[chain complexes]]"
+- description (landed: From chain map f, builds Cone(f) detecting quasi-isomorphism.): **confirmed** [c] "The main use of the cone is to identify [[quasi-isomorphism]]s: if the cone is [[acyclic complex|acyclic]], then the map is a quasi-isomorphism."
+- input (landed: Chain map f: C -> D): **confirmed** [c] "a construction on a map of [[chain complexes]]"
+- output (landed: Cone(f) with long exact H(C)->H(D)->H(Cone)): **confirmed** [c] "Since this is a triangle, it gives rise to a [[long exact sequence]] on [[homology group]]s:" [m] "noncomputable def mappingCone : CochainComplex C ℤ := homotopyCofiber φ"
+- preserved (landed: Long exact sequence): **confirmed** [c] "Since this is a triangle, it gives rise to a [[long exact sequence]] on [[homology group]]s:"
+- broken (landed: Individual complex structures): **unsupported** *"Individual complex structures" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: f is a quasi-isomorphism iff the cone is acyclic; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib (exact, output): `CochainComplex.mappingCone`. The mapping cone of a morphism of integer-indexed cochain complexes, defined as its homotopy cofiber. The long exact sequence is not this declaration.
+
+  c: excerpts/wikipedia-mapping-cone-homological-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean)
 

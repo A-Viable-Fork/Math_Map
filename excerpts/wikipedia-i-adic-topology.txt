@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, I-adic topology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351898474
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c842bda4567088b0324f424516f1cde30d797217e898cd025e4c6941d62b3fb2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology on {{mvar|M}} called the {{math|𝔞}}-adic topology
+
+The family <math display=block>\{x+\mathfrak{a}^nM:x\in M,n\in\mathbb{Z}^+\}</math> is a [[basis (topology)|basis]] for this topology.
+
+With respect to the topology, the module operations of addition and scalar multiplication are [[Continuity (topology)|continuous]], so that {{mvar|M}} becomes a [[topological module]].

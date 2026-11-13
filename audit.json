@@ -27102,6 +27102,1428 @@
    "sources": {
     "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233"
    }
+  },
+  {
+   "id": "D2-055",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt",
+    "h": "excerpts/wikipedia-hessenberg-matrix.txt",
+    "s": "excerpts/wikipedia-schur-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A '''Hessenberg decomposition''' is a [[matrix decomposition]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "*Decomposition: <math>A=PHP^*</math> where <math>H</math> is the [[Hessenberg matrix]] and <math>P</math> is a [[unitary matrix]].",
+     "more": [
+      {
+       "src": "h",
+       "quote": "an '''upper Hessenberg matrix''' has zero entries below the first [[diagonal#Matrices|subdiagonal]]"
+      },
+      {
+       "src": "m",
+       "quote": "*Comment: often the first step in the Schur decomposition."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "*Applicable to: [[square matrix]] A."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "into a [[unitary matrix]] <math>P</math> and a Hessenberg matrix <math>H</math> such that <math display=block>PHP^*=A</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "any matrix can be transformed to an upper Hessenberg matrix by a similarity transformation",
+     "note": "Similar matrices have the same spectrum.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "Since ''U'' is [[similar (linear algebra)|similar]] to ''A'', it has the same [[Spectrum of a matrix|spectrum]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Full matrix structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Hessenberg: none at the pin.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678",
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383020821",
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233"
+   }
+  },
+  {
+   "id": "D2-056",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-complete-orthogonal-decomposition.txt",
+    "m": "excerpts/wikipedia-matrix-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the '''complete orthogonal decomposition''' is a [[matrix decomposition]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "<math>A = U T V^*</math>, where <math>U</math> and <math>V^*</math> are [[unitary matrix|unitary matrices]] and <math>T</math> is a [[triangular matrix]].",
+     "note": "A = UTV* with T triangular and U, V unitary, and the SVD is its special case, as stated; \"robust\" is not: the source says the SVD costs more but has the stronger rank-revealing property.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "is a special case of the UTV decomposition.  Computing the SVD is slightly more expensive than the UTV decomposition"
+      },
+      {
+       "src": "c",
+       "quote": "but has a stronger rank-revealing property."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "*Applicable to: ''m''-by-''n'' matrix ''A''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "<math>A = U T V^*</math>, where <math>U</math> and <math>V^*</math> are [[unitary matrix|unitary matrices]] and <math>T</math> is a [[triangular matrix]]."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "For a matrix <math>A</math> of [[matrix rank|rank]] <math>r</math>, the triangular matrix <math>T</math> can be chosen such that only its top-left <math>r\\times r</math> block is nonzero, making the decomposition rank-revealing.",
+     "note": "Rank is stated (the decomposition is rank-revealing); the subspaces are not stated in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Full matrix\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched complete orthogonal and UTV decompositions: none at the pin.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1263424223",
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678"
+   }
+  },
+  {
+   "id": "D2-060",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt",
+    "p": "excerpts/wikipedia-polar-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "=== Polar decomposition ==="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "*Decomposition: <math>A=UP</math> (right polar decomposition) or <math>A=P'U</math> (left polar decomposition), where ''U'' is a [[unitary matrix]] and ''P'' and ''P''' are [[positive semidefinite matrix|positive semidefinite]] [[Hermitian matrices]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "*Applicable to: any square complex matrix ''A''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "where ''U'' is a [[unitary matrix]] and ''P'' and ''P''' are [[positive semidefinite matrix|positive semidefinite]] [[Hermitian matrices]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "expresses the transformation defined by <math>A</math> as a rotation (<math>R</math>) followed by a scaling (<math>P</math>) along certain orthogonal directions.",
+     "note": "Stated for real matrices, rotation for the unitary factor."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Combined structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched polar decomposition: none for matrices at the pin.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678",
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381001479"
+   }
+  },
+  {
+   "id": "D2-062",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "=== Mostow's decomposition ==="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=Ue^{iM}e^{S}</math>, where ''U'' is unitary, ''M'' is real anti-symmetric and ''S'' is real symmetric.",
+     "note": "The source makes M and S real."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Applicable to: square, complex, non-singular matrix ''A''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=Ue^{iM}e^{S}</math>"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window describes the three factors as a separation of unitary, rotation and scaling parts."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Single matrix form\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Mostow decomposition: none at the pin.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678"
+   }
+  },
+  {
+   "id": "D2-063",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt",
+    "k": "excerpts/wikipedia-sinkhorns-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "=== Sinkhorn normal form ==="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "A simple [[iterative method]] to approach the double [[stochastic matrix]] is to alternately rescale all rows and all columns of ''A'' to sum to 1."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "k",
+     "quote": "If ''A'' is an [[Matrix (mathematics)#Square matrices|''n'' &times; ''n'' matrix]] with strictly positive elements",
+     "note": "The theorem's hypothesis is strictly positive entries. A positive permanent is not enough: [[1, 1], [0, 1]] has permanent 1, but any D1 A D2 keeps its zero, and a doubly stochastic matrix with that pattern would need its (1, 2) entry to vanish (worked by hand, inferred)."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "such that ''D''<sub>1</sub>''AD''<sub>2</sub> is [[Doubly stochastic matrix|doubly stochastic]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "\"Permanent positivity\": no source states it."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "to alternately rescale all rows and all columns of ''A'' to sum to 1.",
+     "note": "The original row and column sums give way to 1."
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "mathlib": "Searched Sinkhorn and doubly stochastic scaling: Mathlib has doubly stochastic matrices (doublyStochastic) but no Sinkhorn theorem at the pin.",
+   "falsify": {
+    "field": "input",
+    "claim": "A nonnegative matrix with positive permanent has a Sinkhorn form D1 A D2.",
+    "attempt": "Tried the 2 by 2 matrix [[1, 1], [0, 1]], permanent 1: D1 A D2 keeps the zero in position (2, 1), so its first column sums to its (1, 1) entry and its second row to its (2, 2) entry, both 1, and row one then forces the (1, 2) entry to 0, which a positive scaling of 1 cannot be.",
+    "outcome": "falsified"
+   },
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678",
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1363957487"
+   }
+  },
+  {
+   "id": "D2-064",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "=== Sectoral decomposition ==="
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "*Applicable to: square, complex matrix ''A'' with [[numerical range]] contained in the sector",
+     "note": "The condition is on the numerical range, and the decomposition is a congruence A = CZC* with Z diagonal and unimodular; the angles of Z are bounded by the sector, they are not A's eigenvalue angles.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "*Decomposition: <math>A = CZC^*</math>, where ''C'' is an invertible complex matrix and <math>Z = \\operatorname{diag}\\left(e^{i\\theta_1},\\ldots,e^{i\\theta_n}\\right)</math> with all <math>\\left|\\theta_j\\right| \\le \\alpha </math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "*Applicable to: square, complex matrix ''A'' with [[numerical range]] contained in the sector",
+     "note": "The hypothesis is that the numerical range lies in the sector; eigenvalues in the sector is a weaker condition."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "*Decomposition: <math>A = CZC^*</math>, where ''C'' is an invertible complex matrix and <math>Z = \\operatorname{diag}\\left(e^{i\\theta_1},\\ldots,e^{i\\theta_n}\\right)</math> with all <math>\\left|\\theta_j\\right| \\le \\alpha </math>.",
+     "note": "\"Sectoral components\" names no factor; the output is C and the unimodular diagonal Z."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states which eigenvalue angles are preserved; the decomposition bounds the angles of Z, not of A's eigenvalues."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Specific entries\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched sectoral decomposition and numerical range: none at the pin.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678"
+   }
+  },
+  {
+   "id": "D2-065",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "=== Williamson's normal form ==="
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=S^\\mathsf{T}\\operatorname{diag}(D,D)S</math>, where <math>S \\in \\text{Sp}(2n)</math> is a [[symplectic matrix]] and ''D'' is a nonnegative ''n''-by-''n'' diagonal matrix.",
+     "note": "Symplectic congruence of a 2n by 2n positive-definite matrix to diag(D, D), as stated; that the diagonal entries are the symplectic eigenvalues is not in a fetched window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Applicable to: square, [[Positive-definite matrix|positive-definite]] real matrix ''A'' with order 2''n''×2''n''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=S^\\mathsf{T}\\operatorname{diag}(D,D)S</math>",
+     "note": "The landed S^T A S = diag(d1, d1, ..., dn, dn) is this with S replaced by its inverse and the coordinates reordered."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window names the symplectic eigenvalues or says they are invariant."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "mathlib": "Searched Williamson and symplectic congruence: Mathlib defines the symplectic group (Matrix.symplecticGroup) but no Williamson normal form at the pin.",
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678"
+   }
+  },
+  {
+   "id": "D2-066",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-matrix-decomposition.txt",
+    "q": "excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "===Matrix square root==="
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=BB</math>, not unique in general."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* In the case of positive semidefinite <math>A</math>, there is a unique positive semidefinite <math>B</math> such that <math>A=B^*B=BB</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=BB</math>",
+     "more": [
+      {
+       "src": "q",
+       "quote": "lemma sq_sqrt (a : A) (ha : 0 ≤ a := by cfc_tac) : (sqrt a) ^ 2 = a"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "there is a unique positive semidefinite <math>B</math> such that <math>A=B^*B=BB</math>.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "lemma sqrt_nonneg (a : A) : 0 ≤ sqrt a"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* Decomposition: <math>A=BB</math>, not unique in general."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678",
+    "q": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-068",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-hermite-normal-form.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''Hermite normal form''' is an analogue of [[reduced echelon form]] for [[matrix (mathematics)|matrices]] over the [[integer]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "has a (row) Hermite normal form <math>H</math> if there is a square [[unimodular matrix]] <math>U</math> such that <math>H=UA</math>",
+     "note": "Uniqueness is stated for full row rank, and as a general fact where the page turns to lattices.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "is an analogue of [[reduced echelon form]]"
+      },
+      {
+       "src": "h",
+       "quote": "Because the Hermite normal form is unique, it can be used to answer many questions about two lattice descriptions."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "A matrix <math>A \\in \\mathbb{Z}^{m \\times n}</math> has a (row) Hermite normal form"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "# <math>H</math> is upper triangular (that is, <math>h_{ij}=0</math> for <math>i>j</math>), and any rows of zeros are located below any other row.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "# The elements below pivots are zero and elements above pivots are nonnegative and strictly smaller than the pivot."
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "A unimodular matrix is a square [[integer matrix]] whose [[determinant]] is 1 or −1 (and hence [[Invertible matrix|invertible]]). In fact, a unimodular matrix is invertible over the integers",
+     "note": "H = UA with U invertible over the integers keeps the row lattice; the determinant is kept only up to sign, since det U is 1 or -1."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original rows\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched Hermite normal form: none at the pin.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345542222"
+   }
+  },
+  {
+   "id": "D2-069",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "f": "excerpts/wikipedia-frobenius-normal-form.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the '''Frobenius normal form''' or  '''rational canonical form''' of a [[square matrix|square]] [[matrix (mathematics)|matrix]] ''A'' with entries in a [[field (mathematics)|field]] ''F''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "For each invariant factor ''f<sub>i</sub>'' one takes its [[companion matrix]] ''C''<sub>''f<sub>i</sub>''</sub>, and the block diagonal matrix formed from these blocks yields the '''rational canonical form''' of ''A''.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "is a [[canonical form]] for matrices obtained by conjugation by [[invertible matrices]] over ''F''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "matrix]] ''A'' with entries in a [[field (mathematics)|field]] ''F''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "and the block diagonal matrix formed from these blocks yields the '''rational canonical form''' of ''A''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The last of these factors ''f<sub>k</sub>'' is then the minimal polynomial",
+     "note": "The form is built from A's invariant factors and is conjugate to A.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "For each invariant factor ''f<sub>i</sub>'' one takes its [[companion matrix]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The Frobenius normal form does not reflect any form of factorization of the characteristic polynomial, even if it does exist over the ground field ''F''.",
+     "note": "So the eigenvalues are not displayed."
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "mathlib": "Searched rational canonical form and Frobenius normal form: none at the pin.",
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374115939"
+   }
+  },
+  {
+   "id": "D2-074",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "q": "excerpts/wikipedia-quotient-ring.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Defs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient ring''', also known as '''factor ring'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "The zero-element of <math>R\\ /\\ I</math> is {{tmath|1= \\bar{0} = 0 + I = I }}",
+     "note": "Geometrically: the coordinate ring of a variety is the quotient by its ideal, the functions restricted to it.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "The ring of real-valued polynomial functions defined on <math>V</math> can be identified with the quotient ring"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "Given a ring <math>R</math> and a two-sided ideal <math>I</math> in {{tmath|1= R }}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def mk : R →+* R ⧸ I where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "is a [[surjective]] [[ring homomorphism]], sometimes called the '''''natural quotient map'''''",
+     "more": [
+      {
+       "src": "q",
+       "quote": "Compare [[coset]] and [[quotient group]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "theorem eq_zero_iff_mem : mk I a = 0 ↔ a ∈ I"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1366975432",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Defs.lean"
+   }
+  },
+  {
+   "id": "D2-076",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-product-of-rings.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Ring.Prod.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a '''product of rings''' or '''direct product of rings'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "equipped with [[componentwise operation]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "formed by the [[Cartesian product]] of the underlying sets of several rings"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "is a [[ring (mathematics)|ring]] that is formed by the [[Cartesian product]] of the underlying sets of several rings"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "we have a [[surjective]] [[ring homomorphism]] {{nowrap|''p<sub>i</sub>'' : ''R'' → ''R<sub>i</sub>''}} which projects the product on the ''i''th coordinate.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def fst : R × S →+* R :="
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "A product of two or more non-trivial rings always has nonzero [[zero divisors]]",
+     "note": "What breaks is being an integral domain: nonzero zero divisors appear. \"Irreducibility\" names it obliquely."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1291091832",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Ring/Prod.lean"
+   }
+  },
+  {
+   "id": "D2-077",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-annihilator-ring-theory.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Ideal.Maps.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the '''annihilator''' of a [[subset]] {{mvar|S}} of a [[module (mathematics)|module]] over a [[ring (mathematics)|ring]] is the [[ideal (ring theory)|ideal]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "<math>\\mathrm{Ann}_R(S)=\\{r\\in R\\mid rs = 0</math> for all <math> s\\in S \\}</math>",
+     "more": [
+      {
+       "src": "m",
+       "quote": "theorem Module.mem_annihilator {r} : r ∈ Module.annihilator R M ↔ ∀ m : M, r • m = 0"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Let ''R'' be a [[ring (mathematics)|ring]], and let ''M'' be a left ''R''-[[module (mathematics)|module]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is the [[ideal (ring theory)|ideal]] formed by the elements of the ring that always give zero when multiplied by each element of {{mvar|S}}."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Over an [[integral domain]], a module that has a nonzero annihilator is a [[torsion module]], and a [[finitely generated module|finitely generated]] torsion module has a nonzero annihilator.",
+     "note": "Over an integral domain, and for finitely generated modules in one direction."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module elements\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1359643125",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Maps.lean"
+   }
+  },
+  {
+   "id": "D2-079",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-primary-decomposition.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Lasker.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "states that every [[Noetherian ring]] is a '''Lasker ring'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "which means that every ideal can be decomposed as an intersection, called '''primary decomposition''', of finitely many ''[[primary ideal]]s''",
+     "more": [
+      {
+       "src": "p",
+       "quote": "by asserting that every [[algebraic set]] may be uniquely decomposed into a finite union of [[irreducible component]]s."
+      },
+      {
+       "src": "m",
+       "quote": "lemma isLasker : IsLasker R M"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "states that every [[Noetherian ring]] is a '''Lasker ring''', which means that every ideal can be decomposed"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "of finitely many ''[[primary ideal]]s''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "*The set <math>\\{ \\sqrt{Q_i} \\mid i \\}</math> is uniquely determined by <math>I</math>, and",
+     "note": "The ideal is the intersection itself; the primes are its associated primes.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "is also the set of associated primes of the <math>R</math>-module"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Unified description\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376651815",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Lasker.lean"
+   }
+  },
+  {
+   "id": "D2-081",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "f": "excerpts/wikipedia-fractional-ideal.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.DedekindDomain.Ideal.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the concept of '''fractional ideal''' is introduced in the context of [[integral domain]]s"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "The set of invertible fractional ideals forms a [[commutative group]] with respect to the above product, where the identity is the [[unit ideal]] <math>(1) = R</math> itself. This group is called the '''group of fractional ideals''' of <math>R</math>.",
+     "note": "The group is that of the invertible fractional ideals; all nonzero fractional ideals are invertible exactly when R is a Dedekind domain.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "An integral domain is a Dedekind domain if and only if every non-zero fractional ideal is invertible."
+      },
+      {
+       "src": "m",
+       "quote": "noncomputable abbrev commGroupWithZero : CommGroupWithZero (FractionalIdeal A⁰ K) where"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Let <math>R</math> be an [[integral domain]], and let <math>K = \\operatorname{Frac}R</math> be its [[field of fractions]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "A '''fractional ideal''' of <math>R</math> is an <math>R</math>-[[submodule]] <math>I</math> of <math>K</math> such that there exists a non-zero <math>r \\in R</math> such that <math>rI\\subseteq R</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "forms a [[commutative group]] with respect to the above product",
+     "note": "The product of fractional ideals; the invertible ones form a group under it."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "fractional ideals of an integral domain are like [[ideal (ring theory)|ideal]]s where [[denominator]]s are allowed.",
+     "note": "A fractional ideal is a submodule of the fraction field, not of R.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "is an <math>R</math>-[[submodule]] <math>I</math> of <math>K</math>"
+      }
+     ]
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "falsify": {
+    "field": "description",
+    "claim": "The fractional ideals of an integral domain form a group.",
+    "attempt": "Looked for fractional ideals with no inverse: the source makes the group the invertible ones, and says every nonzero fractional ideal is invertible exactly in a Dedekind domain, so outside Dedekind domains some have no inverse.",
+    "outcome": "falsified"
+   },
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899807",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/DedekindDomain/Ideal/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-082",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "i": "excerpts/wikipedia-i-adic-topology.txt",
+    "m": "excerpts/mathlib-Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "determines a topology on {{mvar|M}} called the {{math|𝔞}}-adic topology"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The family <math display=block>\\{x+\\mathfrak{a}^nM:x\\in M,n\\in\\mathbb{Z}^+\\}</math> is a [[basis (topology)|basis]] for this topology.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "theorem adic_basis (I : Ideal R) : SubmodulesRingBasis fun n : ℕ => (I ^ n • ⊤ : Ideal R)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology",
+     "note": "R commutative; the ring is the case M = R."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def adicTopology (I : Ideal R) : TopologicalSpace R :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "With respect to the topology, the module operations of addition and scalar multiplication are [[Continuity (topology)|continuous]]",
+     "note": "With M = R, scalar multiplication is the ring's multiplication."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Other topologies\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351898474",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean"
+   }
+  },
+  {
+   "id": "D2-083",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "t": "excerpts/wikipedia-tensor-product-of-fields.txt",
+    "a": "excerpts/wikipedia-tensor-product-of-algebras.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "the '''tensor product''' of two [[field (mathematics)|fields]]  is their [[tensor product of algebras|tensor product]] as [[algebra over a field|algebras]] over a common [[subfield (mathematics)|subfield]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The tensor product of two fields is sometimes a field, and often a [[product ring|direct product]] of fields; in some cases, it can contain non-zero [[nilpotent element]]s."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "as [[algebra over a field|algebras]] over a common [[subfield (mathematics)|subfield]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is their [[tensor product of algebras|tensor product]] as [[algebra over a field|algebras]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "There are natural [[homomorphism]]s from ''A'' and ''B'' to",
+     "note": "Both fields map into the tensor product, an algebra over the common subfield."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "The tensor product of two fields is sometimes a field"
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched tensor products of fields: Mathlib has the tensor product of algebras (linked on D2-084) but no statement on when K x L is a field at the pin.",
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345533112",
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380323046"
+   }
+  },
+  {
+   "id": "D2-084",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-tensor-product-of-algebras.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.TensorProduct.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "This gives the '''tensor product of algebras'''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ":<math>(a_1\\otimes b_1)(a_2\\otimes b_2) = a_1 a_2\\otimes b_1b_2</math>",
+     "more": [
+      {
+       "src": "m",
+       "quote": "a₁ ⊗ₜ[R] b₁ * a₂ ⊗ₜ[R] b₂ = (a₁ * a₂) ⊗ₜ[R] (b₁ * b₂)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Let ''R'' be a commutative ring and let ''A'' and ''B'' be ''R''-algebras."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "This ring is an ''R''-algebra, [[associative algebra|associative]] and unital with the identity element given by"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "There are natural [[homomorphism]]s from ''A'' and ''B'' to",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def includeLeft [SMulCommClass R S A] : A →ₐ[S] A ⊗[R] B :="
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual identities\" is a gloss; the source gives the identity as 1 x 1 and states nothing broken."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380323046",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/TensorProduct/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-085",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-henselian-ring.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Henselian.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "called the '''Henselization''' of ''A''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "For any local ring ''A'' there is a universal Henselian ring ''B'' generated by ''A''",
+     "note": "\"Smallest\" read as the universal property: every local homomorphism to a Henselian ring extends uniquely.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "such that any [[local homomorphism]] from ''A'' to a Henselian ring can be extended uniquely to ''B''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "For any local ring ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "there is a universal Henselian ring ''B'' generated by ''A''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* A local ring ''R'' with [[maximal ideal]] ''m'' is called '''Henselian''' if  Hensel's lemma holds.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "class HenselianLocalRing (R : Type*) [CommRing R] : Prop extends IsLocalRing R where"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-Henselian failures\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353497841",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Henselian.lean"
+   }
+  },
+  {
+   "id": "D2-086",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-henselian-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "called the '''strict Henselization''' of ''A''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* A Henselian local ring is called '''strictly Henselian''' if its [[residue field]] is [[separable extension|separably closed]].",
+     "more": [
+      {
+       "src": "h",
+       "quote": "Similarly there is a strictly Henselian ring generated by ''A''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "For any local ring ''A''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Similarly there is a strictly Henselian ring generated by ''A''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* A Henselian local ring is called '''strictly Henselian''' if its [[residue field]] is [[separable extension|separably closed]]."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "More precisely it depends on the choice of a separable algebraic closure of the residue field of ''A''",
+     "note": "The residue field is replaced by a separable closure."
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "mathlib": "Searched strict Henselization: Mathlib has HenselianLocalRing (linked on D2-085) but no strict Henselization at the pin.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353497841"
+   }
+  },
+  {
+   "id": "D2-087",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "is an [[exact sequence]] of [[module (mathematics)|module]]s",
+     "more": [
+      {
+       "src": "r",
+       "quote": "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+      },
+      {
+       "src": "m",
+       "quote": "projective : ∀ n, Projective (complex.X n)"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "complex : ChainComplex C ℕ",
+     "more": [
+      {
+       "src": "m",
+       "quote": "projective : ∀ n, Projective (complex.X n)"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "Any injective (projective) resolution is ''F''-acyclic for any left exact (right exact, respectively) functor.",
+     "note": "Derived functors (Ext through Hom, Tor through the tensor product) are computed from it, as stated; an isomorphism in the derived category is not stated in a fetched window.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "can be obtained from as the homology of ''F''-acyclic resolutions"
+      },
+      {
+       "src": "r",
+       "quote": "Projective resolution of a module <math>M</math> is unique up to a [[chain homotopy]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Specific module structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean"
+   }
+  },
+  {
+   "id": "D2-088",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "dually a '''coresolution''' or '''right resolution'''",
+     "more": [
+      {
+       "src": "r",
+       "quote": "Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Dually, every <math>R</math>-module possesses an injective resolution."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "cocomplex : CochainComplex C ℕ",
+     "more": [
+      {
+       "src": "m",
+       "quote": "injective : ∀ n, Injective (cocomplex.X n)"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states an isomorphism in the derived category."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean"
+   }
+  },
+  {
+   "id": "D2-089",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "a ''free resolution'' of a module <math>M</math> is a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "a ''free resolution'' of a module <math>M</math> is a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "Every <math>R</math>-module possesses a free left resolution."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Every <math>R</math>-module possesses a free left resolution."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states Betti numbers or the Hilbert series as invariants of a free resolution."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module presentation\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched free resolutions: Mathlib has projective resolutions (linked on D2-087) but no free resolutions or Betti numbers of modules at the pin.",
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458"
+   }
+  },
+  {
+   "id": "D2-090",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "r": "excerpts/wikipedia-resolution-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "Every flat resolution is acyclic with respect to this functor.",
+     "note": "Tor: derived functors of the tensor product are the homology of acyclic resolutions. Flat dimension: resolutions define homological dimensions, flat dimension among them.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s."
+      },
+      {
+       "src": "r",
+       "quote": "Resolutions are used to define [[homological dimension (disambiguation)|homological dimension]]s."
+      },
+      {
+       "src": "r",
+       "quote": "Similarly, flat dimension is used to define [[weak global dimension]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched flat resolutions: none at the pin (Mathlib has flat modules, Module.Flat, but no flat resolutions).",
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458"
+   }
+  },
+  {
+   "id": "D2-091",
+   "batch": 2,
+   "why": "Landed review, batch 2: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-mapping-cone-homological-algebra.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the '''mapping cone''' is a construction on a map of [[chain complexes]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The main use of the cone is to identify [[quasi-isomorphism]]s: if the cone is [[acyclic complex|acyclic]], then the map is a quasi-isomorphism."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a construction on a map of [[chain complexes]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Since this is a triangle, it gives rise to a [[long exact sequence]] on [[homology group]]s:",
+     "more": [
+      {
+       "src": "m",
+       "quote": "noncomputable def mappingCone : CochainComplex C ℤ := homotopyCofiber φ"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Since this is a triangle, it gives rise to a [[long exact sequence]] on [[homology group]]s:"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual complex structures\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "falsify": {
+    "field": "description",
+    "claim": "The cone detects quasi-isomorphisms.",
+    "attempt": "Checked both directions against the source: an acyclic cone gives a quasi-isomorphism through the long exact sequence, and the same sequence gives the converse.",
+    "outcome": "survived"
+   },
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean"
+   }
   }
  ]
 }

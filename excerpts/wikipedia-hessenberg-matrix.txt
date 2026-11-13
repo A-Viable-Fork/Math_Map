@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Hessenberg matrix (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383020821
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 327a04a90609935788618da23faea8c4347846f6e24c84513259ed42e84b2301
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''upper Hessenberg matrix''' has zero entries below the first [[diagonal#Matrices|subdiagonal]]
+
+A '''Hessenberg decomposition''' is a [[matrix decomposition]] of a matrix <math>A</math> into a [[unitary matrix]] <math>P</math> and a Hessenberg matrix <math>H</math> such that <math display=block>PHP^*=A</math>
+
+any matrix can be transformed to an upper Hessenberg matrix by a similarity transformation

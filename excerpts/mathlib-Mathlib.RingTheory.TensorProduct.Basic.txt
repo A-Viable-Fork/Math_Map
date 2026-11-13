@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/TensorProduct/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/TensorProduct/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: f0e8e9992eb6c6811068b7bf1830236c5ad02d52c8ecab6325416d6cdc9f7ff2
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Algebra.TensorProduct.tmul_mul_tmul (line 102)
+theorem tmul_mul_tmul (a₁ a₂ : A) (b₁ b₂ : B) :
+    a₁ ⊗ₜ[R] b₁ * a₂ ⊗ₜ[R] b₂ = (a₁ * a₂) ⊗ₜ[R] (b₁ * b₂)
+
+-- Algebra.TensorProduct.includeLeft (line 265)
+def includeLeft [SMulCommClass R S A] : A →ₐ[S] A ⊗[R] B :=
+  { includeLeftRingHom with commutes' := by simp }

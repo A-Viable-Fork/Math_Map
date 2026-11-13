@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Polar decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381001479
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 0427daeb03d2a2442c2c2f1ceb4b00da9b247e4aceea093841c9e128a9d6d50d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Alternatively, the decomposition <math>A=P R</math> expresses the transformation defined by <math>A</math> as a rotation (<math>R</math>) followed by a scaling (<math>P</math>) along certain orthogonal directions.

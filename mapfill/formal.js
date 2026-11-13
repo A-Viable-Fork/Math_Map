@@ -445,6 +445,22 @@ const LANDED = [
   K("D2-048", "preserved", "Matrix.IsHermitian.det_eq_prod_eigenvalues", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "The determinant is the product of the eigenvalues, for Hermitian matrices."),
   K("D2-048", "preserved", "Matrix.IsHermitian.trace_eq_sum_eigenvalues", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "The trace is the sum of the eigenvalues, for Hermitian matrices."),
   K("D2-050", "description", "Module.End.exists_isNilpotent_isSemisimple", "Mathlib/LinearAlgebra/JordanChevalley.lean", "related", "The Jordan-Chevalley decomposition f = n + s, which the Jordan form displays; the Jordan normal form itself is not at the pin."),
+  // Batch 2: D2-055 to D2-091.
+  K("D2-066", "output", "CFC.sq_sqrt", "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean", "general", "In any C*-algebra with the continuous functional calculus, a nonnegative a has (sqrt a)^2 = a; positive semidefinite matrices are the case of matrices."),
+  K("D2-066", "preserved", "CFC.sqrt_nonneg", "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean", "general", "The functional-calculus square root is nonnegative: the root of a positive semidefinite matrix is positive semidefinite."),
+  K("D2-076", "preserved", "RingHom.fst", "Mathlib/Algebra/Ring/Prod.lean", "exact", "The projection R x S to R is a ring homomorphism (RingHom.snd likewise): each factor's structure survives."),
+  K("D2-077", "description", "Module.annihilator", "Mathlib/RingTheory/Ideal/Maps.lean", "exact", "The ideal of r with r acting as zero on M, defined as the kernel of R to the endomorphisms of M.", { whole: true }),
+  K("D2-077", "description", "Module.mem_annihilator", "Mathlib/RingTheory/Ideal/Maps.lean", "exact", "r lies in the annihilator iff r m = 0 for every m."),
+  K("D2-079", "description", "Submodule.isLasker", "Mathlib/RingTheory/Lasker.lean", "general", "Lasker-Noether for modules: every submodule of a Noetherian module is a finite intersection of primary submodules; the ideals of a Noetherian ring are the case of R as a module over itself."),
+  K("D2-081", "description", "IsDedekindDomainInv.commGroupWithZero", "Mathlib/RingTheory/DedekindDomain/Ideal/Basic.lean", "special", "When every nonzero fractional ideal is invertible (a Dedekind domain), the fractional ideals form a commutative group with zero: the case where the landed claim holds."),
+  K("D2-082", "description", "Ideal.adic_basis", "Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean", "exact", "The powers I^n form a basis of neighbourhoods of 0 for a ring topology (a submodules ring basis)."),
+  K("D2-082", "output", "Ideal.adicTopology", "Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean", "exact", "The I-adic topology on R, defined from that basis.", { whole: true }),
+  K("D2-084", "description", "Algebra.TensorProduct.tmul_mul_tmul", "Mathlib/RingTheory/TensorProduct/Basic.lean", "exact", "(a1 x b1)(a2 x b2) = (a1 a2) x (b1 b2): the product on pure tensors."),
+  K("D2-084", "preserved", "Algebra.TensorProduct.includeLeft", "Mathlib/RingTheory/TensorProduct/Basic.lean", "exact", "a goes to a x 1 as an algebra homomorphism A to A x B; includeRight likewise for B."),
+  K("D2-085", "preserved", "HenselianLocalRing", "Mathlib/RingTheory/Henselian.lean", "ingredient", "The Henselian property of a local ring, defined; Henselization itself is not at the pin."),
+  K("D2-087", "output", "CategoryTheory.ProjectiveResolution", "Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean", "exact", "A chain complex of projectives indexed by the naturals with a quasi-isomorphism to Z in degree 0."),
+  K("D2-088", "output", "CategoryTheory.InjectiveResolution", "Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean", "exact", "A cochain complex of injectives indexed by the naturals with a quasi-isomorphism from Z in degree 0."),
+  K("D2-091", "output", "CochainComplex.mappingCone", "Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean", "exact", "The mapping cone of a morphism of integer-indexed cochain complexes, defined as its homotopy cofiber. The long exact sequence is not this declaration."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

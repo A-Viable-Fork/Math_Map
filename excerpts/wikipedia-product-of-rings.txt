@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Product of rings (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1291091832
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e5c6a0e3bb4cd298e4c6ed211a45904cbcd4d9c6a0507467f83a70d47ef3851f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''product of rings''' or '''direct product of rings''' is a [[ring (mathematics)|ring]] that is formed by the [[Cartesian product]] of the underlying sets of several rings (possibly an infinity), equipped with [[componentwise operation]]s.
+
+we have a [[surjective]] [[ring homomorphism]] {{nowrap|''p<sub>i</sub>'' : ''R'' → ''R<sub>i</sub>''}} which projects the product on the ''i''th coordinate.
+
+A product of two or more non-trivial rings always has nonzero [[zero divisors]]

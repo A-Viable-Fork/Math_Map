@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Primary decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376651815
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d3a36210d79dbe7f211ed414853e552df8e0f12c984d41e6dbc03e15566fa963
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+states that every [[Noetherian ring]] is a '''Lasker ring''', which means that every ideal can be decomposed as an intersection, called '''primary decomposition''', of finitely many ''[[primary ideal]]s''
+
+by asserting that every [[algebraic set]] may be uniquely decomposed into a finite union of [[irreducible component]]s.
+
+*The set <math>\{ \sqrt{Q_i} \mid i \}</math> is uniquely determined by <math>I</math>, and
+
+is also the set of associated primes of the <math>R</math>-module
