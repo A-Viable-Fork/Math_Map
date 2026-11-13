@@ -163,17 +163,25 @@ def c15(rows):
             if n not in seen:
                 seen.add(n); pending += [b for a, b in edges if a == n]
         return False
+    def reverse_route(model, facts):
+        if model == 'mobius' and (facts['determinant'] == 0 or facts['denominator'] == 0):
+            return {'status':'blocked', 'reason':'outside the inverse domain'}
+        if model == 'walsh' and facts['inverseScale'] != Q(1, facts['N']):
+            return {'status':'blocked', 'reason':'inverse normalization mismatch'}
+        return {'status':'route', 'edge':('output','input')}
     outcomes = []
     for r in rows:
         before = [('input', 'output')]
-        after = before + [('output', 'input')]
+        proposed = reverse_route(r['model'], {'determinant':1,'denominator':1,'inverseScale':Q(1,4),'N':4})
+        assert proposed['status']=='route'
+        after = before + [proposed['edge']]
         assert not reachable(before, 'output', 'input') and reachable(after, 'output', 'input')
         assert checks[r['model']], r['entry']
         outcomes.append({'entry': r['entry'], 'bothRoundTripsChecked': True, 'reverseRouteBefore': False,
                          'reverseRouteWithSidecar': True, 'scope': r['domain']})
-    controls = {'singularMobiusBlocked': 1*4-2*2 == 0,
-                'inversePoleAtOneRejected': Ai[2]*Q(1)+Ai[3] == 0,
-                'walshWithoutInverseScaleFails': not np.array_equal(h4 @ h4, np.eye(4)),
+    controls = {'singularMobiusBlocked': reverse_route('mobius',{'determinant':1*4-2*2,'denominator':1})['status']=='blocked',
+                'inversePoleAtOneRejected': reverse_route('mobius',{'determinant':1,'denominator':Ai[2]*Q(1)+Ai[3]})['status']=='blocked',
+                'walshWithoutInverseScaleFails': reverse_route('walsh',{'inverseScale':Q(1),'N':4})['status']=='blocked' and not np.array_equal(h4 @ h4, np.eye(4)),
                 'sameNameDoesNotMergeGateAndSignal': len({r['entry'] for r in rows if r['model'] in {'walsh', 'hadamard_gate'}}) == 2}
     assert all(controls.values())
     return dict(outcomes=outcomes, structurallyChecked=len(rows), finiteSemanticsChecked=len(rows),

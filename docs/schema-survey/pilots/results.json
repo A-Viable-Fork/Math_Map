@@ -1,7 +1,7 @@
 {
   "kind": "check readings",
   "python": "3.12.14",
-  "runnerSha256": "26d98742bc1672e1368ba2cb05b1347d2f97ee55e3b7e8f895ec82dcf16243bd",
+  "runnerSha256": "6f1b65081730ea664120543e45d9063459314c1087b66e206ff4c107d01d1d8a",
   "rowBuilderSha256": "b6f974be98f898b17406ad4ea2aacf34618f0a3b829890bbb9b3089298110f9a",
   "inputHashes": {
     "C23.json": "b51def124b8706e04f61bd7065aa49f2a88f4280adc2c55673b560bad7486b0b",
@@ -210,7 +210,7 @@
       "rows": 16,
       "distinctEntries": 16,
       "receiptRowsChecked": 16,
-      "runSeconds": 0.2315591139999924
+      "runSeconds": 0.2701637230002234
     },
     "C23": {
       "outcomes": [
@@ -330,7 +330,7 @@
       "rows": 17,
       "distinctEntries": 17,
       "receiptRowsChecked": 17,
-      "runSeconds": 0.5823375969998779
+      "runSeconds": 0.7186239099996783
     },
     "C15": {
       "outcomes": [
@@ -460,7 +460,7 @@
       "rows": 16,
       "distinctEntries": 16,
       "receiptRowsChecked": 16,
-      "runSeconds": 0.0007774720002089452
+      "runSeconds": 0.0008001360001799185
     },
     "C30": {
       "outcomes": [
@@ -660,7 +660,7 @@
       "rows": 16,
       "distinctEntries": 16,
       "receiptRowsChecked": 16,
-      "runSeconds": 0.1702967940000235
+      "runSeconds": 0.15442869099979362
     },
     "C33": {
       "outcomes": [
@@ -859,7 +859,7 @@
       "rows": 18,
       "distinctEntries": 18,
       "receiptRowsChecked": 18,
-      "runSeconds": 0.02091353200012236
+      "runSeconds": 0.021289341999818134
     },
     "C53": {
       "outcomes": [
@@ -1139,7 +1139,7 @@
       "rows": 20,
       "distinctEntries": 20,
       "receiptRowsChecked": 20,
-      "runSeconds": 0.00046729499990760814
+      "runSeconds": 0.00037460500016095466
     }
   }
 }
