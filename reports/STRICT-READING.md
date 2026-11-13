@@ -97,16 +97,87 @@ Fields the named files left unsupported, graded again after a new source was win
 | S083 | D7-396 output | unsupported | unsupported | imprecise | A new window names resource convertibility as the subject; that the output is an order (a preorder on resources) is in no window. |
 | S116 | D7-121 broken | unsupported | unsupported | imprecise | A new window states the restriction on where irreducibles lie; that the lemma breaks nothing is in no window. |
 
+## The targeted sweep
+
+The blind sample's flip rate (38 of 100 confirmed fields, Wilson 95% interval 29.1% to 47.8%) exceeds 5%, so every confirmed field whose quote is under 60 characters or names no relation is read again under the strict rule [ruling: operator, 2026-11-13]. Not blind: the reader sees the review's quotes and notes.
+
+Selection: Every field of audit/fill-review-0_1.js graded confirmed whose quote is under 60 characters, or none of whose receipts holds a relational word or symbol (scripts/strict.mjs, sweepSelection); fields read in the blind sample keep their blind grade.
+
+In progress, through D7-140 in review order: Graded 152 of the 159 selected fields so far (538 in all; those read in the blind sample keep their blind grade). Not confirmed under the strict rule: 54 (imprecise 45, wrong 0, unsupported 9).
+
+| Field | Batch | Review | Strict | Reason |
+|---|---|---|---|---|
+| D7-005 broken | 1 | confirmed | imprecise | The colimit formula states that each value is determined by F and K; "freely generated" is in no window. |
+| D7-006 broken | 1 | confirmed | imprecise | The limit formula states that each value is determined by F and K; "cofreely" is in no window. |
+| D7-011 broken | 1 | confirmed | imprecise | The window states the sewing along the diagram's morphisms; that distinctions are identified is in no window. |
+| D7-012 preserved | 1 | confirmed | imprecise | Stability of monomorphisms and isomorphisms is stated; the universal property is only named through "limit". |
+| D7-014 preserved | 1 | confirmed | imprecise | e monic is stated; the universal property is in no window. |
+| D7-015 preserved | 1 | confirmed | imprecise | q epic is stated; the universal property is only named through "colimit". |
+| D7-015 broken | 1 | confirmed | unsupported | The quoted fragment names a quotient function; no window states that q identifies f(x) with g(x). |
+| D7-016 name | 1 | confirmed | imprecise | The fragment says the product is a special case of a limit; of a discrete family falls outside it. |
+| D7-016 description | 1 | confirmed | imprecise | Fragments: a special limit, universal, with projections; the discrete family and the componentwise morphisms into it fall outside them. |
+| D7-016 input | 1 | confirmed | imprecise | The fragment indexes projections by i; that the input is a family of objects falls outside it. |
+| D7-016 output | 1 | confirmed | imprecise | The fragment names projections indexed by i; the product object falls outside it. |
+| D7-022 preserved | 1 | confirmed | imprecise | Presheaves, Morita class and full faithfulness are stated of the Cauchy completion; no window identifies the Karoubi envelope of an ordinary category with it. |
+| D7-022 broken | 1 | confirmed | imprecise | Added retracts appear in a fragment; that nothing is lost, and "freely", are in no window. |
+| D7-023 preserved | 1 | confirmed | imprecise | Stated of the Cauchy completion; no window identifies the idempotent completion of an ordinary category with it. |
+| D7-023 broken | 1 | confirmed | imprecise | Added retracts appear in a fragment; that nothing is lost is in no window. |
+| D7-026 input | 2 | confirmed | imprecise | The window asks for a small monoidal category; the field omits smallness. |
+| D7-026 preserved | 2 | confirmed | imprecise | Yoneda strong monoidal is stated; symmetry and braiding are in no window. |
+| D7-027 preserved | 2 | confirmed | imprecise | Lemma 1 states representables go to representables; that Isbell duality restricts to an equivalence on the self-dual objects is in no window (they are only named). |
+| D7-027 broken | 2 | confirmed | unsupported | The window names the Isbell self-dual objects; none states that the others change. |
+| D7-032 name | 2 | confirmed | imprecise | Coalgebras over a comonad are stated; the resolution of a comonad into an adjunction is in no window. |
+| D7-034 output | 2 | confirmed | imprecise | Models as product-preserving functors are stated (for groups); the category FP(T, Set) of models is in no window. |
+| D7-036 description | 2 | confirmed | imprecise | Spans for a calculus of fractions are stated; the equivalence relation on roofs is in no window. |
+| D7-036 input | 2 | confirmed | imprecise | The Ore condition is named; the cancellation condition is in no window. |
+| D7-038 description | 2 | confirmed | imprecise | The unique map out of an initial algebra and the fold are stated; replacing constructors with an algebra is in no window. |
+| D7-042 input | 2 | confirmed | imprecise | Shown for lists only; the general coalgebra A to F(nu F + A) is in no window. |
+| D7-044 input | 2 | confirmed | imprecise | The window takes any categories C and D; the field adds smallness of C, which the definition does not ask. |
+| D7-047 name | 2 | confirmed | imprecise | The name and an example (pointed sets) are stated; the definition, objects as morphisms out of X, is in no window. |
+| D7-051 preserved | 3 | confirmed | unsupported | The review's receipt is a LaTeX label; no window states associativity or unit up to coherence. |
+| D7-054 input | 3 | confirmed | imprecise | Modules (a bimodule) are stated; closed monoidal categories are in no window. |
+| D7-058 name | 3 | confirmed | imprecise | The interchange law is named; no window states it. |
+| D7-058 input | 3 | confirmed | unsupported | The windows name the interchange law; none states a pasting of 2-cells as its input. |
+| D7-066 name | 3 | confirmed | imprecise | Tambara theory is named; a Tambara module, a profunctor with a strength for a monoidal action, is in no window. |
+| D7-068 input | 3 | confirmed | imprecise | The reflector and a reflective subcategory are named; that the subcategory is full is in no window. |
+| D7-070 preserved | 3 | confirmed | imprecise | Unique lifts are stated; uniqueness of the factorization up to isomorphism is in no window. |
+| D7-072 input | 3 | confirmed | imprecise | Lex categories are stated; the regular-category case (ex/reg) is in no window. |
+| D7-072 broken | 3 | confirmed | imprecise | The full and faithful embedding states that nothing present is lost; that coequalizers of equivalence relations are added is stated only as objects being pseudo-equivalence relations. |
+| D7-073 output | 3 | confirmed | imprecise | The reg/lex completion is named as a left adjoint into regular categories; its embedding of C is in no window (the full and faithful embedding is stated for C_ex). |
+| D7-073 preserved | 3 | confirmed | unsupported | The review's window is about kernel pairs; preservation of finite limits is stated only for the embedding into C_ex. |
+| D7-074 preserved | 3 | confirmed | imprecise | The adjunction (functors out determined by graph maps) is stated; that vertices and edges are kept is in no window. |
+| D7-086 input | 4 | confirmed | imprecise | The exact case is stated; the additive case is in no window. |
+| D7-088 output | 4 | confirmed | imprecise | The retract is stated; the additive decomposition X = Y (+) ker p is in no window. |
+| D7-090 description | 4 | confirmed | imprecise | The free groupoid by adjoining inverses is stated; the fundamental groupoid of the nerve is in no window, and Baez's groupoidification appears only as a cut fragment. |
+| D7-090 output | 4 | confirmed | imprecise | The free groupoid is stated; groupoid spans are in no window. |
+| D7-099 input | 4 | confirmed | unsupported | The review's receipt is a section heading; no window states the input family of algebras. |
+| D7-114 description | 5 | confirmed | imprecise | Lower central series and nilpotence are stated for groups; rings and algebras, and the quotient by a term of the series, are in no window. |
+| D7-114 input | 5 | confirmed | imprecise | The nilpotency class of a group is stated; rings and algebras are in no window. |
+| D7-119 name | 5 | confirmed | imprecise | Monotone and antitone Galois connections are named; the defining condition is in no window. |
+| D7-119 input | 5 | confirmed | imprecise | Two posets are stated; the relation that induces a connection, and the maps, are in no window. |
+| D7-122 name | 5 | confirmed | unsupported | A paper title names minimal Taylor algebras; no window states what a Taylor term is. |
+| D7-124 input | 5 | confirmed | unsupported | The review's receipt is a section heading; no window states that the input is a lattice term. |
+| D7-133 input | 6 | confirmed | imprecise | The windows treat Ore domains; a general Ore set S is only alluded to ("or more generally localization of a ring"). |
+| D7-139 preserved | 6 | confirmed | unsupported | The window is cut before it says what the global sections are; that they are R is in no window. |
+| D7-140 description | 6 | confirmed | imprecise | The maximal spectrum and the Nullstellensatz are named; the Gelfand spectrum is in no window. |
+| D7-140 preserved | 6 | confirmed | imprecise | The weak Nullstellensatz is named, not stated; the C*-algebra case is in no window. |
+
+### What the selection reaches
+
+In the blind sample, confirmed fields inside the selection flip at 11/25 = 44.0% (95% Wilson interval 26.7% to 62.9%); outside it, at 27/75 = 36.0% (95% Wilson interval 26.1% to 47.3%). Short or relationless quotes do not mark where the strict rule bites: the flips are claim parts no window states, which long quotes leave out as often as short ones.
+
+The selection holds 538 of the review's 1953 confirmed fields, and the blind sample read 75 more. The 1340 left unread would carry, at the outside rate, about 482 fields the strict rule does not confirm (349 to 634 at the interval's ends); they keep the review's grade here until a full re-read.
+
 ## Verdicts before and after
 
 Field counts by verdict: the review's grades, and the effective grades under the strict rule (the strict grade where a field was read again, the review's elsewhere).
 
-### D7 stubs (416 entries, 2496 fields, 134 read again)
+### D7 stubs (416 entries, 2496 fields, 286 read again)
 
 | | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
 | review | 1864 | 16 | 0 | 616 |
-| strict, effective | 1828 | 49 | 1 | 618 |
+| strict, effective | 1774 | 94 | 1 | 627 |
 
 ### Homes (20 entries, 120 fields, 11 read again)
 

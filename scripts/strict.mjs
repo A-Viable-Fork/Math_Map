@@ -60,6 +60,20 @@ async function sample() {
   console.log(`strict: drew ${items.length} items (frame ${JSON.stringify(sizes)}); wrote ${SAMPLE.slice(ROOT.length + 1)} and ${PACKET.slice(ROOT.length + 1)}`);
 }
 
+// Part B's selection [ruling: operator, 2026-11-13]: every confirmed field whose quote is under 60 characters or names no
+// relation. "Names no relation" is read mechanically: no receipt (quote or further receipt) holds a relational word or
+// symbol below; a Lean declaration header (def, abbrev, structure, class, or the excerpt's "-- name (line n)" comment)
+// counts as naming unless it carries an arrow or an equation past its type.
+const REL = /(\b(is|are|was|were|be|been|being|has|have|had|holds?|preserv\w*|maps?|sends?|takes?|gives?|giving|yields?|forms?|equals?|equivalent|iff|if|then|implies|correspond\w*|called|defined|defines?|admits?|exists?|commut\w*|satisf\w*|consists?|factors?|generat\w*|extends?|lifts?|becomes?|turns?|induces?|states?|classif\w*|decompos\w*|converts?|computes?|relates?|embeds?|identif\w*|reflects?|creates?|vanish\w*|agrees?|coincide|determin\w*|contains?|constructs?|obtain\w*|carr\w*|denoted|known as|named|lies|lie|fit|fits|split\w*|kill\w*|replac\w*|making|make|makes|ensur\w*|guarantee\w*|express\w*|measur\w*|assign\w*)\b|=|≅|≃|⟶|→|↦|↔|≤|≥|⊆|⊂|:=|\\to\b|\\mapsto|\\cong|\\simeq|\\le\b|\\leq|\\subseteq|⥤|⇒|\\Rightarrow|\\iff|≫|⊣|\\dashv|\\approxeq|\\colon)/i;
+const LEANHEAD = /^\s*(-- |def |abbrev |structure |class |noncomputable def |protected def |inductive )/;
+const relational = (q) => REL.test(q) && !(LEANHEAD.test(q) && !/[=→⟶↦⥤≃≅]/.test(q.replace(/^.*?:\s*Type.*$/, "")));
+export function sweepSelection(R = review()) {
+  return R.flatMap((g) => FIELDS.filter((f) => g.fields[f].verdict === "confirmed").filter((f) => {
+    const v = g.fields[f], qs = [v.quote, ...(v.more || []).map((m) => m.quote)];
+    return (v.quote || "").length < 60 || !qs.some(relational);
+  }).map((f) => `${g.id}.${f}`));
+}
+
 const HOMES = () => new Set(require("../mapfill/homes.js").map((h) => h.id));
 const wilson = (x, n) => { if (!n) return [0, 0]; const z = 1.96, p = x / n, d = 1 + (z * z) / n, c = (p + (z * z) / (2 * n)) / d, h = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / d; return [Math.max(0, c - h), Math.min(1, c + h)]; };
 const pct = (x) => `${(100 * x).toFixed(1)}%`;
@@ -144,15 +158,30 @@ function compare() {
       if (r.fields[f].verdict !== "confirmed") F.push(`sweep ${k}: the sweep re-reads confirmed fields; this one is ${r.fields[f].verdict}`);
       if (second.has(k)) F.push(`sweep ${k}: already read in the blind sample`);
       const named = new Set(Object.values(r.files));
-      checkGrade(`sweep ${k}`, g, F, (x) => named.has(x) || !!g.fetchedFiles?.includes(x));
+      // keep: the strict reader cites the review's own receipts for the part they state.
+      const gq = g.keep ? { ...g, quotes: [r.fields[f], ...(r.fields[f].more || [])].map((x) => ({ file: r.files[x.src], quote: x.quote })) } : g;
+      checkGrade(`sweep ${k}`, gq, F, (x) => named.has(x) || !!g.fetchedFiles?.includes(x));
       second.set(k, g.verdict); rows.push([k, r, f, g]);
     }
-    for (const k of SW.selected || []) if (!SW.grades[k] && !done.some((it) => `${it.entry}.${it.field}` === k)) F.push(`sweep ${k}: selected but not graded`);
+    // through: the sweep runs in review order and is committed in parts; every selected field up to that entry is graded.
+    const upto = SW.through ? R.findIndex((g) => g.id === SW.through) : R.length - 1;
+    if (upto < 0) F.push(`sweep: through names ${SW.through}, which is not in the review`);
+    const pos = Object.fromEntries(R.map((g, i) => [g.id, i]));
+    const selected = sweepSelection(R), inSample = new Set(done.map((it) => `${it.entry}.${it.field}`));
+    for (const k of selected) if (pos[k.split(".")[0]] <= upto && !SW.grades[k] && !inSample.has(k)) F.push(`sweep ${k}: selected but not graded`);
+    for (const k of Object.keys(SW.grades)) if (pos[k.split(".")[0]] > upto) F.push(`sweep ${k}: past the sweep's through (${SW.through})`);
+    for (const k of Object.keys(SW.grades)) if (!selected.includes(k)) F.push(`sweep ${k}: graded but not selected by the rule`);
     const ch = rows.filter(([, , , g]) => g.verdict !== "confirmed");
-    L.push(`Graded ${rows.length} of ${(SW.selected || []).length} selected (the rest were read in the blind sample). Not confirmed under the strict rule: ${ch.length} (${V.filter((v) => v !== "confirmed").map((v) => `${v} ${ch.filter(([, , , g]) => g.verdict === v).length}`).join(", ")}).`, "",
+    L.push(`${SW.through && upto < R.length - 1 ? `In progress, through ${SW.through} in review order: ` : ""}Graded ${rows.length} of the ${selected.filter((k) => pos[k.split(".")[0]] <= upto).length} selected fields so far (${selected.length} in all; those read in the blind sample keep their blind grade). Not confirmed under the strict rule: ${ch.length} (${V.filter((v) => v !== "confirmed").map((v) => `${v} ${ch.filter(([, , , g]) => g.verdict === v).length}`).join(", ")}).`, "",
       "| Field | Batch | Review | Strict | Reason |", "|---|---|---|---|---|");
     for (const [k, r, f, g] of ch) L.push(`| ${r.id} ${f} | ${r.batch} | confirmed | ${g.verdict} | ${cell(g.reason)} |`);
     L.push("");
+    // How well the selection targets the damage, read from the blind sample, and what it leaves unread.
+    const selSet = new Set(selected), cin = conf.filter((it) => selSet.has(`${it.entry}.${it.field}`)), cout = conf.filter((it) => !selSet.has(`${it.entry}.${it.field}`));
+    const allConf = R.reduce((n, g) => n + FIELDS.filter((f) => g.fields[f].verdict === "confirmed").length, 0), unsel = allConf - selected.length - cout.length;
+    const [lo, hi] = wilson(flip(cout), cout.length);
+    L.push("### What the selection reaches", "", `In the blind sample, confirmed fields inside the selection flip at ${rate(flip(cin), cin.length)}; outside it, at ${rate(flip(cout), cout.length)}. Short or relationless quotes do not mark where the strict rule bites: the flips are claim parts no window states, which long quotes leave out as often as short ones.`, "",
+      `The selection holds ${selected.length} of the review's ${allConf} confirmed fields, and the blind sample read ${cout.length} more. The ${unsel} left unread would carry, at the outside rate, about ${Math.round((unsel * flip(cout)) / cout.length)} fields the strict rule does not confirm (${Math.round(unsel * lo)} to ${Math.round(unsel * hi)} at the interval's ends); they keep the review's grade here until a full re-read.`, "");
   }
   // The verdict tables, before and after.
   const pop = (g) => (homes.has(g.id) ? "Homes" : "D7 stubs");

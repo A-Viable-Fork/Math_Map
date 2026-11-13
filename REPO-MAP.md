@@ -79,6 +79,7 @@
 | `audit/fill-review-recall-0_1.js` | the fill review's recalled expectations. |
 | `audit/grades-0_1.js` | the audit grades for audit/sample-0_1.json. |
 | `audit/strict/reading-0_2.js` | the strict reader's grades of the blind sample (audit/strict/sample-0_2.json), made from the packet (audit/strict/packet-0_2.md) and the excerpt files it names, without the review's grade, quote or note. |
+| `audit/strict/sweep-0_2.js` | the targeted sweep of the strict second reading: every confirmed field of the fill review whose quote is under 60 characters or names no relation (scripts/strict.mjs, sweepSelection), read again under the strict rule because the blind sample found the review's confirmed grades flip at more than 5%. |
 | `audit/targeted-0_1.js` | targeted receipts. |
 | `generation/2026-10-23-un-001/test-both.mjs` | the UN-001 round's test of both shapes for a logged effect, on the flows that found the gap. |
 | `mapfill/additions.js` | additions. |
@@ -1142,6 +1143,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `audit/strict/reading-0_2.js` | names | `audit/strict/sample-0_2.json` |
 | `audit/strict/reading-0_2.js` | names | `scripts/excerpt.mjs` |
 | `audit/strict/reading-0_2.js` | names | `scripts/strict.mjs` |
+| `audit/strict/sweep-0_2.js` | names | `audit/fill-review-0_1.js` |
+| `audit/strict/sweep-0_2.js` | names | `audit/strict/reading-0_2.js` |
+| `audit/strict/sweep-0_2.js` | names | `scripts/strict.mjs` |
 | `audit/targeted-0_1.js` | names | `audit/grades-0_1.js` |
 | `audit/targeted-0_1.js` | names | `lean/MathMap/StoneCech.lean` |
 | `audit/targeted-0_1.js` | names | `mapfill/formal.js` |
@@ -1978,6 +1982,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/STRICT-READING.md` | names | `audit/fill-review-0_1.js` |
 | `reports/STRICT-READING.md` | names | `audit/strict/reading-0_2.js` |
 | `reports/STRICT-READING.md` | names | `audit/strict/sample-0_2.json` |
+| `reports/STRICT-READING.md` | names | `audit/strict/sweep-0_2.js` |
 | `reports/STRICT-READING.md` | names | `scripts/audit.mjs` |
 | `reports/STRICT-READING.md` | names | `scripts/strict.mjs` |
 | `reports/TOPOLOGY.md` | names | `scripts/topology.mjs` |
@@ -2208,12 +2213,14 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/misalign.mjs` | names | `reports/MISALIGN.md` |
 | `scripts/strict.mjs` | imports | `audit/fill-review-0_1.js` |
 | `scripts/strict.mjs` | imports | `audit/strict/reading-0_2.js` |
+| `scripts/strict.mjs` | imports | `audit/strict/sweep-0_2.js` |
 | `scripts/strict.mjs` | imports | `mapfill/homes.js` |
 | `scripts/strict.mjs` | imports | `scripts/mathmap.mjs` |
 | `scripts/strict.mjs` | names | `audit/fill-review-0_1.js` |
 | `scripts/strict.mjs` | names | `audit/strict/packet-0_2.md` |
 | `scripts/strict.mjs` | names | `audit/strict/reading-0_2.js` |
 | `scripts/strict.mjs` | names | `audit/strict/sample-0_2.json` |
+| `scripts/strict.mjs` | names | `audit/strict/sweep-0_2.js` |
 | `scripts/strict.mjs` | names | `reports/STRICT-READING.md` |
 | `scripts/strict.mjs` | names | `scripts/audit.mjs` |
 | `scripts/topology.mjs` | imports | `scripts/compose.mjs` |
