@@ -508,6 +508,26 @@ const RECALL = [
   k("D8-036", 20, "Standard (Delaunay 1934)", "No point inside any circumcircle; dual to Voronoi; maximizes the minimum angle", "Point set", "Triangulation", "Convex hull; max-min angle", "Unstructured point set"),
   k("D8-227", 20, "Standard", "Cells of points nearest each site", "Sites", "Cells", "Nearest-site structure; dual to Delaunay", "Distances within cells"),
   k("D8-187", 20, "Standard (Ruppert 1995)", "Delaunay refinement inserting circumcentres and splitting encroached segments", "PSLG and angle bound", "Quality mesh", "Input geometry; angle bound", "Size optimality only up to a constant"),
+  // Batch 21: home groups 61 to 79 (mapfill/homes.js), one recall per group on its first entry, written 2026-11-13 before the batch's sources were fetched. Graded under the strict rule.
+  k("D8-085", 21, "Standard (Stone and Tukey 1942)", "n measures in R^n are bisected by one hyperplane; linear time in the plane (Lo, Matousek, Steiger)", "n measures in R^n", "Hyperplane", "Halving of each", "Everything else"),
+  k("D8-226", 21, "Standard", "Rips complexes at growing scale; persistent homology input", "Finite metric space", "Filtered complex", "Stability under Gromov-Hausdorff perturbation", "Exact geometry"),
+  k("D8-236", 21, "Standard", "Nerves of growing balls; nerve theorem gives the union's homotopy type in Euclidean space (convex balls), not in a general metric space", "Point cloud", "Filtered complex", "Homotopy type of the union (Euclidean)", "Cost"),
+  k("D8-131", 21, "Standard (Singh, Memoli, Carlsson 2007)", "Cover the filter's range, cluster preimages, take the nerve", "Point cloud, filter, cover", "Graph or complex", "Coarse shape", "Fine geometry"),
+  k("D8-148", 21, "Standard (Driscoll, Sarnak, Sleator, Tarjan 1989)", "All versions queryable, latest updatable", "Pointer structure", "Partially persistent structure", "Past versions", "Nothing; O(1) amortized for bounded in-degree"),
+  k("D8-142", 21, "Standard (Driscoll et al. 1989)", "Copy a node when its extra pointer fields fill", "Pointer structure", "Persistent version", "Past versions", "Space"),
+  k("D8-047", 21, "Standard", "Vertex per face, edge across each edge", "Plane graph", "Dual", "Cycles to cuts (bonds), spanning trees to complements", "Embedding independence"),
+  k("D8-134", 21, "Standard", "Vertex per edge, adjacent when consecutive on a face; 4-regular", "Plane graph", "Medial graph", "Dual has the same medial graph; Tutte polynomial link", "Vertex identity"),
+  k("D8-217", 21, "Standard", "Reverse every edge", "Digraph", "Transpose", "Strongly connected components", "Direction"),
+  k("D8-169", 21, "Standard", "Contract partition blocks", "Graph and partition", "Quotient graph", "Adjacency between blocks", "Internal structure"),
+  k("D8-162", 21, "Standard", "Join vertices at distance at most k", "Graph and k", "G^k", "Vertex set, connectivity", "Distances up to k"),
+  k("D8-196", 21, "Standard", "Vertex per clique including the empty one, edges between cliques differing by one vertex; a median graph", "Graph", "Simplex graph", "Clique structure", "Adjacency encoding"),
+  k("D8-140", 21, "Standard (Mycielski 1955)", "M(G) triangle-free with chromatic number one higher", "Graph", "M(G)", "Triangle-freeness; clique number when at least 2", "Chromatic number rises"),
+  k("D8-046", 21, "Standard (bipartite double cover)", "G x K2", "Graph", "Double cover", "Degrees; bipartite", "Odd cycles"),
+  k("D8-080", 21, "Standard (Ehrig; double pushout)", "Replace a match of L by R by a rule", "Host graph, rule, match", "Rewritten graph", "Context", "Matched part"),
+  k("D8-199", 21, "Unknown, as the fill records", "Unknown", "Unknown", "Unknown", "Unknown", "Unknown"),
+  k("D8-160", 21, "Standard (Valiant 1979)", "Counting reductions, parsimonious or Turing", "Instance of A", "Instances of B with recovery", "Counts", "Solution structure"),
+  k("D8-164", 21, "Standard (Crescenzi and others)", "Approximation-preserving reduction; APX-completeness under PTAS reductions", "Instance of A", "Instance of B and solution map", "1 + eps approximability", "Exact optimum"),
+  k("D7-240", 21, "Standard (Hilbert, Serre)", "sum dim M_n t^n, rational for finitely generated modules over polynomial rings", "Graded module", "Rational series", "Dimension, degree, multiplicity", "Module structure"),
 ];
 
 module.exports = { RECALL };
