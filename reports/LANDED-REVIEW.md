@@ -8,6 +8,8 @@ The strict rule [ruling: operator, 2026-11-13]: **confirmed** only when a quoted
 
 Graded: 50 of 993 entries in 2 batches. By domain: D2 50 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
 
+Recall committed, grades pending: batch 3 (D2-092, D2-093, D2-094, D2-095, D2-096, D2-097, D2-098, D2-099, D2-100, D2-101, D2-102, D2-104, D2-105, D2-106, D2-107, D2-108, D2-109, D2-111, D2-113, D2-114, D2-115, D2-119, D2-121, D2-122, D2-123).
+
 ## 1. Verdicts by field
 
 Each domain's fields, counted by verdict.
