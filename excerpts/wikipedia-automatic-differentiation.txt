@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Automatic differentiation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384758862
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 49f38d17eb409fcdc106e04633c1fe18e89efa66cc5234148289ea8748675d0b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a set of techniques to evaluate the [[partial derivative]] of a function specified by a computer program.
+
+* '''forward accumulation''' (also called '''bottom-up''', '''forward mode''', or '''tangent mode''')
+
+evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display="inline">x_1,x_2,\dots,x_n</math> a separate pass is therefore necessary
+
+The augmented algebra is the algebra of [[dual numbers]].
+
+partial derivatives of arbitrary order can be computed automatically, accurately to working precision

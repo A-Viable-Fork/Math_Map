@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Persistent data structure (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c9216199cac1714d5f08d3b8e2a214493228c6ea45690d6193260d3e4e08846a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified.
+
+Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per
+
+Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Schur decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 37819a0f90b51e7111410ac43cb375f83cb23071d3575ab26596351f9f76aacd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''.
+
+can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''.

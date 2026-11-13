@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Bob Coecke, Tobias Fritz, Robert W. Spekkens, A mathematical theory of resources, arXiv:1409.5531 (abstract page)
+URL: https://arxiv.org/abs/1409.5531
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d9b756110f30bc81d6b841ebb482f09effe259a3b63218f8bac977cfc48f27d9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In this vein, we identify a few general results concerning resource convertibility.
+
+which define the means by which the costly states and processes can be interconverted one to another.

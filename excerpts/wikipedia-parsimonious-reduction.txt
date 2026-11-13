@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Parsimonious reduction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1325874922
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 35deacba1a2e5d2f514dc8ed3886dc92a148d62f270f5d326883d40c291bc327
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions.
+
+Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s.

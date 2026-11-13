@@ -258,6 +258,13 @@ const CORRECTIONS = [
     fields: { description: "Applies y = sqrt(x), a variance-stabilizing transform for Poisson counts; Anscombe's variant 2 sqrt(x + 3/8) brings the variance near 1 for large means" },
     reason: "Fill review, batch 18: description graded imprecise. Anscombe's transform carries a factor 2, which sets the variance near 1; the landed fill wrote sqrt(x + 3/8).",
     receipts: [R("excerpts/wikipedia-anscombe.txt", ": <math>A:x \\mapsto 2 \\sqrt{x + \\tfrac{3}{8}} \\, </math>", "description")] },
+  { id: "D5-072", name: "Inversion transformation",
+    fields: { description: "Inversion in a circle with centre O and radius r: each point P other than O goes to the point P' on the ray from O through P with OP · OP' = r^2, the centre and the point at infinity changing places. Maps circles and lines to circles and lines and preserves angles." },
+    reason: "Fill review, batch 19: description graded imprecise. The fill wrote x to r^2 (x - c)/|x - c|^2, which drops the centre and holds only for c = 0; the source puts the inverse on the ray from the centre with OP · OP' = r^2. Spheres are dropped: no fetched window states the higher-dimensional case.",
+    receipts: [R("excerpts/wikipedia-inversive-geometry.txt", "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that", "description"),
+      R("excerpts/wikipedia-inversive-geometry.txt", ":<math>OP \\cdot OP^{\\prime} = r^2.</math>", "description"),
+      R("excerpts/wikipedia-inversive-geometry.txt", "with the center and the point at infinity changing positions", "description"),
+      R("excerpts/wikipedia-inversive-geometry.txt", "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves", "description")] },
 ];
 
 module.exports = { CORRECTIONS };

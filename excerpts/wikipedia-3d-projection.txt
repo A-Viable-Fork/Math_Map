@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, 3D projection (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381739094
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e9a4631cca4b94de705d79a0a90ae9f01ca61b5651e36b3bb1691432041b3efd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If the 3D perspective of an object should be preserved on a 2D surface, the transformation must include scaling and translation based on the object's relative position to the 2D surface. This process is called perspective projection.

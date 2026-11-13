@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Singular value decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c755d3892f0eb78ab576ea9054d48dac8fffba58ded0b61033cd38eb30be16e1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the singular value decomposition of an <math>m \times n</math> complex matrix {{tmath|\mathbf M}} is a factorization of the form {{tmath|\mathbf{M} {{=}} \mathbf{U} \mathbf{\Sigma} \mathbf{V}^*}}, where {{tmath|\mathbf U}} is an {{tmath|m \times m}} complex [[unitary matrix]]
+
+<math>\mathbf \Sigma</math> is an <math>m \times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\mathbf V}} is an <math>n \times n</math> complex unitary matrix
+
+The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\mathbf{M} {{=}} \mathbf{U}_r \mathbf{\Sigma}_r \mathbf{V}_r^*}}, in which {{tmath|\mathbf{\Sigma}_r}} is an {{tmath|r \times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal.
+
+The [[#Compact SVD|compact SVD]] eliminates the rows and columns from {{tmath|\mathbf \Sigma}} which consist entirely of zeros, and also the superfluous corresponding columns of {{tmath|\mathbf U}} and rows of {{tmath|\mathbf{V}^*}}:
+
+the [[Rank of a matrix|rank]] of {{tmath|\mathbf M}} equals the number of non-zero singular values
+
+This is known as the '''[[Low-rank approximation|Eckart–Young theorem]]'''
+
+its singular value decomposition is unique up to multiplication of any column of {{tmath|\mathbf U}} and the corresponding column of {{tmath|\mathbf V}} by an arbitrary phase factor.
+
+A singular value {{tmath|\sigma}} which appears among them {{tmath|k}} times has a {{tmath|k}}-dimensional subspace of corresponding left-singular vectors.

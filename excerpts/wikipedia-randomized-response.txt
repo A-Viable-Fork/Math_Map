@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Randomized response (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1297027451
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a2c8e84af81f270b6832700833c505fcd57a15c4e3a1de271cf8d3602be6c857
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Randomised response''' is a research method used in [[Survey research|structured survey interview]].
+
+They are then instructed to  answer "yes" if the coin comes up tails, and truthfully, if it comes up heads.
+
+So whatever proportion of the group said "no", the true number who did not have sex with a prostitute is double that
+
+the randomized response technique allows the subject to credibly say that they had not been trut

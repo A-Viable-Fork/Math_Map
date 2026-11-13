@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Linear-fractional programming (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1333351925
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 5f1643272dba9f836975b7d65874465a64dee5d4b0833185130712e3fdf3d198
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.
+
+A solution <math>\mathbf{x}</math> to the original linear-fractional program can be translated to a solution of the transformed linear program via the equalities

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Additive noise differential privacy mechanisms (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383227811
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f5e895a33c13cd6e8a60bcbea3ca213879730200e8c36335f86a193c5b60767b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+: <math>\mathcal{M}_\mathrm{Lap}(x,f,\epsilon) = f(x) + \mathrm{Lap}\left(\mu = 0, b = \frac{\Delta f}{\epsilon}\right),</math>
+
+where <math>\mu</math> is the expectation of the Laplace distribution and <math>b</math> is the scale parameter.
+
+To argue that the mechanism satisfies <math>\epsilon</math>-differential privacy
+
+: <math>\Delta f=\max | f(x)-f(y) |,</math>

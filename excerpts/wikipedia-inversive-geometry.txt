@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Inversive geometry (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383555555
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 345c79b041c758462779965a66881f160b769d42c3b77c95495ccd462d856792
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves
+
+the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that
+
+:<math>OP \cdot OP^{\prime} = r^2.</math>
+
+Inversion leaves the measure of angles unaltered, but reverses the orientation of oriented angles.
+
+with the center and the point at infinity changing positions
+
+*A circle that passes through the center ''O'' of the reference circle inverts to a line not passing through ''O''
+
+<math>x \mapsto R^2 \frac {x} {|x|^2}

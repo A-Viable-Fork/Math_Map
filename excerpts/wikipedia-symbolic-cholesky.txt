@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Symbolic Cholesky decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369863060
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: b414eb646a60487de0618a8ebe05849a025a044bcb03999c55aebc59367a0545
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]
+
+be a sparse symmetric positive definite matrix with elements from a field
+
+In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work.

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Amplitude amplification (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1346150076
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 7b496ac0985e9ad0bad92b7570dc3dd8ac05efc4a52db4a1d866006ac6d46822
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Amplitude amplification''' is a technique in [[quantum computing]] that generalizes the idea behind [[Grover's algorithm|Grover's search algorithm]], and gives rise to a family of [[quantum algorithm]]s.
+
+It was discovered by [[Gilles Brassard]] and [[Peter Høyer]] in 1997,
+
+= \left\lfloor\frac{\pi}{4} \sqrt{\frac{N}{G}}\right\rfloor = O(\sqrt{N}).

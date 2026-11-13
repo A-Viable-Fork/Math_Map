@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Quotient graph (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1299226895
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: acd61db79a009147b0405fde4e89ce33b75e2046b11257b38f0499afefbeb4b5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Graph power (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1335625130
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 85950ca2b137aa76f7d68f6b5e44abe11fa65669fe2480e65041b174d9e31e4d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}.

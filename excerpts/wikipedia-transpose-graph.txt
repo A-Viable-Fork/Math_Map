@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Transpose graph (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1116542750
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ae640979a750c516c6929352863c75208841bf473bff5a7e301b38c5a410926d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}.
+
+An example of this is [[Kosaraju's algorithm]] for [[strongly connected component]]s, which applies [[depth-first search]] twice, once to the given graph and a second time to its reversal.

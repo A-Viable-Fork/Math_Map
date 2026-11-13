@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Tucker decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1293216395
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 50385ed54bb0e4b3954e6c1b0b3dd4f4c4796c260b34acfc50485d6ba7a81c0a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor.
+
+Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>.
