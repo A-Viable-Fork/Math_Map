@@ -487,6 +487,27 @@ const RECALL = [
   k("D8-117", 19, "Standard", "Symmetric A = L D L^T, L unit lower triangular, D diagonal (block diagonal with Bunch-Kaufman pivoting)", "Symmetric matrix", "L and D", "Inertia (Sylvester), the matrix", "Nothing; no square roots"),
   k("D8-209", 19, "Standard (sparse direct methods)", "Nonzero pattern of the Cholesky factor via the elimination tree, before numerics", "Pattern and ordering", "Pattern of L", "Structure", "Values"),
   k("D8-106", 19, "Standard (Johnson and Lindenstrauss 1984)", "Random linear map to O(log n / eps^2) dimensions preserving pairwise distances within 1 +- eps", "n points in R^d", "Points in R^k", "Pairwise distances approximately", "Exact geometry"),
+  // Batch 20: home groups 41 to 60 (mapfill/homes.js), one recall per group on its first entry, written 2026-11-13 before the batch's sources were fetched. Graded under the strict rule.
+  k("D8-171", 20, "Standard", "Multiply by a random Gaussian, sign or sparse matrix to k dimensions", "Points in R^d", "Points in R^k", "Pairwise distances approximately (JL)", "Exact geometry"),
+  k("D8-205", 20, "Standard (randomized numerical linear algebra)", "S with i.i.d. sub-Gaussian entries, an oblivious subspace embedding with O(d/eps^2) rows", "Matrix A", "S A", "Norms on the column space within 1 +- eps", "Sparsity; exact values"),
+  k("D8-222", 20, "Standard", "Uniform row sampling with rescaling", "Matrix", "Row sample", "Approximation when coherence is low", "Guarantees for high coherence"),
+  k("D8-120", 20, "Standard (Derezinski, Liang, Liao, Mahoney 2021)", "Leverage score sparsified embeddings: sparse sketches placed by leverage scores", "Tall matrix", "Sketch", "Subspace embedding", "Exactness"),
+  k("D8-104", 20, "Standard (Reed, Smith, Vetta 2004)", "Grow the instance, compress a k+1 solution to size k at each step", "Parameterized instance", "Solution or no", "Correctness", "Running time exponential in k"),
+  k("D8-058", 20, "Standard", "Difference quotients on a grid give an algebraic system", "Differential equation and grid", "Algebraic system", "Consistency", "Truncation error; stability to check (Lax)"),
+  k("D8-061", 20, "Standard (dual numbers)", "Forward-mode AD propagating tangents with values", "Program", "Program with directional derivative", "Exact derivatives", "Cost per input direction"),
+  k("D8-088", 20, "Standard", "Lift a simple root or coprime factorization mod p to mod p^k", "Polynomial with simple root mod p", "Lift mod p^k", "Factorization", "Nothing"),
+  k("D8-081", 20, "Standard (Buchberger; FGLM)", "Replace generators by a Groebner basis or change order", "Generators and order", "Groebner basis", "The ideal", "Original generators"),
+  k("D8-070", 20, "Standard (Charnes-Cooper 1962; Dinkelbach 1967)", "Linear-fractional program to LP by variable change, or parametric search", "Ratio objective", "LP or parametric problem", "Optima", "Ratio form"),
+  k("D8-124", 20, "Standard", "Drop integrality", "Integer program", "Linear program", "Bound on the optimum", "Integrality gap"),
+  k("D8-181", 20, "Standard (Sherali and Adams 1990)", "Multiply constraints by bound factors and linearize; hierarchy converging to the hull", "MIP or polynomial program", "Lifted LP", "Validity", "Size"),
+  k("D8-111", 20, "Standard (Dwork, McSherry, Nissim, Smith 2006)", "Add Laplace noise of scale Delta f / eps", "Query and dataset", "Noisy answer", "eps-differential privacy, unbiasedness", "Exact answer"),
+  k("D8-174", 20, "Standard (Warner 1965)", "Truthful with probability p, random otherwise", "Sensitive bit", "Randomized bit", "Population frequency estimable; local DP", "Individual answer"),
+  k("D8-005", 20, "Standard (Brassard, Hoyer, Mosca, Tapp)", "Generalized Grover: O(1/sqrt(a)) iterations amplify success probability a", "Algorithm with success probability a", "Amplified algorithm", "Unitarity", "Quadratic speedup is a gain, not a loss"),
+  k("D8-165", 20, "Standard (Farhi, Goldstone, Gutmann 2014)", "Alternate cost and mixer evolutions with angles", "Cost function and depth p", "Parameterized state", "Expected cost", "Exactness"),
+  k("D8-168", 20, "Standard (Kitaev)", "Controlled powers of U and inverse QFT estimate the eigenphase", "Unitary and eigenstate", "Phase estimate", "Eigenstate", "Superposition"),
+  k("D8-036", 20, "Standard (Delaunay 1934)", "No point inside any circumcircle; dual to Voronoi; maximizes the minimum angle", "Point set", "Triangulation", "Convex hull; max-min angle", "Unstructured point set"),
+  k("D8-227", 20, "Standard", "Cells of points nearest each site", "Sites", "Cells", "Nearest-site structure; dual to Delaunay", "Distances within cells"),
+  k("D8-187", 20, "Standard (Ruppert 1995)", "Delaunay refinement inserting circumcentres and splitting encroached segments", "PSLG and angle bound", "Quality mesh", "Input geometry; angle bound", "Size optimality only up to a constant"),
 ];
 
 module.exports = { RECALL };
