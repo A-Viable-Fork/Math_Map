@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Principal component analysis (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383885717
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 554eddb8f42f4cc1d301b4708703ae8ffe0c5b029bbeb6f5b1691de5091f2da7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The data are [[linear map|linearly transformed]] onto a new [[coordinate system]] such that the directions (principal components) capturing the largest variation in the data can be easily identified.
+
+the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix.
+
+The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data.
+
+PCA was invented in 1901 by [[Karl Pearson]]
+
+we must first center the values of each variable in the dataset on 0 by subtracting the mean

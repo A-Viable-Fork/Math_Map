@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Shear mapping (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374397906
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3579fc97d79b3edf5f7c313d46697ea2e3e03d7bba167a46a14e8a3ef6ca86c7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction.
+
+a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''.
+
+Applying a shear map to a set of points of the plane will change all [[angle]]s between them (except [[straight angle]]s), and the length of any [[line segment]] that is not parallel to the direction of displacement.
+
+that preserves the {{mvar|n}}-dimensional [[measure (mathematics)|measure]] (hypervolume) of any set.

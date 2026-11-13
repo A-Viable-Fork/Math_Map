@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Jordan normal form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374766194
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 45632f5f9790c588490e74aa277d1cc77397a971d5e7c19cbe2b61d08ac8a3fe
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]
+
+:<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>
+
+Then a basis with respect to which the matrix representing the operator has the required form exists [[if and only if]] all [[eigenvalue]]s of the operator lie in ''K''
+
+and it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>.
+
+* The sum of the sizes of all Jordan blocks corresponding to an eigenvalue ''λ''<sub>''i''</sub> is its [[algebraic multiplicity]].

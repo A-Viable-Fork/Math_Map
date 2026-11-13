@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Translation (geometry) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3e2a89bfc36f5da003e2c0001056691730e413b8b526255b827962b309eab207
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]].
+
+A translation is an isometry that displaces the original figure according to a direction, a sense, and a length ([[vector (mathematics)|vector]]). Translations preserve the direction and length of line segments, and the amplitudes of angles.
+
+then the translation function <math>T_{\mathbf{v}} </math> will work as <math> T_{\mathbf{v}}(\mathbf{p})=\mathbf{p}+\mathbf{v}</math>.
+
+so that the orientation of the body in space is unaltered
+
+The [[Shift operator|translation operator]] turns a function of the original position
+
+A translation is an [[affine transformation]] with ''no'' [[fixed point (mathematics)|fixed point]]s.

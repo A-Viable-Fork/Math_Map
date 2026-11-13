@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Cholesky decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: fad54280d12cdad3ba2bfe7e11182151764f7ce862cb50092de4bf511f608ec8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A closely related variant of the classical Cholesky decomposition is the LDL decomposition, also known as Bunch-Kaufman factorization
+
+<math display=block>\mathbf{A} = \mathbf{L D L}^*,</math>
+
+where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix.
+
+For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}

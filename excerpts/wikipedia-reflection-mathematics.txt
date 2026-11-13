@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Reflection (mathematics) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380109823
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cd9c333a5fba20978cbf7ab5a9f5696c183fe5fda2980b8e58e2344ff2c3337a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s
+
+The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection.
+
+A reflection is an [[involution (mathematics)|involution]]: when applied twice in succession, every point returns to its original location
+
+The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1

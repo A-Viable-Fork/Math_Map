@@ -25477,6 +25477,1131 @@
    "sources": {
     "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1295299437"
    }
+  },
+  {
+   "id": "D5-072",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-inversive-geometry.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that",
+     "note": "The inverse lies on the ray from the centre, at c + r^2 (x - c)/|x - c|^2; the fill's r^2 (x - c)/|x - c|^2 drops the c, right only for centre 0 (the window's x to R^2 x/|x|^2). Generalized circles are stated; spheres are in no window.",
+     "more": [
+      {
+       "src": "i",
+       "quote": ":<math>OP \\cdot OP^{\\prime} = r^2.</math>"
+      },
+      {
+       "src": "i",
+       "quote": "<math>x \\mapsto R^2 \\frac {x} {|x|^2}"
+      },
+      {
+       "src": "i",
+       "quote": "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "with the center and the point at infinity changing positions",
+     "note": "Points of the plane, the centre going to the point at infinity; space is in no window."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves",
+     "more": [
+      {
+       "src": "i",
+       "quote": "Inversion leaves the measure of angles unaltered, but reverses the orientation of oriented angles."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "*A circle that passes through the center ''O'' of the reference circle inverts to a line not passing through ''O''",
+     "note": "Lines and circles exchange through the centre; distances are in no window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383555555"
+   }
+  },
+  {
+   "id": "D5-074",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-isometry.txt",
+    "e": "excerpts/wikipedia-euclidean-group.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s",
+     "more": [
+      {
+       "src": "e",
+       "quote": "The Euclidean group  {{math|E(''n'')}} comprises all [[translation (geometry)|translations]], [[rotation (mathematics)|rotations]], and [[reflection (mathematics)|reflections]] of <math>\\mathbb{E}^n</math>; and arbitrary finite combinations of them."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Let  <math>X</math> and <math>Y</math> be [[metric space]]s with metrics"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": ":<math>d_X(a,b)=d_Y\\!\\left(f(a),f(b)\\right).</math>",
+     "note": "Distances are stated; angles are in no window (a general metric space has none)."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that position is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384702919",
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371653962"
+   }
+  },
+  {
+   "id": "D6-029",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-homothety.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "<math display=\"block\">\\mathbf x'=\\mathbf s + k(\\mathbf x -\\mathbf s).</math>"
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''",
+     "note": "Points of an affine space are stated; functions are in no window."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "<math display=\"block\">\\mathbf x'=\\mathbf s + k(\\mathbf x -\\mathbf s).</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* A ''line'' is mapped onto a parallel line. Hence: ''angles'' remain unchanged.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "* The ''ratio of two line segments'' is preserved."
+      },
+      {
+       "src": "h",
+       "quote": "Both properties show that a homothety is a ''[[Similarity (geometry)|similarity]]''."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "In Euclidean geometry, a homothety of ratio <math>k</math> multiplies ''distances'' between points by {{tmath|\\vert k \\vert}}, ''areas'' by <math>k^2</math>",
+     "note": "Distances scale by |k|, not by k."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D8-188"
+   ],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1356815044"
+   }
+  },
+  {
+   "id": "D6-119",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-reflection-mathematics.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s",
+     "note": "Orientation reversal is stated as determinant -1.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "A reflection is an [[involution (mathematics)|involution]]: when applied twice in succession, every point returns to its original location"
+      },
+      {
+       "src": "f",
+       "quote": "The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s",
+     "note": "An isometry, so distances, is stated; angles and size are in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1",
+     "note": "Determinant -1: orientation is reversed."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D8-180"
+   ],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380109823"
+   }
+  },
+  {
+   "id": "D6-145",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-translation-geometry.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "then the translation function <math>T_{\\mathbf{v}} </math> will work as <math> T_{\\mathbf{v}}(\\mathbf{p})=\\mathbf{p}+\\mathbf{v}</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]].",
+     "more": [
+      {
+       "src": "t",
+       "quote": "The [[Shift operator|translation operator]] turns a function of the original position"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A translation is an isometry that displaces the original figure according to a direction, a sense, and a length ([[vector (mathematics)|vector]]). Translations preserve the direction and length of line segments, and the amplitudes of angles.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "so that the orientation of the body in space is unaltered"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A translation is an [[affine transformation]] with ''no'' [[fixed point (mathematics)|fixed point]]s.",
+     "note": "No fixed point: every point moves."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D8-216"
+   ],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508"
+   }
+  },
+  {
+   "id": "D8-193",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-shear-mapping.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "that preserves the {{mvar|n}}-dimensional [[measure (mathematics)|measure]] (hypervolume) of any set.",
+     "note": "Measure, so area, is stated; determinant 1, parallelism and collinearity are in no window (the map is only named affine)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Applying a shear map to a set of points of the plane will change all [[angle]]s between them (except [[straight angle]]s), and the length of any [[line segment]] that is not parallel to the direction of displacement."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374397906"
+   }
+  },
+  {
+   "id": "D8-150",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-3d-projection.txt",
+    "c": "excerpts/wikipedia-pinhole-camera-model.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If the 3D perspective of an object should be preserved on a 2D surface, the transformation must include scaling and translation based on the object's relative position to the 2D surface. This process is called perspective projection."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": ": <math> \\frac{-y_1}{f} = \\frac{x_1}{x_3} </math> or <math> y_1 = -\\frac{f \\, x_1}{x_3} </math>",
+     "note": "The window gives y_1 = -f x_1/x_3, the image plane behind the pinhole; the fill's (f x/z, f y/z) is the other sign convention, the plane in front. That the map is projective is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* A point '''P''' somewhere in the world at coordinate <math> (x_1, x_2, x_3) </math> relative to the axes X1, X2, and X3."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* The projection of point '''P''' onto the image plane, denoted '''Q'''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Neither collinearity nor cross-ratio is in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states what perspective projection loses."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381739094",
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364592852"
+   }
+  },
+  {
+   "id": "D8-145",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-projection-linear-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "o",
+     "quote": "* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix",
+     "note": "Idempotent and self-adjoint are stated; projecting onto a subspace along its orthogonal complement is in no window.",
+     "more": [
+      {
+       "src": "o",
+       "quote": "A projection is orthogonal if and only if it is [[self-adjoint operator|self-adjoint]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "o",
+     "quote": "Suppose the [[Linear subspace|subspace]]s <math>U</math> and <math>V</math> are the [[Image (mathematics)|image]] and [[Kernel (linear algebra)|kernel]] of <math>P</math> respectively.",
+     "note": "The subspace appears only as the image of P; the input vector and subspace as such are in no window."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states that Px is the nearest point of the subspace."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "o",
+     "quote": "It leaves its [[image (mathematics)|image]] unchanged.",
+     "note": "Components in the image are kept; best approximation is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the orthogonal components are killed."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374765997"
+   }
+  },
+  {
+   "id": "D5-148",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-y-delta-transform.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]].",
+     "more": [
+      {
+       "src": "y",
+       "quote": "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "note": "Terminal equivalence is stated; that the planarity class is kept is in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The transform preserves the number of edges in a graph, but not the number of vertices or the number of [[cycle (graph theory)|cycle]]s.",
+     "note": "The vertex count changes: the internal node goes."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D6-158",
+    "D8-233"
+   ],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226"
+   }
+  },
+  {
+   "id": "D8-235",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-y-delta-transform.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "R_1 &= \\frac{R_\\text{b}R_\\text{c}}{R_\\text{a} + R_\\text{b} + R_\\text{c}} \\\\[3pt]",
+     "note": "The Delta-Y direction of the same transform: the star resistances from the triangle's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "R_1 &= \\frac{R_\\text{b}R_\\text{c}}{R_\\text{a} + R_\\text{b} + R_\\text{c}} \\\\[3pt]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "note": "Networks are stated (\"and vice versa\"); graphs with a triangle are in no window."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the triangle's edges are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226"
+   }
+  },
+  {
+   "id": "D8-197",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-singular-value-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]",
+     "more": [
+      {
+       "src": "s",
+       "quote": "<math>\\mathbf \\Sigma</math> is an <math>m \\times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\\mathbf V}} is an <math>n \\times n</math> complex unitary matrix"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]",
+     "more": [
+      {
+       "src": "s",
+       "quote": "<math>\\mathbf \\Sigma</math> is an <math>m \\times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\\mathbf V}} is an <math>n \\times n</math> complex unitary matrix"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the [[Rank of a matrix|rank]] of {{tmath|\\mathbf M}} equals the number of non-zero singular values",
+     "note": "Rank and the Eckart-Young theorem are stated; the operator and Frobenius norms are in no window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "This is known as the '''[[Low-rank approximation|Eckart–Young theorem]]'''"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "its singular value decomposition is unique up to multiplication of any column of {{tmath|\\mathbf U}} and the corresponding column of {{tmath|\\mathbf V}} by an arbitrary phase factor.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A singular value {{tmath|\\sigma}} which appears among them {{tmath|k}} times has a {{tmath|k}}-dimensional subspace of corresponding left-singular vectors."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796"
+   }
+  },
+  {
+   "id": "D8-028",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-singular-value-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "the [[Rank of a matrix|rank]] of {{tmath|\\mathbf M}} equals the number of non-zero singular values"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "the [[Rank of a matrix|rank]] of {{tmath|\\mathbf M}} equals the number of non-zero singular values"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The [[#Compact SVD|compact SVD]] eliminates the rows and columns from {{tmath|\\mathbf \\Sigma}} which consist entirely of zeros, and also the superfluous corresponding columns of {{tmath|\\mathbf U}} and rows of {{tmath|\\mathbf{V}^*}}:"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796"
+   }
+  },
+  {
+   "id": "D8-091",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hosvd.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "which is the classic algorithm that is currently referred in the literature as the '''Tucker''' or the '''HOSVD'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The second equality is because the <math>{\\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display=\"block\">\\mathcal{S} := \\mathcal{A} \\times ({\\bf U}_1^H, {\\bf U}_2^H, \\ldots, {\\bf U}_M^H).</math>",
+     "more": [
+      {
+       "src": "h",
+       "quote": "a set of SVDs on mode-flattenings without making assumptions about the structure of the core tensor or implying a rank decomposition."
+      },
+      {
+       "src": "h",
+       "quote": "[[Lieven De Lathauwer |De Lathauwer]] ''et al.''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The second equality is because the <math>{\\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display=\"block\">\\mathcal{S} := \\mathcal{A} \\times ({\\bf U}_1^H, {\\bf U}_2^H, \\ldots, {\\bf U}_M^H).</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The second equality is because the <math>{\\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display=\"block\">\\mathcal{S} := \\mathcal{A} \\times ({\\bf U}_1^H, {\\bf U}_2^H, \\ldots, {\\bf U}_M^H).</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "The compact M-mode SVD(HOSVD) is a rank-revealing decomposition in the sense that the dimensions of its core tensor correspond with the components of the multilinear rank of the tensor.",
+     "note": "Multilinear rank is stated; that the decomposition reproduces the tensor exactly is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the core is all-orthogonal rather than diagonal; one says the algorithm assumes nothing of its structure."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381415711"
+   }
+  },
+  {
+   "id": "D8-219",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-tucker-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the multilinear subspace structure is kept."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>.",
+     "note": "Inexactness under truncation is stated; non-uniqueness (rotational freedom) is in no window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1293216395"
+   }
+  },
+  {
+   "id": "D8-163",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-principal-component-analysis.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The data are [[linear map|linearly transformed]] onto a new [[coordinate system]] such that the directions (principal components) capturing the largest variation in the data can be easily identified."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix."
+      },
+      {
+       "src": "p",
+       "quote": "we must first center the values of each variable in the dataset on 0 by subtracting the mean"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix.",
+     "note": "A data matrix is stated; its layout (n samples, p features) is in no window."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix.",
+     "note": "The principal components are stated; scores are in no window."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data.",
+     "note": "Maximal variance of the projected data is stated; the Euclidean geometry of the projection is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what the discarded directions or nonlinear structure lose."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383885717"
+   }
+  },
+  {
+   "id": "D8-077",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-schur-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the original bases are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233"
+   }
+  },
+  {
+   "id": "D8-107",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "j": "excerpts/wikipedia-jordan-normal-form.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]",
+     "note": "The window's condition (all eigenvalues in K) is weaker than the fill's algebraically closed field.",
+     "more": [
+      {
+       "src": "j",
+       "quote": ":<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>"
+      },
+      {
+       "src": "j",
+       "quote": "Then a basis with respect to which the matrix representing the operator has the required form exists [[if and only if]] all [[eigenvalue]]s of the operator lie in ''K''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": ":<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]",
+     "more": [
+      {
+       "src": "j",
+       "quote": "and it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>."
+      },
+      {
+       "src": "j",
+       "quote": "* The sum of the sizes of all Jordan blocks corresponding to an eigenvalue ''λ''<sub>''i''</sub> is its [[algebraic multiplicity]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the form is numerically unstable or discontinuous."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374766194"
+   }
+  },
+  {
+   "id": "D8-117",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cholesky-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix.",
+     "note": "L unit lower triangular and D diagonal are stated; the block diagonal form under pivoting is in no window (Bunch-Kaufman is only named).",
+     "more": [
+      {
+       "src": "c",
+       "quote": "<math display=block>\\mathbf{A} = \\mathbf{L D L}^*,</math>"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "<math display=block>\\mathbf{A} = \\mathbf{L D L}^*,</math>",
+     "note": "The windows write A = LDL* without stating the hypothesis on A (symmetric) the field gives."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "<math display=block>\\mathbf{A} = \\mathbf{L D L}^*,</math>",
+     "note": "The matrix is reproduced; inertia (Sylvester) is in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}",
+     "note": "Square-root free, and exact."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196"
+   }
+  },
+  {
+   "id": "D8-209",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-symbolic-cholesky.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]",
+     "note": "The nonzero pattern before numerics is stated; the elimination tree and fill-in are in no window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "be a sparse symmetric positive definite matrix with elements from a field",
+     "note": "A sparse symmetric positive definite matrix is stated; the ordering is in no window."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]",
+     "note": "The pattern of L is stated; the elimination tree is in no window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work.",
+     "note": "Computed before any numerical work."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369863060"
+   }
+  },
+  {
+   "id": "D8-106",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "j": "excerpts/wikipedia-johnson-lindenstrauss-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": "Given <math>0 < \\varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\\mathbb{R}^n</math> , and an integer <math>k > 8(\\ln N)/\\varepsilon^2</math>,",
+     "note": "The dimension bound and the random construction are stated; the window bounds squared distances within 1 +- eps, not distances.",
+     "more": [
+      {
+       "src": "j",
+       "quote": ": <math>(1-\\varepsilon)\\|u-v\\|^2 \\leq \\|f(u) - f(v)\\|^2 \\leq (1+\\varepsilon)\\|u-v\\|^2</math>"
+      },
+      {
+       "src": "j",
+       "quote": "To obtain the projection algorithmically, it suffices [[with high probability]] to repeatedly sample orthogonal projection matrices at random."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "Given <math>0 < \\varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\\mathbb{R}^n</math> , and an integer <math>k > 8(\\ln N)/\\varepsilon^2</math>,"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "there exists a linear function <math>f: \\mathbb{R}^n \\rightarrow \\mathbb{R}^k</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": ": <math>(1-\\varepsilon)\\|u-v\\|^2 \\leq \\|f(u) - f(v)\\|^2 \\leq (1+\\varepsilon)\\|u-v\\|^2</math>",
+     "note": "The window bounds squared distances by 1 +- eps; the field says distances."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": "concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]].",
+     "note": "The drop in dimension is stated; that exact geometry is lost is in no window."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380715096"
+   }
   }
  ]
 }

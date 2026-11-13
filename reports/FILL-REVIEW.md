@@ -4,7 +4,9 @@
 
 The authored fills (origin fill, tier authored: written from memory, never reviewed) graded field by field against sources, in batches of 25: the D7 name-only stubs in id order, then the missing homes (one grade per home, on its first entry). Sources in order of preference: Mathlib at the pin, the nLab, Wikipedia at a pinned revision, arXiv. Every confirmed, imprecise or wrong grade quotes a verbatim window of an excerpt file (`excerpts/`), checked by `scripts/mathmap.mjs --check`. **confirmed**: the source states the field's claim; **imprecise**: right idea, a detail wrong; **wrong**: the source contradicts it; **unsupported**: no source found that settles it. A confirmed field may carry a note naming a secondary claim no fetched source settled. Before each batch's sources were read, the reviewer wrote down what each field should say (`audit/fill-review-recall-0_1.js`, recalled: a lead, never evidence); a recall the source contradicted is counted, as a reading of how far fills written the same way can be trusted.
 
-Reviewed: 416 of 416 D7 stubs, 20 of 79 homes; 436 entries in 18 batches.
+Batches 19 and later are graded under the strict rule [ruling: operator, 2026-11-13]: confirmed only when the quoted windows state every part of the field's claim, not merely name the object; a part no window states makes the field imprecise or unsupported, and the note says which. Batches 1 to 18 were graded under the earlier rule, which let a confirmed grade carry a note naming an unsettled part; `reports/STRICT-READING.md` reads them again under the strict rule, beside these grades.
+
+Reviewed: 416 of 416 D7 stubs, 40 of 79 homes; 456 entries in 19 batches.
 
 ## 1. Verdicts by field
 
@@ -22,17 +24,17 @@ Each population's fields, counted by verdict. The domain is the reviewed entry's
 | broken | 125 | 4 | 0 | 287 |
 | **all** | 1864 | 16 | 0 | 616 |
 
-### Homes (20 entries)
+### Homes (40 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 16 | 0 | 0 | 4 |
-| description | 17 | 1 | 0 | 2 |
-| input | 16 | 0 | 0 | 4 |
-| output | 16 | 1 | 0 | 3 |
-| preserved | 16 | 0 | 0 | 4 |
-| broken | 8 | 0 | 1 | 11 |
-| **all** | 89 | 2 | 1 | 28 |
+| name | 36 | 0 | 0 | 4 |
+| description | 31 | 7 | 0 | 2 |
+| input | 29 | 7 | 0 | 4 |
+| output | 33 | 3 | 0 | 4 |
+| preserved | 24 | 10 | 0 | 6 |
+| broken | 16 | 4 | 1 | 19 |
+| **all** | 169 | 31 | 1 | 39 |
 
 ### Homes, D2 (7 entries)
 
@@ -70,29 +72,41 @@ Each population's fields, counted by verdict. The domain is the reviewed entry's
 | broken | 0 | 0 | 0 | 1 |
 | **all** | 5 | 0 | 0 | 1 |
 
-### Homes, D5 (1 entries)
+### Homes, D5 (4 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 1 | 0 | 0 | 0 |
-| description | 1 | 0 | 0 | 0 |
-| input | 1 | 0 | 0 | 0 |
-| output | 1 | 0 | 0 | 0 |
-| preserved | 1 | 0 | 0 | 0 |
-| broken | 1 | 0 | 0 | 0 |
-| **all** | 6 | 0 | 0 | 0 |
+| name | 4 | 0 | 0 | 0 |
+| description | 3 | 1 | 0 | 0 |
+| input | 3 | 1 | 0 | 0 |
+| output | 4 | 0 | 0 | 0 |
+| preserved | 2 | 2 | 0 | 0 |
+| broken | 2 | 1 | 0 | 1 |
+| **all** | 18 | 5 | 0 | 1 |
 
-### Homes, D8 (8 entries)
+### Homes, D6 (3 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 5 | 0 | 0 | 3 |
-| description | 5 | 1 | 0 | 2 |
-| input | 4 | 0 | 0 | 4 |
-| output | 5 | 0 | 0 | 3 |
-| preserved | 4 | 0 | 0 | 4 |
-| broken | 2 | 0 | 0 | 6 |
-| **all** | 25 | 1 | 0 | 22 |
+| name | 3 | 0 | 0 | 0 |
+| description | 3 | 0 | 0 | 0 |
+| input | 2 | 1 | 0 | 0 |
+| output | 3 | 0 | 0 | 0 |
+| preserved | 2 | 1 | 0 | 0 |
+| broken | 2 | 1 | 0 | 0 |
+| **all** | 15 | 3 | 0 | 0 |
+
+### Homes, D8 (22 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 19 | 0 | 0 | 3 |
+| description | 14 | 6 | 0 | 2 |
+| input | 13 | 5 | 0 | 4 |
+| output | 16 | 2 | 0 | 4 |
+| preserved | 9 | 7 | 0 | 6 |
+| broken | 7 | 2 | 0 | 13 |
+| **all** | 78 | 22 | 0 | 32 |
 
 ## 2. Recall against source
 
@@ -118,7 +132,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 16 | 25 | 94 | 0 | 0% |
 | 17 | 16 | 78 | 0 | 0% |
 | 18 | 20 | 92 | 3 | 3% |
-| **all** | 436 | 1972 | 9 | 0% |
+| 19 | 20 | 109 | 2 | 2% |
+| **all** | 456 | 2081 | 11 | 1% |
 
 ## 3. Second reading of the sample
 
@@ -141,8 +156,12 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D8-102 broken: sample unsupported, review confirmed.
 - D8-040 name: sample confirmed, review unsupported.
 - D8-040 description: sample imprecise, review unsupported.
+- D8-163 input: sample confirmed, review imprecise.
+- D8-163 output: sample confirmed, review imprecise.
+- D8-163 preserved: sample confirmed, review imprecise.
+- D8-163 broken: sample confirmed, review unsupported.
 
-Agreement: 91 of 108 fields.
+Agreement: 93 of 114 fields.
 
 ## 4. Sources in disagreement
 
@@ -487,6 +506,24 @@ Every field not confirmed, with the reason.
 - **D8-016 Box-Cox transform** (batch 18): *input* unsupported: Positivity of the data is not quoted for the one-parameter form. *broken* unsupported: Not stated.
 - **D8-166 Quantile transform** (batch 18): *name* unsupported: No fetched source uses the name quantile transform. *broken* unsupported: Not stated.
 - **D8-055 Feature binning transformation** (batch 18): *preserved* unsupported: Not stated.
+- **D5-072 Inversion transformation** (batch 19): *description* imprecise: The inverse lies on the ray from the centre, at c + r^2 (x - c)/|x - c|^2; the fill's r^2 (x - c)/|x - c|^2 drops the c, right only for centre 0 (the window's x to R^2 x/|x|^2). Generalized circles are stated; spheres are in no window. *input* imprecise: Points of the plane, the centre going to the point at infinity; space is in no window. *broken* imprecise: Lines and circles exchange through the centre; distances are in no window.
+- **D5-074 Isometry transformation** (batch 19): *preserved* imprecise: Distances are stated; angles are in no window (a general metric space has none). *broken* unsupported: No window states that position is lost.
+- **D6-029 Dilation transformation** (batch 19): *input* imprecise: Points of an affine space are stated; functions are in no window. *broken* imprecise: Distances scale by |k|, not by k.
+- **D6-119 Reflection transformation** (batch 19): *preserved* imprecise: An isometry, so distances, is stated; angles and size are in no window.
+- **D8-193 Shearing transformation** (batch 19): *preserved* imprecise: Measure, so area, is stated; determinant 1, parallelism and collinearity are in no window (the map is only named affine).
+- **D8-150 Perspective projection transformation** (batch 19): *description* imprecise: The window gives y_1 = -f x_1/x_3, the image plane behind the pinhole; the fill's (f x/z, f y/z) is the other sign convention, the plane in front. That the map is projective is in no window. *preserved* unsupported: Neither collinearity nor cross-ratio is in a fetched window. *broken* unsupported: No fetched window states what perspective projection loses.
+- **D8-145 Orthogonal projection transformation** (batch 19): *description* imprecise: Idempotent and self-adjoint are stated; projecting onto a subspace along its orthogonal complement is in no window. *input* imprecise: The subspace appears only as the image of P; the input vector and subspace as such are in no window. *output* unsupported: No window states that Px is the nearest point of the subspace. *preserved* imprecise: Components in the image are kept; best approximation is in no window. *broken* unsupported: No window states that the orthogonal components are killed.
+- **D5-148 Y-Delta transform** (batch 19): *preserved* imprecise: Terminal equivalence is stated; that the planarity class is kept is in no window.
+- **D8-235 \u0394-Y (Delta-Wye) transformation** (batch 19): *input* imprecise: Networks are stated ("and vice versa"); graphs with a triangle are in no window. *broken* unsupported: No window states that the triangle's edges are lost.
+- **D8-197 Singular Value Decomposition (SVD)** (batch 19): *preserved* imprecise: Rank and the Eckart-Young theorem are stated; the operator and Frobenius norms are in no window.
+- **D8-091 Higher-Order SVD (HOSVD)** (batch 19): *preserved* imprecise: Multilinear rank is stated; that the decomposition reproduces the tensor exactly is in no window. *broken* unsupported: No window states that the core is all-orthogonal rather than diagonal; one says the algorithm assumes nothing of its structure.
+- **D8-219 Tucker decomposition** (batch 19): *preserved* unsupported: No window states that the multilinear subspace structure is kept. *broken* imprecise: Inexactness under truncation is stated; non-uniqueness (rotational freedom) is in no window.
+- **D8-163 Principal Component Analysis (PCA)** (batch 19): *input* imprecise: A data matrix is stated; its layout (n samples, p features) is in no window. *output* imprecise: The principal components are stated; scores are in no window. *preserved* imprecise: Maximal variance of the projected data is stated; the Euclidean geometry of the projection is in no window. *broken* unsupported: No window states what the discarded directions or nonlinear structure lose.
+- **D8-077 Generalized Schur (QZ) decomposition** (batch 19): *broken* unsupported: No window states that the original bases are lost.
+- **D8-107 Jordan decomposition** (batch 19): *broken* unsupported: No window states that the form is numerically unstable or discontinuous.
+- **D8-117 LDLT factorization** (batch 19): *description* imprecise: L unit lower triangular and D diagonal are stated; the block diagonal form under pivoting is in no window (Bunch-Kaufman is only named). *input* imprecise: The windows write A = LDL* without stating the hypothesis on A (symmetric) the field gives. *preserved* imprecise: The matrix is reproduced; inertia (Sylvester) is in no window.
+- **D8-209 Symbolic Cholesky decomposition** (batch 19): *description* imprecise: The nonzero pattern before numerics is stated; the elimination tree and fill-in are in no window. *input* imprecise: A sparse symmetric positive definite matrix is stated; the ordering is in no window. *output* imprecise: The pattern of L is stated; the elimination tree is in no window.
+- **D8-106 Johnson-Lindenstrauss transform** (batch 19): *description* imprecise: The dimension bound and the random construction are stated; the window bounds squared distances within 1 +- eps, not distances. *preserved* imprecise: The window bounds squared distances by 1 +- eps; the field says distances. *broken* imprecise: The drop in dimension is stated; that exact geometry is lost is in no window.
 
 ## 6. Receipts
 
@@ -5850,4 +5887,246 @@ actions defining an optic"
 - recalled: name: Standard; description: Discretize into intervals; input: Continuous feature; output: Bins; preserved: Order; broken: Within-bin variation
 
   b: excerpts/wikipedia-data-binning.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1295299437)
+
+### D5-072 Inversion transformation (batch 19)
+
+- name: **confirmed** [i] "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that"
+- description: **imprecise** [i] "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that" [i] ":<math>OP \cdot OP^{\prime} = r^2.</math>" [i] "<math>x \mapsto R^2 \frac {x} {|x|^2}" [i] "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves" *The inverse lies on the ray from the centre, at c + r^2 (x - c)/|x - c|^2; the fill's r^2 (x - c)/|x - c|^2 drops the c, right only for centre 0 (the window's x to R^2 x/|x|^2). Generalized circles are stated; spheres are in no window.*
+- input: **imprecise** [i] "with the center and the point at infinity changing positions" *Points of the plane, the centre going to the point at infinity; space is in no window.*
+- output: **confirmed** [i] "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that"
+- preserved: **confirmed** [i] "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves" [i] "Inversion leaves the measure of angles unaltered, but reverses the orientation of oriented angles."
+- broken: **imprecise** [i] "*A circle that passes through the center ''O'' of the reference circle inverts to a line not passing through ''O''" *Lines and circles exchange through the centre; distances are in no window.*
+- recalled: name: Standard (inversion in a circle or sphere); description: x to c + r^2 (x - c)/|x - c|^2; the fill drops the + c, right only for centre 0; generalized circles go to generalized circles; input: Points other than the centre; output: Inverted points (centre to the point at infinity); preserved: Angles (anticonformal); generalized circles; broken: Distances; lines not through the centre become circles
+
+  i: excerpts/wikipedia-inversive-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383555555)
+
+### D5-074 Isometry transformation (batch 19)
+
+- name: **confirmed** [s] "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s"
+- description: **confirmed** [s] "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s" [e] "The Euclidean group  {{math|E(''n'')}} comprises all [[translation (geometry)|translations]], [[rotation (mathematics)|rotations]], and [[reflection (mathematics)|reflections]] of <math>\mathbb{E}^n</math>; and arbitrary finite combinations of them."
+- input: **confirmed** [s] "Let  <math>X</math> and <math>Y</math> be [[metric space]]s with metrics"
+- output: **confirmed** [s] "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s"
+- preserved: **imprecise** [s] ":<math>d_X(a,b)=d_Y\!\left(f(a),f(b)\right).</math>" *Distances are stated; angles are in no window (a general metric space has none).*
+- broken: **unsupported** *No window states that position is lost.*
+- recalled: name: Standard; description: Distance-preserving map; Euclidean isometries are compositions of translations, rotations and reflections (affine by Mazur-Ulam); input: Metric space; output: Congruent image; preserved: Distances (angles in Euclidean space); broken: Position
+
+  s: excerpts/wikipedia-isometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384702919)
+  e: excerpts/wikipedia-euclidean-group.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371653962)
+
+### D6-029 Dilation transformation (batch 19; covers D8-188)
+
+- name: **confirmed** [h] "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''"
+- description: **confirmed** [h] "<math display="block">\mathbf x'=\mathbf s + k(\mathbf x -\mathbf s).</math>"
+- input: **imprecise** [h] "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''" *Points of an affine space are stated; functions are in no window.*
+- output: **confirmed** [h] "<math display="block">\mathbf x'=\mathbf s + k(\mathbf x -\mathbf s).</math>"
+- preserved: **confirmed** [h] "* A ''line'' is mapped onto a parallel line. Hence: ''angles'' remain unchanged." [h] "* The ''ratio of two line segments'' is preserved." [h] "Both properties show that a homothety is a ''[[Similarity (geometry)|similarity]]''."
+- broken: **imprecise** [h] "In Euclidean geometry, a homothety of ratio <math>k</math> multiplies ''distances'' between points by {{tmath|\vert k \vert}}, ''areas'' by <math>k^2</math>" *Distances scale by |k|, not by k.*
+- recalled: name: Standard (homothety); description: x to c + k (x - c); input: Figure; output: Scaled figure; preserved: Angles, shape, ratios; broken: Lengths scale by |k|, areas by k^2
+
+  h: excerpts/wikipedia-homothety.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1356815044)
+
+### D6-119 Reflection transformation (batch 19; covers D8-180)
+
+- name: **confirmed** [f] "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s"
+- description: **confirmed** [f] "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s" [f] "A reflection is an [[involution (mathematics)|involution]]: when applied twice in succession, every point returns to its original location" [f] "The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1" *Orientation reversal is stated as determinant -1.*
+- input: **confirmed** [f] "The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection."
+- output: **confirmed** [f] "The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection."
+- preserved: **imprecise** [f] "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s" *An isometry, so distances, is stated; angles and size are in no window.*
+- broken: **confirmed** [f] "The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1" *Determinant -1: orientation is reversed.*
+- recalled: name: Standard; description: Reflection in a hyperplane: involutive isometry, determinant -1; input: Figure; output: Mirror image; preserved: Distances, angles; broken: Orientation
+
+  f: excerpts/wikipedia-reflection-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380109823)
+
+### D6-145 Translation transformation (batch 19; covers D8-216)
+
+- name: **confirmed** [t] "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+- description: **confirmed** [t] "then the translation function <math>T_{\mathbf{v}} </math> will work as <math> T_{\mathbf{v}}(\mathbf{p})=\mathbf{p}+\mathbf{v}</math>."
+- input: **confirmed** [t] "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]." [t] "The [[Shift operator|translation operator]] turns a function of the original position"
+- output: **confirmed** [t] "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+- preserved: **confirmed** [t] "A translation is an isometry that displaces the original figure according to a direction, a sense, and a length ([[vector (mathematics)|vector]]). Translations preserve the direction and length of line segments, and the amplitudes of angles." [t] "so that the orientation of the body in space is unaltered"
+- broken: **confirmed** [t] "A translation is an [[affine transformation]] with ''no'' [[fixed point (mathematics)|fixed point]]s." *No fixed point: every point moves.*
+- recalled: name: Standard; description: x to x + v; input: Figure; output: Shifted figure; preserved: Distances, angles, orientation; broken: Position (no fixed point)
+
+  t: excerpts/wikipedia-translation-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508)
+
+### D8-193 Shearing transformation (batch 19)
+
+- name: **confirmed** [s] "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction."
+- description: **confirmed** [s] "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction." [s] "a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''."
+- input: **confirmed** [s] "a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''."
+- output: **confirmed** [s] "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction."
+- preserved: **imprecise** [s] "that preserves the {{mvar|n}}-dimensional [[measure (mathematics)|measure]] (hypervolume) of any set." *Measure, so area, is stated; determinant 1, parallelism and collinearity are in no window (the map is only named affine).*
+- broken: **confirmed** [s] "Applying a shear map to a set of points of the plane will change all [[angle]]s between them (except [[straight angle]]s), and the length of any [[line segment]] that is not parallel to the direction of displacement."
+- recalled: name: Standard; description: (x, y) to (x + k y, y); determinant 1; input: Figure; output: Sheared figure; preserved: Area, parallelism; broken: Angles and lengths
+
+  s: excerpts/wikipedia-shear-mapping.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374397906)
+
+### D8-150 Perspective projection transformation (batch 19)
+
+- name: **confirmed** [p] "If the 3D perspective of an object should be preserved on a 2D surface, the transformation must include scaling and translation based on the object's relative position to the 2D surface. This process is called perspective projection."
+- description: **imprecise** [c] ": <math> \frac{-y_1}{f} = \frac{x_1}{x_3} </math> or <math> y_1 = -\frac{f \, x_1}{x_3} </math>" *The window gives y_1 = -f x_1/x_3, the image plane behind the pinhole; the fill's (f x/z, f y/z) is the other sign convention, the plane in front. That the map is projective is in no window.* (recall contradicted)
+- input: **confirmed** [c] "* A point '''P''' somewhere in the world at coordinate <math> (x_1, x_2, x_3) </math> relative to the axes X1, X2, and X3."
+- output: **confirmed** [c] "* The projection of point '''P''' onto the image plane, denoted '''Q'''."
+- preserved: **unsupported** *Neither collinearity nor cross-ratio is in a fetched window.*
+- broken: **unsupported** *No fetched window states what perspective projection loses.*
+- recalled: name: Standard (pinhole camera); description: (x, y, z) to (f x / z, f y / z); a projective transformation; input: 3D points; output: Image points; preserved: Collinearity, cross-ratio; broken: Parallelism, distances, angles, depth
+
+  p: excerpts/wikipedia-3d-projection.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381739094)
+  c: excerpts/wikipedia-pinhole-camera-model.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364592852)
+
+### D8-145 Orthogonal projection transformation (batch 19)
+
+- name: **confirmed** [o] "* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix"
+- description: **imprecise** [o] "* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix" [o] "A projection is orthogonal if and only if it is [[self-adjoint operator|self-adjoint]]." *Idempotent and self-adjoint are stated; projecting onto a subspace along its orthogonal complement is in no window.*
+- input: **imprecise** [o] "Suppose the [[Linear subspace|subspace]]s <math>U</math> and <math>V</math> are the [[Image (mathematics)|image]] and [[Kernel (linear algebra)|kernel]] of <math>P</math> respectively." *The subspace appears only as the image of P; the input vector and subspace as such are in no window.*
+- output: **unsupported** *No window states that Px is the nearest point of the subspace.*
+- preserved: **imprecise** [o] "It leaves its [[image (mathematics)|image]] unchanged." *Components in the image are kept; best approximation is in no window.*
+- broken: **unsupported** *No window states that the orthogonal components are killed.*
+- recalled: name: Standard; description: P with P^2 = P = P*; nearest point in the subspace; input: Vector and closed subspace; output: Nearest point; preserved: Components in the subspace; broken: Orthogonal components
+
+  o: excerpts/wikipedia-projection-linear-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374765997)
+
+### D5-148 Y-Delta transform (batch 19; covers D6-158, D8-233)
+
+- name: **confirmed** [y] "is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]]."
+- description: **confirmed** [y] "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa." [y] "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+- input: **confirmed** [y] "is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]]." [y] "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+- output: **confirmed** [y] "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+- preserved: **imprecise** [y] "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa." *Terminal equivalence is stated; that the planarity class is kept is in no window.*
+- broken: **confirmed** [y] "The transform preserves the number of edges in a graph, but not the number of vertices or the number of [[cycle (graph theory)|cycle]]s." *The vertex count changes: the internal node goes.*
+- recalled: name: Standard (Kennelly 1899); description: Star to triangle with R_ab = (R_a R_b + R_b R_c + R_c R_a)/R_c; Y-Delta reducibility of graphs; input: Network with a star; output: Network with a triangle; preserved: Terminal behaviour; broken: Internal node
+
+  y: excerpts/wikipedia-y-delta-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226)
+
+### D8-235 \u0394-Y (Delta-Wye) transformation (batch 19)
+
+- name: **confirmed** [y] "R_1 &= \frac{R_\text{b}R_\text{c}}{R_\text{a} + R_\text{b} + R_\text{c}} \\[3pt]" *The Delta-Y direction of the same transform: the star resistances from the triangle's.*
+- description: **confirmed** [y] "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa." [y] "R_1 &= \frac{R_\text{b}R_\text{c}}{R_\text{a} + R_\text{b} + R_\text{c}} \\[3pt]"
+- input: **imprecise** [y] "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa." *Networks are stated ("and vice versa"); graphs with a triangle are in no window.*
+- output: **confirmed** [y] "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa."
+- preserved: **confirmed** [y] "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa."
+- broken: **unsupported** *No window states that the triangle's edges are lost.*
+- recalled: name: Standard; description: Triangle to star with R_a = R_ab R_ca/(R_ab + R_bc + R_ca); input: Network with a triangle; output: Network with a star; preserved: Terminal behaviour; broken: Triangle edges
+
+  y: excerpts/wikipedia-y-delta-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226)
+
+### D8-197 Singular Value Decomposition (SVD) (batch 19)
+
+- name: **confirmed** [s] "the singular value decomposition of an <math>m \times n</math> complex matrix {{tmath|\mathbf M}} is a factorization of the form {{tmath|\mathbf{M} {{=}} \mathbf{U} \mathbf{\Sigma} \mathbf{V}^*}}, where {{tmath|\mathbf U}} is an {{tmath|m \times m}} complex [[unitary matrix]]"
+- description: **confirmed** [s] "the singular value decomposition of an <math>m \times n</math> complex matrix {{tmath|\mathbf M}} is a factorization of the form {{tmath|\mathbf{M} {{=}} \mathbf{U} \mathbf{\Sigma} \mathbf{V}^*}}, where {{tmath|\mathbf U}} is an {{tmath|m \times m}} complex [[unitary matrix]]" [s] "<math>\mathbf \Sigma</math> is an <math>m \times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\mathbf V}} is an <math>n \times n</math> complex unitary matrix"
+- input: **confirmed** [s] "the singular value decomposition of an <math>m \times n</math> complex matrix {{tmath|\mathbf M}} is a factorization of the form {{tmath|\mathbf{M} {{=}} \mathbf{U} \mathbf{\Sigma} \mathbf{V}^*}}, where {{tmath|\mathbf U}} is an {{tmath|m \times m}} complex [[unitary matrix]]"
+- output: **confirmed** [s] "the singular value decomposition of an <math>m \times n</math> complex matrix {{tmath|\mathbf M}} is a factorization of the form {{tmath|\mathbf{M} {{=}} \mathbf{U} \mathbf{\Sigma} \mathbf{V}^*}}, where {{tmath|\mathbf U}} is an {{tmath|m \times m}} complex [[unitary matrix]]" [s] "<math>\mathbf \Sigma</math> is an <math>m \times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\mathbf V}} is an <math>n \times n</math> complex unitary matrix"
+- preserved: **imprecise** [s] "the [[Rank of a matrix|rank]] of {{tmath|\mathbf M}} equals the number of non-zero singular values" [s] "This is known as the '''[[Low-rank approximation|Eckart–Young theorem]]'''" *Rank and the Eckart-Young theorem are stated; the operator and Frobenius norms are in no window.*
+- broken: **confirmed** [s] "its singular value decomposition is unique up to multiplication of any column of {{tmath|\mathbf U}} and the corresponding column of {{tmath|\mathbf V}} by an arbitrary phase factor." [s] "A singular value {{tmath|\sigma}} which appears among them {{tmath|k}} times has a {{tmath|k}}-dimensional subspace of corresponding left-singular vectors."
+- recalled: name: Standard; description: A = U Sigma V*, U and V unitary, Sigma nonnegative diagonal; input: Any m x n matrix; output: U, Sigma, V; preserved: Rank, 2-norm and Frobenius norm, Eckart-Young best approximation; broken: Singular vectors unique only up to phase
+
+  s: excerpts/wikipedia-singular-value-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796)
+
+### D8-028 Compact Singular Value Decomposition (batch 19)
+
+- name: **confirmed** [s] "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\mathbf{M} {{=}} \mathbf{U}_r \mathbf{\Sigma}_r \mathbf{V}_r^*}}, in which {{tmath|\mathbf{\Sigma}_r}} is an {{tmath|r \times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+- description: **confirmed** [s] "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\mathbf{M} {{=}} \mathbf{U}_r \mathbf{\Sigma}_r \mathbf{V}_r^*}}, in which {{tmath|\mathbf{\Sigma}_r}} is an {{tmath|r \times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+- input: **confirmed** [s] "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\mathbf{M} {{=}} \mathbf{U}_r \mathbf{\Sigma}_r \mathbf{V}_r^*}}, in which {{tmath|\mathbf{\Sigma}_r}} is an {{tmath|r \times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal." [s] "the [[Rank of a matrix|rank]] of {{tmath|\mathbf M}} equals the number of non-zero singular values"
+- output: **confirmed** [s] "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\mathbf{M} {{=}} \mathbf{U}_r \mathbf{\Sigma}_r \mathbf{V}_r^*}}, in which {{tmath|\mathbf{\Sigma}_r}} is an {{tmath|r \times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+- preserved: **confirmed** [s] "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\mathbf{M} {{=}} \mathbf{U}_r \mathbf{\Sigma}_r \mathbf{V}_r^*}}, in which {{tmath|\mathbf{\Sigma}_r}} is an {{tmath|r \times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal." [s] "the [[Rank of a matrix|rank]] of {{tmath|\mathbf M}} equals the number of non-zero singular values"
+- broken: **confirmed** [s] "The [[#Compact SVD|compact SVD]] eliminates the rows and columns from {{tmath|\mathbf \Sigma}} which consist entirely of zeros, and also the superfluous corresponding columns of {{tmath|\mathbf U}} and rows of {{tmath|\mathbf{V}^*}}:"
+- recalled: name: Standard (thin or compact SVD); description: Keep the r nonzero singular values; input: Rank-r matrix; output: U_r, Sigma_r, V_r; preserved: A exactly; broken: Null-space bases
+
+  s: excerpts/wikipedia-singular-value-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796)
+
+### D8-091 Higher-Order SVD (HOSVD) (batch 19)
+
+- name: **confirmed** [h] "which is the classic algorithm that is currently referred in the literature as the '''Tucker''' or the '''HOSVD'''"
+- description: **confirmed** [h] "The second equality is because the <math>{\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display="block">\mathcal{S} := \mathcal{A} \times ({\bf U}_1^H, {\bf U}_2^H, \ldots, {\bf U}_M^H).</math>" [h] "a set of SVDs on mode-flattenings without making assumptions about the structure of the core tensor or implying a rank decomposition." [h] "[[Lieven De Lathauwer |De Lathauwer]] ''et al.''"
+- input: **confirmed** [h] "The second equality is because the <math>{\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display="block">\mathcal{S} := \mathcal{A} \times ({\bf U}_1^H, {\bf U}_2^H, \ldots, {\bf U}_M^H).</math>"
+- output: **confirmed** [h] "The second equality is because the <math>{\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display="block">\mathcal{S} := \mathcal{A} \times ({\bf U}_1^H, {\bf U}_2^H, \ldots, {\bf U}_M^H).</math>"
+- preserved: **imprecise** [h] "The compact M-mode SVD(HOSVD) is a rank-revealing decomposition in the sense that the dimensions of its core tensor correspond with the components of the multilinear rank of the tensor." *Multilinear rank is stated; that the decomposition reproduces the tensor exactly is in no window.*
+- broken: **unsupported** *No window states that the core is all-orthogonal rather than diagonal; one says the algorithm assumes nothing of its structure.*
+- recalled: name: Standard (De Lathauwer, De Moor, Vandewalle 2000); description: Core times orthogonal factor matrices from the SVDs of the unfoldings; input: Tensor; output: All-orthogonal core and factor matrices; preserved: The tensor, multilinear rank; broken: Diagonality of the core
+
+  h: excerpts/wikipedia-hosvd.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381415711)
+
+### D8-219 Tucker decomposition (batch 19)
+
+- name: **confirmed** [t] "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor."
+- description: **confirmed** [t] "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor." [t] "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>."
+- input: **confirmed** [t] "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>."
+- output: **confirmed** [t] "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor."
+- preserved: **unsupported** *No window states that the multilinear subspace structure is kept.*
+- broken: **imprecise** [t] "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>." *Inexactness under truncation is stated; non-uniqueness (rotational freedom) is in no window.*
+- recalled: name: Standard (Tucker 1966); description: Core tensor times a matrix in each mode; input: Tensor and multilinear rank; output: Core and factors; preserved: Multilinear subspaces; broken: Uniqueness; exactness when truncated
+
+  t: excerpts/wikipedia-tucker-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1293216395)
+
+### D8-163 Principal Component Analysis (PCA) (batch 19)
+
+- name: **confirmed** [p] "The data are [[linear map|linearly transformed]] onto a new [[coordinate system]] such that the directions (principal components) capturing the largest variation in the data can be easily identified."
+- description: **confirmed** [p] "The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data." [p] "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix." [p] "we must first center the values of each variable in the dataset on 0 by subtracting the mean"
+- input: **imprecise** [p] "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix." *A data matrix is stated; its layout (n samples, p features) is in no window.*
+- output: **imprecise** [p] "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix." *The principal components are stated; scores are in no window.*
+- preserved: **imprecise** [p] "The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data." *Maximal variance of the projected data is stated; the Euclidean geometry of the projection is in no window.*
+- broken: **unsupported** *No window states what the discarded directions or nonlinear structure lose.*
+- recalled: name: Standard (Pearson 1901, Hotelling 1933); description: Orthogonal directions of maximal variance: eigenvectors of the covariance, or SVD of centred data; input: Data matrix; output: Components and scores; preserved: Variance captured; broken: Variance in discarded directions
+
+  p: excerpts/wikipedia-principal-component-analysis.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383885717)
+
+### D8-077 Generalized Schur (QZ) decomposition (batch 19)
+
+- name: **confirmed** [s] "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+- description: **confirmed** [s] "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''." [s] "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+- input: **confirmed** [s] "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+- output: **confirmed** [s] "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+- preserved: **confirmed** [s] "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+- broken: **unsupported** *No window states that the original bases are lost.*
+- recalled: name: Standard (Moler and Stewart); description: Unitary Q, Z with Q* A Z and Q* B Z upper triangular; eigenvalues as ratios of diagonals; input: Pencil (A, B); output: Triangular pair; preserved: Generalized eigenvalues; broken: Original bases
+
+  s: excerpts/wikipedia-schur-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233)
+
+### D8-107 Jordan decomposition (batch 19)
+
+- name: **confirmed** [j] "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]"
+- description: **confirmed** [j] "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]" [j] ":<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>" [j] "Then a basis with respect to which the matrix representing the operator has the required form exists [[if and only if]] all [[eigenvalue]]s of the operator lie in ''K''" *The window's condition (all eigenvalues in K) is weaker than the fill's algebraically closed field.*
+- input: **confirmed** [j] "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]"
+- output: **confirmed** [j] ":<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>"
+- preserved: **confirmed** [j] "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]" [j] "and it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>." [j] "* The sum of the sizes of all Jordan blocks corresponding to an eigenvalue ''λ''<sub>''i''</sub> is its [[algebraic multiplicity]]."
+- broken: **unsupported** *No window states that the form is numerically unstable or discontinuous.*
+- recalled: name: Standard; description: A = P J P^-1 over an algebraically closed field; input: Square matrix; output: Jordan form and P; preserved: Similarity class, eigenvalues and multiplicities; broken: Numerical stability
+
+  j: excerpts/wikipedia-jordan-normal-form.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374766194)
+
+### D8-117 LDLT factorization (batch 19)
+
+- name: **confirmed** [c] "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}"
+- description: **imprecise** [c] "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix." [c] "<math display=block>\mathbf{A} = \mathbf{L D L}^*,</math>" *L unit lower triangular and D diagonal are stated; the block diagonal form under pivoting is in no window (Bunch-Kaufman is only named).*
+- input: **imprecise** [c] "<math display=block>\mathbf{A} = \mathbf{L D L}^*,</math>" *The windows write A = LDL* without stating the hypothesis on A (symmetric) the field gives.*
+- output: **confirmed** [c] "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix."
+- preserved: **imprecise** [c] "<math display=block>\mathbf{A} = \mathbf{L D L}^*,</math>" *The matrix is reproduced; inertia (Sylvester) is in no window.*
+- broken: **confirmed** [c] "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}" *Square-root free, and exact.*
+- recalled: name: Standard; description: Symmetric A = L D L^T, L unit lower triangular, D diagonal (block diagonal with Bunch-Kaufman pivoting); input: Symmetric matrix; output: L and D; preserved: Inertia (Sylvester), the matrix; broken: Nothing; no square roots
+
+  c: excerpts/wikipedia-cholesky-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196)
+
+### D8-209 Symbolic Cholesky decomposition (batch 19)
+
+- name: **confirmed** [s] "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]"
+- description: **imprecise** [s] "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]" [s] "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work." *The nonzero pattern before numerics is stated; the elimination tree and fill-in are in no window.*
+- input: **imprecise** [s] "be a sparse symmetric positive definite matrix with elements from a field" *A sparse symmetric positive definite matrix is stated; the ordering is in no window.*
+- output: **imprecise** [s] "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]" *The pattern of L is stated; the elimination tree is in no window.*
+- preserved: **confirmed** [s] "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work."
+- broken: **confirmed** [s] "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work." *Computed before any numerical work.*
+- recalled: name: Standard (sparse direct methods); description: Nonzero pattern of the Cholesky factor via the elimination tree, before numerics; input: Pattern and ordering; output: Pattern of L; preserved: Structure; broken: Values
+
+  s: excerpts/wikipedia-symbolic-cholesky.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369863060)
+
+### D8-106 Johnson-Lindenstrauss transform (batch 19)
+
+- name: **confirmed** [j] "concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]]."
+- description: **imprecise** [j] "Given <math>0 < \varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\mathbb{R}^n</math> , and an integer <math>k > 8(\ln N)/\varepsilon^2</math>," [j] ": <math>(1-\varepsilon)\|u-v\|^2 \leq \|f(u) - f(v)\|^2 \leq (1+\varepsilon)\|u-v\|^2</math>" [j] "To obtain the projection algorithmically, it suffices [[with high probability]] to repeatedly sample orthogonal projection matrices at random." *The dimension bound and the random construction are stated; the window bounds squared distances within 1 +- eps, not distances.*
+- input: **confirmed** [j] "Given <math>0 < \varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\mathbb{R}^n</math> , and an integer <math>k > 8(\ln N)/\varepsilon^2</math>,"
+- output: **confirmed** [j] "there exists a linear function <math>f: \mathbb{R}^n \rightarrow \mathbb{R}^k</math>"
+- preserved: **imprecise** [j] ": <math>(1-\varepsilon)\|u-v\|^2 \leq \|f(u) - f(v)\|^2 \leq (1+\varepsilon)\|u-v\|^2</math>" *The window bounds squared distances by 1 +- eps; the field says distances.* (recall contradicted)
+- broken: **imprecise** [j] "concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]]." *The drop in dimension is stated; that exact geometry is lost is in no window.*
+- recalled: name: Standard (Johnson and Lindenstrauss 1984); description: Random linear map to O(log n / eps^2) dimensions preserving pairwise distances within 1 +- eps; input: n points in R^d; output: Points in R^k; preserved: Pairwise distances approximately; broken: Exact geometry
+
+  j: excerpts/wikipedia-johnson-lindenstrauss-lemma.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380715096)
 

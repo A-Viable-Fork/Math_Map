@@ -67,8 +67,11 @@ async function sample() {
 const REL = /(\b(is|are|was|were|be|been|being|has|have|had|holds?|preserv\w*|maps?|sends?|takes?|gives?|giving|yields?|forms?|equals?|equivalent|iff|if|then|implies|correspond\w*|called|defined|defines?|admits?|exists?|commut\w*|satisf\w*|consists?|factors?|generat\w*|extends?|lifts?|becomes?|turns?|induces?|states?|classif\w*|decompos\w*|converts?|computes?|relates?|embeds?|identif\w*|reflects?|creates?|vanish\w*|agrees?|coincide|determin\w*|contains?|constructs?|obtain\w*|carr\w*|denoted|known as|named|lies|lie|fit|fits|split\w*|kill\w*|replac\w*|making|make|makes|ensur\w*|guarantee\w*|express\w*|measur\w*|assign\w*)\b|=|≅|≃|⟶|→|↦|↔|≤|≥|⊆|⊂|:=|\\to\b|\\mapsto|\\cong|\\simeq|\\le\b|\\leq|\\subseteq|⥤|⇒|\\Rightarrow|\\iff|≫|⊣|\\dashv|\\approxeq|\\colon)/i;
 const LEANHEAD = /^\s*(-- |def |abbrev |structure |class |noncomputable def |protected def |inductive )/;
 const relational = (q) => REL.test(q) && !(LEANHEAD.test(q) && !/[=→⟶↦⥤≃≅]/.test(q.replace(/^.*?:\s*Type.*$/, "")));
+// Batches after LAST_LOOSE were graded under the strict rule from the start, so the sweep and the before-and-after tables
+// cover only the batches graded under the earlier rule.
+export const LAST_LOOSE = 18;
 export function sweepSelection(R = review()) {
-  return R.flatMap((g) => FIELDS.filter((f) => g.fields[f].verdict === "confirmed").filter((f) => {
+  return R.filter((g) => g.batch <= LAST_LOOSE).flatMap((g) => FIELDS.filter((f) => g.fields[f].verdict === "confirmed").filter((f) => {
     const v = g.fields[f], qs = [v.quote, ...(v.more || []).map((m) => m.quote)];
     return (v.quote || "").length < 60 || !qs.some(relational);
   }).map((f) => `${g.id}.${f}`));
@@ -187,7 +190,7 @@ function compare() {
   const pop = (g) => (homes.has(g.id) ? "Homes" : "D7 stubs");
   L.push("## Verdicts before and after", "", "Field counts by verdict: the review's grades, and the effective grades under the strict rule (the strict grade where a field was read again, the review's elsewhere).", "");
   for (const P of ["D7 stubs", "Homes"]) {
-    const gs = R.filter((g) => pop(g) === P); if (!gs.length) continue;
+    const gs = R.filter((g) => pop(g) === P && g.batch <= LAST_LOOSE); if (!gs.length) continue;
     const before = gs.flatMap((g) => FIELDS.map((f) => g.fields[f].verdict)), after = gs.flatMap((g) => FIELDS.map((f) => second.get(`${g.id}.${f}`) ?? g.fields[f].verdict));
     const reread = gs.reduce((n, g) => n + FIELDS.filter((f) => second.has(`${g.id}.${f}`)).length, 0);
     L.push(`### ${P} (${gs.length} entries, ${before.length} fields, ${reread} read again)`, "", "| | Confirmed | Imprecise | Wrong | Unsupported |", "|---|---|---|---|---|",
@@ -198,6 +201,12 @@ function compare() {
       const unread = gs.reduce((n, g) => n + FIELDS.filter((f) => g.fields[f].verdict === "confirmed" && !second.has(`${g.id}.${f}`)).length, 0), keep = after.filter((x) => x === "confirmed").length;
       L.push(`Of the ${keep} effective confirmed fields, ${unread} have not been read under the strict rule. At the blind sample's rate outside the sweep, a full strict re-read would leave about ${Math.round(keep - (unread * flip(cout)) / cout.length)} confirmed (${Math.round(keep - unread * hi)} to ${Math.round(keep - unread * lo)}), ${Math.round((100 * (keep - (unread * flip(cout)) / cout.length)) / before.length)}% of the ${before.length} fields.`, "");
     }
+  }
+  const strictRows = R.filter((g) => g.batch > LAST_LOOSE);
+  if (strictRows.length) {
+    const all = strictRows.flatMap((g) => FIELDS.map((f) => g.fields[f].verdict));
+    L.push(`### Homes graded under the strict rule from the start (batches ${LAST_LOOSE + 1} on, ${strictRows.length} entries, ${all.length} fields)`, "", "| | Confirmed | Imprecise | Wrong | Unsupported |", "|---|---|---|---|---|",
+      `| strict | ${V.map((v) => all.filter((x) => x === v).length).join(" | ")} |`, "");
   }
   return { F, text: L.join("\n") };
 }

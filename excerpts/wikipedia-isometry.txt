@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Isometry (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384702919
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 778f768bd030b2deccdb8ee54cade3f54927f393222af83f25856787cacf2435
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s
+
+Let  <math>X</math> and <math>Y</math> be [[metric space]]s with metrics
+
+:<math>d_X(a,b)=d_Y\!\left(f(a),f(b)\right).</math>
+
+* Any [[reflection (mathematics)|reflection]], [[translation (geometry)|translation]] and [[rotation]] is a global isometry on [[Euclidean space]]s.
