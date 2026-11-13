@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Koszul complex (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361641570
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: c75767a5a4ecc93ccabd9c392e0c995a51faffe28883281ae010839137858dd2
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: c75767a5a4ecc93ccabd9c392e0c995a51faffe28883281ae010839137858dd2
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 As a tool, its homology can be used to tell when a set of elements of a (local) ring is an [[Regular sequence#Definitions|M-regular sequence]]
@@ -14,3 +14,5 @@ When <math>s_1, \dots, s_r</math> form a [[regular sequence]]
 the map <math>K_s \to A/(s_1, \dots, s_r)</math> is a quasi-isomorphism
 
 and hence it can be used to prove basic facts about the [[Depth (ring theory)|depth
+
+giving an ''R''-linear map <math>s\colon R^r\to R</math> amounts to giving a finite sequence <math>s_1, \dots, s_r</math> of elements in ''R''

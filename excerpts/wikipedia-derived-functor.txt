@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Derived functor (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 74a25f1367b91096f004829e1b584527bb18fab256d9ef4ccc0bc57525ed52b1
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 74a25f1367b91096f004829e1b584527bb18fab256d9ef4ccc0bc57525ed52b1
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 It was noted in various quite different settings that a [[short exact sequence]] often gives rise to a "long exact sequence".
@@ -10,3 +10,19 @@ where the ''I''<sup>&nbsp;''i''</sup> are all injective (this is known as an ''[
 Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]
 
 and one could ask how to continue this sequence to the right to form a long exact sequence.
+
+so in a sense the right derived functors of <math>F</math> measure "how far" <math>F</math> is from being exact.
+
+Because there are enough injectives, we can construct a long exact sequence of the form
+
+we call the result ''R<sup>i</sup>F''(''X'').
+
+any morphism ''X'' → ''Y'' naturally yields a morphism ''R<sup>i</sup>F''(''X'') → ''R<sup>i</sup>F''(''Y'')
+
+is exact, so ''R''<sup>0</sup>''F''(''X'') = ''F''(''X''), so we only get something interesting for ''i''>0.
+
+This tells us that the collection of derived functors is a [[Delta-functor|δ-functor]].
+
+If one starts with a covariant ''right-exact'' functor <math>G</math>, and the category '''A''' has enough projectives
+
+We apply <math>G</math> to this sequence, chop off the last term, and compute homology to get <math>L_iG(X)</math>. As before, <math>L_0G(X)=G(X)</math>.

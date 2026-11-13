@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: arXiv:alg-geom/9503025 abstract page: Leovigildo Alonso, Ana Jeremías, Joseph Lipman, Local Homology and Cohomology on Schemes (1995)
+URL: https://export.arxiv.org/abs/alg-geom/9503025
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a3e374c84f282e7f2e551ee492fd8fc582451c63b89c208a497039ac6021a63d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We prove a sheaf-theoretic derived-category generalization of Greenlees-May duality (a far-reaching generalization of Grothendieck&#39;s local duality theorem)
+
+there is a sort of sheafified adjointness between local cohomology supported in Z and left-derived completion along Z.

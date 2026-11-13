@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Direct image functor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1322147973
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a4e127051a16abb8ecb7f4f4ed45c4dcfb6a62aec971a5df00a09dc50e6d6b10
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+called the '''direct image sheaf''' or the '''pushforward sheaf''' of ''F'' along ''f'', such that the global sections of ''f''<sub>∗</sub>''F'' is given by the global sections of ''F''.
+
+given a sheaf ''F'' defined on a [[topological space]] ''X'' and a [[continuous map]] ''f'': ''X'' → ''Y''
+
+:<math>f_*F(U) := F(f^{-1}(U)).</math>
+
+They are called '''higher direct images''' and denoted ''R<sup>q</sup> f''<sub>∗</sub>.
+
+one likewise has the right derived functor
+
+:<math>Rf_*: D_{qcoh}(X) \to D_{qcoh}(Y)</math>

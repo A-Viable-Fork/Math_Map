@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Sheaves/Presheaf.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Sheaves/Presheaf.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 0e15de45bc9a087e7c084de682ec4c6986edd0a384c3c13b4d49eb4fd32beef2
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- TopCat.Presheaf.pushforward (line 158)
+def pushforward {X Y : TopCat.{w}} (f : X ⟶ Y) : X.Presheaf C ⥤ Y.Presheaf C :=
+  (whiskeringLeft _ _ _).obj (Opens.map f).op
+
+-- TopCat.Presheaf.pullbackPushforwardAdjunction (line 287)
+def pullbackPushforwardAdjunction {X Y : TopCat.{v}} (f : X ⟶ Y) :
+    pullback C f ⊣ pushforward C f :=
+  Functor.lanAdjunction _ _

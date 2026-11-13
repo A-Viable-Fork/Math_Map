@@ -28524,6 +28524,1430 @@
     "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210",
     "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean"
    }
+  },
+  {
+   "id": "D2-092",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-mapping-cone-homological-algebra.txt",
+    "y": "excerpts/wikipedia-mapping-cylinder.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCofiber.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "A related notion is the '''mapping cylinder''': let <math>f\\colon A \\to B</math> be a morphism of chain complexes"
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The fetched windows state the replacement by a homotopy-equivalent cofibration for maps of spaces; for chain maps the source defines the cylinder as a cone and states no homotopy equivalence."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "let <math>f\\colon A \\to B</math> be a morphism of chain complexes"
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched window states that D to Cyl(f) is a homotopy equivalence of chain complexes; Mathlib's cylinder of a complex is that of the identity."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states what the chain-level cylinder keeps."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Chain map (replaced by inclusion)\": stated only for maps of spaces in the fetched windows."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210",
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344396108",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCofiber.lean"
+   }
+  },
+  {
+   "id": "D2-093",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "k": "excerpts/wikipedia-koszul-complex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "As a tool, its homology can be used to tell when a set of elements of a (local) ring is an [[Regular sequence#Definitions|M-regular sequence]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "As a tool, its homology can be used to tell when a set of elements of a (local) ring is an [[Regular sequence#Definitions|M-regular sequence]]",
+     "note": "For a local ring."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "giving an ''R''-linear map <math>s\\colon R^r\\to R</math> amounts to giving a finite sequence <math>s_1, \\dots, s_r</math> of elements in ''R''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "giving an ''R''-linear map <math>s\\colon R^r\\to R</math> amounts to giving a finite sequence <math>s_1, \\dots, s_r</math> of elements in ''R''",
+     "note": "The complex K(s_1, ..., s_r) built from them."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "k",
+     "quote": "and hence it can be used to prove basic facts about the [[Depth (ring theory)|depth",
+     "more": [
+      {
+       "src": "k",
+       "quote": "the map <math>K_s \\to A/(s_1, \\dots, s_r)</math> is a quasi-isomorphism"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Element roles\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Koszul complex: none at the pin.",
+   "sources": {
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1361641570"
+   }
+  },
+  {
+   "id": "D2-094",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-derived-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "This tells us that the collection of derived functors is a [[Delta-functor|δ-functor]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "we call the result ''R<sup>i</sup>F''(''X'').",
+     "more": [
+      {
+       "src": "d",
+       "quote": "Because there are enough injectives, we can construct a long exact sequence of the form"
+      },
+      {
+       "src": "d",
+       "quote": "We apply <math>G</math> to this sequence, chop off the last term, and compute homology to get <math>L_iG(X)</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]",
+     "note": "A functor and an object to resolve."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "we call the result ''R<sup>i</sup>F''(''X'')."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "any morphism ''X'' → ''Y'' naturally yields a morphism ''R<sup>i</sup>F''(''X'') → ''R<sup>i</sup>F''(''Y'')",
+     "more": [
+      {
+       "src": "d",
+       "quote": "This tells us that the collection of derived functors is a [[Delta-functor|δ-functor]]."
+      },
+      {
+       "src": "d",
+       "quote": "It was noted in various quite different settings that a [[short exact sequence]] often gives rise to a \"long exact sequence\"."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "so in a sense the right derived functors of <math>F</math> measure \"how far\" <math>F</math> is from being exact."
+    }
+   },
+   "contra": [],
+   "mathlib": "Mathlib defines left and right derived functors (CategoryTheory.Functor.leftDerived, rightDerived), linked on D2-095 and D2-096 through their degree-zero isomorphisms.",
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420"
+   }
+  },
+  {
+   "id": "D2-095",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-derived-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "We apply <math>G</math> to this sequence, chop off the last term, and compute homology to get <math>L_iG(X)</math>."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "If one starts with a covariant ''right-exact'' functor <math>G</math>, and the category '''A''' has enough projectives",
+     "more": [
+      {
+       "src": "d",
+       "quote": "We apply <math>G</math> to this sequence, chop off the last term, and compute homology to get <math>L_iG(X)</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "If one starts with a covariant ''right-exact'' functor <math>G</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "compute homology to get <math>L_iG(X)</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "noncomputable def Functor.leftDerived (F : C ⥤ D) [F.Additive] (n : ℕ) : C ⥤ D :="
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "As before, <math>L_0G(X)=G(X)</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "noncomputable def leftDerivedZeroIsoSelf : F.leftDerived 0 ≅ F :="
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "The fetched window says right derived functors measure how far a functor is from exact; the left-derived statement is not in a window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/LeftDerived.lean"
+   }
+  },
+  {
+   "id": "D2-096",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-derived-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "we call the result ''R<sup>i</sup>F''(''X'')."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "Because there are enough injectives, we can construct a long exact sequence of the form",
+     "more": [
+      {
+       "src": "d",
+       "quote": "Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "we call the result ''R<sup>i</sup>F''(''X'')."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "is exact, so ''R''<sup>0</sup>''F''(''X'') = ''F''(''X''), so we only get something interesting for ''i''>0.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "noncomputable def rightDerivedZeroIsoSelf : F.rightDerived 0 ≅ F :="
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "so in a sense the right derived functors of <math>F</math> measure \"how far\" <math>F</math> is from being exact."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/RightDerived.lean"
+   }
+  },
+  {
+   "id": "D2-097",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "e": "excerpts/wikipedia-ext-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''Ext functors''' are the [[derived functor]]s of the [[Hom functor]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''Ext functors''' are the [[derived functor]]s of the [[Hom functor]].",
+     "more": [
+      {
+       "src": "e",
+       "quote": "is the set of equivalence classes of extensions of ''A'' by ''B'', forming an abelian group under the Baer sum."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "Let <math>R</math> be a ring and let <math>R\\text{-Mod}</math> be the [[category (mathematics)|category]] of modules over <math>R</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "For each integer <math>i</math>, <math>\\text{Ext}_R^i(A,B)</math> is the [[chain complex|cohomology]] of this complex at position <math>i</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def Ext (X Y : C) (n : ℕ) : Type w :="
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is the set of equivalence classes of extensions of ''A'' by ''B'', forming an abelian group under the Baer sum."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module presentations\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380841038",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-098",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "t": "excerpts/wikipedia-tor-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "the '''Tor functors''' are the [[derived functor]]s of the [[tensor product of modules]] over a [[ring (mathematics)|ring]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "taking the left derived functors of the right exact functor <math>G(B)=A\\otimes_RB</math>.",
+     "note": "Non-exactness: Tor_1 vanishing against every module is flatness, exactness of tensoring.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "**If <math>\\mathrm{Tor}_1^R(A,B)=0</math> for all <math>B</math>, then <math>A</math> is flat"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "the '''Tor functors''' are the [[derived functor]]s of the [[tensor product of modules]] over a [[ring (mathematics)|ring]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "taking the left derived functors of the right exact functor <math>G(B)=A\\otimes_RB</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "obj X := Functor.leftDerived ((tensoringLeft C).obj X) n"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "**If <math>\\mathrm{Tor}_1^R(A,B)=0</math> for all <math>B</math>, then <math>A</math> is flat",
+     "more": [
+      {
+       "src": "t",
+       "quote": "<math>\\operatorname{Tor}_1^\\Z(A,B) \\cong A_{\\text{tor}} \\otimes_\\Z B_{\\text{tor}}</math>, where <math>A_{\\text{tor}}</math> is the [[torsion subgroup]] of <math>A</math>."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module presentations\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1337789189",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Tor.lean"
+   }
+  },
+  {
+   "id": "D2-099",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-direct-image-functor.txt",
+    "m": "excerpts/mathlib-Mathlib.Topology.Sheaves.Presheaf.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "called the '''direct image sheaf''' or the '''pushforward sheaf''' of ''F'' along ''f''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": ":<math>f_*F(U) := F(f^{-1}(U)).</math>",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def pushforward {X Y : TopCat.{w}} (f : X ⟶ Y) : X.Presheaf C ⥤ Y.Presheaf C :="
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "given a sheaf ''F'' defined on a [[topological space]] ''X'' and a [[continuous map]] ''f'': ''X'' → ''Y''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "called the '''direct image sheaf''' or the '''pushforward sheaf''' of ''F'' along ''f''"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "such that the global sections of ''f''<sub>∗</sub>''F'' is given by the global sections of ''F''.",
+     "note": "Global sections are kept for every continuous f; properness is not needed."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Local structure on X\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1322147973",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Sheaves/Presheaf.lean"
+   }
+  },
+  {
+   "id": "D2-100",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-direct-image-functor.txt",
+    "d": "excerpts/wikipedia-derived-functor.txt",
+    "l": "excerpts/wikipedia-leray-spectral-sequence.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "one likewise has the right derived functor"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "They are called '''higher direct images''' and denoted ''R<sup>q</sup> f''<sub>∗</sub>.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "Because there are enough injectives, we can construct a long exact sequence of the form"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "given a sheaf ''F'' defined on a [[topological space]] ''X'' and a [[continuous map]] ''f'': ''X'' → ''Y''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": ":<math>Rf_*: D_{qcoh}(X) \\to D_{qcoh}(Y)</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": ":<math> E^{pq}_2=(R^p\\Gamma \\cdot R^q f_*)(\\mathcal{F})=H^p(Y,R^qf_*(\\mathcal{F})) ,</math>",
+     "more": [
+      {
+       "src": "p",
+       "quote": ":<math>Rf_*: D_{qcoh}(X) \\to D_{qcoh}(Y)</math>"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual sheaf\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched higher direct images and derived pushforward: none at the pin (the presheaf pushforward is linked on D2-099).",
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1322147973",
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420",
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353225412"
+   }
+  },
+  {
+   "id": "D2-101",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "i": "excerpts/wikipedia-inverse-image-functor.txt",
+    "n": "excerpts/nlab-inverse-image.txt",
+    "m": "excerpts/mathlib-Mathlib.Topology.Sheaves.Presheaf.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "then the left adjoint part is called the inverse image part."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": ":<math>f^*\\mathcal G := f^{-1}\\mathcal{G} \\otimes_{f^{-1}\\mathcal{O}_Y} \\mathcal{O}_X</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": ":<math>f^*\\mathcal G := f^{-1}\\mathcal{G} \\otimes_{f^{-1}\\mathcal{O}_Y} \\mathcal{O}_X</math>.",
+     "note": "A morphism and a sheaf of modules on Y."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": ":<math>f^*\\mathcal G := f^{-1}\\mathcal{G} \\otimes_{f^{-1}\\mathcal{O}_Y} \\mathcal{O}_X</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "then the left adjoint part is called the inverse image part.",
+     "note": "Stated for f^-1 against f_* on sheaves, and in general for the inverse image as the left adjoint.",
+     "more": [
+      {
+       "src": "i",
+       "quote": "* <math>f^{-1}</math> is the [[adjoint functor|left adjoint]] of the [[direct image functor]] <math>f_{\\ast}</math>."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Y-specific structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "falsify": {
+    "field": "description",
+    "claim": "f^* G = f^-1 G tensored with O_X over f^-1 O_Y.",
+    "attempt": "Compared the formula term by term with the source's definition of the module pullback.",
+    "outcome": "survived"
+   },
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1323108266",
+    "n": "https://ncatlab.org/nlab/source/inverse+image",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Sheaves/Presheaf.lean"
+   }
+  },
+  {
+   "id": "D2-102",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "i": "excerpts/wikipedia-inverse-image-functor.txt",
+    "n": "excerpts/nlab-inverse-image.txt",
+    "d": "excerpts/wikipedia-derived-functor.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "* [[derived inverse image]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "* <math>f^*</math> is (in general) only right exact. If <math>f^*</math> is exact, ''f'' is called [[Flat morphism|flat]].",
+     "note": "So the left derived functor of f^* is needed exactly when f is not flat.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "If one starts with a covariant ''right-exact'' functor <math>G</math>, and the category '''A''' has enough projectives"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": ":<math>f^*\\mathcal G := f^{-1}\\mathcal{G} \\otimes_{f^{-1}\\mathcal{O}_Y} \\mathcal{O}_X</math>.",
+     "note": "A morphism and a sheaf of modules on Y."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched window states that Lf^* lands in the derived category of X."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states what the derived pullback keeps, nor base change."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Sheaf structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "mathlib": "Searched derived pullback and derived inverse image: none at the pin.",
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1323108266",
+    "n": "https://ncatlab.org/nlab/source/inverse+image",
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420"
+   }
+  },
+  {
+   "id": "D2-104",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "n": "excerpts/nlab-derived-tensor-product.txt",
+    "r": "excerpts/wikipedia-resolution-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The left [[derived functor]] of a [[tensor product]] [[functor]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The left [[derived functor]] of a [[tensor product]] [[functor]].",
+     "more": [
+      {
+       "src": "r",
+       "quote": "Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The left [[derived functor]] of a [[tensor product]] [[functor]].",
+     "note": "Two modules."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "In the context of [[triangulated categories]] denoted by $\\stackrel{\\mathbf{L}}\\otimes$ or $\\otimes^L$."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "n",
+     "quote": "its components (the classical left derived functors) are traditionally denoted",
+     "note": "Its components are the Tor functors, as stated; a Tor spectral sequence is not in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Module structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched derived tensor product: none at the pin; Tor is linked on D2-098.",
+   "sources": {
+    "n": "https://ncatlab.org/nlab/source/derived+tensor+product",
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458"
+   }
+  },
+  {
+   "id": "D2-105",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "v": "excerpts/wikipedia-verdier-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "'''Verdier duality''' is a [[cohomology|cohomological]] duality in [[algebraic topology]] that generalizes [[Poincaré duality]] for [[manifold]]s."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "'''Verdier duality''' is a [[cohomology|cohomological]] duality in [[algebraic topology]] that generalizes [[Poincaré duality]] for [[manifold]]s.",
+     "more": [
+      {
+       "src": "v",
+       "quote": "and it applies to spaces that fail to be manifolds due to"
+      },
+      {
+       "src": "v",
+       "quote": "the [[derived functor]] of the direct image with compact (or proper) supports <math>Rf_!</math> has a right adjoint <math>f^!</math> in the [[derived category]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "states that for a continuous map <math> f\\colon X \\to Y </math> of locally compact Hausdorff spaces",
+     "note": "Constructibility enters for biduality.",
+     "more": [
+      {
+       "src": "v",
+       "quote": "for sheaves with constructible cohomology."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "The '''dualizing complex''' <math>D_X</math> on <math>X</math> is defined to be",
+     "more": [
+      {
+       "src": "v",
+       "quote": "has a right adjoint <math>f^!</math>"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": ":<math>RHom(Rf_!\\mathcal{F},\\mathcal{G}) \\cong RHom(\\mathcal{F},f^!\\mathcal{G}). </math>"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-dual structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Verdier duality and exceptional inverse image: none at the pin.",
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377032122"
+   }
+  },
+  {
+   "id": "D2-106",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-serre-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "'''Serre duality''' is a [[duality (mathematics)|duality]] for the [[coherent sheaf cohomology]] of algebraic varieties"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "<math>H^i(X,E)\\cong H^{n-i}(X,K_X\\otimes E^{\\ast})^{\\ast}</math>",
+     "note": "The formula is stated for vector bundles (locally free sheaves) on a smooth proper variety; the landed text gives it for an arbitrary coherent sheaf.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "The basic version applies to [[vector bundle]]s on a smooth projective variety"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "Then Serre duality says: for an [[algebraic vector bundle]] ''E'' on ''X'' and an integer ''i'', there is a natural isomorphism:",
+     "note": "A vector bundle, not an arbitrary coherent sheaf."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "there is a natural isomorphism:"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "<math>h^i(X,E)=h^{n-i}(X,K_X\\otimes E^{\\ast}).</math>",
+     "note": "The symmetry of dimensions is stated; the Euler characteristic is not in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual cohomology groups\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Serre duality: none at the pin.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1345571946"
+   }
+  },
+  {
+   "id": "D2-107",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "g": "excerpts/wikipedia-coherent-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The classical statement of Grothendieck duality for a projective or proper morphism <math>f : X \\rightarrow Y</math> of noetherian schemes of finite dimension"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "'''coherent duality''' is any of a number of generalisations of [[Serre duality]], applying to [[coherent sheaves]]",
+     "more": [
+      {
+       "src": "g",
+       "quote": "The classical statement of Grothendieck duality for a projective or proper morphism"
+      },
+      {
+       "src": "g",
+       "quote": "as a '''[[dualizing sheaf]]''', the general theory (it turns out) cannot be quite so simple."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "for a projective or proper morphism <math>f : X \\rightarrow Y</math> of noetherian schemes of finite dimension"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "Grothendieck reformulated general coherent duality as the existence of a [[right adjoint]] functor <math>f^{!}</math>, called ''twisted'' or ''[[exceptional inverse image functor]]'', to a higher [[direct image with compact support]] functor <math>Rf_{!}</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "the existence of a [[right adjoint]] functor <math>f^{!}</math>"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-dual structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Grothendieck duality and dualizing complexes: none at the pin.",
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384685158"
+   }
+  },
+  {
+   "id": "D2-108",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "w": "excerpts/wikipedia-koszul-duality.txt",
+    "n": "excerpts/nlab-koszul-duality.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "Koszul duality is a duality between [[quadratic operad]]s"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": "The ''Koszul dual'' then coincides with the quadratic dual",
+     "note": "A quadratic algebra is exchanged with its quadratic dual algebra, and a quadratic operad with its dual operad; an algebra is not exchanged with an operad.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "Koszul duality is a duality between [[quadratic operad]]s"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "where <math>T(V)</math> is the [[tensor algebra]] on a finite-dimensional vector space, and <math>R</math> is a submodule of <math>T^2(V) = V \\otimes V</math>.",
+     "note": "A quadratic algebra T(V)/(R); operads by the nLab window.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "Koszul duality is a duality between [[quadratic operad]]s"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "The Koszul dual of <math>A=S(V)</math> is given by <math>A^! = \\Lambda(V^*)</math>",
+     "more": [
+      {
+       "src": "w",
+       "quote": "The ''Koszul dual'' then coincides with the quadratic dual"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "so you&#39;re dealing with a derived equivalence between actual algebras"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original algebra\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Koszul duality and quadratic duals: none at the pin.",
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371645629",
+    "n": "https://ncatlab.org/nlab/source/Koszul+duality"
+   }
+  },
+  {
+   "id": "D2-109",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/arxiv-alg-geom-9503025-abstract.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "We prove a sheaf-theoretic derived-category generalization of Greenlees-May duality"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "there is a sort of sheafified adjointness between local cohomology supported in Z and left-derived completion along Z."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "The fetched window states the sheaf version (a scheme and a proregular subscheme), not the module and ideal of the original."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "there is a sort of sheafified adjointness between local cohomology supported in Z and left-derived completion along Z."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "adjointness between local cohomology supported in Z and left-derived completion along Z."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-dual descriptions\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched local cohomology and derived completion: none at the pin.",
+   "sources": {
+    "a": "https://export.arxiv.org/abs/alg-geom/9503025"
+   }
+  },
+  {
+   "id": "D2-111",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-langlands-dual-group.txt",
+    "p": "excerpts/wikipedia-langlands-program.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''Langlands dual''' <sup>''L''</sup>''G'' of a [[reductive algebraic group]] ''G''"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Roughly speaking, this conjecture gives a correspondence between automorphic representations of a reductive group and homomorphisms from a [[Langlands group]] to an [[Langlands dual group|''L''-group]].",
+     "note": "Conjectural, as stated; the Galois side is homomorphisms from a Langlands (Galois) group into the L-group, not representations of the dual group."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "of a [[reductive algebraic group]] ''G''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "then its '''Langlands dual group''' <sup>''L''</sup>''G'' is the complex connected reductive group whose root datum is dual to that of ''G''.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "The ''L''-group is used heavily in the [[Langlands conjectures]] of [[Robert Langlands]]."
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "this conjecture relates their automorphic representations in a way that is compatible with their ''L''-functions."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Representation specifics\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "mathlib": "Searched Langlands dual groups and root data: Mathlib has root pairings (RootPairing) but no Langlands dual group at the pin.",
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351912787",
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382998042"
+   }
+  },
+  {
+   "id": "D2-113",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-spectrum-of-a-ring.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "There is a relative version of the functor <math>\\operatorname{Spec}</math> called global <math>\\operatorname{Spec}</math>, or relative <math>\\operatorname{Spec}</math>."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "There is a relative version of the functor <math>\\operatorname{Spec}</math> called global <math>\\operatorname{Spec}</math>, or relative <math>\\operatorname{Spec}</math>.",
+     "note": "The algebra must be quasi-coherent; graded on input."
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "For a scheme <math>S</math> and a [[quasi-coherent sheaf|quasi-coherent]] [[sheaf of algebras|sheaf of <math>\\mathcal{O}_S</math>-algebras]] <math>\\mathcal{A}</math>",
+     "note": "The algebra must be quasi-coherent."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "such that for every open affine <math>U \\subseteq S</math>, there is an isomorphism <math>f^{-1}(U) \\cong \\operatorname{Spec}(\\mathcal{A}(U))</math>",
+     "note": "Affine over S."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "<math>\\operatorname{Hom}_{\\mathcal{O}_S\\text{-alg}}(\\mathcal{A}, \\pi_*\\mathcal{O}_X) \\cong \\operatorname{Hom}_{\\text{Sch}/S}(X, \\mathbf{Spec}(\\mathcal{A})),</math>",
+     "note": "The algebra structure through the universal property; affineness through the local description.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "there is an isomorphism <math>f^{-1}(U) \\cong \\operatorname{Spec}(\\mathcal{A}(U))</math>"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-affine structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched relative Spec: none at the pin.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382513632"
+   }
+  },
+  {
+   "id": "D2-114",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-proj-construction.txt",
+    "m": "excerpts/mathlib-Mathlib.AlgebraicGeometry.ProjectiveSpectrum.StructureSheaf.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "'''Proj''' is a construction analogous to the [[spectrum of a ring|spectrum-of-a-ring]] construction of [[affine scheme]]s"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "which produces objects with the typical properties of [[projective space]]s and [[projective variety|projective varieties]].",
+     "note": "Graded ring to a scheme with the typical properties of projective spaces, as stated; that Proj S is a projective scheme needs more (S finitely generated by degree one elements over S_0), and is not in a fetched window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Let <math>S</math> be a commutative [[graded ring]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "called the “structure sheaf” as in the affine case, which makes it into a [[scheme (mathematics)|scheme]].",
+     "note": "O(1) is the twisting sheaf of the same page.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def Proj.structureSheaf : Sheaf CommRingCat (ProjectiveSpectrum.top 𝒜) :="
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "and taken together they contain all the grading information that was lost.",
+     "note": "The grading survives only through the twisting sheaves O(n), not in Proj S itself; projectivity is not stated."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-homogeneous info\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "falsify": {
+    "field": "description",
+    "claim": "Proj of a graded ring is a projective scheme.",
+    "attempt": "Took S = k[x_1, x_2, ...], polynomials in infinitely many degree-one variables: Proj S is not of finite type over k, so not projective; projectivity needs S finitely generated in degree one (inferred).",
+    "outcome": "falsified"
+   },
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1312392897",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean"
+   }
+  },
+  {
+   "id": "D2-115",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-cone-algebraic-geometry.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is called the '''cone''' or '''affine cone''' of ''R''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "then the affine cone of ''R'' is the (usual) [[Convex cone#Affine_convex_cones|affine cone]] over the [[projective variety]] corresponding to ''R''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "and ''R'' is a [[homogeneous coordinate ring]], then the affine cone of ''R'' is the (usual) [[Convex cone#Affine_convex_cones|affine cone]] over the [[projective variety]] corresponding to ''R''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the (usual) [[Convex cone#Affine_convex_cones|affine cone]] over the [[projective variety]] corresponding to ''R''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states how the projective variety sits in the cone."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states that the vertex is singular."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched affine cones: none at the pin.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370192731"
+   }
+  },
+  {
+   "id": "D2-119",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "f": "excerpts/wikipedia-flip-algebraic-geometry.txt",
+    "k": "excerpts/wikipedia-kodaira-dimension.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''flips'''  and  '''flops''' are  codimension-2 [[surgery theory|surgery]] operations arising in the [[minimal model program]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "to a variety whose singularities are 'better' than those of <math>X_i</math>.",
+     "note": "K-negative curves contracted and the flip taken where K is positive, as stated; the source says the singularities get better (mild, terminal), not that smoothness is preserved.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative."
+      },
+      {
+       "src": "f",
+       "quote": "*<math>X</math> and <math>X^+</math> only have mild singularities, such as [[terminal singularities]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "In applications, <math>f</math> is often  a [[small contraction]] of an extremal ray",
+     "more": [
+      {
+       "src": "f",
+       "quote": "each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "the flip of <math>X_i</math> is a birational map (in fact an isomorphism in [[codimension]] 1) <math>f\\colon X_i \\rightarrow X_i^+</math>",
+     "more": [
+      {
+       "src": "f",
+       "quote": "is called the '''flip''' of <math>f</math> if <math>-K</math>  is relatively ample"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is a birational map (in fact an isomorphism in [[codimension]] 1)",
+     "note": "The plurigenera, from which the Kodaira dimension is defined, are birational invariants.",
+     "more": [
+      {
+       "src": "k",
+       "quote": "The plurigenera are important birational invariants of an algebraic variety."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Specific curve\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched flips and the minimal model program: none at the pin.",
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1357666202",
+    "k": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1323397618"
+   }
+  },
+  {
+   "id": "D2-121",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-cremona-group.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the '''Cremona group''', named after [[Luigi Cremona]], is [[Birational geometry#Birational automorphism groups|the group of birational automorphisms]] of the <math>n</math>-dimensional [[projective space]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is [[Birational geometry#Birational automorphism groups|the group of birational automorphisms]] of the <math>n</math>-dimensional [[projective space]]"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "of the <math>n</math>-dimensional [[projective space]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "[[Birational geometry#Birational automorphism groups|the group of birational automorphisms]] of the <math>n</math>-dimensional [[projective space]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The Cremona group is naturally identified with the [[automorphism group]] <math>\\mathrm{Aut}_k(k(x_1, ..., x_n)) </math> of the [[rational function|field of the rational function]]s"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "The [[projective general linear group]] <math>\\mathrm{PGL}_{n+1}</math> is contained in <math>Cr_n</math>. The two are equal only when <math>n=0</math> or <math>n=1</math>",
+     "note": "From dimension 2 on, Cremona transformations need not be linear."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Cremona and birational automorphisms: none at the pin.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378527059"
+   }
+  },
+  {
+   "id": "D2-122",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "t": "excerpts/wikipedia-tschirnhaus-transformation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''Tschirnhaus transformation''', also known as '''Tschirnhausen transformation''', is a type of mapping on [[polynomial]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "such that some or all of the transformed intermediate coefficients, <math>a'_1, ..., a'_{n-1}</math>, are exactly zero.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "In 1786, this work was expanded by [[Erland Samuel Bring]] who showed that any generic quintic polynomial could be similarly reduced."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "For example, finding a substitution<math display=\"block\">y(x)=k_1x^2 + k_2x+k_3</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "it is a method for transforming a polynomial equation of degree <math>n\\ge2</math> with some nonzero intermediate coefficients"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "The roots of the original polynomial <math>f</math> may be obtained from the roots of this transformed polynomial <math>f'</math> by the same transformation.",
+     "note": "The roots are not kept: they are carried to new roots by the substitution, and recovered from them. What is kept is the field: a different primitive element of the same extension.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "as the transformation on [[Minimal polynomial (field theory)|minimal polynomials]] implied by a different choice of [[primitive element (field theory)|primitive element]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "are exactly zero."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Tschirnhaus transformations: none at the pin.",
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1352075908"
+   }
+  },
+  {
+   "id": "D2-123",
+   "batch": 3,
+   "why": "Landed review, batch 3: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "n": "excerpts/wikipedia-nagatas-compactification-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "'''Nagata's compactification theorem'''"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "n",
+     "quote": "can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]].",
+     "note": "An open immersion into a proper scheme, as stated; density of the image is not in a fetched window.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "implies that every [[abstract variety]] can be embedded in a [[complete variety]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S''",
+     "note": "Over a Noetherian base."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "n",
+     "quote": "can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]].",
+     "note": "A proper scheme with X open in it, as stated; that X is dense is not in a fetched window."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "n",
+     "quote": "can be factored into an [[Glossary of scheme theory#immersion|open immersion]]",
+     "note": "The open embedding is stated; the function field is not."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "implies that every [[abstract variety]] can be embedded in a [[complete variety]]",
+     "note": "Non-completeness is lost: the result is complete."
+    }
+   },
+   "contra": [
+    "description",
+    "output",
+    "preserved"
+   ],
+   "mathlib": "Searched Nagata compactification: none at the pin.",
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1286045655"
+   }
   }
  ]
 }

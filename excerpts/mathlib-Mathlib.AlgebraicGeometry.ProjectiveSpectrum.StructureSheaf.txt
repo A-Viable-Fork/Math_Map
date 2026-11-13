@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 571c045a567f5892708f147b7ba6ea116b277001a41402b7a7d728e313c9190f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AlgebraicGeometry.ProjectiveSpectrum.Proj.structureSheaf (line 207)
+def Proj.structureSheaf : Sheaf CommRingCat (ProjectiveSpectrum.top 𝒜) :=
+  ⟨structurePresheafInCommRing 𝒜,
+    (-- We check the sheaf condition under `forget CommRing`.
+          isSheaf_iff_isSheaf_comp
+          _ _).mpr
+      (isSheaf_of_iso (structurePresheafCompForget 𝒜).symm (structureSheafInType 𝒜).property)⟩

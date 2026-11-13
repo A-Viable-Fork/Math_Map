@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Tschirnhaus transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1352075908
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e7ae3228fdbcc36ff9749f2eb4f72ea08d07958b531816b19580f68a15e4a9ad
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Tschirnhaus transformation''', also known as '''Tschirnhausen transformation''', is a type of mapping on [[polynomial]]s
+
+it is a method for transforming a polynomial equation of degree <math>n\ge2</math> with some nonzero intermediate coefficients, <math>a_1, ..., a_{n-1}</math>, such that some or all of the transformed intermediate coefficients, <math>a'_1, ..., a'_{n-1}</math>, are exactly zero.
+
+For example, finding a substitution<math display="block">y(x)=k_1x^2 + k_2x+k_3</math>
+
+as the transformation on [[Minimal polynomial (field theory)|minimal polynomials]] implied by a different choice of [[primitive element (field theory)|primitive element]].
+
+The roots of the original polynomial <math>f</math> may be obtained from the roots of this transformed polynomial <math>f'</math> by the same transformation.
+
+In 1786, this work was expanded by [[Erland Samuel Bring]] who showed that any generic quintic polynomial could be similarly reduced.
+
+This concept is used in reducing quintics to [[Bring radical#Bring–Jerrard normal form|Bring&ndash;Jerrard form]]

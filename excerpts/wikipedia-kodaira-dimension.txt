@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Kodaira dimension (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1323397618
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 35a00fdf00e3d7963cc358e8c72f1ddb23ea983bdf9be0c84a29901a0e0bde69
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The plurigenera are important birational invariants of an algebraic variety.

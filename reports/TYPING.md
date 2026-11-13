@@ -6,17 +6,17 @@ Entries: 2022.
 
 | Typed | Entries | Share |
 |---|---|---|
-| Every operand, with existing kinds only | 720 | 35.6% |
+| Every operand, with existing kinds only | 721 | 35.7% |
 | Every operand, using candidate kinds | 40 | 2.0% |
 | At least one input and one output kind | 151 | 7.5% |
-| Neither side | 1111 | 54.9% |
+| Neither side | 1110 | 54.9% |
 
 ## By domain
 
 | Domain | Entries | Fully typed | Partly | Neither |
 |---|---|---|---|---|
 | D1 | 124 | 58 | 19 | 47 |
-| D2 | 205 | 54 | 15 | 136 |
+| D2 | 205 | 55 | 15 | 135 |
 | D3 | 189 | 58 | 8 | 123 |
 | D4 | 439 | 183 | 39 | 217 |
 | D5 | 160 | 51 | 11 | 98 |
@@ -39,7 +39,7 @@ Entries: 2022.
 | set | 97 | carrier |
 | element | 92 | carrier |
 | group | 92 | carrier |
-| algebra | 89 | carrier |
+| algebra | 88 | carrier |
 | dataset | 79 | carrier |
 | poset | 75 | carrier |
 | ring | 65 | carrier |
@@ -56,8 +56,8 @@ Entries: 2022.
 | proof | 24 | carrier |
 | relation | 23 | carrier |
 | model | 23 | carrier |
+| sheaf | 21 | carrier |
 | curve | 21 | carrier |
-| sheaf | 20 | carrier |
 | knot | 20 | carrier |
 | bundle | 20 | carrier |
 | ideal | 19 | carrier |
@@ -74,7 +74,7 @@ Entries: 2022.
 | operad | 16 | carrier |
 | distribution | 14 | carrier |
 | tensor | 14 | carrier |
-| scheme | 11 | carrier |
+| scheme | 12 | carrier |
 | point-cloud | 11 | carrier |
 | word | 9 | candidate |
 | form | 9 | carrier |

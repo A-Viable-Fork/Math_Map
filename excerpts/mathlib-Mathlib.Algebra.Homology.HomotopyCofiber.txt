@@ -10,3 +10,10 @@ noncomputable def homotopyCofiber : HomologicalComplex C c where
   shape i j hij := homotopyCofiber.shape φ i j hij
   d_comp_d' i j k hij hjk := by
     apply homotopyCofiber.ext_from_X φ j i hij
+
+-- HomologicalComplex.cylinder.homotopyEquiv (line 694)
+noncomputable def homotopyEquiv : HomotopyEquiv K.cylinder K where
+  hom := π K
+  inv := ι₀ K
+  homotopyHomInvId := πCompι₀Homotopy K hc
+  homotopyInvHomId := Homotopy.ofEq (by simp)

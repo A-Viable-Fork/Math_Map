@@ -14,3 +14,5 @@ where the maps <math>B \to C(f), C(f) \to A[1]</math> are given by the direct su
 the '''mapping cone''' is a construction on a map of [[chain complexes]]
 
 Since this is a triangle, it gives rise to a [[long exact sequence]] on [[homology group]]s:
+
+A related notion is the '''mapping cylinder''': let <math>f\colon A \to B</math> be a morphism of chain complexes

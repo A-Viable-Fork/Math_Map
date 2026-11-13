@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Coherent duality (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384685158
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 27eda2d0e7fc7902c326df6d369c7cda93b62c8705534bf6e40b0a3b0de09a6e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''coherent duality''' is any of a number of generalisations of [[Serre duality]], applying to [[coherent sheaves]]
+
+Grothendieck reformulated general coherent duality as the existence of a [[right adjoint]] functor <math>f^{!}</math>, called ''twisted'' or ''[[exceptional inverse image functor]]'', to a higher [[direct image with compact support]] functor <math>Rf_{!}</math>.
+
+While Serre duality uses a [[line bundle]] or [[invertible sheaf]] as a '''[[dualizing sheaf]]''', the general theory (it turns out) cannot be quite so simple.
+
+The classical statement of Grothendieck duality for a projective or proper morphism <math>f : X \rightarrow Y</math> of noetherian schemes of finite dimension

@@ -1,8 +1,12 @@
 Excerpts, verbatim, from: nLab, inverse image (page source)
 URL: https://ncatlab.org/nlab/source/inverse+image
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2e60f8c383abde26e3f5a5b18af362d5678cd917c8db355dd28865485c799fc9
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 2e60f8c383abde26e3f5a5b18af362d5678cd917c8db355dd28865485c799fc9
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 An _inverse image_ operation is the [[left adjoint]] part $f^*$ of a [[geometric morphism]]
 
 of a [[geometric morphism]]
+
+then the left adjoint part is called the inverse image part.
+
+* [[derived inverse image]]

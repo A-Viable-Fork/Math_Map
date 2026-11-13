@@ -461,6 +461,15 @@ const LANDED = [
   K("D2-087", "output", "CategoryTheory.ProjectiveResolution", "Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean", "exact", "A chain complex of projectives indexed by the naturals with a quasi-isomorphism to Z in degree 0."),
   K("D2-088", "output", "CategoryTheory.InjectiveResolution", "Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean", "exact", "A cochain complex of injectives indexed by the naturals with a quasi-isomorphism from Z in degree 0."),
   K("D2-091", "output", "CochainComplex.mappingCone", "Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean", "exact", "The mapping cone of a morphism of integer-indexed cochain complexes, defined as its homotopy cofiber. The long exact sequence is not this declaration."),
+  // Batch 3: D2-092 to D2-123.
+  K("D2-092", "output", "HomologicalComplex.cylinder.homotopyEquiv", "Mathlib/Algebra/Homology/HomotopyCofiber.lean", "related", "The cylinder of a complex K is homotopy equivalent to K: the cylinder of the identity map, not the mapping cylinder of an arbitrary f."),
+  K("D2-095", "preserved", "CategoryTheory.Functor.leftDerivedZeroIsoSelf", "Mathlib/CategoryTheory/Abelian/LeftDerived.lean", "exact", "L_0 F is isomorphic to F for an additive F preserving finite colimits (right exact).", { whole: true }),
+  K("D2-096", "preserved", "CategoryTheory.Functor.rightDerivedZeroIsoSelf", "Mathlib/CategoryTheory/Abelian/RightDerived.lean", "exact", "R^0 F is isomorphic to F for an additive F preserving finite limits (left exact).", { whole: true }),
+  K("D2-097", "output", "CategoryTheory.Abelian.Ext", "Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean", "general", "Ext^n(X, Y) in any abelian category with the needed size conditions, defined as morphisms X to Y[n] in the derived category; modules are a case."),
+  K("D2-098", "output", "CategoryTheory.Tor", "Mathlib/CategoryTheory/Monoidal/Tor.lean", "general", "Tor_n as a bifunctor, the left derived functors of the tensor product in a monoidal abelian category with enough projectives; modules over a commutative ring are a case."),
+  K("D2-099", "description", "TopCat.Presheaf.pushforward", "Mathlib/Topology/Sheaves/Presheaf.lean", "exact", "The pushforward of a presheaf along a continuous map, by precomposition with preimage of opens: f_* F(U) = F(f^-1 U)."),
+  K("D2-101", "preserved", "TopCat.Presheaf.pullbackPushforwardAdjunction", "Mathlib/Topology/Sheaves/Presheaf.lean", "related", "Pullback of presheaves is left adjoint to pushforward; the landed claim concerns the pullback of sheaves of modules, f^*, which this declaration does not cover."),
+  K("D2-114", "output", "AlgebraicGeometry.ProjectiveSpectrum.Proj.structureSheaf", "Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean", "ingredient", "The structure sheaf of Proj of a graded ring, which makes it a scheme; O(1) is not this declaration."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

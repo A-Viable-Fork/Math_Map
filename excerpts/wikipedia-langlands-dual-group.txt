@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Langlands dual group (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351912787
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c1d1d1b8ae4f96fd1a65757919fa024d2b4ce6478c5c3fc69e217ed08727cb04
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Langlands dual''' <sup>''L''</sup>''G'' of a [[reductive algebraic group]] ''G''
+
+then its '''Langlands dual group''' <sup>''L''</sup>''G'' is the complex connected reductive group whose root datum is dual to that of ''G''.
+
+The ''L''-group is used heavily in the [[Langlands conjectures]] of [[Robert Langlands]].

@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Verdier duality (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377032122
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 85cee90f3722d39f6403deae624ebf4dd0a82715cd9b84ee57ebe832d49068c7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Verdier duality''' is a [[cohomology|cohomological]] duality in [[algebraic topology]] that generalizes [[Poincaré duality]] for [[manifold]]s.
+
+and it applies to spaces that fail to be manifolds due to
+
+states that for a continuous map <math> f\colon X \to Y </math> of locally compact Hausdorff spaces, the [[derived functor]] of the direct image with compact (or proper) supports <math>Rf_!</math> has a right adjoint <math>f^!</math> in the [[derived category]]
+
+:<math>RHom(Rf_!\mathcal{F},\mathcal{G}) \cong RHom(\mathcal{F},f^!\mathcal{G}). </math>
+
+The '''dualizing complex''' <math>D_X</math> on <math>X</math> is defined to be
+
+for sheaves with constructible cohomology.

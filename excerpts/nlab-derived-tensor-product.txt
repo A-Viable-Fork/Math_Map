@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, derived tensor product (page source)
+URL: https://ncatlab.org/nlab/source/derived+tensor+product
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8b6fa9ada2e986ac9f6acc9c63d454f839e1aeeef595d669872e6b577fd1ae42
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The left [[derived functor]] of a [[tensor product]] [[functor]]. In the context of [[triangulated categories]] denoted by $\stackrel{\mathbf{L}}\otimes$ or $\otimes^L$.
+
+its components (the classical left derived functors) are traditionally denoted

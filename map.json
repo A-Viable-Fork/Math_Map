@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "c37a81eb4831ea3ae15df831900b253157978dea"
+  "commit": "edb51fd3ed020c2ba88ac4a6ba9904167620f94c"
  },
  "domains": {
   "D1": {
@@ -747,22 +747,22 @@
    "generated": 44
   },
   "byTier": {
-   "landed": 1273,
-   "audited": 602,
+   "landed": 1248,
+   "audited": 627,
    "authored": 58,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 69,
+  "corrected": 79,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 764,
-   "unchecked": 8339,
+   "unsupported": 791,
+   "unchecked": 8189,
    "imprecise": 18,
-   "sourced": 3190,
-   "formal": 85
+   "sourced": 3311,
+   "formal": 87
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -782,15 +782,15 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 144,
-   "links": 317,
+   "entries": 152,
+   "links": 325,
    "byMatch": {
-    "exact": 228,
+    "exact": 231,
     "conflicts": 5,
-    "related": 21,
+    "related": 23,
     "special": 25,
-    "general": 27,
-    "ingredient": 11
+    "general": 29,
+    "ingredient": 12
    }
   }
  },
@@ -8788,14 +8788,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "unsupported",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "HomologicalComplex.cylinder.homotopyEquiv",
+     "file": "Mathlib/Algebra/Homology/HomotopyCofiber.lean",
+     "match": "related",
+     "note": "The cylinder of a complex K is homotopy equivalent to K: the cylinder of the identity map, not the mapping cylinder of an arbitrary f.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/HomotopyCofiber.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-093",
@@ -8815,14 +8826,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-094",
@@ -8842,14 +8854,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-095",
@@ -8869,14 +8882,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Functor.leftDerivedZeroIsoSelf",
+     "file": "Mathlib/CategoryTheory/Abelian/LeftDerived.lean",
+     "match": "exact",
+     "note": "L_0 F is isomorphic to F for an additive F preserving finite colimits (right exact).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/LeftDerived.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-096",
@@ -8896,14 +8920,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "formal",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "CategoryTheory.Functor.rightDerivedZeroIsoSelf",
+     "file": "Mathlib/CategoryTheory/Abelian/RightDerived.lean",
+     "match": "exact",
+     "note": "R^0 F is isomorphic to F for an additive F preserving finite limits (left exact).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/RightDerived.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-097",
@@ -8923,14 +8958,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Abelian.Ext",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean",
+     "match": "general",
+     "note": "Ext^n(X, Y) in any abelian category with the needed size conditions, defined as morphisms X to Y[n] in the derived category; modules are a case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-098",
@@ -8950,14 +8996,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Tor",
+     "file": "Mathlib/CategoryTheory/Monoidal/Tor.lean",
+     "match": "general",
+     "note": "Tor_n as a bifunctor, the left derived functors of the tensor product in a monoidal abelian category with enough projectives; modules over a commutative ring are a case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Tor.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-099",
@@ -8970,7 +9027,7 @@
    "description": "f_*F(U) = F(f^{-1}(U)). Pushes sheaf forward along morphism.",
    "input": "Morphism f: X->Y + sheaf F on X",
    "output": "Sheaf f_*F on Y",
-   "preserved": "Global sections (proper case)",
+   "preserved": "Global sections, for every continuous f: the global sections of f_*F are those of F",
    "broken": "Local structure on X",
    "complexity": "Depends",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
@@ -8982,14 +9039,44 @@
     "departure": "Algebraic sheaf context"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Global sections (proper case)"
+    },
+    "reason": "Landed review, batch 3: preserved graded imprecise. Global sections are kept for every map; the landed \"(proper case)\" restriction is not needed.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-direct-image-functor.txt",
+      "quote": "such that the global sections of ''f''<sub>∗</sub>''F'' is given by the global sections of ''F''.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "TopCat.Presheaf.pushforward",
+     "file": "Mathlib/Topology/Sheaves/Presheaf.lean",
+     "match": "exact",
+     "note": "The pushforward of a presheaf along a continuous map, by precomposition with preimage of opens: f_* F(U) = F(f^-1 U).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Sheaves/Presheaf.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-100",
@@ -9009,14 +9096,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-101",
@@ -9041,14 +9129,25 @@
     "departure": "Algebraic context"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "TopCat.Presheaf.pullbackPushforwardAdjunction",
+     "file": "Mathlib/Topology/Sheaves/Presheaf.lean",
+     "match": "related",
+     "note": "Pullback of presheaves is left adjoint to pushforward; the landed claim concerns the pullback of sheaves of modules, f^*, which this declaration does not cover.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Sheaves/Presheaf.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-102",
@@ -9068,14 +9167,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-103",
@@ -9147,21 +9247,48 @@
    "description": "M ⊗^L N via flat resolution.",
    "input": "Modules M, N",
    "output": "M ⊗^L N in D(R)",
-   "preserved": "Derived category, Tor spectral seq",
+   "preserved": "Its components (homology) are the Tor functors, the classical left derived functors of the tensor product",
    "broken": "Module structure",
    "complexity": "Depends",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Derived category, Tor spectral seq"
+    },
+    "reason": "Landed review, batch 3: preserved graded imprecise. A Tor spectral sequence is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-derived-tensor-product.txt",
+      "quote": "its components (the classical left derived functors) are traditionally denoted",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-derived-tensor-product.txt",
+      "quote": "The left [[derived functor]] of a [[tensor product]] [[functor]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-105",
@@ -9181,14 +9308,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-106",
@@ -9198,24 +9326,70 @@
    "tags": [
     "duality"
    ],
-   "description": "H^i(X,F) ≅ H^{n-i}(X, F^∨ ⊗ ω_X)^∨ for smooth projective X.",
-   "input": "Coherent sheaf F on smooth projective variety",
+   "description": "H^i(X, E) is isomorphic to H^{n-i}(X, K_X tensor E*)* for a vector bundle E on a smooth proper (for example projective) variety X of dimension n; Grothendieck generalized it.",
+   "input": "Vector bundle (locally free sheaf) E on a smooth projective variety",
    "output": "Cohomological duality isomorphism",
-   "preserved": "Euler characteristic, symmetry",
+   "preserved": "Dimensions: h^i(X, E) = h^{n-i}(X, K_X tensor E*)",
    "broken": "Individual cohomology groups",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "description": "H^i(X,F) ≅ H^{n-i}(X, F^∨ ⊗ ω_X)^∨ for smooth projective X.",
+     "input": "Coherent sheaf F on smooth projective variety",
+     "preserved": "Euler characteristic, symmetry"
+    },
+    "reason": "Landed review, batch 3: description, input and preserved graded imprecise. The formula is stated for vector bundles, not arbitrary coherent sheaves; the Euler characteristic is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-serre-duality.txt",
+      "quote": "<math>H^i(X,E)\\cong H^{n-i}(X,K_X\\otimes E^{\\ast})^{\\ast}</math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-serre-duality.txt",
+      "quote": "The basic version applies to [[vector bundle]]s on a smooth projective variety",
+      "fields": [
+       "description",
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-serre-duality.txt",
+      "quote": "Then Serre duality says: for an [[algebraic vector bundle]] ''E'' on ''X'' and an integer ''i'', there is a natural isomorphism:",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-serre-duality.txt",
+      "quote": "<math>h^i(X,E)=h^{n-i}(X,K_X\\otimes E^{\\ast}).</math>",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-107",
@@ -9235,14 +9409,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-108",
@@ -9253,7 +9428,7 @@
     "duality",
     "algebra-bridge"
    ],
-   "description": "Exchanges quadratic algebra with dual operad.",
+   "description": "Exchanges a quadratic algebra with its quadratic dual (the Koszul dual; for example the symmetric algebra of V with the exterior algebra of V*), and a quadratic operad with its dual operad.",
    "input": "Quadratic algebra A (or operad)",
    "output": "Koszul dual A^!",
    "preserved": "Derived equivalence (Koszul case)",
@@ -9263,14 +9438,48 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Exchanges quadratic algebra with dual operad."
+    },
+    "reason": "Landed review, batch 3: description graded imprecise. An algebra is exchanged with an algebra and an operad with an operad, not an algebra with an operad.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-koszul-duality.txt",
+      "quote": "The ''Koszul dual'' then coincides with the quadratic dual",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-koszul-duality.txt",
+      "quote": "The Koszul dual of <math>A=S(V)</math> is given by <math>A^! = \\Lambda(V^*)</math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-koszul-duality.txt",
+      "quote": "Koszul duality is a duality between [[quadratic operad]]s",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-109",
@@ -9290,14 +9499,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-110",
@@ -9347,7 +9557,7 @@
     "duality",
     "algebra-bridge"
    ],
-   "description": "Conjectural: automorphic reps of G <-> Galois reps of G^L.",
+   "description": "Conjectural: a correspondence between automorphic representations of a reductive group G and homomorphisms from a Langlands (Galois) group into the L-group of G.",
    "input": "Reductive group G",
    "output": "Langlands dual G^L + correspondence",
    "preserved": "L-functions (conjectural)",
@@ -9357,14 +9567,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Conjectural: automorphic reps of G <-> Galois reps of G^L."
+    },
+    "reason": "Landed review, batch 3: description graded imprecise. The Galois side is homomorphisms into the L-group, not representations of the dual group.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-langlands-program.txt",
+      "quote": "Roughly speaking, this conjecture gives a correspondence between automorphic representations of a reductive group and homomorphisms from a [[Langlands group]] to an [[Langlands dual group|''L''-group]].",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-112",
@@ -9422,7 +9652,7 @@
     "construction"
    ],
    "description": "Relative Spec for O_S-algebra A.",
-   "input": "Scheme S + O_S-algebra A",
+   "input": "Scheme S + quasi-coherent sheaf of O_S-algebras A",
    "output": "Scheme Spec_S(A) affine over S",
    "preserved": "Algebra structure, affine morphism",
    "broken": "Non-affine structure",
@@ -9431,14 +9661,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Scheme S + O_S-algebra A"
+    },
+    "reason": "Landed review, batch 3: input graded imprecise. The algebra must be quasi-coherent.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-spectrum-of-a-ring.txt",
+      "quote": "For a scheme <math>S</math> and a [[quasi-coherent sheaf|quasi-coherent]] [[sheaf of algebras|sheaf of <math>\\mathcal{O}_S</math>-algebras]] <math>\\mathcal{A}</math>",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-114",
@@ -9449,24 +9699,63 @@
     "construction",
     "algebra-bridge"
    ],
-   "description": "Graded ring -> projective scheme.",
+   "description": "Graded commutative ring to the scheme Proj S, analogous to Spec, with the typical properties of projective spaces and projective varieties.",
    "input": "Graded commutative ring S",
    "output": "Proj(S) with O(1)",
-   "preserved": "Graded structure, projectivity",
+   "preserved": "The grading, only through the twisting sheaves O(n): taken together they hold the grading information the structure sheaf loses",
    "broken": "Non-homogeneous info",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Graded ring -> projective scheme.",
+     "preserved": "Graded structure, projectivity"
+    },
+    "reason": "Landed review, batch 3: description and preserved graded imprecise. Proj S need not be projective (that needs S finitely generated in degree one), and the grading survives only through O(n).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-proj-construction.txt",
+      "quote": "'''Proj''' is a construction analogous to the [[spectrum of a ring|spectrum-of-a-ring]] construction of [[affine scheme]]s, which produces objects with the typical properties of [[projective space]]s and [[projective variety|projective varieties]].",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-proj-construction.txt",
+      "quote": "and taken together they contain all the grading information that was lost.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "AlgebraicGeometry.ProjectiveSpectrum.Proj.structureSheaf",
+     "file": "Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean",
+     "match": "ingredient",
+     "note": "The structure sheaf of Proj of a graded ring, which makes it a scheme; O(1) is not this declaration.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-115",
@@ -9486,14 +9775,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-116",
@@ -9749,7 +10039,7 @@
    "tags": [
     "surgery"
    ],
-   "description": "MMP: replaces K-negative curve with K-positive. Preserves smoothness.",
+   "description": "MMP: after a contraction of curves on which K is negative, replaces them by a birational map, an isomorphism in codimension 1, to a variety X+ with better singularities (mild, such as terminal); the flip is taken where -K is relatively ample.",
    "input": "Variety with K-negative extremal ray",
    "output": "X+ with K-positive replacement",
    "preserved": "Kodaira dimension",
@@ -9759,14 +10049,55 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "MMP: replaces K-negative curve with K-positive. Preserves smoothness."
+    },
+    "reason": "Landed review, batch 3: description graded imprecise. The source says the singularities get better, not that smoothness is preserved; that claim is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-flip-algebraic-geometry.txt",
+      "quote": "each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-flip-algebraic-geometry.txt",
+      "quote": "the flip of <math>X_i</math> is a birational map (in fact an isomorphism in [[codimension]] 1) <math>f\\colon X_i \\rightarrow X_i^+</math> to a variety whose singularities are 'better' than those of <math>X_i</math>.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-flip-algebraic-geometry.txt",
+      "quote": "*<math>X</math> and <math>X^+</math> only have mild singularities, such as [[terminal singularities]].",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-flip-algebraic-geometry.txt",
+      "quote": "is called the '''flip''' of <math>f</math> if <math>-K</math>  is relatively ample",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-120",
@@ -9814,14 +10145,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-122",
@@ -9835,21 +10167,48 @@
    "description": "Polynomial substitution to eliminate coefficients. Brings quintic to Bring-Jerrard form.",
    "input": "Polynomial P(x)=0 + auxiliary T",
    "output": "Simplified Q(y)=0",
-   "preserved": "Root set (generic T)",
+   "preserved": "The field generated by a root (a different primitive element of the same extension); the original roots are recovered from the new ones by the same transformation",
    "broken": "Eliminated coefficients",
    "complexity": "Polynomial in degree",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Root set (generic T)"
+    },
+    "reason": "Landed review, batch 3: preserved graded imprecise. The roots are carried to new roots, not kept.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-tschirnhaus-transformation.txt",
+      "quote": "as the transformation on [[Minimal polynomial (field theory)|minimal polynomials]] implied by a different choice of [[primitive element (field theory)|primitive element]].",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-tschirnhaus-transformation.txt",
+      "quote": "The roots of the original polynomial <math>f</math> may be obtained from the roots of this transformed polynomial <math>f'</math> by the same transformation.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-123",
@@ -9859,24 +10218,57 @@
    "tags": [
     "completion"
    ],
-   "description": "Embeds separated scheme as dense open in proper scheme.",
+   "description": "A separated finite-type morphism to a Noetherian scheme factors as an open immersion followed by a proper morphism; every variety embeds in a complete variety.",
    "input": "Separated scheme X of finite type",
-   "output": "Proper X-bar with X dense open",
-   "preserved": "Open embedding, function field",
+   "output": "Proper scheme over the base containing X as an open subscheme",
+   "preserved": "The open embedding",
    "broken": "Non-compactness",
    "complexity": "Constructive",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "output",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Embeds separated scheme as dense open in proper scheme.",
+     "output": "Proper X-bar with X dense open",
+     "preserved": "Open embedding, function field"
+    },
+    "reason": "Landed review, batch 3: description, output and preserved graded imprecise. Density of X and the function field are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-nagatas-compactification-theorem.txt",
+      "quote": "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S'' can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]].",
+      "fields": [
+       "description",
+       "output",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-nagatas-compactification-theorem.txt",
+      "quote": "implies that every [[abstract variety]] can be embedded in a [[complete variety]]",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-124",

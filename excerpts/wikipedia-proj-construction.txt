@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Proj construction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1312392897
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a31993c9b90a434b13c12204984d0020bec333819c88456b2ff5aab1ed33c213
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Proj''' is a construction analogous to the [[spectrum of a ring|spectrum-of-a-ring]] construction of [[affine scheme]]s, which produces objects with the typical properties of [[projective space]]s and [[projective variety|projective varieties]].
+
+Let <math>S</math> be a commutative [[graded ring]]
+
+called the “structure sheaf” as in the affine case, which makes it into a [[scheme (mathematics)|scheme]].
+
+and taken together they contain all the grading information that was lost.

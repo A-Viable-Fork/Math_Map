@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Flip (algebraic geometry) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1357666202
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 005c0f5e738e1139c5563efd9db7a7a631b115db98eae2bbc9ec8787904d85e4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''flips'''  and  '''flops''' are  codimension-2 [[surgery theory|surgery]] operations arising in the [[minimal model program]]
+
+each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative.
+
+the flip of <math>X_i</math> is a birational map (in fact an isomorphism in [[codimension]] 1) <math>f\colon X_i \rightarrow X_i^+</math> to a variety whose singularities are 'better' than those of <math>X_i</math>.
+
+is called the '''flip''' of <math>f</math> if <math>-K</math>  is relatively ample
+
+In applications, <math>f</math> is often  a [[small contraction]] of an extremal ray
+
+*<math>X</math> and <math>X^+</math> only have mild singularities, such as [[terminal singularities]].
