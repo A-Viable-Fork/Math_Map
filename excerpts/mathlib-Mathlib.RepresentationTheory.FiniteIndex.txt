@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RepresentationTheory/FiniteIndex.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RepresentationTheory/FiniteIndex.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 978ff7498be920fb5a46661aaab840e10047e3c01c3d292760e7e8dcf25e4f68
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Rep.coindResAdjunction (line 239)
+noncomputable def coindResAdjunction :
+    coindFunctor k S.subtype ⊣ resFunctor.{max w u v} S.subtype :=
+  (indResAdjunction k S.subtype).ofNatIsoLeft (indCoindNatIso.{max w u v} k S)

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Penrose transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380761637
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e04c99c52c0d4bab1063bc3af034b6478efdf9da15ec831173cebb35bfdd1f39
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a nonlinear modification of the Penrose transform, introduced by {{harvtxt|Ward|1977}}, that (among other things) relates [[holomorphic vector bundle]]s on 3-dimensional complex projective space '''CP'''<sup>3</sup> to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>.
+
+*The "twistor space" ''Z'' is complex projective 3-space '''CP'''<sup>3</sup>

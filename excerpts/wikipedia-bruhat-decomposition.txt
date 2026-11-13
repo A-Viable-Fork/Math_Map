@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Bruhat decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1317559160
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 77aee43a27ed04c320fbcd9d3533abbbed1d080fb5da5df6bd64e68cc54b6629
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Bruhat decomposition'''
+
+*<math>B</math> is a [[Borel subgroup]] of <math>G</math>
+
+:<math>G=BWB =\bigsqcup_{w\in W}BwB</math>
+
+as a disjoint union of [[double coset]]s of <math>B</math> parameterized by the elements of the Weyl group <math>W</math>.
+
+The cells in the Bruhat decomposition correspond to the [[Schubert cell]] decomposition of flag varieties. The dimension of the cells corresponds to the [[length function|length]] of the word <math>w</math> in the Weyl group.

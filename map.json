@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "edb51fd3ed020c2ba88ac4a6ba9904167620f94c"
+  "commit": "dd4208eba2fdf6ac50f1de03d2c08051c018f142"
  },
  "domains": {
   "D1": {
@@ -747,21 +747,21 @@
    "generated": 44
   },
   "byTier": {
-   "landed": 1248,
-   "audited": 627,
+   "landed": 1223,
+   "audited": 652,
    "authored": 58,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 79,
+  "corrected": 92,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 791,
-   "unchecked": 8189,
+   "unsupported": 821,
+   "unchecked": 8039,
    "imprecise": 18,
-   "sourced": 3311,
+   "sourced": 3431,
    "formal": 87
   },
   "lean": {
@@ -782,14 +782,14 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 152,
-   "links": 325,
+   "entries": 158,
+   "links": 332,
    "byMatch": {
-    "exact": 231,
+    "exact": 232,
     "conflicts": 5,
-    "related": 23,
-    "special": 25,
-    "general": 29,
+    "related": 26,
+    "special": 27,
+    "general": 30,
     "ingredient": 12
    }
   }
@@ -10288,14 +10288,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-125",
@@ -10306,24 +10307,70 @@
     "construction",
     "projection"
    ],
-   "description": "[X/G] for group action. Captures orbit + automorphism data.",
-   "input": "Scheme X + group action G",
+   "description": "[X/G] for a group-scheme action: the stack whose objects are principal G-bundles with equivariant maps to X; the coarse quotient X/G, when it exists, is usually coarser.",
+   "input": "Scheme X over S + action of an affine smooth group scheme G over S",
    "output": "Stack [X/G]",
-   "preserved": "G-equivariant structure, orbits+stabilizers",
+   "preserved": "Equivariant structure (objects carry G-equivariant maps to X) and stabilizers: with finite reduced stabilizers the quotient is a Deligne-Mumford stack",
    "broken": "Individual points",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "description": "[X/G] for group action. Captures orbit + automorphism data.",
+     "input": "Scheme X + group action G",
+     "preserved": "G-equivariant structure, orbits+stabilizers"
+    },
+    "reason": "Landed review, batch 4: description, input and preserved graded imprecise. G must be an affine smooth group scheme; orbits and automorphism data are not stated beyond the stabilizers and the coarser quotient.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-quotient-stack.txt",
+      "quote": "*an object over ''T'' is a [[torsor (algebraic geometry)|principal ''G''-bundle]] <math>P\\to T</math> together with equivariant map <math>P\\to X</math>;",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-quotient-stack.txt",
+      "quote": "the space \"X/G\" is usually coarser.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-quotient-stack.txt",
+      "quote": "Let ''G'' be an affine smooth [[group scheme]] over a scheme ''S'' and ''X'' an ''S''-scheme on which ''G'' [[group-scheme action|acts]].",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-quotient-stack.txt",
+      "quote": "If the stabilizers of the [[geometric point]]s are finite and reduced, then it is a [[Deligne–Mumford stack]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-126",
@@ -10344,14 +10391,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-127",
@@ -10362,7 +10410,7 @@
     "construction",
     "expansion"
    ],
-   "description": "Rep of subgroup H -> rep of group G. Right adjoint to restriction.",
+   "description": "Rep of subgroup H to rep of group G. Left adjoint to restriction (Frobenius reciprocity); for finite groups (finite index) also the right adjoint.",
    "input": "Rep of H ≤ G",
    "output": "Ind_H^G(V)",
    "preserved": "Frobenius reciprocity",
@@ -10372,14 +10420,66 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Rep of subgroup H -> rep of group G. Right adjoint to restriction."
+    },
+    "reason": "Landed review, batch 4: description graded imprecise. Induction is the left adjoint of restriction; it is the right adjoint only in the finite case.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-frobenius-reciprocity.txt",
+      "quote": "These functors form an [[Adjoint functors|adjoint pair]] <math>\\operatorname{Ind}_H^G\\dashv\\operatorname{Res}_H^G</math>.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-frobenius-reciprocity.txt",
+      "quote": "In the case of finite groups, they are actually both left- and right-adjoint to one another.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.RepresentationTheory.FiniteIndex.txt",
+      "quote": "coindFunctor k S.subtype ⊣ resFunctor.{max w u v} S.subtype :=",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Rep.indResAdjunction",
+     "file": "Mathlib/RepresentationTheory/Induced.lean",
+     "match": "related",
+     "note": "Induction is left adjoint to restriction along any group homomorphism (Frobenius reciprocity); the landed text says right adjoint, which needs finite index.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RepresentationTheory/Induced.lean"
+    },
+    {
+     "field": "description",
+     "decl": "Rep.coindResAdjunction",
+     "file": "Mathlib/RepresentationTheory/FiniteIndex.lean",
+     "match": "special",
+     "note": "For a subgroup of finite index, coinduction (isomorphic there to induction) is left adjoint to restriction, so induction is also the right adjoint: the case where the landed claim holds.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RepresentationTheory/FiniteIndex.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-128",
@@ -10392,21 +10492,41 @@
    "description": "Rep of G restricted to subgroup H. May decompose.",
    "input": "Rep of G + subgroup H",
    "output": "Res_H^G(V)",
-   "preserved": "Vector space, H-invariant subspaces",
+   "preserved": "The vector space, with the action of the elements of H",
    "broken": "G-irreducibility",
    "complexity": "O(dim(V)^2)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Vector space, H-invariant subspaces"
+    },
+    "reason": "Landed review, batch 4: preserved graded imprecise. The H-invariant subspaces are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-induced-representation.txt",
+      "quote": "then every {{mvar|K}}-linear representation {{mvar|ρ}} of {{mvar|G}} can be viewed as a {{mvar|K}}-linear representation of {{mvar|H}}",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-129",
@@ -10426,14 +10546,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Representation.ofQuotient",
+     "file": "Mathlib/RepresentationTheory/Basic.lean",
+     "match": "related",
+     "note": "A representation of G trivial on the normal subgroup S factors through G/S: the converse of inflation, which composes a representation of G/S with the quotient map.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RepresentationTheory/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-130",
@@ -10443,7 +10574,7 @@
    "tags": [
     "projection"
    ],
-   "description": "Pushes rep of G to G/N by averaging over N.",
+   "description": "Pushes a representation of G to G/N on its N-invariants.",
    "input": "Rep of G + normal N",
    "output": "Rep of G/N",
    "preserved": "G/N-equivariance",
@@ -10453,14 +10584,44 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Pushes rep of G to G/N by averaging over N."
+    },
+    "reason": "Landed review, batch 4: description graded imprecise. \"By averaging\" is not stated; Mathlib's deflation takes the invariants.",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-Mathlib.RepresentationTheory.Invariants.txt",
+      "quote": "Representation k (G ⧸ S) (invariants (ρ.comp S.subtype)) :=",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Representation.quotientToInvariants",
+     "file": "Mathlib/RepresentationTheory/Invariants.lean",
+     "match": "related",
+     "note": "A representation of G gives one of G/S on the S-invariants: deflation by invariants. The landed \"averaging\" is not this declaration.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RepresentationTheory/Invariants.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-131",
@@ -10481,14 +10642,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-132",
@@ -10509,14 +10671,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-133",
@@ -10529,7 +10692,7 @@
    "description": "G = KAK. Lie-theoretic generalization of SVD.",
    "input": "Semisimple Lie group G",
    "output": "K * A * K factorization",
-   "preserved": "Compact/abelian separated, spectral data in A",
+   "preserved": "Compact and abelian parts separated: K maximal compact (when the center is finite), the maximal abelian subalgebras unique up to conjugation by K",
    "broken": "Specific element form",
    "complexity": "O(n^3) for matrix groups",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
@@ -10542,14 +10705,41 @@
     "cloneStatus": "Abstract Pattern"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Compact/abelian separated, spectral data in A"
+    },
+    "reason": "Landed review, batch 4: preserved graded imprecise. \"Spectral data in A\" is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cartan-decomposition.txt",
+      "quote": "* The subgroup <math>K</math> is a maximal compact subgroup of <math>G</math>, whenever the center of G is finite.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cartan-decomposition.txt",
+      "quote": "the maximal Abelian subalgebras <math>\\mathfrak{a}</math> in <math>\\mathfrak{p}</math> are unique up to conjugation by <math>K</math>.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-134",
@@ -10569,14 +10759,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-135",
@@ -10586,9 +10777,9 @@
    "tags": [
     "decomposition"
    ],
-   "description": "Loop group element = product of holomorphic parts on complement regions.",
+   "description": "Generalizes LU to loop groups: M = M+ M0 M-, M+ polynomial in z, M- polynomial in 1/z, M0 diagonal of powers of z; for a generic element M0 is the identity.",
    "input": "Element of loop group LG",
-   "output": "g = g_- * g_+",
+   "output": "M = M+ M0 M- (M0 diagonal of powers of z; two factors for a generic element)",
    "preserved": "Holomorphic structure per factor",
    "broken": "Loop structure",
    "complexity": "Depends",
@@ -10596,14 +10787,52 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "output"
+    ],
+    "landed": {
+     "description": "Loop group element = product of holomorphic parts on complement regions.",
+     "output": "g = g_- * g_+"
+    },
+    "reason": "Landed review, batch 4: description and output graded imprecise. The factorization has a diagonal middle factor, trivial only generically.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-birkhoff-factorization.txt",
+      "quote": "is a generalization of the [[LU decomposition]] (i.e. Gauss elimination) to loop groups.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-birkhoff-factorization.txt",
+      "quote": "is given by a product <math>M=M^{+}M^{0}M^{-}</math>, where <math>M^{+}</math> has entries that are polynomials in <math>z</math>",
+      "fields": [
+       "description",
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-birkhoff-factorization.txt",
+      "quote": "and <math>M^{-}</math> has entries that are polynomials in <math>z^{-1}</math>. For a generic matrix we have <math>M^{0}=\\mathrm{id}</math>.",
+      "fields": [
+       "description",
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-136",
@@ -10613,24 +10842,54 @@
    "tags": [
     "decomposition"
    ],
-   "description": "Torus action on smooth proj variety -> cell decomposition by fixed points.",
+   "description": "A smooth projective variety with a torus action admits a torus-stable cellular decomposition (algebraic Morse theory).",
    "input": "Smooth proj variety + torus action",
    "output": "X = ⊔ X_i^+ (plus-cells)",
-   "preserved": "Cell structure, Betti numbers",
+   "preserved": "Cell structure",
    "broken": "Global smooth structure",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Torus action on smooth proj variety -> cell decomposition by fixed points.",
+     "preserved": "Cell structure, Betti numbers"
+    },
+    "reason": "Landed review, batch 4: description and preserved graded imprecise. Indexing by fixed points and the Betti numbers are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-torus-action.txt",
+      "quote": "The Białynicki-Birula decomposition says that a smooth projective algebraic ''T''-variety admits a ''T''-stable [[cellular decomposition]].",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-torus-action.txt",
+      "quote": "It is often described as algebraic [[Morse theory]].",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-137",
@@ -10657,14 +10916,25 @@
     "cloneStatus": "Abstract Pattern"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "PositiveLinearMap.gnsStarAlgHom",
+     "file": "Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean",
+     "match": "general",
+     "note": "A unital star representation on the GNS Hilbert space from any positive linear functional on a unital C*-algebra; a state is the normalized case. The cyclic vector is not part of this declaration.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-138",
@@ -10677,23 +10947,68 @@
     "generative"
    ],
    "description": "Iteratively doubles algebra: R->C->H->O->S. Each step breaks a property.",
-   "input": "Algebra A over F",
+   "input": "Algebra A with involution over F",
    "output": "Doubled algebra A'",
-   "preserved": "Norm form (weakened)",
-   "broken": "Properties lost: conjugation->commutativity->associativity->alternativity",
+   "preserved": "The norm N(z) = z z*, multiplicative while the algebra doubled is associative (through the octonions, the last normed division algebra)",
+   "broken": "Properties lost in turn: order, then commutativity, then associativity, then alternativity",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input",
+     "preserved",
+     "broken"
+    ],
+    "landed": {
+     "input": "Algebra A over F",
+     "preserved": "Norm form (weakened)",
+     "broken": "Properties lost: conjugation->commutativity->associativity->alternativity"
+    },
+    "reason": "Landed review, batch 4: input, preserved and broken graded imprecise. The construction needs an involution; the norm's behaviour is stated; the first property lost is order, not conjugation.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cayley-dickson-construction.txt",
+      "quote": "takes any algebra with involution to another algebra with involution of twice the dimension.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cayley-dickson-construction.txt",
+      "quote": "'''Proposition 2:''' If the ''F''-algebra is associative and <math>N(z) = zz^*</math>,then <math>N(zw) = N(z)N(w).</math>",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cayley-dickson-construction.txt",
+      "quote": "states that the reals, complex numbers, quaternions, and octonions are the only finite-dimensional [[normed algebra|normed]] [[division algebra]]s over the real numbers",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cayley-dickson-construction.txt",
+      "quote": "first losing [[ordered field|order]], then [[commutativity]] of multiplication, [[associativity]] of multiplication, and finally [[alternativity]].",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-139",
@@ -10713,14 +11028,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-140",
@@ -10731,24 +11047,74 @@
     "construction",
     "topology-bridge"
    ],
-   "description": "Simplicial set from category/space/algebraic data.",
-   "input": "Category, space, or algebraic data",
+   "description": "Simplicial set from a category (its nerve) or a topological space (its singular simplicial complex).",
+   "input": "A small category or a topological space",
    "output": "Simplicial set with face/degeneracy maps",
-   "preserved": "Homotopy type (Kan complexes)",
+   "preserved": "Homotopy type: simplicial sets are combinatorial models for the weak homotopy type of spaces",
    "broken": "Continuous structure",
    "complexity": "Depends",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Simplicial set from category/space/algebraic data.",
+     "input": "Category, space, or algebraic data",
+     "preserved": "Homotopy type (Kan complexes)"
+    },
+    "reason": "Landed review, batch 4: description, input and preserved graded imprecise. \"Algebraic data\" and the role of Kan complexes are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-simplicial-set.txt",
+      "quote": "### Nerve of a category",
+      "fields": [
+       "description",
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-simplicial-set.txt",
+      "quote": "### Singular simplicial complex of a topological space",
+      "fields": [
+       "description",
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-simplicial-set.txt",
+      "quote": "One of the main uses of simplicial sets is as combinatorial _models_ for  the (weak) [[homotopy type]] of [[topological spaces]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.nerveFunctor",
+     "file": "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean",
+     "match": "special",
+     "note": "The nerve functor from small categories to simplicial sets: the case of a category as input.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-141",
@@ -10759,7 +11125,7 @@
     "construction"
    ],
    "description": "Group ring derivation for combinatorial group theory/knot theory.",
-   "input": "Element of Z[F_n] + generator x_i",
+   "input": "Element of a free group G + generator g_i",
    "output": "Fox derivative in Z[F_n]",
    "preserved": "Alexander matrix structure",
    "broken": "Multiplication (replaced by derivation)",
@@ -10768,14 +11134,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Element of Z[F_n] + generator x_i"
+    },
+    "reason": "Landed review, batch 4: input graded imprecise. The source defines the derivative on group elements; the extension to the group ring is not in a fetched window.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-fox-derivative.txt",
+      "quote": "If <math>G</math> is a free group with identity element <math>e</math> and [[generating set of a group|generators]] <math>g_i</math>, then the Fox derivative with respect to <math>g_i</math> is a function from <math>G</math> into the [[integral group ring]] <math>\\Z G</math>",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-142",
@@ -10795,14 +11181,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.Adjunction",
+     "file": "Mathlib/CategoryTheory/Adjunction/Basic.lean",
+     "match": "exact",
+     "note": "An adjunction F left adjoint to G, given by a unit and a counit with the triangle identities; the hom-set bijection is Adjunction.homEquiv.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-143",
@@ -10813,24 +11210,71 @@
     "construction",
     "topology-bridge"
    ],
-   "description": "Subfactor -> Jones index + knot polynomial.",
+   "description": "Subfactor N of a type II_1 factor M to its Jones index [M:N], whose values are restricted; the theory of subfactors led to the Jones polynomial, which arises from a trace on braid group representations.",
    "input": "Type II_1 factor + subfactor",
-   "output": "Jones index, knot invariants",
-   "preserved": "Subfactor index, knot type",
+   "output": "Jones index [M:N]",
+   "preserved": "The index, with values 4 cos^2(pi/n) for n at least 3, or at least 4",
    "broken": "Specific vN algebra structure",
    "complexity": "Polynomial in crossing number",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "output",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Subfactor -> Jones index + knot polynomial.",
+     "output": "Jones index, knot invariants",
+     "preserved": "Subfactor index, knot type"
+    },
+    "reason": "Landed review, batch 4: description, output and preserved graded imprecise. A knot polynomial is not a function of the subfactor; it came from the theory through braid representations.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-subfactor.txt",
+      "quote": "The theory of subfactors led to the discovery of the",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-subfactor.txt",
+      "quote": "The '''index''' <math> [M:N] </math>  of a subfactor <math> N </math> is defined to be <math> \\dim_N(L^2(M)) </math>.",
+      "fields": [
+       "description",
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-jones-polynomial.txt",
+      "quote": "In Jones' approach, it resulted from a kind of \"trace\" of a particular braid representation into an algebra",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-subfactor.txt",
+      "quote": "then the index <math>[M:N]</math> is either of the form <math> 4 \\cos(\\pi /n)^2</math> for <math> n = 3,4,5,... </math>, or is at least <math> 4 </math>.",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-144",
@@ -10850,14 +11294,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-145",
@@ -10926,14 +11371,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-147",
@@ -10953,14 +11399,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-148",
@@ -10974,21 +11421,48 @@
    "description": "Simplicial complex Δ -> graded ring k[Δ] = k[x_i]/I_Δ.",
    "input": "Simplicial complex Δ + field k",
    "output": "Stanley-Reisner ring k[Δ]",
-   "preserved": "f-vector, h-vector, Hilbert series",
+   "preserved": "The Hilbert series, a sum over the faces of the complex, and the h-vector, the numerator of the coarse Hilbert series",
    "broken": "Geometric realization",
    "complexity": "Polynomial",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "f-vector, h-vector, Hilbert series"
+    },
+    "reason": "Landed review, batch 4: preserved graded imprecise. The f-vector is not named in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-stanley-reisner-ring.txt",
+      "quote": "\\sum_{\\sigma\\in\\Delta}\\prod_{i\\in\\sigma}\\frac{x_i}{1-x_i}. </math>",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-stanley-reisner-ring.txt",
+      "quote": "then the coefficients (''h''<sub>0</sub>, ..., ''h''<sub>''d''</sub>) of the numerator form the ''h''-vector of the simplicial complex&nbsp;Δ.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-149",
@@ -11002,21 +11476,41 @@
    "description": "Holomorphic bundle on twistor space -> self-dual Yang-Mills connection.",
    "input": "Holomorphic bundle on CP^3",
    "output": "Self-dual connection on R^4",
-   "preserved": "Self-duality, gauge class",
+   "preserved": "Self-duality: the bundles correspond to solutions of the self-dual Yang-Mills equations",
    "broken": "Twistor formulation",
    "complexity": "Depends",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Self-duality, gauge class"
+    },
+    "reason": "Landed review, batch 4: preserved graded imprecise. Gauge classes are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-penrose-transform.txt",
+      "quote": "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-150",

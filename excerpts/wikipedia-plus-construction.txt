@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Plus construction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1256517627
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 490da63c65b70aae41074dc79e6983a807f2997afc75c02ee7d255afec1c260c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''plus construction''' is a method for simplifying the [[fundamental group]] of a space without changing its [[homology (mathematics)|homology]] and [[cohomology]] [[group (mathematics)|group]]s.
+
+if <math>X</math> is a based connected [[CW complex]] and <math>P</math> is a [[Perfect_group|perfect]] [[normal subgroup]] of <math>\pi_1(X)</math> then a map <math>f\colon X \to Y</math> is called a +-construction relative to <math>P</math> if <math>f</math> induces an isomorphism on homology, and <math>P</math> is the kernel of <math>\pi_1(X) \to \pi_1(Y)</math>.
+
+and was used by [[Daniel Quillen]] to define [[algebraic K-theory]].

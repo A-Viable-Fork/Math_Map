@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Strähle construction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384694203
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: b2f494a7031cc2370a51c37e0fe3d8b9ccf3a79797fe6f41e7dd0cb7a8f5a013
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[geometry|geometric]] method for determining the lengths for a series of [[string vibration|vibrating strings]] with uniform diameters and tensions to sound [[pitch (music)|pitches]] in a specific rational [[musical temperament|tempered]] [[musical tuning]].
+
+today it is generally considered to be an approximation of [[equal temperament]].
+
+'''Strähle's construction'''

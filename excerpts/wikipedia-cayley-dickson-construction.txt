@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Cayley-Dickson construction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378318748
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 160c62207550276d96828c8380f9802bc1be39b5d71fbbc4133183c62adbab42
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+produces a sequence of [[algebra over a field|algebras]] over the [[field (mathematics)|field]] of [[real number]]s, each with twice the [[dimension of a vector space|dimension]] of the previous one.
+
+The symmetries of the real field disappear as the Cayley–Dickson construction is repeatedly applied: first losing [[ordered field|order]], then [[commutativity]] of multiplication, [[associativity]] of multiplication, and finally [[alternativity]].
+
+More generally, the Cayley–Dickson construction takes any algebra with involution to another algebra with involution of twice the dimension.
+
+states that the reals, complex numbers, quaternions, and octonions are the only finite-dimensional [[normed algebra|normed]] [[division algebra]]s over the real numbers
+
+'''Proposition 2:''' If the ''F''-algebra is associative and <math>N(z) = zz^*</math>,then <math>N(zw) = N(z)N(w).</math>

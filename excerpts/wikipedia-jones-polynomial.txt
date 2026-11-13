@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Jones polynomial (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1385393689
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 245b37419ff5a797be5daec538ee7b5e490a912a5e705e6159d180b7b9c365ea
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Jones' original formulation of his polynomial came from his study of operator algebras.  In Jones' approach, it resulted from a kind of "trace" of a particular braid representation into an algebra

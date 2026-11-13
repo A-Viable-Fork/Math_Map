@@ -470,6 +470,14 @@ const LANDED = [
   K("D2-099", "description", "TopCat.Presheaf.pushforward", "Mathlib/Topology/Sheaves/Presheaf.lean", "exact", "The pushforward of a presheaf along a continuous map, by precomposition with preimage of opens: f_* F(U) = F(f^-1 U)."),
   K("D2-101", "preserved", "TopCat.Presheaf.pullbackPushforwardAdjunction", "Mathlib/Topology/Sheaves/Presheaf.lean", "related", "Pullback of presheaves is left adjoint to pushforward; the landed claim concerns the pullback of sheaves of modules, f^*, which this declaration does not cover."),
   K("D2-114", "output", "AlgebraicGeometry.ProjectiveSpectrum.Proj.structureSheaf", "Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean", "ingredient", "The structure sheaf of Proj of a graded ring, which makes it a scheme; O(1) is not this declaration."),
+  // Batch 4: D2-124 to D2-149.
+  K("D2-127", "description", "Rep.indResAdjunction", "Mathlib/RepresentationTheory/Induced.lean", "related", "Induction is left adjoint to restriction along any group homomorphism (Frobenius reciprocity); the landed text says right adjoint, which needs finite index."),
+  K("D2-127", "description", "Rep.coindResAdjunction", "Mathlib/RepresentationTheory/FiniteIndex.lean", "special", "For a subgroup of finite index, coinduction (isomorphic there to induction) is left adjoint to restriction, so induction is also the right adjoint: the case where the landed claim holds."),
+  K("D2-129", "description", "Representation.ofQuotient", "Mathlib/RepresentationTheory/Basic.lean", "related", "A representation of G trivial on the normal subgroup S factors through G/S: the converse of inflation, which composes a representation of G/S with the quotient map."),
+  K("D2-130", "description", "Representation.quotientToInvariants", "Mathlib/RepresentationTheory/Invariants.lean", "related", "A representation of G gives one of G/S on the S-invariants: deflation by invariants. The landed \"averaging\" is not this declaration."),
+  K("D2-137", "output", "PositiveLinearMap.gnsStarAlgHom", "Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean", "general", "A unital star representation on the GNS Hilbert space from any positive linear functional on a unital C*-algebra; a state is the normalized case. The cyclic vector is not part of this declaration."),
+  K("D2-140", "output", "CategoryTheory.nerveFunctor", "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean", "special", "The nerve functor from small categories to simplicial sets: the case of a category as input."),
+  K("D2-142", "description", "CategoryTheory.Adjunction", "Mathlib/CategoryTheory/Adjunction/Basic.lean", "exact", "An adjunction F left adjoint to G, given by a unit and a counit with the triangle identities; the hom-set bijection is Adjunction.homEquiv."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

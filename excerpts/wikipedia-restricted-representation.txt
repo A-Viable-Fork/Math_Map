@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Restricted representation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380986198
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 67b9970b2df464bcf6526c13ede767bef4a97fba082677c794b584faf9b681f6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''restriction''' forms a [[Group representation|representation]] of a [[subgroup]] using a known representation of the whole [[group (mathematics)|group]].
+
+For any group ''G'', its [[subgroup]] ''H'', and a [[linear representation]] ''ρ'' of ''G'', the restriction of ''ρ'' to ''H''
+
+describe the restriction of an irreducible [[complex representation]] ({{pi}},&nbsp;''V'') of a [[classical group]] ''G'' to a classical subgroup ''H'', i.e. the multiplicity with which an irreducible representation (''σ'',&nbsp;''W'') of ''H'' occurs in&nbsp;{{pi}}.

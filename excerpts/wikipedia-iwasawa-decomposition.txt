@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Iwasawa decomposition (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378613303
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: d013c7aeca926abc86465d16f21fed6d44291c40458545750ad591a32f01f650
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: d013c7aeca926abc86465d16f21fed6d44291c40458545750ad591a32f01f650
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 the '''Iwasawa decomposition''' (aka '''KAN''' from its expression) of a [[semisimple Lie group]]
@@ -18,3 +18,9 @@ where ''K'' becomes a (disconnected) [[maximal compact subgroup]]
 meaning there is an analytic [[diffeomorphism]] (but not a group homomorphism) from the [[manifold]] <math> K \times A \times N </math> to the Lie group <math> G </math>
 
 (but not a group homomorphism)
+
+*<math> \mathfrak{a}_0 </math> is a maximal abelian subalgebra of <math> \mathfrak{p}_0 </math>
+
+*<math> \mathfrak{n}_0 </math> is a [[nilpotent Lie algebra]]
+
+meaning there is an analytic [[diffeomorphism]] (but not a group homomorphism) from the [[manifold]] <math> K \times A \times N </math> to the Lie group <math> G </math>, sending <math> (k,a,n) \mapsto kan </math>.

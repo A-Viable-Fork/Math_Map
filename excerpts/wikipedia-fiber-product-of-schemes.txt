@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Fiber product of schemes (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1372204579
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c1a1d0cdbe4ed55e8b43267f87bb0a7ebed76efeadf795e9186111ab61429a4a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''fiber product of schemes''' is a fundamental construction.
+
+That is, for any morphisms of schemes ''X'' → ''Y'' and ''Z'' → ''Y'', there is a scheme ''X'' ×<sub>''Y''</sub> ''Z'' with morphisms to ''X'' and ''Z''
+
+and which is [[universal property|universal]] with that property.
