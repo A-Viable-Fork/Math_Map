@@ -5,7 +5,7 @@
 //   the packet names; reason is one line and, for any verdict but confirmed, names the part no window states.
 //   fetched, where present, is the grade after a new source was windowed (scripts/excerpt.mjs) for a field the
 //   named files left unsupported: { verdict, quotes, reason }; it is reported apart from the blind comparison.
-//   Every quote occurs in its file (scripts/strict.mjs).
+//   Every quote occurs in its file (scripts/strict.mjs). causes, written after unblinding, says why each disagreement arose.
 // Invariant: data only; a second reading beside the review's grade, never an edit to it.
 "use strict";
 
@@ -282,11 +282,62 @@ const GRADES = {
     "Strict associativity fails."),
 };
 
+// Written after unblinding, from the disagreement list: why each disagreement arose. part: a window states some of the
+//   claim and a part is in no window; names: the windows name the object, operation or an ingredient (or carry the claim
+//   only in a cut fragment or a cross-reference label) and state none of it; detail: a window states a detail otherwise
+//   (a hypothesis, a variance, a constant); reads: the strict reader reads a window as stating what the review did not.
+const CAUSES = {
+  S002: "part",
+  S005: "names",
+  S007: "part",
+  S010: "part",
+  S023: "part",
+  S025: "detail",
+  S027: "names",
+  S031: "part",
+  S032: "part",
+  S035: "part",
+  S036: "reads",
+  S037: "part",
+  S040: "names",
+  S042: "part",
+  S044: "part",
+  S047: "part",
+  S049: "part",
+  S051: "names",
+  S059: "part",
+  S060: "names",
+  S061: "names",
+  S063: "detail",
+  S068: "names",
+  S074: "names",
+  S081: "names",
+  S082: "part",
+  S088: "names",
+  S089: "names",
+  S092: "part",
+  S096: "part",
+  S106: "detail",
+  S113: "names",
+  S115: "part",
+  S117: "part",
+  S119: "part",
+  S125: "part",
+  S126: "part",
+  S131: "part",
+  S135: "names",
+  S136: "part",
+  S139: "names",
+  S140: "part",
+  S144: "detail",
+};
+
 const READING = {
   reader: "A second session of the same model family, blind to the review's grades, quotes and notes for the sampled fields",
   independence: "Blind to the review's verdicts for every sampled field (D7-001 to D7-004, seen before the draw, are out of the frame); same model family as the first grader, and the excerpt files it reads were windowed by the first grader, so errors may be correlated.",
   rule: "Strict [ruling: operator, 2026-11-13]: confirmed only when a quoted window states the field's claim itself, not merely names the object or operation; a claim of several parts is confirmed only if every part is quoted, otherwise imprecise or unsupported, saying which part is missing.",
   grades: GRADES,
+  causes: CAUSES,
 };
 
 module.exports = { READING };
