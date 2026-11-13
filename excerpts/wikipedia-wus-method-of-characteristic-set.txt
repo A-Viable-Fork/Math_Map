@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Wu's method of characteristic set (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 4e35a77e7b7d828e5099a4a6ec1c77cef1a83c0fd762db1a5295db3e14afeee9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]
+
+This method is based on the mathematical concept of '''characteristic set'''
+
+Wu's method is powerful for [[automatic theorem proving|mechanical theorem proving]] in [[elementary geometry]]
+
+Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true), or an irreducible remainder is left behind (in which case the statement is false).
+
+every polynomial in G is [[regular chain|pseudo-reduced]] to zero with respect to T.
+
+given a finite subset F of polynomials, there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:
+
+:<math>V(F) = W(T_1)\cup \cdots \cup W(T_e), </math>

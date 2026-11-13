@@ -6,17 +6,17 @@ Entries: 2022.
 
 | Typed | Entries | Share |
 |---|---|---|
-| Every operand, with existing kinds only | 721 | 35.7% |
+| Every operand, with existing kinds only | 722 | 35.7% |
 | Every operand, using candidate kinds | 40 | 2.0% |
-| At least one input and one output kind | 151 | 7.5% |
-| Neither side | 1110 | 54.9% |
+| At least one input and one output kind | 152 | 7.5% |
+| Neither side | 1108 | 54.8% |
 
 ## By domain
 
 | Domain | Entries | Fully typed | Partly | Neither |
 |---|---|---|---|---|
 | D1 | 124 | 58 | 19 | 47 |
-| D2 | 205 | 55 | 15 | 135 |
+| D2 | 205 | 56 | 16 | 133 |
 | D3 | 189 | 58 | 8 | 123 |
 | D4 | 439 | 183 | 39 | 217 |
 | D5 | 160 | 51 | 11 | 98 |
@@ -35,8 +35,8 @@ Entries: 2022.
 | space | 132 | carrier |
 | manifold | 112 | carrier |
 | category | 109 | carrier |
+| set | 98 | carrier |
 | matrix | 98 | carrier |
-| set | 97 | carrier |
 | element | 92 | carrier |
 | group | 91 | carrier |
 | algebra | 88 | carrier |
@@ -54,10 +54,10 @@ Entries: 2022.
 | polynomial | 28 | carrier |
 | matroid | 25 | carrier |
 | proof | 24 | carrier |
+| curve | 23 | carrier |
 | relation | 23 | carrier |
 | model | 23 | carrier |
 | sheaf | 21 | carrier |
-| curve | 21 | carrier |
 | bundle | 20 | carrier |
 | ideal | 19 | carrier |
 | variety | 19 | carrier |

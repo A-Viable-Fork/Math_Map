@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Negative pedal curve (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1315093342
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 24deb9d00276c0aeb7f16bf4eb88b117efea993718e0f5b17cf5f796d65cdb14
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+For a given curve in the plane and a given fixed point ''P'', called the '''pedal point''', the '''negative pedal curve''' is the [[envelope (mathematics)|envelope]] of the lines ''XP'' for which ''X'' lies on the given curve.
+
+The negative pedal curve of a [[pedal curve]] with the same pedal point is the original curve.

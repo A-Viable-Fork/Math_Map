@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Resultant (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384932724
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 5e64fae772cf89c23af4a6f8b1622567be5c9f318573487cf9d4601c5ce4306c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* The resultant of two polynomials with coefficients in an integral domain is zero if and only if they have a common root in an [[algebraically closed field]] containing the coefficients.

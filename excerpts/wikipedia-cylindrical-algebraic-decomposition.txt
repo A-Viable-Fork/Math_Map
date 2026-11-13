@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Cylindrical algebraic decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1222321659
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: be7bb374e31688d660ddebda97f5d3c037e26874f5e22be46afbdfc5ac590fe2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''cylindrical algebraic decomposition''' ('''CAD''') is a notion, along with an [[algorithm]] to compute it
+
+Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>, a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0.
+
+CAD provides an effective version of [[quantifier elimination]] over the reals

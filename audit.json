@@ -31323,6 +31323,1355 @@
    "sources": {
     "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380761637"
    }
+  },
+  {
+   "id": "D2-150",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-colombeau-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "is linearly embedded into <math>A(\\mathbb{R})</math>",
+     "note": "The distributions are the input."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "i.e., they preserve the product of smooth (infinitely differentiable) funct",
+     "note": "Distributions embed linearly, as stated; the multiplication kept is that of smooth functions, and Schwartz's result rules out keeping the product of continuous functions.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "is linearly embedded into <math>A(\\mathbb{R})</math>"
+      },
+      {
+       "src": "c",
+       "quote": "which basically states that there cannot be a differential algebra containing the space of distributions and preserving the product of continuous functions."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Classical function space\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched Colombeau algebras: none at the pin.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1292219323"
+   }
+  },
+  {
+   "id": "D2-151",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "m": "excerpts/wikipedia-monoid-ring.txt",
+    "a": "excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The monoid ring or '''monoid algebra''' of ''G'' over ''R'', denoted ''R''[''G''] or ''RG'', is the set of formal sums"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The monoid ring or '''monoid algebra''' of ''G'' over ''R'', denoted ''R''[''G''] or ''RG'', is the set of formal sums",
+     "note": "Z[M] is the case R = Z."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "The monoid ring or '''monoid algebra''' of ''G'' over ''R''",
+     "note": "Any monoid; a commutative one is a case."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "More formally, ''R''[''G''] is the free ''R''-module on the set ''G'', endowed with ''R''-linear multiplication defined on the base elements by ''g·h'' := ''gh''"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "is the set of formal sums"
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1228471520",
+    "a": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+   }
+  },
+  {
+   "id": "D2-152",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "g": "excerpts/wikipedia-group-ring.txt",
+    "a": "excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]], constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": ":<math>x\\mapsto\\sum_{uv=x}f(u)g(v)=\\sum_{u\\in G}f(u)g(u^{-1}x).</math>",
+     "note": "The convolution product.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "The apparatus of group rings is especially useful in the theory of [[group representation]]s.",
+     "note": "The group elements form the basis of the free module.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "written as what are called \"formal linear combinations of elements of <math>G</math> with coefficients in"
+    }
+   },
+   "contra": [
+    "broken"
+   ],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370986299",
+    "a": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+   }
+  },
+  {
+   "id": "D2-155",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "l": "excerpts/wikipedia-lindenbaum-tarski-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "consists of the [[equivalence class]]es of [[Sentence (mathematical logic)|sentence]]s of the theory (i.e., the [[Equivalence class|quotient]])"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "under the [[equivalence relation]] ~ defined such that ''p'' ~ ''q'' exactly when ''p'' and ''q'' are provably equivalent in ''T''.",
+     "note": "A Boolean algebra when negation is present and the logic classical, as for a propositional theory.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "When [[negation]] is also present in ''T'', then ''A'' is a [[Boolean algebra (structure)|Boolean algebra]], provided the logic is [[classical logic|classical]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "consists of the [[equivalence class]]es of [[Sentence (mathematical logic)|sentence]]s of the theory"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "then ''A'' is a [[Boolean algebra (structure)|Boolean algebra]], provided the logic is [[classical logic|classical]]."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "exactly when ''p'' and ''q'' are provably equivalent in ''T''.",
+     "note": "Provable equivalence is what the classes record, as stated; completeness is not a kept invariant: the source relates ultrafilters to complete consistent theories.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "Moreover, an [[ultrafilter]] in ''A'' corresponds to a [[complete theory|complete]] consistent theory"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Syntactic structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Lindenbaum-Tarski algebras: none at the pin.",
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1344326806"
+   }
+  },
+  {
+   "id": "D2-156",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "b": "excerpts/wikipedia-buchbergers-algorithm.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]], which is another set of polynomials that have the same common zeros",
+     "note": "Computes a Gröbner basis, as stated; \"reduces multivariate division to a deterministic process\" is not in a fetched window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "with respect to the given [[monomial ordering]]",
+     "note": "A generating set and a monomial ordering."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}",
+     "note": "The ideal is kept (G is a Gröbner basis for I); canonicity and decidable membership are not in a fetched window.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "which is another set of polynomials that have the same common zeros"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original generators\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description",
+    "preserved"
+   ],
+   "mathlib": "Searched Buchberger and Gröbner bases: Mathlib has the multivariate division algorithm for a monomial order but no Buchberger algorithm at the pin.",
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1359915802"
+   }
+  },
+  {
+   "id": "D2-157",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "w": "excerpts/wikipedia-wus-method-of-characteristic-set.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "Wu's method is powerful for [[automatic theorem proving|mechanical theorem proving]] in [[elementary geometry]]",
+     "more": [
+      {
+       "src": "w",
+       "quote": "This method is based on the mathematical concept of '''characteristic set'''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "This method is based on the mathematical concept of '''characteristic set'''"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": "Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true), or an irreducible remainder is left behind (in which case the statement is false).",
+     "note": "Theorem validity is decided by the remainder, as stated; radical membership is not in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Equation form\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Wu's method and characteristic sets: none at the pin.",
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980"
+   }
+  },
+  {
+   "id": "D2-158",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-differential-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "<em>Ritt's reduction algorithm</em> identifies integers"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "A <em>characteristic set</em> <math display=\"inline\">C</math> is the [[Arg max|lowest ranked]] autoreduced subset among all the ideal's autoreduced subsets",
+     "more": [
+      {
+       "src": "d",
+       "quote": "<em>Ritt's reduction algorithm</em> identifies integers"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "<em>Ritt's reduction algorithm</em> identifies integers",
+     "note": "Differential polynomials of a differential ideal."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "An autoreduced set is <em>[[Triangular decomposition|triangular]]</em> meaning each polynomial element has a distinct leading derivative.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "A <em>characteristic set</em> <math display=\"inline\">C</math> is the [[Arg max|lowest ranked]] autoreduced subset"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "\"Differential ideal structure\" is a gloss; no fetched window states what is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original equations\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched differential polynomials and Ritt's algorithm: none at the pin.",
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1372458128"
+   }
+  },
+  {
+   "id": "D2-159",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "w": "excerpts/wikipedia-wus-method-of-characteristic-set.txt",
+    "d": "excerpts/wikipedia-differential-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source names Ritt's decomposition algorithm."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": ":<math>V(F) = W(T_1)\\cup \\cdots \\cup W(T_e), </math>",
+     "note": "The fetched decomposition writes the zero set as a union of W(T_i), zeros of characteristic sets off their initials; that the pieces are irreducible is not stated, and the differential analogue's components are not necessarily prime.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "These regular differential radical ideals, represented by characteristic sets, are not necessarily prime ideals"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": "given a finite subset F of polynomials, there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:",
+     "note": "The input is a finite set of polynomials, not a characteristic set."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": "there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:",
+     "note": "Characteristic sets whose quasi-varieties cover V(F); irreducibility is not stated."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states that the components are irreducible."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Reducible structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description",
+    "input",
+    "output"
+   ],
+   "mathlib": "Searched as for D2-158: none at the pin.",
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980",
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1372458128"
+   }
+  },
+  {
+   "id": "D2-160",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-cylindrical-algebraic-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''cylindrical algebraic decomposition''' ('''CAD''') is a notion, along with an [[algorithm]] to compute it"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "CAD provides an effective version of [[quantifier elimination]] over the reals"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>",
+     "note": "The input is a set of polynomials, not a semi-algebraic set."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "into connected [[semialgebraic set]]s called ''cells''"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "on which each polynomial has constant sign, either +, − or 0."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Continuous structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched cylindrical algebraic decomposition: none at the pin.",
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1222321659"
+   }
+  },
+  {
+   "id": "D2-161",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "e": "excerpts/wikipedia-elimination-theory.txt",
+    "g": "excerpts/wikipedia-grobner-basis.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "'''elimination theory''' is the classical name for algorithmic approaches to eliminating some variables between [[polynomial]]s of several variables"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "'''elimination theory''' is the classical name for algorithmic approaches to eliminating some variables between [[polynomial]]s of several variables, in order to solve [[systems of polynomial equations]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "eliminating some variables between [[polynomial]]s of several variables"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "then <math>G\\cap K[Y]</math> is a Gröbner basis of <math>I\\cap K[Y]</math> (this ideal is often called the ''elimination ideal'')."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "g",
+     "quote": "the ([[Zariski closure]] of) the projection of the algebraic set defined by the ideal ''I'' into the ''Y''-subspace is defined by the ideal <math>I\\cap K[Y].</math>",
+     "note": "The elimination ideal defines the Zariski closure of the projection, not the projection itself."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Eliminated variable info\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched elimination ideals: none at the pin.",
+   "falsify": {
+    "field": "preserved",
+    "claim": "Elimination keeps the projected solution set.",
+    "attempt": "Looked for points of the closure missed by the projection: the source says the elimination ideal defines the Zariski closure of the projection (for xy = 1 projected to y, the closure adds y = 0, inferred).",
+    "outcome": "falsified"
+   },
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351053820",
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743"
+   }
+  },
+  {
+   "id": "D2-162",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "r": "excerpts/wikipedia-resultant.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Polynomial.Resultant.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "* The resultant of two polynomials with coefficients in an integral domain is zero if and only if they have a common root"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "* The resultant of two polynomials with coefficients in an integral domain is zero if and only if they have a common root in an [[algebraically closed field]] containing the coefficients.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def resultant (f g : R[X]) (m : ℕ := f.natDegree) (n : ℕ := g.natDegree) : R :="
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "The resultant of two polynomials with coefficients in an integral domain"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "(sylvester f g m n).det"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "is zero if and only if they have a common root in an [[algebraically closed field]] containing the coefficients.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "resultant f g = 0 ↔ (f ≠ 0 ∨ g ≠ 0) ∧ ¬ IsCoprime f g"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual polynomial structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384932724",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-163",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-discriminant.txt",
+    "m": "excerpts/mathlib-Mathlib.RingTheory.Polynomial.Resultant.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "d",
+     "quote": ":<math>\\operatorname{Disc}_x(A) = \\frac{(-1)^{n(n-1)/2}}{a_n} \\operatorname{Res}_x(A,A')</math>",
+     "note": "The resultant of f with f', divided by the leading coefficient and signed; it detects multiple roots, as stated.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "For a polynomial with coefficients in a [[field (mathematics)|field]], the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]] in an [[algebraically closed extension]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "For a polynomial with coefficients in a [[field (mathematics)|field]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "noncomputable def discr (f : R[X]) : R :="
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]] in an [[algebraically closed extension]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual root structure\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381696192",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-164",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-polynomial-greatest-common-divisor.txt",
+    "w": "excerpts/wikipedia-wus-method-of-characteristic-set.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "the '''pseudo-remainder''' of the pseudo-division of {{math|''A''}} by {{math|''B''}}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "has been introduced to allow a variant of Euclid's algorithm for which all remainders belong to {{math|''Z''[''X'']}}.",
+     "note": "Multiplying by a power of the leading coefficient avoids dividing by it; characteristic-set methods pseudo-reduce.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "<math display=\"block\">\\operatorname{prem}(A,B) = \\operatorname{rem}(\\operatorname{lc}(B)^{a-b+1}A,B),</math>"
+      },
+      {
+       "src": "w",
+       "quote": "every polynomial in G is [[regular chain|pseudo-reduced]] to zero with respect to T."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "the '''pseudo-remainder''' of the pseudo-division of {{math|''A''}} by {{math|''B''}}"
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "denoted by {{math|prem(''A'',''B'')}} is",
+     "note": "The pseudo-remainder is stated; a pseudo-quotient is not in a fetched window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "<math display=\"block\">\\operatorname{prem}(A,B) = \\operatorname{rem}(\\operatorname{lc}(B)^{a-b+1}A,B),</math>"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Standard division\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "output"
+   ],
+   "mathlib": "Searched pseudo-division: Mathlib divides by monic polynomials (Polynomial.divByMonic) but has no pseudo-division at the pin.",
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364061219",
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980"
+   }
+  },
+  {
+   "id": "D2-165",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "o": "excerpts/wikipedia-ore-condition.txt",
+    "m": "excerpts/mathlib-Mathlib.GroupTheory.OreLocalization.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The goal is to construct the right ring of fractions ''R''[''S''<sup>−1</sup>] with respect to a [[multiplicative subset]] ''S''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "For every right Ore domain ''R'', there is a unique (up to natural ''R''-isomorphism) division ring ''D'' containing ''R'' as a subring such that every element of ''D'' is of the form ''rs''<sup>−1</sup> for ''r'' in ''R'' and ''s'' nonzero in ''R''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def OreLocalization {R : Type*} [Monoid R] (S : Submonoid R) [OreSet S]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "The goal is to construct the right ring of fractions ''R''[''S''<sup>−1</sup>] with respect to a [[multiplicative subset]] ''S''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "and have a ring structure on the set ''R''[''S''<sup>−1</sup>].",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def OreLocalization {R : Type*} [Monoid R] (S : Submonoid R) [OreSet S]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Commutative fraction rules\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380394804",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/OreLocalization/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-166",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-centralizer-and-normalizer.txt",
+    "m": "excerpts/mathlib-Mathlib.GroupTheory.Subgroup.Centralizer.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\mathrm{C}_G(S) = \\left\\{g \\in G \\mid gs = sg \\text{ for all } s \\in S\\right\\}"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\mathrm{C}_G(S) = \\left\\{g \\in G \\mid gs = sg \\text{ for all } s \\in S\\right\\}"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\mathrm{C}_G(S) = \\left\\{g \\in G \\mid gs = sg \\text{ for all } s \\in S\\right\\}",
+     "note": "A group and a subset."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "Clearly <math>C_G(S) \\subseteq N_G(S)</math> and both are subgroups of <math>G</math>.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def centralizer (s : Set G) : Subgroup G where"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "gs = sg \\text{ for all } s \\in S"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-commuting elements\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Subgroup/Centralizer.lean"
+   }
+  },
+  {
+   "id": "D2-167",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "c": "excerpts/wikipedia-centralizer-and-normalizer.txt",
+    "m": "excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Defs.txt",
+    "n": "excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\mathrm{N}_G(S) = \\left\\{ g \\in G \\mid gS = Sg \\right\\} = \\left\\{g \\in G \\mid gSg^{-1} = S\\right\\},</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": ":<math>\\mathrm{N}_G(S) = \\left\\{ g \\in G \\mid gS = Sg \\right\\} = \\left\\{g \\in G \\mid gSg^{-1} = S\\right\\},</math>"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "then the normalizer <math>N_G(S)</math> is the largest subgroup",
+     "note": "A group and a subgroup."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "def normalizer (S : Set G) : Subgroup G where"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "then the normalizer <math>N_G(S)</math> is the largest subgroup <math>G' \\subseteq G</math> where <math>S</math> is a [[normal subgroup]] of <math>G'</math>.",
+     "more": [
+      {
+       "src": "n",
+       "quote": "instance (priority := 100) normal_in_normalizer : (H.subgroupOf <| normalizer H).Normal"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Non-normalizing elements\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Defs.lean",
+    "n": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+   }
+  },
+  {
+   "id": "D2-169",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "f": "excerpts/wikipedia-freudenthal-magic-square.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is a construction relating several [[Lie algebra]]s (and their associated [[Lie group]]s)."
+    },
+    "description": {
+     "verdict": "wrong",
+     "src": "f",
+     "quote": "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]",
+     "note": "Not all exceptional Lie algebras: G2 is missing from the square."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "It associates a Lie algebra to a pair of division algebras ''A'', "
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "It associates a Lie algebra to a pair of division algebras ''A'', "
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]",
+     "note": "The exceptional classification is covered except for G2."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Individual algebra details\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Freudenthal magic square and exceptional Lie algebras: none at the pin.",
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351313031"
+   }
+  },
+  {
+   "id": "D2-170",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-matrix-similarity.txt",
+    "m": "excerpts/mathlib-Mathlib.LinearAlgebra.Matrix.NonsingularInverse.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "are called '''similar''' if there exists an [[invertible matrix|invertible]] ''n''-by-''n'' matrix {{mvar|P}} such that"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "<math display=\"block\">B = P^{-1} A P .</math>",
+     "more": [
+      {
+       "src": "s",
+       "quote": "{{Short description|Equivalence under a change of basis (linear algebra)}}"
+      },
+      {
+       "src": "s",
+       "quote": "**[[Eigenvalues and eigenvectors|Eigenvalues]], and their [[Algebraic multiplicity|algebraic multiplicities]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "if there exists an [[invertible matrix|invertible]] ''n''-by-''n'' matrix {{mvar|P}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "<math display=\"block\">B = P^{-1} A P .</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "similar matrices share all properties of their shared underlying operator:",
+     "more": [
+      {
+       "src": "s",
+       "quote": "*[[Characteristic polynomial]], and attributes that can be derived from it:"
+      },
+      {
+       "src": "s",
+       "quote": "**[[Determinant]]"
+      },
+      {
+       "src": "s",
+       "quote": "**[[Trace (linear algebra)|Trace]]"
+      },
+      {
+       "src": "s",
+       "quote": "*[[Minimal polynomial (linear algebra)|Minimal polynomial]]"
+      },
+      {
+       "src": "m",
+       "quote": "det (M * N * M⁻¹) = det N"
+      },
+      {
+       "src": "m",
+       "quote": "trace (M * N * M⁻¹) = trace N"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states that the entries change; the source says only that eigenspaces are transformed by P."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1303684723",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean"
+   }
+  },
+  {
+   "id": "D2-171",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "d": "excerpts/wikipedia-dual-curve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''dual curve''' of a given [[plane curve]] {{mvar|C}} is a curve in the [[Duality (projective geometry)|dual projective plane]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "consisting of the set of lines [[tangent]] to {{mvar|C}}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''dual curve''' of a given [[plane curve]] {{mvar|C}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "is a curve in the [[Duality (projective geometry)|dual projective plane]] consisting of the set of lines [[tangent]] to {{mvar|C}}."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "d",
+     "quote": "The [[Plücker formula]]s give the degree of the dual in terms of ''d'' and the number and types of singular points of {{mvar|X}}.",
+     "note": "The Plucker formulas are stated; biduality is not in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Point parametrization\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched dual curves: none at the pin.",
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1348688112"
+   }
+  },
+  {
+   "id": "D2-172",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-parallel-curve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a constant ''[[normal distance]]'' from a given curve."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "*As for [[parallel (geometry)|parallel lines]], a normal line to a curve is also normal to its parallels.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "that means: the tangent vectors for a fixed parameter are parallel."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "*<math>k_d(t)=\\frac{k(t)}{1+dk(t)},\\quad</math> with <math>k(t)</math> the  [[curvature]] of the given curve",
+     "more": [
+      {
+       "src": "p",
+       "quote": "*When parallel curves are constructed they will have [[Cusp (singularity)|cusp]]s when the distance from the curve matches the radius of [[curvature]]."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched parallel and offset curves: none at the pin.",
+   "falsify": {
+    "field": "broken",
+    "claim": "Parallel curves change curvature and can acquire cusps.",
+    "attempt": "Checked the curvature formula and the cusp condition in the source: curvature becomes k/(1 + dk), and cusps appear where d equals the radius of curvature.",
+    "outcome": "survived"
+   },
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380622918"
+   }
+  },
+  {
+   "id": "D2-173",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "e": "excerpts/wikipedia-evolute.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''evolute''' of a [[curve]] is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "the '''evolute''' of a [[curve]] is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is the parametric representation of a [[regular curve]] in the plane with its curvature nowhere 0"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "*For any arc of the evolute that does not include a cusp, the length of the arc equals the difference between the radii of curvature at its endpoints.",
+     "note": "The centers and radii of curvature are carried by the evolute."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original parametrization\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched evolutes: none at the pin.",
+   "sources": {
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369257467"
+   }
+  },
+  {
+   "id": "D2-174",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "i": "excerpts/wikipedia-involute.txt",
+    "e": "excerpts/wikipedia-evolute.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "An example of the involute of a curve is the [[Locus (mathematics)|locus]] of a point on a piece of taut string"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The [[evolute]] of an involute is the original curve."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "e",
+     "quote": "A curve is the evolute of any of its involutes."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "e",
+     "quote": "A curve is the evolute of any of its involutes.",
+     "note": "An involute, one of several (\"any of its involutes\"); the original curve is recovered as the evolute of an involute, not as an involute of its evolute in a fetched window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "The [[evolute]] of an involute is the original curve."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Parametrization\" is a gloss; no source states it."
+    }
+   },
+   "contra": [
+    "output"
+   ],
+   "mathlib": "Searched involutes: none at the pin.",
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1363148116",
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369257467"
+   }
+  },
+  {
+   "id": "D2-175",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "p": "excerpts/wikipedia-pedal-curve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a '''pedal curve''' of a given curve results from the [[orthogonal projection]] of a fixed point on the [[tangent line]]s of this curve."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a '''pedal curve''' of a given curve results from the [[orthogonal projection]] of a fixed point on the [[tangent line]]s of this curve."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "of a fixed point on the [[tangent line]]s of this curve."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "a '''pedal curve''' of a given curve results from the [[orthogonal projection]]"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "\"Tangent structure\" is a gloss; no source states what is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Original shape\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched pedal curves: none at the pin.",
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381818381"
+   }
+  },
+  {
+   "id": "D2-176",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "n": "excerpts/wikipedia-negative-pedal-curve.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "the '''negative pedal curve''' is the [[envelope (mathematics)|envelope]] of the lines ''XP'' for which ''X'' lies on the given curve."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The negative pedal curve of a [[pedal curve]] with the same pedal point is the original curve."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "For a given curve in the plane and a given fixed point ''P'', called the '''pedal point'''"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "the '''negative pedal curve''' is the [[envelope (mathematics)|envelope]] of the lines ''XP'' for which ''X'' lies on the given curve."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "n",
+     "quote": "The negative pedal curve of a [[pedal curve]] with the same pedal point is the original curve."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "\"Pedal representation\" is a gloss; no source states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched as for D2-175: none at the pin.",
+   "sources": {
+    "n": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1315093342"
+   }
+  },
+  {
+   "id": "D2-177",
+   "batch": 5,
+   "why": "Landed review, batch 5: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-homogeneous-coordinates.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "are a [[system of coordinates]] used in [[projective geometry]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The mapping {{nowrap|<math>(x, y) \\mapsto (x, y, 1)</math>}} defines an inclusion from the"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The mapping {{nowrap|<math>(x, y) \\mapsto (x, y, 1)</math>}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The mapping {{nowrap|<math>(x, y) \\mapsto (x, y, 1)</math>}} defines an inclusion from the"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added, which are called [[point at infinity|points at infinity]], and are considered to lie on a new line, the [[line at infinity]].",
+     "note": "The affine plane sits inside the projective plane as the complement of the line at infinity, as stated; incidence is not in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states that metric data is lost."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Mathlib has projective spaces (Projectivization), linked on D2-010, but no homogeneous-coordinate chart at the pin.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374996410"
+   }
   }
  ]
 }

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Differential algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1372458128
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8d44cefd28d8a98a624e8fe04c8b569c3cd2975d82b128b18f1b1a75f40e8b4a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+<em>Ritt's reduction algorithm</em> identifies integers
+
+An autoreduced set is <em>[[Triangular decomposition|triangular]]</em> meaning each polynomial element has a distinct leading derivative.
+
+A <em>characteristic set</em> <math display="inline">C</math> is the [[Arg max|lowest ranked]] autoreduced subset among all the ideal's autoreduced subsets
+
+These regular differential radical ideals, represented by characteristic sets, are not necessarily prime ideals

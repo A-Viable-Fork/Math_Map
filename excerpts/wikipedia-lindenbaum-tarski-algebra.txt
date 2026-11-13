@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Lindenbaum-Tarski algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1344326806
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6779d74acf0000de49a255536e8d6ca90e56dbc1ddcc2c7f11ae6e34764b64d9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+consists of the [[equivalence class]]es of [[Sentence (mathematical logic)|sentence]]s of the theory (i.e., the [[Equivalence class|quotient]]) under the [[equivalence relation]] ~ defined such that ''p'' ~ ''q'' exactly when ''p'' and ''q'' are provably equivalent in ''T''.
+
+When [[negation]] is also present in ''T'', then ''A'' is a [[Boolean algebra (structure)|Boolean algebra]], provided the logic is [[classical logic|classical]].
+
+Moreover, an [[ultrafilter]] in ''A'' corresponds to a [[complete theory|complete]] consistent theory

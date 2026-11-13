@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/GroupTheory/Subgroup/Centralizer.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Subgroup/Centralizer.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d8e0c8f781dc0fbe68a35e40afefef3b0e39168039a9268e95d1cd304e78c71c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Subgroup.centralizer (line 30)
+def centralizer (s : Set G) : Subgroup G where
+  __ := Submonoid.centralizer s
+  inv_mem' := Set.inv_mem_centralizer

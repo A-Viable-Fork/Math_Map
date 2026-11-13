@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "dd4208eba2fdf6ac50f1de03d2c08051c018f142"
+  "commit": "a1d385837caa7dfc268abb830a61d658b691e2a4"
  },
  "domains": {
   "D1": {
@@ -747,22 +747,22 @@
    "generated": 44
   },
   "byTier": {
-   "landed": 1223,
-   "audited": 652,
+   "landed": 1198,
+   "audited": 677,
    "authored": 58,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 92,
+  "corrected": 105,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 821,
-   "unchecked": 8039,
+   "unsupported": 847,
+   "unchecked": 7889,
    "imprecise": 18,
-   "sourced": 3431,
-   "formal": 87
+   "sourced": 3552,
+   "formal": 90
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -782,14 +782,14 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 158,
-   "links": 332,
+   "entries": 166,
+   "links": 343,
    "byMatch": {
-    "exact": 232,
+    "exact": 239,
     "conflicts": 5,
-    "related": 26,
+    "related": 27,
     "special": 27,
-    "general": 30,
+    "general": 33,
     "ingredient": 12
    }
   }
@@ -11523,21 +11523,55 @@
    "description": "Algebra of generalized functions containing distributions with multiplication.",
    "input": "Distributions D'(Ω)",
    "output": "Colombeau algebra G(Ω)",
-   "preserved": "Distribution embedding, multiplication",
+   "preserved": "Distributions embed linearly; the product of smooth functions is preserved, while no such algebra can preserve the product of continuous functions (Schwartz)",
    "broken": "Classical function space",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Distribution embedding, multiplication"
+    },
+    "reason": "Landed review, batch 5: preserved graded imprecise. The multiplication kept is that of smooth functions.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-colombeau-algebra.txt",
+      "quote": "is linearly embedded into <math>A(\\mathbb{R})</math>",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-colombeau-algebra.txt",
+      "quote": "i.e., they preserve the product of smooth (infinitely differentiable) funct",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-colombeau-algebra.txt",
+      "quote": "which basically states that there cannot be a differential algebra containing the space of distributions and preserving the product of continuous functions.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-151",
@@ -11557,14 +11591,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "MonoidAlgebra",
+     "file": "Mathlib/Algebra/MonoidAlgebra/Defs.lean",
+     "match": "general",
+     "note": "R[M] over any semiring, finitely supported functions with the convolution product; Z[M] for a commutative monoid is a case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-152",
@@ -11584,14 +11629,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "MonoidAlgebra",
+     "file": "Mathlib/Algebra/MonoidAlgebra/Defs.lean",
+     "match": "general",
+     "note": "The group ring is the monoid algebra of a group; Z[G] is a case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-153",
@@ -11697,21 +11753,48 @@
    "description": "Boolean algebra from propositional theory by quotienting by logical equivalence.",
    "input": "Propositional theory T",
    "output": "Boolean algebra Formulas/≡_T",
-   "preserved": "Logical equivalence, completeness",
+   "preserved": "Provable equivalence: two sentences give one element exactly when T proves them equivalent; ultrafilters correspond to complete consistent theories",
    "broken": "Syntactic structure",
    "complexity": "Decidable for propositional",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Logical equivalence, completeness"
+    },
+    "reason": "Landed review, batch 5: preserved graded imprecise. \"Completeness\" is not a kept invariant; the source relates ultrafilters to complete theories.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-lindenbaum-tarski-algebra.txt",
+      "quote": "exactly when ''p'' and ''q'' are provably equivalent in ''T''.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-lindenbaum-tarski-algebra.txt",
+      "quote": "Moreover, an [[ultrafilter]] in ''A'' corresponds to a [[complete theory|complete]] consistent theory",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-156",
@@ -11722,24 +11805,61 @@
     "construction",
     "computation-bridge"
    ],
-   "description": "Computes Groebner basis. Reduces multivariate division to deterministic process.",
+   "description": "Transforms a set of polynomials, with respect to a monomial ordering, into a Gröbner basis: another set of polynomials with the same common zeros.",
    "input": "Generating set of ideal + monomial ordering",
    "output": "Groebner basis G",
-   "preserved": "Ideal (canonical basis), membership decidable",
+   "preserved": "The ideal: the output is a Gröbner basis for the ideal generated, with the same common zeros",
    "broken": "Original generators",
    "complexity": "Doubly exponential worst case; practical often polynomial",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Computes Groebner basis. Reduces multivariate division to deterministic process.",
+     "preserved": "Ideal (canonical basis), membership decidable"
+    },
+    "reason": "Landed review, batch 5: description and preserved graded imprecise. The deterministic-division gloss, canonicity and decidable membership are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-buchbergers-algorithm.txt",
+      "quote": "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]], which is another set of polynomials that have the same common zeros",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-buchbergers-algorithm.txt",
+      "quote": "with respect to the given [[monomial ordering]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-buchbergers-algorithm.txt",
+      "quote": ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-157",
@@ -11753,21 +11873,41 @@
    "description": "Automates geometric theorem proving via characteristic sets.",
    "input": "Polynomial system (geometric hypothesis)",
    "output": "Characteristic set",
-   "preserved": "Theorem validity, radical membership",
+   "preserved": "Theorem validity: the remainder of the conclusion by repeated division vanishes when the statement holds and leaves an irreducible remainder when it fails",
    "broken": "Equation form",
    "complexity": "Doubly exponential worst case",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Theorem validity, radical membership"
+    },
+    "reason": "Landed review, batch 5: preserved graded imprecise. Radical membership is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-wus-method-of-characteristic-set.txt",
+      "quote": "Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true), or an irreducible remainder is left behind (in which case the statement is false).",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-158",
@@ -11787,14 +11927,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-159",
@@ -11804,9 +11945,9 @@
    "tags": [
     "decomposition"
    ],
-   "description": "Decomposes characteristic sets into irreducible components.",
-   "input": "Ritt characteristic set",
-   "output": "Irreducible components",
+   "description": "Decomposes the zero set of a polynomial system: V(F) = W(T_1) union ... union W(T_e), each W(T_i) the zeros of a characteristic set off the zeros of its initials.",
+   "input": "A finite set F of polynomials",
+   "output": "Characteristic sets T_1, ..., T_e whose sets W(T_i) cover V(F)",
    "preserved": "Irreducibility",
    "broken": "Reducible structure",
    "complexity": "Depends",
@@ -11814,14 +11955,48 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "input",
+     "output"
+    ],
+    "landed": {
+     "description": "Decomposes characteristic sets into irreducible components.",
+     "input": "Ritt characteristic set",
+     "output": "Irreducible components"
+    },
+    "reason": "Landed review, batch 5: description, input and output graded imprecise. The fetched decomposition is not stated to be into irreducible components, and starts from a polynomial set.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-wus-method-of-characteristic-set.txt",
+      "quote": ":<math>V(F) = W(T_1)\\cup \\cdots \\cup W(T_e), </math>",
+      "fields": [
+       "description",
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-wus-method-of-characteristic-set.txt",
+      "quote": "given a finite subset F of polynomials, there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:",
+      "fields": [
+       "description",
+       "input",
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-160",
@@ -11833,7 +12008,7 @@
     "computation-bridge"
    ],
    "description": "Semi-algebraic set -> cylindrical cells with constant polynomial signs. Quantifier elimination over R.",
-   "input": "Semi-algebraic set in R^n",
+   "input": "A finite set of polynomials in n real variables",
    "output": "Finite cell partition",
    "preserved": "Sign conditions, semi-algebraic type",
    "broken": "Continuous structure",
@@ -11842,14 +12017,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Semi-algebraic set in R^n"
+    },
+    "reason": "Landed review, batch 5: input graded imprecise. The decomposition is computed for a set of polynomials, not a semi-algebraic set.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cylindrical-algebraic-decomposition.txt",
+      "quote": "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-161",
@@ -11863,21 +12058,41 @@
    "description": "Projects polynomial system by eliminating variables.",
    "input": "Polynomial system in n variables",
    "output": "System in fewer variables",
-   "preserved": "Solution set (projected)",
+   "preserved": "The Zariski closure of the projected solution set: the elimination ideal defines it",
    "broken": "Eliminated variable info",
    "complexity": "Doubly exponential worst case",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Solution set (projected)"
+    },
+    "reason": "Landed review, batch 5: preserved graded imprecise. Elimination gives the Zariski closure of the projection, not the projection.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-grobner-basis.txt",
+      "quote": "the ([[Zariski closure]] of) the projection of the algebraic set defined by the ideal ''I'' into the ''Y''-subspace is defined by the ideal <math>I\\cap K[Y].</math>",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-162",
@@ -11898,14 +12113,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Polynomial.resultant",
+     "file": "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean",
+     "match": "exact",
+     "note": "The resultant of two polynomials, defined as the determinant of their Sylvester matrix.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Polynomial.resultant_eq_zero_iff",
+     "file": "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean",
+     "match": "general",
+     "note": "Over a field the resultant vanishes exactly when the polynomials are not both zero and not coprime; over an algebraically closed field that is a common root.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-163",
@@ -11915,7 +12149,7 @@
    "tags": [
     "projection"
    ],
-   "description": "Resultant of f with f'. Detects multiple roots.",
+   "description": "The resultant of f with f', divided by the leading coefficient and signed: Disc(f) = (-1)^{n(n-1)/2} Res(f, f') / a_n. Zero exactly when f has a multiple root in an algebraically closed extension.",
    "input": "Polynomial f",
    "output": "Disc(f)",
    "preserved": "Multiple root detection",
@@ -11925,14 +12159,51 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Resultant of f with f'. Detects multiple roots."
+    },
+    "reason": "Landed review, batch 5: description graded imprecise. The discriminant is the resultant up to the leading coefficient and a sign.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-discriminant.txt",
+      "quote": ":<math>\\operatorname{Disc}_x(A) = \\frac{(-1)^{n(n-1)/2}}{a_n} \\operatorname{Res}_x(A,A')</math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-discriminant.txt",
+      "quote": "For a polynomial with coefficients in a [[field (mathematics)|field]], the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]] in an [[algebraically closed extension]].",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Polynomial.discr",
+     "file": "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean",
+     "match": "related",
+     "note": "The discriminant as the determinant of the Sylvester matrix of f and its derivative, times a sign; the landed text omits the normalization by the leading coefficient.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-164",
@@ -11944,7 +12215,7 @@
    ],
    "description": "Non-standard division for characteristic sets. Works when leading coefficients not invertible.",
    "input": "Polynomials f, g",
-   "output": "Pseudo-quotient, pseudo-remainder",
+   "output": "Pseudo-remainder prem(f, g) = rem(lc(g)^{a-b+1} f, g)",
    "preserved": "Pseudo-remainder relation",
    "broken": "Standard division",
    "complexity": "Polynomial in degrees",
@@ -11952,14 +12223,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "output"
+    ],
+    "landed": {
+     "output": "Pseudo-quotient, pseudo-remainder"
+    },
+    "reason": "Landed review, batch 5: output graded imprecise. The pseudo-quotient is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-polynomial-greatest-common-divisor.txt",
+      "quote": "<math display=\"block\">\\operatorname{prem}(A,B) = \\operatorname{rem}(\\operatorname{lc}(B)^{a-b+1}A,B),</math>",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-165",
@@ -11979,14 +12270,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "OreLocalization",
+     "file": "Mathlib/GroupTheory/OreLocalization/Basic.lean",
+     "match": "exact",
+     "note": "The localization of a monoid (and, through its instances, a ring) at an Ore set S: fractions with the Ore condition.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/OreLocalization/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-166",
@@ -12006,14 +12308,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Subgroup.centralizer",
+     "file": "Mathlib/GroupTheory/Subgroup/Centralizer.lean",
+     "match": "exact",
+     "note": "The centralizer of a set as a subgroup.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Subgroup/Centralizer.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-167",
@@ -12033,14 +12346,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "formal",
+    "preserved": "formal",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "Subgroup.normalizer",
+     "file": "Mathlib/Algebra/Group/Subgroup/Defs.lean",
+     "match": "exact",
+     "note": "The normalizer of a set as a subgroup.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Defs.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Subgroup.normal_in_normalizer",
+     "file": "Mathlib/Algebra/Group/Subgroup/Basic.lean",
+     "match": "exact",
+     "note": "H is normal in its normalizer.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-168",
@@ -12142,24 +12474,54 @@
     "construction",
     "generative"
    ],
-   "description": "4x4 array of Lie algebras from composition algebra pairs. Produces all exceptional Lie algebras.",
+   "description": "A construction associating a Lie algebra to a pair of composition (division) algebras; the square includes every exceptional Lie algebra except G2.",
    "input": "Pair of composition algebras",
    "output": "Lie algebra in magic square",
-   "preserved": "Lie algebra structure, exceptional classification",
+   "preserved": "Lie algebra structure; the exceptional classification except for G2",
    "broken": "Individual algebra details",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "4x4 array of Lie algebras from composition algebra pairs. Produces all exceptional Lie algebras.",
+     "preserved": "Lie algebra structure, exceptional classification"
+    },
+    "reason": "Landed review, batch 5: description graded wrong (G2 is not in the square) and preserved imprecise for the same reason.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-freudenthal-magic-square.txt",
+      "quote": "It associates a Lie algebra to a pair of division algebras ''A'', ",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-freudenthal-magic-square.txt",
+      "quote": "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D2-170",
@@ -12179,14 +12541,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "Matrix.det_conj",
+     "file": "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean",
+     "match": "exact",
+     "note": "det (M N M^-1) = det N for invertible M: the determinant part.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Matrix.trace_conj",
+     "file": "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean",
+     "match": "exact",
+     "note": "trace (M N M^-1) = trace N for invertible M: the trace part.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-171",
@@ -12199,21 +12580,41 @@
    "description": "Curve C -> dual C* parametrizing tangent lines.",
    "input": "Algebraic curve C ⊂ P^2",
    "output": "Dual curve C* ⊂ (P^2)*",
-   "preserved": "Plucker formulas, biduality",
+   "preserved": "Plucker formulas: the degree of the dual in terms of the degree and the singular points",
    "broken": "Point parametrization",
    "complexity": "O(degree)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Plucker formulas, biduality"
+    },
+    "reason": "Landed review, batch 5: preserved graded imprecise. Biduality is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-dual-curve.txt",
+      "quote": "The [[Plücker formula]]s give the degree of the dual in terms of ''d'' and the number and types of singular points of {{mvar|X}}.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-172",
@@ -12233,14 +12634,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-173",
@@ -12260,14 +12662,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-174",
@@ -12279,7 +12682,7 @@
    ],
    "description": "Inverse of evolute.",
    "input": "Evolute curve",
-   "output": "Involute (original recovered)",
+   "output": "An involute (a curve has several); the original curve is recovered as the evolute of an involute",
    "preserved": "Evolute-involute duality",
    "broken": "Parametrization",
    "complexity": "O(n) per point",
@@ -12287,14 +12690,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "output"
+    ],
+    "landed": {
+     "output": "Involute (original recovered)"
+    },
+    "reason": "Landed review, batch 5: output graded imprecise. The recovery runs through the evolute of an involute.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-evolute.txt",
+      "quote": "A curve is the evolute of any of its involutes.",
+      "fields": [
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-involute.txt",
+      "quote": "The [[evolute]] of an involute is the original curve.",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-175",
@@ -12314,14 +12744,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-176",
@@ -12341,14 +12772,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-177",
@@ -12361,21 +12793,41 @@
    "description": "Affine A^n -> projective P^n via homogeneous coordinates.",
    "input": "Affine point",
    "output": "Projective point",
-   "preserved": "Affine structure on chart, incidence",
+   "preserved": "The affine plane, which sits in the projective plane as the complement of the line at infinity",
    "broken": "Metric, distances",
    "complexity": "O(n)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Affine structure on chart, incidence"
+    },
+    "reason": "Landed review, batch 5: preserved graded imprecise. Incidence is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-homogeneous-coordinates.txt",
+      "quote": "can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added, which are called [[point at infinity|points at infinity]], and are considered to lie on a new line, the [[line at infinity]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-178",

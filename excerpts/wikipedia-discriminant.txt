@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Discriminant (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381696192
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 876a8e8f7314c21e638ebd457b9672aeb1423fe092723fdd987b2d6a17e64a6a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+For a polynomial with coefficients in a [[field (mathematics)|field]], the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]] in an [[algebraically closed extension]].
+
+:<math>\operatorname{Disc}_x(A) = \frac{(-1)^{n(n-1)/2}}{a_n} \operatorname{Res}_x(A,A')</math>

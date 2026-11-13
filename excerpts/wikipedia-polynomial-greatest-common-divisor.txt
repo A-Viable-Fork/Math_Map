@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Polynomial greatest common divisor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364061219
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6e843531ffd72dd8bf45ba3fe22874e79a90bc6a78ff2918d2d3c39ffb677c63
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+has been introduced to allow a variant of Euclid's algorithm for which all remainders belong to {{math|''Z''[''X'']}}.
+
+the '''pseudo-remainder''' of the pseudo-division of {{math|''A''}} by {{math|''B''}}, denoted by {{math|prem(''A'',''B'')}} is
+
+<math display="block">\operatorname{prem}(A,B) = \operatorname{rem}(\operatorname{lc}(B)^{a-b+1}A,B),</math>

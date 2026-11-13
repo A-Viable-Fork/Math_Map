@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/GroupTheory/OreLocalization/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/OreLocalization/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 21bb8715bbcc7199c0970043109b24d192352a6857c1aa44be1525df89e8669b
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- OreLocalization (line 92)
+def OreLocalization {R : Type*} [Monoid R] (S : Submonoid R) [OreSet S]
+    (X : Type*) [MulAction R X] :=
+  Quotient (OreLocalization.oreEqv S X)

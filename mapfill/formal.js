@@ -478,6 +478,18 @@ const LANDED = [
   K("D2-137", "output", "PositiveLinearMap.gnsStarAlgHom", "Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean", "general", "A unital star representation on the GNS Hilbert space from any positive linear functional on a unital C*-algebra; a state is the normalized case. The cyclic vector is not part of this declaration."),
   K("D2-140", "output", "CategoryTheory.nerveFunctor", "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean", "special", "The nerve functor from small categories to simplicial sets: the case of a category as input."),
   K("D2-142", "description", "CategoryTheory.Adjunction", "Mathlib/CategoryTheory/Adjunction/Basic.lean", "exact", "An adjunction F left adjoint to G, given by a unit and a counit with the triangle identities; the hom-set bijection is Adjunction.homEquiv."),
+  // Batch 5: D2-150 to D2-177.
+  K("D2-151", "output", "MonoidAlgebra", "Mathlib/Algebra/MonoidAlgebra/Defs.lean", "general", "R[M] over any semiring, finitely supported functions with the convolution product; Z[M] for a commutative monoid is a case."),
+  K("D2-152", "output", "MonoidAlgebra", "Mathlib/Algebra/MonoidAlgebra/Defs.lean", "general", "The group ring is the monoid algebra of a group; Z[G] is a case."),
+  K("D2-162", "description", "Polynomial.resultant", "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean", "exact", "The resultant of two polynomials, defined as the determinant of their Sylvester matrix."),
+  K("D2-162", "preserved", "Polynomial.resultant_eq_zero_iff", "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean", "general", "Over a field the resultant vanishes exactly when the polynomials are not both zero and not coprime; over an algebraically closed field that is a common root."),
+  K("D2-163", "description", "Polynomial.discr", "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean", "related", "The discriminant as the determinant of the Sylvester matrix of f and its derivative, times a sign; the landed text omits the normalization by the leading coefficient."),
+  K("D2-165", "output", "OreLocalization", "Mathlib/GroupTheory/OreLocalization/Basic.lean", "exact", "The localization of a monoid (and, through its instances, a ring) at an Ore set S: fractions with the Ore condition."),
+  K("D2-166", "output", "Subgroup.centralizer", "Mathlib/GroupTheory/Subgroup/Centralizer.lean", "exact", "The centralizer of a set as a subgroup.", { whole: true }),
+  K("D2-167", "output", "Subgroup.normalizer", "Mathlib/Algebra/Group/Subgroup/Defs.lean", "exact", "The normalizer of a set as a subgroup.", { whole: true }),
+  K("D2-167", "preserved", "Subgroup.normal_in_normalizer", "Mathlib/Algebra/Group/Subgroup/Basic.lean", "exact", "H is normal in its normalizer.", { whole: true }),
+  K("D2-170", "preserved", "Matrix.det_conj", "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean", "exact", "det (M N M^-1) = det N for invertible M: the determinant part."),
+  K("D2-170", "preserved", "Matrix.trace_conj", "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean", "exact", "trace (M N M^-1) = trace N for invertible M: the trace part."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

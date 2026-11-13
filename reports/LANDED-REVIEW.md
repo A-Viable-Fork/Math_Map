@@ -6,25 +6,23 @@ The landed entries (origin map, tier landed: as written, never reviewed) graded 
 
 The strict rule [ruling: operator, 2026-11-13]: **confirmed** only when a quoted window states the field's claim itself, not merely names the object; a claim with several parts is confirmed only when every part is quoted. **imprecise**: right idea with a part unquoted or a detail off (the note names it); **wrong**: a window contradicts it; **unsupported**: no window states it. Every imprecise or wrong content field carries a receipted correction in `mapfill/corrections.js` (the landed text kept beside it) or a flag. Before each batch's sources were read, the reviewer committed what each field should be (`audit/landed-review-recall-0_1.js`, recalled: a lead, never evidence).
 
-Graded: 100 of 993 entries in 4 batches. By domain: D2 100 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
-
-Recall committed, grades pending: batch 5 (D2-150, D2-151, D2-152, D2-155, D2-156, D2-157, D2-158, D2-159, D2-160, D2-161, D2-162, D2-163, D2-164, D2-165, D2-166, D2-167, D2-169, D2-170, D2-171, D2-172, D2-173, D2-174, D2-175, D2-176, D2-177).
+Graded: 125 of 993 entries in 5 batches. By domain: D2 125 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
 
 ## 1. Verdicts by field
 
 Each domain's fields, counted by verdict.
 
-### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (100 entries)
+### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (125 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 97 | 1 | 0 | 2 |
-| description | 73 | 25 | 0 | 2 |
-| input | 84 | 13 | 0 | 3 |
-| output | 93 | 4 | 0 | 3 |
-| preserved | 57 | 25 | 0 | 18 |
-| broken | 23 | 4 | 1 | 72 |
-| **all** | 427 | 72 | 1 | 100 |
+| name | 121 | 1 | 0 | 3 |
+| description | 94 | 28 | 1 | 2 |
+| input | 107 | 15 | 0 | 3 |
+| output | 115 | 7 | 0 | 3 |
+| preserved | 71 | 33 | 0 | 21 |
+| broken | 26 | 4 | 1 | 94 |
+| **all** | 534 | 88 | 2 | 126 |
 
 ## 2. By batch
 
@@ -36,6 +34,7 @@ Per batch: imprecise and wrong fields found, scaled to 25 entries, and the share
 | 2 | D2 | 25 | 11 | 0 | 11.0 | 8 | 127 | 10 | 8% |
 | 3 | D2 | 25 | 15 | 0 | 15.0 | 10 | 123 | 6 | 5% |
 | 4 | D2 | 25 | 23 | 0 | 23.0 | 13 | 120 | 21 | 18% |
+| 5 | D2 | 25 | 16 | 1 | 17.0 | 13 | 124 | 15 | 12% |
 
 ## 3. Blind re-grades
 
@@ -57,12 +56,14 @@ Every tenth entry: its most specific claim (a hypothesis, a formula, an attribut
 - **D2-128 Restriction**, broken: Restriction can destroy irreducibility. *Attempt:* Checked against the branching rules: the source describes the restriction of an irreducible representation of G by the multiplicities of irreducibles of H in it, so it splits in general. *Outcome:* survived.
 - **D2-138 Cayley-Dickson Construction**, broken: The doublings lose, in turn, conjugation, commutativity, associativity, alternativity. *Attempt:* Compared the sequence with the source's: it loses order first (passing to the complex numbers), then commutativity, associativity and alternativity; conjugation is not lost. *Outcome:* falsified.
 - **D2-149 Ward's Twistor Construction**, input: Any holomorphic bundle on CP^3 gives a self-dual connection. *Attempt:* Looked in the source for the triviality-on-lines condition the recall expected; the fetched window states the relation for holomorphic vector bundles on CP^3 without it, so the attempt found no contradiction in the source (the condition is recalled, not receipted). *Outcome:* survived.
+- **D2-161 Elimination Theory Reduction**, preserved: Elimination keeps the projected solution set. *Attempt:* Looked for points of the closure missed by the projection: the source says the elimination ideal defines the Zariski closure of the projection (for xy = 1 projected to y, the closure adds y = 0, inferred). *Outcome:* falsified.
+- **D2-172 Parallel Curve Construction**, broken: Parallel curves change curvature and can acquire cusps. *Attempt:* Checked the curvature formula and the cusp condition in the source: curvature becomes k/(1 + dk), and cusps appear where d equals the radius of curvature. *Outcome:* survived.
 
 ## 5. Findings
 
 Corrections, flags and Mathlib conflicts on reviewed entries.
 
-### Corrections (50 entries, 72 fields)
+### Corrections (63 entries, 89 fields)
 
 - **D2-003 Rotation** (broken): Landed review, batch 1: broken graded imprecise. In space the axis of rotation is a line of fixed points, so not every non-centre point moves.
 - **D2-004 Dilation (Scaling)** (description): Landed review, batch 1: description graded imprecise. "Not isometric" fails for |k| = 1: k = -1 is the point reflection, an isometry.
@@ -114,6 +115,19 @@ Corrections, flags and Mathlib conflicts on reviewed entries.
 - **D2-143 Vaughan Jones Construction** (description, output, preserved): Landed review, batch 4: description, output and preserved graded imprecise. A knot polynomial is not a function of the subfactor; it came from the theory through braid representations.
 - **D2-148 Stanley-Reisner Ring Construction** (preserved): Landed review, batch 4: preserved graded imprecise. The f-vector is not named in a fetched window and is dropped.
 - **D2-149 Ward's Twistor Construction** (preserved): Landed review, batch 4: preserved graded imprecise. Gauge classes are not in a fetched window and are dropped.
+- **D2-150 Colombeau's Construction** (preserved): Landed review, batch 5: preserved graded imprecise. The multiplication kept is that of smooth functions.
+- **D2-155 Lindenbaum-Tarski Algebra** (preserved): Landed review, batch 5: preserved graded imprecise. "Completeness" is not a kept invariant; the source relates ultrafilters to complete theories.
+- **D2-156 Buchberger's Algorithm** (description, preserved): Landed review, batch 5: description and preserved graded imprecise. The deterministic-division gloss, canonicity and decidable membership are not in a fetched window and are dropped.
+- **D2-157 Wu's Method** (preserved): Landed review, batch 5: preserved graded imprecise. Radical membership is not in a fetched window and is dropped.
+- **D2-159 Ritt's Decomposition Algorithm** (description, input, output): Landed review, batch 5: description, input and output graded imprecise. The fetched decomposition is not stated to be into irreducible components, and starts from a polynomial set.
+- **D2-160 Cylindrical Algebraic Decomposition** (input): Landed review, batch 5: input graded imprecise. The decomposition is computed for a set of polynomials, not a semi-algebraic set.
+- **D2-161 Elimination Theory Reduction** (preserved): Landed review, batch 5: preserved graded imprecise. Elimination gives the Zariski closure of the projection, not the projection.
+- **D2-163 Discriminant Computation** (description): Landed review, batch 5: description graded imprecise. The discriminant is the resultant up to the leading coefficient and a sign.
+- **D2-164 Pseudodivision** (output): Landed review, batch 5: output graded imprecise. The pseudo-quotient is not in a fetched window and is dropped.
+- **D2-169 Freudenthal Magic Square** (description, preserved): Landed review, batch 5: description graded wrong (G2 is not in the square) and preserved imprecise for the same reason.
+- **D2-171 Dual Curve Construction** (preserved): Landed review, batch 5: preserved graded imprecise. Biduality is not in a fetched window and is dropped.
+- **D2-174 Involute Construction** (output): Landed review, batch 5: output graded imprecise. The recovery runs through the evolute of an involute.
+- **D2-177 Homogeneous Coordinate Transformation** (preserved): Landed review, batch 5: preserved graded imprecise. Incidence is not in a fetched window and is dropped.
 
 ### Flags (0)
 
@@ -129,15 +143,15 @@ Links this review added in `mapfill/formal.js` (its LANDED list), by match grade
 
 | Match | Links |
 |---|---|
-| exact | 17 |
-| general | 11 |
+| exact | 24 |
+| general | 14 |
 | special | 9 |
-| related | 9 |
+| related | 10 |
 | ingredient | 3 |
 | conflicts | 0 |
-| **all** | 49 on 36 entries |
+| **all** | 60 on 44 entries |
 
-No link (63):
+No link (80):
 
 - D2-005 Vertical Shift: Searched graph shifts and Function.comp with addition: Mathlib states no graph transformations as such (f (x + c) is composition with a translation); no declaration states this entry's claims.
 - D2-006 Horizontal Shift: Searched as for D2-005: no graph-transformation declarations at the pin.
@@ -202,6 +216,23 @@ No link (63):
 - D2-147 Algebraic K-theory Construction: Searched algebraic K-theory: none at the pin.
 - D2-148 Stanley-Reisner Ring Construction: Searched Stanley-Reisner rings: none at the pin.
 - D2-149 Ward's Twistor Construction: Searched twistors and Yang-Mills: none at the pin.
+- D2-150 Colombeau's Construction: Searched Colombeau algebras: none at the pin.
+- D2-155 Lindenbaum-Tarski Algebra: Searched Lindenbaum-Tarski algebras: none at the pin.
+- D2-156 Buchberger's Algorithm: Searched Buchberger and Gröbner bases: Mathlib has the multivariate division algorithm for a monomial order but no Buchberger algorithm at the pin.
+- D2-157 Wu's Method: Searched Wu's method and characteristic sets: none at the pin.
+- D2-158 Ritt's Algorithm: Searched differential polynomials and Ritt's algorithm: none at the pin.
+- D2-159 Ritt's Decomposition Algorithm: Searched as for D2-158: none at the pin.
+- D2-160 Cylindrical Algebraic Decomposition: Searched cylindrical algebraic decomposition: none at the pin.
+- D2-161 Elimination Theory Reduction: Searched elimination ideals: none at the pin.
+- D2-164 Pseudodivision: Searched pseudo-division: Mathlib divides by monic polynomials (Polynomial.divByMonic) but has no pseudo-division at the pin.
+- D2-169 Freudenthal Magic Square: Searched Freudenthal magic square and exceptional Lie algebras: none at the pin.
+- D2-171 Dual Curve Construction: Searched dual curves: none at the pin.
+- D2-172 Parallel Curve Construction: Searched parallel and offset curves: none at the pin.
+- D2-173 Evolute Construction: Searched evolutes: none at the pin.
+- D2-174 Involute Construction: Searched involutes: none at the pin.
+- D2-175 Pedal Curve Construction: Searched pedal curves: none at the pin.
+- D2-176 Negative Pedal Curve: Searched as for D2-175: none at the pin.
+- D2-177 Homogeneous Coordinate Transformation: Mathlib has projective spaces (Projectivization), linked on D2-010, but no homogeneous-coordinate chart at the pin.
 
 ## 7. Receipts
 
@@ -1582,4 +1613,345 @@ No link (63):
 - mathlib: none. Searched twistors and Yang-Mills: none at the pin.
 
   p: excerpts/wikipedia-penrose-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380761637)
+
+### D2-150 Colombeau's Construction (batch 5)
+
+- name (landed: Colombeau's Construction): **confirmed** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
+- description (landed: Algebra of generalized functions containing distributions with multiplication.): **confirmed** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
+- input (landed: Distributions D'(Ω)): **confirmed** [c] "is linearly embedded into <math>A(\mathbb{R})</math>" *The distributions are the input.*
+- output (landed: Colombeau algebra G(Ω)): **confirmed** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind"
+- preserved (landed: Distribution embedding, multiplication): **imprecise** [c] "i.e., they preserve the product of smooth (infinitely differentiable) funct" [c] "is linearly embedded into <math>A(\mathbb{R})</math>" [c] "which basically states that there cannot be a differential algebra containing the space of distributions and preserving the product of continuous functions." *Distributions embed linearly, as stated; the multiplication kept is that of smooth functions, and Schwartz's result rules out keeping the product of continuous functions.* (recall contradicted)
+- broken (landed: Classical function space): **unsupported** *"Classical function space" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: an associative differential algebra containing the distributions, with products; input: ok; output: ok; preserved: ok: distributions embed; the product of smooth functions is kept, that of merely continuous ones is not; broken: thin
+- mathlib: none. Searched Colombeau algebras: none at the pin.
+
+  c: excerpts/wikipedia-colombeau-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1292219323)
+
+### D2-151 Integral Monoid Ring Construction (batch 5)
+
+- name (landed: Integral Monoid Ring Construction): **confirmed** [m] "The monoid ring or '''monoid algebra''' of ''G'' over ''R'', denoted ''R''[''G''] or ''RG'', is the set of formal sums"
+- description (landed: Z[M] for commutative monoid M.): **confirmed** [m] "The monoid ring or '''monoid algebra''' of ''G'' over ''R'', denoted ''R''[''G''] or ''RG'', is the set of formal sums" *Z[M] is the case R = Z.*
+- input (landed: Commutative monoid M): **confirmed** [m] "The monoid ring or '''monoid algebra''' of ''G'' over ''R''" *Any monoid; a commutative one is a case.*
+- output (landed: Monoid ring Z[M]): **confirmed** [a] "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
+- preserved (landed: Monoid structure as basis): **confirmed** [m] "More formally, ''R''[''G''] is the free ''R''-module on the set ''G'', endowed with ''R''-linear multiplication defined on the base elements by ''g·h'' := ''gh''"
+- broken (landed: Formal sums added): **confirmed** [m] "is the set of formal sums" (recall contradicted)
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: the monoid gives the basis and its product the multiplication; broken: thin
+- mathlib (general, output): `MonoidAlgebra`. R[M] over any semiring, finitely supported functions with the convolution product; Z[M] for a commutative monoid is a case.
+
+  m: excerpts/wikipedia-monoid-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1228471520)
+  a: excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean)
+
+### D2-152 Integral Group Ring Construction (batch 5)
+
+- name (landed: Integral Group Ring Construction): **confirmed** [g] "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]], constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+- description (landed: Z[G] for group G, convolution multiplication.): **confirmed** [g] ":<math>x\mapsto\sum_{uv=x}f(u)g(v)=\sum_{u\in G}f(u)g(u^{-1}x).</math>" [g] "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]." *The convolution product.*
+- input (landed: Group G): **confirmed** [g] "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
+- output (landed: Group ring Z[G]): **confirmed** [a] "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
+- preserved (landed: Group structure, representation theory): **confirmed** [g] "The apparatus of group rings is especially useful in the theory of [[group representation]]s." [g] "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]" *The group elements form the basis of the free module.*
+- broken (landed: Formal sums added): **confirmed** [g] "written as what are called "formal linear combinations of elements of <math>G</math> with coefficients in" (recall contradicted)
+- recalled: name: ok; description: ok: convolution product; input: ok; output: ok; preserved: ok: modules over Z[G] are representations; broken: thin
+- mathlib (general, output): `MonoidAlgebra`. The group ring is the monoid algebra of a group; Z[G] is a case.
+
+  g: excerpts/wikipedia-group-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1370986299)
+  a: excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/MonoidAlgebra/Defs.lean)
+
+### D2-155 Lindenbaum-Tarski Algebra (batch 5)
+
+- name (landed: Lindenbaum-Tarski Algebra): **confirmed** [l] "consists of the [[equivalence class]]es of [[Sentence (mathematical logic)|sentence]]s of the theory (i.e., the [[Equivalence class|quotient]])"
+- description (landed: Boolean algebra from propositional theory by quotienting by logical equivalence.): **confirmed** [l] "under the [[equivalence relation]] ~ defined such that ''p'' ~ ''q'' exactly when ''p'' and ''q'' are provably equivalent in ''T''." [l] "When [[negation]] is also present in ''T'', then ''A'' is a [[Boolean algebra (structure)|Boolean algebra]], provided the logic is [[classical logic|classical]]." *A Boolean algebra when negation is present and the logic classical, as for a propositional theory.*
+- input (landed: Propositional theory T): **confirmed** [l] "consists of the [[equivalence class]]es of [[Sentence (mathematical logic)|sentence]]s of the theory"
+- output (landed: Boolean algebra Formulas/≡_T): **confirmed** [l] "then ''A'' is a [[Boolean algebra (structure)|Boolean algebra]], provided the logic is [[classical logic|classical]]."
+- preserved (landed: Logical equivalence, completeness): **imprecise** [l] "exactly when ''p'' and ''q'' are provably equivalent in ''T''." [l] "Moreover, an [[ultrafilter]] in ''A'' corresponds to a [[complete theory|complete]] consistent theory" *Provable equivalence is what the classes record, as stated; completeness is not a kept invariant: the source relates ultrafilters to complete consistent theories.*
+- broken (landed: Syntactic structure): **unsupported** *"Syntactic structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: formulas modulo provable equivalence; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched Lindenbaum-Tarski algebras: none at the pin.
+
+  l: excerpts/wikipedia-lindenbaum-tarski-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1344326806)
+
+### D2-156 Buchberger's Algorithm (batch 5)
+
+- name (landed: Buchberger's Algorithm): **confirmed** [b] "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+- description (landed: Computes Groebner basis. Reduces multivariate division to deterministic process.): **imprecise** [b] "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]], which is another set of polynomials that have the same common zeros" *Computes a Gröbner basis, as stated; "reduces multivariate division to a deterministic process" is not in a fetched window.* (recall contradicted)
+- input (landed: Generating set of ideal + monomial ordering): **confirmed** [b] "with respect to the given [[monomial ordering]]" *A generating set and a monomial ordering.*
+- output (landed: Groebner basis G): **confirmed** [b] ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}"
+- preserved (landed: Ideal (canonical basis), membership decidable): **imprecise** [b] ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}" [b] "which is another set of polynomials that have the same common zeros" *The ideal is kept (G is a Gröbner basis for I); canonicity and decidable membership are not in a fetched window.* (recall contradicted)
+- broken (landed: Original generators): **unsupported** *"Original generators" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: same ideal; membership decided by reduction; the reduced basis is unique; broken: thin
+- mathlib: none. Searched Buchberger and Gröbner bases: Mathlib has the multivariate division algorithm for a monomial order but no Buchberger algorithm at the pin.
+
+  b: excerpts/wikipedia-buchbergers-algorithm.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1359915802)
+
+### D2-157 Wu's Method (batch 5)
+
+- name (landed: Wu's Method): **confirmed** [w] "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
+- description (landed: Automates geometric theorem proving via characteristic sets.): **confirmed** [w] "Wu's method is powerful for [[automatic theorem proving|mechanical theorem proving]] in [[elementary geometry]]" [w] "This method is based on the mathematical concept of '''characteristic set'''"
+- input (landed: Polynomial system (geometric hypothesis)): **confirmed** [w] "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
+- output (landed: Characteristic set): **confirmed** [w] "This method is based on the mathematical concept of '''characteristic set'''"
+- preserved (landed: Theorem validity, radical membership): **imprecise** [w] "Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true), or an irreducible remainder is left behind (in which case the statement is false)." *Theorem validity is decided by the remainder, as stated; radical membership is not in a fetched window.*
+- broken (landed: Equation form): **unsupported** *"Equation form" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: Wu's characteristic set method; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched Wu's method and characteristic sets: none at the pin.
+
+  w: excerpts/wikipedia-wus-method-of-characteristic-set.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980)
+
+### D2-158 Ritt's Algorithm (batch 5)
+
+- name (landed: Ritt's Algorithm): **confirmed** [d] "<em>Ritt's reduction algorithm</em> identifies integers"
+- description (landed: Characteristic set of differential polynomial system.): **confirmed** [d] "A <em>characteristic set</em> <math display="inline">C</math> is the [[Arg max|lowest ranked]] autoreduced subset among all the ideal's autoreduced subsets" [d] "<em>Ritt's reduction algorithm</em> identifies integers"
+- input (landed: Differential polynomial system): **confirmed** [d] "<em>Ritt's reduction algorithm</em> identifies integers" *Differential polynomials of a differential ideal.*
+- output (landed: Ritt characteristic set (triangular)): **confirmed** [d] "An autoreduced set is <em>[[Triangular decomposition|triangular]]</em> meaning each polynomial element has a distinct leading derivative." [d] "A <em>characteristic set</em> <math display="inline">C</math> is the [[Arg max|lowest ranked]] autoreduced subset"
+- preserved (landed: Differential ideal structure): **unsupported** *"Differential ideal structure" is a gloss; no fetched window states what is kept.*
+- broken (landed: Original equations): **unsupported** *"Original equations" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched differential polynomials and Ritt's algorithm: none at the pin.
+
+  d: excerpts/wikipedia-differential-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1372458128)
+
+### D2-159 Ritt's Decomposition Algorithm (batch 5)
+
+- name (landed: Ritt's Decomposition Algorithm): **unsupported** *No fetched source names Ritt's decomposition algorithm.*
+- description (landed: Decomposes characteristic sets into irreducible components.): **imprecise** [w] ":<math>V(F) = W(T_1)\cup \cdots \cup W(T_e), </math>" [d] "These regular differential radical ideals, represented by characteristic sets, are not necessarily prime ideals" *The fetched decomposition writes the zero set as a union of W(T_i), zeros of characteristic sets off their initials; that the pieces are irreducible is not stated, and the differential analogue's components are not necessarily prime.* (recall contradicted)
+- input (landed: Ritt characteristic set): **imprecise** [w] "given a finite subset F of polynomials, there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:" *The input is a finite set of polynomials, not a characteristic set.* (recall contradicted)
+- output (landed: Irreducible components): **imprecise** [w] "there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:" *Characteristic sets whose quasi-varieties cover V(F); irreducibility is not stated.* (recall contradicted)
+- preserved (landed: Irreducibility): **unsupported** *No fetched window states that the components are irreducible.*
+- broken (landed: Reducible structure): **unsupported** *"Reducible structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched as for D2-158: none at the pin.
+
+  w: excerpts/wikipedia-wus-method-of-characteristic-set.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980)
+  d: excerpts/wikipedia-differential-algebra.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1372458128)
+
+### D2-160 Cylindrical Algebraic Decomposition (batch 5)
+
+- name (landed: Cylindrical Algebraic Decomposition): **confirmed** [c] "'''cylindrical algebraic decomposition''' ('''CAD''') is a notion, along with an [[algorithm]] to compute it"
+- description (landed: Semi-algebraic set -> cylindrical cells with constant polynomial signs. Quantifier elimination over R.): **confirmed** [c] "a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0." [c] "CAD provides an effective version of [[quantifier elimination]] over the reals"
+- input (landed: Semi-algebraic set in R^n): **imprecise** [c] "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>" *The input is a set of polynomials, not a semi-algebraic set.*
+- output (landed: Finite cell partition): **confirmed** [c] "into connected [[semialgebraic set]]s called ''cells''"
+- preserved (landed: Sign conditions, semi-algebraic type): **confirmed** [c] "on which each polynomial has constant sign, either +, − or 0."
+- broken (landed: Continuous structure): **unsupported** *"Continuous structure" is a gloss; no source states it.*
+- recalled: name: ok: Collins; description: ok: sign-invariant cylindrical cells; used for quantifier elimination over the reals; input: thin: a set of polynomials more than a set; output: ok; preserved: ok; broken: thin
+- mathlib: none. Searched cylindrical algebraic decomposition: none at the pin.
+
+  c: excerpts/wikipedia-cylindrical-algebraic-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1222321659)
+
+### D2-161 Elimination Theory Reduction (batch 5)
+
+- name (landed: Elimination Theory Reduction): **confirmed** [e] "'''elimination theory''' is the classical name for algorithmic approaches to eliminating some variables between [[polynomial]]s of several variables"
+- description (landed: Projects polynomial system by eliminating variables.): **confirmed** [e] "'''elimination theory''' is the classical name for algorithmic approaches to eliminating some variables between [[polynomial]]s of several variables, in order to solve [[systems of polynomial equations]]."
+- input (landed: Polynomial system in n variables): **confirmed** [e] "eliminating some variables between [[polynomial]]s of several variables"
+- output (landed: System in fewer variables): **confirmed** [g] "then <math>G\cap K[Y]</math> is a Gröbner basis of <math>I\cap K[Y]</math> (this ideal is often called the ''elimination ideal'')."
+- preserved (landed: Solution set (projected)): **imprecise** [g] "the ([[Zariski closure]] of) the projection of the algebraic set defined by the ideal ''I'' into the ''Y''-subspace is defined by the ideal <math>I\cap K[Y].</math>" *The elimination ideal defines the Zariski closure of the projection, not the projection itself.*
+- broken (landed: Eliminated variable info): **unsupported** *"Eliminated variable info" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: off: the elimination ideal gives the Zariski closure of the projection, not the projection; broken: thin
+- mathlib: none. Searched elimination ideals: none at the pin.
+
+  e: excerpts/wikipedia-elimination-theory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351053820)
+  g: excerpts/wikipedia-grobner-basis.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743)
+
+### D2-162 Resultant Computation (batch 5)
+
+- name (landed: Resultant Computation): **confirmed** [r] "* The resultant of two polynomials with coefficients in an integral domain is zero if and only if they have a common root"
+- description (landed: Single polynomial detecting common root of two polynomials.): **confirmed** [r] "* The resultant of two polynomials with coefficients in an integral domain is zero if and only if they have a common root in an [[algebraically closed field]] containing the coefficients." [m] "def resultant (f g : R[X]) (m : ℕ := f.natDegree) (n : ℕ := g.natDegree) : R :="
+- input (landed: Polynomials f, g): **confirmed** [r] "The resultant of two polynomials with coefficients in an integral domain"
+- output (landed: Res(f,g)): **confirmed** [m] "(sylvester f g m n).det"
+- preserved (landed: Common root detection): **confirmed** [r] "is zero if and only if they have a common root in an [[algebraically closed field]] containing the coefficients." [m] "resultant f g = 0 ↔ (f ≠ 0 ∨ g ≠ 0) ∧ ¬ IsCoprime f g"
+- broken (landed: Individual polynomial structure): **unsupported** *"Individual polynomial structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: zero iff a common root, given nonzero leading coefficients over an algebraically closed field; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib (exact, description): `Polynomial.resultant`. The resultant of two polynomials, defined as the determinant of their Sylvester matrix.
+- mathlib (general, preserved): `Polynomial.resultant_eq_zero_iff`. Over a field the resultant vanishes exactly when the polynomials are not both zero and not coprime; over an algebraically closed field that is a common root.
+
+  r: excerpts/wikipedia-resultant.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384932724)
+  m: excerpts/mathlib-Mathlib.RingTheory.Polynomial.Resultant.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean)
+
+### D2-163 Discriminant Computation (batch 5)
+
+- name (landed: Discriminant Computation): **confirmed** [d] "the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]]"
+- description (landed: Resultant of f with f'. Detects multiple roots.): **imprecise** [d] ":<math>\operatorname{Disc}_x(A) = \frac{(-1)^{n(n-1)/2}}{a_n} \operatorname{Res}_x(A,A')</math>" [d] "For a polynomial with coefficients in a [[field (mathematics)|field]], the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]] in an [[algebraically closed extension]]." *The resultant of f with f', divided by the leading coefficient and signed; it detects multiple roots, as stated.* (recall contradicted)
+- input (landed: Polynomial f): **confirmed** [d] "For a polynomial with coefficients in a [[field (mathematics)|field]]"
+- output (landed: Disc(f)): **confirmed** [m] "noncomputable def discr (f : R[X]) : R :="
+- preserved (landed: Multiple root detection): **confirmed** [d] "the discriminant is zero [[if and only if]] the polynomial has a [[multiple root]] in an [[algebraically closed extension]]."
+- broken (landed: Individual root structure): **unsupported** *"Individual root structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: the resultant of f and f' up to a factor of the leading coefficient and a sign; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib (related, description): `Polynomial.discr`. The discriminant as the determinant of the Sylvester matrix of f and its derivative, times a sign; the landed text omits the normalization by the leading coefficient.
+
+  d: excerpts/wikipedia-discriminant.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381696192)
+  m: excerpts/mathlib-Mathlib.RingTheory.Polynomial.Resultant.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Polynomial/Resultant/Basic.lean)
+
+### D2-164 Pseudodivision (batch 5)
+
+- name (landed: Pseudodivision): **confirmed** [p] "the '''pseudo-remainder''' of the pseudo-division of {{math|''A''}} by {{math|''B''}}"
+- description (landed: Non-standard division for characteristic sets. Works when leading coefficients not invertible.): **confirmed** [p] "has been introduced to allow a variant of Euclid's algorithm for which all remainders belong to {{math|''Z''[''X'']}}." [p] "<math display="block">\operatorname{prem}(A,B) = \operatorname{rem}(\operatorname{lc}(B)^{a-b+1}A,B),</math>" [w] "every polynomial in G is [[regular chain|pseudo-reduced]] to zero with respect to T." *Multiplying by a power of the leading coefficient avoids dividing by it; characteristic-set methods pseudo-reduce.*
+- input (landed: Polynomials f, g): **confirmed** [p] "the '''pseudo-remainder''' of the pseudo-division of {{math|''A''}} by {{math|''B''}}"
+- output (landed: Pseudo-quotient, pseudo-remainder): **imprecise** [p] "denoted by {{math|prem(''A'',''B'')}} is" *The pseudo-remainder is stated; a pseudo-quotient is not in a fetched window.* (recall contradicted)
+- preserved (landed: Pseudo-remainder relation): **confirmed** [p] "<math display="block">\operatorname{prem}(A,B) = \operatorname{rem}(\operatorname{lc}(B)^{a-b+1}A,B),</math>"
+- broken (landed: Standard division): **unsupported** *"Standard division" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: lc(g)^k f = q g + r with deg r < deg g; broken: thin
+- mathlib: none. Searched pseudo-division: Mathlib divides by monic polynomials (Polynomial.divByMonic) but has no pseudo-division at the pin.
+
+  p: excerpts/wikipedia-polynomial-greatest-common-divisor.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364061219)
+  w: excerpts/wikipedia-wus-method-of-characteristic-set.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382028980)
+
+### D2-165 Ore Localization (batch 5)
+
+- name (landed: Ore Localization): **confirmed** [o] "The goal is to construct the right ring of fractions ''R''[''S''<sup>−1</sup>] with respect to a [[multiplicative subset]] ''S''."
+- description (landed: Non-commutative fraction ring for Ore domains.): **confirmed** [o] "For every right Ore domain ''R'', there is a unique (up to natural ''R''-isomorphism) division ring ''D'' containing ''R'' as a subring such that every element of ''D'' is of the form ''rs''<sup>−1</sup> for ''r'' in ''R'' and ''s'' nonzero in ''R''."
+- input (landed: Ring R + Ore multiplicative set S): **confirmed** [m] "def OreLocalization {R : Type*} [Monoid R] (S : Submonoid R) [OreSet S]"
+- output (landed: S^{-1}R (non-comm fractions)): **confirmed** [o] "The goal is to construct the right ring of fractions ''R''[''S''<sup>−1</sup>] with respect to a [[multiplicative subset]] ''S''."
+- preserved (landed: Ore condition, ring axioms): **confirmed** [o] "and have a ring structure on the set ''R''[''S''<sup>−1</sup>]." [m] "def OreLocalization {R : Type*} [Monoid R] (S : Submonoid R) [OreSet S]" (recall contradicted)
+- broken (landed: Commutative fraction rules): **unsupported** *"Commutative fraction rules" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib (exact, output): `OreLocalization`. The localization of a monoid (and, through its instances, a ring) at an Ore set S: fractions with the Ore condition.
+
+  o: excerpts/wikipedia-ore-condition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380394804)
+  m: excerpts/mathlib-Mathlib.GroupTheory.OreLocalization.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/OreLocalization/Basic.lean)
+
+### D2-166 Centralizer Construction (batch 5)
+
+- name (landed: Centralizer Construction): **confirmed** [c] ":<math>\mathrm{C}_G(S) = \left\{g \in G \mid gs = sg \text{ for all } s \in S\right\}"
+- description (landed: C_G(S) = {g: gs=sg for all s in S}.): **confirmed** [c] ":<math>\mathrm{C}_G(S) = \left\{g \in G \mid gs = sg \text{ for all } s \in S\right\}"
+- input (landed: Group G + subset S): **confirmed** [c] ":<math>\mathrm{C}_G(S) = \left\{g \in G \mid gs = sg \text{ for all } s \in S\right\}" *A group and a subset.*
+- output (landed: Subgroup C_G(S)): **confirmed** [c] "Clearly <math>C_G(S) \subseteq N_G(S)</math> and both are subgroups of <math>G</math>." [m] "def centralizer (s : Set G) : Subgroup G where"
+- preserved (landed: Commutativity with S): **confirmed** [c] "gs = sg \text{ for all } s \in S"
+- broken (landed: Non-commuting elements): **unsupported** *"Non-commuting elements" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok: a subgroup; preserved: ok; broken: thin
+- mathlib (exact, output): `Subgroup.centralizer`. The centralizer of a set as a subgroup.
+
+  c: excerpts/wikipedia-centralizer-and-normalizer.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055)
+  m: excerpts/mathlib-Mathlib.GroupTheory.Subgroup.Centralizer.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/Subgroup/Centralizer.lean)
+
+### D2-167 Normalizer Construction (batch 5)
+
+- name (landed: Normalizer Construction): **confirmed** [c] ":<math>\mathrm{N}_G(S) = \left\{ g \in G \mid gS = Sg \right\} = \left\{g \in G \mid gSg^{-1} = S\right\},</math>"
+- description (landed: N_G(H) = {g: gHg^{-1} = H}.): **confirmed** [c] ":<math>\mathrm{N}_G(S) = \left\{ g \in G \mid gS = Sg \right\} = \left\{g \in G \mid gSg^{-1} = S\right\},</math>"
+- input (landed: Group G + subgroup H): **confirmed** [c] "then the normalizer <math>N_G(S)</math> is the largest subgroup" *A group and a subgroup.*
+- output (landed: N_G(H)): **confirmed** [m] "def normalizer (S : Set G) : Subgroup G where"
+- preserved (landed: H normal in N_G(H)): **confirmed** [c] "then the normalizer <math>N_G(S)</math> is the largest subgroup <math>G' \subseteq G</math> where <math>S</math> is a [[normal subgroup]] of <math>G'</math>." [n] "instance (priority := 100) normal_in_normalizer : (H.subgroupOf <| normalizer H).Normal"
+- broken (landed: Non-normalizing elements): **unsupported** *"Non-normalizing elements" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: the largest subgroup in which H is normal; broken: thin
+- mathlib (exact, output): `Subgroup.normalizer`. The normalizer of a set as a subgroup.
+- mathlib (exact, preserved): `Subgroup.normal_in_normalizer`. H is normal in its normalizer.
+
+  c: excerpts/wikipedia-centralizer-and-normalizer.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055)
+  m: excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Defs.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Defs.lean)
+  n: excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/Subgroup/Basic.lean)
+
+### D2-169 Freudenthal Magic Square (batch 5)
+
+- name (landed: Freudenthal Magic Square): **confirmed** [f] "is a construction relating several [[Lie algebra]]s (and their associated [[Lie group]]s)."
+- description (landed: 4x4 array of Lie algebras from composition algebra pairs. Produces all exceptional Lie algebras.): **wrong** [f] "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]" *Not all exceptional Lie algebras: G2 is missing from the square.*
+- input (landed: Pair of composition algebras): **confirmed** [f] "It associates a Lie algebra to a pair of division algebras ''A'', "
+- output (landed: Lie algebra in magic square): **confirmed** [f] "It associates a Lie algebra to a pair of division algebras ''A'', "
+- preserved (landed: Lie algebra structure, exceptional classification): **imprecise** [f] "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]" *The exceptional classification is covered except for G2.*
+- broken (landed: Individual algebra details): **unsupported** *"Individual algebra details" is a gloss; no source states it.*
+- recalled: name: ok; description: off: gives F4, E6, E7, E8, not G2; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched Freudenthal magic square and exceptional Lie algebras: none at the pin.
+
+  f: excerpts/wikipedia-freudenthal-magic-square.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351313031)
+
+### D2-170 Similarity Transformation (batch 5)
+
+- name (landed: Similarity Transformation): **confirmed** [s] "are called '''similar''' if there exists an [[invertible matrix|invertible]] ''n''-by-''n'' matrix {{mvar|P}} such that"
+- description (landed: P^{-1}AP. Changes basis. Preserves eigenvalues, det, trace.): **confirmed** [s] "<math display="block">B = P^{-1} A P .</math>" [s] "{{Short description|Equivalence under a change of basis (linear algebra)}}" [s] "**[[Eigenvalues and eigenvectors|Eigenvalues]], and their [[Algebraic multiplicity|algebraic multiplicities]]"
+- input (landed: Matrix A + invertible P): **confirmed** [s] "if there exists an [[invertible matrix|invertible]] ''n''-by-''n'' matrix {{mvar|P}}"
+- output (landed: P^{-1}AP): **confirmed** [s] "<math display="block">B = P^{-1} A P .</math>"
+- preserved (landed: Eigenvalues, det, trace, char/min poly): **confirmed** [s] "similar matrices share all properties of their shared underlying operator:" [s] "*[[Characteristic polynomial]], and attributes that can be derived from it:" [s] "**[[Determinant]]" [s] "**[[Trace (linear algebra)|Trace]]" [s] "*[[Minimal polynomial (linear algebra)|Minimal polynomial]]" [m] "det (M * N * M⁻¹) = det N" [m] "trace (M * N * M⁻¹) = trace N"
+- broken (landed: Specific entries (basis-dependent)): **unsupported** *No fetched window states that the entries change; the source says only that eigenspaces are transformed by P.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok; broken: ok
+- mathlib (exact, preserved): `Matrix.det_conj`. det (M N M^-1) = det N for invertible M: the determinant part.
+- mathlib (exact, preserved): `Matrix.trace_conj`. trace (M N M^-1) = trace N for invertible M: the trace part.
+
+  s: excerpts/wikipedia-matrix-similarity.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1303684723)
+  m: excerpts/mathlib-Mathlib.LinearAlgebra.Matrix.NonsingularInverse.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean)
+
+### D2-171 Dual Curve Construction (batch 5)
+
+- name (landed: Dual Curve Construction): **confirmed** [d] "a '''dual curve''' of a given [[plane curve]] {{mvar|C}} is a curve in the [[Duality (projective geometry)|dual projective plane]]"
+- description (landed: Curve C -> dual C* parametrizing tangent lines.): **confirmed** [d] "consisting of the set of lines [[tangent]] to {{mvar|C}}."
+- input (landed: Algebraic curve C ⊂ P^2): **confirmed** [d] "a '''dual curve''' of a given [[plane curve]] {{mvar|C}}"
+- output (landed: Dual curve C* ⊂ (P^2)*): **confirmed** [d] "is a curve in the [[Duality (projective geometry)|dual projective plane]] consisting of the set of lines [[tangent]] to {{mvar|C}}."
+- preserved (landed: Plucker formulas, biduality): **imprecise** [d] "The [[Plücker formula]]s give the degree of the dual in terms of ''d'' and the number and types of singular points of {{mvar|X}}." *The Plucker formulas are stated; biduality is not in a fetched window.* (recall contradicted)
+- broken (landed: Point parametrization): **unsupported** *"Point parametrization" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: biduality in characteristic zero; Plucker formulas relate degree and class; broken: thin
+- mathlib: none. Searched dual curves: none at the pin.
+
+  d: excerpts/wikipedia-dual-curve.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1348688112)
+
+### D2-172 Parallel Curve Construction (batch 5)
+
+- name (landed: Parallel Curve Construction): **confirmed** [p] "It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve."
+- description (landed: Curve at constant normal distance d.): **confirmed** [p] "It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve."
+- input (landed: Plane curve + distance d): **confirmed** [p] "a constant ''[[normal distance]]'' from a given curve."
+- output (landed: Parallel curve C_d): **confirmed** [p] "It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve."
+- preserved (landed: Normal distance, tangent direction): **confirmed** [p] "*As for [[parallel (geometry)|parallel lines]], a normal line to a curve is also normal to its parallels." [p] "that means: the tangent vectors for a fixed parameter are parallel."
+- broken (landed: Curvature (may introduce cusps)): **confirmed** [p] "*<math>k_d(t)=\frac{k(t)}{1+dk(t)},\quad</math> with <math>k(t)</math> the  [[curvature]] of the given curve" [p] "*When parallel curves are constructed they will have [[Cusp (singularity)|cusp]]s when the distance from the curve matches the radius of [[curvature]]."
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: same normals; broken: ok: cusps where d equals the radius of curvature
+- mathlib: none. Searched parallel and offset curves: none at the pin.
+
+  p: excerpts/wikipedia-parallel-curve.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380622918)
+
+### D2-173 Evolute Construction (batch 5)
+
+- name (landed: Evolute Construction): **confirmed** [e] "the '''evolute''' of a [[curve]] is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]]."
+- description (landed: Locus of centers of curvature.): **confirmed** [e] "the '''evolute''' of a [[curve]] is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]]."
+- input (landed: Plane curve with curvature): **confirmed** [e] "is the parametric representation of a [[regular curve]] in the plane with its curvature nowhere 0"
+- output (landed: Evolute E(C)): **confirmed** [e] "is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]]."
+- preserved (landed: Curvature data): **confirmed** [e] "*For any arc of the evolute that does not include a cusp, the length of the arc equals the difference between the radii of curvature at its endpoints." *The centers and radii of curvature are carried by the evolute.* (recall contradicted)
+- broken (landed: Original parametrization): **unsupported** *"Original parametrization" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched evolutes: none at the pin.
+
+  e: excerpts/wikipedia-evolute.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369257467)
+
+### D2-174 Involute Construction (batch 5)
+
+- name (landed: Involute Construction): **confirmed** [i] "An example of the involute of a curve is the [[Locus (mathematics)|locus]] of a point on a piece of taut string"
+- description (landed: Inverse of evolute.): **confirmed** [i] "The [[evolute]] of an involute is the original curve."
+- input (landed: Evolute curve): **confirmed** [e] "A curve is the evolute of any of its involutes."
+- output (landed: Involute (original recovered)): **imprecise** [e] "A curve is the evolute of any of its involutes." *An involute, one of several ("any of its involutes"); the original curve is recovered as the evolute of an involute, not as an involute of its evolute in a fetched window.* (recall contradicted)
+- preserved (landed: Evolute-involute duality): **confirmed** [i] "The [[evolute]] of an involute is the original curve."
+- broken (landed: Parametrization): **unsupported** *"Parametrization" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: the evolute of an involute is the original curve; input: ok; output: ok: one of a family of parallel involutes; preserved: ok; broken: thin
+- mathlib: none. Searched involutes: none at the pin.
+
+  i: excerpts/wikipedia-involute.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363148116)
+  e: excerpts/wikipedia-evolute.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369257467)
+
+### D2-175 Pedal Curve Construction (batch 5)
+
+- name (landed: Pedal Curve Construction): **confirmed** [p] "a '''pedal curve''' of a given curve results from the [[orthogonal projection]] of a fixed point on the [[tangent line]]s of this curve."
+- description (landed: Foot of perpendicular from point P to tangent lines.): **confirmed** [p] "a '''pedal curve''' of a given curve results from the [[orthogonal projection]] of a fixed point on the [[tangent line]]s of this curve."
+- input (landed: Curve C + point P): **confirmed** [p] "of a fixed point on the [[tangent line]]s of this curve."
+- output (landed: Pedal curve): **confirmed** [p] "a '''pedal curve''' of a given curve results from the [[orthogonal projection]]"
+- preserved (landed: Tangent structure): **unsupported** *"Tangent structure" is a gloss; no source states what is kept.*
+- broken (landed: Original shape): **unsupported** *"Original shape" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched pedal curves: none at the pin.
+
+  p: excerpts/wikipedia-pedal-curve.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381818381)
+
+### D2-176 Negative Pedal Curve (batch 5)
+
+- name (landed: Negative Pedal Curve): **confirmed** [n] "the '''negative pedal curve''' is the [[envelope (mathematics)|envelope]] of the lines ''XP'' for which ''X'' lies on the given curve."
+- description (landed: Inverse of pedal construction.): **confirmed** [n] "The negative pedal curve of a [[pedal curve]] with the same pedal point is the original curve."
+- input (landed: Curve C + point P): **confirmed** [n] "For a given curve in the plane and a given fixed point ''P'', called the '''pedal point'''"
+- output (landed: Negative pedal): **confirmed** [n] "the '''negative pedal curve''' is the [[envelope (mathematics)|envelope]] of the lines ''XP'' for which ''X'' lies on the given curve."
+- preserved (landed: Dual to pedal): **confirmed** [n] "The negative pedal curve of a [[pedal curve]] with the same pedal point is the original curve."
+- broken (landed: Pedal representation): **unsupported** *"Pedal representation" is a gloss; no source states it.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib: none. Searched as for D2-175: none at the pin.
+
+  n: excerpts/wikipedia-negative-pedal-curve.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1315093342)
+
+### D2-177 Homogeneous Coordinate Transformation (batch 5)
+
+- name (landed: Homogeneous Coordinate Transformation): **confirmed** [h] "are a [[system of coordinates]] used in [[projective geometry]]"
+- description (landed: Affine A^n -> projective P^n via homogeneous coordinates.): **confirmed** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}} defines an inclusion from the"
+- input (landed: Affine point): **confirmed** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}}"
+- output (landed: Projective point): **confirmed** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}} defines an inclusion from the"
+- preserved (landed: Affine structure on chart, incidence): **imprecise** [h] "can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added, which are called [[point at infinity|points at infinity]], and are considered to lie on a new line, the [[line at infinity]]." *The affine plane sits inside the projective plane as the complement of the line at infinity, as stated; incidence is not in a fetched window.* (recall contradicted)
+- broken (landed: Metric, distances): **unsupported** *No fetched window states that metric data is lost.*
+- recalled: name: ok; description: ok: (x1..xn) to [x1: ... : xn : 1]; input: ok; output: ok; preserved: ok; broken: ok
+- mathlib: none. Mathlib has projective spaces (Projectivization), linked on D2-010, but no homogeneous-coordinate chart at the pin.
+
+  h: excerpts/wikipedia-homogeneous-coordinates.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374996410)
 

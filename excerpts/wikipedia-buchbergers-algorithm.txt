@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Buchberger's algorithm (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1359915802
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: ce32df9dde135a1ff0eed8806a22f8e548327b0121c56dec3d3ce109d786539a
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: ce32df9dde135a1ff0eed8806a22f8e548327b0121c56dec3d3ce109d786539a
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 '''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]]
@@ -12,3 +12,9 @@ If the result is non-zero, add it to ''G''.
 is a method for transforming a given set of polynomials into a [[Gröbner basis]]
 
 which is another set of polynomials that have the same common zeros and are mor
+
+'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]], which is another set of polynomials that have the same common zeros
+
+:'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}
+
+with respect to the given [[monomial ordering]]
