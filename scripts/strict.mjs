@@ -172,7 +172,7 @@ function compare() {
     for (const k of Object.keys(SW.grades)) if (pos[k.split(".")[0]] > upto) F.push(`sweep ${k}: past the sweep's through (${SW.through})`);
     for (const k of Object.keys(SW.grades)) if (!selected.includes(k)) F.push(`sweep ${k}: graded but not selected by the rule`);
     const ch = rows.filter(([, , , g]) => g.verdict !== "confirmed");
-    L.push(`${SW.through && upto < R.length - 1 ? `In progress, through ${SW.through} in review order: ` : ""}Graded ${rows.length} of the ${selected.filter((k) => pos[k.split(".")[0]] <= upto).length} selected fields so far (${selected.length} in all; those read in the blind sample keep their blind grade). Not confirmed under the strict rule: ${ch.length} (${V.filter((v) => v !== "confirmed").map((v) => `${v} ${ch.filter(([, , , g]) => g.verdict === v).length}`).join(", ")}).`, "",
+    L.push(`${SW.through && upto < R.length - 1 ? `In progress, through ${SW.through} in review order: ` : ""}Graded ${rows.length} of the ${selected.filter((k) => pos[k.split(".")[0]] <= upto).length} selected fields${upto < R.length - 1 ? ` so far (${selected.length} in all)` : ""}; the rest were read in the blind sample and keep their blind grade. Not confirmed under the strict rule: ${ch.length} (${V.filter((v) => v !== "confirmed").map((v) => `${v} ${ch.filter(([, , , g]) => g.verdict === v).length}`).join(", ")}).`, "",
       "| Field | Batch | Review | Strict | Reason |", "|---|---|---|---|---|");
     for (const [k, r, f, g] of ch) L.push(`| ${r.id} ${f} | ${r.batch} | confirmed | ${g.verdict} | ${cell(g.reason)} |`);
     L.push("");
@@ -192,6 +192,12 @@ function compare() {
     const reread = gs.reduce((n, g) => n + FIELDS.filter((f) => second.has(`${g.id}.${f}`)).length, 0);
     L.push(`### ${P} (${gs.length} entries, ${before.length} fields, ${reread} read again)`, "", "| | Confirmed | Imprecise | Wrong | Unsupported |", "|---|---|---|---|---|",
       `| review | ${V.map((v) => before.filter((x) => x === v).length).join(" | ")} |`, `| strict, effective | ${V.map((v) => after.filter((x) => x === v).length).join(" | ")} |`, "");
+    if (SW && conf.length) {
+      // Fields still confirmed only because no one has read them strictly: project them at the blind sample's rate outside the sweep.
+      const selSet = new Set(sweepSelection(R)), cout = conf.filter((it) => !selSet.has(`${it.entry}.${it.field}`)), [lo, hi] = wilson(flip(cout), cout.length);
+      const unread = gs.reduce((n, g) => n + FIELDS.filter((f) => g.fields[f].verdict === "confirmed" && !second.has(`${g.id}.${f}`)).length, 0), keep = after.filter((x) => x === "confirmed").length;
+      L.push(`Of the ${keep} effective confirmed fields, ${unread} have not been read under the strict rule. At the blind sample's rate outside the sweep, a full strict re-read would leave about ${Math.round(keep - (unread * flip(cout)) / cout.length)} confirmed (${Math.round(keep - unread * hi)} to ${Math.round(keep - unread * lo)}), ${Math.round((100 * (keep - (unread * flip(cout)) / cout.length)) / before.length)}% of the ${before.length} fields.`, "");
+    }
   }
   return { F, text: L.join("\n") };
 }
