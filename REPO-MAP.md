@@ -16,6 +16,7 @@
 | `.infra/tools` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `audit` | The audit: the fixed random sample, its field-by-field grades, and the targeted grades. |
 | `audit/blind` | The blind second reading of the Mathlib match grades: the packet, the answer key, and each reader's grades. |
+| `audit/strict` | The strict second reading of the fill review: the blind sample and its packet, the strict reader's grades, and the targeted sweep. |
 | `catalogue` | The paper catalogue: every paper the map cites and how deeply it has been read. |
 | `catalogue/imports` | Paper lists imported from sibling repositories, bibliographic fields and reading status only. |
 | `docs` | Notes about the map that are neither data nor generated. |
@@ -121,6 +122,7 @@
 | `scripts/mathmap.mjs` | the math map, made queryable. |
 | `scripts/mcp.mjs` | the map as a tool server. |
 | `scripts/misalign.mjs` | the misalignment lead finder. |
+| `scripts/strict.mjs` | the strict second reading of the fill review. |
 | `scripts/topology.mjs` | the topology of the typed map. |
 | `scripts/type-lexicon.mjs` | the free typing pass. |
 
@@ -146,6 +148,8 @@
 | `audit/blind/packet-0_1.md` | The blind packet: each Mathlib link's claim and quoted Lean statement, without the grade. |
 | `audit/blind/reader-subagent-1.json` | One reader's blind grades, with a statement of the reader's independence. |
 | `audit/sample-0_1.json` | The fixed stratified sample of 60 entries, drawn before grading. |
+| `audit/strict/packet-0_2.md` | The strict reading's blind packet: each sampled field's fill text and its entry's excerpt files, without the review's grade, quote or note. |
+| `audit/strict/sample-0_2.json` | The fixed stratified sample of 145 fill-review fields for the strict second reading, drawn before any grade was read; it holds no grade. |
 | `catalogue/imports/pde.json` | One sibling repository's paper list. |
 | `catalogue/imports/physics.json` | One sibling repository's paper list. |
 | `catalogue/imports/pnp.json` | One sibling repository's paper list. |
@@ -975,6 +979,161 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `audit/grades-0_1.js` | names | `audit/sample-0_1.json` |
 | `audit/grades-0_1.js` | names | `mapfill/homes.js` |
 | `audit/grades-0_1.js` | names | `scripts/audit.mjs` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/arxiv-2001.07488.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/arxiv-2104.11808.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.Algebra.Lie.UniversalEnveloping.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.AdjointFunctorTheorems.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Functor.KanExtension.Basic.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Equalizers.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Shapes.Pullback.Mono.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.Construction.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.GroupTheory.Commutator.Basic.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.LinearAlgebra.ExteriorAlgebra.Basic.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.LinearAlgebra.Span.Defs.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.Order.Completion.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-a-infinity-algebra.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-additive-envelope.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-adjoint-functor-theorem.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-biased-definition.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-bicategory.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-boardman-vogt-tensor-product.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-braided-monoidal-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-calculus-of-fractions.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-category-of-fractions.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-coequalizer.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-cofiber-sequence.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-comma-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-comonad.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-coproduct.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-coreflective-subcategory.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-cyclic-operad.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-deligne-tensor-product-of-abelian-categories.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-direct-image.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-double-negation.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-effective-topos.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-eilenberg-moore-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-essential-geometric-morphism-r.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-freyd-cover.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-freyd-mitchell-embedding-theorem.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-geometric-morphism-r.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-homotopy-pushout.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-initial-object.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-internal-logic.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-inverse-image.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-isbell-duality.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-kan-extension.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-lawvere-theory.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-limit.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-little-cubes-operad.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-localization.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-macneille-completion.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-monoidal-natural-transformation.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-opetope.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-orthogonal-factorization-system.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-profunctor.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-pullback.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-pushout.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-reflective-subcategory-r.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-regular-and-exact-completions.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-retract.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-sifted-colimit.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-split-epimorphism.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-straightening-functor.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-symmetric-monoidal-natural-transformation.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-topologically-enriched-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-traced-monoidal-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-weak-factorization-system.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-whiskering.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/nlab-yoneda-embedding.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-a-infinity.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-absorption-law.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-anscombe.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-bar-construction.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-betti-number.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-bicategory.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-boolean-prime-ideal-theorem.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-cartesian-closed-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-categorical-quantum-mechanics.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-center-group-theory.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-chain-complex.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-chain-homotopy.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-closure-operator.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-cohomology.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-commutator-subgroup.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-continuous-lattice.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-crystalline-cohomology.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-curry-howard-correspondence.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-dagger-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-dct.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-dedekind-macneille-completion.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-distributive-lattice.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-eckmann-hilton-argument.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-exact-category.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-exact-couple.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-ext-functor.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-exterior-algebra.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-fibration-of-simplicial-sets.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-galois-connection-r.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-geometric-lattice.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-gns.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-group-extension.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-group-ring.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-highest-weight-theorem.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-hochschild-homology.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-homomorphism.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-homotopy-colimit.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-hylomorphism-computer-science.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-hyperhomology.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-infimum-and-supremum.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-interior-algebra.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-inverse-laplace.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-jacobson-radical.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-krull-dimension.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-leray-spectral-sequence.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-levi-decomposition.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-loop-space.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-mellin-transform.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-natural-transformation.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-nine-lemma.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-norlund-rice.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-operad.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-pointwise.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-probability-integral-transform.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-puppe-sequence.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-quantile-normalization.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-quasi-isomorphism.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-reduced-product.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-rewriting.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-root-system-decomposition.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-semimodular-lattice.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-sheaf-cohomology.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-snake-lemma.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-solvable-group.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-spectral-sequence.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-splitting-field.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-stirling-transform.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-sylow-theorems.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-t-structure.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-term-algebra.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-tor-functor.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-traced-monoidal.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-transformation-semigroup.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-ultraproduct.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-universal-enveloping-algebra.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-upper-set.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-variance-stabilizing.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-variety-universal-algebra.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-weyls-theorem-complete-reducibility.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-whiteheads-lemma-lie.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-wreath-product.txt` |
+| `audit/strict/packet-0_2.md` | names | `excerpts/wikipedia-z-transform.txt` |
+| `audit/strict/packet-0_2.md` | names | `scripts/strict.mjs` |
 | `audit/targeted-0_1.js` | names | `audit/grades-0_1.js` |
 | `audit/targeted-0_1.js` | names | `lean/MathMap/StoneCech.lean` |
 | `audit/targeted-0_1.js` | names | `mapfill/formal.js` |
@@ -1911,6 +2070,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/check-all.mjs` | names | `scripts/mathmap.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/mcp.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/misalign.mjs` |
+| `scripts/check-all.mjs` | names | `scripts/strict.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/topology.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/type-lexicon.mjs` |
 | `scripts/compose.mjs` | imports | `scripts/evidence.mjs` |
@@ -2031,6 +2191,12 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/misalign.mjs` | names | `mapfill/alignment.js` |
 | `scripts/misalign.mjs` | names | `mapfill/flags.js` |
 | `scripts/misalign.mjs` | names | `reports/MISALIGN.md` |
+| `scripts/strict.mjs` | imports | `audit/fill-review-0_1.js` |
+| `scripts/strict.mjs` | imports | `scripts/mathmap.mjs` |
+| `scripts/strict.mjs` | names | `audit/fill-review-0_1.js` |
+| `scripts/strict.mjs` | names | `audit/strict/packet-0_2.md` |
+| `scripts/strict.mjs` | names | `audit/strict/sample-0_2.json` |
+| `scripts/strict.mjs` | names | `scripts/audit.mjs` |
 | `scripts/topology.mjs` | imports | `scripts/compose.mjs` |
 | `scripts/topology.mjs` | imports | `scripts/mathmap.mjs` |
 | `scripts/topology.mjs` | names | `reports/TOPOLOGY.md` |
