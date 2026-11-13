@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Medial graph (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1359691639
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e762b935a71d39dfaec6dbfef1c28f5b2a38379c59ae284add1f8d01716332fb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has
+
+* a vertex for each edge of ''G'' and
+
+* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively.
+
+* For any connected plane graph ''G'', the medial graph of ''G'' and the medial graph of the [[dual graph]] of ''G'' are isomorphic.
+
+For a plane graph ''G'', twice the evaluation of the [[Tutte polynomial]] at the point (3,3) equals the sum over weighted [[Eulerian orientation]]s in the medial graph of ''G''
+
+* Every 4-regular plane graph is the medial graph of some plane graph.

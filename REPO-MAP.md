@@ -569,6 +569,7 @@
 | `excerpts/wikipedia-anscombe.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-antichain.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-apomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-approximation-preserving-reduction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-arity.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-atiyah-hirzebruch-spectral-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-automatic-differentiation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -577,6 +578,7 @@
 | `excerpts/wikipedia-bessel-process.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-betti-number.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-bicategory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-bipartite-double-cover.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birational-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-birkhoffs-representation-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-blowing-up.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -596,6 +598,7 @@
 | `excerpts/wikipedia-catamorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-categorical-quantum-mechanics.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-cech-complex-filtration.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cech-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-center-group-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-centralizer-and-normalizer.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -638,6 +641,7 @@
 | `excerpts/wikipedia-distributive-lattice.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-distributive-property.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-doob-h-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-dual-graph.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-duality-order-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-duhamel.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-dynkin-diagram.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -677,6 +681,8 @@
 | `excerpts/wikipedia-gibbard-satterthwaite.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-gns.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-graded-poset.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-graph-power.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-graph-rewriting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-grobner-basis-ordering.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-grobner-basis.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-grothendieck-spectral-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -685,6 +691,7 @@
 | `excerpts/wikipedia-group-contraction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-extension.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-group-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-ham-sandwich-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hamiltonian-mechanics-1833.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hasse-diagram.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-heisenberg-picture.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -693,6 +700,7 @@
 | `excerpts/wikipedia-hermite-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-heyting-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-highest-weight-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-hilbert-poincare-series.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hilberts-basis-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-history-lorentz-transformations.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hochschild-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -773,6 +781,7 @@
 | `excerpts/wikipedia-matroid-minor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-maximal-ideal.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mdct.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-medial-graph.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mellin-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-merkle-tree.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-michelson-morley-1887.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -783,6 +792,7 @@
 | `excerpts/wikipedia-monoid-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-motive-algebraic-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-murray-gerstenhaber.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-mycielskian.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nash-equilibrium.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-natural-transformation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nerve-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -801,7 +811,9 @@
 | `excerpts/wikipedia-ordinal-arithmetic.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-ore-condition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-paramorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-parsimonious-reduction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-partial-trace.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-persistent-data-structure.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-pinhole-camera-model.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-plancherel-spherical.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-pointwise.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -824,6 +836,7 @@
 | `excerpts/wikipedia-quasi-isomorphism.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quasivariety.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quillens-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-quotient-graph.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quotient-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-projection.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -848,6 +861,7 @@
 | `excerpts/wikipedia-serre-spectral-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-sheaf-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-shear-mapping.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-simplex-graph.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-singular-value-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-snake-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-solvable-group.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -872,6 +886,7 @@
 | `excerpts/wikipedia-tensor-hom-adjunction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-tensor-product-of-modules.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-term-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-topological-data-analysis.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-hochschild-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-sorting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-tor-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -879,6 +894,7 @@
 | `excerpts/wikipedia-transformation-semigroup.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-transition-state-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-translation-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-transpose-graph.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-triangulated-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-tucker-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-two-sided-laplace.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -889,6 +905,7 @@
 | `excerpts/wikipedia-variance-stabilizing.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-variety-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-verma-module.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-vietoris-rips-complex.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-voronoi-diagram.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-well-ordering-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-weyl-character-formula.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -1776,6 +1793,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-anscombe.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-antichain.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-apomorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-approximation-preserving-reduction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-arity.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-atiyah-hirzebruch-spectral-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-automatic-differentiation.txt` |
@@ -1783,6 +1801,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bergmans-diamond-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-betti-number.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bicategory.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bipartite-double-cover.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-birkhoffs-representation-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-bockstein-spectral-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-boolean-prime-ideal-theorem.txt` |
@@ -1796,6 +1815,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-catamorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-categorical-quantum-mechanics.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cech-cohomology.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-cech-complex-filtration.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-center-group-theory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-centralizer-and-normalizer.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-chain-complex.txt` |
@@ -1833,6 +1853,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-direct-product.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-distributive-lattice.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-distributive-property.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dual-graph.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-duality-order-theory.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-dynkin-diagram.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-eckmann-hilton-argument.txt` |
@@ -1863,16 +1884,20 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-geometric-lattice.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-gns.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-graded-poset.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-graph-power.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-graph-rewriting.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-grobner-basis-ordering.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-grobner-basis.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-grothendieck-spectral-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-group-cohomology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-group-extension.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-group-ring.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ham-sandwich-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hasse-diagram.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hensels-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-heyting-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-highest-weight-theorem.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hilbert-poincare-series.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hilberts-basis-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hochschild-homology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-hom-functor.txt` |
@@ -1930,6 +1955,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-matrix-ring.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-maximal-ideal.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mdct.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-medial-graph.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mellin-transform.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mirskys-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mobius-inversion-formula.txt` |
@@ -1937,6 +1963,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-modular-lattice.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-monoid-ring.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-motive-algebraic-geometry.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-mycielskian.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-natural-transformation.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-newmans-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-nilpotent-group.txt` |
@@ -1949,7 +1976,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ordinal-arithmetic.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-ore-condition.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-paramorphism.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-parsimonious-reduction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-partial-trace.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-persistent-data-structure.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-pinhole-camera-model.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-plancherel-spherical.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-pointwise.txt` |
@@ -1970,6 +1999,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quasi-isomorphism.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quasivariety.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quillens-lemma.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quotient-graph.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-quotient-universal-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-random-projection.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-randomized-response.txt` |
@@ -1989,6 +2019,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-serre-spectral-sequence.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-sheaf-cohomology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-shear-mapping.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-simplex-graph.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-singular-value-decomposition.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-snake-lemma.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-solvable-group.txt` |
@@ -2010,11 +2041,13 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-tensor-hom-adjunction.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-tensor-product-of-modules.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-term-algebra.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-topological-data-analysis.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-topological-hochschild-homology.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-tor-functor.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-traced-monoidal.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-transformation-semigroup.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-translation-geometry.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-transpose-graph.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-triangulated-category.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-tucker-decomposition.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-two-sided-laplace.txt` |
@@ -2025,6 +2058,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-variance-stabilizing.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-variety-universal-algebra.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-verma-module.txt` |
+| `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-vietoris-rips-complex.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-voronoi-diagram.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-well-ordering-theorem.txt` |
 | `reports/FILL-REVIEW.md` | names | `excerpts/wikipedia-weyl-character-formula.txt` |

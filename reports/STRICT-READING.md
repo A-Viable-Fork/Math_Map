@@ -286,7 +286,7 @@ Graded 513 of the 538 selected fields; the rest were read in the blind sample an
 
 In the blind sample, confirmed fields inside the selection flip at 11/25 = 44.0% (95% Wilson interval 26.7% to 62.9%); outside it, at 27/75 = 36.0% (95% Wilson interval 26.1% to 47.3%). Short or relationless quotes do not mark where the strict rule bites: the flips are claim parts no window states, which long quotes leave out as often as short ones.
 
-The selection holds 538 of the review's 2096 confirmed fields, and the blind sample read 75 more. The 1483 left unread would carry, at the outside rate, about 534 fields the strict rule does not confirm (387 to 701 at the interval's ends); they keep the review's grade here until a full re-read.
+The selection holds 538 of the review's 2155 confirmed fields, and the blind sample read 75 more. The 1542 left unread would carry, at the outside rate, about 555 fields the strict rule does not confirm (402 to 729 at the interval's ends); they keep the review's grade here until a full re-read.
 
 ## Verdicts before and after
 
@@ -310,9 +310,9 @@ Of the 1664 effective confirmed fields, 1284 have not been read under the strict
 
 Of the 78 effective confirmed fields, 56 have not been read under the strict rule. At the blind sample's rate outside the sweep, a full strict re-read would leave about 58 confirmed (52 to 63), 48% of the 120 fields.
 
-### Homes graded under the strict rule from the start (batches 19 on, 40 entries, 240 fields)
+### Homes graded under the strict rule from the start (batches 19 on, 59 entries, 354 fields)
 
 | | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| strict | 143 | 49 | 0 | 48 |
+| strict | 202 | 73 | 0 | 79 |
 

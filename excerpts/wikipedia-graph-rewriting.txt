@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Graph rewriting (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1365965492
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cea3816d977a92fb8d5678dc8f0881458c38ba27269ea077cdc6a3d512912073
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Formally, a graph [[rewriting]] system usually consists of a set of graph rewrite rules of the form <math>L \rightarrow R</math>, with <math>L</math> being called pattern graph (or left-hand side) and <math>R</math> being called replacement graph
+
+A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement

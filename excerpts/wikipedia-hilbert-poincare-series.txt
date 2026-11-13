@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Hilbert–Poincaré series (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899793
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 333180a78ac801cf3e14e16f5abd0949d6a2f72af102d148202c40b056b7755e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Hilbert–Poincaré series''' (also known under the name '''[[Hilbert series]]'''), named after [[David Hilbert]] and [[Henri Poincaré]]
+
+It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>.
+
+In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>.

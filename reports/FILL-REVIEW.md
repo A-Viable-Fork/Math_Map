@@ -6,7 +6,7 @@ The authored fills (origin fill, tier authored: written from memory, never revie
 
 Batches 19 and later are graded under the strict rule [ruling: operator, 2026-11-13]: confirmed only when the quoted windows state every part of the field's claim, not merely name the object; a part no window states makes the field imprecise or unsupported, and the note says which. Batches 1 to 18 were graded under the earlier rule, which let a confirmed grade carry a note naming an unsettled part; `reports/STRICT-READING.md` reads them again under the strict rule, beside these grades.
 
-Reviewed: 416 of 416 D7 stubs, 60 of 79 homes; 476 entries in 20 batches.
+Reviewed: 416 of 416 D7 stubs, 79 of 79 homes; 495 entries in 21 batches.
 
 ## 1. Verdicts by field
 
@@ -24,17 +24,17 @@ Each population's fields, counted by verdict. The domain is the reviewed entry's
 | broken | 125 | 4 | 0 | 287 |
 | **all** | 1864 | 16 | 0 | 616 |
 
-### Homes (60 entries)
+### Homes (79 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 53 | 0 | 0 | 7 |
-| description | 38 | 17 | 0 | 5 |
-| input | 43 | 8 | 0 | 9 |
-| output | 44 | 8 | 0 | 8 |
-| preserved | 32 | 13 | 0 | 15 |
-| broken | 22 | 5 | 1 | 32 |
-| **all** | 232 | 51 | 1 | 76 |
+| name | 68 | 2 | 0 | 9 |
+| description | 43 | 30 | 0 | 6 |
+| input | 57 | 9 | 0 | 13 |
+| output | 56 | 11 | 0 | 12 |
+| preserved | 40 | 17 | 0 | 22 |
+| broken | 27 | 6 | 1 | 45 |
+| **all** | 291 | 75 | 1 | 107 |
 
 ### Homes, D2 (7 entries)
 
@@ -96,17 +96,29 @@ Each population's fields, counted by verdict. The domain is the reviewed entry's
 | broken | 2 | 1 | 0 | 0 |
 | **all** | 15 | 3 | 0 | 0 |
 
-### Homes, D8 (42 entries)
+### Homes, D7 (1 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 36 | 0 | 0 | 6 |
-| description | 21 | 16 | 0 | 5 |
-| input | 27 | 6 | 0 | 9 |
-| output | 27 | 7 | 0 | 8 |
-| preserved | 17 | 10 | 0 | 15 |
-| broken | 13 | 3 | 0 | 26 |
-| **all** | 141 | 42 | 0 | 69 |
+| name | 1 | 0 | 0 | 0 |
+| description | 0 | 1 | 0 | 0 |
+| input | 0 | 1 | 0 | 0 |
+| output | 0 | 1 | 0 | 0 |
+| preserved | 0 | 0 | 0 | 1 |
+| broken | 0 | 0 | 0 | 1 |
+| **all** | 1 | 3 | 0 | 2 |
+
+### Homes, D8 (60 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 50 | 2 | 0 | 8 |
+| description | 26 | 28 | 0 | 6 |
+| input | 41 | 6 | 0 | 13 |
+| output | 39 | 9 | 0 | 12 |
+| preserved | 25 | 14 | 0 | 21 |
+| broken | 18 | 4 | 0 | 38 |
+| **all** | 199 | 63 | 0 | 98 |
 
 ## 2. Recall against source
 
@@ -134,7 +146,8 @@ Per batch: fields a source settled (any verdict but unsupported), and how many o
 | 18 | 20 | 92 | 3 | 3% |
 | 19 | 20 | 109 | 2 | 2% |
 | 20 | 20 | 83 | 1 | 1% |
-| **all** | 476 | 2164 | 12 | 1% |
+| 21 | 19 | 83 | 1 | 1% |
+| **all** | 495 | 2247 | 13 | 1% |
 
 ## 3. Second reading of the sample
 
@@ -163,8 +176,15 @@ Fills in the audit's fixed sample, first graded by the fills' author against liv
 - D8-163 broken: sample confirmed, review unsupported.
 - D8-058 output: sample confirmed, review imprecise.
 - D8-058 broken: sample confirmed, review imprecise.
+- D8-169 broken: sample confirmed, review unsupported.
+- D8-140 name: sample confirmed, review imprecise.
+- D8-140 description: sample confirmed, review imprecise.
+- D8-140 input: sample confirmed, review unsupported.
+- D8-140 output: sample confirmed, review unsupported.
+- D8-140 preserved: sample confirmed, review imprecise.
+- D8-140 broken: sample confirmed, review imprecise.
 
-Agreement: 103 of 126 fields.
+Agreement: 108 of 138 fields.
 
 ## 4. Sources in disagreement
 
@@ -544,6 +564,24 @@ Every field not confirmed, with the reason.
 - **D8-036 Delaunay triangulation transform** (batch 20): *broken* unsupported: No window states it; "the point set as unstructured" is a gloss.
 - **D8-227 Voronoi diagram transformation** (batch 20): *broken* unsupported: No window states that distances within a cell are lost.
 - **D8-187 Ruppert's algorithm transformation** (batch 20): *input* imprecise: A planar straight-line graph is stated; the quality bound is a circumradius-to-shortest-edge ratio, not stated as an angle bound. *preserved* imprecise: A conforming triangulation (the input kept) is stated; the bound is a ratio threshold, not stated as a minimum angle. *broken* unsupported: No window states that mesh size minimality is lost.
+- **D8-085 Ham-sandwich cut transformation** (batch 21): *description* imprecise: Bisecting n measures in R^n by one hyperplane is stated; the linear-time algorithm in the plane is in no window. *broken* unsupported: No window states what else about the sets is lost.
+- **D8-226 Vietoris-Rips complex filtration** (batch 21): *preserved* unsupported: No window states that the persistence diagram is stable under Gromov-Hausdorff perturbation. *broken* unsupported: No window states that exact geometry is lost.
+- **D8-236 \u010cech complex filtration** (batch 21): *description* imprecise: The nerve of the balls and the nerve-theorem guarantee are stated for one radius; the nested family over growing radii is in no window. *output* imprecise: A complex for one radius is stated; the filtration over growing radii is in no window.
+- **D8-131 Mapper graph transformation** (batch 21): *description* imprecise: The filter map, the cover and the authors (Singh, Memoli, Carlsson) are stated; clustering the preimages and taking the nerve are in no window. *output* unsupported: No window states the output graph or complex. *preserved* unsupported: No window states what coarse shape is kept. *broken* unsupported: No window states what is lost or how stability depends on parameters.
+- **D8-142 Node-copying transformation** (batch 21): *name* unsupported: No window names the node-copying method. *description* imprecise: Driscoll et al.'s combination of fat nodes and path copying is stated; copying a node when its spare fields fill is in no window. *broken* unsupported: No window states the space cost of the copies.
+- **D8-047 Dual graph transformation** (batch 21): *description* imprecise: A vertex per face is stated; an edge crossing each edge falls outside the window.
+- **D8-134 Medial graph transformation** (batch 21): *description* imprecise: The construction is stated; that the medial graph is 4-regular is in no window (only that every 4-regular plane graph is a medial graph). *broken* unsupported: No window states that vertex identity is lost.
+- **D8-217 Transpose graph transformation** (batch 21): *preserved* unsupported: Kosaraju's algorithm uses the reversal; no window states that the transpose has the same strongly connected components.
+- **D8-169 Quotient graph transformation** (batch 21): *broken* unsupported: No window states that the internal structure of blocks is lost.
+- **D8-162 Power of graph transformation** (batch 21): *preserved* imprecise: The vertex set is stated; connectivity is in no window. *broken* unsupported: No window states which distance information is lost.
+- **D8-196 Simplex graph transformation** (batch 21): *description* imprecise: A node per clique, the empty clique included, and the median graph are stated; edges between cliques differing by one vertex fall outside the windows. *broken* unsupported: No window states that the adjacency encoding is lost.
+- **D8-140 Mycielskian transformation** (batch 21): *name* imprecise: The construction's properties are stated; the definition of M(G) is in no window. *description* imprecise: Triangle-freeness kept and the chromatic number raised are stated; by exactly one is in no window. *input* unsupported: No window states the input graph as such. *output* unsupported: No window defines M(G). *preserved* imprecise: Triangle-freeness is kept; the clique number becomes max(2, omega(G)), so it is kept only when omega(G) is at least 2. *broken* imprecise: An increase is stated; by one is not.
+- **D8-046 Double graph transformation** (batch 21): *description* imprecise: The bipartite double cover as G x K2 is stated; the variant adding edges within copies is in no window. *preserved* imprecise: Bipartiteness and the covering are stated; the doubled degree sequence is in no window. *broken* unsupported: No window states that odd cycles are lost.
+- **D8-080 Graph rewriting transformation** (batch 21): *description* imprecise: Replacing a matched pattern by a rule is stated; the double- and single-pushout approaches are in no window. *preserved* unsupported: No window states that the context outside the match is kept.
+- **D8-199 Source graph composition** (batch 21): *name* unsupported: The fill records the name as unidentified; no source was sought for a name the fill does not identify. *description* unsupported: Unknown, as the fill records. *input* unsupported: Unknown, as the fill records. *output* unsupported: Unknown, as the fill records. *preserved* unsupported: Unknown, as the fill records. *broken* unsupported: Unknown, as the fill records.
+- **D8-160 Polynomial-time counting reduction** (batch 21): *name* imprecise: The class is named; its definition is in no window. *description* imprecise: Parsimonious reductions, which keep the count, are stated; the general reduction, the count of A computed from counts of B, is in no window. *input* unsupported: No window states the input instance. *output* unsupported: No window states the instances of B with a recovery map. *preserved* imprecise: Counts are kept by parsimonious reductions; the transfer of #P-hardness is in no window. *broken* unsupported: No window states that solution structure is lost.
+- **D8-164 PTAS reduction** (batch 21): *description* imprecise: APX-completeness defined by PTAS reductions is stated; that a PTAS for B yields one for A is in no window. *input* unsupported: No window states the input instance. *output* imprecise: The solution map g is stated; the instance of B is in no window. *preserved* unsupported: No window states that approximability within 1 + eps is kept. *broken* unsupported: No window states that exact optima are lost.
+- **D7-240 Hilbert-Poincar\u00e9 Series Expansion** (batch 21): *description* imprecise: The series of graded dimensions is stated; rationality is stated only "in good cases", without the Hilbert-Serre hypothesis (finitely generated over a polynomial ring). *input* imprecise: Graded structures are stated; finite generation is in no window. *output* imprecise: Rational in good cases; the conditions are in no window. *preserved* unsupported: No window states that dimension, degree and multiplicity are read from the series. *broken* unsupported: No window states that module structure beyond dimensions is lost.
 
 ## 6. Receipts
 
@@ -6387,4 +6425,231 @@ actions defining an optic"
 - recalled: name: Standard (Ruppert 1995); description: Delaunay refinement inserting circumcentres and splitting encroached segments; input: PSLG and angle bound; output: Quality mesh; preserved: Input geometry; angle bound; broken: Size optimality only up to a constant
 
   r: excerpts/wikipedia-delaunay-refinement.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369427795)
+
+### D8-085 Ham-sandwich cut transformation (batch 21)
+
+- name: **confirmed** [h] "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] "objects" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+- description: **imprecise** [h] "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]." [h] "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] "objects" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]" *Bisecting n measures in R^n by one hyperplane is stated; the linear-time algorithm in the plane is in no window.*
+- input: **confirmed** [h] "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] "objects" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+- output: **confirmed** [h] "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]."
+- preserved: **confirmed** [h] "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]."
+- broken: **unsupported** *No window states what else about the sets is lost.*
+- recalled: name: Standard (Stone and Tukey 1942); description: n measures in R^n are bisected by one hyperplane; linear time in the plane (Lo, Matousek, Steiger); input: n measures in R^n; output: Hyperplane; preserved: Halving of each; broken: Everything else
+
+  h: excerpts/wikipedia-ham-sandwich-theorem.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384454276)
+
+### D8-226 Vietoris-Rips complex filtration (batch 21)
+
+- name: **confirmed** [v] "the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them."
+- description: **confirmed** [v] "The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]]."
+- input: **confirmed** [v] "the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them."
+- output: **confirmed** [v] "The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]]."
+- preserved: **unsupported** *No window states that the persistence diagram is stable under Gromov-Hausdorff perturbation.*
+- broken: **unsupported** *No window states that exact geometry is lost.*
+- recalled: name: Standard; description: Rips complexes at growing scale; persistent homology input; input: Finite metric space; output: Filtered complex; preserved: Stability under Gromov-Hausdorff perturbation; broken: Exact geometry
+
+  v: excerpts/wikipedia-vietoris-rips-complex.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382495164)
+
+### D8-236 \u010cech complex filtration (batch 21)
+
+- name: **confirmed** [c] "'''Čech complex''' is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]"
+- description: **imprecise** [c] "In other words, the Čech complex is the [[Nerve of a covering|nerve]] of the set of ''ε''-balls centered at points of ''X''." [c] "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex." *The nerve of the balls and the nerve-theorem guarantee are stated for one radius; the nested family over growing radii is in no window.*
+- input: **confirmed** [c] "'''Čech complex''' is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]"
+- output: **imprecise** [c] "In other words, the Čech complex is the [[Nerve of a covering|nerve]] of the set of ''ε''-balls centered at points of ''X''." *A complex for one radius is stated; the filtration over growing radii is in no window.*
+- preserved: **confirmed** [c] "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex." *The source states the guarantee for a point cloud in any metric space; the nerve theorem needs balls whose intersections are contractible (convex balls in Euclidean space), so the source and the fill share the overreach. Graded on the window; recorded for the falsification pass.* (recall contradicted)
+- broken: **confirmed** [c] "While the Čech complex is more computationally expensive than the Vietoris–Rips complex"
+- recalled: name: Standard; description: Nerves of growing balls; nerve theorem gives the union's homotopy type in Euclidean space (convex balls), not in a general metric space; input: Point cloud; output: Filtered complex; preserved: Homotopy type of the union (Euclidean); broken: Cost
+
+  c: excerpts/wikipedia-cech-complex-filtration.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1339780162)
+
+### D8-131 Mapper graph transformation (batch 21)
+
+- name: **confirmed** [t] "Carlsson et al. have proposed a general method called '''MAPPER'''."
+- description: **imprecise** [t] "Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\colon X\to Z</math> be a continuous map. Let <math>\mathbb{U} = \{U_{\alpha}\}_{\alpha \in A}</math> be a finite open covering of <math>Z</math>." [t] "{{cite book |first1=G. |last1=Singh |first2=F. |last2=Mémoli |first3=G. |last3=Carlsson" *The filter map, the cover and the authors (Singh, Memoli, Carlsson) are stated; clustering the preimages and taking the nerve are in no window.*
+- input: **confirmed** [t] "Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\colon X\to Z</math> be a continuous map. Let <math>\mathbb{U} = \{U_{\alpha}\}_{\alpha \in A}</math> be a finite open covering of <math>Z</math>."
+- output: **unsupported** *No window states the output graph or complex.*
+- preserved: **unsupported** *No window states what coarse shape is kept.*
+- broken: **unsupported** *No window states what is lost or how stability depends on parameters.*
+- recalled: name: Standard (Singh, Memoli, Carlsson 2007); description: Cover the filter's range, cluster preimages, take the nerve; input: Point cloud, filter, cover; output: Graph or complex; preserved: Coarse shape; broken: Fine geometry
+
+  t: excerpts/wikipedia-topological-data-analysis.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383254717)
+
+### D8-148 Partial persistence transformation (batch 21)
+
+- name: **confirmed** [p] "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+- description: **confirmed** [p] "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified." [p] "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per"
+- input: **confirmed** [p] "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+- output: **confirmed** [p] "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+- preserved: **confirmed** [p] "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+- broken: **confirmed** [p] "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per" [p] "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+- recalled: name: Standard (Driscoll, Sarnak, Sleator, Tarjan 1989); description: All versions queryable, latest updatable; input: Pointer structure; output: Partially persistent structure; preserved: Past versions; broken: Nothing; O(1) amortized for bounded in-degree
+
+  p: excerpts/wikipedia-persistent-data-structure.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712)
+
+### D8-142 Node-copying transformation (batch 21)
+
+- name: **unsupported** *No window names the node-copying method.*
+- description: **imprecise** [p] "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per" *Driscoll et al.'s combination of fat nodes and path copying is stated; copying a node when its spare fields fill is in no window.*
+- input: **confirmed** [p] "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+- output: **confirmed** [p] "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+- preserved: **confirmed** [p] "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+- broken: **unsupported** *No window states the space cost of the copies.*
+- recalled: name: Standard (Driscoll et al. 1989); description: Copy a node when its extra pointer fields fill; input: Pointer structure; output: Persistent version; preserved: Past versions; broken: Space
+
+  p: excerpts/wikipedia-persistent-data-structure.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712)
+
+### D8-047 Dual graph transformation (batch 21)
+
+- name: **confirmed** [d] "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}"
+- description: **imprecise** [d] "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}" *A vertex per face is stated; an edge crossing each edge falls outside the window.*
+- input: **confirmed** [d] "The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}"
+- output: **confirmed** [d] "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}"
+- preserved: **confirmed** [d] "For instance, [[cycle (graph theory)|cycles]] are dual to [[cut (graph theory)|cuts]], [[spanning tree]]s are dual to the [[complement set|complements]] of spanning trees"
+- broken: **confirmed** [d] "The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}"
+- recalled: name: Standard; description: Vertex per face, edge across each edge; input: Plane graph; output: Dual; preserved: Cycles to cuts (bonds), spanning trees to complements; broken: Embedding independence
+
+  d: excerpts/wikipedia-dual-graph.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376084107)
+
+### D8-134 Medial graph transformation (batch 21)
+
+- name: **confirmed** [m] "* a vertex for each edge of ''G'' and" [m] "* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively."
+- description: **imprecise** [m] "* a vertex for each edge of ''G'' and" [m] "* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively." [m] "* Every 4-regular plane graph is the medial graph of some plane graph." *The construction is stated; that the medial graph is 4-regular is in no window (only that every 4-regular plane graph is a medial graph).*
+- input: **confirmed** [m] "Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has"
+- output: **confirmed** [m] "Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has"
+- preserved: **confirmed** [m] "* For any connected plane graph ''G'', the medial graph of ''G'' and the medial graph of the [[dual graph]] of ''G'' are isomorphic." [m] "For a plane graph ''G'', twice the evaluation of the [[Tutte polynomial]] at the point (3,3) equals the sum over weighted [[Eulerian orientation]]s in the medial graph of ''G''"
+- broken: **unsupported** *No window states that vertex identity is lost.*
+- recalled: name: Standard; description: Vertex per edge, adjacent when consecutive on a face; 4-regular; input: Plane graph; output: Medial graph; preserved: Dual has the same medial graph; Tutte polynomial link; broken: Vertex identity
+
+  m: excerpts/wikipedia-medial-graph.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1359691639)
+
+### D8-217 Transpose graph transformation (batch 21)
+
+- name: **confirmed** [t] "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+- description: **confirmed** [t] "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+- input: **confirmed** [t] "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+- output: **confirmed** [t] "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+- preserved: **unsupported** *Kosaraju's algorithm uses the reversal; no window states that the transpose has the same strongly connected components.*
+- broken: **confirmed** [t] "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+- recalled: name: Standard; description: Reverse every edge; input: Digraph; output: Transpose; preserved: Strongly connected components; broken: Direction
+
+  t: excerpts/wikipedia-transpose-graph.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1116542750)
+
+### D8-169 Quotient graph transformation (batch 21)
+
+- name: **confirmed** [q] "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+- description: **confirmed** [q] "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+- input: **confirmed** [q] "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+- output: **confirmed** [q] "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+- preserved: **confirmed** [q] "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+- broken: **unsupported** *No window states that the internal structure of blocks is lost.*
+- recalled: name: Standard; description: Contract partition blocks; input: Graph and partition; output: Quotient graph; preserved: Adjacency between blocks; broken: Internal structure
+
+  q: excerpts/wikipedia-quotient-graph.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1299226895)
+
+### D8-162 Power of graph transformation (batch 21)
+
+- name: **confirmed** [w] "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+- description: **confirmed** [w] "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+- input: **confirmed** [w] "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+- output: **confirmed** [w] "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+- preserved: **imprecise** [w] "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}." *The vertex set is stated; connectivity is in no window.*
+- broken: **unsupported** *No window states which distance information is lost.*
+- recalled: name: Standard; description: Join vertices at distance at most k; input: Graph and k; output: G^k; preserved: Vertex set, connectivity; broken: Distances up to k
+
+  w: excerpts/wikipedia-graph-power.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1335625130)
+
+### D8-196 Simplex graph transformation (batch 21)
+
+- name: **confirmed** [s] "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+- description: **imprecise** [s] "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]" [s] "The empty set is included as one of the cliques of {{mvar|G}} that are used to form the clique graph, as is every set of one vertex and every set of two adjacent vertices." [s] "The simplex graph is the [[median graph]] corresponding to this median algebra structure." *A node per clique, the empty clique included, and the median graph are stated; edges between cliques differing by one vertex fall outside the windows.*
+- input: **confirmed** [s] "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+- output: **confirmed** [s] "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+- preserved: **confirmed** [s] "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+- broken: **unsupported** *No window states that the adjacency encoding is lost.*
+- recalled: name: Standard; description: Vertex per clique including the empty one, edges between cliques differing by one vertex; a median graph; input: Graph; output: Simplex graph; preserved: Clique structure; broken: Adjacency encoding
+
+  s: excerpts/wikipedia-simplex-graph.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1385325684)
+
+### D8-140 Mycielskian transformation (batch 21)
+
+- name: **imprecise** [y] "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]" *The construction's properties are stated; the definition of M(G) is in no window.*
+- description: **imprecise** [y] "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]" *Triangle-freeness kept and the chromatic number raised are stated; by exactly one is in no window.*
+- input: **unsupported** *No window states the input graph as such.*
+- output: **unsupported** *No window defines M(G).*
+- preserved: **imprecise** [y] "*More generally, if ''G'' has [[clique number]] ω(''G''), then μ(''G'') has clique number of the maximum among 2 and ω(''G'')." [y] "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]" *Triangle-freeness is kept; the clique number becomes max(2, omega(G)), so it is kept only when omega(G) is at least 2.*
+- broken: **imprecise** [y] "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]" *An increase is stated; by one is not.*
+- recalled: name: Standard (Mycielski 1955); description: M(G) triangle-free with chromatic number one higher; input: Graph; output: M(G); preserved: Triangle-freeness; clique number when at least 2; broken: Chromatic number rises
+
+  y: excerpts/wikipedia-mycielskian.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1308470583)
+
+### D8-046 Double graph transformation (batch 21)
+
+- name: **confirmed** [b] "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}." *The name read as the bipartite double cover, as the fill's reading takes it.*
+- description: **imprecise** [b] "It can be constructed as the [[tensor product of graphs]], {{math|''G'' × ''K''{{sub|2}}}}." [b] "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}." *The bipartite double cover as G x K2 is stated; the variant adding edges within copies is in no window.*
+- input: **confirmed** [b] "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+- output: **confirmed** [b] "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+- preserved: **imprecise** [b] "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}." *Bipartiteness and the covering are stated; the doubled degree sequence is in no window.*
+- broken: **unsupported** *No window states that odd cycles are lost.*
+- recalled: name: Standard (bipartite double cover); description: G x K2; input: Graph; output: Double cover; preserved: Degrees; bipartite; broken: Odd cycles
+
+  b: excerpts/wikipedia-bipartite-double-cover.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1335647863)
+
+### D8-080 Graph rewriting transformation (batch 21)
+
+- name: **confirmed** [g] "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+- description: **imprecise** [g] "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement" *Replacing a matched pattern by a rule is stated; the double- and single-pushout approaches are in no window.*
+- input: **confirmed** [g] "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement" [g] "Formally, a graph [[rewriting]] system usually consists of a set of graph rewrite rules of the form <math>L \rightarrow R</math>, with <math>L</math> being called pattern graph (or left-hand side) and <math>R</math> being called replacement graph"
+- output: **confirmed** [g] "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+- preserved: **unsupported** *No window states that the context outside the match is kept.*
+- broken: **confirmed** [g] "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+- recalled: name: Standard (Ehrig; double pushout); description: Replace a match of L by R by a rule; input: Host graph, rule, match; output: Rewritten graph; preserved: Context; broken: Matched part
+
+  g: excerpts/wikipedia-graph-rewriting.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1365965492)
+
+### D8-199 Source graph composition (batch 21)
+
+- name: **unsupported** *The fill records the name as unidentified; no source was sought for a name the fill does not identify.*
+- description: **unsupported** *Unknown, as the fill records.*
+- input: **unsupported** *Unknown, as the fill records.*
+- output: **unsupported** *Unknown, as the fill records.*
+- preserved: **unsupported** *Unknown, as the fill records.*
+- broken: **unsupported** *Unknown, as the fill records.*
+- recalled: name: Unknown, as the fill records; description: Unknown; input: Unknown; output: Unknown; preserved: Unknown; broken: Unknown
+
+
+### D8-160 Polynomial-time counting reduction (batch 21)
+
+- name: **imprecise** [p] "Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s." *The class is named; its definition is in no window.*
+- description: **imprecise** [p] "Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s." [p] "a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions." *Parsimonious reductions, which keep the count, are stated; the general reduction, the count of A computed from counts of B, is in no window.*
+- input: **unsupported** *No window states the input instance.*
+- output: **unsupported** *No window states the instances of B with a recovery map.*
+- preserved: **imprecise** [p] "a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions." *Counts are kept by parsimonious reductions; the transfer of #P-hardness is in no window.*
+- broken: **unsupported** *No window states that solution structure is lost.*
+- recalled: name: Standard (Valiant 1979); description: Counting reductions, parsimonious or Turing; input: Instance of A; output: Instances of B with recovery; preserved: Counts; broken: Solution structure
+
+  p: excerpts/wikipedia-parsimonious-reduction.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1325874922)
+
+### D8-164 PTAS reduction (batch 21)
+
+- name: **confirmed** [a] "PTAS-reduction is another commonly used reduction scheme." [a] "PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}."
+- description: **imprecise** [a] "Nevertheless, APX-completeness is defined in terms of PTAS reductions." *APX-completeness defined by PTAS reductions is stated; that a PTAS for B yields one for A is in no window.*
+- input: **unsupported** *No window states the input instance.*
+- output: **imprecise** [a] "PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}." *The solution map g is stated; the instance of B is in no window.*
+- preserved: **unsupported** *No window states that approximability within 1 + eps is kept.*
+- broken: **unsupported** *No window states that exact optima are lost.*
+- recalled: name: Standard (Crescenzi and others); description: Approximation-preserving reduction; APX-completeness under PTAS reductions; input: Instance of A; output: Instance of B and solution map; preserved: 1 + eps approximability; broken: Exact optimum
+
+  a: excerpts/wikipedia-approximation-preserving-reduction.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1357847632)
+
+### D7-240 Hilbert-Poincar\u00e9 Series Expansion (batch 21)
+
+- name: **confirmed** [h] "a '''Hilbert–Poincaré series''' (also known under the name '''[[Hilbert series]]'''), named after [[David Hilbert]] and [[Henri Poincaré]]"
+- description: **imprecise** [h] "It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>." [h] "In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>." *The series of graded dimensions is stated; rationality is stated only "in good cases", without the Hilbert-Serre hypothesis (finitely generated over a polynomial ring).*
+- input: **imprecise** [h] "It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>." *Graded structures are stated; finite generation is in no window.*
+- output: **imprecise** [h] "In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>." *Rational in good cases; the conditions are in no window.*
+- preserved: **unsupported** *No window states that dimension, degree and multiplicity are read from the series.*
+- broken: **unsupported** *No window states that module structure beyond dimensions is lost.*
+- recalled: name: Standard (Hilbert, Serre); description: sum dim M_n t^n, rational for finitely generated modules over polynomial rings; input: Graded module; output: Rational series; preserved: Dimension, degree, multiplicity; broken: Module structure
+
+  h: excerpts/wikipedia-hilbert-poincare-series.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899793)
 

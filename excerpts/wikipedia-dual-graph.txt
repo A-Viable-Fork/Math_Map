@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Dual graph (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376084107
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cdcc9786c2fe7d95a995c9df34fae1d30610345516ef313fa22a00f78407c7c1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}
+
+For instance, [[cycle (graph theory)|cycles]] are dual to [[cut (graph theory)|cuts]], [[spanning tree]]s are dual to the [[complement set|complements]] of spanning trees
+
+The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}

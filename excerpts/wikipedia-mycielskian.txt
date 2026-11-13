@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Mycielskian (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1308470583
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 9ea9d68b28af8c62f4dbc52c5a49dbd9d37ac1cd89592961706200bce7fe4955
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]
+
+*More generally, if ''G'' has [[clique number]] ω(''G''), then μ(''G'') has clique number of the maximum among 2 and ω(''G'').

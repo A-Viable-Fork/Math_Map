@@ -27606,6 +27606,933 @@
    "sources": {
     "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369427795"
    }
+  },
+  {
+   "id": "D8-085",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-ham-sandwich-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] \"objects\" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]].",
+     "note": "Bisecting n measures in R^n by one hyperplane is stated; the linear-time algorithm in the plane is in no window.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] \"objects\" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] \"objects\" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what else about the sets is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384454276"
+   }
+  },
+  {
+   "id": "D8-226",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-vietoris-rips-complex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the persistence diagram is stable under Gromov-Hausdorff perturbation."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that exact geometry is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382495164"
+   }
+  },
+  {
+   "id": "D8-236",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cech-complex-filtration.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''Čech complex''' is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "In other words, the Čech complex is the [[Nerve of a covering|nerve]] of the set of ''ε''-balls centered at points of ''X''.",
+     "note": "The nerve of the balls and the nerve-theorem guarantee are stated for one radius; the nested family over growing radii is in no window.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''Čech complex''' is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]"
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "In other words, the Čech complex is the [[Nerve of a covering|nerve]] of the set of ''ε''-balls centered at points of ''X''.",
+     "note": "A complex for one radius is stated; the filtration over growing radii is in no window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex.",
+     "note": "The source states the guarantee for a point cloud in any metric space; the nerve theorem needs balls whose intersections are contractible (convex balls in Euclidean space), so the source and the fill share the overreach. Graded on the window; recorded for the falsification pass."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "While the Čech complex is more computationally expensive than the Vietoris–Rips complex"
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1339780162"
+   }
+  },
+  {
+   "id": "D8-131",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-topological-data-analysis.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Carlsson et al. have proposed a general method called '''MAPPER'''."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\\colon X\\to Z</math> be a continuous map. Let <math>\\mathbb{U} = \\{U_{\\alpha}\\}_{\\alpha \\in A}</math> be a finite open covering of <math>Z</math>.",
+     "note": "The filter map, the cover and the authors (Singh, Memoli, Carlsson) are stated; clustering the preimages and taking the nerve are in no window.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "{{cite book |first1=G. |last1=Singh |first2=F. |last2=Mémoli |first3=G. |last3=Carlsson"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\\colon X\\to Z</math> be a continuous map. Let <math>\\mathbb{U} = \\{U_{\\alpha}\\}_{\\alpha \\in A}</math> be a finite open covering of <math>Z</math>."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states the output graph or complex."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states what coarse shape is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what is lost or how stability depends on parameters."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383254717"
+   }
+  },
+  {
+   "id": "D8-148",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-persistent-data-structure.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per",
+     "more": [
+      {
+       "src": "p",
+       "quote": "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712"
+   }
+  },
+  {
+   "id": "D8-142",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-persistent-data-structure.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No window names the node-copying method."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per",
+     "note": "Driscoll et al.'s combination of fat nodes and path copying is stated; copying a node when its spare fields fill is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states the space cost of the copies."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712"
+   }
+  },
+  {
+   "id": "D8-047",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-dual-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "d",
+     "quote": "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}",
+     "note": "A vertex per face is stated; an edge crossing each edge falls outside the window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "For instance, [[cycle (graph theory)|cycles]] are dual to [[cut (graph theory)|cuts]], [[spanning tree]]s are dual to the [[complement set|complements]] of spanning trees"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376084107"
+   }
+  },
+  {
+   "id": "D8-134",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-medial-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* a vertex for each edge of ''G'' and",
+     "more": [
+      {
+       "src": "m",
+       "quote": "* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "* a vertex for each edge of ''G'' and",
+     "note": "The construction is stated; that the medial graph is 4-regular is in no window (only that every 4-regular plane graph is a medial graph).",
+     "more": [
+      {
+       "src": "m",
+       "quote": "* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively."
+      },
+      {
+       "src": "m",
+       "quote": "* Every 4-regular plane graph is the medial graph of some plane graph."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* For any connected plane graph ''G'', the medial graph of ''G'' and the medial graph of the [[dual graph]] of ''G'' are isomorphic.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "For a plane graph ''G'', twice the evaluation of the [[Tutte polynomial]] at the point (3,3) equals the sum over weighted [[Eulerian orientation]]s in the medial graph of ''G''"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that vertex identity is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1359691639"
+   }
+  },
+  {
+   "id": "D8-217",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-transpose-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Kosaraju's algorithm uses the reversal; no window states that the transpose has the same strongly connected components."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1116542750"
+   }
+  },
+  {
+   "id": "D8-169",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quotient-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the internal structure of blocks is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299226895"
+   }
+  },
+  {
+   "id": "D8-162",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-graph-power.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}.",
+     "note": "The vertex set is stated; connectivity is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states which distance information is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1335625130"
+   }
+  },
+  {
+   "id": "D8-196",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-simplex-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]",
+     "note": "A node per clique, the empty clique included, and the median graph are stated; edges between cliques differing by one vertex fall outside the windows.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "The empty set is included as one of the cliques of {{mvar|G}} that are used to form the clique graph, as is every set of one vertex and every set of two adjacent vertices."
+      },
+      {
+       "src": "s",
+       "quote": "The simplex graph is the [[median graph]] corresponding to this median algebra structure."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the adjacency encoding is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1385325684"
+   }
+  },
+  {
+   "id": "D8-140",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-mycielskian.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]",
+     "note": "The construction's properties are stated; the definition of M(G) is in no window."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]",
+     "note": "Triangle-freeness kept and the chromatic number raised are stated; by exactly one is in no window."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input graph as such."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window defines M(G)."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "*More generally, if ''G'' has [[clique number]] ω(''G''), then μ(''G'') has clique number of the maximum among 2 and ω(''G'').",
+     "note": "Triangle-freeness is kept; the clique number becomes max(2, omega(G)), so it is kept only when omega(G) is at least 2.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]",
+     "note": "An increase is stated; by one is not."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1308470583"
+   }
+  },
+  {
+   "id": "D8-046",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-bipartite-double-cover.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}.",
+     "note": "The name read as the bipartite double cover, as the fill's reading takes it."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "It can be constructed as the [[tensor product of graphs]], {{math|''G'' × ''K''{{sub|2}}}}.",
+     "note": "The bipartite double cover as G x K2 is stated; the variant adding edges within copies is in no window.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}.",
+     "note": "Bipartiteness and the covering are stated; the doubled degree sequence is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that odd cycles are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1335647863"
+   }
+  },
+  {
+   "id": "D8-080",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-graph-rewriting.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement",
+     "note": "Replacing a matched pattern by a rule is stated; the double- and single-pushout approaches are in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement",
+     "more": [
+      {
+       "src": "g",
+       "quote": "Formally, a graph [[rewriting]] system usually consists of a set of graph rewrite rules of the form <math>L \\rightarrow R</math>, with <math>L</math> being called pattern graph (or left-hand side) and <math>R</math> being called replacement graph"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the context outside the match is kept."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365965492"
+   }
+  },
+  {
+   "id": "D8-199",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "The fill records the name as unidentified; no source was sought for a name the fill does not identify."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-160",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-parsimonious-reduction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s.",
+     "note": "The class is named; its definition is in no window."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s.",
+     "note": "Parsimonious reductions, which keep the count, are stated; the general reduction, the count of A computed from counts of B, is in no window.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input instance."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states the instances of B with a recovery map."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions.",
+     "note": "Counts are kept by parsimonious reductions; the transfer of #P-hardness is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that solution structure is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1325874922"
+   }
+  },
+  {
+   "id": "D8-164",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-approximation-preserving-reduction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "PTAS-reduction is another commonly used reduction scheme.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "Nevertheless, APX-completeness is defined in terms of PTAS reductions.",
+     "note": "APX-completeness defined by PTAS reductions is stated; that a PTAS for B yields one for A is in no window."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input instance."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}.",
+     "note": "The solution map g is stated; the instance of B is in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that approximability within 1 + eps is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that exact optima are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1357847632"
+   }
+  },
+  {
+   "id": "D7-240",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hilbert-poincare-series.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "a '''Hilbert–Poincaré series''' (also known under the name '''[[Hilbert series]]'''), named after [[David Hilbert]] and [[Henri Poincaré]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>.",
+     "note": "The series of graded dimensions is stated; rationality is stated only \"in good cases\", without the Hilbert-Serre hypothesis (finitely generated over a polynomial ring).",
+     "more": [
+      {
+       "src": "h",
+       "quote": "In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>.",
+     "note": "Graded structures are stated; finite generation is in no window."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>.",
+     "note": "Rational in good cases; the conditions are in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that dimension, degree and multiplicity are read from the series."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that module structure beyond dimensions is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899793"
+   }
   }
  ]
 }
