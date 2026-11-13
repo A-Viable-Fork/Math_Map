@@ -116,6 +116,7 @@
     "generation/*/trial-*.md": "A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned.",
     "generation/*/*.patch": "A draft patch to an external tool, written and tested here; held until the operator signs off on sending it upstream.",
     "docs/inbound/*.md": "A dated proposal from another repository or session; a lead, not a change.",
-    "docs/schema-survey/01-reading.md": "Phase 1: per consumer, what it reads from the map, what it keeps outside it and what it asked for, with the atlas passages of The_Smell_of_Knowledge quoted; every claim marked read, measured or inferred."
+    "docs/schema-survey/01-reading.md": "Phase 1: per consumer, what it reads from the map, what it keeps outside it and what it asked for, with the atlas passages of The_Smell_of_Knowledge quoted; every claim marked read, measured or inferred.",
+    "docs/schema-survey/02-generation.md": "Phase 2, a generation record (SCHEMA-001): sixty-seven candidate data kinds across six axes, each with the arrows it serves, the function it enables, its day-one reader, its evidence story and its cost; written before any prior-art search."
   }
 }
