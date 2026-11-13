@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikidata P2534: defining formula
+URL: https://www.wikidata.org/wiki/Special:EntityData/P2534.json
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ce46d0bf9ee02e72d6c85f8943a4fc7ef0f0ac6e24e5ea4ef498c5e124ba4a12
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+"datatype":"math","id":"P2534"
+
+"language":"en","value":"defining formula"

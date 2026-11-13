@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikidata: statement qualifiers, ranks and references
+URL: https://www.wikidata.org/wiki/Help:Statements
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 2024edb957b8baff51a0b154d2b6e77ad07c63e0040292951bad467fa684e0a4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The structure is property-value(s), with optionals for every value (rank, qualifier and references).

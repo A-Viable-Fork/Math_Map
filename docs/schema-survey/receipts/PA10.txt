@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: LMFDB developer principles
+URL: https://raw.githubusercontent.com/LMFDB/lmfdb/51941321c3c67054e0c3148c1c8d215857200280/README.md
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d64ac4122e28e666fe80d8e5b04e9797199a3fccc375af72493b382c3653e17c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+summarizes key invariants, links to completeness, source, and
+reliability knowls, and when applicable, a list of related objects.
