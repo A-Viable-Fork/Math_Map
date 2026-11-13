@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: arXiv:2310.14022, Cohen, Crance, Mahboubi, Trocq: Proof Transfer for Free, With or Without Univalence (abstract page)
+URL: https://arxiv.org/abs/2310.14022
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 2a883f9fc642a2651d89ce5d9ed7844392330c11b04568bf09be6e672bb47f33
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Libraries of formalized mathematics use a possibly broad range of different representations for a same mathematical concept.
+
+and may be used with more relations than just equivalences

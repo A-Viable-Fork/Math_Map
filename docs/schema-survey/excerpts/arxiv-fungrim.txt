@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: arXiv:2003.06181, Johansson, FunGrim: a symbolic library for special functions (abstract page)
+URL: https://arxiv.org/abs/2003.06181
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ebff03626664be200379d2cda5d39f8998d1cb29d2e89015c7d9aefd10fe7626
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the Grim formula language used in these projects to represent mathematical content semantically

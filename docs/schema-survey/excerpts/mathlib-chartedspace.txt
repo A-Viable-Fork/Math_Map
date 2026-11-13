@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib at 380f2aa, Mathlib/Geometry/Manifold/ChartedSpace.lean (Apache 2.0)
+URL: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Manifold/ChartedSpace.lean
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 18297cd9993b7118a3e9ac53758525fdf1a60d1d0006359012bd9584600284ed
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* the set of charts, which is data
+
+* the fact that changes of charts belong to some group (in fact groupoid), which is additional Prop.
+
+stable under composition and inverse, to which the change of coordinates should belong.

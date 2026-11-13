@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, QuickCheck (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1338232429
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 811f6b31e32fa87de5cd27d06b3b1c8c980542b56ca25f5d667eb826738784b0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Then QuickCheck attempts to generate a test case that [[Falsifiability|falsifies]] such assertions.

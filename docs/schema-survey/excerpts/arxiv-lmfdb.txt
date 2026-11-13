@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: arXiv:1511.04289, Cremona, The L-functions and modular forms database project (abstract page)
+URL: https://arxiv.org/abs/1511.04289
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e73bb3760448d7b4ed0d976f8443edbbaa6573af2cb8d84ee27e164a0a7da15c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+showing the interrelations between linked objects

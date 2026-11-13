@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, duality (page source)
+URL: https://ncatlab.org/nlab/source/duality
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 2dd545091cfd31b717df9231edbf05b4d30a62b8d4f1548b5aea312043739d2c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a rough guiding intuition is of pairs of concepts that are mirror images of one another
+
+one has a [[theory]] whose [[signature]] admits a nontrivial [[involution]]

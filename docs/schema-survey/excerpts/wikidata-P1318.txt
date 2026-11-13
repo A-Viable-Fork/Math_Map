@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikidata, property P1318 (entity data, JSON; CC0)
+URL: https://www.wikidata.org/wiki/Special:EntityData/P1318.json
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6aed1c6743143284fc55e8309c38f02b1f3ffb991ade981449f3dc19c10bf972
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+"en":{"language":"en","value":"proved by"}
+
+"en":{"language":"en","value":"person who proved something"}

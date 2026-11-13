@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Fiber bundle (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369808579
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 7a0e1d752172837f4a5a76d93a5dd90ab24fe6fe3aceb7e91931291c4e27a280
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The third condition applies on triple overlaps
+
+The importance of this is that the transition functions determine the fiber bundle (if one assumes the cocycle condition).

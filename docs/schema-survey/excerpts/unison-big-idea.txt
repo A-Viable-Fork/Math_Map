@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Unison documentation, The big idea
+URL: https://www.unison-lang.org/docs/the-big-idea/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 67fa9231722fbff0161d0376bf90c3a6828a2b755df913223386cc3057d00fb4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Each Unison definition has a unique and deterministic address (its hash) in this vast immutable address space.

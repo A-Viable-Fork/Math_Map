@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: arXiv:1405.5956, Carette, Farmer, Kohlhase, Realms: A Structure for Consolidating Knowledge about Mathematical Theories (abstract page)
+URL: https://arxiv.org/abs/1405.5956
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 78f42b7ec7cf20ac276d5ee98428e4dd04cc843372b031e495d4be6f3a01479e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A realm contains several axiomatizations of a theory that are separately developed. Views interconnect these developments and establish that the axiomatizations are equivalent in the sense of being mutually interpretable.
+
+A realm also contains an external interface that is convenient for users of the library

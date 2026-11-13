@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, univalence axiom (page source)
+URL: https://ncatlab.org/nlab/source/univalence+axiom
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 2df16260d0c130ce833102864f9c6f26da89eb3f7d8f3ee6dcf2ef2343805273
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The _univalence axiom_ says that these two notions of
+
+one cannot define any [[predicate]] that provably distinguishes isomorphic [[types]]

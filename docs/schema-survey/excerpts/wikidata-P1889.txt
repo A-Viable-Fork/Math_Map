@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikidata, property P1889 (entity data, JSON; CC0)
+URL: https://www.wikidata.org/wiki/Special:EntityData/P1889.json
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6b333e3a139ecac6f2277fd34745d0dab3134e6a1ea7542a3961133252227fda
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+"en":{"language":"en","value":"different from"}
+
+"en":{"language":"en","value":"item that is different from another item, with which it may be confused"}

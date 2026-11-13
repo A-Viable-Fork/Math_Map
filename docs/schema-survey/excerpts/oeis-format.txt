@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: OEIS, Explanation of Terms Used in Reply From (eishelp2.html)
+URL: https://oeis.org/eishelp2.html
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d2fbca8bb008be78ed0a647ac9da9dc1f6477eca5d9c6f33b07dccb12454bf76
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+These lines gives cross-references to related sequences.
+
+These lines give a program in some other language that will produce the sequence.
+
+An erroneous or duplicated sequence (the table
+
+contains a number of incorrect sequences that have appeared in the literature,
+
+cross-references are in %Y lines, formulae in %F lines, etc.

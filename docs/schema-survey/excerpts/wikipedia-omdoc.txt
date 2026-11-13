@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, OMDoc (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1300961662
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 7024fe39aa0d38ce82015fcc2da8c8b5ccb19547b6a48dedabefbed37e5fde56
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Theories may import each other, thereby forming a [[graph (data structure)|graph]].
+
+Definitions, theorems, proofs, examples and the relations between them

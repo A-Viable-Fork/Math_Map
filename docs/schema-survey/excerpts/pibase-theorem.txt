@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: pi-Base data, theorems/T000226.md (github.com/pi-base/data, main)
+URL: https://raw.githubusercontent.com/pi-base/data/main/theorems/T000226.md
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f8a13d18788cef6e7bf727652207a0089ab7c7b799917a95907acda508b287ec
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+  P000099: true
+
+  P000002: true
+
+Asserted on page 494 of {{mr:2219327}}.

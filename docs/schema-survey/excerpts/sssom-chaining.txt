@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: SSSOM documentation, Applying Chaining Rules (dev)
+URL: https://mapping-commons.github.io/sssom/dev/chaining-rules/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 15cc53ac4bfc857ff91e2381c993dfbcfe4c85fd280fe17f6474564f85df0b51
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We consider the following predicates transitive:
+
+Role chains are rules that allow us to bridge across mappings across multiple different properties.
+
+Predicates we do not consider transitive include:

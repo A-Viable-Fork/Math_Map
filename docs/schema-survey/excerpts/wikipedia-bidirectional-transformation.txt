@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Bidirectional transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1306701019
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cd871139c66e4282d9312a3e30a974b873bb0df6d27021cead8b1823f88adbfc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Lenses are required to obey certain conditions to ensure sensible behaviour.
+
+discarding some information in the process

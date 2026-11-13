@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: arXiv:2311.12649, Horowitz, de Paiva, MathGloss: Building mathematical glossaries from text (abstract page)
+URL: https://arxiv.org/abs/2311.12649
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: fc0010c61eeca59b597cc0e79183b5b76c28591a521b77e38585316decc848ab
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+MathGloss is a linked database of undergraduate concepts in mathematics.
