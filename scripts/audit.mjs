@@ -122,7 +122,10 @@ export function checkReview() {
     }
     for (const f of g.contra || []) { if (!FIELDS.includes(f)) F.push(`${at}: contra names ${f}`); else if (g.fields?.[f]?.verdict === "unsupported") F.push(`${at}: contra ${f}, but no source settled the field`); }
   }
-  for (const id of recall.keys()) if (!seen.has(id)) F.push(`recall ${id}: no review on record`);
+  // A batch's recall is committed before its sources are fetched, so a batch with no review yet is pending; once any
+  // review of the batch lands, every recall in it needs its review.
+  const reviewed = new Set(REVIEW.map((g) => g.batch));
+  for (const [id, k] of recall) if (!seen.has(id) && reviewed.has(k.batch)) F.push(`recall ${id}: no review on record`);
   return F;
 }
 

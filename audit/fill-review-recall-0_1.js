@@ -466,6 +466,27 @@ const RECALL = [
   k("D8-016", 18, "Standard (Box and Cox 1964)", "Power family with log at zero; lambda by maximum likelihood", "Positive data", "Transformed data", "Order", "Scale"),
   k("D8-166", 18, "Standard", "Empirical CDF then inverse target CDF", "Data", "Uniform or normal marginals", "Rank order", "Distances"),
   k("D8-055", 18, "Standard", "Discretize into intervals", "Continuous feature", "Bins", "Order", "Within-bin variation"),
+  // Batch 19: home groups 21 to 40 (mapfill/homes.js), one recall per group on its first entry, written 2026-11-13 before the batch's sources were fetched. Graded under the strict rule.
+  k("D5-072", 19, "Standard (inversion in a circle or sphere)", "x to c + r^2 (x - c)/|x - c|^2; the fill drops the + c, right only for centre 0; generalized circles go to generalized circles", "Points other than the centre", "Inverted points (centre to the point at infinity)", "Angles (anticonformal); generalized circles", "Distances; lines not through the centre become circles"),
+  k("D5-074", 19, "Standard", "Distance-preserving map; Euclidean isometries are compositions of translations, rotations and reflections (affine by Mazur-Ulam)", "Metric space", "Congruent image", "Distances (angles in Euclidean space)", "Position"),
+  k("D6-029", 19, "Standard (homothety)", "x to c + k (x - c)", "Figure", "Scaled figure", "Angles, shape, ratios", "Lengths scale by |k|, areas by k^2"),
+  k("D6-119", 19, "Standard", "Reflection in a hyperplane: involutive isometry, determinant -1", "Figure", "Mirror image", "Distances, angles", "Orientation"),
+  k("D6-145", 19, "Standard", "x to x + v", "Figure", "Shifted figure", "Distances, angles, orientation", "Position (no fixed point)"),
+  k("D8-193", 19, "Standard", "(x, y) to (x + k y, y); determinant 1", "Figure", "Sheared figure", "Area, parallelism", "Angles and lengths"),
+  k("D8-150", 19, "Standard (pinhole camera)", "(x, y, z) to (f x / z, f y / z); a projective transformation", "3D points", "Image points", "Collinearity, cross-ratio", "Parallelism, distances, angles, depth"),
+  k("D8-145", 19, "Standard", "P with P^2 = P = P*; nearest point in the subspace", "Vector and closed subspace", "Nearest point", "Components in the subspace", "Orthogonal components"),
+  k("D5-148", 19, "Standard (Kennelly 1899)", "Star to triangle with R_ab = (R_a R_b + R_b R_c + R_c R_a)/R_c; Y-Delta reducibility of graphs", "Network with a star", "Network with a triangle", "Terminal behaviour", "Internal node"),
+  k("D8-235", 19, "Standard", "Triangle to star with R_a = R_ab R_ca/(R_ab + R_bc + R_ca)", "Network with a triangle", "Network with a star", "Terminal behaviour", "Triangle edges"),
+  k("D8-197", 19, "Standard", "A = U Sigma V*, U and V unitary, Sigma nonnegative diagonal", "Any m x n matrix", "U, Sigma, V", "Rank, 2-norm and Frobenius norm, Eckart-Young best approximation", "Singular vectors unique only up to phase"),
+  k("D8-028", 19, "Standard (thin or compact SVD)", "Keep the r nonzero singular values", "Rank-r matrix", "U_r, Sigma_r, V_r", "A exactly", "Null-space bases"),
+  k("D8-091", 19, "Standard (De Lathauwer, De Moor, Vandewalle 2000)", "Core times orthogonal factor matrices from the SVDs of the unfoldings", "Tensor", "All-orthogonal core and factor matrices", "The tensor, multilinear rank", "Diagonality of the core"),
+  k("D8-219", 19, "Standard (Tucker 1966)", "Core tensor times a matrix in each mode", "Tensor and multilinear rank", "Core and factors", "Multilinear subspaces", "Uniqueness; exactness when truncated"),
+  k("D8-163", 19, "Standard (Pearson 1901, Hotelling 1933)", "Orthogonal directions of maximal variance: eigenvectors of the covariance, or SVD of centred data", "Data matrix", "Components and scores", "Variance captured", "Variance in discarded directions"),
+  k("D8-077", 19, "Standard (Moler and Stewart)", "Unitary Q, Z with Q* A Z and Q* B Z upper triangular; eigenvalues as ratios of diagonals", "Pencil (A, B)", "Triangular pair", "Generalized eigenvalues", "Original bases"),
+  k("D8-107", 19, "Standard", "A = P J P^-1 over an algebraically closed field", "Square matrix", "Jordan form and P", "Similarity class, eigenvalues and multiplicities", "Numerical stability"),
+  k("D8-117", 19, "Standard", "Symmetric A = L D L^T, L unit lower triangular, D diagonal (block diagonal with Bunch-Kaufman pivoting)", "Symmetric matrix", "L and D", "Inertia (Sylvester), the matrix", "Nothing; no square roots"),
+  k("D8-209", 19, "Standard (sparse direct methods)", "Nonzero pattern of the Cholesky factor via the elimination tree, before numerics", "Pattern and ordering", "Pattern of L", "Structure", "Values"),
+  k("D8-106", 19, "Standard (Johnson and Lindenstrauss 1984)", "Random linear map to O(log n / eps^2) dimensions preserving pairwise distances within 1 +- eps", "n points in R^d", "Points in R^k", "Pairwise distances approximately", "Exact geometry"),
 ];
 
 module.exports = { RECALL };
