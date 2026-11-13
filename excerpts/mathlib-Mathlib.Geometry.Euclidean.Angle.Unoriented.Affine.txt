@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 6b7635b7ec1f316f1fa99f2b21d4a5f5ea2e1a55f811ecb66613a161743a951f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AffineIsometry.angle_map (line 54)
+theorem _root_.AffineIsometry.angle_map {V₂ P₂ : Type*} [NormedAddCommGroup V₂]
+    [InnerProductSpace ℝ V₂] [MetricSpace P₂] [NormedAddTorsor V₂ P₂]
+    (f : P →ᵃⁱ[ℝ] P₂) (p₁ p₂ p₃ : P) : ∠ (f p₁) (f p₂) (f p₃) = ∠ p₁ p₂ p₃

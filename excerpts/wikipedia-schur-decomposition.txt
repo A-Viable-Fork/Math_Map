@@ -1,0 +1,26 @@
+Excerpts, verbatim, from: Wikipedia, Schur decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 37819a0f90b51e7111410ac43cb375f83cb23071d3575ab26596351f9f76aacd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It allows one to write an arbitrary complex square matrix as [[Matrix similarity|unitarily similar]] to an [[Upper-triangular matrix|upper triangular matrix]] whose diagonal elements are the eigenvalues of the original matrix.
+
+for some [[unitary matrix]] ''Q'' (so that the inverse ''Q''<sup>−1</sup> is also the [[conjugate transpose]] ''Q''* of ''Q''), and some [[upper triangular matrix]] ''U''.
+
+Since ''U'' is [[similar (linear algebra)|similar]] to ''A'', it has the same [[Spectrum of a matrix|spectrum]]
+
+There is also a real Schur decomposition. If {{mvar|A}} is an {{math|''n'' × ''n''}} [[square matrix]] with [[real numbers|real]] entries, then ''A'' can be expressed as
+
+where {{mvar|Q}} is an [[orthogonal matrix]] and {{mvar|H}} is either upper or lower quasi-triangular. A quasi-triangular matrix is a matrix that when expressed as a block matrix of {{math|''2'' × ''2''}} and {{math|''1'' × ''1''}} blocks is triangular.
+
+<math display="block"> A = Q H Q^{-1}</math>
+
+The Schur decomposition of a given matrix is numerically computed by the [[QR algorithm]] or its variants.
+
+Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''.
+
+(where '''x''' is an unknown nonzero vector) can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''.
+
+The generalized [[eigenvalue]]s <math>\lambda</math> that solve the [[Eigendecomposition of a matrix#Additional topics|generalized eigenvalue problem]] <math>A\mathbf{x}=\lambda B\mathbf{x}</math>
+
+the '''Schur decomposition''' or '''Schur triangulation'''

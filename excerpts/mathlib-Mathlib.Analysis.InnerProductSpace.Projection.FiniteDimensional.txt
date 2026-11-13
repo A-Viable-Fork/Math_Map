@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 308d7c73dcf2a2584173215b04ed1acc106923a7a05a6f50761c826568f3c051
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Submodule.det_reflection (line 59)
+theorem det_reflection : LinearMap.det K.reflection.toLinearMap = (-1) ^ finrank 𝕜 Kᗮ

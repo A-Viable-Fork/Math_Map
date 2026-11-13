@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Rank factorization (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1310010178
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3897d0e11a09055bf491bd1fc9691abb054f6b73b410faeac53a90cfbc53fb5b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''rank decomposition''' or '''rank factorization''' of {{mvar|A}} is a [[factorization]] of {{mvar|A}} of the form {{math|1=''A'' = ''CF''}}, where <math>C\in\mathbb F^{m\times r}</math> and <math>F\in\mathbb F^{r\times n}</math>, where <math>r=\operatorname{rank} A</math> is the [[Rank (linear algebra)|rank]] of <math>A</math>.
+
+Let <math display="inline">\mathbf{c}_1, \mathbf{c}_2, \ldots, \mathbf{c}_r</math> be any [[basis (linear algebra)|basis]] for the column space of <math display="inline">A</math> and place them as column vectors to form the
+
+Since <math display="inline">U_1</math> is a full-column-rank matrix and <math display="inline">\Sigma_r V_1^*</math> is a full-row-rank matrix, we can take <math display="inline">C = U_1</math> and <math display="inline">F = \Sigma_r V_1^*</math>.
+
+Therefore, the column space of <math display="inline">A^\textsf{T}</math> is contained within the column space of <math display="inline">F^\textsf{T}</math>

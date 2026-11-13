@@ -425,6 +425,26 @@ const FORMAL = [
 // The landed review (audit/landed-review-0_1.js): links made where Mathlib states, generalizes, specializes or
 // defines a landed entry's claim, found by searching the pinned checkout for every entry graded.
 const LANDED = [
+  // Batch 1: D2-001 to D2-054.
+  K("D2-001", "preserved", "AffineIsometryEquiv.constVAdd", "Mathlib/Analysis/Normed/Affine/Isometry.lean", "exact", "Translation by v is an affine isometric automorphism: the distance part of the field. Angles and orientation are not stated here."),
+  K("D2-001", "preserved", "AffineIsometry.angle_map", "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean", "general", "Every affine isometry preserves unoriented angles; a translation is one (AffineIsometryEquiv.constVAdd)."),
+  K("D2-002", "preserved", "EuclideanGeometry.reflection", "Mathlib/Geometry/Euclidean/Projection.lean", "general", "Reflection in any nonempty complete affine subspace, a hyperplane included, as an affine isometric automorphism: distances are kept."),
+  K("D2-002", "preserved", "AffineIsometry.angle_map", "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean", "general", "Every affine isometry preserves unoriented angles; a reflection is one."),
+  K("D2-002", "broken", "Submodule.det_reflection", "Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean", "general", "The reflection in K has determinant (-1)^(dim of the orthogonal complement); for a hyperplane that is -1, so orientation is reversed."),
+  K("D2-003", "preserved", "Orientation.rotation", "Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean", "special", "In an oriented real inner product space of dimension 2, rotation by an angle is a linear isometric equivalence: distances, in the plane case."),
+  K("D2-003", "preserved", "Orientation.det_rotation", "Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean", "special", "The plane rotation has determinant 1: orientation is kept, in the plane case."),
+  K("D2-003", "preserved", "LinearIsometry.angle_map", "Mathlib/Geometry/Euclidean/Angle/Unoriented/Basic.lean", "general", "Every linear isometry preserves angles between vectors; a rotation about the origin is one."),
+  K("D2-004", "description", "AffineMap.homothety", "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean", "ingredient", "The homothety with centre c and ratio r, as an affine map: the operation, defined."),
+  K("D2-004", "broken", "dist_center_homothety", "Mathlib/Analysis/Normed/Affine/AddTorsor.lean", "special", "Distances from the centre are multiplied by the norm of the ratio; the general case, distances between any two points, is not this declaration."),
+  K("D2-010", "description", "Projectivization.map", "Mathlib/LinearAlgebra/Projectivization/Basic.lean", "related", "An injective semilinear map induces a map of projective spaces: the direction from semilinear maps to collineations. The converse, the fundamental theorem of projective geometry, is not at the pin."),
+  K("D2-011", "description", "Function.Involutive", "Mathlib/Logic/Function/Basic.lean", "exact", "f (f x) = x for every x.", { whole: true }),
+  K("D2-040", "description", "Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec", "Mathlib/LinearAlgebra/Matrix/Transvection.lean", "related", "Gaussian elimination as Mathlib states it: every square matrix over a field is a product of transvections, a diagonal matrix and transvections. The transvections need not be triangular, so this is not the LU factorization."),
+  K("D2-046", "description", "LDL.lower_conj_diag", "Mathlib/Analysis/Matrix/LDL.lean", "exact", "A positive definite S equals L D L-star with L lower triangular and D diagonal: the entry's factorization, for its own input. That L has unit diagonal is not stated in this declaration."),
+  K("D2-047", "preserved", "InnerProductSpace.span_gramSchmidt", "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean", "related", "Gram-Schmidt keeps the span of the vectors it orthogonalizes: the column-space claim, for the Gram-Schmidt construction of Q."),
+  K("D2-048", "description", "Matrix.IsHermitian.spectral_theorem", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "A Hermitian matrix is unitarily conjugate to the diagonal matrix of its eigenvalues: the diagonalizable case where V is unitary."),
+  K("D2-048", "preserved", "Matrix.IsHermitian.det_eq_prod_eigenvalues", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "The determinant is the product of the eigenvalues, for Hermitian matrices."),
+  K("D2-048", "preserved", "Matrix.IsHermitian.trace_eq_sum_eigenvalues", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "The trace is the sum of the eigenvalues, for Hermitian matrices."),
+  K("D2-050", "description", "Module.End.exists_isNilpotent_isSemisimple", "Mathlib/LinearAlgebra/JordanChevalley.lean", "related", "The Jordan-Chevalley decomposition f = n + s, which the Jordan form displays; the Jordan normal form itself is not at the pin."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "66a4cc3a3dfe06c0012331ea3540662e49ceecd1"
+  "commit": "39f44ccdcc4cc2c322c7373e494c45c07822c93c"
  },
  "domains": {
   "D1": {
@@ -747,22 +747,22 @@
    "generated": 44
   },
   "byTier": {
-   "landed": 1323,
-   "audited": 552,
+   "landed": 1298,
+   "audited": 577,
    "authored": 58,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 42,
+  "corrected": 61,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 721,
-   "unchecked": 8638,
-   "imprecise": 17,
-   "sourced": 2938,
-   "formal": 82
+   "unsupported": 741,
+   "unchecked": 8488,
+   "imprecise": 18,
+   "sourced": 3066,
+   "formal": 83
   },
   "lean": {
    "toolchain": "leanprover/lean4:v4.35.0-rc3",
@@ -782,15 +782,15 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 122,
-   "links": 283,
+   "entries": 133,
+   "links": 302,
    "byMatch": {
-    "exact": 215,
+    "exact": 218,
     "conflicts": 5,
-    "related": 17,
-    "special": 18,
-    "general": 19,
-    "ingredient": 9
+    "related": 21,
+    "special": 24,
+    "general": 24,
+    "ingredient": 10
    }
   }
  },
@@ -4706,14 +4706,33 @@
     "cloneStatus": "Confirmed Clone (home: Domain 4)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "AffineIsometryEquiv.constVAdd",
+     "file": "Mathlib/Analysis/Normed/Affine/Isometry.lean",
+     "match": "exact",
+     "note": "Translation by v is an affine isometric automorphism: the distance part of the field. Angles and orientation are not stated here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Normed/Affine/Isometry.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "AffineIsometry.angle_map",
+     "file": "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean",
+     "match": "general",
+     "note": "Every affine isometry preserves unoriented angles; a translation is one (AffineIsometryEquiv.constVAdd).",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-002",
@@ -4738,14 +4757,41 @@
     "cloneStatus": "Confirmed Clone (home: Domain 4)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "EuclideanGeometry.reflection",
+     "file": "Mathlib/Geometry/Euclidean/Projection.lean",
+     "match": "general",
+     "note": "Reflection in any nonempty complete affine subspace, a hyperplane included, as an affine isometric automorphism: distances are kept.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Projection.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "AffineIsometry.angle_map",
+     "file": "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean",
+     "match": "general",
+     "note": "Every affine isometry preserves unoriented angles; a reflection is one.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "Submodule.det_reflection",
+     "file": "Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean",
+     "match": "general",
+     "note": "The reflection in K has determinant (-1)^(dim of the orthogonal complement); for a hyperplane that is -1, so orientation is reversed.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-003",
@@ -4760,7 +4806,7 @@
    "input": "Geometric figure + center + angle",
    "output": "Rotated figure",
    "preserved": "All distances, angles, orientation",
-   "broken": "Position of non-center points",
+   "broken": "Position of every point off the fixed set: only the centre stays fixed in the plane, the whole axis in space",
    "complexity": "O(d^2) per point",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
@@ -4770,14 +4816,67 @@
     "cloneStatus": "Confirmed Clone (home: Domain 4)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Position of non-center points"
+    },
+    "reason": "Landed review, batch 1: broken graded imprecise. In space the axis of rotation is a line of fixed points, so not every non-centre point moves.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-rotation-mathematics.txt",
+      "quote": "* The ''[[axis of rotation]]'' is a [[line (geometry)|line]] of its fixed points.",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-rotation-mathematics.txt",
+      "quote": "This (common) fixed point or [[center (geometry)|center]] is called the ''[[center of rotation]]''",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "Orientation.rotation",
+     "file": "Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean",
+     "match": "special",
+     "note": "In an oriented real inner product space of dimension 2, rotation by an angle is a linear isometric equivalence: distances, in the plane case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Orientation.det_rotation",
+     "file": "Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean",
+     "match": "special",
+     "note": "The plane rotation has determinant 1: orientation is kept, in the plane case.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "LinearIsometry.angle_map",
+     "file": "Mathlib/Geometry/Euclidean/Angle/Unoriented/Basic.lean",
+     "match": "general",
+     "note": "Every linear isometry preserves angles between vectors; a rotation about the origin is one.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-004",
@@ -4788,7 +4887,7 @@
     "surgery",
     "parameterized"
    ],
-   "description": "Scales by factor k from center. Affine, not isometric.",
+   "description": "Scales by a nonzero ratio k from a centre S. A transformation of an affine space that multiplies distances by |k|, so it is not an isometry unless |k| = 1 (k = -1 gives the reflection at the centre).",
    "input": "Geometric figure + center + scale k",
    "output": "Scaled figure",
    "preserved": "Shape, angles, distance ratios",
@@ -4802,14 +4901,66 @@
     "cloneStatus": "Confirmed Clone (home: Domain 4)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Scales by factor k from center. Affine, not isometric."
+    },
+    "reason": "Landed review, batch 1: description graded imprecise. \"Not isometric\" fails for |k| = 1: k = -1 is the point reflection, an isometry.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-homothety.txt",
+      "quote": "determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-homothety.txt",
+      "quote": "multiplies ''distances'' between points by {{tmath|\\vert k \\vert}}",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-homothety.txt",
+      "quote": "* for <math>k=-1</math> one gets the ''reflection'' at the center;",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "AffineMap.homothety",
+     "file": "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean",
+     "match": "ingredient",
+     "note": "The homothety with centre c and ratio r, as an affine map: the operation, defined.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "dist_center_homothety",
+     "file": "Mathlib/Analysis/Normed/Affine/AddTorsor.lean",
+     "match": "special",
+     "note": "Distances from the centre are multiplied by the norm of the ratio; the general case, distances between any two points, is not this declaration.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Normed/Affine/AddTorsor.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-005",
@@ -4829,14 +4980,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-006",
@@ -4856,14 +5008,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-007",
@@ -4875,7 +5028,7 @@
     "parameterized"
    ],
    "description": "g(x) = a*f(x).",
-   "input": "Function f + scalar a",
+   "input": "Function f + positive scalar a",
    "output": "Scaled function a*f(x)",
    "preserved": "Zeros, domain",
    "broken": "Range scale, extrema magnitudes",
@@ -4884,14 +5037,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Function f + scalar a"
+    },
+    "reason": "Landed review, batch 1: input graded imprecise. The source's vertical factor is positive; a = 0 collapses the graph and a negative a adds a reflection, which the source does not cover, so the claim is narrowed to what it states.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-scaling-geometry.txt",
+      "quote": "for <math>m,n \\in \\R^+</math>.",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-008",
@@ -4903,7 +5076,7 @@
     "parameterized"
    ],
    "description": "g(x) = f(a*x). a>1 compresses.",
-   "input": "Function f + scalar a",
+   "input": "Function f + positive scalar a",
    "output": "Scaled function f(a*x)",
    "preserved": "Range",
    "broken": "Domain scale, period",
@@ -4912,14 +5085,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Function f + scalar a"
+    },
+    "reason": "Landed review, batch 1: input graded imprecise. The source's horizontal factor is positive; the landed scalar was unrestricted.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-scaling-geometry.txt",
+      "quote": "for <math>m,n \\in \\R^+</math>.",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-009",
@@ -4932,7 +5125,7 @@
    "description": "Linear map + translation. Preserves collinearity.",
    "input": "Affine space point",
    "output": "Transformed point",
-   "preserved": "Collinearity, parallelism, distance ratios",
+   "preserved": "Collinearity (lines go to lines), parallelism, and ratios of lengths of parallel line segments",
    "broken": "Absolute distances, angles",
    "complexity": "O(d^2) per point",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
@@ -4943,14 +5136,41 @@
     "cloneStatus": "Confirmed Clone (home: Domain 4)"
    },
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Collinearity, parallelism, distance ratios"
+    },
+    "reason": "Landed review, batch 1: preserved graded imprecise. Ratios of distances are kept only along parallel segments, not in general.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-affine-transformation.txt",
+      "quote": "and the ratios of the lengths of [[Parallel (geometry)|parallel]] line segments.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-affine-transformation.txt",
+      "quote": "that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]]",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-010",
@@ -4960,7 +5180,7 @@
    "tags": [
     "surgery"
    ],
-   "description": "Bijective map of projective space preserving collinearity. All collineations are semilinear.",
+   "description": "Bijective map between projective spaces taking collinear points to collinear points. When the geometric dimension of a pappian projective space is at least 2, every collineation is a homography composed with an automorphic collineation (fundamental theorem of projective geometry); on a projective line every bijection is a collineation.",
    "input": "Projective space P^n",
    "output": "Projective space P^n",
    "preserved": "Collinearity, cross-ratio (linear case)",
@@ -4970,14 +5190,58 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Bijective map of projective space preserving collinearity. All collineations are semilinear."
+    },
+    "reason": "Landed review, batch 1: description graded imprecise. \"All collineations are semilinear\" needs geometric dimension at least 2 (and a space from a vector space: non-Desarguesian planes have collineations but no vector space).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-collineation.txt",
+      "quote": "are themselves collinear.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-collineation.txt",
+      "quote": "If the geometric dimension of a [[Pappus's hexagon theorem|pappian]] projective space is at least 2, then every collineation is the product of a homography (a projective linear transformation) and an automorphic collineation.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-collineation.txt",
+      "quote": "the resulting notion of collineation is just any bijection of the set.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Projectivization.map",
+     "file": "Mathlib/LinearAlgebra/Projectivization/Basic.lean",
+     "match": "related",
+     "note": "An injective semilinear map induces a map of projective spaces: the direction from semilinear maps to collineations. The converse, the fundamental theorem of projective geometry, is not at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Projectivization/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-011",
@@ -4990,21 +5254,65 @@
    "description": "Self-inverse map: f(f(x)) = x.",
    "input": "Element of algebraic structure",
    "output": "Element f(x) with f^2 = id",
-   "preserved": "Structure axioms, involutivity",
+   "preserved": "Involutivity (f(f(x)) = x); the structure only where the involution is required to respect it: an R-endomorphism of a module, or in ring theory an antihomomorphism, which reverses products",
    "broken": "Specific element values",
    "complexity": "Depends on structure",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "formal",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Structure axioms, involutivity"
+    },
+    "reason": "Landed review, batch 1: preserved graded imprecise. An involution need not respect the structure's operations; a ring involution reverses products.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-involution-mathematics.txt",
+      "quote": "An involution is a function {{math|''f'' : ''X'' → ''X''}} that, when applied twice, brings one back to the starting point.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-involution-mathematics.txt",
+      "quote": "an {{math|''R''}} [[endomorphism]] {{math|''f''}} of {{math|''M''}} is called an involution",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-involution-mathematics.txt",
+      "quote": "In [[ring theory]], the word ''involution'' is customarily taken to mean an [[antihomomorphism]] that is its own inverse function.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Function.Involutive",
+     "file": "Mathlib/Logic/Function/Basic.lean",
+     "match": "exact",
+     "note": "f (f x) = x for every x.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Logic/Function/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-012",
@@ -5908,24 +6216,74 @@
     "representation-change",
     "algebra-bridge"
    ],
-   "description": "Integral functor on derived categories of coherent sheaves. Uses kernel on product variety X x Y. Defines derived equivalence. NOT a clone of classical Fourier.",
+   "description": "Integral functor between derived categories of coherent sheaves, D(X) to D(Y), along a kernel K in the derived category of X x Y. An equivalence for suitable kernels (Mukai's, between an abelian variety and its dual); by Orlov's theorem every fully faithful triangulated functor between derived categories of smooth projective varieties is of this form. NOT a clone of classical Fourier.",
    "input": "Object in D^b(Coh(X)) + kernel P on X x Y",
    "output": "Object in D^b(Coh(Y))",
    "preserved": "Derived equivalence (when kernel satisfies conditions)",
-   "broken": "Specific variety geometry",
+   "broken": "The variety itself, in general: an abelian variety and its dual, usually not isomorphic, have equivalent derived categories; when the canonical class is ample or anti-ample the derived category determines the variety",
    "complexity": "Depends on kernel; derived category operations",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "broken"
+    ],
+    "landed": {
+     "description": "Integral functor on derived categories of coherent sheaves. Uses kernel on product variety X x Y. Defines derived equivalence. NOT a clone of classical Fourier.",
+     "broken": "Specific variety geometry"
+    },
+    "reason": "Landed review, batch 1: description and broken graded imprecise. A Fourier-Mukai transform is an equivalence only for some kernels; the variety is lost only when its canonical class is neither ample nor anti-ample.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-fourier-mukai-transform.txt",
+      "quote": "which is, in a sense, an [[integral transform]] along a kernel object ''K'' ∈ D(''X''×''Y'').",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-fourier-mukai-transform.txt",
+      "quote": "in order to prove an [[equivalence of categories|equivalence]] between the derived categories of coherent sheaves on an [[abelian variety]] and its [[dual abelian variety|dual]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/nlab-fourier-mukai-transform.txt",
+      "quote": "be a [[triangulated functor|triangulated]] [[fully faithful functor]].  Then $F$ is represented by some object",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-fourier-mukai-transform.txt",
+      "quote": "this Fourier–Mukai transform gives examples of different varieties (with trivial canonical bundles) that have equivalent derived categories.",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-fourier-mukai-transform.txt",
+      "quote": "If the [[Canonical bundle|canonical class]] of a variety is [[ample line bundle|ample]] or anti-ample, then the derived category of coherent sheaves determines the variety.",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-040",
@@ -5937,7 +6295,7 @@
     "computation-bridge"
    ],
    "description": "Factors A = LU (lower x upper triangular). Matrix Gaussian elimination.",
-   "input": "Square matrix A",
+   "input": "Square matrix A for which the factorization exists: an invertible A has one exactly when all its leading principal minors are nonzero; otherwise the rows are reordered first (LUP)",
    "output": "L (lower tri) * U (upper tri)",
    "preserved": "Determinant, solution set Ax=b",
    "broken": "Matrix structure (triangulated)",
@@ -5946,14 +6304,51 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Square matrix A"
+    },
+    "reason": "Landed review, batch 1: input graded imprecise. Not every square matrix has an LU factorization.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-lu-decomposition.txt",
+      "quote": "If {{mvar|A}} is [[invertible matrix|invertible]], then it admits an LU (or LDU) factorization [[if and only if]] all its leading principal [[minor (linear algebra)|minors]] are nonzero",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-lu-decomposition.txt",
+      "quote": "Sometimes factorization is impossible without prior reordering of {{mvar|A}}",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec",
+     "file": "Mathlib/LinearAlgebra/Matrix/Transvection.lean",
+     "match": "related",
+     "note": "Gaussian elimination as Mathlib states it: every square matrix over a field is a product of transvections, a diagonal matrix and transvections. The transvections need not be triangular, so this is not the LU factorization.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/Transvection.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-041",
@@ -5964,7 +6359,7 @@
     "decomposition"
    ],
    "description": "Variant extracting diagonal: A = LDU.",
-   "input": "Square matrix A",
+   "input": "Square matrix A for which the factorization exists: an invertible A has one exactly when all its leading principal minors are nonzero",
    "output": "L (unit lower) * D (diagonal) * U (unit upper)",
    "preserved": "Same as LU + explicit scaling",
    "broken": "Same as LU",
@@ -5973,14 +6368,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Square matrix A"
+    },
+    "reason": "Landed review, batch 1: input graded imprecise. Not every square matrix has an LDU factorization.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-lu-decomposition.txt",
+      "quote": "If {{mvar|A}} is [[invertible matrix|invertible]], then it admits an LU (or LDU) factorization [[if and only if]] all its leading principal [[minor (linear algebra)|minors]] are nonzero",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-042",
@@ -5994,21 +6409,48 @@
    "description": "LU with permutation for pivoting. PA = LU. Exists for all square matrices.",
    "input": "Square matrix A",
    "output": "P * A = L * U (P permutation)",
-   "preserved": "Numerical stability, existence guaranteed",
+   "preserved": "Existence for every square matrix; numerically stable in practice, except for known pathological cases",
    "broken": "Row order (permuted)",
    "complexity": "O(n^3/3)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Numerical stability, existence guaranteed"
+    },
+    "reason": "Landed review, batch 1: preserved graded imprecise. Partial pivoting is stable in practice, not in every case.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-lu-decomposition.txt",
+      "quote": "It turns out that all square matrices can be factorized in this form,",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-lu-decomposition.txt",
+      "quote": "is sufficient for numerically stable LU factorization, except for known pathological cases.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-043",
@@ -6019,7 +6461,7 @@
     "decomposition",
     "computation-bridge"
    ],
-   "description": "LU on block-partitioned matrices. Optimized for parallel architectures.",
+   "description": "LU on block-partitioned matrices: lower and upper block triangular factors, used in numerical analysis to reduce the complexity of the block matrix formula.",
    "input": "Block-partitioned matrix",
    "output": "Block triangular factors",
    "preserved": "Same as LU at block level",
@@ -6029,14 +6471,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "LU on block-partitioned matrices. Optimized for parallel architectures."
+    },
+    "reason": "Landed review, batch 1: description graded imprecise. The source says nothing about parallel architectures; that claim is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-block-lu-decomposition.txt",
+      "quote": "is a [[matrix decomposition]] of a [[block matrix]] into a lower block triangular matrix ''L'' and an upper block triangular matrix ''U''. This decomposition is used in [[numerical analysis]] to reduce the complexity of the block matrix formula.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-044",
@@ -6050,21 +6512,55 @@
    "description": "A = CF where C is m x r full column rank, F is r x n full row rank.",
    "input": "Rank-r matrix A (m x n)",
    "output": "C (m x r) * F (r x n)",
-   "preserved": "Rank, column space, row space",
+   "preserved": "Rank (r = rank A); the column space, of which the columns of C are a basis; the row space of A lies in the row space of F",
    "broken": "Full matrix (compressed to rank-r)",
    "complexity": "O(mnr)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Rank, column space, row space"
+    },
+    "reason": "Landed review, batch 1: preserved graded imprecise. For the row space the source states containment only; the equality is dropped as unreceipted.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-rank-factorization.txt",
+      "quote": "where <math>r=\\operatorname{rank} A</math>",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-rank-factorization.txt",
+      "quote": "be any [[basis (linear algebra)|basis]] for the column space of <math display=\"inline\">A</math> and place them as column vectors to form the",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-rank-factorization.txt",
+      "quote": "Therefore, the column space of <math display=\"inline\">A^\\textsf{T}</math> is contained within the column space of <math display=\"inline\">F^\\textsf{T}</math>",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-045",
@@ -6078,21 +6574,41 @@
    "description": "A = U*U for Hermitian positive-definite. Half cost of LU.",
    "input": "Hermitian positive-definite A",
    "output": "U*U (upper triangular)",
-   "preserved": "Positive-definiteness, solution set",
+   "preserved": "Solution set of Ax = b: the factorization solves linear systems, roughly twice as efficiently as LU",
    "broken": "Full matrix",
    "complexity": "O(n^3/6)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Positive-definiteness, solution set"
+    },
+    "reason": "Landed review, batch 1: preserved graded imprecise. Positive-definiteness is the input's hypothesis; no source states the factorization preserves it, so it is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cholesky-decomposition.txt",
+      "quote": "is roughly twice as efficient as the [[LU decomposition]] for solving [[System of linear equations|systems of linear equations]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-046",
@@ -6103,23 +6619,76 @@
     "decomposition"
    ],
    "description": "Cholesky variant without square roots: A = LDL*.",
-   "input": "Hermitian positive-definite A",
+   "input": "Hermitian matrix with an LDL* decomposition: every positive-definite or positive semidefinite one, and indefinite ones whose first n - 1 leading principal minors are non-singular",
    "output": "L * D * L* (unit lower, diagonal)",
-   "preserved": "Same as Cholesky, no square roots",
+   "preserved": "No square roots are taken (square-root-free Cholesky); Ax = b is solved through triangular and diagonal systems",
    "broken": "Same as Cholesky",
    "complexity": "O(n^3/6)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "input": "Hermitian positive-definite A",
+     "preserved": "Same as Cholesky, no square roots"
+    },
+    "reason": "Landed review, batch 1: input and preserved graded imprecise. LDL* exists beyond positive-definite matrices, and \"same as Cholesky\" is not stated (positive-definiteness is not kept for an indefinite input).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-cholesky-decomposition.txt",
+      "quote": "For positive semidefinite {{math|'''A'''}}, an  <math display=inline>\\mathbf L \\mathbf D \\mathbf L^*</math> decomposition exists",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cholesky-decomposition.txt",
+      "quote": "it suffices that the first {{math|''n'' − 1}} [[Minor (linear algebra)#Other applications|leading principal minors]] of {{math|'''A'''}} are non-singular.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cholesky-decomposition.txt",
+      "quote": "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cholesky-decomposition.txt",
+      "quote": "An alternative way to eliminate taking square roots in the <math display=inline>\\mathbf{LL}^\\mathrm{*}</math> decomposition is to compute the LDL decomposition",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "LDL.lower_conj_diag",
+     "file": "Mathlib/Analysis/Matrix/LDL.lean",
+     "match": "exact",
+     "note": "A positive definite S equals L D L-star with L lower triangular and D diagonal: the entry's factorization, for its own input. That L has unit diagonal is not stated in this declaration.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/LDL.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-047",
@@ -6130,24 +6699,77 @@
     "decomposition",
     "computation-bridge"
    ],
-   "description": "A = QR with Q orthogonal, R upper triangular. Numerically stable least squares.",
+   "description": "A = QR with Q orthogonal (orthonormal columns) and R upper triangular; often used to solve linear least squares. Computed stably with Householder reflections; the Gram-Schmidt process is numerically unstable.",
    "input": "Matrix A (m x n)",
    "output": "Q (orthogonal) * R (upper tri)",
-   "preserved": "Column space, norm, numerical stability",
+   "preserved": "Column space: when A has n linearly independent columns, the first n columns of Q are an orthonormal basis of it",
    "broken": "Dense structure",
    "complexity": "O(2mn^2 - 2n^3/3)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "A = QR with Q orthogonal, R upper triangular. Numerically stable least squares.",
+     "preserved": "Column space, norm, numerical stability"
+    },
+    "reason": "Landed review, batch 1: description and preserved graded imprecise. Numerical stability belongs to the algorithm, not to the decomposition; norm preservation is not stated in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-qr-decomposition.txt",
+      "quote": "into a product ''A''&nbsp;=&nbsp;''QR'' of an [[orthonormal matrix]] ''Q'' and an [[upper triangular matrix]] ''R''. QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-qr-decomposition.txt",
+      "quote": "The use of Householder transformations is inherently the most simple of the numerically stable QR decomposition algorithms",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-qr-decomposition.txt",
+      "quote": "The Gram-Schmidt process is inherently numerically unstable.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-qr-decomposition.txt",
+      "quote": "If ''A'' has ''n'' [[linearly independent]] columns, then the first ''n'' columns of ''Q'' form an [[orthonormal basis]] for the [[column space]] of ''A''.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "InnerProductSpace.span_gramSchmidt",
+     "file": "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean",
+     "match": "related",
+     "note": "Gram-Schmidt keeps the span of the vectors it orthogonalizes: the column-space claim, for the Gram-Schmidt construction of Q.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-048",
@@ -6168,14 +6790,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "imprecise",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Matrix.IsHermitian.spectral_theorem",
+     "file": "Mathlib/Analysis/Matrix/Spectrum.lean",
+     "match": "special",
+     "note": "A Hermitian matrix is unitarily conjugate to the diagonal matrix of its eigenvalues: the diagonalizable case where V is unitary.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/Spectrum.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Matrix.IsHermitian.det_eq_prod_eigenvalues",
+     "file": "Mathlib/Analysis/Matrix/Spectrum.lean",
+     "match": "special",
+     "note": "The determinant is the product of the eigenvalues, for Hermitian matrices.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/Spectrum.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Matrix.IsHermitian.trace_eq_sum_eigenvalues",
+     "file": "Mathlib/Analysis/Matrix/Spectrum.lean",
+     "match": "special",
+     "note": "The trace is the sum of the eigenvalues, for Hermitian matrices.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/Spectrum.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "imprecise"
   },
   {
    "id": "D2-049",
@@ -6221,24 +6870,84 @@
     "decomposition",
     "spectral"
    ],
-   "description": "Block-diagonal form for non-diagonalizable matrices. Jordan blocks with eigenvalue on diagonal, 1's on superdiagonal.",
+   "description": "Block-diagonal normal form of any square matrix whose eigenvalues lie in the field (always, over an algebraically closed field): Jordan blocks with the eigenvalue on the diagonal and 1 on the superdiagonal. The diagonal form of a diagonalizable matrix is the special case.",
    "input": "Square matrix over algebraically closed field",
    "output": "P^{-1}AP = J (Jordan blocks)",
    "preserved": "Eigenvalues, multiplicities, invariant subspaces",
-   "broken": "Diagonalizability, original basis",
+   "broken": "The original basis: J is the matrix of the operator in another basis. Diagonalizability is kept: A is diagonalizable exactly when its Jordan blocks are 1 by 1.",
    "complexity": "O(n^3) symbolically; numerically unstable",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "broken"
+    ],
+    "landed": {
+     "description": "Block-diagonal form for non-diagonalizable matrices. Jordan blocks with eigenvalue on diagonal, 1's on superdiagonal.",
+     "broken": "Diagonalizability, original basis"
+    },
+    "reason": "Landed review, batch 1: description graded imprecise (the form is not only for non-diagonalizable matrices) and broken graded wrong (diagonalizability is a similarity invariant, kept).",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-jordan-normal-form.txt",
+      "quote": "Such a matrix has each non-zero off-diagonal entry equal to&nbsp;1, immediately above the main diagonal",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-jordan-normal-form.txt",
+      "quote": "This condition is always satisfied if ''K'' is [[algebraically closed]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-jordan-normal-form.txt",
+      "quote": "The diagonal form for [[diagonalizable]] matrices, for instance [[normal matrix|normal matrices]], is a special case of the Jordan normal form.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-jordan-normal-form.txt",
+      "quote": "with respect to some [[Basis (linear algebra)|basis]].",
+      "fields": [
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-jordan-normal-form.txt",
+      "quote": "In particular, the Jordan blocks in this case are {{val|1|×|1}} matrices; that is, scalars.",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Module.End.exists_isNilpotent_isSemisimple",
+     "file": "Mathlib/LinearAlgebra/JordanChevalley.lean",
+     "match": "related",
+     "note": "The Jordan-Chevalley decomposition f = n + s, which the Jordan form displays; the Jordan normal form itself is not at the pin.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D2-051",
@@ -6318,7 +7027,7 @@
     "decomposition",
     "spectral"
    ],
-   "description": "A = UTU* with U unitary, T upper triangular. Eigenvalues on diagonal of T. Numerically stable.",
+   "description": "A = UTU* with U unitary and T upper triangular, the eigenvalues on the diagonal of T; computed numerically by the QR algorithm.",
    "input": "Square matrix A",
    "output": "U (unitary) * T (upper tri) * U*",
    "preserved": "Eigenvalues, unitarity of similarity",
@@ -6328,14 +7037,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "A = UTU* with U unitary, T upper triangular. Eigenvalues on diagonal of T. Numerically stable."
+    },
+    "reason": "Landed review, batch 1: description graded imprecise. No fetched window says the decomposition is numerically stable; the claim is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-schur-decomposition.txt",
+      "quote": "It allows one to write an arbitrary complex square matrix as [[Matrix similarity|unitarily similar]] to an [[Upper-triangular matrix|upper triangular matrix]] whose diagonal elements are the eigenvalues of the original matrix.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-schur-decomposition.txt",
+      "quote": "The Schur decomposition of a given matrix is numerically computed by the [[QR algorithm]] or its variants.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-053",
@@ -6346,7 +7082,7 @@
     "decomposition",
     "spectral"
    ],
-   "description": "Real arithmetic Schur: T quasi-upper-triangular with 2x2 blocks for complex eigenvalue pairs.",
+   "description": "Real-arithmetic Schur form: A = QHQ^-1 with Q orthogonal and H quasi-triangular, triangular in blocks of size 2 by 2 and 1 by 1.",
    "input": "Real square matrix A",
    "output": "Q * T * Q^T (T quasi-upper-tri)",
    "preserved": "Real eigenvalues on diagonal, complex pairs in 2x2 blocks",
@@ -6356,14 +7092,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Real arithmetic Schur: T quasi-upper-triangular with 2x2 blocks for complex eigenvalue pairs."
+    },
+    "reason": "Landed review, batch 1: description graded imprecise. That the 2 by 2 blocks carry the complex eigenvalue pairs is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-schur-decomposition.txt",
+      "quote": "where {{mvar|Q}} is an [[orthogonal matrix]] and {{mvar|H}} is either upper or lower quasi-triangular. A quasi-triangular matrix is a matrix that when expressed as a block matrix of {{math|''2'' × ''2''}} and {{math|''1'' × ''1''}} blocks is triangular.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-schur-decomposition.txt",
+      "quote": "There is also a real Schur decomposition. If {{mvar|A}} is an {{math|''n'' × ''n''}} [[square matrix]] with [[real numbers|real]] entries, then ''A'' can be expressed as",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-054",
@@ -6384,14 +7147,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-055",

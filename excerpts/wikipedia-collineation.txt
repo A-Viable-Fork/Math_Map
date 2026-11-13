@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Collineation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379256919
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 2af7e67893b393c7b19baf33371b31fa063ee545037bc2f5cb8a06977855e345
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''collineation''' is a [[injective function|one-to-one]] and [[surjection|onto]] map (a [[bijection]]) from one [[projective space]] to another, or from a projective space to itself, such that the [[Image (mathematics)|images]] of [[collinear]] points are themselves collinear.
+
+but in dimension two there are other projective planes, namely the [[non-Desarguesian plane]]s
+
+For dimension one, the set of points lying on a single projective line defines a projective space, and the resulting notion of collineation is just any bijection of the set.
+
+This last requirement ensures that collineations are all semilinear maps.
+
+The main examples of collineations are  projective linear transformations (also known as [[homography|homographies]])
+
+If the geometric dimension of a [[Pappus's hexagon theorem|pappian]] projective space is at least 2, then every collineation is the product of a homography (a projective linear transformation) and an automorphic collineation.

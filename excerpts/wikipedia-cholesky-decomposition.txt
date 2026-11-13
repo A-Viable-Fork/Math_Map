@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Cholesky decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: fad54280d12cdad3ba2bfe7e11182151764f7ce862cb50092de4bf511f608ec8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+When it is applicable, the Cholesky decomposition is roughly twice as efficient as the [[LU decomposition]] for solving [[System of linear equations|systems of linear equations]].
+
+where {{math|'''L'''}} is a [[lower triangular matrix]] with real and positive diagonal entries, and {{math|'''L'''}}* denotes the [[conjugate transpose]] of {{math|'''L'''}}. Every Hermitian positive-definite matrix (and thus also every real symmetric positive-definite matrix) has a Cholesky decomposition
+
+where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix.
+
+For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition.
+
+For positive semidefinite {{math|'''A'''}}, an  <math display=inline>\mathbf L \mathbf D \mathbf L^*</math> decomposition exists
+
+Some indefinite matrices for which no Cholesky decomposition exists have an LDL decomposition with negative entries in {{math|'''D'''}}: it suffices that the first {{math|''n'' − 1}} [[Minor (linear algebra)#Other applications|leading principal minors]] of {{math|'''A'''}} are non-singular.
+
+An alternative way to eliminate taking square roots in the <math display=inline>\mathbf{LL}^\mathrm{*}</math> decomposition is to compute the LDL decomposition <math display=inline>\mathbf{A} = \mathbf{LDL}^\mathrm{*}</math>, then solving <math display=inline>\mathbf{Ly} = \mathbf{b}</math> for {{math|'''y'''}}, and finally solving
+
+A closely related variant of the classical Cholesky decomposition is the LDL decomposition

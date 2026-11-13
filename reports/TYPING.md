@@ -35,8 +35,8 @@ Entries: 2022.
 | space | 133 | carrier |
 | manifold | 112 | carrier |
 | category | 109 | carrier |
+| matrix | 98 | carrier |
 | set | 97 | carrier |
-| matrix | 97 | carrier |
 | element | 92 | carrier |
 | group | 92 | carrier |
 | algebra | 89 | carrier |

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Translation (geometry) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3e2a89bfc36f5da003e2c0001056691730e413b8b526255b827962b309eab207
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A translation is an isometry that displaces the original figure according to a direction, a sense, and a length ([[vector (mathematics)|vector]]). Translations preserve the direction and length of line segments, and the amplitudes of angles.
+
+so that the orientation of the body in space is unaltered, the displacement is called a ''translation parallel to the direction of the lines, through a distance ℓ''.
+
+A translation is an [[affine transformation]] with ''no'' [[fixed point (mathematics)|fixed point]]s.
+
+a '''horizontal translation''' means [[function composition|composing]] {{mvar|f}} with a function {{tmath|x \mapsto x - a}}, for some constant number {{mvar|a}}, resulting in a graph consisting of points {{tmath|(x, f(x - a)) }}. Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x + a, y)}} in the new graph, which pictorially results in a horizontal shift.
+
+A '''vertical translation''' means composing the function {{tmath|y \mapsto y + b}} with {{mvar|f}}, for some constant {{mvar|b}}, resulting in a graph consisting of the points {{tmath|\bigl(x, f(x) + b\bigr) }}. Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x, y + b)}} in the new graph, which pictorially results in a vertical shift.
+
+The [[antiderivative]]s of a function all differ from each other by a [[constant of integration]] and are therefore vertical translates of each other.
+
+a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]. A translation can also be interpreted as the addition of a constant [[vector space|vector]] to every point

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/Normed/Affine/AddTorsor.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Normed/Affine/AddTorsor.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 7853875e4165b3783bac21b41a87f930de5fbe720fdac3da08e679d14d02fd80
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- dist_center_homothety (line 52)
+theorem dist_center_homothety (p₁ p₂ : P) (c : 𝕜) :
+    dist p₁ (homothety p₁ c p₂) = ‖c‖ * dist p₁ p₂

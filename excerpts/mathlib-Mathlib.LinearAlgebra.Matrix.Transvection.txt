@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/Matrix/Transvection.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/Transvection.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: bfaa68fbc5075e9096af15cf4fb360f095166bc22e5f06f385d9633a0b3140a6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec (line 674)
+theorem exists_list_transvec_mul_diagonal_mul_list_transvec (M : Matrix n n 𝕜) :
+    ∃ (L L' : List (TransvectionStruct n 𝕜)) (D : n → 𝕜),
+      M = (L.map toMatrix).prod * diagonal D * (L'.map toMatrix).prod

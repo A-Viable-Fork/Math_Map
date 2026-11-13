@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Block LU decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383393985
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 4f8df305eea1b462777dbb3607fb3855c0b5a053dec8dd5276b92b2f91237d65
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Block LU decomposition''' is a [[matrix decomposition]] of a [[block matrix]] into a lower block triangular matrix ''L'' and an upper block triangular matrix ''U''. This decomposition is used in [[numerical analysis]] to reduce the complexity of the block matrix formula.

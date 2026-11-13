@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/Projectivization/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Projectivization/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d68a3e6d82de17f9ed2c2c4c904f14b9a62cd62d4482c2a69cd3ba3bf7713410
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Projectivization.map (line 193)
+def map {σ : K →+* L} (f : V →ₛₗ[σ] W) (hf : Function.Injective f) : ℙ K V → ℙ L W :=
+  Quotient.map' (fun v => ⟨f v, fun c => v.2 (hf (by simp [c]))⟩)
+    (by
+      rintro ⟨u, hu⟩ ⟨v, hv⟩ ⟨a, ha⟩
+      use Units.map σ.toMonoidHom a
+      dsimp at ha ⊢

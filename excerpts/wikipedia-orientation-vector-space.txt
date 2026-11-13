@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Orientation (vector space) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1342638631
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: b50d6d670cc4baae919951901e3981786910a725942655d4f8febe81a8522cec
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+in three dimensions when a figure is left-handed or right-handed.
+
+This mapping is '''orientation-preserving''' if its determinant is positive.
+
+while a reflection by the ''XY'' Cartesian plane is not orientation-preserving:

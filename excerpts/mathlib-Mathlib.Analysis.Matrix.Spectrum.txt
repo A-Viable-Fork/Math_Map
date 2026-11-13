@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/Matrix/Spectrum.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/Spectrum.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 1e4dab921c0f16ed1699505fa3e2ec4d490e3960150a29a173aeab14d069175a
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matrix.IsHermitian.spectral_theorem (line 142)
+theorem spectral_theorem :
+    A = conjStarAlgAut 𝕜 _ hA.eigenvectorUnitary (diagonal (RCLike.ofReal ∘ hA.eigenvalues))
+
+-- Matrix.IsHermitian.det_eq_prod_eigenvalues (line 192)
+theorem det_eq_prod_eigenvalues : det A = ∏ i, (hA.eigenvalues i : 𝕜)
+
+-- Matrix.IsHermitian.trace_eq_sum_eigenvalues (line 239)
+theorem trace_eq_sum_eigenvalues [DecidableEq n] (hA : A.IsHermitian) :
+    A.trace = ∑ i, (hA.eigenvalues i : 𝕜)

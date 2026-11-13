@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Affine transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369617920
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ec84b8e2d675503ddc4aef95790821e664f0b26a6e7e402f02cfae58aa879cbf
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''affine transformation''' or '''affinity''' (from the Latin, ''[[wikt:affine|affinis]]'', "connected with") is a [[geometric transformation]] that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]], but not necessarily [[Euclidean distance]]s and [[angle]]s.
+
+a [[Function (mathematics)|function]] which [[Map (mathematics)|maps]] an affine space onto itself while preserving both the [[dimension]] of any [[affine subspace]]s (meaning that it sends points to points, lines to lines, planes to planes, and so on) and the ratios of the lengths of [[Parallel (geometry)|parallel]] line segments.
+
+That is, an arbitrary affine transformation of {{mvar|X}} is the composition of a linear transformation of {{mvar|X}} (viewed as a vector space) and a translation of {{mvar|X}}.

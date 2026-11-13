@@ -1,0 +1,24 @@
+Excerpts, verbatim, from: Wikipedia, Jordan normal form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374766194
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 45632f5f9790c588490e74aa277d1cc77397a971d5e7c19cbe2b61d08ac8a3fe
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Such a matrix has each non-zero off-diagonal entry equal to&nbsp;1, immediately above the main diagonal
+
+This condition is always satisfied if ''K'' is [[algebraically closed]]
+
+The diagonal form for [[diagonalizable]] matrices, for instance [[normal matrix|normal matrices]], is a special case of the Jordan normal form.
+
+So there exists an invertible matrix ''P'' such that ''P''<sup>−1</sup>''AP'' = ''J'' is such that the only non-zero entries of ''J'' are on the diagonal and the superdiagonal. ''J'' is called the '''Jordan normal form''' of ''A''.
+
+* Counting multiplicities, the eigenvalues of ''J'', and therefore of ''A'', are the diagonal entries.
+
+it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>.
+
+* The sum of the sizes of all Jordan blocks corresponding to an eigenvalue ''λ''<sub>''i''</sub> is its [[algebraic multiplicity]].
+
+* ''A'' is diagonalizable if and only if, for every eigenvalue ''λ'' of ''A'', its geometric and algebraic multiplicities coincide. In particular, the Jordan blocks in this case are {{val|1|×|1}} matrices; that is, scalars.
+
+The Jordan form of a ''n'' × ''n'' matrix ''A'' is block diagonal, and therefore gives a decomposition of the ''n'' dimensional Euclidean space into invariant subspaces of ''A''.
+
+representing a [[linear operator]] on a [[finite-dimensional]] [[vector space]] with respect to some [[Basis (linear algebra)|basis]].

@@ -26,7 +26,7 @@ if (append) {
   const t = readFileSync(join(ROOT, out), "utf8");
   title = t.match(/^Excerpts, verbatim, from: (.*)$/m)?.[1]; url = t.match(/^URL: (\S+)$/m)?.[1];
   prior = { hash: t.match(/SHA-256 of the page source as fetched: ([0-9a-f]{64})/)?.[1], fetched: t.match(/^Fetched: (\d{4}-\d{2}-\d{2})/m)?.[1],
-    windows: t.split("\n\n").slice(2).map((w) => w.replace(/\n$/, "")).filter((w) => w.length) };
+    windows: t.split("\n\n").slice(1).map((w) => w.replace(/\n$/, "")).filter((w) => w.length) };
   if (!title || !url || !prior.hash) { console.log(`excerpt: ${out} lacks a title, URL or page hash; it cannot be appended to`); process.exit(1); }
 } else if (!out || !title || !windows.length || !(one("--wiki") || one("--url"))) { console.log("excerpt: needs --out, --title, --wiki or --url, and at least one --window"); process.exit(1); }
 if (!append && existsSync(join(ROOT, out))) { console.log(`excerpt: ${out} exists; use --append to add windows`); process.exit(1); }

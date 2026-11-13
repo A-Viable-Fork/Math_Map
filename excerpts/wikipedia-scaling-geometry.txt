@@ -1,0 +1,13 @@
+Excerpts, verbatim, from: Wikipedia, Scaling (geometry) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1316810640
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 4a3d121ee27fbcdc68ec1dcf84bf7a7d6830af3170f53770ce9980fb8163e4a2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Therefore, given a function <math>y=f(x)</math>, the equation of the dilated function is
+: <math>y=nf\left(\frac{x}{m}\right).</math>
+
+* If <math>n=1</math>, the transformation is horizontal; when <math>m > 1</math>, it is a dilation, when <math>m < 1</math>, it is a contraction.
+
+* If <math>m=1</math>, the transformation is vertical; when <math>n>1</math> it is a dilation, when <math>n<1</math>, it is a contraction.
+
+for <math>m,n \in \R^+</math>.

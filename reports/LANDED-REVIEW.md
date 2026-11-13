@@ -6,13 +6,23 @@ The landed entries (origin map, tier landed: as written, never reviewed) graded 
 
 The strict rule [ruling: operator, 2026-11-13]: **confirmed** only when a quoted window states the field's claim itself, not merely names the object; a claim with several parts is confirmed only when every part is quoted. **imprecise**: right idea with a part unquoted or a detail off (the note names it); **wrong**: a window contradicts it; **unsupported**: no window states it. Every imprecise or wrong content field carries a receipted correction in `mapfill/corrections.js` (the landed text kept beside it) or a flag. Before each batch's sources were read, the reviewer committed what each field should be (`audit/landed-review-recall-0_1.js`, recalled: a lead, never evidence).
 
-Graded: 0 of 993 entries in 0 batches. By domain: D2 0 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
-
-Recall committed, grades pending: batch 1 (D2-001, D2-002, D2-003, D2-004, D2-005, D2-006, D2-007, D2-008, D2-009, D2-010, D2-011, D2-037, D2-040, D2-041, D2-042, D2-043, D2-044, D2-045, D2-046, D2-047, D2-048, D2-050, D2-052, D2-053, D2-054).
+Graded: 25 of 993 entries in 1 batches. By domain: D2 25 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
 
 ## 1. Verdicts by field
 
 Each domain's fields, counted by verdict.
+
+### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (25 entries)
+
+| Field | Confirmed | Imprecise | Wrong | Unsupported |
+|---|---|---|---|---|
+| name | 24 | 1 | 0 | 0 |
+| description | 17 | 8 | 0 | 0 |
+| input | 20 | 5 | 0 | 0 |
+| output | 25 | 0 | 0 | 0 |
+| preserved | 13 | 7 | 0 | 5 |
+| broken | 7 | 2 | 1 | 15 |
+| **all** | 106 | 23 | 1 | 20 |
 
 ## 2. By batch
 
@@ -20,6 +30,7 @@ Per batch: imprecise and wrong fields found, scaled to 25 entries, and the share
 
 | Batch | Domain | Entries | Imprecise | Wrong | Per 25 entries | Entries with a finding | Fields settled | Recall contradicted | Rate |
 |---|---|---|---|---|---|---|---|---|---|
+| 1 | D2 | 25 | 23 | 1 | 24.0 | 20 | 130 | 12 | 9% |
 
 ## 3. Blind re-grades
 
@@ -31,13 +42,34 @@ No round yet.
 
 Every tenth entry: its most specific claim (a hypothesis, a formula, an attribution), tried against the sources before grading.
 
+- **D2-010 Collineation**, description: All collineations are semilinear. *Attempt:* Looked for collineations with no semilinear map behind them: on a projective line every bijection of the points is a collineation, and non-Desarguesian planes have collineations but no underlying vector space. *Outcome:* falsified.
+- **D2-047 QR Decomposition**, description: QR gives numerically stable least squares. *Attempt:* Checked whether stability holds however Q and R are computed: the source says the Gram-Schmidt process is inherently numerically unstable, while Householder reflections give a stable algorithm. *Outcome:* falsified.
 
 ## 5. Findings
 
 Corrections, flags and Mathlib conflicts on reviewed entries.
 
-### Corrections (0 entries, 0 fields)
+### Corrections (19 entries, 23 fields)
 
+- **D2-003 Rotation** (broken): Landed review, batch 1: broken graded imprecise. In space the axis of rotation is a line of fixed points, so not every non-centre point moves.
+- **D2-004 Dilation (Scaling)** (description): Landed review, batch 1: description graded imprecise. "Not isometric" fails for |k| = 1: k = -1 is the point reflection, an isometry.
+- **D2-007 Vertical Scaling** (input): Landed review, batch 1: input graded imprecise. The source's vertical factor is positive; a = 0 collapses the graph and a negative a adds a reflection, which the source does not cover, so the claim is narrowed to what it states.
+- **D2-008 Horizontal Scaling** (input): Landed review, batch 1: input graded imprecise. The source's horizontal factor is positive; the landed scalar was unrestricted.
+- **D2-009 Affine Transformation** (preserved): Landed review, batch 1: preserved graded imprecise. Ratios of distances are kept only along parallel segments, not in general.
+- **D2-010 Collineation** (description): Landed review, batch 1: description graded imprecise. "All collineations are semilinear" needs geometric dimension at least 2 (and a space from a vector space: non-Desarguesian planes have collineations but no vector space).
+- **D2-011 Involution (algebraic)** (preserved): Landed review, batch 1: preserved graded imprecise. An involution need not respect the structure's operations; a ring involution reverses products.
+- **D2-037 Fourier-Mukai Transform** (description, broken): Landed review, batch 1: description and broken graded imprecise. A Fourier-Mukai transform is an equivalence only for some kernels; the variety is lost only when its canonical class is neither ample nor anti-ample.
+- **D2-040 LU Decomposition** (input): Landed review, batch 1: input graded imprecise. Not every square matrix has an LU factorization.
+- **D2-041 LDU Decomposition** (input): Landed review, batch 1: input graded imprecise. Not every square matrix has an LDU factorization.
+- **D2-042 LUP Decomposition** (preserved): Landed review, batch 1: preserved graded imprecise. Partial pivoting is stable in practice, not in every case.
+- **D2-043 Block LU Decomposition** (description): Landed review, batch 1: description graded imprecise. The source says nothing about parallel architectures; that claim is dropped.
+- **D2-044 Rank Factorization** (preserved): Landed review, batch 1: preserved graded imprecise. For the row space the source states containment only; the equality is dropped as unreceipted.
+- **D2-045 Cholesky Decomposition** (preserved): Landed review, batch 1: preserved graded imprecise. Positive-definiteness is the input's hypothesis; no source states the factorization preserves it, so it is dropped.
+- **D2-046 LDL Decomposition** (input, preserved): Landed review, batch 1: input and preserved graded imprecise. LDL* exists beyond positive-definite matrices, and "same as Cholesky" is not stated (positive-definiteness is not kept for an indefinite input).
+- **D2-047 QR Decomposition** (description, preserved): Landed review, batch 1: description and preserved graded imprecise. Numerical stability belongs to the algorithm, not to the decomposition; norm preservation is not stated in a fetched window and is dropped.
+- **D2-050 Jordan Normal Form** (description, broken): Landed review, batch 1: description graded imprecise (the form is not only for non-diagonalizable matrices) and broken graded wrong (diagonalizability is a similarity invariant, kept).
+- **D2-052 Schur Decomposition** (description): Landed review, batch 1: description graded imprecise. No fetched window says the decomposition is numerically stable; the claim is dropped.
+- **D2-053 Real Schur Decomposition** (description): Landed review, batch 1: description graded imprecise. That the 2 by 2 blocks carry the complex eigenvalue pairs is not in a fetched window and is dropped.
 
 ### Flags (0)
 
@@ -53,13 +85,383 @@ Links this review added in `mapfill/formal.js` (its LANDED list), by match grade
 
 | Match | Links |
 |---|---|
-| exact | 0 |
-| general | 0 |
-| special | 0 |
-| related | 0 |
-| ingredient | 0 |
+| exact | 3 |
+| general | 5 |
+| special | 6 |
+| related | 4 |
+| ingredient | 1 |
 | conflicts | 0 |
-| **all** | 0 on 0 entries |
+| **all** | 19 on 11 entries |
+
+No link (14):
+
+- D2-005 Vertical Shift: Searched graph shifts and Function.comp with addition: Mathlib states no graph transformations as such (f (x + c) is composition with a translation); no declaration states this entry's claims.
+- D2-006 Horizontal Shift: Searched as for D2-005: no graph-transformation declarations at the pin.
+- D2-007 Vertical Scaling: Searched as for D2-005: no graph-transformation declarations at the pin.
+- D2-008 Horizontal Scaling: Searched as for D2-005: no graph-transformation declarations at the pin.
+- D2-009 Affine Transformation: Searched AffineMap, Collinear and AffineSubspace.Parallel: Mathlib defines affine maps (AffineMap), but no declaration at the pin states that they preserve collinearity, parallelism or ratios of parallel lengths.
+- D2-037 Fourier-Mukai Transform: Searched Fourier-Mukai, integral functor and derived categories of coherent sheaves: Mathlib has derived categories of abelian categories (DerivedCategory) but no coherent sheaves on schemes or integral functors at the pin.
+- D2-041 LDU Decomposition: Searched LDU and triangular factorizations: the nearest is Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec (transvections, diagonal, transvections), linked on D2-040 as related; no LDU at the pin.
+- D2-042 LUP Decomposition: Searched LUP and pivoting: no LUP factorization at the pin.
+- D2-043 Block LU Decomposition: Searched block LU and Schur complements: Mathlib has the block determinant formulas (Matrix.det_fromBlocks) but no block LU factorization stated as such at the pin.
+- D2-044 Rank Factorization: Searched rank factorization in Mathlib/LinearAlgebra/Matrix/Rank.lean: Mathlib has Matrix.rank and rank inequalities for products, but no rank factorization at the pin.
+- D2-045 Cholesky Decomposition: Searched Cholesky: none at the pin; the LDL decomposition (LDL.lower_conj_diag) is linked on D2-046.
+- D2-052 Schur Decomposition: Searched Schur, triangulation and IsUpperTriangular: Mathlib has the determinant and characteristic polynomial of triangular matrices, but no Schur decomposition at the pin.
+- D2-053 Real Schur Decomposition: Searched as for D2-052: no real Schur form at the pin.
+- D2-054 QZ Decomposition (Generalized Schur): Searched generalized Schur and matrix pencils: none at the pin.
 
 ## 7. Receipts
+
+### D2-001 Translation (batch 1)
+
+- name (landed: Translation): **confirmed** [t] "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+- description (landed: Slides figure along displacement vector.): **confirmed** [t] "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+- input (landed: Geometric figure + displacement): **confirmed** [t] "A translation can also be interpreted as the addition of a constant [[vector space|vector]] to every point"
+- output (landed: Translated figure): **confirmed** [t] "moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+- preserved (landed: All distances, angles, orientation): **confirmed** [t] "Translations preserve the direction and length of line segments, and the amplitudes of angles." [t] "so that the orientation of the body in space is unaltered" [i] "def constVAdd (v : V) : P ≃ᵃⁱ[𝕜] P :=" [a] "(f : P →ᵃⁱ[ℝ] P₂) (p₁ p₂ p₃ : P) : ∠ (f p₁) (f p₂) (f p₃) = ∠ p₁ p₂ p₃"
+- broken (landed: Position): **confirmed** [t] "A translation is an [[affine transformation]] with ''no'' [[fixed point (mathematics)|fixed point]]s." *Every point moves; the zero translation, the identity, is the trivial exception.*
+- recalled: name: ok: standard (translation in geometry); description: ok: every point moved by the same vector; input: ok: a figure and a vector; output: ok: the translated figure; preserved: ok: a translation is a direct isometry, so distances, angles and orientation are kept; broken: ok: position changes; a nonzero translation fixes no point
+- mathlib (exact, preserved): `AffineIsometryEquiv.constVAdd`. Translation by v is an affine isometric automorphism: the distance part of the field. Angles and orientation are not stated here.
+- mathlib (general, preserved): `AffineIsometry.angle_map`. Every affine isometry preserves unoriented angles; a translation is one (AffineIsometryEquiv.constVAdd).
+
+  t: excerpts/wikipedia-translation-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508)
+  i: excerpts/mathlib-Mathlib.Analysis.Normed.Affine.Isometry.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Normed/Affine/Isometry.lean)
+  a: excerpts/mathlib-Mathlib.Geometry.Euclidean.Angle.Unoriented.Affine.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean)
+
+### D2-002 Reflection (batch 1)
+
+- name (landed: Reflection): **confirmed** [r] "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s"
+- description (landed: Mirror image across axis/hyperplane.): **confirmed** [r] "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s" [r] "For example, the mirror image of the small Latin letter '''p''' for a reflection with respect to a [[vertical axis]] (a ''vertical reflection'') would look like '''q'''."
+- input (landed: Geometric figure + axis): **confirmed** [r] "To find the reflection of a figure, reflect each point in the figure."
+- output (landed: Reflected figure): **confirmed** [r] "To find the reflection of a figure, reflect each point in the figure."
+- preserved (landed: All distances, angles, size): **confirmed** [r] "to itself that is an [[isometry]]" [p] "P ≃ᵃⁱ[𝕜] P :=" [a] "(f : P →ᵃⁱ[ℝ] P₂) (p₁ p₂ p₃ : P) : ∠ (f p₁) (f p₂) (f p₃) = ∠ p₁ p₂ p₃" *Size as lengths: an isometry keeps every length. Angles: every affine isometry keeps them, and Mathlib's reflection is one.*
+- broken (landed: Orientation, handedness): **confirmed** [o] "while a reflection by the ''XY'' Cartesian plane is not orientation-preserving:" [r] "is [[orthogonal matrix|orthogonal]] with [[determinant]] −1" [o] "This mapping is '''orientation-preserving''' if its determinant is positive." [o] "in three dimensions when a figure is left-handed or right-handed." [d] "theorem det_reflection : LinearMap.det K.reflection.toLinearMap = (-1) ^ finrank 𝕜 Kᗮ" *Every reflection matrix has determinant -1 and a map preserves orientation when its determinant is positive; in three dimensions orientation is handedness.*
+- recalled: name: ok: standard; description: ok: reflection in a hyperplane, a mirror image; input: ok: figure and mirror; output: ok; preserved: ok: an isometry, so distances, angles and size are kept; broken: ok: reflections reverse orientation (opposite isometry)
+- mathlib (general, preserved): `EuclideanGeometry.reflection`. Reflection in any nonempty complete affine subspace, a hyperplane included, as an affine isometric automorphism: distances are kept.
+- mathlib (general, preserved): `AffineIsometry.angle_map`. Every affine isometry preserves unoriented angles; a reflection is one.
+- mathlib (general, broken): `Submodule.det_reflection`. The reflection in K has determinant (-1)^(dim of the orthogonal complement); for a hyperplane that is -1, so orientation is reversed.
+
+  r: excerpts/wikipedia-reflection-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380109823)
+  o: excerpts/wikipedia-orientation-vector-space.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1342638631)
+  p: excerpts/mathlib-Mathlib.Geometry.Euclidean.Projection.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Projection.lean)
+  a: excerpts/mathlib-Mathlib.Geometry.Euclidean.Angle.Unoriented.Affine.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean)
+  d: excerpts/mathlib-Mathlib.Analysis.InnerProductSpace.Projection.FiniteDimensional.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean)
+
+### D2-003 Rotation (batch 1)
+
+- name (landed: Rotation): **confirmed** [r] "Any rotation is a [[motion (geometry)|motion]] of a certain [[space (mathematics)|space]] that preserves at least one [[point (geometry)|point]]."
+- description (landed: Turns figure around center/axis by angle.): **confirmed** [r] "Any rotation is a [[motion (geometry)|motion]] of a certain [[space (mathematics)|space]] that preserves at least one [[point (geometry)|point]]." [r] "In [[Plane (mathematics)|two dimensions]], only a single [[angle]] is needed to specify a rotation about the [[origin (mathematics)|origin]]" [r] "* The ''[[axis of rotation]]'' is a [[line (geometry)|line]] of its fixed points."
+- input (landed: Geometric figure + center + angle): **confirmed** [r] "This (common) fixed point or [[center (geometry)|center]] is called the ''[[center of rotation]]''" [r] "only a single [[angle]] is needed to specify a rotation"
+- output (landed: Rotated figure): **confirmed** [r] "Any rotation is a [[motion (geometry)|motion]]"
+- preserved (landed: All distances, angles, orientation): **confirmed** [r] "it leaves [[Euclidean distance|the distance]] between any two points unchanged after the transformation. But a (proper) rotation also has to preserve the [[orientation (vector space)|orientation structure]]." [b] "angle (f u) (f v) = angle u v" [m] "def rotation (θ : Real.Angle) : V ≃ₗᵢ[ℝ] V :=" [m] "theorem det_rotation (θ : Real.Angle) : LinearMap.det (o.rotation θ).toLinearMap = 1" *Angles: every linear isometry keeps them, and a rotation about the origin is one.*
+- broken (landed: Position of non-center points): **imprecise** [r] "* The ''[[axis of rotation]]'' is a [[line (geometry)|line]] of its fixed points." *In space every point of the axis stays fixed, not only the centre; in the plane only the centre does.* (recall contradicted)
+- recalled: name: ok: standard; description: ok: turn about a point (plane) or axis (space) by an angle; input: ok; output: ok; preserved: ok: a direct isometry: distances, angles, orientation; broken: ok: every point but the centre moves (for a nonzero angle)
+- mathlib (special, preserved): `Orientation.rotation`. In an oriented real inner product space of dimension 2, rotation by an angle is a linear isometric equivalence: distances, in the plane case.
+- mathlib (special, preserved): `Orientation.det_rotation`. The plane rotation has determinant 1: orientation is kept, in the plane case.
+- mathlib (general, preserved): `LinearIsometry.angle_map`. Every linear isometry preserves angles between vectors; a rotation about the origin is one.
+
+  r: excerpts/wikipedia-rotation-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378041656)
+  m: excerpts/mathlib-Mathlib.Geometry.Euclidean.Angle.Oriented.Rotation.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean)
+  b: excerpts/mathlib-Mathlib.Geometry.Euclidean.Angle.Unoriented.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Angle/Unoriented/Basic.lean)
+
+### D2-004 Dilation (Scaling) (batch 1)
+
+- name (landed: Dilation (Scaling)): **confirmed** [h] "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''')"
+- description (landed: Scales by factor k from center. Affine, not isometric.): **imprecise** [h] "is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''" [h] "multiplies ''distances'' between points by {{tmath|\vert k \vert}}" [h] "* for <math>k=-1</math> one gets the ''reflection'' at the center;" *Scaling by k from a centre, affine, as stated; it multiplies distances by |k|, so it is an isometry when |k| = 1 (k = -1 is the reflection at the centre): "not isometric" holds only for |k| other than 1.* (recall contradicted)
+- input (landed: Geometric figure + center + scale k): **confirmed** [h] "determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''"
+- output (landed: Scaled figure): **confirmed** [h] "Consequences: A triangle is mapped on a [[Similarity (geometry)|similar]] one."
+- preserved (landed: Shape, angles, distance ratios): **confirmed** [h] "* A ''line'' is mapped onto a parallel line. Hence: ''angles'' remain unchanged." [h] "* The ''ratio of two line segments'' is preserved." [h] "Consequences: A triangle is mapped on a [[Similarity (geometry)|similar]] one."
+- broken (landed: Absolute distances, size): **confirmed** [h] "multiplies ''distances'' between points by {{tmath|\vert k \vert}}, ''areas'' by <math>k^2</math>" [d] "dist p₁ (homothety p₁ c p₂) = ‖c‖ * dist p₁ p₂"
+- recalled: name: ok: dilation or homothety, scaling from a centre; description: ok: x to c + k(x - c); affine, a similarity but not an isometry when |k| differs from 1; input: ok; output: ok; preserved: ok: angles, shape, ratios of distances; broken: ok: lengths scale by |k|
+- mathlib (ingredient, description): `AffineMap.homothety`. The homothety with centre c and ratio r, as an affine map: the operation, defined.
+- mathlib (special, broken): `dist_center_homothety`. Distances from the centre are multiplied by the norm of the ratio; the general case, distances between any two points, is not this declaration.
+
+  h: excerpts/wikipedia-homothety.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1356815044)
+  m: excerpts/mathlib-Mathlib.LinearAlgebra.AffineSpace.AffineMap.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean)
+  d: excerpts/mathlib-Mathlib.Analysis.Normed.Affine.AddTorsor.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Normed/Affine/AddTorsor.lean)
+
+### D2-005 Vertical Shift (batch 1)
+
+- name (landed: Vertical Shift): **confirmed** [t] "which pictorially results in a vertical shift."
+- description (landed: g(x) = f(x) + c. Shifts graph vertically.): **confirmed** [t] "resulting in a graph consisting of the points {{tmath|\bigl(x, f(x) + b\bigr) }}"
+- input (landed: Function f + constant c): **confirmed** [t] "A '''vertical translation''' means composing the function {{tmath|y \mapsto y + b}} with {{mvar|f}}, for some constant {{mvar|b}}"
+- output (landed: Shifted function g(x) = f(x)+c): **confirmed** [t] "resulting in a graph consisting of the points {{tmath|\bigl(x, f(x) + b\bigr) }}"
+- preserved (landed: Shape, derivative, domain): **confirmed** [t] "are therefore vertical translates of each other." [t] "Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x, y + b)}} in the new graph" [t] "Translations preserve the direction and length of line segments, and the amplitudes of angles." *Derivative: the antiderivatives of one function are vertical translates of each other. Domain: each point (x, y) goes to (x, y + b), so x is kept. Shape: the graph is translated, and translations keep lengths and angles.*
+- broken (landed: Range shifted by c): **confirmed** [t] "corresponds to the point {{tmath|(x, y + b)}} in the new graph" *Every value moves by b, so the range moves by b.*
+- recalled: name: ok: standard name in graph transformations; description: ok: g(x) = f(x) + c; input: ok; output: ok; preserved: ok: shape, derivative and domain unchanged; broken: ok: range moves by c
+- mathlib: none. Searched graph shifts and Function.comp with addition: Mathlib states no graph transformations as such (f (x + c) is composition with a translation); no declaration states this entry's claims.
+
+  t: excerpts/wikipedia-translation-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508)
+
+### D2-006 Horizontal Shift (batch 1)
+
+- name (landed: Horizontal Shift): **confirmed** [t] "which pictorially results in a horizontal shift."
+- description (landed: g(x) = f(x+c). Positive c shifts left.): **confirmed** [t] "resulting in a graph consisting of points {{tmath|(x, f(x - a)) }}" [t] "Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x + a, y)}} in the new graph" *With c = -a, f(x + c) moves the graph by -c: to the left when c > 0.*
+- input (landed: Function f + constant c): **confirmed** [t] "a '''horizontal translation''' means [[function composition|composing]] {{mvar|f}} with a function {{tmath|x \mapsto x - a}}, for some constant number {{mvar|a}}"
+- output (landed: Shifted function g(x) = f(x+c)): **confirmed** [t] "resulting in a graph consisting of points {{tmath|(x, f(x - a)) }}"
+- preserved (landed: Shape, range): **confirmed** [t] "corresponds to the point {{tmath|(x + a, y)}} in the new graph" [t] "Translations preserve the direction and length of line segments, and the amplitudes of angles." *Range: every value y is kept. Shape: the graph is translated, keeping lengths and angles.*
+- broken (landed: Domain position shifted by -c): **confirmed** [t] "corresponds to the point {{tmath|(x + a, y)}} in the new graph" *With c = -a the domain moves by -c.*
+- recalled: name: ok; description: ok: f(x + c) with c > 0 moves the graph left; input: ok; output: ok; preserved: ok: shape and range; broken: ok: the domain moves by -c
+- mathlib: none. Searched as for D2-005: no graph-transformation declarations at the pin.
+
+  t: excerpts/wikipedia-translation-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508)
+
+### D2-007 Vertical Scaling (batch 1)
+
+- name (landed: Vertical Scaling): **confirmed** [s] "* If <math>m=1</math>, the transformation is vertical;"
+- description (landed: g(x) = a*f(x).): **confirmed** [s] "<math>y=nf\left(\frac{x}{m}\right).</math>" [s] "* If <math>m=1</math>, the transformation is vertical;" *With m = 1 this is g(x) = n f(x).*
+- input (landed: Function f + scalar a): **imprecise** [s] "for <math>m,n \in \R^+</math>." *The source's factor is positive; the landed scalar a is unrestricted, and a = 0 collapses the graph.*
+- output (landed: Scaled function a*f(x)): **confirmed** [s] "<math>y=nf\left(\frac{x}{m}\right).</math>" *With m = 1.*
+- preserved (landed: Zeros, domain): **unsupported** *No fetched source states that zeros and domain are kept (true for a nonzero a; a = 0 makes every point a zero).*
+- broken (landed: Range scale, extrema magnitudes): **unsupported** *No fetched source states the effect on the range and the extrema.*
+- recalled: name: ok; description: ok: a f(x); a < 0 also reflects; input: ok; output: ok; preserved: ok: zeros and domain; broken: ok: values and extrema scale by a
+- mathlib: none. Searched as for D2-005: no graph-transformation declarations at the pin.
+
+  s: excerpts/wikipedia-scaling-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1316810640)
+
+### D2-008 Horizontal Scaling (batch 1)
+
+- name (landed: Horizontal Scaling): **confirmed** [s] "* If <math>n=1</math>, the transformation is horizontal;"
+- description (landed: g(x) = f(a*x). a>1 compresses.): **confirmed** [s] "<math>y=nf\left(\frac{x}{m}\right).</math>" [s] "* If <math>n=1</math>, the transformation is horizontal; when <math>m > 1</math>, it is a dilation, when <math>m < 1</math>, it is a contraction." *With n = 1 and a = 1/m this is f(a x); the source says m < 1, that is a > 1, is a contraction.*
+- input (landed: Function f + scalar a): **imprecise** [s] "for <math>m,n \in \R^+</math>." *The source's factor is positive; the landed scalar a is unrestricted (a = 0 is not a scaling, a < 0 adds a reflection).*
+- output (landed: Scaled function f(a*x)): **confirmed** [s] "<math>y=nf\left(\frac{x}{m}\right).</math>" *With n = 1.*
+- preserved (landed: Range): **unsupported** *No fetched source states that the range is kept.*
+- broken (landed: Domain scale, period): **unsupported** *No fetched source states the effect on the domain and the period.*
+- recalled: name: ok; description: ok: f(a x), a > 1 compresses horizontally; input: ok; output: ok; preserved: ok: range; broken: ok: domain scale, period divided by |a|
+- mathlib: none. Searched as for D2-005: no graph-transformation declarations at the pin.
+
+  s: excerpts/wikipedia-scaling-geometry.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1316810640)
+
+### D2-009 Affine Transformation (batch 1)
+
+- name (landed: Affine Transformation): **confirmed** [a] "an '''affine transformation''' or '''affinity'''"
+- description (landed: Linear map + translation. Preserves collinearity.): **confirmed** [a] "That is, an arbitrary affine transformation of {{mvar|X}} is the composition of a linear transformation of {{mvar|X}} (viewed as a vector space) and a translation of {{mvar|X}}." [a] "is a [[geometric transformation]] that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]]" *Collinearity: lines go to lines.*
+- input (landed: Affine space point): **confirmed** [a] "a [[Function (mathematics)|function]] which [[Map (mathematics)|maps]] an affine space onto itself" (recall contradicted)
+- output (landed: Transformed point): **confirmed** [a] "(meaning that it sends points to points, lines to lines, planes to planes, and so on)"
+- preserved (landed: Collinearity, parallelism, distance ratios): **imprecise** [a] "and the ratios of the lengths of [[Parallel (geometry)|parallel]] line segments." [a] "that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]]" *Collinearity and parallelism are kept; ratios of distances are kept only for parallel segments, not in general.*
+- broken (landed: Absolute distances, angles): **confirmed** [a] "but not necessarily [[Euclidean distance]]s and [[angle]]s."
+- recalled: name: ok: standard; description: ok: a linear map followed by a translation; preserves collinearity; input: thin: also needs the map itself; output: ok; preserved: off: preserves ratios of lengths along parallel lines, not distance ratios in general; broken: ok: distances and angles
+- mathlib: none. Searched AffineMap, Collinear and AffineSubspace.Parallel: Mathlib defines affine maps (AffineMap), but no declaration at the pin states that they preserve collinearity, parallelism or ratios of parallel lengths.
+
+  a: excerpts/wikipedia-affine-transformation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1369617920)
+
+### D2-010 Collineation (batch 1)
+
+- name (landed: Collineation): **confirmed** [c] "a '''collineation''' is a [[injective function|one-to-one]] and [[surjection|onto]] map"
+- description (landed: Bijective map of projective space preserving collinearity. All collineations are semilinear.): **imprecise** [c] "If the geometric dimension of a [[Pappus's hexagon theorem|pappian]] projective space is at least 2, then every collineation is the product of a homography (a projective linear transformation) and an automorphic collineation." [c] "the resulting notion of collineation is just any bijection of the set." [c] "namely the [[non-Desarguesian plane]]s" *A bijection preserving collinearity, as stated; but semilinearity holds from geometric dimension 2 on (the fundamental theorem): on a projective line every bijection is a collineation, and non-Desarguesian planes come from no vector space.*
+- input (landed: Projective space P^n): **confirmed** [c] "map (a [[bijection]]) from one [[projective space]] to another, or from a projective space to itself"
+- output (landed: Projective space P^n): **confirmed** [c] "map (a [[bijection]]) from one [[projective space]] to another, or from a projective space to itself"
+- preserved (landed: Collinearity, cross-ratio (linear case)): **confirmed** [c] "such that the [[Image (mathematics)|images]] of [[collinear]] points are themselves collinear." [x] "it is preserved by the [[projective transformation]]s of a projective line." [c] "projective linear transformations (also known as [[homography|homographies]])" *Cross-ratio in the linear case: homographies are projective transformations, which preserve it.*
+- broken (landed: Metric properties): **unsupported** *No fetched source states which metric properties a collineation loses; a projective space carries no metric to lose.*
+- recalled: name: ok; description: off: collineations are semilinear by the fundamental theorem of projective geometry only in dimension at least 2; input: ok; output: ok; preserved: ok: collinearity; cross-ratio for projective (linear) maps; broken: ok: metric properties
+- mathlib (related, description): `Projectivization.map`. An injective semilinear map induces a map of projective spaces: the direction from semilinear maps to collineations. The converse, the fundamental theorem of projective geometry, is not at the pin.
+
+  c: excerpts/wikipedia-collineation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1379256919)
+  x: excerpts/wikipedia-cross-ratio.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380801487)
+  p: excerpts/mathlib-Mathlib.LinearAlgebra.Projectivization.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Projectivization/Basic.lean)
+
+### D2-011 Involution (algebraic) (batch 1)
+
+- name (landed: Involution (algebraic)): **confirmed** [v] "{{Short description|Function that is its own inverse}}"
+- description (landed: Self-inverse map: f(f(x)) = x.): **confirmed** [v] "An involution is a function {{math|''f'' : ''X'' → ''X''}} that, when applied twice, brings one back to the starting point." [f] "∀ x, f (f x) = x"
+- input (landed: Element of algebraic structure): **confirmed** [v] "Given a module {{math|''M''}} over a [[ring (mathematics)|ring]] {{math|''R''}}, an {{math|''R''}} [[endomorphism]] {{math|''f''}} of {{math|''M''}} is called an involution" *The source defines involutions on any set; on an algebraic structure they act on its elements, as for modules.* (recall contradicted)
+- output (landed: Element f(x) with f^2 = id): **confirmed** [v] "is called an involution if {{math|{{itco|''f''}}<sup>2</sup>}} is the identity homomorphism on {{math|''M''}}."
+- preserved (landed: Structure axioms, involutivity): **imprecise** [v] "In [[ring theory]], the word ''involution'' is customarily taken to mean an [[antihomomorphism]] that is its own inverse function." [v] "an {{math|''R''}} [[endomorphism]] {{math|''f''}} of {{math|''M''}} is called an involution" *Involutivity holds by definition; the structure is respected only where the involution is required to respect it (an R-endomorphism of a module), a ring involution reverses products, and an involution of a bare set respects nothing.*
+- broken (landed: Specific element values): **unsupported** *"Specific element values" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: f(f(x)) = x; input: thin; output: ok; preserved: off: an involution need not respect the structure's operations unless it is an automorphism or anti-automorphism; broken: thin
+- mathlib (exact, description): `Function.Involutive`. f (f x) = x for every x.
+
+  v: excerpts/wikipedia-involution-mathematics.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1372904372)
+  f: excerpts/mathlib-Mathlib.Logic.Function.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Logic/Function/Basic.lean)
+
+### D2-037 Fourier-Mukai Transform (batch 1)
+
+- name (landed: Fourier-Mukai Transform): **confirmed** [w] "a '''Fourier–Mukai transform''' ''Φ''<sub>''K''</sub>"
+- description (landed: Integral functor on derived categories of coherent sheaves. Uses kernel on product variety X x Y. Defines derived equivalence. NOT a clone of classical Fourier.): **imprecise** [w] "which is, in a sense, an [[integral transform]] along a kernel object ''K'' ∈ D(''X''×''Y'')." [w] "in order to prove an [[equivalence of categories|equivalence]] between the derived categories of coherent sheaves on an [[abelian variety]] and its [[dual abelian variety|dual]]" [n] "be a [[triangulated functor|triangulated]] [[fully faithful functor]].  Then $F$ is represented by some object" *An integral functor between derived categories along a kernel on X x Y, as stated; it is an equivalence only for some kernels (Mukai's Poincare kernel on an abelian variety and its dual), and Orlov's theorem says every fully faithful triangulated functor between derived categories of smooth projective varieties is one. It does not define a derived equivalence in general.*
+- input (landed: Object in D^b(Coh(X)) + kernel P on X x Y): **confirmed** [w] "''K'' ∈ D<sup>b</sup>(''X''×''Y'') an object in the derived category of coherent sheaves on their product."
+- output (landed: Object in D^b(Coh(Y))): **confirmed** [w] "is a functor D<sup>b</sup>(''X'')→D<sup>b</sup>(''Y'') given by"
+- preserved (landed: Derived equivalence (when kernel satisfies conditions)): **confirmed** [w] "this Fourier–Mukai transform gives examples of different varieties (with trivial canonical bundles) that have equivalent derived categories." [w] "in order to prove an [[equivalence of categories|equivalence]]" *An equivalence for the Poincare kernel on an abelian variety and its dual; the field leaves the conditions unstated.*
+- broken (landed: Specific variety geometry): **imprecise** [w] "so this Fourier–Mukai transform gives examples of different varieties" [w] "If the [[Canonical bundle|canonical class]] of a variety is [[ample line bundle|ample]] or anti-ample, then the derived category of coherent sheaves determines the variety." *The variety is lost only in general: an abelian variety and its dual, usually not isomorphic, have equivalent derived categories, but when the canonical class is ample or anti-ample the derived category determines the variety.*
+- recalled: name: ok: standard (Mukai); description: off: an integral functor; it is an equivalence only for suitable kernels (Orlov: every exact equivalence is one); input: ok: an object of the bounded derived category and a kernel on X x Y; output: ok; preserved: ok: equivalence when the kernel satisfies conditions; broken: thin
+- mathlib: none. Searched Fourier-Mukai, integral functor and derived categories of coherent sheaves: Mathlib has derived categories of abelian categories (DerivedCategory) but no coherent sheaves on schemes or integral functors at the pin.
+
+  w: excerpts/wikipedia-fourier-mukai-transform.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1354517967)
+  n: excerpts/nlab-fourier-mukai-transform.txt (https://ncatlab.org/nlab/source/Fourier-Mukai+transform)
+
+### D2-040 LU Decomposition (batch 1)
+
+- name (landed: LU Decomposition): **confirmed** [l] "'''lower–upper''' ('''LU''') '''decomposition''' or '''factorization'''"
+- description (landed: Factors A = LU (lower x upper triangular). Matrix Gaussian elimination.): **confirmed** [l] "factors a [[matrix (mathematics)|matrix]] as the product of a lower [[triangular matrix]] and an upper triangular matrix" [l] "LU decomposition can be viewed as the matrix form of [[Gaussian elimination]]."
+- input (landed: Square matrix A): **imprecise** [l] "If {{mvar|A}} is [[invertible matrix|invertible]], then it admits an LU (or LDU) factorization [[if and only if]] all its leading principal [[minor (linear algebra)|minors]] are nonzero" [l] "Sometimes factorization is impossible without prior reordering of {{mvar|A}}" *The type is a square matrix, but the factorization need not exist: an invertible A has one exactly when its leading principal minors are nonzero, and otherwise the rows must be reordered first.* (recall contradicted)
+- output (landed: L (lower tri) * U (upper tri)): **confirmed** [l] "a lower triangular matrix {{mvar|L}} and an upper triangular matrix {{mvar|U}} such that {{math|1=''A'' = ''LU''}}."
+- preserved (landed: Determinant, solution set Ax=b): **confirmed** [l] "\det(A) &= \det\left(P^{-1}\right) \det(L) \det(U) \\" [l] "# First, we solve the equation" [l] "# Second, we solve the equation" *The determinant is the product of the factors' determinants (with the sign of P when rows are permuted); Ax = b is solved by two triangular solves.*
+- broken (landed: Matrix structure (triangulated)): **unsupported** *"Matrix structure (triangulated)" is a gloss; no source states what LU loses.*
+- recalled: name: ok: standard; description: ok: A = LU, Gaussian elimination in matrix form; input: ok: square matrix (may need pivoting to exist); output: ok; preserved: ok: det A = det L det U; Ax = b solved by two triangular solves; broken: thin
+- mathlib (related, description): `Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec`. Gaussian elimination as Mathlib states it: every square matrix over a field is a product of transvections, a diagonal matrix and transvections. The transvections need not be triangular, so this is not the LU factorization.
+
+  l: excerpts/wikipedia-lu-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380927710)
+  t: excerpts/mathlib-Mathlib.LinearAlgebra.Matrix.Transvection.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/Transvection.lean)
+
+### D2-041 LDU Decomposition (batch 1)
+
+- name (landed: LDU Decomposition): **confirmed** [l] "A '{{dfni|lower-diagonal-upper decomposition}}' (LDU) is a decomposition of the form"
+- description (landed: Variant extracting diagonal: A = LDU.): **confirmed** [l] "<math display=block> A = LDU, </math>" [l] "where {{mvar|D}} is a [[diagonal matrix]]"
+- input (landed: Square matrix A): **imprecise** [l] "If {{mvar|A}} is [[invertible matrix|invertible]], then it admits an LU (or LDU) factorization [[if and only if]] all its leading principal [[minor (linear algebra)|minors]] are nonzero" *As for LU: an invertible A has an LDU factorization exactly when its leading principal minors are nonzero; not every square matrix has one.* (recall contradicted)
+- output (landed: L (unit lower) * D (diagonal) * U (unit upper)): **confirmed** [l] "are [[Triangular matrix#Unitriangular matrix|unitriangular matrices]], meaning that all the entries on the diagonals of {{mvar|L}} and {{mvar|U}} are one." [l] "where {{mvar|D}} is a [[diagonal matrix]]"
+- preserved (landed: Same as LU + explicit scaling): **unsupported** *"Same as LU + explicit scaling" restates LU; no source states what LDU keeps beyond it.*
+- broken (landed: Same as LU): **unsupported** *"Same as LU": no source states it.*
+- recalled: name: ok; description: ok: A = LDU with unit triangular factors; input: ok; output: ok; preserved: thin: relative to LU; broken: thin
+- mathlib: none. Searched LDU and triangular factorizations: the nearest is Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec (transvections, diagonal, transvections), linked on D2-040 as related; no LDU at the pin.
+
+  l: excerpts/wikipedia-lu-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380927710)
+
+### D2-042 LUP Decomposition (batch 1)
+
+- name (landed: LUP Decomposition): **confirmed** [l] "It is called '{{dfni|LU factorization with partial pivoting}}' (LUP):"
+- description (landed: LU with permutation for pivoting. PA = LU. Exists for all square matrices.): **confirmed** [l] "It turns out that all square matrices can be factorized in this form," [l] "<math display=block> PA = LU, \quad (AQ=LU),</math>" [l] "reorder the rows and columns of {{mvar|A}}."
+- input (landed: Square matrix A): **confirmed** [l] "It turns out that all square matrices can be factorized in this form,"
+- output (landed: P * A = L * U (P permutation)): **confirmed** [l] "<math display=block> PA = LU, \quad (AQ=LU),</math>"
+- preserved (landed: Numerical stability, existence guaranteed): **imprecise** [l] "and the factorization is numerically stable in practice." [l] "is sufficient for numerically stable LU factorization, except for known pathological cases." [l] "It turns out that all square matrices can be factorized in this form," *Existence for every square matrix is stated; stability is stated only in practice, "except for known pathological cases", not guaranteed.*
+- broken (landed: Row order (permuted)): **confirmed** [l] "which, when correspondingly left- and right-multiplied to {{mvar|A}}, reorder the rows and columns of {{mvar|A}}."
+- recalled: name: ok: LUP or PLU; description: ok: PA = LU exists for every square matrix; input: ok; output: ok; preserved: off: partial pivoting is stable in practice, not guaranteed (growth factor up to 2^(n-1)); existence ok; broken: ok: rows permuted
+- mathlib: none. Searched LUP and pivoting: no LUP factorization at the pin.
+
+  l: excerpts/wikipedia-lu-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1380927710)
+
+### D2-043 Block LU Decomposition (batch 1)
+
+- name (landed: Block LU Decomposition): **confirmed** [b] "a '''Block LU decomposition''' is a [[matrix decomposition]] of a [[block matrix]]"
+- description (landed: LU on block-partitioned matrices. Optimized for parallel architectures.): **imprecise** [b] "This decomposition is used in [[numerical analysis]] to reduce the complexity of the block matrix formula." [b] "is a [[matrix decomposition]] of a [[block matrix]] into a lower block triangular matrix ''L'' and an upper block triangular matrix ''U''." *LU on a block matrix, as stated; the source says it is used to reduce the complexity of the block matrix formula, and says nothing about parallel architectures.*
+- input (landed: Block-partitioned matrix): **confirmed** [b] "is a [[matrix decomposition]] of a [[block matrix]]"
+- output (landed: Block triangular factors): **confirmed** [b] "into a lower block triangular matrix ''L'' and an upper block triangular matrix ''U''."
+- preserved (landed: Same as LU at block level): **unsupported** *"Same as LU at block level": no source states it.*
+- broken (landed: Intra-block detail): **unsupported** *"Intra-block detail" is a gloss; no source states it.*
+- recalled: name: ok; description: thin: block LU exists; parallel optimization is a use, not a definition; input: ok; output: ok; preserved: thin; broken: thin
+- mathlib: none. Searched block LU and Schur complements: Mathlib has the block determinant formulas (Matrix.det_fromBlocks) but no block LU factorization stated as such at the pin.
+
+  b: excerpts/wikipedia-block-lu-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1383393985)
+
+### D2-044 Rank Factorization (batch 1)
+
+- name (landed: Rank Factorization): **confirmed** [k] "a '''rank decomposition''' or '''rank factorization''' of {{mvar|A}} is a [[factorization]] of {{mvar|A}} of the form {{math|1=''A'' = ''CF''}}"
+- description (landed: A = CF where C is m x r full column rank, F is r x n full row rank.): **confirmed** [k] "where <math>C\in\mathbb F^{m\times r}</math> and <math>F\in\mathbb F^{r\times n}</math>, where <math>r=\operatorname{rank} A</math>" [k] "Since <math display="inline">U_1</math> is a full-column-rank matrix and <math display="inline">\Sigma_r V_1^*</math> is a full-row-rank matrix" *Full column and full row rank are stated for the construction through the singular value decomposition; with r = rank A they hold for any rank factorization.*
+- input (landed: Rank-r matrix A (m x n)): **confirmed** [k] "where <math>r=\operatorname{rank} A</math> is the [[Rank (linear algebra)|rank]] of <math>A</math>."
+- output (landed: C (m x r) * F (r x n)): **confirmed** [k] "where <math>C\in\mathbb F^{m\times r}</math> and <math>F\in\mathbb F^{r\times n}</math>"
+- preserved (landed: Rank, column space, row space): **imprecise** [k] "be any [[basis (linear algebra)|basis]] for the column space of <math display="inline">A</math> and place them as column vectors to form the" [k] "where <math>r=\operatorname{rank} A</math>" [k] "Therefore, the column space of <math display="inline">A^\textsf{T}</math> is contained within the column space of <math display="inline">F^\textsf{T}</math>" *Rank (r = rank A) and the column space (the columns of C are a basis of it) are stated; for the row space the source states only that the row space of A lies in that of F.* (recall contradicted)
+- broken (landed: Full matrix (compressed to rank-r)): **unsupported** *"Full matrix (compressed to rank-r)" is a gloss; no source states what is lost.*
+- recalled: name: ok; description: ok: A = CF with C full column rank and F full row rank; input: ok; output: ok; preserved: ok: rank; column space of C is that of A, row space of F that of A; broken: thin
+- mathlib: none. Searched rank factorization in Mathlib/LinearAlgebra/Matrix/Rank.lean: Mathlib has Matrix.rank and rank inequalities for products, but no rank factorization at the pin.
+
+  k: excerpts/wikipedia-rank-factorization.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1310010178)
+
+### D2-045 Cholesky Decomposition (batch 1)
+
+- name (landed: Cholesky Decomposition): **confirmed** [c] "When it is applicable, the Cholesky decomposition is roughly twice as efficient as the [[LU decomposition]]"
+- description (landed: A = U*U for Hermitian positive-definite. Half cost of LU.): **confirmed** [c] "Every Hermitian positive-definite matrix (and thus also every real symmetric positive-definite matrix) has a Cholesky decomposition" [c] "is roughly twice as efficient as the [[LU decomposition]] for solving [[System of linear equations|systems of linear equations]]." [c] "where {{math|'''L'''}} is a [[lower triangular matrix]] with real and positive diagonal entries, and {{math|'''L'''}}* denotes the [[conjugate transpose]] of {{math|'''L'''}}." *The source writes A = L L* with L lower triangular; U = L* gives the landed U* U.*
+- input (landed: Hermitian positive-definite A): **confirmed** [c] "Every Hermitian positive-definite matrix (and thus also every real symmetric positive-definite matrix) has a Cholesky decomposition"
+- output (landed: U*U (upper triangular)): **confirmed** [c] "where {{math|'''L'''}} is a [[lower triangular matrix]] with real and positive diagonal entries" *With U = L*, upper triangular.*
+- preserved (landed: Positive-definiteness, solution set): **imprecise** [c] "is roughly twice as efficient as the [[LU decomposition]] for solving [[System of linear equations|systems of linear equations]]." *The solution set is kept (the factorization solves Ax = b); positive-definiteness is the input's hypothesis, and no source states that the factorization preserves it.*
+- broken (landed: Full matrix): **unsupported** *"Full matrix" is a gloss; no source states what is lost.*
+- recalled: name: ok; description: ok: A = LL* = U*U for Hermitian positive-definite A; about half the cost of LU; input: ok; output: ok; preserved: thin: positive-definiteness is the input's, solution set ok; broken: thin
+- mathlib: none. Searched Cholesky: none at the pin; the LDL decomposition (LDL.lower_conj_diag) is linked on D2-046.
+
+  c: excerpts/wikipedia-cholesky-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196)
+
+### D2-046 LDL Decomposition (batch 1)
+
+- name (landed: LDL Decomposition): **confirmed** [c] "A closely related variant of the classical Cholesky decomposition is the LDL decomposition"
+- description (landed: Cholesky variant without square roots: A = LDL*.): **confirmed** [c] "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition." [m] "theorem LDL.lower_conj_diag : LDL.lower hS * LDL.diag hS * (LDL.lower hS)ᴴ = S"
+- input (landed: Hermitian positive-definite A): **imprecise** [c] "Some indefinite matrices for which no Cholesky decomposition exists have an LDL decomposition with negative entries in {{math|'''D'''}}" [c] "For positive semidefinite {{math|'''A'''}}, an  <math display=inline>\mathbf L \mathbf D \mathbf L^*</math> decomposition exists" *Positive-definite matrices have one, but so do positive semidefinite ones and indefinite ones whose first n - 1 leading principal minors are non-singular: the landed input is narrower than the operation.*
+- output (landed: L * D * L* (unit lower, diagonal)): **confirmed** [c] "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix."
+- preserved (landed: Same as Cholesky, no square roots): **imprecise** [c] "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition." [c] "An alternative way to eliminate taking square roots in the <math display=inline>\mathbf{LL}^\mathrm{*}</math> decomposition is to compute the LDL decomposition" *No square roots, as stated; "same as Cholesky" is not stated, and positive-definiteness is not kept for an indefinite input.* (recall contradicted)
+- broken (landed: Same as Cholesky): **unsupported** *"Same as Cholesky": no source states it.*
+- recalled: name: ok; description: ok: A = LDL* with no square roots; input: off: LDL* exists more widely, for symmetric matrices with nonzero leading minors (indefinite included); output: ok; preserved: ok: no square roots; broken: thin
+- mathlib (exact, description): `LDL.lower_conj_diag`. A positive definite S equals L D L-star with L lower triangular and D diagonal: the entry's factorization, for its own input. That L has unit diagonal is not stated in this declaration.
+
+  c: excerpts/wikipedia-cholesky-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196)
+  m: excerpts/mathlib-Mathlib.Analysis.Matrix.LDL.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/LDL.lean)
+
+### D2-047 QR Decomposition (batch 1)
+
+- name (landed: QR Decomposition): **confirmed** [q] "QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem"
+- description (landed: A = QR with Q orthogonal, R upper triangular. Numerically stable least squares.): **imprecise** [q] "QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem" [q] "into a product ''A''&nbsp;=&nbsp;''QR'' of an [[orthonormal matrix]] ''Q'' and an [[upper triangular matrix]] ''R''." [q] "The Gram-Schmidt process is inherently numerically unstable." [q] "The use of Householder transformations is inherently the most simple of the numerically stable QR decomposition algorithms" *A = QR with Q orthogonal and R upper triangular, used for least squares, as stated; numerical stability belongs to the algorithm (Householder reflections are stable, Gram-Schmidt is not), not to the decomposition.* (recall contradicted)
+- input (landed: Matrix A (m x n)): **confirmed** [q] "More generally, we can factor a complex ''m''×''n'' matrix ''A'', with {{nowrap|''m'' ≥ ''n''}}" *The source states m at least n.*
+- output (landed: Q (orthogonal) * R (upper tri)): **confirmed** [q] "where ''Q'' is an [[orthogonal matrix]] (its columns are [[orthogonal]] [[unit vector]]s"
+- preserved (landed: Column space, norm, numerical stability): **imprecise** [q] "If ''A'' has ''n'' [[linearly independent]] columns, then the first ''n'' columns of ''Q'' form an [[orthonormal basis]] for the [[column space]] of ''A''." [g] "theorem span_gramSchmidt (f : ι → E) : span 𝕜 (range (gramSchmidt 𝕜 f)) = span 𝕜 (range f)" *The column space, for full column rank, is stated; that Q preserves norms is not stated in a window, and numerical stability depends on the algorithm.* (recall contradicted)
+- broken (landed: Dense structure): **unsupported** *"Dense structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: Q orthogonal or unitary, R upper triangular; used for least squares, stable; input: ok; output: ok; preserved: ok: Q keeps 2-norms; column space when A has full rank; broken: thin
+- mathlib (related, preserved): `InnerProductSpace.span_gramSchmidt`. Gram-Schmidt keeps the span of the vectors it orthogonalizes: the column-space claim, for the Gram-Schmidt construction of Q.
+
+  q: excerpts/wikipedia-qr-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1377367532)
+  g: excerpts/mathlib-Mathlib.Analysis.InnerProductSpace.GramSchmidtOrtho.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean)
+
+### D2-048 Eigendecomposition (Spectral Decomposition) (batch 1)
+
+- name (landed: Eigendecomposition (Spectral Decomposition)): **imprecise** [e] "When the matrix being factorized is a [[normal matrix|normal]] or real [[symmetric matrix]], the decomposition is called "spectral decomposition"" [e] "'''eigendecomposition''' (also known as '''eigenvalue decomposition''' or '''EVD''')" *Eigendecomposition is the name; "spectral decomposition" names it only for normal or real symmetric matrices.*
+- description (landed: A = VDV^{-1}. Diagonalizes matrix. Enables A^n = VD^nV^{-1}.): **confirmed** [e] "{{tmath|A {{=}} QDQ^\mathsf{-1} }}, where <math>D</math> is a diagonal matrix containing the [[eigenvalues]] of <math>A</math> on the diagonal" [e] "The form is useful because it reduces many matrix operations including powers and matrix functions, to operations on the diagonal entries of Λ."
+- input (landed: Diagonalizable square matrix A): **confirmed** [e] "Note that only [[diagonalizable matrices]] can be factorized in this way."
+- output (landed: V (eigenvectors) * D (eigenvalues) * V^{-1}): **confirmed** [e] "{{tmath|A {{=}} QDQ^\mathsf{-1} }}, where <math>D</math> is a diagonal matrix containing the [[eigenvalues]] of <math>A</math> on the diagonal"
+- preserved (landed: Eigenvalues, trace, determinant): **confirmed** [e] "where <math>D</math> is a diagonal matrix containing the [[eigenvalues]] of <math>A</math> on the diagonal" [v] "defined as the sum of its diagonal elements, is also the sum of all its eigenvalues:" [v] "* The [[determinant]] of {{tmath|A}} is the product of all its eigenvalues:"
+- broken (landed: Original entries): **unsupported** *"Original entries" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: A = V D V^-1 for diagonalizable A; powers through D^n; input: ok; output: ok; preserved: ok: similarity keeps eigenvalues, trace, determinant; broken: thin
+- mathlib (special, description): `Matrix.IsHermitian.spectral_theorem`. A Hermitian matrix is unitarily conjugate to the diagonal matrix of its eigenvalues: the diagonalizable case where V is unitary.
+- mathlib (special, preserved): `Matrix.IsHermitian.det_eq_prod_eigenvalues`. The determinant is the product of the eigenvalues, for Hermitian matrices.
+- mathlib (special, preserved): `Matrix.IsHermitian.trace_eq_sum_eigenvalues`. The trace is the sum of the eigenvalues, for Hermitian matrices.
+
+  e: excerpts/wikipedia-eigendecomposition-of-a-matrix.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1375469145)
+  v: excerpts/wikipedia-eigenvalues-and-eigenvectors.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384631874)
+  m: excerpts/mathlib-Mathlib.Analysis.Matrix.Spectrum.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Matrix/Spectrum.lean)
+
+### D2-050 Jordan Normal Form (batch 1)
+
+- name (landed: Jordan Normal Form): **confirmed** [j] "''J'' is called the '''Jordan normal form''' of ''A''."
+- description (landed: Block-diagonal form for non-diagonalizable matrices. Jordan blocks with eigenvalue on diagonal, 1's on superdiagonal.): **imprecise** [j] "The diagonal form for [[diagonalizable]] matrices, for instance [[normal matrix|normal matrices]], is a special case of the Jordan normal form." [j] "Such a matrix has each non-zero off-diagonal entry equal to&nbsp;1, immediately above the main diagonal" *Jordan blocks with the eigenvalue on the diagonal and 1 on the superdiagonal, as stated; but the form exists for every square matrix whose eigenvalues lie in the field, diagonalizable ones included, not only for non-diagonalizable ones.*
+- input (landed: Square matrix over algebraically closed field): **confirmed** [j] "This condition is always satisfied if ''K'' is [[algebraically closed]]"
+- output (landed: P^{-1}AP = J (Jordan blocks)): **confirmed** [j] "So there exists an invertible matrix ''P'' such that ''P''<sup>−1</sup>''AP'' = ''J''"
+- preserved (landed: Eigenvalues, multiplicities, invariant subspaces): **confirmed** [j] "* Counting multiplicities, the eigenvalues of ''J'', and therefore of ''A'', are the diagonal entries." [j] "it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>." [j] "is its [[algebraic multiplicity]]." [j] "gives a decomposition of the ''n'' dimensional Euclidean space into invariant subspaces of ''A''."
+- broken (landed: Diagonalizability, original basis): **wrong** [j] "* ''A'' is diagonalizable if and only if, for every eigenvalue ''λ'' of ''A'', its geometric and algebraic multiplicities coincide. In particular, the Jordan blocks in this case are {{val|1|×|1}} matrices; that is, scalars." [j] "with respect to some [[Basis (linear algebra)|basis]]." *Diagonalizability is not broken: A is diagonalizable exactly when its Jordan form is diagonal. The original basis is replaced (J represents the operator in another basis).*
+- recalled: name: ok; description: off: exists for every square matrix over an algebraically closed field, diagonalizable ones included; input: ok; output: ok; preserved: ok: eigenvalues, algebraic and geometric multiplicities; broken: off: diagonalizability is a similarity invariant, kept, not broken
+- mathlib (related, description): `Module.End.exists_isNilpotent_isSemisimple`. The Jordan-Chevalley decomposition f = n + s, which the Jordan form displays; the Jordan normal form itself is not at the pin.
+
+  j: excerpts/wikipedia-jordan-normal-form.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374766194)
+  m: excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean)
+
+### D2-052 Schur Decomposition (batch 1)
+
+- name (landed: Schur Decomposition): **confirmed** [s] "the '''Schur decomposition''' or '''Schur triangulation'''"
+- description (landed: A = UTU* with U unitary, T upper triangular. Eigenvalues on diagonal of T. Numerically stable.): **imprecise** [s] "It allows one to write an arbitrary complex square matrix as [[Matrix similarity|unitarily similar]] to an [[Upper-triangular matrix|upper triangular matrix]] whose diagonal elements are the eigenvalues of the original matrix." [s] "The Schur decomposition of a given matrix is numerically computed by the [[QR algorithm]] or its variants." *A = U T U* with the eigenvalues on the diagonal of T, as stated; no window says the decomposition is numerically stable (the source says it is computed by the QR algorithm).* (recall contradicted)
+- input (landed: Square matrix A): **confirmed** [s] "It allows one to write an arbitrary complex square matrix"
+- output (landed: U (unitary) * T (upper tri) * U*): **confirmed** [s] "for some [[unitary matrix]] ''Q'' (so that the inverse ''Q''<sup>−1</sup> is also the [[conjugate transpose]] ''Q''* of ''Q''), and some [[upper triangular matrix]] ''U''."
+- preserved (landed: Eigenvalues, unitarity of similarity): **confirmed** [s] "Since ''U'' is [[similar (linear algebra)|similar]] to ''A'', it has the same [[Spectrum of a matrix|spectrum]]" [s] "[[Matrix similarity|unitarily similar]]"
+- broken (landed: Original structure): **unsupported** *"Original structure" is a gloss; no source states it.*
+- recalled: name: ok; description: ok: A = U T U* with T upper triangular, eigenvalues on its diagonal; input: ok; output: ok; preserved: ok; broken: thin
+- mathlib: none. Searched Schur, triangulation and IsUpperTriangular: Mathlib has the determinant and characteristic polynomial of triangular matrices, but no Schur decomposition at the pin.
+
+  s: excerpts/wikipedia-schur-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233)
+
+### D2-053 Real Schur Decomposition (batch 1)
+
+- name (landed: Real Schur Decomposition): **confirmed** [s] "There is also a real Schur decomposition."
+- description (landed: Real arithmetic Schur: T quasi-upper-triangular with 2x2 blocks for complex eigenvalue pairs.): **imprecise** [s] "A quasi-triangular matrix is a matrix that when expressed as a block matrix of {{math|''2'' × ''2''}} and {{math|''1'' × ''1''}} blocks is triangular." [s] "where {{mvar|Q}} is an [[orthogonal matrix]] and {{mvar|H}} is either upper or lower quasi-triangular." *Real arithmetic and a quasi-triangular T with 2 by 2 blocks, as stated; that the 2 by 2 blocks carry the complex conjugate eigenvalue pairs is not in a fetched window.* (recall contradicted)
+- input (landed: Real square matrix A): **confirmed** [s] "If {{mvar|A}} is an {{math|''n'' × ''n''}} [[square matrix]] with [[real numbers|real]] entries, then ''A'' can be expressed as"
+- output (landed: Q * T * Q^T (T quasi-upper-tri)): **confirmed** [s] "<math display="block"> A = Q H Q^{-1}</math>" [s] "where {{mvar|Q}} is an [[orthogonal matrix]]" *Q is orthogonal, so its inverse is its transpose.*
+- preserved (landed: Real eigenvalues on diagonal, complex pairs in 2x2 blocks): **unsupported** *No fetched window states that real eigenvalues sit on the diagonal and complex pairs in the 2 by 2 blocks.*
+- broken (landed: Complex arithmetic): **unsupported** *"Complex arithmetic" is a gloss on what the real form avoids; no source states it.*
+- recalled: name: ok; description: ok: real quasi-triangular T with 2 by 2 blocks for complex conjugate pairs; input: ok; output: ok; preserved: ok; broken: ok
+- mathlib: none. Searched as for D2-052: no real Schur form at the pin.
+
+  s: excerpts/wikipedia-schur-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233)
+
+### D2-054 QZ Decomposition (Generalized Schur) (batch 1)
+
+- name (landed: QZ Decomposition (Generalized Schur)): **confirmed** [s] "The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+- description (landed: Simultaneous reduction of (A,B) for generalized eigenvalue problem Ax = λBx.): **confirmed** [s] "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices" [s] "<math>A\mathbf{x}=\lambda B\mathbf{x}</math>"
+- input (landed: Matrix pair (A,B)): **confirmed** [s] "Given square matrices ''A'' and ''B''"
+- output (landed: (Q*AZ, Q*BZ) upper triangular forms): **confirmed** [s] "where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]." *A = Q S Z* gives S = Q* A Z, and likewise T = Q* B Z.*
+- preserved (landed: Generalized eigenvalues): **confirmed** [s] "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+- broken (landed: Individual matrix structure): **unsupported** *"Individual matrix structure" is a gloss; no source states it.*
+- recalled: name: ok: QZ or generalized Schur; description: ok: unitary Q, Z making both A and B upper triangular, for Ax = lambda Bx; input: ok; output: ok: in the complex case; real QZ gives quasi-triangular; preserved: ok: generalized eigenvalues as ratios of diagonals; broken: thin
+- mathlib: none. Searched generalized Schur and matrix pencils: none at the pin.
+
+  s: excerpts/wikipedia-schur-decomposition.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233)
 

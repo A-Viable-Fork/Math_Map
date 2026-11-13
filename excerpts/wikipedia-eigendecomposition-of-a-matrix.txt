@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Eigendecomposition of a matrix (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375469145
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 2e29657a606600a928278164caccf586c7c00ed4d47321e83f2999ad51eb98f5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''eigendecomposition''' (also known as '''eigenvalue decomposition''' or '''EVD''') is a [[matrix factorization|factorization]] of a [[matrix (mathematics)|matrix]] <math>A</math> into a [[canonical form]] given by {{tmath|A {{=}} QDQ^\mathsf{-1} }}, where <math>D</math> is a diagonal matrix containing the [[eigenvalues]] of <math>A</math> on the diagonal
+
+When the matrix being factorized is a [[normal matrix|normal]] or real [[symmetric matrix]], the decomposition is called "spectral decomposition"
+
+Note that only [[diagonalizable matrices]] can be factorized in this way.
+
+The form is useful because it reduces many matrix operations including powers and matrix functions, to operations on the diagonal entries of Λ.
