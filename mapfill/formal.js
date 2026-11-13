@@ -1,5 +1,6 @@
 // Role: the formal layer's data. Links from map entries to Mathlib declarations at one pinned commit.
-// Contract: exports MATHLIB = { commit } and FORMAL = [{ entry, field, decl, file, match, note }]. field is
+// Contract: exports MATHLIB = { commit }, FORMAL = [{ entry, field, decl, file, match, note }] and LANDED (the
+//   landed review's links, a part of FORMAL listed apart so its report can count them). field is
 //   the entry field the declaration bears on (description, input, output, preserved, broken); decl is the
 //   full Lean name; file is its path in mathlib4; match grades how the statement bears on the claim
 //   (exact, general, special, related, ingredient, conflicts; see scripts/formal.mjs). Optional: whole
@@ -421,4 +422,9 @@ const FORMAL = [
   K("D7-465", "description", "IncidenceAlgebra.moebius_inversion_top", "Mathlib/Combinatorics/Enumerative/IncidenceAlgebra.lean", "exact", "Moebius inversion on a locally finite order with a top: if g is the upward sum of f, f is recovered through mu. The fill's poset reading."),
 ];
 
-module.exports = { MATHLIB, FORMAL };
+// The landed review (audit/landed-review-0_1.js): links made where Mathlib states, generalizes, specializes or
+// defines a landed entry's claim, found by searching the pinned checkout for every entry graded.
+const LANDED = [
+];
+
+module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

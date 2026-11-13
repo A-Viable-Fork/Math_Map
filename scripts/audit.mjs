@@ -5,14 +5,17 @@
 //   and writes the report, with the targeted receipts of audit/targeted-0_1.js (entries outside the sample,
 //   receipted for a composite; kept out of the estimates); `--check` only checks; `--verify-quotes` also fetches every cited source and
 //   confirms each quote occurs in it (network; not run in CI). Exit 1 on any failure. Also checks the fill
-//   review (audit/fill-review-0_1.js, with its recall) and renders reports/FILL-REVIEW.md.
+//   review (audit/fill-review-0_1.js, with its recall) and renders reports/FILL-REVIEW.md, and checks the landed
+//   review (audit/landed-review-0_1.js, through scripts/landed-review.mjs) and renders reports/LANDED-REVIEW.md.
+//   `--landed-draw N` writes the packet of the landed review's blind round N (once; refuses to overwrite).
 // Invariant: read-only over the map and the fills. A grade is a claim about an entry, receipted by a
 //   verbatim quote at a URL; it never edits the entry. Pending grades are reported as pending, not as passes.
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse } from "./mathmap.mjs";
+import { checkLanded, renderLanded, packet as landedPacket } from "./landed-review.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -77,7 +80,7 @@ export function check() {
       if (v.verdict !== "confirmed" && !v.note) F.push(`${g.id}.${f}: a ${v.verdict} grade needs a note`);
     }
   }
-  F.push(...checkReview());
+  F.push(...checkReview(), ...checkLanded());
   return { F, S, G: GRADES, T: TARGETED };
 }
 
@@ -258,12 +261,19 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     if (existsSync(join(ROOT, SAMPLE))) { console.log(`refusing: ${SAMPLE} exists and the sample is fixed`); process.exit(1); }
     writeFileSync(join(ROOT, SAMPLE), JSON.stringify(draw(), null, 2) + "\n"); console.log(`wrote ${SAMPLE}`); process.exit(0);
   }
+  if (a.includes("--landed-draw")) {
+    const n = Number(a[a.indexOf("--landed-draw") + 1]), out = join(ROOT, `audit/landed-blind/packet-${n}.md`);
+    if (!Number.isInteger(n) || n < 1) { console.log("--landed-draw needs a round number"); process.exit(1); }
+    if (existsSync(out)) { console.log(`refusing: audit/landed-blind/packet-${n}.md exists and the draw is fixed`); process.exit(1); }
+    mkdirSync(join(ROOT, "audit/landed-blind"), { recursive: true }); writeFileSync(out, landedPacket(n) + "\n"); console.log(`wrote audit/landed-blind/packet-${n}.md`); process.exit(0);
+  }
   const { F, S, G, T } = check();
-  if (a.includes("--verify-quotes") && S) F.push(...(await verifyQuotes([...G, ...T, ...require("../audit/fill-review-0_1.js").REVIEW])));
+  if (a.includes("--verify-quotes") && S) F.push(...(await verifyQuotes([...G, ...T, ...require("../audit/fill-review-0_1.js").REVIEW, ...require("../audit/landed-review-0_1.js").REVIEW])));
   if (F.length) { for (const f of F) console.log("FAIL", f); console.log(`audit: ${F.length} failure(s)`); process.exit(1); }
   if (!a.includes("--check")) {
     writeFileSync(join(ROOT, "reports/AUDIT.md"), render(S, G, T) + "\n"); console.log("wrote reports/AUDIT.md");
     writeFileSync(join(ROOT, "reports/FILL-REVIEW.md"), renderReview(S, G) + "\n"); console.log("wrote reports/FILL-REVIEW.md");
+    writeFileSync(join(ROOT, "reports/LANDED-REVIEW.md"), renderLanded() + "\n"); console.log("wrote reports/LANDED-REVIEW.md");
   }
   console.log(`audit: PASS (${G.length} of ${S.sample.length} graded, ${T.length} targeted${a.includes("--verify-quotes") ? ", quotes verified" : ""})`);
 }
