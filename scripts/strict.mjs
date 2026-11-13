@@ -77,6 +77,24 @@ export function sweepSelection(R = review()) {
   }).map((f) => `${g.id}.${f}`));
 }
 
+// Part D's selection: the forty fills (each home once) whose text carries the most specific claims, scored mechanically.
+export async function huntSelection(n = 40) {
+  const { parse } = await import("./mathmap.mjs");
+  const seen = new Set(), out = [];
+  for (const f of parse().fills) {
+    const key = JSON.stringify([f.description, f.input, f.output, f.preserved, f.broken]);
+    if (seen.has(key)) continue; seen.add(key);
+    const t = [f.description, f.input, f.output, f.preserved, f.broken].join(" | ");
+    const formula = (t.match(/[=^<>]|\b\d+\b|\bO\(|sqrt|log|sum|integral|\bmod\b/g) || []).length;
+    const named = (t.match(/\b[A-Z][a-z]+(?:-[A-Z][a-z]+)*(?:'s)?\s(?:theorem|lemma|criterion|formula|duality|conjecture|inequality|condition|construction)|\([A-Z][a-z]+(?:,? (?:and )?[A-Z][a-z]+)*(?:,? \d{4})?\)/g) || []).length;
+    const hyp = (t.match(/\b(when|if|iff|unless|provided|over a|for (?:a |an )?(?:finite|compact|Noetherian|simple|semisimple|connected|perfect|algebraically)|only for|in characteristic)\b/gi) || []).length;
+    const attr = (t.match(/\b(18|19|20)\d\d\b|\b[A-Z][a-z]+ and [A-Z][a-z]+\b/g) || []).length;
+    out.push({ id: f.id, name: f.name, score: formula + 2 * named + 2 * hyp + 2 * attr });
+  }
+  out.sort((a, b) => b.score - a.score || a.id.localeCompare(b.id));
+  return out.slice(0, n);
+}
+
 const HOMES = () => new Set(require("../mapfill/homes.js").map((h) => h.id));
 const wilson = (x, n) => { if (!n) return [0, 0]; const z = 1.96, p = x / n, d = 1 + (z * z) / n, c = (p + (z * z) / (2 * n)) / d, h = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / d; return [Math.max(0, c - h), Math.min(1, c + h)]; };
 const pct = (x) => `${(100 * x).toFixed(1)}%`;
@@ -97,7 +115,7 @@ function checkGrade(at, g, F, files) {
   }
 }
 
-function compare() {
+async function compare() {
   const F = [], L = [];
   const R = review(), byId = Object.fromEntries(R.map((g) => [g.id, g])), homes = HOMES();
   const S = JSON.parse(readFileSync(SAMPLE, "utf8"));
@@ -208,6 +226,27 @@ function compare() {
     L.push(`### Homes graded under the strict rule from the start (batches ${LAST_LOOSE + 1} on, ${strictRows.length} entries, ${all.length} fields)`, "", "| | Confirmed | Imprecise | Wrong | Unsupported |", "|---|---|---|---|---|",
       `| strict | ${V.map((v) => all.filter((x) => x === v).length).join(" | ")} |`, "");
   }
+  // Part D: the falsification hunt.
+  const HU = existsSync(join(DIR, "hunt-0_2.js")) ? require("../audit/strict/hunt-0_2.js").HUNT : null;
+  if (HU) {
+    const sel = await huntSelection(), ids = sel.map((x) => x.id);
+    for (const id of ids) if (!HU.results[id]) F.push(`hunt ${id}: selected but no result`);
+    for (const id of Object.keys(HU.results)) if (!ids.includes(id)) F.push(`hunt ${id}: a result for a fill outside the selection`);
+    for (const [id, h] of Object.entries(HU.results)) {
+      if (!["holds", "imprecise", "wrong"].includes(h.verdict)) F.push(`hunt ${id}: bad verdict ${h.verdict}`);
+      if (!["read", "inferred", "recalled"].includes(h.evidence)) F.push(`hunt ${id}: bad evidence mark ${h.evidence}`);
+      if (h.verdict !== "holds" && !FIELDS.includes(h.field)) F.push(`hunt ${id}: a finding names its field`);
+      if (h.evidence === "read" && !h.quotes?.length) F.push(`hunt ${id}: read evidence needs a quote`);
+      if (/[–—]/.test(h.finding)) F.push(`hunt ${id}: an en or em dash`);
+      for (const q of h.quotes || []) { let t = null; try { t = readFileSync(join(ROOT, q.file), "utf8"); } catch { F.push(`hunt ${id}: no file ${q.file}`); continue; } if (!t.includes(q.quote)) F.push(`hunt ${id}: quote not found in ${q.file}`); }
+    }
+    const found = ids.filter((id) => HU.results[id] && HU.results[id].verdict !== "holds");
+    const byEv = (e) => found.filter((id) => HU.results[id].evidence === e).length;
+    L.push("## The falsification hunt", "", HU.method, "", `Of ${ids.length} fills, ${found.length} carry a finding (${["wrong", "imprecise"].map((v) => `${v} ${found.filter((id) => HU.results[id].verdict === v).length}`).join(", ")}); ${ids.length - found.length} hold. Evidence of the findings: read ${byEv("read")}, inferred ${byEv("inferred")}, recalled ${byEv("recalled")}. A recalled finding is a lead for a receipt, not yet grounds for a correction.`, "",
+      "| Fill | Score | Verdict | Field | Evidence | Finding |", "|---|---|---|---|---|---|");
+    for (const x of sel) { const h = HU.results[x.id]; if (h && h.verdict !== "holds") L.push(`| ${x.id} ${cell(x.name)} | ${x.score} | ${h.verdict} | ${h.field} | ${h.evidence} | ${cell(h.finding)} |`); }
+    L.push("", "Held: " + sel.filter((x) => HU.results[x.id]?.verdict === "holds").map((x) => `${x.id} (${HU.results[x.id].finding.replace(/\.$/, "")})`).join("; ") + ".", "");
+  }
   return { F, text: L.join("\n") };
 }
 
@@ -216,7 +255,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (a.includes("--sample")) await sample();
   else {
     if (!existsSync(SAMPLE)) { console.log("strict: PASS (no sample drawn)"); process.exit(0); }
-    const { F, text } = compare();
+    const { F, text } = await compare();
     for (const f of F) console.log("FAIL", f);
     if (F.length) process.exit(1);
     if (a.includes("--check")) {

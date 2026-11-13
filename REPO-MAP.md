@@ -78,6 +78,7 @@
 | `audit/fill-review-0_1.js` | the fill review. |
 | `audit/fill-review-recall-0_1.js` | the fill review's recalled expectations. |
 | `audit/grades-0_1.js` | the audit grades for audit/sample-0_1.json. |
+| `audit/strict/hunt-0_2.js` | the falsification hunt over the fill layer: the forty fills with the most specific claims (scripts/strict.mjs, huntSelection), each attacked for a counterexample, a missing hypothesis, a wrong attribution or a convention mismatch, with what was found. |
 | `audit/strict/reading-0_2.js` | the strict reader's grades of the blind sample (audit/strict/sample-0_2.json), made from the packet (audit/strict/packet-0_2.md) and the excerpt files it names, without the review's grade, quote or note. |
 | `audit/strict/sweep-0_2.js` | the targeted sweep of the strict second reading: every confirmed field of the fill review whose quote is under 60 characters or names no relation (scripts/strict.mjs, sweepSelection), read again under the strict rule because the blind sample found the review's confirmed grades flip at more than 5%. |
 | `audit/targeted-0_1.js` | targeted receipts. |
@@ -1039,6 +1040,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `audit/grades-0_1.js` | names | `audit/sample-0_1.json` |
 | `audit/grades-0_1.js` | names | `mapfill/homes.js` |
 | `audit/grades-0_1.js` | names | `scripts/audit.mjs` |
+| `audit/strict/hunt-0_2.js` | names | `mapfill/corrections.js` |
+| `audit/strict/hunt-0_2.js` | names | `scripts/strict.mjs` |
 | `audit/strict/packet-0_2.md` | names | `excerpts/arxiv-2001.07488.txt` |
 | `audit/strict/packet-0_2.md` | names | `excerpts/arxiv-2104.11808.txt` |
 | `audit/strict/packet-0_2.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt` |
@@ -2327,6 +2330,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/misalign.mjs` | names | `mapfill/flags.js` |
 | `scripts/misalign.mjs` | names | `reports/MISALIGN.md` |
 | `scripts/strict.mjs` | imports | `audit/fill-review-0_1.js` |
+| `scripts/strict.mjs` | imports | `audit/strict/hunt-0_2.js` |
 | `scripts/strict.mjs` | imports | `audit/strict/reading-0_2.js` |
 | `scripts/strict.mjs` | imports | `audit/strict/sweep-0_2.js` |
 | `scripts/strict.mjs` | imports | `mapfill/homes.js` |
