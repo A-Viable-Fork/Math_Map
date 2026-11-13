@@ -22,6 +22,7 @@
     "source": "The map as landed, verbatim, and the report its D7 names come from.",
     "docs": "Notes about the map that are neither data nor generated.",
     "docs/inbound": "Dated proposals from other repositories and sessions, to verify and then fold in or decline.",
+    "docs/schema-survey": "The 2026-11-13 survey of every kind of data the map could keep: the reading of what consumers lack, the generation record, prior art, pilots and ranked verdicts. A design survey; nothing in it is map data.",
     "generation/2026-10-11-ro-bp-001": "The RO-BP-001 round: two D9 operations for journal-native systems, written for the Research_OS blueprint, graded and ruled.",
     "generation/2026-10-23-un-001": "The UN-001 round: the logged effect tested in two shapes (D9-X40 landed), a host restyling a guest, a principal's lifecycle, and the per-UID firewall binding, from the Unattested inbound notes.",
     "generation/2026-10-11-mm-dr-004": "The MM-DR-004 round: D9 bound to NixOS at nixpkgs 7c8764b, and the desktop vocabulary measurement, graded against the pinned source.",
@@ -114,6 +115,7 @@
     "generation/*/receipts-*.json": "A generator's source receipts (paths and hashes at a tag), landed verbatim; its hash is in the round's record.",
     "generation/*/trial-*.md": "A trial run of an external tool on the round's output: the harness inline, the commit it ran at, and what it returned.",
     "generation/*/*.patch": "A draft patch to an external tool, written and tested here; held until the operator signs off on sending it upstream.",
-    "docs/inbound/*.md": "A dated proposal from another repository or session; a lead, not a change."
+    "docs/inbound/*.md": "A dated proposal from another repository or session; a lead, not a change.",
+    "docs/schema-survey/01-reading.md": "Phase 1: per consumer, what it reads from the map, what it keeps outside it and what it asked for, with the atlas passages of The_Smell_of_Knowledge quoted; every claim marked read, measured or inferred."
   }
 }
