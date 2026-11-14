@@ -142,6 +142,22 @@ const RECALL = [
   k("D2-175", 5, "ok", "ok", "ok", "ok", "thin", "thin"),
   k("D2-176", 5, "ok", "ok", "ok", "ok", "ok", "thin"),
   k("D2-177", 5, "ok", "ok: (x1..xn) to [x1: ... : xn : 1]", "ok", "ok", "ok", "ok"),
+  k("D2-178", 6, "ok", "ok: the dual of m/m^2 over the residue field", "ok: a point of a scheme, through its local ring", "ok", "ok: dim of T at least the local dimension, equal exactly at regular points", "thin"),
+  k("D2-179", 6, "ok", "ok", "ok", "ok", "ok: Hom(Omega, M) is Der(A, M)", "thin"),
+  k("D2-181", 6, "ok", "ok: the connected kernel of the norm map between Jacobians of a double cover", "ok", "ok", "off: principally polarized for an unramified cover or one branched at two points; in general the restricted polarization is twice a principal one", "thin"),
+  k("D2-182", 6, "ok", "ok: the product of x/(1 - e^-x) over the Chern roots", "ok", "ok", "ok: td(E + F) = td(E) td(F)", "thin"),
+  k("D2-183", 6, "ok", "ok: (a, b) = 1 iff ax^2 + by^2 = z^2 has a nonzero solution", "ok", "ok", "ok: bimultiplicative, with a product formula over the places", "thin"),
+  k("D2-184", 6, "ok", "ok", "ok", "ok", "ok: the cocycle condition; cohomologous cocycles give isomorphic bundles", "thin"),
+  k("D2-185", 6, "ok", "ok", "ok", "ok: triangulated", "ok: quasi-isomorphisms become isomorphisms; cohomology is kept", "thin"),
+  k("D2-186", 6, "ok", "ok: ad - bc nonzero; the automorphisms of the Riemann sphere", "ok", "ok", "ok: cross-ratio, generalized circles, conformality", "ok: not isometries in general"),
+  k("D2-187", 6, "ok", "ok", "ok", "ok", "ok: Mac Lane coherence from the pentagon and triangle", "thin"),
+  k("D2-189", 6, "thin: unsure the name is standard", "thin", "thin", "thin", "thin", "thin"),
+  k("D2-190", 6, "ok", "ok: closed under subobjects, quotients and extensions; the quotient A/S is abelian", "ok", "ok", "ok: the quotient functor is exact", "ok: objects of S go to zero"),
+  k("D2-192", 6, "ok", "ok", "ok", "ok", "ok: V(rad I) = V(I); the Nullstellensatz gives I(V(I)) = rad I over an algebraically closed field", "ok: nilpotents modulo I are killed"),
+  k("D2-194", 6, "ok", "ok: image equals kernel at each term", "thin", "thin", "thin: connecting maps come from short exact sequences of complexes", "thin"),
+  k("D2-197", 6, "ok", "ok", "ok", "ok", "ok: Kahler, homogeneous under the unitary group", "thin: positively curved"),
+  k("D2-198", 6, "ok", "ok: covariant components transform with the Jacobian", "ok", "ok", "ok: the tensor itself is independent of coordinates", "ok"),
+  k("D2-199", 6, "ok", "ok: contravariant components transform with the inverse Jacobian", "ok", "ok", "ok", "ok"),
 ];
 
 module.exports = { RECALL };
