@@ -120,7 +120,19 @@ export function checkLanded() {
     if (!x.reader || !x.drawn) F.push(`landed blind round ${x.round}: needs a reader and a date`);
     if (items.length !== got.length || items.some((k) => !got.includes(k))) F.push(`landed blind round ${x.round}: grades must cover exactly the drawn items (${items.join(", ")})`);
     for (const [k, v] of Object.entries(x.grades || {})) { if (!VERDICTS.includes(v.verdict)) F.push(`landed blind ${k}: bad verdict`); if (/[–—]/.test(v.note || "")) F.push(`landed blind ${k}: an en or em dash in the note`); }
-    const a = agreement(x, REVIEW);
+    // firstAtDraw keeps the first verdicts as they stood when the round was graded; a first verdict changed since
+    // then must belong to a batch the round re-graded, and the floor is judged on the verdicts at the draw.
+    if (x.firstAtDraw) {
+      const ks = Object.keys(x.firstAtDraw);
+      if (ks.length !== items.length || items.some((k) => !ks.includes(k))) F.push(`landed blind round ${x.round}: firstAtDraw must cover exactly the drawn items`);
+      const gOf = Object.fromEntries(REVIEW.map((g) => [g.id, g]));
+      for (const [k, v] of Object.entries(x.firstAtDraw)) {
+        const [id, f] = k.split("."), g = gOf[id];
+        if (!VERDICTS.includes(v)) F.push(`landed blind ${k}: bad first verdict at the draw`);
+        else if (g && g.fields[f].verdict !== v && !(x.regraded || []).includes(g.batch)) F.push(`landed blind ${k}: the first verdict changed since the draw, in a batch the round did not re-grade`);
+      }
+    }
+    const a = agreement(x, REVIEW, true);
     if (a.rate < BLIND_FLOOR && !(x.slipped && x.regraded?.length)) F.push(`landed blind round ${x.round}: agreement ${a.same}/${a.n} is under ${BLIND_FLOOR * 100}%; record what slipped and re-grade the affected batches`);
   }
   for (const [d, v] of Object.entries(DOMAINS)) {
@@ -132,9 +144,9 @@ export function checkLanded() {
   return F;
 }
 
-function agreement(x, REVIEW) {
+function agreement(x, REVIEW, atDraw = false) {
   const gOf = Object.fromEntries(REVIEW.map((g) => [g.id, g]));
-  const rows = Object.entries(x.grades || {}).map(([k, v]) => { const [id, f] = k.split("."); return { k, first: gOf[id]?.fields?.[f]?.verdict, again: v.verdict, note: v.note }; });
+  const rows = Object.entries(x.grades || {}).map(([k, v]) => { const [id, f] = k.split("."), now = gOf[id]?.fields?.[f]?.verdict; return { k, first: atDraw && x.firstAtDraw ? x.firstAtDraw[k] : now, now, again: v.verdict, note: v.note }; });
   const same = rows.filter((r) => r.first === r.again).length;
   return { rows, same, n: rows.length, rate: rows.length ? same / rows.length : 1 };
 }
@@ -176,9 +188,9 @@ export function renderLanded() {
   L.push(H("Blind re-grades"), "", `After every fifth batch, ${BLIND_N} fields drawn at random (seed ${SEED} + round) from the earlier batches are graded again from the landed text and excerpt files, without reading the first verdict. The reader is the first grader, so blind means the first verdict was not read again, not that it was forgotten. Under ${BLIND_FLOOR * 100}% agreement the review stops until the affected batches are re-graded.`, "");
   if (!ROUNDS.length) L.push("No round yet.", "");
   for (const x of ROUNDS) {
-    const a = agreement(x, REVIEW);
-    L.push(`### Round ${x.round}, after batch ${x.after} (${x.drawn})`, "", `Agreement: ${a.same} of ${a.n} (${Math.round(100 * a.rate)}%). Reader: ${x.reader}.`, "");
-    for (const r of a.rows.filter((r) => r.first !== r.again)) L.push(`- ${r.k}: first ${r.first}, again ${r.again}${r.note ? `: ${r.note}` : ""}`);
+    const a = agreement(x, REVIEW, true), b = agreement(x, REVIEW);
+    L.push(`### Round ${x.round}, after batch ${x.after} (${x.drawn})`, "", `Agreement when graded: ${a.same} of ${a.n} (${Math.round(100 * a.rate)}%)${x.firstAtDraw ? `; against the review as it stands: ${b.same} of ${b.n} (${Math.round(100 * b.rate)}%)` : ""}. Reader: ${x.reader}.`, "");
+    for (const r of a.rows.filter((r) => r.first !== r.again || r.now !== r.again)) L.push(`- ${r.k}: first ${r.first}, again ${r.again}${r.now !== r.first ? `, now ${r.now}` : ""}${r.note ? `: ${r.note}` : ""}`);
     if (x.slipped) L.push("", `What slipped: ${x.slipped}`, `Re-graded: batches ${x.regraded.join(", ")}.`);
     L.push("");
   }
