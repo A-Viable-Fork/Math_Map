@@ -12,3 +12,5 @@ the '''Bruhat decomposition'''
 as a disjoint union of [[double coset]]s of <math>B</math> parameterized by the elements of the Weyl group <math>W</math>.
 
 The cells in the Bruhat decomposition correspond to the [[Schubert cell]] decomposition of flag varieties. The dimension of the cells corresponds to the [[length function|length]] of the word <math>w</math> in the Weyl group.
+
+*<math>G</math> is a [[connected space|connected]], [[reductive group|reductive]] [[algebraic group]] over an [[algebraically closed field]].

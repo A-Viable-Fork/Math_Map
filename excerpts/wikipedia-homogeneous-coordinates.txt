@@ -8,3 +8,5 @@ The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}} defines an inclusio
 can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added, which are called [[point at infinity|points at infinity]], and are considered to lie on a new line, the [[line at infinity]].
 
 are a [[system of coordinates]] used in [[projective geometry]]
+
+if the projective space is constructed from a vector space ''V'' of dimension ''n''&nbsp;+&nbsp;1, introduce coordinates in ''V'' by choosing a basis

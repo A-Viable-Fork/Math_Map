@@ -10,3 +10,7 @@ which basically states that there cannot be a differential algebra containing th
 is linearly embedded into <math>A(\mathbb{R})</math>
 
 i.e., they preserve the product of smooth (infinitely differentiable) funct
+
+:<math>C^\infty_M(\mathbb{R}^n)/C^\infty_N(\mathbb{R}^n).</math>
+
+is defined as the [[quotient associative algebra|quotient algebra]]

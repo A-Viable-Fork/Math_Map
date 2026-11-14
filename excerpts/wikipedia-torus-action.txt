@@ -6,3 +6,5 @@ Only the windows below are kept; each was checked to occur verbatim in the page 
 The Białynicki-Birula decomposition says that a smooth projective algebraic ''T''-variety admits a ''T''-stable [[cellular decomposition]].
 
 It is often described as algebraic [[Morse theory]].
+
+A variety equipped with an action of a torus ''T'' is called a '''<nowiki />''T''-variety'''.

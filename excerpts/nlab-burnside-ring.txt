@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, Burnside ring (page source)
+URL: https://ncatlab.org/nlab/source/Burnside+ring
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3b86caf3450b7857dffb61dbe95eb221558339ec35fa192661b58cfdb509d82b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the [[Burnside ring]] $A(G)$, which is the [[Grothendieck group]] of the [[monoidal category]] $G Set$ of [[finite set|finite]] [[G-sets]]

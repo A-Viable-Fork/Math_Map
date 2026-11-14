@@ -10,3 +10,5 @@ Let <math>S</math> be a commutative [[graded ring]]
 called the “structure sheaf” as in the affine case, which makes it into a [[scheme (mathematics)|scheme]].
 
 and taken together they contain all the grading information that was lost.
+
+We then obtain <math>\tilde{M}</math> as a quasicoherent sheaf on <math>\operatorname{Proj} S</math>, denoted <math>O_X(1)</math> or simply <math>\mathcal{O}(1)</math>, called the [[twisting sheaf]] of [[Jean-Pierre Serre|Serre]].

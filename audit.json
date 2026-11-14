@@ -25819,10 +25819,10 @@
      "quote": "resulting in a graph consisting of the points {{tmath|\\bigl(x, f(x) + b\\bigr) }}"
     },
     "preserved": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "t",
      "quote": "are therefore vertical translates of each other.",
-     "note": "Derivative: the antiderivatives of one function are vertical translates of each other. Domain: each point (x, y) goes to (x, y + b), so x is kept. Shape: the graph is translated, and translations keep lengths and angles.",
+     "note": "Domain and shape are stated: each point (x, y) goes to (x, y + b), and translations keep lengths and angles. The derivative part is unquoted: the window says the antiderivatives of one function are vertical translates of each other, not that a vertical shift keeps the derivative.",
      "more": [
       {
        "src": "t",
@@ -26539,10 +26539,10 @@
      "quote": "a '''rank decomposition''' or '''rank factorization''' of {{mvar|A}} is a [[factorization]] of {{mvar|A}} of the form {{math|1=''A'' = ''CF''}}"
     },
     "description": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "k",
      "quote": "where <math>C\\in\\mathbb F^{m\\times r}</math> and <math>F\\in\\mathbb F^{r\\times n}</math>, where <math>r=\\operatorname{rank} A</math>",
-     "note": "Full column and full row rank are stated for the construction through the singular value decomposition; with r = rank A they hold for any rank factorization.",
+     "note": "The shapes and r = rank A are stated; full column rank of C and full row rank of F are stated only for the construction through the singular value decomposition.",
      "more": [
       {
        "src": "k",
@@ -26748,10 +26748,10 @@
      ]
     },
     "input": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "q",
      "quote": "More generally, we can factor a complex ''m''×''n'' matrix ''A'', with {{nowrap|''m'' ≥ ''n''}}",
-     "note": "The source states m at least n."
+     "note": "The source states the factorization for a complex m x n matrix with m at least n; the landed input carries no condition on m and n."
     },
     "output": {
      "verdict": "confirmed",
@@ -27986,10 +27986,10 @@
      ]
     },
     "input": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "i",
      "quote": "Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology",
-     "note": "R commutative; the ring is the case M = R."
+     "note": "The source states the topology for a commutative ring; the landed input omits commutativity."
     },
     "output": {
      "verdict": "confirmed",
@@ -29013,9 +29013,10 @@
      "quote": "given a sheaf ''F'' defined on a [[topological space]] ''X'' and a [[continuous map]] ''f'': ''X'' → ''Y''"
     },
     "output": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "p",
-     "quote": ":<math>Rf_*: D_{qcoh}(X) \\to D_{qcoh}(Y)</math>"
+     "quote": ":<math>Rf_*: D_{qcoh}(X) \\to D_{qcoh}(Y)</math>",
+     "note": "The source states Rf_* between derived categories of quasi-coherent sheaves; the landed D(Y) is unqualified."
     },
     "preserved": {
      "verdict": "confirmed",
@@ -29073,10 +29074,10 @@
      "quote": ":<math>f^*\\mathcal G := f^{-1}\\mathcal{G} \\otimes_{f^{-1}\\mathcal{O}_Y} \\mathcal{O}_X</math>."
     },
     "preserved": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "n",
      "quote": "then the left adjoint part is called the inverse image part.",
-     "note": "Stated for f^-1 against f_* on sheaves, and in general for the inverse image as the left adjoint.",
+     "note": "The adjunction is stated for the sheaf inverse image f^-1 against f_*; the landed entry is the module pullback f^*, whose adjunction no window states.",
      "more": [
       {
        "src": "i",
@@ -29260,6 +29261,10 @@
       {
        "src": "v",
        "quote": "has a right adjoint <math>f^!</math>"
+      },
+      {
+       "src": "v",
+       "quote": "<math> D^2(\\mathcal{F})\\cong \\mathcal{F}</math> for sheaves with constructible cohomology."
       }
      ]
     },
@@ -29357,6 +29362,10 @@
       {
        "src": "g",
        "quote": "as a '''[[dualizing sheaf]]''', the general theory (it turns out) cannot be quite so simple."
+      },
+      {
+       "src": "g",
+       "quote": "One quite recent successful approach is based on the notion of a rigid dualizing complex."
       }
      ]
     },
@@ -29368,12 +29377,24 @@
     "output": {
      "verdict": "confirmed",
      "src": "g",
-     "quote": "Grothendieck reformulated general coherent duality as the existence of a [[right adjoint]] functor <math>f^{!}</math>, called ''twisted'' or ''[[exceptional inverse image functor]]'', to a higher [[direct image with compact support]] functor <math>Rf_{!}</math>."
+     "quote": "Grothendieck reformulated general coherent duality as the existence of a [[right adjoint]] functor <math>f^{!}</math>, called ''twisted'' or ''[[exceptional inverse image functor]]'', to a higher [[direct image with compact support]] functor <math>Rf_{!}</math>.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "One quite recent successful approach is based on the notion of a rigid dualizing complex."
+      }
+     ]
     },
     "preserved": {
      "verdict": "confirmed",
      "src": "g",
-     "quote": "the existence of a [[right adjoint]] functor <math>f^{!}</math>"
+     "quote": "the existence of a [[right adjoint]] functor <math>f^{!}</math>",
+     "more": [
+      {
+       "src": "g",
+       "quote": "One quite recent successful approach is based on the notion of a rigid dualizing complex."
+      }
+     ]
     },
     "broken": {
      "verdict": "unsupported",
@@ -29633,11 +29654,15 @@
      "verdict": "confirmed",
      "src": "p",
      "quote": "called the “structure sheaf” as in the affine case, which makes it into a [[scheme (mathematics)|scheme]].",
-     "note": "O(1) is the twisting sheaf of the same page.",
+     "note": "O(1) is the twisting sheaf of Serre on Proj S.",
      "more": [
       {
        "src": "m",
        "quote": "def Proj.structureSheaf : Sheaf CommRingCat (ProjectiveSpectrum.top 𝒜) :="
+      },
+      {
+       "src": "p",
+       "quote": "We then obtain <math>\\tilde{M}</math> as a quasicoherent sheaf on <math>\\operatorname{Proj} S</math>, denoted <math>O_X(1)</math> or simply <math>\\mathcal{O}(1)</math>, called the [[twisting sheaf]] of [[Jean-Pierre Serre|Serre]]."
       }
      ]
     },
@@ -29762,14 +29787,22 @@
      ]
     },
     "preserved": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "f",
      "quote": "is a birational map (in fact an isomorphism in [[codimension]] 1)",
-     "note": "The plurigenera, from which the Kodaira dimension is defined, are birational invariants.",
+     "note": "Birational invariance is stated for the plurigenera of smooth projective varieties, and the Kodaira dimension is defined from them; a flip runs between singular varieties, which no window covers.",
      "more": [
       {
        "src": "k",
        "quote": "The plurigenera are important birational invariants of an algebraic variety."
+      },
+      {
+       "src": "k",
+       "quote": "has the remarkable property that it is a [[birational invariant]] of smooth projective varieties ''X''"
+      },
+      {
+       "src": "k",
+       "quote": "The '''Kodaira dimension''' of ''X'' is defined to be <math>-\\infty</math> if the plurigenera ''P<sub>d</sub>'' are zero for all ''d'' > 0; otherwise, it is the minimum κ such that ''P<sub>d</sub> /d<sup>κ</sup>'' is bounded."
       }
      ]
     },
@@ -29915,10 +29948,10 @@
      ]
     },
     "input": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "n",
      "quote": "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S''",
-     "note": "Over a Noetherian base."
+     "note": "The source states the theorem for a separated finite type morphism to a Noetherian scheme S; the landed input names a scheme alone, without the morphism or the Noetherian base."
     },
     "output": {
      "verdict": "imprecise",
@@ -30208,7 +30241,13 @@
      "verdict": "confirmed",
      "src": "r",
      "quote": "describe the restriction of an irreducible [[complex representation]] ({{pi}},&nbsp;''V'') of a [[classical group]] ''G'' to a classical subgroup ''H'', i.e. the multiplicity with which an irreducible representation (''σ'',&nbsp;''W'') of ''H'' occurs in&nbsp;{{pi}}.",
-     "note": "An irreducible representation of G restricts to a sum of irreducibles of H with multiplicities."
+     "note": "An irreducible representation of G restricts to a sum of irreducibles of H with multiplicities.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "Rules for decomposing the restriction of an [[irreducible representation]] into irreducible representations of the subgroup are called '''branching rules'''"
+      }
+     ]
     }
    },
    "contra": [
@@ -30283,10 +30322,8 @@
      "note": "A representation of G gives one of G/N on the N-invariants, as Mathlib states; \"by averaging\" is not stated."
     },
     "input": {
-     "verdict": "confirmed",
-     "src": "m",
-     "quote": "Representation k (G ⧸ S) (invariants (ρ.comp S.subtype)) :=",
-     "note": "From a representation ρ of G and a normal subgroup S."
+     "verdict": "unsupported",
+     "note": "The Mathlib statement takes a representation of G and a subgroup S with G ⧸ S a group; the normality of S is a section variable of the file, outside every declaration window, so no window states the whole claim."
     },
     "output": {
      "verdict": "confirmed",
@@ -30334,7 +30371,13 @@
     "input": {
      "verdict": "confirmed",
      "src": "b",
-     "quote": "Char(''G'') is known as the '''character ring''' of ''G'', and its elements are known as '''virtual characters'''"
+     "quote": "Char(''G'') is known as the '''character ring''' of ''G'', and its elements are known as '''virtual characters'''",
+     "more": [
+      {
+       "src": "b",
+       "quote": "Let ''G'' be a [[finite group]] and let Char(''G'') denote the subring"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
@@ -30384,9 +30427,16 @@
      ]
     },
     "input": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "b",
-     "quote": "*<math>B</math> is a [[Borel subgroup]] of <math>G</math>"
+     "quote": "*<math>G</math> is a [[connected space|connected]], [[reductive group|reductive]] [[algebraic group]] over an [[algebraically closed field]].",
+     "note": "The source states the decomposition for a connected reductive group over an algebraically closed field; the landed input says any algebraic group.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "*<math>B</math> is a [[Borel subgroup]] of <math>G</math>"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
@@ -30436,7 +30486,14 @@
     "input": {
      "verdict": "confirmed",
      "src": "c",
-     "quote": "Let <math>G</math> be a non-compact semisimple Lie group"
+     "quote": "Let <math>G</math> be a non-compact semisimple Lie group",
+     "note": "The decomposition is of a semisimple Lie group; KAK is written out for the non-compact case.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "the '''Cartan decomposition''' is a decomposition of a [[Semisimple Lie algebra|semisimple]] [[Lie group]] or [[Lie algebra]]"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
@@ -30480,10 +30537,10 @@
      "quote": "the '''Iwasawa decomposition''' (aka '''KAN''' from its expression) of a [[semisimple Lie group]]"
     },
     "description": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "w",
      "quote": "where ''K'' becomes a (disconnected) [[maximal compact subgroup]]",
-     "note": "Compact K, abelian A, nilpotent N.",
+     "note": "K maximal compact is stated (for the disconnected case of finite center); abelian and nilpotent are stated for the Lie algebras a_0 and n_0 that generate A and N, not for the groups.",
      "more": [
       {
        "src": "w",
@@ -30492,6 +30549,10 @@
       {
        "src": "w",
        "quote": "*<math> \\mathfrak{n}_0 </math> is a [[nilpotent Lie algebra]]"
+      },
+      {
+       "src": "w",
+       "quote": "*''K'', ''A'', ''N'', are the Lie subgroups of ''G'' generated by <math> \\mathfrak{k}_0, \\mathfrak{a}_0 </math> and <math> \\mathfrak{n}_0 </math>."
       }
      ]
     },
@@ -30603,12 +30664,19 @@
     "input": {
      "verdict": "confirmed",
      "src": "t",
-     "quote": "a smooth projective algebraic ''T''-variety"
+     "quote": "a smooth projective algebraic ''T''-variety",
+     "more": [
+      {
+       "src": "t",
+       "quote": "A variety equipped with an action of a torus ''T'' is called a '''<nowiki />''T''-variety'''."
+      }
+     ]
     },
     "output": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "t",
-     "quote": "admits a ''T''-stable [[cellular decomposition]]."
+     "quote": "admits a ''T''-stable [[cellular decomposition]].",
+     "note": "A T-stable cellular decomposition is stated; the plus-cells X_i^+ are not."
     },
     "preserved": {
      "verdict": "imprecise",
@@ -30647,7 +30715,13 @@
     "description": {
      "verdict": "confirmed",
      "src": "g",
-     "quote": "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>"
+     "quote": "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>",
+     "more": [
+      {
+       "src": "g",
+       "quote": "In his paper of 1947 Segal showed that it is sufficient, for any physical system that can be described by an algebra of operators on a Hilbert space, to consider the ''irreducible'' representations of a <math>C^*</math>-algebra."
+      }
+     ]
     },
     "input": {
      "verdict": "confirmed",
@@ -30669,7 +30743,13 @@
      "verdict": "confirmed",
      "src": "g",
      "quote": "such that <math>\\rho(a)=\\langle \\pi(a) \\xi, \\xi \\rangle</math>",
-     "note": "The state is recovered; pi is a star representation."
+     "note": "The state is recovered; pi is a star representation.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "there is a <math>*</math>-representation <math>\\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\\xi</math>"
+      }
+     ]
     },
     "broken": {
      "verdict": "unsupported",
@@ -30703,6 +30783,14 @@
       {
        "src": "c",
        "quote": "first losing [[ordered field|order]], then [[commutativity]] of multiplication, [[associativity]] of multiplication, and finally [[alternativity]]."
+      },
+      {
+       "src": "c",
+       "quote": "for example [[complex number]]s, [[quaternion]]s, and [[octonion]]s"
+      },
+      {
+       "src": "c",
+       "quote": "The algebra immediately following the octonions is called the [[sedenion]]s."
       }
      ]
     },
@@ -30756,7 +30844,8 @@
    "batch": 4,
    "why": "Landed review, batch 4: a landed entry graded field by field against sources under the strict rule.",
    "files": {
-    "b": "excerpts/wikipedia-burnside-ring.txt"
+    "b": "excerpts/wikipedia-burnside-ring.txt",
+    "n": "excerpts/nlab-burnside-ring.txt"
    },
    "fields": {
     "name": {
@@ -30772,6 +30861,10 @@
       {
        "src": "b",
        "quote": "the generators of its Burnside ring Ω(''G'') are the formal sums of isomorphism classes of finite [[Group action (mathematics)|''G''-sets]]."
+      },
+      {
+       "src": "n",
+       "quote": "the [[Burnside ring]] $A(G)$, which is the [[Grothendieck group]] of the [[monoidal category]] $G Set$ of [[finite set|finite]] [[G-sets]]"
       }
      ]
     },
@@ -30804,7 +30897,8 @@
    "contra": [],
    "mathlib": "Searched Burnside ring: none at the pin.",
    "sources": {
-    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378038404"
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1378038404",
+    "n": "https://ncatlab.org/nlab/source/Burnside+ring"
    }
   },
   {
@@ -31293,10 +31387,10 @@
      "quote": "relates [[holomorphic vector bundle]]s on 3-dimensional complex projective space '''CP'''<sup>3</sup>"
     },
     "output": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "p",
      "quote": "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>.",
-     "note": "On S^4, which contains R^4."
+     "note": "The source states solutions on S^4; the landed R^4 is not stated."
     },
     "preserved": {
      "verdict": "imprecise",
@@ -31343,15 +31437,36 @@
      "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
     },
     "input": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "c",
      "quote": "is linearly embedded into <math>A(\\mathbb{R})</math>",
-     "note": "The distributions are the input."
+     "note": "Distributions embed, as stated, on R, and the source defines the algebra over R^n; the open set Ω of the landed input is not stated.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
+      },
+      {
+       "src": "c",
+       "quote": ":<math>C^\\infty_M(\\mathbb{R}^n)/C^\\infty_N(\\mathbb{R}^n).</math>"
+      }
+     ]
     },
     "output": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "c",
-     "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind"
+     "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind",
+     "note": "The source defines the algebra as a quotient over R^n; the open set Ω of the landed G(Ω) is not stated.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "is defined as the [[quotient associative algebra|quotient algebra]]"
+      },
+      {
+       "src": "c",
+       "quote": ":<math>C^\\infty_M(\\mathbb{R}^n)/C^\\infty_N(\\mathbb{R}^n).</math>"
+      }
+     ]
     },
     "preserved": {
      "verdict": "imprecise",
@@ -31472,11 +31587,15 @@
      "verdict": "confirmed",
      "src": "g",
      "quote": "The apparatus of group rings is especially useful in the theory of [[group representation]]s.",
-     "note": "The group elements form the basis of the free module.",
+     "note": "The group elements form the basis of the free module, multiplied by the group law.",
      "more": [
       {
        "src": "g",
        "quote": "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]"
+      },
+      {
+       "src": "g",
+       "quote": ":<math>x\\mapsto\\sum_{uv=x}f(u)g(v)=\\sum_{u\\in G}f(u)g(u^{-1}x).</math>"
       }
      ]
     },
@@ -31575,7 +31694,13 @@
      "verdict": "confirmed",
      "src": "b",
      "quote": "with respect to the given [[monomial ordering]]",
-     "note": "A generating set and a monomial ordering."
+     "note": "A generating set and a monomial ordering.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
@@ -31635,12 +31760,29 @@
     "input": {
      "verdict": "confirmed",
      "src": "w",
-     "quote": "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
+     "quote": "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]",
+     "note": "The hypotheses I of a geometric statement, as polynomials.",
+     "more": [
+      {
+       "src": "w",
+       "quote": "Wu's method is powerful for [[automatic theorem proving|mechanical theorem proving]] in [[elementary geometry]]"
+      },
+      {
+       "src": "w",
+       "quote": "Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true)"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
      "src": "w",
-     "quote": "This method is based on the mathematical concept of '''characteristic set'''"
+     "quote": "This method is based on the mathematical concept of '''characteristic set'''",
+     "more": [
+      {
+       "src": "w",
+       "quote": "given a finite subset F of polynomials, there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:"
+      }
+     ]
     },
     "preserved": {
      "verdict": "imprecise",
@@ -31687,7 +31829,13 @@
      "verdict": "confirmed",
      "src": "d",
      "quote": "<em>Ritt's reduction algorithm</em> identifies integers",
-     "note": "Differential polynomials of a differential ideal."
+     "note": "Differential polynomials of a differential ideal.",
+     "more": [
+      {
+       "src": "d",
+       "quote": "These regular differential radical ideals, represented by characteristic sets, are not necessarily prime ideals"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
@@ -31786,13 +31934,18 @@
      "quote": "'''cylindrical algebraic decomposition''' ('''CAD''') is a notion, along with an [[algorithm]] to compute it"
     },
     "description": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "c",
      "quote": "a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0.",
+     "note": "The cells and the quantifier elimination are stated; the source decomposes R^n for a given set of polynomials, and the landed semi-algebraic input is not stated.",
      "more": [
       {
        "src": "c",
        "quote": "CAD provides an effective version of [[quantifier elimination]] over the reals"
+      },
+      {
+       "src": "c",
+       "quote": "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>"
       }
      ]
     },
@@ -32228,7 +32381,18 @@
     "input": {
      "verdict": "confirmed",
      "src": "f",
-     "quote": "It associates a Lie algebra to a pair of division algebras ''A'', "
+     "quote": "It associates a Lie algebra to a pair of division algebras ''A'', ",
+     "note": "Division algebras, and their split forms: together the composition algebras.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "In addition to the [[normed division algebra]]s, there are other [[composition algebra]]s over '''R''', namely the [[split-complex number]]s, the [[split-quaternions]] and the [[split-octonions]]."
+      },
+      {
+       "src": "f",
+       "quote": "If one uses these instead of the complex numbers, quaternions, and octonions, one obtains the following variant of the magic square"
+      }
+     ]
     },
     "output": {
      "verdict": "confirmed",
@@ -32640,9 +32804,16 @@
      "quote": "are a [[system of coordinates]] used in [[projective geometry]]"
     },
     "description": {
-     "verdict": "confirmed",
+     "verdict": "imprecise",
      "src": "h",
-     "quote": "The mapping {{nowrap|<math>(x, y) \\mapsto (x, y, 1)</math>}} defines an inclusion from the"
+     "quote": "The mapping {{nowrap|<math>(x, y) \\mapsto (x, y, 1)</math>}} defines an inclusion from the",
+     "note": "The inclusion is stated for the plane, (x, y) to (x, y, 1); for dimension n the source states only the coordinates on a projective space built from a vector space of dimension n + 1, not the inclusion of A^n.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "if the projective space is constructed from a vector space ''V'' of dimension ''n''&nbsp;+&nbsp;1, introduce coordinates in ''V'' by choosing a basis"
+      }
+     ]
     },
     "input": {
      "verdict": "confirmed",

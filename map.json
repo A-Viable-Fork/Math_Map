@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "04fa2c65bb90ab9017717870a5de0f002c05a4ee"
+  "commit": "639128351436bebd37621b00546637f4a8528f8e"
  },
  "domains": {
   "D1": {
@@ -755,13 +755,13 @@
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 105,
+  "corrected": 111,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 847,
+   "unsupported": 848,
    "unchecked": 7889,
    "imprecise": 18,
-   "sourced": 3552,
+   "sourced": 3551,
    "formal": 90
   },
   "lean": {
@@ -4973,7 +4973,7 @@
    "description": "g(x) = f(x) + c. Shifts graph vertically.",
    "input": "Function f + constant c",
    "output": "Shifted function g(x) = f(x)+c",
-   "preserved": "Shape, derivative, domain",
+   "preserved": "Shape (lengths and angles) and domain (each point (x, y) goes to (x, y + b)); the antiderivatives of one function are vertical translates of each other",
    "broken": "Range shifted by c",
    "complexity": "O(1) per evaluation",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
@@ -4987,8 +4987,41 @@
     "preserved": "sourced",
     "broken": "sourced"
    },
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Shape, derivative, domain"
+    },
+    "reason": "Landed review, re-graded after blind round 1: preserved graded imprecise. That a vertical shift keeps the derivative is not in a fetched window; the window states it for antiderivatives, the converse direction.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-translation-geometry.txt",
+      "quote": "Translations preserve the direction and length of line segments, and the amplitudes of angles.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-translation-geometry.txt",
+      "quote": "Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x, y + b)}} in the new graph",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-translation-geometry.txt",
+      "quote": "are therefore vertical translates of each other.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
    "tier": "audited",
-   "auditVerdict": "confirmed"
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-006",
@@ -6509,7 +6542,7 @@
     "decomposition",
     "compression"
    ],
-   "description": "A = CF where C is m x r full column rank, F is r x n full row rank.",
+   "description": "A = CF with C in F^{m x r} and F in F^{r x n}, where r = rank A; in the construction through the singular value decomposition C has full column rank and F full row rank",
    "input": "Rank-r matrix A (m x n)",
    "output": "C (m x r) * F (r x n)",
    "preserved": "Rank (r = rank A); the column space, of which the columns of C are a basis; the row space of A lies in the row space of F",
@@ -6528,13 +6561,29 @@
    },
    "corrected": {
     "fields": [
+     "description",
      "preserved"
     ],
     "landed": {
+     "description": "A = CF where C is m x r full column rank, F is r x n full row rank.",
      "preserved": "Rank, column space, row space"
     },
-    "reason": "Landed review, batch 1: preserved graded imprecise. For the row space the source states containment only; the equality is dropped as unreceipted.",
+    "reason": "Landed review, batch 1: preserved graded imprecise. For the row space the source states containment only; the equality is dropped as unreceipted. Re-graded after blind round 1: description graded imprecise; full column and full row rank are stated only for the singular value construction.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-rank-factorization.txt",
+      "quote": "where <math>C\\in\\mathbb F^{m\\times r}</math> and <math>F\\in\\mathbb F^{r\\times n}</math>, where <math>r=\\operatorname{rank} A</math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-rank-factorization.txt",
+      "quote": "Since <math display=\"inline\">U_1</math> is a full-column-rank matrix and <math display=\"inline\">\\Sigma_r V_1^*</math> is a full-row-rank matrix",
+      "fields": [
+       "description"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-rank-factorization.txt",
       "quote": "where <math>r=\\operatorname{rank} A</math>",
@@ -6700,7 +6749,7 @@
     "computation-bridge"
    ],
    "description": "A = QR with Q orthogonal (orthonormal columns) and R upper triangular; often used to solve linear least squares. Computed stably with Householder reflections; the Gram-Schmidt process is numerically unstable.",
-   "input": "Matrix A (m x n)",
+   "input": "Complex m x n matrix A with m at least n",
    "output": "Q (orthogonal) * R (upper tri)",
    "preserved": "Column space: when A has n linearly independent columns, the first n columns of Q are an orthonormal basis of it",
    "broken": "Dense structure",
@@ -6718,15 +6767,24 @@
    },
    "corrected": {
     "fields": [
+     "input",
      "description",
      "preserved"
     ],
     "landed": {
+     "input": "Matrix A (m x n)",
      "description": "A = QR with Q orthogonal, R upper triangular. Numerically stable least squares.",
      "preserved": "Column space, norm, numerical stability"
     },
-    "reason": "Landed review, batch 1: description and preserved graded imprecise. Numerical stability belongs to the algorithm, not to the decomposition; norm preservation is not stated in a fetched window and is dropped.",
+    "reason": "Landed review, batch 1: description and preserved graded imprecise. Numerical stability belongs to the algorithm, not to the decomposition; norm preservation is not stated in a fetched window and is dropped. Re-graded after blind round 1: input graded imprecise; the source states the factorization for m at least n.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-qr-decomposition.txt",
+      "quote": "More generally, we can factor a complex ''m''×''n'' matrix ''A'', with {{nowrap|''m'' ≥ ''n''}}",
+      "fields": [
+       "input"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-qr-decomposition.txt",
       "quote": "into a product ''A''&nbsp;=&nbsp;''QR'' of an [[orthonormal matrix]] ''Q'' and an [[upper triangular matrix]] ''R''. QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem",
@@ -8382,7 +8440,7 @@
     "topology-bridge"
    ],
    "description": "Topology on R with I^n as neighborhood basis of 0.",
-   "input": "Ring R + ideal I",
+   "input": "Commutative ring R + ideal I",
    "output": "Topological ring (R, I-adic)",
    "preserved": "Continuity of ring ops",
    "broken": "Other topologies",
@@ -8397,6 +8455,24 @@
     "output": "formal",
     "preserved": "sourced",
     "broken": "unsupported"
+   },
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Ring R + ideal I"
+    },
+    "reason": "Landed review, re-graded after blind round 1: input graded imprecise. The topology is stated for a commutative ring.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-i-adic-topology.txt",
+      "quote": "Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
    },
    "formal": [
     {
@@ -8417,7 +8493,8 @@
     }
    ],
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-083",
@@ -9088,7 +9165,7 @@
    ],
    "description": "Rf_* via injective resolution. Higher direct images R^if_*.",
    "input": "Morphism f + sheaf F",
-   "output": "Rf_*F in D(Y)",
+   "output": "Rf_*F in D_qcoh(Y), for F in D_qcoh(X)",
    "preserved": "Derived category, Leray spectral seq",
    "broken": "Individual sheaf",
    "complexity": "Depends",
@@ -9103,8 +9180,27 @@
     "preserved": "sourced",
     "broken": "unsupported"
    },
+   "corrected": {
+    "fields": [
+     "output"
+    ],
+    "landed": {
+     "output": "Rf_*F in D(Y)"
+    },
+    "reason": "Landed review, re-graded after blind round 1: output graded imprecise. The source states Rf_* between derived categories of quasi-coherent sheaves.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-direct-image-functor.txt",
+      "quote": ":<math>Rf_*: D_{qcoh}(X) \\to D_{qcoh}(Y)</math>",
+      "fields": [
+       "output"
+      ]
+     }
+    ]
+   },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-101",
@@ -9117,7 +9213,7 @@
    "description": "f^*G = f^{-1}G ⊗_{f^{-1}O_Y} O_X.",
    "input": "Morphism f: X->Y + sheaf G on Y",
    "output": "Sheaf f^*G on X",
-   "preserved": "Adjointness with pushforward",
+   "preserved": "Adjointness with pushforward, as stated for the sheaf inverse image f^-1, the left adjoint of the direct image f_*",
    "broken": "Y-specific structure",
    "complexity": "Depends",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
@@ -9136,6 +9232,31 @@
     "preserved": "sourced",
     "broken": "unsupported"
    },
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Adjointness with pushforward"
+    },
+    "reason": "Landed review, re-graded after blind round 1: preserved graded imprecise. The adjunction is stated for the sheaf inverse image f^-1, not for the module pullback f^*.",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-inverse-image.txt",
+      "quote": "then the left adjoint part is called the inverse image part.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-inverse-image-functor.txt",
+      "quote": "* <math>f^{-1}</math> is the [[adjoint functor|left adjoint]] of the [[direct image functor]] <math>f_{\\ast}</math>.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
    "formal": [
     {
      "field": "preserved",
@@ -9147,7 +9268,8 @@
     }
    ],
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-102",
@@ -10042,7 +10164,7 @@
    "description": "MMP: after a contraction of curves on which K is negative, replaces them by a birational map, an isomorphism in codimension 1, to a variety X+ with better singularities (mild, such as terminal); the flip is taken where -K is relatively ample.",
    "input": "Variety with K-negative extremal ray",
    "output": "X+ with K-positive replacement",
-   "preserved": "Kodaira dimension",
+   "preserved": "Kodaira dimension, defined from the plurigenera, which are birational invariants of smooth projective varieties; the flip is a birational map",
    "broken": "Specific curve",
    "complexity": "Existence proved; construction hard",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
@@ -10058,13 +10180,43 @@
    },
    "corrected": {
     "fields": [
+     "preserved",
      "description"
     ],
     "landed": {
+     "preserved": "Kodaira dimension",
      "description": "MMP: replaces K-negative curve with K-positive. Preserves smoothness."
     },
-    "reason": "Landed review, batch 3: description graded imprecise. The source says the singularities get better, not that smoothness is preserved; that claim is dropped.",
+    "reason": "Landed review, batch 3: description graded imprecise. The source says the singularities get better, not that smoothness is preserved; that claim is dropped. Re-graded after blind round 1: preserved graded imprecise; birational invariance is stated for smooth projective varieties, and a flip runs between singular ones.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-kodaira-dimension.txt",
+      "quote": "The plurigenera are important birational invariants of an algebraic variety.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-kodaira-dimension.txt",
+      "quote": "has the remarkable property that it is a [[birational invariant]] of smooth projective varieties ''X''",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-kodaira-dimension.txt",
+      "quote": "The '''Kodaira dimension''' of ''X'' is defined to be <math>-\\infty</math> if the plurigenera ''P<sub>d</sub>'' are zero for all ''d'' > 0; otherwise, it is the minimum κ such that ''P<sub>d</sub> /d<sup>κ</sup>'' is bounded.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-flip-algebraic-geometry.txt",
+      "quote": "is a birational map (in fact an isomorphism in [[codimension]] 1)",
+      "fields": [
+       "preserved"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-flip-algebraic-geometry.txt",
       "quote": "each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative.",
@@ -10219,7 +10371,7 @@
     "completion"
    ],
    "description": "A separated finite-type morphism to a Noetherian scheme factors as an open immersion followed by a proper morphism; every variety embeds in a complete variety.",
-   "input": "Separated scheme X of finite type",
+   "input": "Separated finite type morphism X -> S to a Noetherian scheme S",
    "output": "Proper scheme over the base containing X as an open subscheme",
    "preserved": "The open embedding",
    "broken": "Non-compactness",
@@ -10237,17 +10389,26 @@
    },
    "corrected": {
     "fields": [
+     "input",
      "description",
      "output",
      "preserved"
     ],
     "landed": {
+     "input": "Separated scheme X of finite type",
      "description": "Embeds separated scheme as dense open in proper scheme.",
      "output": "Proper X-bar with X dense open",
      "preserved": "Open embedding, function field"
     },
-    "reason": "Landed review, batch 3: description, output and preserved graded imprecise. Density of X and the function field are not in a fetched window and are dropped.",
+    "reason": "Landed review, batch 3: description, output and preserved graded imprecise. Density of X and the function field are not in a fetched window and are dropped. Re-graded after blind round 1: input graded imprecise; the theorem is stated for a morphism to a Noetherian base.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-nagatas-compactification-theorem.txt",
+      "quote": "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S''",
+      "fields": [
+       "input"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-nagatas-compactification-theorem.txt",
       "quote": "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S'' can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]].",
@@ -10586,7 +10747,7 @@
    "evidence": {
     "name": "unsupported",
     "description": "sourced",
-    "input": "sourced",
+    "input": "unsupported",
     "output": "sourced",
     "preserved": "unsupported",
     "broken": "unsupported"
@@ -10662,7 +10823,7 @@
     "algebra-bridge"
    ],
    "description": "G = ⊔ BwB. Borel double cosets indexed by Weyl group.",
-   "input": "Algebraic group G + Borel B",
+   "input": "Connected reductive algebraic group G over an algebraically closed field + Borel subgroup B",
    "output": "Disjoint union of Bruhat cells",
    "preserved": "Cell structure, Weyl combinatorics",
    "broken": "Continuous group structure",
@@ -10678,8 +10839,34 @@
     "preserved": "sourced",
     "broken": "unsupported"
    },
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Algebraic group G + Borel B"
+    },
+    "reason": "Landed review, re-graded after blind round 1: input graded imprecise. The decomposition is stated for a connected reductive group over an algebraically closed field.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-bruhat-decomposition.txt",
+      "quote": "*<math>G</math> is a [[connected space|connected]], [[reductive group|reductive]] [[algebraic group]] over an [[algebraically closed field]].",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-bruhat-decomposition.txt",
+      "quote": "*<math>B</math> is a [[Borel subgroup]] of <math>G</math>",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-133",
@@ -10749,7 +10936,7 @@
    "tags": [
     "decomposition"
    ],
-   "description": "G = KAN. Compact x abelian x nilpotent.",
+   "description": "G = KAN, with K, A, N the Lie subgroups generated by k_0, a maximal abelian subalgebra a_0 and a nilpotent Lie algebra n_0; K is a maximal compact subgroup, also in the disconnected case of finite center",
    "input": "Semisimple Lie group G",
    "output": "K * A * N factorization",
    "preserved": "Unique factorization, component separation",
@@ -10766,8 +10953,55 @@
     "preserved": "sourced",
     "broken": "unsupported"
    },
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "G = KAN. Compact x abelian x nilpotent."
+    },
+    "reason": "Landed review, re-graded after blind round 1: description graded imprecise. Abelian and nilpotent are stated for the Lie algebras that generate A and N.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-iwasawa-decomposition.txt",
+      "quote": ":<math>G=KAN</math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-iwasawa-decomposition.txt",
+      "quote": "*''K'', ''A'', ''N'', are the Lie subgroups of ''G'' generated by <math> \\mathfrak{k}_0, \\mathfrak{a}_0 </math> and <math> \\mathfrak{n}_0 </math>.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-iwasawa-decomposition.txt",
+      "quote": "*<math> \\mathfrak{a}_0 </math> is a maximal abelian subalgebra of <math> \\mathfrak{p}_0 </math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-iwasawa-decomposition.txt",
+      "quote": "*<math> \\mathfrak{n}_0 </math> is a [[nilpotent Lie algebra]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-iwasawa-decomposition.txt",
+      "quote": "where ''K'' becomes a (disconnected) [[maximal compact subgroup]]",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
    "tier": "audited",
-   "auditVerdict": "partly unsupported"
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-135",
@@ -10844,7 +11078,7 @@
    ],
    "description": "A smooth projective variety with a torus action admits a torus-stable cellular decomposition (algebraic Morse theory).",
    "input": "Smooth proj variety + torus action",
-   "output": "X = ⊔ X_i^+ (plus-cells)",
+   "output": "A T-stable cellular decomposition of X",
    "preserved": "Cell structure",
    "broken": "Global smooth structure",
    "complexity": "N/A",
@@ -10861,15 +11095,24 @@
    },
    "corrected": {
     "fields": [
+     "output",
      "description",
      "preserved"
     ],
     "landed": {
+     "output": "X = ⊔ X_i^+ (plus-cells)",
      "description": "Torus action on smooth proj variety -> cell decomposition by fixed points.",
      "preserved": "Cell structure, Betti numbers"
     },
-    "reason": "Landed review, batch 4: description and preserved graded imprecise. Indexing by fixed points and the Betti numbers are not in a fetched window and are dropped.",
+    "reason": "Landed review, batch 4: description and preserved graded imprecise. Indexing by fixed points and the Betti numbers are not in a fetched window and are dropped. Re-graded after blind round 1: output graded imprecise; the plus-cells are not in a fetched window and are dropped.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-torus-action.txt",
+      "quote": "admits a ''T''-stable [[cellular decomposition]].",
+      "fields": [
+       "output"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-torus-action.txt",
       "quote": "The Białynicki-Birula decomposition says that a smooth projective algebraic ''T''-variety admits a ''T''-stable [[cellular decomposition]].",
@@ -11475,7 +11718,7 @@
    ],
    "description": "Holomorphic bundle on twistor space -> self-dual Yang-Mills connection.",
    "input": "Holomorphic bundle on CP^3",
-   "output": "Self-dual connection on R^4",
+   "output": "Solution of the self-dual Yang-Mills equations on S^4",
    "preserved": "Self-duality: the bundles correspond to solutions of the self-dual Yang-Mills equations",
    "broken": "Twistor formulation",
    "complexity": "Depends",
@@ -11492,13 +11735,22 @@
    },
    "corrected": {
     "fields": [
+     "output",
      "preserved"
     ],
     "landed": {
+     "output": "Self-dual connection on R^4",
      "preserved": "Self-duality, gauge class"
     },
-    "reason": "Landed review, batch 4: preserved graded imprecise. Gauge classes are not in a fetched window and are dropped.",
+    "reason": "Landed review, batch 4: preserved graded imprecise. Gauge classes are not in a fetched window and are dropped. Re-graded after blind round 1: output graded imprecise; the source states the solutions on S^4.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-penrose-transform.txt",
+      "quote": "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>.",
+      "fields": [
+       "output"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-penrose-transform.txt",
       "quote": "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>.",
@@ -11521,8 +11773,8 @@
     "construction"
    ],
    "description": "Algebra of generalized functions containing distributions with multiplication.",
-   "input": "Distributions D'(Ω)",
-   "output": "Colombeau algebra G(Ω)",
+   "input": "Schwartz distributions on R^n, over which the source defines the algebra",
+   "output": "Colombeau algebra C^infty_M(R^n)/C^infty_N(R^n)",
    "preserved": "Distributions embed linearly; the product of smooth functions is preserved, while no such algebra can preserve the product of continuous functions (Schwartz)",
    "broken": "Classical function space",
    "complexity": "N/A",
@@ -11539,13 +11791,40 @@
    },
    "corrected": {
     "fields": [
+     "input",
+     "output",
      "preserved"
     ],
     "landed": {
+     "input": "Distributions D'(Ω)",
+     "output": "Colombeau algebra G(Ω)",
      "preserved": "Distribution embedding, multiplication"
     },
-    "reason": "Landed review, batch 5: preserved graded imprecise. The multiplication kept is that of smooth functions.",
+    "reason": "Landed review, batch 5: preserved graded imprecise. The multiplication kept is that of smooth functions. Re-graded after blind round 1: input and output graded imprecise; the source works over R^n, and the open set Ω is not stated.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-colombeau-algebra.txt",
+      "quote": "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]].",
+      "fields": [
+       "input",
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-colombeau-algebra.txt",
+      "quote": "is defined as the [[quotient associative algebra|quotient algebra]]",
+      "fields": [
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-colombeau-algebra.txt",
+      "quote": ":<math>C^\\infty_M(\\mathbb{R}^n)/C^\\infty_N(\\mathbb{R}^n).</math>",
+      "fields": [
+       "input",
+       "output"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-colombeau-algebra.txt",
       "quote": "is linearly embedded into <math>A(\\mathbb{R})</math>",
@@ -12007,7 +12286,7 @@
     "decomposition",
     "computation-bridge"
    ],
-   "description": "Semi-algebraic set -> cylindrical cells with constant polynomial signs. Quantifier elimination over R.",
+   "description": "A finite set of polynomials in R^n -> a decomposition of R^n into connected semialgebraic cells, on each of which every polynomial has constant sign; an effective quantifier elimination over the reals",
    "input": "A finite set of polynomials in n real variables",
    "output": "Finite cell partition",
    "preserved": "Sign conditions, semi-algebraic type",
@@ -12026,13 +12305,36 @@
    },
    "corrected": {
     "fields": [
+     "description",
      "input"
     ],
     "landed": {
+     "description": "Semi-algebraic set -> cylindrical cells with constant polynomial signs. Quantifier elimination over R.",
      "input": "Semi-algebraic set in R^n"
     },
-    "reason": "Landed review, batch 5: input graded imprecise. The decomposition is computed for a set of polynomials, not a semi-algebraic set.",
+    "reason": "Landed review, batch 5: input graded imprecise. The decomposition is computed for a set of polynomials, not a semi-algebraic set. Re-graded after blind round 1: description graded imprecise, for the same reason as the input.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-cylindrical-algebraic-decomposition.txt",
+      "quote": "a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cylindrical-algebraic-decomposition.txt",
+      "quote": "CAD provides an effective version of [[quantifier elimination]] over the reals",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-cylindrical-algebraic-decomposition.txt",
+      "quote": "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>",
+      "fields": [
+       "description"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-cylindrical-algebraic-decomposition.txt",
       "quote": "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>",
@@ -12790,7 +13092,7 @@
    "tags": [
     "representation-change"
    ],
-   "description": "Affine A^n -> projective P^n via homogeneous coordinates.",
+   "description": "Euclidean plane into the projective plane by homogeneous coordinates, (x, y) -> (x, y, 1); the coordinates extend to every projective space built from a vector space of dimension n + 1",
    "input": "Affine point",
    "output": "Projective point",
    "preserved": "The affine plane, which sits in the projective plane as the complement of the line at infinity",
@@ -12809,13 +13111,36 @@
    },
    "corrected": {
     "fields": [
+     "description",
      "preserved"
     ],
     "landed": {
+     "description": "Affine A^n -> projective P^n via homogeneous coordinates.",
      "preserved": "Affine structure on chart, incidence"
     },
-    "reason": "Landed review, batch 5: preserved graded imprecise. Incidence is not in a fetched window and is dropped.",
+    "reason": "Landed review, batch 5: preserved graded imprecise. Incidence is not in a fetched window and is dropped. Re-graded after blind round 1: description graded imprecise; the inclusion is stated for the plane only.",
     "receipts": [
+     {
+      "file": "excerpts/wikipedia-homogeneous-coordinates.txt",
+      "quote": "The mapping {{nowrap|<math>(x, y) \\mapsto (x, y, 1)</math>}} defines an inclusion from the",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-homogeneous-coordinates.txt",
+      "quote": "can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-homogeneous-coordinates.txt",
+      "quote": "if the projective space is constructed from a vector space ''V'' of dimension ''n''&nbsp;+&nbsp;1, introduce coordinates in ''V'' by choosing a basis",
+      "fields": [
+       "description"
+      ]
+     },
      {
       "file": "excerpts/wikipedia-homogeneous-coordinates.txt",
       "quote": "can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added, which are called [[point at infinity|points at infinity]], and are considered to lie on a new line, the [[line at infinity]].",

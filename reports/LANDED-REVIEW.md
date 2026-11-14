@@ -17,12 +17,12 @@ Each domain's fields, counted by verdict.
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
 | name | 121 | 1 | 0 | 3 |
-| description | 94 | 28 | 1 | 2 |
-| input | 107 | 15 | 0 | 3 |
-| output | 115 | 7 | 0 | 3 |
-| preserved | 71 | 33 | 0 | 21 |
+| description | 90 | 32 | 1 | 2 |
+| input | 101 | 20 | 0 | 4 |
+| output | 111 | 11 | 0 | 3 |
+| preserved | 68 | 36 | 0 | 21 |
 | broken | 26 | 4 | 1 | 94 |
-| **all** | 534 | 88 | 2 | 126 |
+| **all** | 517 | 104 | 2 | 127 |
 
 ## 2. By batch
 
@@ -30,17 +30,25 @@ Per batch: imprecise and wrong fields found, scaled to 25 entries, and the share
 
 | Batch | Domain | Entries | Imprecise | Wrong | Per 25 entries | Entries with a finding | Fields settled | Recall contradicted | Rate |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | D2 | 25 | 23 | 1 | 24.0 | 20 | 130 | 12 | 9% |
-| 2 | D2 | 25 | 11 | 0 | 11.0 | 8 | 127 | 10 | 8% |
-| 3 | D2 | 25 | 15 | 0 | 15.0 | 10 | 123 | 6 | 5% |
-| 4 | D2 | 25 | 23 | 0 | 23.0 | 13 | 120 | 21 | 18% |
-| 5 | D2 | 25 | 16 | 1 | 17.0 | 13 | 124 | 15 | 12% |
+| 1 | D2 | 25 | 26 | 1 | 27.0 | 21 | 130 | 12 | 9% |
+| 2 | D2 | 25 | 12 | 0 | 12.0 | 9 | 127 | 10 | 8% |
+| 3 | D2 | 25 | 19 | 0 | 19.0 | 12 | 123 | 6 | 5% |
+| 4 | D2 | 25 | 27 | 0 | 27.0 | 15 | 119 | 21 | 18% |
+| 5 | D2 | 25 | 20 | 1 | 21.0 | 13 | 124 | 15 | 12% |
 
 ## 3. Blind re-grades
 
 After every fifth batch, 15 fields drawn at random (seed 20261113 + round) from the earlier batches are graded again from the landed text and excerpt files, without reading the first verdict. The reader is the first grader, so blind means the first verdict was not read again, not that it was forgotten. Under 90% agreement the review stops until the affected batches are re-graded.
 
-No round yet.
+### Round 1, after batch 5 (2026-11-13)
+
+Agreement when graded: 13 of 15 (87%); against the review as it stands: 14 of 15 (93%). Reader: the first grader, from audit/landed-blind/packet-1.md (landed text and excerpt files, first verdicts unread).
+
+- D2-132.input: first confirmed, again imprecise, now imprecise: The window states B a Borel subgroup of G; the class of G is not in it, and the page lead says certain algebraic groups.
+- D2-107.preserved: first confirmed, again imprecise: The adjunction is stated; the dualizing complex is not in the window graded.
+
+What slipped: Context confirmation: both disagreements were first grades of confirmed on a field one of whose parts no quoted window stated (the class of G for D2-132, the dualizing complex for D2-107), the part supplied from the page around the window or from a note. Every confirmed field of batches 1 to 5 was read again against its windows alone. Where the page holds a window stating the missing part, the window was added and the grade kept (19 fields, D2-107.preserved among them); where it holds none, or states a narrower or different claim, the field went to imprecise with a receipted correction (16 fields, D2-132.input among them) or, for D2-130.input, whose normality hypothesis sits outside every declaration window, to unsupported.
+Re-graded: batches 1, 2, 3, 4, 5.
 
 ## 4. Falsification attempts
 
@@ -63,7 +71,7 @@ Every tenth entry: its most specific claim (a hypothesis, a formula, an attribut
 
 Corrections, flags and Mathlib conflicts on reviewed entries.
 
-### Corrections (63 entries, 89 fields)
+### Corrections (69 entries, 105 fields)
 
 - **D2-003 Rotation** (broken): Landed review, batch 1: broken graded imprecise. In space the axis of rotation is a line of fixed points, so not every non-centre point moves.
 - **D2-004 Dilation (Scaling)** (description): Landed review, batch 1: description graded imprecise. "Not isometric" fails for |k| = 1: k = -1 is the point reflection, an isometry.
@@ -77,10 +85,10 @@ Corrections, flags and Mathlib conflicts on reviewed entries.
 - **D2-041 LDU Decomposition** (input): Landed review, batch 1: input graded imprecise. Not every square matrix has an LDU factorization.
 - **D2-042 LUP Decomposition** (preserved): Landed review, batch 1: preserved graded imprecise. Partial pivoting is stable in practice, not in every case.
 - **D2-043 Block LU Decomposition** (description): Landed review, batch 1: description graded imprecise. The source says nothing about parallel architectures; that claim is dropped.
-- **D2-044 Rank Factorization** (preserved): Landed review, batch 1: preserved graded imprecise. For the row space the source states containment only; the equality is dropped as unreceipted.
+- **D2-044 Rank Factorization** (description, preserved): Landed review, batch 1: preserved graded imprecise. For the row space the source states containment only; the equality is dropped as unreceipted. Re-graded after blind round 1: description graded imprecise; full column and full row rank are stated only for the singular value construction.
 - **D2-045 Cholesky Decomposition** (preserved): Landed review, batch 1: preserved graded imprecise. Positive-definiteness is the input's hypothesis; no source states the factorization preserves it, so it is dropped.
 - **D2-046 LDL Decomposition** (input, preserved): Landed review, batch 1: input and preserved graded imprecise. LDL* exists beyond positive-definite matrices, and "same as Cholesky" is not stated (positive-definiteness is not kept for an indefinite input).
-- **D2-047 QR Decomposition** (description, preserved): Landed review, batch 1: description and preserved graded imprecise. Numerical stability belongs to the algorithm, not to the decomposition; norm preservation is not stated in a fetched window and is dropped.
+- **D2-047 QR Decomposition** (input, description, preserved): Landed review, batch 1: description and preserved graded imprecise. Numerical stability belongs to the algorithm, not to the decomposition; norm preservation is not stated in a fetched window and is dropped. Re-graded after blind round 1: input graded imprecise; the source states the factorization for m at least n.
 - **D2-050 Jordan Normal Form** (description, broken): Landed review, batch 1: description graded imprecise (the form is not only for non-diagonalizable matrices) and broken graded wrong (diagonalizability is a similarity invariant, kept).
 - **D2-052 Schur Decomposition** (description): Landed review, batch 1: description graded imprecise. No fetched window says the decomposition is numerically stable; the claim is dropped.
 - **D2-053 Real Schur Decomposition** (description): Landed review, batch 1: description graded imprecise. That the 2 by 2 blocks carry the complex eigenvalue pairs is not in a fetched window and is dropped.
@@ -99,35 +107,41 @@ Corrections, flags and Mathlib conflicts on reviewed entries.
 - **D2-111 Langlands Duality** (description): Landed review, batch 3: description graded imprecise. The Galois side is homomorphisms into the L-group, not representations of the dual group.
 - **D2-113 Global Spec Construction** (input): Landed review, batch 3: input graded imprecise. The algebra must be quasi-coherent.
 - **D2-114 Proj Construction** (description, preserved): Landed review, batch 3: description and preserved graded imprecise. Proj S need not be projective (that needs S finitely generated in degree one), and the grading survives only through O(n).
-- **D2-119 Flip** (description): Landed review, batch 3: description graded imprecise. The source says the singularities get better, not that smoothness is preserved; that claim is dropped.
+- **D2-119 Flip** (preserved, description): Landed review, batch 3: description graded imprecise. The source says the singularities get better, not that smoothness is preserved; that claim is dropped. Re-graded after blind round 1: preserved graded imprecise; birational invariance is stated for smooth projective varieties, and a flip runs between singular ones.
 - **D2-122 Tschirnhaus Transformation** (preserved): Landed review, batch 3: preserved graded imprecise. The roots are carried to new roots, not kept.
-- **D2-123 Nagata's Compactification** (description, output, preserved): Landed review, batch 3: description, output and preserved graded imprecise. Density of X and the function field are not in a fetched window and are dropped.
+- **D2-123 Nagata's Compactification** (input, description, output, preserved): Landed review, batch 3: description, output and preserved graded imprecise. Density of X and the function field are not in a fetched window and are dropped. Re-graded after blind round 1: input graded imprecise; the theorem is stated for a morphism to a Noetherian base.
 - **D2-125 Quotient Stack Construction** (description, input, preserved): Landed review, batch 4: description, input and preserved graded imprecise. G must be an affine smooth group scheme; orbits and automorphism data are not stated beyond the stabilizers and the coarser quotient.
 - **D2-127 Induction** (description): Landed review, batch 4: description graded imprecise. Induction is the left adjoint of restriction; it is the right adjoint only in the finite case.
 - **D2-128 Restriction** (preserved): Landed review, batch 4: preserved graded imprecise. The H-invariant subspaces are not in a fetched window and are dropped.
 - **D2-130 Deflation** (description): Landed review, batch 4: description graded imprecise. "By averaging" is not stated; Mathlib's deflation takes the invariants.
 - **D2-133 Cartan Decomposition** (preserved): Landed review, batch 4: preserved graded imprecise. "Spectral data in A" is not in a fetched window and is dropped.
 - **D2-135 Birkhoff Factorization** (description, output): Landed review, batch 4: description and output graded imprecise. The factorization has a diagonal middle factor, trivial only generically.
-- **D2-136 Bialynicki-Birula Decomposition** (description, preserved): Landed review, batch 4: description and preserved graded imprecise. Indexing by fixed points and the Betti numbers are not in a fetched window and are dropped.
+- **D2-136 Bialynicki-Birula Decomposition** (output, description, preserved): Landed review, batch 4: description and preserved graded imprecise. Indexing by fixed points and the Betti numbers are not in a fetched window and are dropped. Re-graded after blind round 1: output graded imprecise; the plus-cells are not in a fetched window and are dropped.
 - **D2-138 Cayley-Dickson Construction** (input, preserved, broken): Landed review, batch 4: input, preserved and broken graded imprecise. The construction needs an involution; the norm's behaviour is stated; the first property lost is order, not conjugation.
 - **D2-140 Simplicial Set Construction** (description, input, preserved): Landed review, batch 4: description, input and preserved graded imprecise. "Algebraic data" and the role of Kan complexes are not in a fetched window and are dropped.
 - **D2-141 Fox Derivative** (input): Landed review, batch 4: input graded imprecise. The source defines the derivative on group elements; the extension to the group ring is not in a fetched window.
 - **D2-143 Vaughan Jones Construction** (description, output, preserved): Landed review, batch 4: description, output and preserved graded imprecise. A knot polynomial is not a function of the subfactor; it came from the theory through braid representations.
 - **D2-148 Stanley-Reisner Ring Construction** (preserved): Landed review, batch 4: preserved graded imprecise. The f-vector is not named in a fetched window and is dropped.
-- **D2-149 Ward's Twistor Construction** (preserved): Landed review, batch 4: preserved graded imprecise. Gauge classes are not in a fetched window and are dropped.
-- **D2-150 Colombeau's Construction** (preserved): Landed review, batch 5: preserved graded imprecise. The multiplication kept is that of smooth functions.
+- **D2-149 Ward's Twistor Construction** (output, preserved): Landed review, batch 4: preserved graded imprecise. Gauge classes are not in a fetched window and are dropped. Re-graded after blind round 1: output graded imprecise; the source states the solutions on S^4.
+- **D2-150 Colombeau's Construction** (input, output, preserved): Landed review, batch 5: preserved graded imprecise. The multiplication kept is that of smooth functions. Re-graded after blind round 1: input and output graded imprecise; the source works over R^n, and the open set Ω is not stated.
 - **D2-155 Lindenbaum-Tarski Algebra** (preserved): Landed review, batch 5: preserved graded imprecise. "Completeness" is not a kept invariant; the source relates ultrafilters to complete theories.
 - **D2-156 Buchberger's Algorithm** (description, preserved): Landed review, batch 5: description and preserved graded imprecise. The deterministic-division gloss, canonicity and decidable membership are not in a fetched window and are dropped.
 - **D2-157 Wu's Method** (preserved): Landed review, batch 5: preserved graded imprecise. Radical membership is not in a fetched window and is dropped.
 - **D2-159 Ritt's Decomposition Algorithm** (description, input, output): Landed review, batch 5: description, input and output graded imprecise. The fetched decomposition is not stated to be into irreducible components, and starts from a polynomial set.
-- **D2-160 Cylindrical Algebraic Decomposition** (input): Landed review, batch 5: input graded imprecise. The decomposition is computed for a set of polynomials, not a semi-algebraic set.
+- **D2-160 Cylindrical Algebraic Decomposition** (description, input): Landed review, batch 5: input graded imprecise. The decomposition is computed for a set of polynomials, not a semi-algebraic set. Re-graded after blind round 1: description graded imprecise, for the same reason as the input.
 - **D2-161 Elimination Theory Reduction** (preserved): Landed review, batch 5: preserved graded imprecise. Elimination gives the Zariski closure of the projection, not the projection.
 - **D2-163 Discriminant Computation** (description): Landed review, batch 5: description graded imprecise. The discriminant is the resultant up to the leading coefficient and a sign.
 - **D2-164 Pseudodivision** (output): Landed review, batch 5: output graded imprecise. The pseudo-quotient is not in a fetched window and is dropped.
 - **D2-169 Freudenthal Magic Square** (description, preserved): Landed review, batch 5: description graded wrong (G2 is not in the square) and preserved imprecise for the same reason.
 - **D2-171 Dual Curve Construction** (preserved): Landed review, batch 5: preserved graded imprecise. Biduality is not in a fetched window and is dropped.
 - **D2-174 Involute Construction** (output): Landed review, batch 5: output graded imprecise. The recovery runs through the evolute of an involute.
-- **D2-177 Homogeneous Coordinate Transformation** (preserved): Landed review, batch 5: preserved graded imprecise. Incidence is not in a fetched window and is dropped.
+- **D2-177 Homogeneous Coordinate Transformation** (description, preserved): Landed review, batch 5: preserved graded imprecise. Incidence is not in a fetched window and is dropped. Re-graded after blind round 1: description graded imprecise; the inclusion is stated for the plane only.
+- **D2-005 Vertical Shift** (preserved): Landed review, re-graded after blind round 1: preserved graded imprecise. That a vertical shift keeps the derivative is not in a fetched window; the window states it for antiderivatives, the converse direction.
+- **D2-082 I-adic Topology Construction** (input): Landed review, re-graded after blind round 1: input graded imprecise. The topology is stated for a commutative ring.
+- **D2-100 Derived Pushforward** (output): Landed review, re-graded after blind round 1: output graded imprecise. The source states Rf_* between derived categories of quasi-coherent sheaves.
+- **D2-101 Pullback** (preserved): Landed review, re-graded after blind round 1: preserved graded imprecise. The adjunction is stated for the sheaf inverse image f^-1, not for the module pullback f^*.
+- **D2-132 Bruhat Decomposition** (input): Landed review, re-graded after blind round 1: input graded imprecise. The decomposition is stated for a connected reductive group over an algebraically closed field.
+- **D2-134 Iwasawa Decomposition** (description): Landed review, re-graded after blind round 1: description graded imprecise. Abelian and nilpotent are stated for the Lie algebras that generate A and N.
 
 ### Flags (0)
 
@@ -310,7 +324,7 @@ No link (80):
 - description (landed: g(x) = f(x) + c. Shifts graph vertically.): **confirmed** [t] "resulting in a graph consisting of the points {{tmath|\bigl(x, f(x) + b\bigr) }}"
 - input (landed: Function f + constant c): **confirmed** [t] "A '''vertical translation''' means composing the function {{tmath|y \mapsto y + b}} with {{mvar|f}}, for some constant {{mvar|b}}"
 - output (landed: Shifted function g(x) = f(x)+c): **confirmed** [t] "resulting in a graph consisting of the points {{tmath|\bigl(x, f(x) + b\bigr) }}"
-- preserved (landed: Shape, derivative, domain): **confirmed** [t] "are therefore vertical translates of each other." [t] "Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x, y + b)}} in the new graph" [t] "Translations preserve the direction and length of line segments, and the amplitudes of angles." *Derivative: the antiderivatives of one function are vertical translates of each other. Domain: each point (x, y) goes to (x, y + b), so x is kept. Shape: the graph is translated, and translations keep lengths and angles.*
+- preserved (landed: Shape, derivative, domain): **imprecise** [t] "are therefore vertical translates of each other." [t] "Each point {{tmath|(x, y)}} of the original graph corresponds to the point {{tmath|(x, y + b)}} in the new graph" [t] "Translations preserve the direction and length of line segments, and the amplitudes of angles." *Domain and shape are stated: each point (x, y) goes to (x, y + b), and translations keep lengths and angles. The derivative part is unquoted: the window says the antiderivatives of one function are vertical translates of each other, not that a vertical shift keeps the derivative.*
 - broken (landed: Range shifted by c): **confirmed** [t] "corresponds to the point {{tmath|(x, y + b)}} in the new graph" *Every value moves by b, so the range moves by b.*
 - recalled: name: ok: standard name in graph transformations; description: ok: g(x) = f(x) + c; input: ok; output: ok; preserved: ok: shape, derivative and domain unchanged; broken: ok: range moves by c
 - mathlib: none. Searched graph shifts and Function.comp with addition: Mathlib states no graph transformations as such (f (x + c) is composition with a translation); no declaration states this entry's claims.
@@ -468,7 +482,7 @@ No link (80):
 ### D2-044 Rank Factorization (batch 1)
 
 - name (landed: Rank Factorization): **confirmed** [k] "a '''rank decomposition''' or '''rank factorization''' of {{mvar|A}} is a [[factorization]] of {{mvar|A}} of the form {{math|1=''A'' = ''CF''}}"
-- description (landed: A = CF where C is m x r full column rank, F is r x n full row rank.): **confirmed** [k] "where <math>C\in\mathbb F^{m\times r}</math> and <math>F\in\mathbb F^{r\times n}</math>, where <math>r=\operatorname{rank} A</math>" [k] "Since <math display="inline">U_1</math> is a full-column-rank matrix and <math display="inline">\Sigma_r V_1^*</math> is a full-row-rank matrix" *Full column and full row rank are stated for the construction through the singular value decomposition; with r = rank A they hold for any rank factorization.*
+- description (landed: A = CF where C is m x r full column rank, F is r x n full row rank.): **imprecise** [k] "where <math>C\in\mathbb F^{m\times r}</math> and <math>F\in\mathbb F^{r\times n}</math>, where <math>r=\operatorname{rank} A</math>" [k] "Since <math display="inline">U_1</math> is a full-column-rank matrix and <math display="inline">\Sigma_r V_1^*</math> is a full-row-rank matrix" *The shapes and r = rank A are stated; full column rank of C and full row rank of F are stated only for the construction through the singular value decomposition.*
 - input (landed: Rank-r matrix A (m x n)): **confirmed** [k] "where <math>r=\operatorname{rank} A</math> is the [[Rank (linear algebra)|rank]] of <math>A</math>."
 - output (landed: C (m x r) * F (r x n)): **confirmed** [k] "where <math>C\in\mathbb F^{m\times r}</math> and <math>F\in\mathbb F^{r\times n}</math>"
 - preserved (landed: Rank, column space, row space): **imprecise** [k] "be any [[basis (linear algebra)|basis]] for the column space of <math display="inline">A</math> and place them as column vectors to form the" [k] "where <math>r=\operatorname{rank} A</math>" [k] "Therefore, the column space of <math display="inline">A^\textsf{T}</math> is contained within the column space of <math display="inline">F^\textsf{T}</math>" *Rank (r = rank A) and the column space (the columns of C are a basis of it) are stated; for the row space the source states only that the row space of A lies in that of F.* (recall contradicted)
@@ -509,7 +523,7 @@ No link (80):
 
 - name (landed: QR Decomposition): **confirmed** [q] "QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem"
 - description (landed: A = QR with Q orthogonal, R upper triangular. Numerically stable least squares.): **imprecise** [q] "QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem" [q] "into a product ''A''&nbsp;=&nbsp;''QR'' of an [[orthonormal matrix]] ''Q'' and an [[upper triangular matrix]] ''R''." [q] "The Gram-Schmidt process is inherently numerically unstable." [q] "The use of Householder transformations is inherently the most simple of the numerically stable QR decomposition algorithms" *A = QR with Q orthogonal and R upper triangular, used for least squares, as stated; numerical stability belongs to the algorithm (Householder reflections are stable, Gram-Schmidt is not), not to the decomposition.* (recall contradicted)
-- input (landed: Matrix A (m x n)): **confirmed** [q] "More generally, we can factor a complex ''m''×''n'' matrix ''A'', with {{nowrap|''m'' ≥ ''n''}}" *The source states m at least n.*
+- input (landed: Matrix A (m x n)): **imprecise** [q] "More generally, we can factor a complex ''m''×''n'' matrix ''A'', with {{nowrap|''m'' ≥ ''n''}}" *The source states the factorization for a complex m x n matrix with m at least n; the landed input carries no condition on m and n.*
 - output (landed: Q (orthogonal) * R (upper tri)): **confirmed** [q] "where ''Q'' is an [[orthogonal matrix]] (its columns are [[orthogonal]] [[unit vector]]s"
 - preserved (landed: Column space, norm, numerical stability): **imprecise** [q] "If ''A'' has ''n'' [[linearly independent]] columns, then the first ''n'' columns of ''Q'' form an [[orthonormal basis]] for the [[column space]] of ''A''." [g] "theorem span_gramSchmidt (f : ι → E) : span 𝕜 (range (gramSchmidt 𝕜 f)) = span 𝕜 (range f)" *The column space, for full column rank, is stated; that Q preserves norms is not stated in a window, and numerical stability depends on the algorithm.* (recall contradicted)
 - broken (landed: Dense structure): **unsupported** *"Dense structure" is a gloss; no source states it.*
@@ -802,7 +816,7 @@ No link (80):
 
 - name (landed: I-adic Topology Construction): **confirmed** [i] "determines a topology on {{mvar|M}} called the {{math|𝔞}}-adic topology"
 - description (landed: Topology on R with I^n as neighborhood basis of 0.): **confirmed** [i] "The family <math display=block>\{x+\mathfrak{a}^nM:x\in M,n\in\mathbb{Z}^+\}</math> is a [[basis (topology)|basis]] for this topology." [m] "theorem adic_basis (I : Ideal R) : SubmodulesRingBasis fun n : ℕ => (I ^ n • ⊤ : Ideal R)"
-- input (landed: Ring R + ideal I): **confirmed** [i] "Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology" *R commutative; the ring is the case M = R.*
+- input (landed: Ring R + ideal I): **imprecise** [i] "Let {{mvar|R}} be a commutative ring and {{mvar|M}} an {{mvar|R}}-module. Then each [[ideal (ring theory)|ideal]] {{math|𝔞}} of {{mvar|R}} determines a topology" *The source states the topology for a commutative ring; the landed input omits commutativity.*
 - output (landed: Topological ring (R, I-adic)): **confirmed** [m] "def adicTopology (I : Ideal R) : TopologicalSpace R :="
 - preserved (landed: Continuity of ring ops): **confirmed** [i] "With respect to the topology, the module operations of addition and scalar multiplication are [[Continuity (topology)|continuous]]" *With M = R, scalar multiplication is the ring's multiplication.*
 - broken (landed: Other topologies): **unsupported** *"Other topologies" is a gloss; no source states it.*
@@ -1053,7 +1067,7 @@ No link (80):
 - name (landed: Derived Pushforward): **confirmed** [p] "one likewise has the right derived functor"
 - description (landed: Rf_* via injective resolution. Higher direct images R^if_*.): **confirmed** [p] "They are called '''higher direct images''' and denoted ''R<sup>q</sup> f''<sub>∗</sub>." [d] "Because there are enough injectives, we can construct a long exact sequence of the form"
 - input (landed: Morphism f + sheaf F): **confirmed** [p] "given a sheaf ''F'' defined on a [[topological space]] ''X'' and a [[continuous map]] ''f'': ''X'' → ''Y''"
-- output (landed: Rf_*F in D(Y)): **confirmed** [p] ":<math>Rf_*: D_{qcoh}(X) \to D_{qcoh}(Y)</math>"
+- output (landed: Rf_*F in D(Y)): **imprecise** [p] ":<math>Rf_*: D_{qcoh}(X) \to D_{qcoh}(Y)</math>" *The source states Rf_* between derived categories of quasi-coherent sheaves; the landed D(Y) is unqualified.*
 - preserved (landed: Derived category, Leray spectral seq): **confirmed** [l] ":<math> E^{pq}_2=(R^p\Gamma \cdot R^q f_*)(\mathcal{F})=H^p(Y,R^qf_*(\mathcal{F})) ,</math>" [p] ":<math>Rf_*: D_{qcoh}(X) \to D_{qcoh}(Y)</math>"
 - broken (landed: Individual sheaf): **unsupported** *"Individual sheaf" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: right derived functor of f_*, higher direct images; input: ok; output: ok; preserved: ok: Leray spectral sequence; broken: thin
@@ -1069,7 +1083,7 @@ No link (80):
 - description (landed: f^*G = f^{-1}G ⊗_{f^{-1}O_Y} O_X.): **confirmed** [i] ":<math>f^*\mathcal G := f^{-1}\mathcal{G} \otimes_{f^{-1}\mathcal{O}_Y} \mathcal{O}_X</math>."
 - input (landed: Morphism f: X->Y + sheaf G on Y): **confirmed** [i] ":<math>f^*\mathcal G := f^{-1}\mathcal{G} \otimes_{f^{-1}\mathcal{O}_Y} \mathcal{O}_X</math>." *A morphism and a sheaf of modules on Y.*
 - output (landed: Sheaf f^*G on X): **confirmed** [i] ":<math>f^*\mathcal G := f^{-1}\mathcal{G} \otimes_{f^{-1}\mathcal{O}_Y} \mathcal{O}_X</math>."
-- preserved (landed: Adjointness with pushforward): **confirmed** [n] "then the left adjoint part is called the inverse image part." [i] "* <math>f^{-1}</math> is the [[adjoint functor|left adjoint]] of the [[direct image functor]] <math>f_{\ast}</math>." *Stated for f^-1 against f_* on sheaves, and in general for the inverse image as the left adjoint.*
+- preserved (landed: Adjointness with pushforward): **imprecise** [n] "then the left adjoint part is called the inverse image part." [i] "* <math>f^{-1}</math> is the [[adjoint functor|left adjoint]] of the [[direct image functor]] <math>f_{\ast}</math>." *The adjunction is stated for the sheaf inverse image f^-1 against f_*; the landed entry is the module pullback f^*, whose adjunction no window states.*
 - broken (landed: Y-specific structure): **unsupported** *"Y-specific structure" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: f^-1 G tensored with O_X over f^-1 O_Y; input: ok; output: ok; preserved: ok: f^* left adjoint to f_*; broken: thin
 - mathlib (related, preserved): `TopCat.Presheaf.pullbackPushforwardAdjunction`. Pullback of presheaves is left adjoint to pushforward; the landed claim concerns the pullback of sheaves of modules, f^*, which this declaration does not cover.
@@ -1112,7 +1126,7 @@ No link (80):
 - name (landed: Verdier Duality): **confirmed** [v] "'''Verdier duality''' is a [[cohomology|cohomological]] duality in [[algebraic topology]] that generalizes [[Poincaré duality]] for [[manifold]]s."
 - description (landed: Poincare duality for singular spaces. Rf_! has right adjoint f^!.): **confirmed** [v] "'''Verdier duality''' is a [[cohomology|cohomological]] duality in [[algebraic topology]] that generalizes [[Poincaré duality]] for [[manifold]]s." [v] "and it applies to spaces that fail to be manifolds due to" [v] "the [[derived functor]] of the direct image with compact (or proper) supports <math>Rf_!</math> has a right adjoint <math>f^!</math> in the [[derived category]]"
 - input (landed: Morphism + sheaf on D^b_c): **confirmed** [v] "states that for a continuous map <math> f\colon X \to Y </math> of locally compact Hausdorff spaces" [v] "for sheaves with constructible cohomology." *Constructibility enters for biduality.*
-- output (landed: Dualizing functor D, exceptional f^!): **confirmed** [v] "The '''dualizing complex''' <math>D_X</math> on <math>X</math> is defined to be" [v] "has a right adjoint <math>f^!</math>"
+- output (landed: Dualizing functor D, exceptional f^!): **confirmed** [v] "The '''dualizing complex''' <math>D_X</math> on <math>X</math> is defined to be" [v] "has a right adjoint <math>f^!</math>" [v] "<math> D^2(\mathcal{F})\cong \mathcal{F}</math> for sheaves with constructible cohomology."
 - preserved (landed: Rf_!/f^! adjunction): **confirmed** [v] ":<math>RHom(Rf_!\mathcal{F},\mathcal{G}) \cong RHom(\mathcal{F},f^!\mathcal{G}). </math>"
 - broken (landed: Non-dual structure): **unsupported** *"Non-dual structure" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: generalizes Poincare duality; f^! right adjoint to Rf_!; input: ok; output: ok; preserved: ok; broken: thin
@@ -1136,10 +1150,10 @@ No link (80):
 ### D2-107 Grothendieck Duality (batch 3)
 
 - name (landed: Grothendieck Duality): **confirmed** [g] "The classical statement of Grothendieck duality for a projective or proper morphism <math>f : X \rightarrow Y</math> of noetherian schemes of finite dimension"
-- description (landed: Generalizes Serre to proper morphisms. Dualizing complex.): **confirmed** [g] "'''coherent duality''' is any of a number of generalisations of [[Serre duality]], applying to [[coherent sheaves]]" [g] "The classical statement of Grothendieck duality for a projective or proper morphism" [g] "as a '''[[dualizing sheaf]]''', the general theory (it turns out) cannot be quite so simple."
+- description (landed: Generalizes Serre to proper morphisms. Dualizing complex.): **confirmed** [g] "'''coherent duality''' is any of a number of generalisations of [[Serre duality]], applying to [[coherent sheaves]]" [g] "The classical statement of Grothendieck duality for a projective or proper morphism" [g] "as a '''[[dualizing sheaf]]''', the general theory (it turns out) cannot be quite so simple." [g] "One quite recent successful approach is based on the notion of a rigid dualizing complex."
 - input (landed: Proper morphism + derived sheaf): **confirmed** [g] "for a projective or proper morphism <math>f : X \rightarrow Y</math> of noetherian schemes of finite dimension"
-- output (landed: Adjunction with dualizing complex): **confirmed** [g] "Grothendieck reformulated general coherent duality as the existence of a [[right adjoint]] functor <math>f^{!}</math>, called ''twisted'' or ''[[exceptional inverse image functor]]'', to a higher [[direct image with compact support]] functor <math>Rf_{!}</math>."
-- preserved (landed: Adjunction, dualizing complex): **confirmed** [g] "the existence of a [[right adjoint]] functor <math>f^{!}</math>"
+- output (landed: Adjunction with dualizing complex): **confirmed** [g] "Grothendieck reformulated general coherent duality as the existence of a [[right adjoint]] functor <math>f^{!}</math>, called ''twisted'' or ''[[exceptional inverse image functor]]'', to a higher [[direct image with compact support]] functor <math>Rf_{!}</math>." [g] "One quite recent successful approach is based on the notion of a rigid dualizing complex."
+- preserved (landed: Adjunction, dualizing complex): **confirmed** [g] "the existence of a [[right adjoint]] functor <math>f^{!}</math>" [g] "One quite recent successful approach is based on the notion of a rigid dualizing complex."
 - broken (landed: Non-dual structure): **unsupported** *"Non-dual structure" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: right adjoint to Rf_* for proper f, dualizing complex; input: ok; output: ok; preserved: ok; broken: thin
 - mathlib: none. Searched Grothendieck duality and dualizing complexes: none at the pin.
@@ -1205,7 +1219,7 @@ No link (80):
 - name (landed: Proj Construction): **confirmed** [p] "'''Proj''' is a construction analogous to the [[spectrum of a ring|spectrum-of-a-ring]] construction of [[affine scheme]]s"
 - description (landed: Graded ring -> projective scheme.): **imprecise** [p] "which produces objects with the typical properties of [[projective space]]s and [[projective variety|projective varieties]]." *Graded ring to a scheme with the typical properties of projective spaces, as stated; that Proj S is a projective scheme needs more (S finitely generated by degree one elements over S_0), and is not in a fetched window.* (recall contradicted)
 - input (landed: Graded commutative ring S): **confirmed** [p] "Let <math>S</math> be a commutative [[graded ring]]"
-- output (landed: Proj(S) with O(1)): **confirmed** [p] "called the “structure sheaf” as in the affine case, which makes it into a [[scheme (mathematics)|scheme]]." [m] "def Proj.structureSheaf : Sheaf CommRingCat (ProjectiveSpectrum.top 𝒜) :=" *O(1) is the twisting sheaf of the same page.*
+- output (landed: Proj(S) with O(1)): **confirmed** [p] "called the “structure sheaf” as in the affine case, which makes it into a [[scheme (mathematics)|scheme]]." [m] "def Proj.structureSheaf : Sheaf CommRingCat (ProjectiveSpectrum.top 𝒜) :=" [p] "We then obtain <math>\tilde{M}</math> as a quasicoherent sheaf on <math>\operatorname{Proj} S</math>, denoted <math>O_X(1)</math> or simply <math>\mathcal{O}(1)</math>, called the [[twisting sheaf]] of [[Jean-Pierre Serre|Serre]]." *O(1) is the twisting sheaf of Serre on Proj S.*
 - preserved (landed: Graded structure, projectivity): **imprecise** [p] "and taken together they contain all the grading information that was lost." *The grading survives only through the twisting sheaves O(n), not in Proj S itself; projectivity is not stated.*
 - broken (landed: Non-homogeneous info): **unsupported** *"Non-homogeneous info" is a gloss; no source states it.*
 - recalled: name: ok; description: ok; input: ok; output: ok; preserved: off: projective over S_0 only when S is finitely generated by degree 1 elements; broken: thin
@@ -1233,7 +1247,7 @@ No link (80):
 - description (landed: MMP: replaces K-negative curve with K-positive. Preserves smoothness.): **imprecise** [f] "to a variety whose singularities are 'better' than those of <math>X_i</math>." [f] "each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative." [f] "*<math>X</math> and <math>X^+</math> only have mild singularities, such as [[terminal singularities]]." *K-negative curves contracted and the flip taken where K is positive, as stated; the source says the singularities get better (mild, terminal), not that smoothness is preserved.*
 - input (landed: Variety with K-negative extremal ray): **confirmed** [f] "In applications, <math>f</math> is often  a [[small contraction]] of an extremal ray" [f] "each of which contracts some curves on which the canonical divisor <math>K_{X_i}</math> is negative."
 - output (landed: X+ with K-positive replacement): **confirmed** [f] "the flip of <math>X_i</math> is a birational map (in fact an isomorphism in [[codimension]] 1) <math>f\colon X_i \rightarrow X_i^+</math>" [f] "is called the '''flip''' of <math>f</math> if <math>-K</math>  is relatively ample"
-- preserved (landed: Kodaira dimension): **confirmed** [f] "is a birational map (in fact an isomorphism in [[codimension]] 1)" [k] "The plurigenera are important birational invariants of an algebraic variety." *The plurigenera, from which the Kodaira dimension is defined, are birational invariants.*
+- preserved (landed: Kodaira dimension): **imprecise** [f] "is a birational map (in fact an isomorphism in [[codimension]] 1)" [k] "The plurigenera are important birational invariants of an algebraic variety." [k] "has the remarkable property that it is a [[birational invariant]] of smooth projective varieties ''X''" [k] "The '''Kodaira dimension''' of ''X'' is defined to be <math>-\infty</math> if the plurigenera ''P<sub>d</sub>'' are zero for all ''d'' > 0; otherwise, it is the minimum κ such that ''P<sub>d</sub> /d<sup>κ</sup>'' is bounded." *Birational invariance is stated for the plurigenera of smooth projective varieties, and the Kodaira dimension is defined from them; a flip runs between singular varieties, which no window covers.*
 - broken (landed: Specific curve): **unsupported** *"Specific curve" is a gloss; no source states it.*
 - recalled: name: ok; description: off: flips need not preserve smoothness; they preserve terminal (Q-factorial) singularities; input: ok; output: ok; preserved: ok: birational, so Kodaira dimension is kept; broken: ok
 - mathlib: none. Searched flips and the minimal model program: none at the pin.
@@ -1271,7 +1285,7 @@ No link (80):
 
 - name (landed: Nagata's Compactification): **confirmed** [n] "'''Nagata's compactification theorem'''"
 - description (landed: Embeds separated scheme as dense open in proper scheme.): **imprecise** [n] "can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]]." [n] "implies that every [[abstract variety]] can be embedded in a [[complete variety]]" *An open immersion into a proper scheme, as stated; density of the image is not in a fetched window.* (recall contradicted)
-- input (landed: Separated scheme X of finite type): **confirmed** [n] "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S''" *Over a Noetherian base.*
+- input (landed: Separated scheme X of finite type): **imprecise** [n] "shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S''" *The source states the theorem for a separated finite type morphism to a Noetherian scheme S; the landed input names a scheme alone, without the morphism or the Noetherian base.*
 - output (landed: Proper X-bar with X dense open): **imprecise** [n] "can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]]." *A proper scheme with X open in it, as stated; that X is dense is not in a fetched window.* (recall contradicted)
 - preserved (landed: Open embedding, function field): **imprecise** [n] "can be factored into an [[Glossary of scheme theory#immersion|open immersion]]" *The open embedding is stated; the function field is not.* (recall contradicted)
 - broken (landed: Non-compactness): **confirmed** [n] "implies that every [[abstract variety]] can be embedded in a [[complete variety]]" *Non-completeness is lost: the result is complete.*
@@ -1343,7 +1357,7 @@ No link (80):
 - input (landed: Rep of G + subgroup H): **confirmed** [r] "For any group ''G'', its [[subgroup]] ''H'', and a [[linear representation]] ''ρ'' of ''G''"
 - output (landed: Res_H^G(V)): **confirmed** [r] "the restriction of ''ρ'' to ''H''"
 - preserved (landed: Vector space, H-invariant subspaces): **imprecise** [i] "then every {{mvar|K}}-linear representation {{mvar|ρ}} of {{mvar|G}} can be viewed as a {{mvar|K}}-linear representation of {{mvar|H}}" *The vector space and the action of H are kept, as stated; the H-invariant subspaces are not in a fetched window.* (recall contradicted)
-- broken (landed: G-irreducibility): **confirmed** [r] "describe the restriction of an irreducible [[complex representation]] ({{pi}},&nbsp;''V'') of a [[classical group]] ''G'' to a classical subgroup ''H'', i.e. the multiplicity with which an irreducible representation (''σ'',&nbsp;''W'') of ''H'' occurs in&nbsp;{{pi}}." *An irreducible representation of G restricts to a sum of irreducibles of H with multiplicities.*
+- broken (landed: G-irreducibility): **confirmed** [r] "describe the restriction of an irreducible [[complex representation]] ({{pi}},&nbsp;''V'') of a [[classical group]] ''G'' to a classical subgroup ''H'', i.e. the multiplicity with which an irreducible representation (''σ'',&nbsp;''W'') of ''H'' occurs in&nbsp;{{pi}}." [r] "Rules for decomposing the restriction of an [[irreducible representation]] into irreducible representations of the subgroup are called '''branching rules'''" *An irreducible representation of G restricts to a sum of irreducibles of H with multiplicities.*
 - recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok; broken: ok: an irreducible G-representation can split on H
 - mathlib: none. Mathlib's restriction functor appears in the adjunctions linked on D2-127 (resFunctor); no declaration states this entry's claims on its own.
 
@@ -1367,7 +1381,7 @@ No link (80):
 
 - name (landed: Deflation): **unsupported** *No fetched source names deflation.*
 - description (landed: Pushes rep of G to G/N by averaging over N.): **imprecise** [m] "Representation k (G ⧸ S) (invariants (ρ.comp S.subtype)) :=" *A representation of G gives one of G/N on the N-invariants, as Mathlib states; "by averaging" is not stated.*
-- input (landed: Rep of G + normal N): **confirmed** [m] "Representation k (G ⧸ S) (invariants (ρ.comp S.subtype)) :=" *From a representation ρ of G and a normal subgroup S.*
+- input (landed: Rep of G + normal N): **unsupported** *The Mathlib statement takes a representation of G and a subgroup S with G ⧸ S a group; the normality of S is a section variable of the file, outside every declaration window, so no window states the whole claim.*
 - output (landed: Rep of G/N): **confirmed** [m] "Representation k (G ⧸ S) (invariants (ρ.comp S.subtype)) :="
 - preserved (landed: G/N-equivariance): **unsupported** *"G/N-equivariance": no fetched window states it beyond the output's type.*
 - broken (landed: N-variant info): **unsupported** *"N-variant info" is a gloss; no source states it.*
@@ -1380,7 +1394,7 @@ No link (80):
 
 - name (landed: Brauer Induction): **confirmed** [b] "'''Brauer's theorem on induced characters''', often known as '''Brauer's induction theorem'''"
 - description (landed: Virtual char = Z-combination of induced chars from elementary subgroups.): **confirmed** [b] "The set of integer combinations of characters induced from linear characters of Brauer  elementary subgroups is an ideal ''I''(''G'') of Char(''G'')" [b] "Brauer's induction theorem shows that the character ring can be generated (as an [[abelian group]]) by [[Character theory|characters]] of representations induced from one-dimensional representations of subgroups of ''G''."
-- input (landed: Virtual character of finite G): **confirmed** [b] "Char(''G'') is known as the '''character ring''' of ''G'', and its elements are known as '''virtual characters'''"
+- input (landed: Virtual character of finite G): **confirmed** [b] "Char(''G'') is known as the '''character ring''' of ''G'', and its elements are known as '''virtual characters'''" [b] "Let ''G'' be a [[finite group]] and let Char(''G'') denote the subring"
 - output (landed: Z-linear combo of induced chars): **confirmed** [b] "The set of integer combinations of characters induced from linear characters of Brauer  elementary subgroups"
 - preserved (landed: Character ring structure): **confirmed** [b] "Brauer's induction theorem shows that the character ring can be generated (as an [[abelian group]]) by [[Character theory|characters]] of representations induced from one-dimensional representations of subgroups of ''G''." (recall contradicted)
 - broken (landed: Specific representation): **unsupported** *"Specific representation" is a gloss; no source states it.*
@@ -1393,7 +1407,7 @@ No link (80):
 
 - name (landed: Bruhat Decomposition): **confirmed** [b] "the '''Bruhat decomposition'''"
 - description (landed: G = ⊔ BwB. Borel double cosets indexed by Weyl group.): **confirmed** [b] ":<math>G=BWB =\bigsqcup_{w\in W}BwB</math>" [b] "as a disjoint union of [[double coset]]s of <math>B</math> parameterized by the elements of the Weyl group <math>W</math>."
-- input (landed: Algebraic group G + Borel B): **confirmed** [b] "*<math>B</math> is a [[Borel subgroup]] of <math>G</math>"
+- input (landed: Algebraic group G + Borel B): **imprecise** [b] "*<math>G</math> is a [[connected space|connected]], [[reductive group|reductive]] [[algebraic group]] over an [[algebraically closed field]]." [b] "*<math>B</math> is a [[Borel subgroup]] of <math>G</math>" *The source states the decomposition for a connected reductive group over an algebraically closed field; the landed input says any algebraic group.*
 - output (landed: Disjoint union of Bruhat cells): **confirmed** [b] "as a disjoint union of [[double coset]]s of <math>B</math> parameterized by the elements of the Weyl group <math>W</math>."
 - preserved (landed: Cell structure, Weyl combinatorics): **confirmed** [b] "The cells in the Bruhat decomposition correspond to the [[Schubert cell]] decomposition of flag varieties. The dimension of the cells corresponds to the [[length function|length]] of the word <math>w</math> in the Weyl group."
 - broken (landed: Continuous group structure): **unsupported** *"Continuous group structure" is a gloss; no source states it.*
@@ -1406,7 +1420,7 @@ No link (80):
 
 - name (landed: Cartan Decomposition): **confirmed** [c] "the '''Cartan decomposition''' is a decomposition of a [[Semisimple Lie algebra|semisimple]] [[Lie group]] or [[Lie algebra]]"
 - description (landed: G = KAK. Lie-theoretic generalization of SVD.): **confirmed** [c] ":<math>G = KP = KAK,</math>" [c] "It generalizes the [[polar decomposition]] or [[singular value decomposition]] of matrices."
-- input (landed: Semisimple Lie group G): **confirmed** [c] "Let <math>G</math> be a non-compact semisimple Lie group"
+- input (landed: Semisimple Lie group G): **confirmed** [c] "Let <math>G</math> be a non-compact semisimple Lie group" [c] "the '''Cartan decomposition''' is a decomposition of a [[Semisimple Lie algebra|semisimple]] [[Lie group]] or [[Lie algebra]]" *The decomposition is of a semisimple Lie group; KAK is written out for the non-compact case.*
 - output (landed: K * A * K factorization): **confirmed** [c] ":<math>G = KP = KAK,</math>"
 - preserved (landed: Compact/abelian separated, spectral data in A): **imprecise** [c] "* The subgroup <math>K</math> is a maximal compact subgroup of <math>G</math>, whenever the center of G is finite." [c] "the maximal Abelian subalgebras <math>\mathfrak{a}</math> in <math>\mathfrak{p}</math> are unique up to conjugation by <math>K</math>." *The compact factor and the abelian factor are stated; that A carries spectral data (singular values) is not in a fetched window.*
 - broken (landed: Specific element form): **unsupported** *"Specific element form" is a gloss; no source states it.*
@@ -1418,7 +1432,7 @@ No link (80):
 ### D2-134 Iwasawa Decomposition (batch 4)
 
 - name (landed: Iwasawa Decomposition): **confirmed** [w] "the '''Iwasawa decomposition''' (aka '''KAN''' from its expression) of a [[semisimple Lie group]]"
-- description (landed: G = KAN. Compact x abelian x nilpotent.): **confirmed** [w] "where ''K'' becomes a (disconnected) [[maximal compact subgroup]]" [w] "*<math> \mathfrak{a}_0 </math> is a maximal abelian subalgebra of <math> \mathfrak{p}_0 </math>" [w] "*<math> \mathfrak{n}_0 </math> is a [[nilpotent Lie algebra]]" *Compact K, abelian A, nilpotent N.*
+- description (landed: G = KAN. Compact x abelian x nilpotent.): **imprecise** [w] "where ''K'' becomes a (disconnected) [[maximal compact subgroup]]" [w] "*<math> \mathfrak{a}_0 </math> is a maximal abelian subalgebra of <math> \mathfrak{p}_0 </math>" [w] "*<math> \mathfrak{n}_0 </math> is a [[nilpotent Lie algebra]]" [w] "*''K'', ''A'', ''N'', are the Lie subgroups of ''G'' generated by <math> \mathfrak{k}_0, \mathfrak{a}_0 </math> and <math> \mathfrak{n}_0 </math>." *K maximal compact is stated (for the disconnected case of finite center); abelian and nilpotent are stated for the Lie algebras a_0 and n_0 that generate A and N, not for the groups.*
 - input (landed: Semisimple Lie group G): **confirmed** [w] "of a [[semisimple Lie group]]"
 - output (landed: K * A * N factorization): **confirmed** [w] "from the [[manifold]] <math> K \times A \times N </math> to the Lie group <math> G </math>, sending <math> (k,a,n) \mapsto kan </math>."
 - preserved (landed: Unique factorization, component separation): **confirmed** [w] "meaning there is an analytic [[diffeomorphism]] (but not a group homomorphism) from the [[manifold]] <math> K \times A \times N </math> to the Lie group <math> G </math>, sending <math> (k,a,n) \mapsto kan </math>." *A diffeomorphism, so the factorization is unique.*
@@ -1445,8 +1459,8 @@ No link (80):
 
 - name (landed: Bialynicki-Birula Decomposition): **confirmed** [t] "The Białynicki-Birula decomposition says that a smooth projective algebraic ''T''-variety admits a ''T''-stable [[cellular decomposition]]."
 - description (landed: Torus action on smooth proj variety -> cell decomposition by fixed points.): **imprecise** [t] "The Białynicki-Birula decomposition says that a smooth projective algebraic ''T''-variety admits a ''T''-stable [[cellular decomposition]]." *A cell decomposition for a torus action on a smooth projective variety, as stated; that the cells are indexed by the fixed points is not in a fetched window.* (recall contradicted)
-- input (landed: Smooth proj variety + torus action): **confirmed** [t] "a smooth projective algebraic ''T''-variety"
-- output (landed: X = ⊔ X_i^+ (plus-cells)): **confirmed** [t] "admits a ''T''-stable [[cellular decomposition]]."
+- input (landed: Smooth proj variety + torus action): **confirmed** [t] "a smooth projective algebraic ''T''-variety" [t] "A variety equipped with an action of a torus ''T'' is called a '''<nowiki />''T''-variety'''."
+- output (landed: X = ⊔ X_i^+ (plus-cells)): **imprecise** [t] "admits a ''T''-stable [[cellular decomposition]]." *A T-stable cellular decomposition is stated; the plus-cells X_i^+ are not.*
 - preserved (landed: Cell structure, Betti numbers): **imprecise** [t] "admits a ''T''-stable [[cellular decomposition]]." *The cell structure is stated; Betti numbers are not.* (recall contradicted)
 - broken (landed: Global smooth structure): **unsupported** *"Global smooth structure" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: a G_m (torus) action with isolated fixed points gives a decomposition into affine cells; input: ok: smooth projective with a torus action; output: ok; preserved: ok: Betti numbers from the cells; broken: thin
@@ -1457,10 +1471,10 @@ No link (80):
 ### D2-137 GNS Construction (batch 4)
 
 - name (landed: GNS Construction): **confirmed** [g] "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>"
-- description (landed: State on C*-algebra -> cyclic representation on Hilbert space. Algebra-quantum bridge.): **confirmed** [g] "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>"
+- description (landed: State on C*-algebra -> cyclic representation on Hilbert space. Algebra-quantum bridge.): **confirmed** [g] "the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>" [g] "In his paper of 1947 Segal showed that it is sufficient, for any physical system that can be described by an algebra of operators on a Hilbert space, to consider the ''irreducible'' representations of a <math>C^*</math>-algebra."
 - input (landed: C*-algebra A + state φ): **confirmed** [g] "Given a state <math>\rho</math> of <math>A</math>"
 - output (landed: (H_φ, π_φ, Ω)): **confirmed** [g] "there is a <math>*</math>-representation <math>\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\xi</math>" [m] "noncomputable def gnsStarAlgHom : A →⋆ₐ[ℂ] (f.GNS →L[ℂ] f.GNS) where"
-- preserved (landed: State recovered, C*-structure): **confirmed** [g] "such that <math>\rho(a)=\langle \pi(a) \xi, \xi \rangle</math>" *The state is recovered; pi is a star representation.*
+- preserved (landed: State recovered, C*-structure): **confirmed** [g] "such that <math>\rho(a)=\langle \pi(a) \xi, \xi \rangle</math>" [g] "there is a <math>*</math>-representation <math>\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\xi</math>" *The state is recovered; pi is a star representation.*
 - broken (landed: Abstract description): **unsupported** *"Abstract description" is a gloss; no source states it.*
 - recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: phi(a) = <pi(a) Omega, Omega>; broken: thin
 - mathlib (general, output): `PositiveLinearMap.gnsStarAlgHom`. A unital star representation on the GNS Hilbert space from any positive linear functional on a unital C*-algebra; a state is the normalized case. The cyclic vector is not part of this declaration.
@@ -1471,7 +1485,7 @@ No link (80):
 ### D2-138 Cayley-Dickson Construction (batch 4)
 
 - name (landed: Cayley-Dickson Construction): **confirmed** [c] "produces a sequence of [[algebra over a field|algebras]] over the [[field (mathematics)|field]] of [[real number]]s, each with twice the [[dimension of a vector space|dimension]] of the previous one."
-- description (landed: Iteratively doubles algebra: R->C->H->O->S. Each step breaks a property.): **confirmed** [c] "produces a sequence of [[algebra over a field|algebras]] over the [[field (mathematics)|field]] of [[real number]]s, each with twice the [[dimension of a vector space|dimension]] of the previous one." [c] "first losing [[ordered field|order]], then [[commutativity]] of multiplication, [[associativity]] of multiplication, and finally [[alternativity]]."
+- description (landed: Iteratively doubles algebra: R->C->H->O->S. Each step breaks a property.): **confirmed** [c] "produces a sequence of [[algebra over a field|algebras]] over the [[field (mathematics)|field]] of [[real number]]s, each with twice the [[dimension of a vector space|dimension]] of the previous one." [c] "first losing [[ordered field|order]], then [[commutativity]] of multiplication, [[associativity]] of multiplication, and finally [[alternativity]]." [c] "for example [[complex number]]s, [[quaternion]]s, and [[octonion]]s" [c] "The algebra immediately following the octonions is called the [[sedenion]]s."
 - input (landed: Algebra A over F): **imprecise** [c] "takes any algebra with involution to another algebra with involution of twice the dimension." *The construction needs an algebra with an involution, not a bare algebra.* (recall contradicted)
 - output (landed: Doubled algebra A'): **confirmed** [c] "to another algebra with involution of twice the dimension."
 - preserved (landed: Norm form (weakened)): **imprecise** [c] "'''Proposition 2:''' If the ''F''-algebra is associative and <math>N(z) = zz^*</math>,then <math>N(zw) = N(z)N(w).</math>" [c] "states that the reals, complex numbers, quaternions, and octonions are the only finite-dimensional [[normed algebra|normed]] [[division algebra]]s over the real numbers" *The norm stays multiplicative while the algebra doubled is associative (through the octonions, the last normed division algebra); "weakened" says less than the source.*
@@ -1484,7 +1498,7 @@ No link (80):
 ### D2-139 Burnside Ring Construction (batch 4)
 
 - name (landed: Burnside Ring Construction): **confirmed** [b] "the generators of its Burnside ring Ω(''G'') are the formal sums of isomorphism classes of finite [[Group action (mathematics)|''G''-sets]]."
-- description (landed: Grothendieck ring of finite G-sets.): **confirmed** [b] "For the [[Ring (mathematics)|ring structure]], addition is given by [[disjoint union]] of ''G''-sets and multiplication by their [[Cartesian product]]." [b] "the generators of its Burnside ring Ω(''G'') are the formal sums of isomorphism classes of finite [[Group action (mathematics)|''G''-sets]]."
+- description (landed: Grothendieck ring of finite G-sets.): **confirmed** [b] "For the [[Ring (mathematics)|ring structure]], addition is given by [[disjoint union]] of ''G''-sets and multiplication by their [[Cartesian product]]." [b] "the generators of its Burnside ring Ω(''G'') are the formal sums of isomorphism classes of finite [[Group action (mathematics)|''G''-sets]]." [n] "the [[Burnside ring]] $A(G)$, which is the [[Grothendieck group]] of the [[monoidal category]] $G Set$ of [[finite set|finite]] [[G-sets]]"
 - input (landed: Finite group G): **confirmed** [b] "Given a [[finite group]] ''G''"
 - output (landed: Burnside ring Ω(G)): **confirmed** [b] "the generators of its Burnside ring Ω(''G'')"
 - preserved (landed: G-set classes, ring structure): **confirmed** [b] "The Burnside ring is a free '''Z'''-[[Module (mathematics)|module]], whose generators are the (isomorphism classes of) [[Group action (mathematics)|orbit types]] of ''G''." [b] "For the [[Ring (mathematics)|ring structure]], addition is given by [[disjoint union]]"
@@ -1493,6 +1507,7 @@ No link (80):
 - mathlib: none. Searched Burnside ring: none at the pin.
 
   b: excerpts/wikipedia-burnside-ring.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1378038404)
+  n: excerpts/nlab-burnside-ring.txt (https://ncatlab.org/nlab/source/Burnside+ring)
 
 ### D2-140 Simplicial Set Construction (batch 4)
 
@@ -1606,7 +1621,7 @@ No link (80):
 - name (landed: Ward's Twistor Construction): **confirmed** [p] "is a nonlinear modification of the Penrose transform, introduced by {{harvtxt|Ward|1977}}"
 - description (landed: Holomorphic bundle on twistor space -> self-dual Yang-Mills connection.): **confirmed** [p] "relates [[holomorphic vector bundle]]s on 3-dimensional complex projective space '''CP'''<sup>3</sup> to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>." [p] "*The "twistor space" ''Z'' is complex projective 3-space '''CP'''<sup>3</sup>" (recall contradicted)
 - input (landed: Holomorphic bundle on CP^3): **confirmed** [p] "relates [[holomorphic vector bundle]]s on 3-dimensional complex projective space '''CP'''<sup>3</sup>" (recall contradicted)
-- output (landed: Self-dual connection on R^4): **confirmed** [p] "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>." *On S^4, which contains R^4.*
+- output (landed: Self-dual connection on R^4): **imprecise** [p] "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>." *The source states solutions on S^4; the landed R^4 is not stated.*
 - preserved (landed: Self-duality, gauge class): **imprecise** [p] "to solutions of the [[self-dual Yang–Mills equations]] on '''S'''<sup>4</sup>." *Self-duality, as stated; gauge classes are not in a fetched window.*
 - broken (landed: Twistor formulation): **unsupported** *"Twistor formulation" is a gloss; no source states it.*
 - recalled: name: ok: Ward correspondence; description: off: anti-self-dual in the usual convention, and the bundle must be trivial on twistor lines; input: off: needs triviality on real lines, over a region of twistor space; output: ok; preserved: thin; broken: thin
@@ -1618,8 +1633,8 @@ No link (80):
 
 - name (landed: Colombeau's Construction): **confirmed** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
 - description (landed: Algebra of generalized functions containing distributions with multiplication.): **confirmed** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]."
-- input (landed: Distributions D'(Ω)): **confirmed** [c] "is linearly embedded into <math>A(\mathbb{R})</math>" *The distributions are the input.*
-- output (landed: Colombeau algebra G(Ω)): **confirmed** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind"
+- input (landed: Distributions D'(Ω)): **imprecise** [c] "is linearly embedded into <math>A(\mathbb{R})</math>" [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind containing the space of [[distribution (mathematics)|Schwartz distributions]]." [c] ":<math>C^\infty_M(\mathbb{R}^n)/C^\infty_N(\mathbb{R}^n).</math>" *Distributions embed, as stated, on R, and the source defines the algebra over R^n; the open set Ω of the landed input is not stated.*
+- output (landed: Colombeau algebra G(Ω)): **imprecise** [c] "a '''Colombeau algebra''' is an [[associative algebra|algebra]] of a certain kind" [c] "is defined as the [[quotient associative algebra|quotient algebra]]" [c] ":<math>C^\infty_M(\mathbb{R}^n)/C^\infty_N(\mathbb{R}^n).</math>" *The source defines the algebra as a quotient over R^n; the open set Ω of the landed G(Ω) is not stated.*
 - preserved (landed: Distribution embedding, multiplication): **imprecise** [c] "i.e., they preserve the product of smooth (infinitely differentiable) funct" [c] "is linearly embedded into <math>A(\mathbb{R})</math>" [c] "which basically states that there cannot be a differential algebra containing the space of distributions and preserving the product of continuous functions." *Distributions embed linearly, as stated; the multiplication kept is that of smooth functions, and Schwartz's result rules out keeping the product of continuous functions.* (recall contradicted)
 - broken (landed: Classical function space): **unsupported** *"Classical function space" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: an associative differential algebra containing the distributions, with products; input: ok; output: ok; preserved: ok: distributions embed; the product of smooth functions is kept, that of merely continuous ones is not; broken: thin
@@ -1647,7 +1662,7 @@ No link (80):
 - description (landed: Z[G] for group G, convolution multiplication.): **confirmed** [g] ":<math>x\mapsto\sum_{uv=x}f(u)g(v)=\sum_{u\in G}f(u)g(u^{-1}x).</math>" [g] "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]." *The convolution product.*
 - input (landed: Group G): **confirmed** [g] "constructed in a natural way from any given ring and any given [[Group (mathematics)|group]]."
 - output (landed: Group ring Z[G]): **confirmed** [a] "structure MonoidAlgebra (R M : Type*) [Semiring R] where"
-- preserved (landed: Group structure, representation theory): **confirmed** [g] "The apparatus of group rings is especially useful in the theory of [[group representation]]s." [g] "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]" *The group elements form the basis of the free module.*
+- preserved (landed: Group structure, representation theory): **confirmed** [g] "The apparatus of group rings is especially useful in the theory of [[group representation]]s." [g] "a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]" [g] ":<math>x\mapsto\sum_{uv=x}f(u)g(v)=\sum_{u\in G}f(u)g(u^{-1}x).</math>" *The group elements form the basis of the free module, multiplied by the group law.*
 - broken (landed: Formal sums added): **confirmed** [g] "written as what are called "formal linear combinations of elements of <math>G</math> with coefficients in" (recall contradicted)
 - recalled: name: ok; description: ok: convolution product; input: ok; output: ok; preserved: ok: modules over Z[G] are representations; broken: thin
 - mathlib (general, output): `MonoidAlgebra`. The group ring is the monoid algebra of a group; Z[G] is a case.
@@ -1672,7 +1687,7 @@ No link (80):
 
 - name (landed: Buchberger's Algorithm): **confirmed** [b] "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]]"
 - description (landed: Computes Groebner basis. Reduces multivariate division to deterministic process.): **imprecise** [b] "'''Buchberger's algorithm''' is a method for transforming a given set of polynomials into a [[Gröbner basis]], which is another set of polynomials that have the same common zeros" *Computes a Gröbner basis, as stated; "reduces multivariate division to a deterministic process" is not in a fetched window.* (recall contradicted)
-- input (landed: Generating set of ideal + monomial ordering): **confirmed** [b] "with respect to the given [[monomial ordering]]" *A generating set and a monomial ordering.*
+- input (landed: Generating set of ideal + monomial ordering): **confirmed** [b] "with respect to the given [[monomial ordering]]" [b] "is a method for transforming a given set of polynomials into a [[Gröbner basis]]" *A generating set and a monomial ordering.*
 - output (landed: Groebner basis G): **confirmed** [b] ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}"
 - preserved (landed: Ideal (canonical basis), membership decidable): **imprecise** [b] ":'''Output''' A [[Gröbner basis]] ''G'' for {{mvar|I}}" [b] "which is another set of polynomials that have the same common zeros" *The ideal is kept (G is a Gröbner basis for I); canonicity and decidable membership are not in a fetched window.* (recall contradicted)
 - broken (landed: Original generators): **unsupported** *"Original generators" is a gloss; no source states it.*
@@ -1685,8 +1700,8 @@ No link (80):
 
 - name (landed: Wu's Method): **confirmed** [w] "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
 - description (landed: Automates geometric theorem proving via characteristic sets.): **confirmed** [w] "Wu's method is powerful for [[automatic theorem proving|mechanical theorem proving]] in [[elementary geometry]]" [w] "This method is based on the mathematical concept of '''characteristic set'''"
-- input (landed: Polynomial system (geometric hypothesis)): **confirmed** [w] "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]"
-- output (landed: Characteristic set): **confirmed** [w] "This method is based on the mathematical concept of '''characteristic set'''"
+- input (landed: Polynomial system (geometric hypothesis)): **confirmed** [w] "'s method''' is an algorithm for solving [[systems of polynomial equations|multivariate polynomial equations]]" [w] "Wu's method is powerful for [[automatic theorem proving|mechanical theorem proving]] in [[elementary geometry]]" [w] "Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true)" *The hypotheses I of a geometric statement, as polynomials.*
+- output (landed: Characteristic set): **confirmed** [w] "This method is based on the mathematical concept of '''characteristic set'''" [w] "given a finite subset F of polynomials, there is an algorithm to compute characteristic sets ''T''<sub>1</sub>, ..., ''T''<sub>''e''</sub> such that:"
 - preserved (landed: Theorem validity, radical membership): **imprecise** [w] "Repeated division results in either the remainder vanishing (in which case the ''I'' implies ''f'' statement is true), or an irreducible remainder is left behind (in which case the statement is false)." *Theorem validity is decided by the remainder, as stated; radical membership is not in a fetched window.*
 - broken (landed: Equation form): **unsupported** *"Equation form" is a gloss; no source states it.*
 - recalled: name: ok; description: ok: Wu's characteristic set method; input: ok; output: ok; preserved: thin; broken: thin
@@ -1698,7 +1713,7 @@ No link (80):
 
 - name (landed: Ritt's Algorithm): **confirmed** [d] "<em>Ritt's reduction algorithm</em> identifies integers"
 - description (landed: Characteristic set of differential polynomial system.): **confirmed** [d] "A <em>characteristic set</em> <math display="inline">C</math> is the [[Arg max|lowest ranked]] autoreduced subset among all the ideal's autoreduced subsets" [d] "<em>Ritt's reduction algorithm</em> identifies integers"
-- input (landed: Differential polynomial system): **confirmed** [d] "<em>Ritt's reduction algorithm</em> identifies integers" *Differential polynomials of a differential ideal.*
+- input (landed: Differential polynomial system): **confirmed** [d] "<em>Ritt's reduction algorithm</em> identifies integers" [d] "These regular differential radical ideals, represented by characteristic sets, are not necessarily prime ideals" *Differential polynomials of a differential ideal.*
 - output (landed: Ritt characteristic set (triangular)): **confirmed** [d] "An autoreduced set is <em>[[Triangular decomposition|triangular]]</em> meaning each polynomial element has a distinct leading derivative." [d] "A <em>characteristic set</em> <math display="inline">C</math> is the [[Arg max|lowest ranked]] autoreduced subset"
 - preserved (landed: Differential ideal structure): **unsupported** *"Differential ideal structure" is a gloss; no fetched window states what is kept.*
 - broken (landed: Original equations): **unsupported** *"Original equations" is a gloss; no source states it.*
@@ -1724,7 +1739,7 @@ No link (80):
 ### D2-160 Cylindrical Algebraic Decomposition (batch 5)
 
 - name (landed: Cylindrical Algebraic Decomposition): **confirmed** [c] "'''cylindrical algebraic decomposition''' ('''CAD''') is a notion, along with an [[algorithm]] to compute it"
-- description (landed: Semi-algebraic set -> cylindrical cells with constant polynomial signs. Quantifier elimination over R.): **confirmed** [c] "a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0." [c] "CAD provides an effective version of [[quantifier elimination]] over the reals"
+- description (landed: Semi-algebraic set -> cylindrical cells with constant polynomial signs. Quantifier elimination over R.): **imprecise** [c] "a cylindrical algebraic decomposition is a decomposition of '''R'''<sup>''n''</sup> into connected [[semialgebraic set]]s called ''cells'', on which each polynomial has constant sign, either +, − or 0." [c] "CAD provides an effective version of [[quantifier elimination]] over the reals" [c] "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>" *The cells and the quantifier elimination are stated; the source decomposes R^n for a given set of polynomials, and the landed semi-algebraic input is not stated.*
 - input (landed: Semi-algebraic set in R^n): **imprecise** [c] "Given a set ''S'' of polynomials in '''R'''<sup>''n''</sup>" *The input is a set of polynomials, not a semi-algebraic set.*
 - output (landed: Finite cell partition): **confirmed** [c] "into connected [[semialgebraic set]]s called ''cells''"
 - preserved (landed: Sign conditions, semi-algebraic type): **confirmed** [c] "on which each polynomial has constant sign, either +, − or 0."
@@ -1839,7 +1854,7 @@ No link (80):
 
 - name (landed: Freudenthal Magic Square): **confirmed** [f] "is a construction relating several [[Lie algebra]]s (and their associated [[Lie group]]s)."
 - description (landed: 4x4 array of Lie algebras from composition algebra pairs. Produces all exceptional Lie algebras.): **wrong** [f] "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]" *Not all exceptional Lie algebras: G2 is missing from the square.*
-- input (landed: Pair of composition algebras): **confirmed** [f] "It associates a Lie algebra to a pair of division algebras ''A'', "
+- input (landed: Pair of composition algebras): **confirmed** [f] "It associates a Lie algebra to a pair of division algebras ''A'', " [f] "In addition to the [[normed division algebra]]s, there are other [[composition algebra]]s over '''R''', namely the [[split-complex number]]s, the [[split-quaternions]] and the [[split-octonions]]." [f] "If one uses these instead of the complex numbers, quaternions, and octonions, one obtains the following variant of the magic square" *Division algebras, and their split forms: together the composition algebras.*
 - output (landed: Lie algebra in magic square): **confirmed** [f] "It associates a Lie algebra to a pair of division algebras ''A'', "
 - preserved (landed: Lie algebra structure, exceptional classification): **imprecise** [f] "The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]" *The exceptional classification is covered except for G2.*
 - broken (landed: Individual algebra details): **unsupported** *"Individual algebra details" is a gloss; no source states it.*
@@ -1945,7 +1960,7 @@ No link (80):
 ### D2-177 Homogeneous Coordinate Transformation (batch 5)
 
 - name (landed: Homogeneous Coordinate Transformation): **confirmed** [h] "are a [[system of coordinates]] used in [[projective geometry]]"
-- description (landed: Affine A^n -> projective P^n via homogeneous coordinates.): **confirmed** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}} defines an inclusion from the"
+- description (landed: Affine A^n -> projective P^n via homogeneous coordinates.): **imprecise** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}} defines an inclusion from the" [h] "if the projective space is constructed from a vector space ''V'' of dimension ''n''&nbsp;+&nbsp;1, introduce coordinates in ''V'' by choosing a basis" *The inclusion is stated for the plane, (x, y) to (x, y, 1); for dimension n the source states only the coordinates on a projective space built from a vector space of dimension n + 1, not the inclusion of A^n.*
 - input (landed: Affine point): **confirmed** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}}"
 - output (landed: Projective point): **confirmed** [h] "The mapping {{nowrap|<math>(x, y) \mapsto (x, y, 1)</math>}} defines an inclusion from the"
 - preserved (landed: Affine structure on chart, incidence): **imprecise** [h] "can be thought of as the [[Euclidean geometry|Euclidean plane]] with additional points added, which are called [[point at infinity|points at infinity]], and are considered to lie on a new line, the [[line at infinity]]." *The affine plane sits inside the projective plane as the complement of the line at infinity, as stated; incidence is not in a fetched window.* (recall contradicted)

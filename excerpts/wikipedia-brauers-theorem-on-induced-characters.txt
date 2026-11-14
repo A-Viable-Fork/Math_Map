@@ -10,3 +10,5 @@ Char(''G'') is known as the '''character ring''' of ''G'', and its elements are 
 Brauer's induction theorem shows that the character ring can be generated (as an [[abelian group]]) by [[Character theory|characters]] of representations induced from one-dimensional representations of subgroups of ''G''.
 
 The set of integer combinations of characters induced from linear characters of Brauer  elementary subgroups is an ideal ''I''(''G'') of Char(''G'')
+
+Let ''G'' be a [[finite group]] and let Char(''G'') denote the subring

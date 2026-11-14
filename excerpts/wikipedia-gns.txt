@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Gelfand–Naimark–Segal construction (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1343628657
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2c0c8b4a7417703d30854d9e960c26c1b5f032c88682c7acdd632a12c65b190a
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 2c0c8b4a7417703d30854d9e960c26c1b5f032c88682c7acdd632a12c65b190a
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 the '''Gelfand–Naimark–Segal construction''' establishes a correspondence between cyclic <math>*</math>-representations of <math>A</math>
@@ -12,3 +12,5 @@ Given a state <math>\rho</math> of <math>A</math>
 there is a <math>*</math>-representation <math>\pi</math> of <math>A</math> acting on a Hilbert space <math>H</math> with distinguished unit cyclic vector <math>\xi</math>
 
 such that <math>\rho(a)=\langle \pi(a) \xi, \xi \rangle</math>
+
+In his paper of 1947 Segal showed that it is sufficient, for any physical system that can be described by an algebra of operators on a Hilbert space, to consider the ''irreducible'' representations of a <math>C^*</math>-algebra.

@@ -14,3 +14,5 @@ states that for a continuous map <math> f\colon X \to Y </math> of locally compa
 The '''dualizing complex''' <math>D_X</math> on <math>X</math> is defined to be
 
 for sheaves with constructible cohomology.
+
+<math> D^2(\mathcal{F})\cong \mathcal{F}</math> for sheaves with constructible cohomology.

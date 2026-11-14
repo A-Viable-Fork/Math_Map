@@ -10,3 +10,5 @@ Grothendieck reformulated general coherent duality as the existence of a [[right
 While Serre duality uses a [[line bundle]] or [[invertible sheaf]] as a '''[[dualizing sheaf]]''', the general theory (it turns out) cannot be quite so simple.
 
 The classical statement of Grothendieck duality for a projective or proper morphism <math>f : X \rightarrow Y</math> of noetherian schemes of finite dimension
+
+One quite recent successful approach is based on the notion of a rigid dualizing complex.

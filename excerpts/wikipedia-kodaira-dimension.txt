@@ -4,3 +4,7 @@ Fetched: 2026-11-13. SHA-256 of the page source as fetched: 35a00fdf00e3d7963cc3
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 The plurigenera are important birational invariants of an algebraic variety.
+
+has the remarkable property that it is a [[birational invariant]] of smooth projective varieties ''X''
+
+The '''Kodaira dimension''' of ''X'' is defined to be <math>-\infty</math> if the plurigenera ''P<sub>d</sub>'' are zero for all ''d'' > 0; otherwise, it is the minimum κ such that ''P<sub>d</sub> /d<sup>κ</sup>'' is bounded.

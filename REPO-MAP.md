@@ -16,6 +16,7 @@
 | `.infra/tools` | Part of the vendored kit, pinned by infra.lock.json (Repo-Infrastructure). |
 | `audit` | The audit: the fixed random sample, its field-by-field grades, and the targeted grades. |
 | `audit/blind` | The blind second reading of the Mathlib match grades: the packet, the answer key, and each reader's grades. |
+| `audit/landed-blind` | The landed review's blind packets, one per round, drawn after every fifth batch. |
 | `audit/strict` | The strict second reading of the fill review: the blind sample and its packet, the strict reader's grades, and the targeted sweep. |
 | `catalogue` | The paper catalogue: every paper the map cites and how deeply it has been read. |
 | `catalogue/imports` | Paper lists imported from sibling repositories, bibliographic fields and reading status only. |
@@ -151,6 +152,7 @@
 | `audit/blind/key-0_1.json` | The item ids of the blind packet, for a reader's answers. |
 | `audit/blind/packet-0_1.md` | The blind packet: each Mathlib link's claim and quoted Lean statement, without the grade. |
 | `audit/blind/reader-subagent-1.json` | One reader's blind grades, with a statement of the reader's independence. |
+| `audit/landed-blind/packet-1.md` | One blind round's packet for the landed review: each drawn field's landed text and excerpt files, without the first grade (written by node scripts/audit.mjs --landed-draw N). |
 | `audit/sample-0_1.json` | The fixed stratified sample of 60 entries, drawn before grading. |
 | `audit/strict/packet-0_2.md` | The strict reading's blind packet: each sampled field's fill text and its entry's excerpt files, without the review's grade, quote or note. |
 | `audit/strict/sample-0_2.json` | The fixed stratified sample of 145 fill-review fields for the strict second reading, drawn before any grade was read; it holds no grade. |
@@ -379,6 +381,7 @@
 | `excerpts/nlab-bousfield-localization-of-spectra.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-bousfield-localization.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-braided-monoidal-category.txt` | Verbatim windows from an nLab page. |
+| `excerpts/nlab-burnside-ring.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-calculus-of-fractions.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-closed-category.txt` | Verbatim windows from an nLab page. |
 | `excerpts/nlab-cartesian-fibration.txt` | Verbatim windows from an nLab page. |
@@ -1115,6 +1118,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `audit/landed-review-0_1.js` | names | `reports/LANDED-REVIEW.md` |
 | `audit/landed-review-0_1.js` | names | `scripts/audit.mjs` |
 | `audit/landed-review-0_1.js` | names | `scripts/mathmap.mjs` |
+| `audit/landed-review-blind-0_1.js` | names | `audit/landed-blind/packet-1.md` |
 | `audit/landed-review-blind-0_1.js` | names | `reports/LANDED-REVIEW.md` |
 | `audit/landed-review-blind-0_1.js` | names | `scripts/audit.mjs` |
 | `audit/landed-review-recall-0_1.js` | names | `audit/landed-review-0_1.js` |
@@ -1457,6 +1461,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/nlab-fourier-mukai-transform.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-freyd-mitchell-embedding-theorem.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-full-functor.txt` |
+| `mapfill/corrections.js` | names | `excerpts/nlab-inverse-image.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-isbell-duality.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-koszul-duality.txt` |
 | `mapfill/corrections.js` | names | `excerpts/nlab-regular-and-exact-completions.txt` |
@@ -1466,6 +1471,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-birkhoff-factorization.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-block-lu-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-blowing-up.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-bruhat-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-buchbergers-algorithm.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-cartan-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-castelnuovo.txt` |
@@ -1505,12 +1511,16 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hodge-theory.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-homogeneous-coordinates.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-homothety.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-i-adic-topology.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-induced-representation.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-inverse-image-functor.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-involute.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-involution-mathematics.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-iwasawa-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-jones-polynomial.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-jordan-chevalley.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-jordan-normal-form.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-kodaira-dimension.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-koszul-duality.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-langlands-program.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-lindenbaum-tarski-algebra.txt` |
@@ -1545,6 +1555,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-stanley-reisner-ring.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-subfactor.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-torus-action.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-translation-geometry.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-tschirnhaus-transformation.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-wus-method-of-characteristic-set.txt` |
 | `mapfill/corrections.js` | names | `lean/MathMap/StoneCech.lean` |
@@ -2155,6 +2166,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/FORMAL-QUEUE.md` | names | `scripts/formal.mjs` |
 | `reports/GAPS.md` | names | `reports/TYPING.md` |
 | `reports/GAPS.md` | names | `scripts/gaps.mjs` |
+| `reports/LANDED-REVIEW.md` | names | `audit/landed-blind/packet-1.md` |
 | `reports/LANDED-REVIEW.md` | names | `audit/landed-review-0_1.js` |
 | `reports/LANDED-REVIEW.md` | names | `audit/landed-review-blind-0_1.js` |
 | `reports/LANDED-REVIEW.md` | names | `audit/landed-review-recall-0_1.js` |
@@ -2208,6 +2220,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Topology.Sheaves.Presheaf.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-adjoint-functor.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-burnside-ring.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-derived-tensor-product.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-fourier-mukai-transform.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-inverse-image.txt` |

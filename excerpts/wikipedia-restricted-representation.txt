@@ -8,3 +8,5 @@ Only the windows below are kept; each was checked to occur verbatim in the page 
 For any group ''G'', its [[subgroup]] ''H'', and a [[linear representation]] ''ρ'' of ''G'', the restriction of ''ρ'' to ''H''
 
 describe the restriction of an irreducible [[complex representation]] ({{pi}},&nbsp;''V'') of a [[classical group]] ''G'' to a classical subgroup ''H'', i.e. the multiplicity with which an irreducible representation (''σ'',&nbsp;''W'') of ''H'' occurs in&nbsp;{{pi}}.
+
+Rules for decomposing the restriction of an [[irreducible representation]] into irreducible representations of the subgroup are called '''branching rules'''

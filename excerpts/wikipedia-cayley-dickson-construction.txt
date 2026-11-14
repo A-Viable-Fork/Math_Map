@@ -12,3 +12,7 @@ More generally, the Cayley–Dickson construction takes any algebra with involut
 states that the reals, complex numbers, quaternions, and octonions are the only finite-dimensional [[normed algebra|normed]] [[division algebra]]s over the real numbers
 
 '''Proposition 2:''' If the ''F''-algebra is associative and <math>N(z) = zz^*</math>,then <math>N(zw) = N(z)N(w).</math>
+
+for example [[complex number]]s, [[quaternion]]s, and [[octonion]]s
+
+The algebra immediately following the octonions is called the [[sedenion]]s.

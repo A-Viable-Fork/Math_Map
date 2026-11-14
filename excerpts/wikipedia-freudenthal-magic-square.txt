@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Freudenthal magic square (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351313031
-Fetched: 2026-11-13. SHA-256 of the page source as fetched: 622680331e12bf8e2dfc480b81cc4be3a9418d9bd370a6171bb6b7d690d5112d
+Fetched: 2026-11-13, appended 2026-11-14. SHA-256 of the page source as fetched: 622680331e12bf8e2dfc480b81cc4be3a9418d9bd370a6171bb6b7d690d5112d
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 is a construction relating several [[Lie algebra]]s (and their associated [[Lie group]]s).
@@ -8,3 +8,7 @@ is a construction relating several [[Lie algebra]]s (and their associated [[Lie 
 It associates a Lie algebra to a pair of division algebras ''A'', 
 
 The Freudenthal magic square includes all of the [[exceptional Lie group]]s apart from [[G2 (mathematics)|''G''<sub>2</sub>]]
+
+In addition to the [[normed division algebra]]s, there are other [[composition algebra]]s over '''R''', namely the [[split-complex number]]s, the [[split-quaternions]] and the [[split-octonions]].
+
+If one uses these instead of the complex numbers, quaternions, and octonions, one obtains the following variant of the magic square
