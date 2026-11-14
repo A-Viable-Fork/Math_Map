@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Matroid (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384965642
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 2d316db06ba895d8d936ef2d933e6c3819129fdc00ffdabdffc54782c85fb98f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+gives rise to a matroid <math>M</math> on its set of columns. The dependent sets of columns in the matroid are those that are linearly dependent as vectors.

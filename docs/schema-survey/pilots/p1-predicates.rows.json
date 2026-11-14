@@ -1,0 +1,1133 @@
+{
+ "about": "Pilot 1 rows (candidates G02, G25, G39): predicates, implications among them, what entries require, establish, keep and destroy, counterexamples tied to the hypothesis they defeat, and chains to check. A scratch file of the schema survey; nothing here is map data.",
+ "predicates": {
+  "compact": {
+   "carrier": "space",
+   "definition": "every open cover has a finite subcover"
+  },
+  "noncompact": {
+   "carrier": "space",
+   "definition": "not compact"
+  },
+  "locally-compact": {
+   "carrier": "space",
+   "definition": "every point has a compact neighbourhood"
+  },
+  "hausdorff": {
+   "carrier": "space",
+   "definition": "distinct points have disjoint neighbourhoods"
+  },
+  "closed-riemannian-manifold": {
+   "carrier": "manifold",
+   "definition": "a compact Riemannian manifold without boundary"
+  },
+  "nonempty": {
+   "carrier": "space",
+   "definition": "has a point"
+  },
+  "euclidean-points": {
+   "carrier": "point-cloud",
+   "definition": "the points lie in a Euclidean space, with its metric"
+  },
+  "good-cover": {
+   "carrier": "point-cloud",
+   "definition": "every nonempty intersection of the cover's sets is contractible"
+  },
+  "domain": {
+   "carrier": "ring",
+   "definition": "a nontrivial commutative ring with no zero divisors"
+  },
+  "field": {
+   "carrier": "ring",
+   "definition": "a commutative ring in which every nonzero element is a unit"
+  },
+  "noetherian": {
+   "carrier": "ring",
+   "definition": "every ideal is finitely generated"
+  },
+  "ufd": {
+   "carrier": "ring",
+   "definition": "a domain with unique factorization"
+  },
+  "local-ring": {
+   "carrier": "ring",
+   "definition": "has exactly one maximal ideal"
+  },
+  "fg-algebra-over-field": {
+   "carrier": "algebra",
+   "definition": "a finitely generated commutative algebra over a field"
+  },
+  "nontrivial": {
+   "carrier": "ring",
+   "definition": "0 differs from 1"
+  },
+  "perfect-field": {
+   "carrier": "algebraic-field",
+   "definition": "every algebraic extension is separable"
+  },
+  "algebraically-closed": {
+   "carrier": "algebraic-field",
+   "definition": "every nonconstant polynomial has a root"
+  },
+  "char-zero": {
+   "carrier": "algebraic-field",
+   "definition": "characteristic zero"
+  },
+  "finite-dimensional": {
+   "carrier": "vector-space",
+   "definition": "of finite dimension over its field"
+  },
+  "sigma-finite": {
+   "carrier": "measure",
+   "definition": "the space is a countable union of sets of finite measure"
+  },
+  "s-finite": {
+   "carrier": "measure",
+   "definition": "a countable sum of finite measures"
+  },
+  "exponential-growth": {
+   "carrier": "function",
+   "definition": "bounded by C e^{at} on the half line"
+  },
+  "integrable-on-line": {
+   "carrier": "function",
+   "definition": "integrable along a vertical line of the region of convergence"
+  },
+  "reflective-subcategory": {
+   "carrier": "category",
+   "definition": "a full subcategory whose inclusion has a left adjoint"
+  },
+  "lex-reflector": {
+   "carrier": "category",
+   "definition": "a reflective subcategory whose reflector preserves finite limits"
+  },
+  "geometric-embedding": {
+   "carrier": "morphism",
+   "definition": "a geometric morphism with fully faithful direct image"
+  },
+  "geometric-morphism": {
+   "carrier": "morphism",
+   "definition": "an adjoint pair between toposes whose left adjoint preserves finite limits"
+  },
+  "essential": {
+   "carrier": "morphism",
+   "definition": "the inverse image has a further left adjoint"
+  },
+  "smooth-projective-surface": {
+   "carrier": "variety",
+   "definition": "a smooth projective variety of dimension two"
+  },
+  "minus-one-curve": {
+   "carrier": "curve",
+   "definition": "a smooth rational curve of self-intersection -1 on the surface"
+  },
+  "center-is-point": {
+   "carrier": "variety",
+   "definition": "the blow-up's center is a point"
+  },
+  "finite-family": {
+   "carrier": "set",
+   "definition": "the indexing family is finite"
+  },
+  "pairwise-coprime": {
+   "carrier": "ideal",
+   "definition": "each two ideals sum to the whole ring"
+  },
+  "complete-category": {
+   "carrier": "category",
+   "definition": "has all small limits"
+  },
+  "weak-sheafify": {
+   "carrier": "category",
+   "definition": "sheafification exists for this coefficient category"
+  },
+  "excessive-h": {
+   "carrier": "function",
+   "definition": "h is excessive for the process"
+  },
+  "harmonic-h": {
+   "carrier": "function",
+   "definition": "h is harmonic for the process"
+  }
+ },
+ "implications": [
+  {
+   "id": "I01",
+   "from": "field",
+   "to": "domain",
+   "receipt": {
+    "none": "definitional; Mathlib's instance Field.isDomain is recalled, not excerpted"
+   }
+  },
+  {
+   "id": "I02",
+   "from": "closed-riemannian-manifold",
+   "to": "compact",
+   "receipt": {
+    "none": "definitional: closed means compact and boundaryless"
+   }
+  },
+  {
+   "id": "I03",
+   "from": "sigma-finite",
+   "to": "s-finite",
+   "receipt": {
+    "none": "recalled (a Mathlib instance); not excerpted"
+   }
+  },
+  {
+   "id": "I04",
+   "from": "euclidean-points",
+   "to": "good-cover",
+   "receipt": {
+    "field": [
+     "D4-048",
+     "description"
+    ],
+    "quote": "as for balls in Euclidean space"
+   }
+  },
+  {
+   "id": "I05",
+   "from": "geometric-embedding",
+   "to": "geometric-morphism",
+   "receipt": {
+    "field": [
+     "D7-X02",
+     "output"
+    ],
+    "quote": "a geometric morphism with fully faithful direct image"
+   }
+  },
+  {
+   "id": "I06",
+   "from": "geometric-embedding",
+   "to": "lex-reflector",
+   "receipt": {
+    "excerpt": "excerpts/nlab-reflective-subcategory.txt",
+    "quote": "then such embeddings are called [[geometric embedding]]s"
+   }
+  },
+  {
+   "id": "I07",
+   "from": "lex-reflector",
+   "to": "reflective-subcategory",
+   "receipt": {
+    "excerpt": "excerpts/nlab-reflective-subcategory.txt",
+    "quote": "in addition preserves [[finite limits]], then the embedding is called _exact_"
+   }
+  },
+  {
+   "id": "I08",
+   "from": "algebraically-closed",
+   "to": "perfect-field",
+   "receipt": {
+    "none": "recalled; not excerpted"
+   }
+  },
+  {
+   "id": "I09",
+   "from": "harmonic-h",
+   "to": "excessive-h",
+   "receipt": {
+    "none": "recalled; not excerpted"
+   }
+  }
+ ],
+ "rows": [
+  {
+   "id": "R01",
+   "entry": "D4-273",
+   "role": "requires",
+   "predicate": "locally-compact",
+   "receipt": {
+    "field": [
+     "D4-273",
+     "input"
+    ],
+    "quote": "Non-compact locally compact Hausdorff space X"
+   }
+  },
+  {
+   "id": "R02",
+   "entry": "D4-273",
+   "role": "requires",
+   "predicate": "hausdorff",
+   "receipt": {
+    "field": [
+     "D4-273",
+     "input"
+    ],
+    "quote": "Non-compact locally compact Hausdorff space X"
+   }
+  },
+  {
+   "id": "R03",
+   "entry": "D4-273",
+   "role": "requires",
+   "predicate": "noncompact",
+   "receipt": {
+    "field": [
+     "D4-273",
+     "input"
+    ],
+    "quote": "Non-compact locally compact Hausdorff space X"
+   }
+  },
+  {
+   "id": "R04",
+   "entry": "D4-273",
+   "role": "establishes",
+   "predicate": "compact",
+   "receipt": {
+    "field": [
+     "D4-273",
+     "output"
+    ],
+    "quote": "Compact space"
+   }
+  },
+  {
+   "id": "R05",
+   "entry": "D4-273",
+   "role": "destroys",
+   "predicate": "noncompact",
+   "receipt": {
+    "field": [
+     "D4-273",
+     "broken"
+    ],
+    "quote": "Non-compactness"
+   }
+  },
+  {
+   "id": "R06",
+   "entry": "D4-176",
+   "role": "requires",
+   "predicate": "closed-riemannian-manifold",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-hodge-theory.txt",
+    "quote": "on a closed Riemannian manifold as a sum of three parts in the form"
+   }
+  },
+  {
+   "id": "R07",
+   "entry": "D4-312",
+   "role": "keeps",
+   "predicate": "compact",
+   "receipt": {
+    "field": [
+     "D4-312",
+     "preserved"
+    ],
+    "quote": "product of compact = compact"
+   }
+  },
+  {
+   "id": "R08",
+   "entry": "D4-075",
+   "role": "requires",
+   "predicate": "nonempty",
+   "claim": "output: the cone is contractible",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-cone-topology.txt",
+    "quote": "(called the vertex of the cone)"
+   }
+  },
+  {
+   "id": "R09",
+   "entry": "D4-048",
+   "role": "requires",
+   "predicate": "good-cover",
+   "claim": "preserved: homotopy type of the union of the balls",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-nerve-complex.txt",
+    "quote": "is either empty or contractible"
+   }
+  },
+  {
+   "id": "R10",
+   "entry": "D8-106",
+   "role": "requires",
+   "predicate": "euclidean-points",
+   "receipt": {
+    "field": [
+     "D8-106",
+     "input"
+    ],
+    "quote": "n points in R^d"
+   }
+  },
+  {
+   "id": "R11",
+   "entry": "D8-106",
+   "role": "establishes",
+   "predicate": "euclidean-points",
+   "receipt": {
+    "field": [
+     "D8-106",
+     "output"
+    ],
+    "quote": "Points in R^k"
+   }
+  },
+  {
+   "id": "R12",
+   "entry": "D2-075",
+   "role": "requires",
+   "predicate": "domain",
+   "receipt": {
+    "field": [
+     "D2-075",
+     "input"
+    ],
+    "quote": "Integral domain R"
+   }
+  },
+  {
+   "id": "R13",
+   "entry": "D2-075",
+   "role": "establishes",
+   "predicate": "field",
+   "receipt": {
+    "formal": [
+     "D2-075",
+     "FractionRing.field"
+    ]
+   }
+  },
+  {
+   "id": "R14",
+   "entry": "D7-150",
+   "role": "keeps",
+   "predicate": "noetherian",
+   "receipt": {
+    "field": [
+     "D7-150",
+     "preserved"
+    ],
+    "quote": "Noetherianity (Hilbert basis theorem)"
+   }
+  },
+  {
+   "id": "R15",
+   "entry": "D7-150",
+   "role": "keeps",
+   "predicate": "domain",
+   "receipt": {
+    "field": [
+     "D7-150",
+     "preserved"
+    ],
+    "quote": "domain property"
+   }
+  },
+  {
+   "id": "R16",
+   "entry": "D7-150",
+   "role": "keeps",
+   "predicate": "ufd",
+   "receipt": {
+    "field": [
+     "D7-150",
+     "preserved"
+    ],
+    "quote": "UFD property"
+   }
+  },
+  {
+   "id": "R17",
+   "entry": "D7-150",
+   "role": "destroys",
+   "predicate": "field",
+   "receipt": {
+    "formal": [
+     "D7-150",
+     "Polynomial.not_isUnit_X"
+    ]
+   }
+  },
+  {
+   "id": "R18",
+   "entry": "D2-072",
+   "role": "establishes",
+   "predicate": "local-ring",
+   "note": "only when the multiplicative set is the complement of a prime: an establishes row conditional on a parameter, which this pilot's row shape cannot say",
+   "receipt": {
+    "formal": [
+     "D2-072",
+     "IsLocalization.AtPrime.isLocalRing"
+    ]
+   }
+  },
+  {
+   "id": "R19",
+   "entry": "D2-080",
+   "role": "requires",
+   "predicate": "fg-algebra-over-field",
+   "receipt": {
+    "field": [
+     "D2-080",
+     "input"
+    ],
+    "quote": "F.g. commutative k-algebra A"
+   }
+  },
+  {
+   "id": "R20",
+   "entry": "D2-080",
+   "role": "requires",
+   "predicate": "nontrivial",
+   "note": "found by pilot 4: the declaration's [Nontrivial R]",
+   "receipt": {
+    "formal": [
+     "D2-080",
+     "exists_finite_inj_algHom_of_fg"
+    ]
+   }
+  },
+  {
+   "id": "R21",
+   "entry": "D2-051",
+   "role": "requires",
+   "predicate": "perfect-field",
+   "receipt": {
+    "field": [
+     "D2-051",
+     "input"
+    ],
+    "quote": "over perfect field"
+   }
+  },
+  {
+   "id": "R22",
+   "entry": "D2-051",
+   "role": "requires",
+   "predicate": "finite-dimensional",
+   "receipt": {
+    "field": [
+     "D2-051",
+     "input"
+    ],
+    "quote": "fin-dim space"
+   }
+  },
+  {
+   "id": "R23",
+   "entry": "D2-051",
+   "role": "requires",
+   "predicate": "algebraically-closed",
+   "claim": "output: D is diagonalizable",
+   "receipt": {
+    "excerpt": "reports/SECOND-READING.md",
+    "quote": "over which semisimple is not diagonalizable (a rotation of the real plane)"
+   }
+  },
+  {
+   "id": "R24",
+   "entry": "D7-X11",
+   "role": "requires",
+   "predicate": "field",
+   "receipt": {
+    "field": [
+     "D7-X11",
+     "input"
+    ],
+    "quote": "Finite-dimensional Lie algebra over a field of characteristic zero"
+   }
+  },
+  {
+   "id": "R25",
+   "entry": "D7-X11",
+   "role": "requires",
+   "predicate": "char-zero",
+   "receipt": {
+    "field": [
+     "D7-X11",
+     "input"
+    ],
+    "quote": "Finite-dimensional Lie algebra over a field of characteristic zero"
+   }
+  },
+  {
+   "id": "R26",
+   "entry": "D7-X11",
+   "role": "requires",
+   "predicate": "finite-dimensional",
+   "receipt": {
+    "field": [
+     "D7-X11",
+     "input"
+    ],
+    "quote": "Finite-dimensional Lie algebra over a field of characteristic zero"
+   }
+  },
+  {
+   "id": "R27",
+   "entry": "D2-193",
+   "role": "requires",
+   "predicate": "finite-family",
+   "note": "found by pilot 4: the declaration's [Finite ι]; the entry does not state it",
+   "receipt": {
+    "formal": [
+     "D2-193",
+     "Ideal.quotientInfRingEquivPiQuotient"
+    ]
+   }
+  },
+  {
+   "id": "R28",
+   "entry": "D2-193",
+   "role": "requires",
+   "predicate": "pairwise-coprime",
+   "receipt": {
+    "field": [
+     "D2-193",
+     "input"
+    ],
+    "quote": "coprime ideals"
+   }
+  },
+  {
+   "id": "R29",
+   "entry": "D2-188",
+   "role": "requires",
+   "predicate": "complete-category",
+   "note": "found by pilot 4: [HasLimitsOfSize D]; the entry says 'satisfying conditions'",
+   "receipt": {
+    "formal": [
+     "D2-188",
+     "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition"
+    ]
+   }
+  },
+  {
+   "id": "R30",
+   "entry": "D6-117",
+   "role": "requires",
+   "predicate": "s-finite",
+   "note": "s-finite is required of mu and sigma-finite of nu: two operands, which a one-object chain cannot tell apart",
+   "receipt": {
+    "excerpt": "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt",
+    "quote": "[SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν"
+   }
+  },
+  {
+   "id": "R31",
+   "entry": "D6-117",
+   "role": "requires",
+   "predicate": "sigma-finite",
+   "receipt": {
+    "excerpt": "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt",
+    "quote": "[SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν"
+   }
+  },
+  {
+   "id": "R32",
+   "entry": "D6-090",
+   "role": "requires",
+   "predicate": "sigma-finite",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-lebesgue-decomposition.txt",
+    "quote": "then there exist two uniquely determined σ-finite signed measures"
+   }
+  },
+  {
+   "id": "R33",
+   "entry": "D6-090",
+   "role": "establishes",
+   "predicate": "sigma-finite",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-lebesgue-decomposition.txt",
+    "quote": "then there exist two uniquely determined σ-finite signed measures"
+   }
+  },
+  {
+   "id": "R34",
+   "entry": "D6-086",
+   "role": "requires",
+   "predicate": "exponential-growth",
+   "receipt": {
+    "field": [
+     "D6-086",
+     "input"
+    ],
+    "quote": "with exponential growth bound"
+   }
+  },
+  {
+   "id": "R35",
+   "entry": "D6-086",
+   "role": "silent",
+   "predicate": "integrable-on-line",
+   "note": "the transform of a function with a jump at 0 decays like 1/s and is not integrable along the line (Formalization's report, section 4): the entry's output does not establish what its inverse requires",
+   "receipt": {
+    "excerpt": "docs/inbound/2026-11-06-from-formalization.md",
+    "quote": "exact, under integrability along the line"
+   }
+  },
+  {
+   "id": "R36",
+   "entry": "D6-073",
+   "role": "requires",
+   "predicate": "integrable-on-line",
+   "receipt": {
+    "excerpt": "docs/inbound/2026-11-06-from-formalization.md",
+    "quote": "exact, under integrability along the line"
+   }
+  },
+  {
+   "id": "R37",
+   "entry": "D7-068",
+   "role": "requires",
+   "predicate": "reflective-subcategory",
+   "receipt": {
+    "formal": [
+     "D7-068",
+     "CategoryTheory.Reflective"
+    ]
+   }
+  },
+  {
+   "id": "R38",
+   "entry": "D7-068",
+   "role": "keeps",
+   "predicate": "reflective-subcategory",
+   "receipt": {
+    "field": [
+     "D7-068",
+     "output"
+    ],
+    "quote": "Reflector L: C to R"
+   }
+  },
+  {
+   "id": "R39",
+   "entry": "D7-068",
+   "role": "silent",
+   "predicate": "lex-reflector",
+   "note": "a bare reflective subcategory need not be exact",
+   "receipt": {
+    "excerpt": "excerpts/nlab-reflective-subcategory.txt",
+    "quote": "in addition preserves [[finite limits]], then the embedding is called _exact_"
+   }
+  },
+  {
+   "id": "R40",
+   "entry": "D7-288",
+   "role": "establishes",
+   "predicate": "lex-reflector",
+   "receipt": {
+    "field": [
+     "D7-288",
+     "output"
+    ],
+    "quote": "Subtopos Sh_j(E)"
+   }
+  },
+  {
+   "id": "R41",
+   "entry": "D7-X02",
+   "role": "requires",
+   "predicate": "lex-reflector",
+   "receipt": {
+    "field": [
+     "D7-X02",
+     "input"
+    ],
+    "quote": "Subtopos Sh_j(E) of a topos E"
+   }
+  },
+  {
+   "id": "R42",
+   "entry": "D7-X02",
+   "role": "establishes",
+   "predicate": "geometric-embedding",
+   "receipt": {
+    "field": [
+     "D7-X02",
+     "output"
+    ],
+    "quote": "Geometric embedding"
+   }
+  },
+  {
+   "id": "R43",
+   "entry": "D7-284",
+   "role": "requires",
+   "predicate": "geometric-morphism",
+   "receipt": {
+    "field": [
+     "D7-284",
+     "input"
+    ],
+    "quote": "Geometric morphism f"
+   }
+  },
+  {
+   "id": "R44",
+   "entry": "D7-284",
+   "role": "establishes",
+   "predicate": "essential",
+   "receipt": {
+    "field": [
+     "D7-284",
+     "description"
+    ],
+    "quote": "also has a left adjoint f_!"
+   }
+  },
+  {
+   "id": "R45",
+   "entry": "D7-284",
+   "role": "keeps",
+   "predicate": "geometric-embedding",
+   "receipt": {
+    "field": [
+     "D7-284",
+     "broken"
+    ],
+    "quote": "Nothing; it is extra structure"
+   }
+  },
+  {
+   "id": "R46",
+   "entry": "D7-X03",
+   "role": "requires",
+   "predicate": "essential",
+   "receipt": {
+    "field": [
+     "D7-X03",
+     "input"
+    ],
+    "quote": "Essential geometric embedding"
+   }
+  },
+  {
+   "id": "R47",
+   "entry": "D7-X03",
+   "role": "requires",
+   "predicate": "geometric-embedding",
+   "receipt": {
+    "field": [
+     "D7-X03",
+     "input"
+    ],
+    "quote": "Essential geometric embedding"
+   }
+  },
+  {
+   "id": "R48",
+   "entry": "D3-116",
+   "role": "requires",
+   "predicate": "weak-sheafify",
+   "receipt": {
+    "excerpt": "excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt",
+    "quote": "def sheafificationAdjunction [HasWeakSheafify J A] :"
+   }
+  },
+  {
+   "id": "R49",
+   "entry": "D7-290",
+   "role": "requires",
+   "predicate": "weak-sheafify",
+   "note": "the same declaration D3-116 is linked to; D7-290 states no condition",
+   "receipt": {
+    "formal": [
+     "D7-290",
+     "CategoryTheory.sheafificationAdjunction"
+    ]
+   }
+  },
+  {
+   "id": "R50",
+   "entry": "D2-118",
+   "role": "requires",
+   "predicate": "smooth-projective-surface",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-castelnuovo.txt",
+    "quote": "be a [[smooth variety|smooth]] [[algebraic surface|projective surface]]"
+   }
+  },
+  {
+   "id": "R51",
+   "entry": "D2-118",
+   "role": "requires",
+   "predicate": "minus-one-curve",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-castelnuovo.txt",
+    "quote": "a (&minus;1)-[[algebraic curve|curve]] on <math>X</math>"
+   }
+  },
+  {
+   "id": "R52",
+   "entry": "D2-117",
+   "role": "establishes",
+   "predicate": "minus-one-curve",
+   "note": "holds given center-is-point and smooth-projective-surface: a conditional establishes, encoded in the checker as needing both",
+   "receipt": {
+    "none": "standard: the exceptional curve of the blow-up of a point on a smooth surface is a (-1)-curve; recalled, no window fetched"
+   },
+   "given": [
+    "center-is-point",
+    "smooth-projective-surface"
+   ]
+  },
+  {
+   "id": "R53",
+   "entry": "D2-117",
+   "role": "keeps",
+   "predicate": "smooth-projective-surface",
+   "note": "given center-is-point",
+   "receipt": {
+    "none": "recalled: the blow-up of a smooth projective surface at a point is smooth projective; no window fetched"
+   },
+   "given": [
+    "center-is-point",
+    "smooth-projective-surface"
+   ]
+  },
+  {
+   "id": "R54",
+   "entry": "D5-037",
+   "role": "requires",
+   "predicate": "excessive-h",
+   "receipt": {
+    "field": [
+     "D5-037",
+     "input"
+    ],
+    "quote": "excessive h"
+   }
+  },
+  {
+   "id": "R55",
+   "entry": "D5-037",
+   "role": "requires",
+   "predicate": "harmonic-h",
+   "claim": "output: the transformed process is conservative",
+   "receipt": {
+    "field": [
+     "D5-037",
+     "input"
+    ],
+    "quote": "a harmonic h for a conservative transform"
+   }
+  }
+ ],
+ "counterexamples": [
+  {
+   "id": "X01",
+   "entry": "D4-048",
+   "drops": "good-cover",
+   "claim": "preserved: homotopy type of the union of the balls",
+   "witness": "Two contractible sets covering an n-sphere and meeting in a non-contractible set: the nerve is a 1-simplex, not a sphere.",
+   "receipt": {
+    "excerpt": "excerpts/wikipedia-nerve-complex.txt",
+    "quote": "one can cover any [[N-sphere|''n''-sphere]] with two contractible sets"
+   }
+  },
+  {
+   "id": "X02",
+   "entry": "D4-075",
+   "drops": "nonempty",
+   "claim": "output: the cone is contractible",
+   "witness": "X empty: the landed quotient is the empty space, which is not contractible.",
+   "receipt": {
+    "field": [
+     "D4-075",
+     "counterexamples"
+    ],
+    "quote": "X empty: the landed quotient is the empty space"
+   }
+  },
+  {
+   "id": "X03",
+   "entry": "D2-051",
+   "drops": "algebraically-closed",
+   "claim": "output: D is diagonalizable",
+   "witness": "A rotation of the real plane: semisimple over the reals, a perfect field, and not diagonalizable there.",
+   "receipt": {
+    "excerpt": "reports/SECOND-READING.md",
+    "quote": "a rotation of the real plane"
+   }
+  },
+  {
+   "id": "X04",
+   "entry": "D6-086",
+   "drops": "two-way",
+   "claim": "preserved: final value theorem, read as a two-way correspondence",
+   "witness": "f(t) = e^{it}: s F(s) tends to 0 as s tends to 0+ while f has no limit, so the final value theorem has no converse.",
+   "receipt": {
+    "excerpt": "docs/inbound/2026-11-06-from-formalization.md",
+    "quote": "for `e^{it}`, `s F(s) → 0` while `f` has no limit"
+   }
+  },
+  {
+   "id": "X05",
+   "entry": "D2-193",
+   "drops": "finite-family",
+   "claim": "description: R/(intersection) is isomorphic to the product",
+   "witness": "The integers with the ideals (p), all primes p: pairwise coprime, intersection zero, and the product of the fields Z/p is uncountable while Z is countable.",
+   "receipt": {
+    "none": "authored here from standard mathematics; no window fetched"
+   }
+  },
+  {
+   "id": "X06",
+   "entry": "D6-073",
+   "drops": "integrable-on-line",
+   "claim": "preserved: exact inversion",
+   "witness": "f = 1 on t > 0: F(s) = 1/s, not integrable along any vertical line.",
+   "receipt": {
+    "excerpt": "docs/inbound/2026-11-06-from-formalization.md",
+    "quote": "exact, under integrability along the line"
+   }
+  }
+ ],
+ "chains": [
+  {
+   "id": "K01",
+   "steps": [
+    "D7-068",
+    "D7-X03"
+   ],
+   "given": [
+    "reflective-subcategory"
+   ],
+   "expect": "fail",
+   "why": "a bare reflector is read as a level"
+  },
+  {
+   "id": "K02",
+   "steps": [
+    "D7-288",
+    "D7-X02",
+    "D7-284",
+    "D7-X03"
+   ],
+   "given": [],
+   "expect": "pass",
+   "why": "a Lawvere-Tierney topology, its subtopos inclusion, made essential, read as a level"
+  },
+  {
+   "id": "K03",
+   "steps": [
+    "D2-117",
+    "D2-118"
+   ],
+   "given": [
+    "smooth-projective-surface",
+    "center-is-point"
+   ],
+   "expect": "pass",
+   "why": "blow up a point of a smooth surface, blow the exceptional curve down"
+  },
+  {
+   "id": "K04",
+   "steps": [
+    "D2-117",
+    "D2-118"
+   ],
+   "given": [],
+   "expect": "fail",
+   "why": "blow up any closed subvariety of any variety, then blow down"
+  },
+  {
+   "id": "K05",
+   "steps": [
+    "D6-086",
+    "D6-073"
+   ],
+   "given": [
+    "exponential-growth"
+   ],
+   "expect": "fail",
+   "why": "Laplace transform then Bromwich inversion"
+  },
+  {
+   "id": "K06",
+   "steps": [
+    "D2-075",
+    "D7-150",
+    "D2-075"
+   ],
+   "given": [
+    "domain"
+   ],
+   "expect": "pass",
+   "why": "fraction field, polynomial ring, fraction field: k(x)"
+  },
+  {
+   "id": "K07",
+   "steps": [
+    "D4-273",
+    "D4-176"
+   ],
+   "given": [
+    "locally-compact",
+    "hausdorff",
+    "noncompact"
+   ],
+   "expect": "fail",
+   "why": "compactify, then decompose forms on the result"
+  },
+  {
+   "id": "K08",
+   "steps": [
+    "D4-273",
+    "D4-273"
+   ],
+   "given": [
+    "locally-compact",
+    "hausdorff",
+    "noncompact"
+   ],
+   "expect": "fail",
+   "why": "compactify twice"
+  },
+  {
+   "id": "K09",
+   "steps": [
+    "D6-090",
+    "D6-117"
+   ],
+   "given": [],
+   "expect": "fail",
+   "why": "Lebesgue decomposition then Radon-Nikodym, nothing given"
+  },
+  {
+   "id": "K10",
+   "steps": [
+    "D6-090",
+    "D6-117"
+   ],
+   "given": [
+    "sigma-finite"
+   ],
+   "expect": "pass",
+   "why": "the same, sigma-finite given"
+  },
+  {
+   "id": "K11",
+   "steps": [
+    "D8-106",
+    "D4-048"
+   ],
+   "given": [
+    "euclidean-points"
+   ],
+   "expect": "pass",
+   "why": "project by Johnson-Lindenstrauss, then build the Cech complex"
+  },
+  {
+   "id": "K12",
+   "steps": [
+    "D4-048"
+   ],
+   "given": [],
+   "expect": "fail",
+   "why": "the Cech complex of points in an unspecified metric space, read for homotopy type"
+  }
+ ]
+}

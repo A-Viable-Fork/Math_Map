@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Chordal completion (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369270789
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: b859ce4d60e25b1cb1cee4a196d13416b9836be2ffc25b9cc794e2d4381e256f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the pattern of nonzeros in the filled-in matrix is always a chordal graph, any minimal chordal completion corresponds to a fill-in pattern in this way
