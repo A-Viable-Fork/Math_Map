@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Complete orthogonal decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1263424223
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ed168ee67213aa788d5896402a66d3dfd85d9cf422c7d0d6df3e74bbc47af44f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''complete orthogonal decomposition''' is a [[matrix decomposition]].
+
+<math>A = U T V^*</math>, where <math>U</math> and <math>V^*</math> are [[unitary matrix|unitary matrices]] and <math>T</math> is a [[triangular matrix]].
+
+For a matrix <math>A</math> of [[matrix rank|rank]] <math>r</math>, the triangular matrix <math>T</math> can be chosen such that only its top-left <math>r\times r</math> block is nonzero, making the decomposition rank-revealing.
+
+is a special case of the UTV decomposition.  Computing the SVD is slightly more expensive than the UTV decomposition
+
+but has a stronger rank-revealing property.

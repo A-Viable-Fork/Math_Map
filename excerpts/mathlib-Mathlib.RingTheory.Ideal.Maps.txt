@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Ideal/Maps.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Maps.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 25f3d18093c4d17eed651e35b4fc7cbb66fa131beae4b1164ffdb3710a99803c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Module.annihilator (line 868)
+def Module.annihilator : Ideal R := RingHom.ker (Module.toAddMonoidEnd R M)
+
+-- Module.mem_annihilator (line 870)
+theorem Module.mem_annihilator {r} : r ∈ Module.annihilator R M ↔ ∀ m : M, r • m = 0

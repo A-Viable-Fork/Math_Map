@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, QR decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377367532
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6374bd609dd795b64b32737d419b1e55f0e51f3dab7630598f044761e0d5608e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[matrix decomposition|decomposition]] of a [[matrix (mathematics)|matrix]] ''A'' into a product ''A''&nbsp;=&nbsp;''QR'' of an [[orthonormal matrix]] ''Q'' and an [[upper triangular matrix]] ''R''. QR decomposition is often used to solve the [[linear least squares (mathematics)|linear least squares]] (LLS) problem
+
+where ''Q'' is an [[orthogonal matrix]] (its columns are [[orthogonal]] [[unit vector]]s meaning {{nowrap|<math>Q^\textsf{T} = Q^{-1}</math>)}} and ''R'' is an upper [[triangular matrix]] (also called right triangular matrix).
+
+If ''A'' has ''n'' [[linearly independent]] columns, then the first ''n'' columns of ''Q'' form an [[orthonormal basis]] for the [[column space]] of ''A''.
+
+More generally, we can factor a complex ''m''×''n'' matrix ''A'', with {{nowrap|''m'' ≥ ''n''}}, as the product of an ''m''×''m'' [[unitary matrix]] ''Q'' and an ''m''×''n'' upper triangular matrix ''R''.
+
+The Gram-Schmidt process is inherently numerically unstable.
+
+The use of Householder transformations is inherently the most simple of the numerically stable QR decomposition algorithms

@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Monoidal/Category.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Category.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: b01b442645dd4879af53cf071472ec6aee6c98bf509c494eb9c1247ac7c9b6c9
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.MonoidalCategory (line 161)
+class MonoidalCategory (C : Type u) [𝒞 : Category.{v} C] extends MonoidalCategoryStruct C where
+  tensorHom_def {X₁ Y₁ X₂ Y₂ : C} (f : X₁ ⟶ Y₁) (g : X₂ ⟶ Y₂) :
+    f ⊗ₘ g = (f ▷ X₂) ≫ (Y₁ ◁ g)

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Logic/Function/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Logic/Function/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 15b9bf6f94b5e3559d742257d30af279a50a97d8d48bb81f37e9f6c919fd6942
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Function.Involutive (line 1025)
+def Involutive {α} (f : α → α) : Prop :=
+  ∀ x, f (f x) = x

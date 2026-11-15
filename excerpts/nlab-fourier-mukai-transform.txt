@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, Fourier-Mukai transform (page source)
+URL: https://ncatlab.org/nlab/source/Fourier-Mukai+transform
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 488f0f1bb40f60179115a808764f7e2f2a7fd28e9e9c385dff0fb19f6a8faca9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Let $X$ and $Y$ be smooth projective [[varieties]] over a [[field]] $K$.  Let $F : D(X) \to D(Y)$ be a [[triangulated functor|triangulated]] [[fully faithful functor]].  Then $F$ is represented by some object $E \in D(X \times Y)$ which is unique up to isomorphism.

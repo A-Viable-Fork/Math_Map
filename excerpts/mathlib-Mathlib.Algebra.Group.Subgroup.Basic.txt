@@ -19,3 +19,6 @@ def normalClosure (s : Set G) : Subgroup G :=
 -- Subgroup.conjugatesOfSet_subset_normalClosure (line 632)
 theorem conjugatesOfSet_subset_normalClosure : conjugatesOfSet s ⊆ normalClosure s
 -- Subgroup.conjugatesOfSet_subset_normalClosure carries @[to_additive]: twin AddSubgroup.addConjugatesOfSet_subset_normalClosure
+
+-- Subgroup.normal_in_normalizer (line 502)
+instance (priority := 100) normal_in_normalizer : (H.subgroupOf <| normalizer H).Normal

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Kähler differential (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382035790
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 371863c66e6e4b71766d5022c7969321cf637f535b1c0712341bfad858f887bd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Kähler differentials''' provide an adaptation of [[differential form]]s to arbitrary [[commutative ring]]s or [[scheme (mathematics)|scheme]]s.
+
+Let {{math|''R''}} and {{math|''S''}} be commutative rings and {{math|''φ'' : ''R'' → ''S''}} be a [[ring homomorphism]].
+
+An important example is for {{math|''R''}} a [[Field (mathematics)|field]] and {{math|''S''}} a unital [[associative algebra|algebra]] over {{math|''R''}}
+
+The [[module (mathematics)|module]] of Kähler differentials is defined as the {{math|''S''}}-module <math>\Omega_{S/R}</math> for which there is a universal derivation <math>d : S \to \Omega_{S/R}</math>.
+
+:<math>\operatorname{Hom}_S(\Omega_{S/R},M) \xrightarrow{\cong} \operatorname{Der}_R(S,M).</math>

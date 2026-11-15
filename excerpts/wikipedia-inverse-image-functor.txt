@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Inverse image functor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1323108266
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e175753fb9271264e84246f9e5ba610a555c34eeed9400f14992e2f528251b1d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+:<math>f^*\mathcal G := f^{-1}\mathcal{G} \otimes_{f^{-1}\mathcal{O}_Y} \mathcal{O}_X</math>.
+
+* <math>f^*</math> is (in general) only right exact. If <math>f^*</math> is exact, ''f'' is called [[Flat morphism|flat]].
+
+* <math>f^{-1}</math> is the [[adjoint functor|left adjoint]] of the [[direct image functor]] <math>f_{\ast}</math>.

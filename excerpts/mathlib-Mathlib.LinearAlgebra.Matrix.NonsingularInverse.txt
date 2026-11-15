@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: fbdee3105b527677c072409dc9a6da79ea66e878958d68f722754ab920a7773a
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Matrix.det_conj (line 768)
+theorem det_conj {M : Matrix m m α} (h : IsUnit M) (N : Matrix m m α) :
+    det (M * N * M⁻¹) = det N
+
+-- Matrix.trace_conj (line 785)
+theorem trace_conj {M : Matrix m m α} (h : IsUnit M) (N : Matrix m m α) :
+    trace (M * N * M⁻¹) = trace N

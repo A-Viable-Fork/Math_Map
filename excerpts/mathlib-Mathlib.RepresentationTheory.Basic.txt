@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RepresentationTheory/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RepresentationTheory/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 337032ff8584d9ec0a208cb91c45cb1ebbf77ef5748ecd0ce5a20983d2c70a21
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Representation.ofQuotient (line 352)
+def ofQuotient [IsTrivial (ρ.comp S.subtype)] :
+    Representation k (G ⧸ S) V :=
+  (QuotientGroup.con S).lift ρ <| by
+    rintro x y ⟨⟨z, hz⟩, rfl⟩
+    ext w
+    simp only [Subgroup.mk_smul, MulOpposite.smul_eq_mul_unop]

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Birkhoff factorization (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1356841756
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 7b7fa787b8b44749025013bbc9a88b85a9f4fad698fc41f681dcc9a04f201cca
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Birkhoff factorization''' or '''Birkhoff decomposition'''
+
+is a generalization of the [[LU decomposition]] (i.e. Gauss elimination) to loop groups.
+
+is given by a product <math>M=M^{+}M^{0}M^{-}</math>, where <math>M^{+}</math> has entries that are polynomials in <math>z</math>
+
+and <math>M^{-}</math> has entries that are polynomials in <math>z^{-1}</math>. For a generic matrix we have <math>M^{0}=\mathrm{id}</math>.

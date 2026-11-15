@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Frobenius reciprocity (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1305190108
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d6d627d64a3d48e6d2da5eb2213c3e75a65420ec55390e717001c846aff494bb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Frobenius reciprocity''' is a theorem expressing a [[Duality (mathematics)|duality]] between the process of [[Restricted representation|restricting]] and [[Induced representation|inducing]].
+
+These functors form an [[Adjoint functors|adjoint pair]] <math>\operatorname{Ind}_H^G\dashv\operatorname{Res}_H^G</math>.
+
+In the case of finite groups, they are actually both left- and right-adjoint to one another.

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Monoidal category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373753963
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 498cd6e0f2f5bc61778b3c028867125194759169d037f624ca661c4ede09ca19
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''monoidal category''' (or '''tensor category''') is a [[category (mathematics)|category]] <math>\mathbf C</math> equipped with a [[bifunctor]]
+
+that is [[associative]] [[up to]] a [[natural isomorphism]], and an [[Object (category theory)|object]] <math>I</math> that is both a [[left identity|left]] and [[right identity]] for <math>\otimes</math>, again up to a natural isomorphism. The associated natural isomorphisms are subject to certain [[coherence condition]]s, which ensure that all the relevant [[diagram (category theory)|diagram]]s [[commutative diagram|commute]].
+
+*three [[natural isomorphism]]s subject to certain [[coherence condition]]s expressing the fact that the tensor operation:
+
+* for all <math>A</math>, <math>B</math>, <math>C</math> and <math>D</math> in <math>\mathbf C</math>, the pentagon [[diagram (category theory)|diagram]]
+
+* for all <math>A</math> and <math>B</math> in <math>\mathbf C</math>, the triangle diagram

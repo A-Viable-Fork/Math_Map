@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Gröbner basis (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4b95fa06e5820e8da60e52063bdf742b9ee11f0202b7516c2e898f1611e47757
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 4b95fa06e5820e8da60e52063bdf742b9ee11f0202b7516c2e898f1611e47757
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 the leading monomial of every polynomial in {{mvar|I}} is a multiple of the leading monomial of some polynomial in {{mvar|G}}.
@@ -12,3 +12,7 @@ For every admissible monomial ordering and every finite set {{mvar|G}} of polyno
 there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal.
 
 condition 3 provides an algorithm for testing [[ideal membership problem|ideal membership]]
+
+then <math>G\cap K[Y]</math> is a Gröbner basis of <math>I\cap K[Y]</math> (this ideal is often called the ''elimination ideal'').
+
+the ([[Zariski closure]] of) the projection of the algebraic set defined by the ideal ''I'' into the ''Y''-subspace is defined by the ideal <math>I\cap K[Y].</math>

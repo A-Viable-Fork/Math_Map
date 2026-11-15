@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 7a9d03e2065576a3f08da00120e618b5076d8e143497239830366e80fe7de92e
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Ideal.adic_basis (line 62)
+theorem adic_basis (I : Ideal R) : SubmodulesRingBasis fun n : ℕ => (I ^ n • ⊤ : Ideal R)
+
+-- Ideal.adicTopology (line 91)
+def adicTopology (I : Ideal R) : TopologicalSpace R :=
+  (adic_basis I).topology

@@ -1,5 +1,6 @@
 // Role: the formal layer's data. Links from map entries to Mathlib declarations at one pinned commit.
-// Contract: exports MATHLIB = { commit } and FORMAL = [{ entry, field, decl, file, match, note }]. field is
+// Contract: exports MATHLIB = { commit }, FORMAL = [{ entry, field, decl, file, match, note }] and LANDED (the
+//   landed review's links, a part of FORMAL listed apart so its report can count them). field is
 //   the entry field the declaration bears on (description, input, output, preserved, broken); decl is the
 //   full Lean name; file is its path in mathlib4; match grades how the statement bears on the claim
 //   (exact, general, special, related, ingredient, conflicts; see scripts/formal.mjs). Optional: whole
@@ -421,4 +422,90 @@ const FORMAL = [
   K("D7-465", "description", "IncidenceAlgebra.moebius_inversion_top", "Mathlib/Combinatorics/Enumerative/IncidenceAlgebra.lean", "exact", "Moebius inversion on a locally finite order with a top: if g is the upward sum of f, f is recovered through mu. The fill's poset reading."),
 ];
 
-module.exports = { MATHLIB, FORMAL };
+// The landed review (audit/landed-review-0_1.js): links made where Mathlib states, generalizes, specializes or
+// defines a landed entry's claim, found by searching the pinned checkout for every entry graded.
+const LANDED = [
+  // Batch 1: D2-001 to D2-054.
+  K("D2-001", "preserved", "AffineIsometryEquiv.constVAdd", "Mathlib/Analysis/Normed/Affine/Isometry.lean", "exact", "Translation by v is an affine isometric automorphism: the distance part of the field. Angles and orientation are not stated here."),
+  K("D2-001", "preserved", "AffineIsometry.angle_map", "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean", "general", "Every affine isometry preserves unoriented angles; a translation is one (AffineIsometryEquiv.constVAdd)."),
+  K("D2-002", "preserved", "EuclideanGeometry.reflection", "Mathlib/Geometry/Euclidean/Projection.lean", "general", "Reflection in any nonempty complete affine subspace, a hyperplane included, as an affine isometric automorphism: distances are kept."),
+  K("D2-002", "preserved", "AffineIsometry.angle_map", "Mathlib/Geometry/Euclidean/Angle/Unoriented/Affine.lean", "general", "Every affine isometry preserves unoriented angles; a reflection is one."),
+  K("D2-002", "broken", "Submodule.det_reflection", "Mathlib/Analysis/InnerProductSpace/Projection/FiniteDimensional.lean", "general", "The reflection in K has determinant (-1)^(dim of the orthogonal complement); for a hyperplane that is -1, so orientation is reversed."),
+  K("D2-003", "preserved", "Orientation.rotation", "Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean", "special", "In an oriented real inner product space of dimension 2, rotation by an angle is a linear isometric equivalence: distances, in the plane case."),
+  K("D2-003", "preserved", "Orientation.det_rotation", "Mathlib/Geometry/Euclidean/Angle/Oriented/Rotation.lean", "special", "The plane rotation has determinant 1: orientation is kept, in the plane case."),
+  K("D2-003", "preserved", "LinearIsometry.angle_map", "Mathlib/Geometry/Euclidean/Angle/Unoriented/Basic.lean", "general", "Every linear isometry preserves angles between vectors; a rotation about the origin is one."),
+  K("D2-004", "description", "AffineMap.homothety", "Mathlib/LinearAlgebra/AffineSpace/AffineMap.lean", "ingredient", "The homothety with centre c and ratio r, as an affine map: the operation, defined."),
+  K("D2-004", "broken", "dist_center_homothety", "Mathlib/Analysis/Normed/Affine/AddTorsor.lean", "special", "Distances from the centre are multiplied by the norm of the ratio; the general case, distances between any two points, is not this declaration."),
+  K("D2-010", "description", "Projectivization.map", "Mathlib/LinearAlgebra/Projectivization/Basic.lean", "related", "An injective semilinear map induces a map of projective spaces: the direction from semilinear maps to collineations. The converse, the fundamental theorem of projective geometry, is not at the pin."),
+  K("D2-011", "description", "Function.Involutive", "Mathlib/Logic/Function/Basic.lean", "exact", "f (f x) = x for every x.", { whole: true }),
+  K("D2-040", "description", "Matrix.Pivot.exists_list_transvec_mul_diagonal_mul_list_transvec", "Mathlib/LinearAlgebra/Matrix/Transvection.lean", "related", "Gaussian elimination as Mathlib states it: every square matrix over a field is a product of transvections, a diagonal matrix and transvections. The transvections need not be triangular, so this is not the LU factorization."),
+  K("D2-046", "description", "LDL.lower_conj_diag", "Mathlib/Analysis/Matrix/LDL.lean", "exact", "A positive definite S equals L D L-star with L lower triangular and D diagonal: the entry's factorization, for its own input. That L has unit diagonal is not stated in this declaration."),
+  K("D2-047", "preserved", "InnerProductSpace.span_gramSchmidt", "Mathlib/Analysis/InnerProductSpace/GramSchmidtOrtho.lean", "related", "Gram-Schmidt keeps the span of the vectors it orthogonalizes: the column-space claim, for the Gram-Schmidt construction of Q."),
+  K("D2-048", "description", "Matrix.IsHermitian.spectral_theorem", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "A Hermitian matrix is unitarily conjugate to the diagonal matrix of its eigenvalues: the diagonalizable case where V is unitary."),
+  K("D2-048", "preserved", "Matrix.IsHermitian.det_eq_prod_eigenvalues", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "The determinant is the product of the eigenvalues, for Hermitian matrices."),
+  K("D2-048", "preserved", "Matrix.IsHermitian.trace_eq_sum_eigenvalues", "Mathlib/Analysis/Matrix/Spectrum.lean", "special", "The trace is the sum of the eigenvalues, for Hermitian matrices."),
+  K("D2-050", "description", "Module.End.exists_isNilpotent_isSemisimple", "Mathlib/LinearAlgebra/JordanChevalley.lean", "related", "The Jordan-Chevalley decomposition f = n + s, which the Jordan form displays; the Jordan normal form itself is not at the pin."),
+  // Batch 2: D2-055 to D2-091.
+  K("D2-066", "output", "CFC.sq_sqrt", "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean", "general", "In any C*-algebra with the continuous functional calculus, a nonnegative a has (sqrt a)^2 = a; positive semidefinite matrices are the case of matrices."),
+  K("D2-066", "preserved", "CFC.sqrt_nonneg", "Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean", "general", "The functional-calculus square root is nonnegative: the root of a positive semidefinite matrix is positive semidefinite."),
+  K("D2-076", "preserved", "RingHom.fst", "Mathlib/Algebra/Ring/Prod.lean", "exact", "The projection R x S to R is a ring homomorphism (RingHom.snd likewise): each factor's structure survives."),
+  K("D2-077", "description", "Module.annihilator", "Mathlib/RingTheory/Ideal/Maps.lean", "exact", "The ideal of r with r acting as zero on M, defined as the kernel of R to the endomorphisms of M.", { whole: true }),
+  K("D2-077", "description", "Module.mem_annihilator", "Mathlib/RingTheory/Ideal/Maps.lean", "exact", "r lies in the annihilator iff r m = 0 for every m."),
+  K("D2-079", "description", "Submodule.isLasker", "Mathlib/RingTheory/Lasker.lean", "general", "Lasker-Noether for modules: every submodule of a Noetherian module is a finite intersection of primary submodules; the ideals of a Noetherian ring are the case of R as a module over itself."),
+  K("D2-081", "description", "IsDedekindDomainInv.commGroupWithZero", "Mathlib/RingTheory/DedekindDomain/Ideal/Basic.lean", "special", "When every nonzero fractional ideal is invertible (a Dedekind domain), the fractional ideals form a commutative group with zero: the case where the landed claim holds."),
+  K("D2-082", "description", "Ideal.adic_basis", "Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean", "exact", "The powers I^n form a basis of neighbourhoods of 0 for a ring topology (a submodules ring basis)."),
+  K("D2-082", "output", "Ideal.adicTopology", "Mathlib/Topology/Algebra/Nonarchimedean/AdicTopology.lean", "exact", "The I-adic topology on R, defined from that basis.", { whole: true }),
+  K("D2-084", "description", "Algebra.TensorProduct.tmul_mul_tmul", "Mathlib/RingTheory/TensorProduct/Basic.lean", "exact", "(a1 x b1)(a2 x b2) = (a1 a2) x (b1 b2): the product on pure tensors."),
+  K("D2-084", "preserved", "Algebra.TensorProduct.includeLeft", "Mathlib/RingTheory/TensorProduct/Basic.lean", "exact", "a goes to a x 1 as an algebra homomorphism A to A x B; includeRight likewise for B."),
+  K("D2-085", "preserved", "HenselianLocalRing", "Mathlib/RingTheory/Henselian.lean", "ingredient", "The Henselian property of a local ring, defined; Henselization itself is not at the pin."),
+  K("D2-087", "output", "CategoryTheory.ProjectiveResolution", "Mathlib/CategoryTheory/Preadditive/Projective/Resolution.lean", "exact", "A chain complex of projectives indexed by the naturals with a quasi-isomorphism to Z in degree 0."),
+  K("D2-088", "output", "CategoryTheory.InjectiveResolution", "Mathlib/CategoryTheory/Preadditive/Injective/Resolution.lean", "exact", "A cochain complex of injectives indexed by the naturals with a quasi-isomorphism from Z in degree 0."),
+  K("D2-091", "output", "CochainComplex.mappingCone", "Mathlib/Algebra/Homology/HomotopyCategory/MappingCone.lean", "exact", "The mapping cone of a morphism of integer-indexed cochain complexes, defined as its homotopy cofiber. The long exact sequence is not this declaration."),
+  // Batch 3: D2-092 to D2-123.
+  K("D2-092", "output", "HomologicalComplex.cylinder.homotopyEquiv", "Mathlib/Algebra/Homology/HomotopyCofiber.lean", "related", "The cylinder of a complex K is homotopy equivalent to K: the cylinder of the identity map, not the mapping cylinder of an arbitrary f."),
+  K("D2-095", "preserved", "CategoryTheory.Functor.leftDerivedZeroIsoSelf", "Mathlib/CategoryTheory/Abelian/LeftDerived.lean", "exact", "L_0 F is isomorphic to F for an additive F preserving finite colimits (right exact).", { whole: true }),
+  K("D2-096", "preserved", "CategoryTheory.Functor.rightDerivedZeroIsoSelf", "Mathlib/CategoryTheory/Abelian/RightDerived.lean", "exact", "R^0 F is isomorphic to F for an additive F preserving finite limits (left exact).", { whole: true }),
+  K("D2-097", "output", "CategoryTheory.Abelian.Ext", "Mathlib/Algebra/Homology/DerivedCategory/Ext/Basic.lean", "general", "Ext^n(X, Y) in any abelian category with the needed size conditions, defined as morphisms X to Y[n] in the derived category; modules are a case."),
+  K("D2-098", "output", "CategoryTheory.Tor", "Mathlib/CategoryTheory/Monoidal/Tor.lean", "general", "Tor_n as a bifunctor, the left derived functors of the tensor product in a monoidal abelian category with enough projectives; modules over a commutative ring are a case."),
+  K("D2-099", "description", "TopCat.Presheaf.pushforward", "Mathlib/Topology/Sheaves/Presheaf.lean", "exact", "The pushforward of a presheaf along a continuous map, by precomposition with preimage of opens: f_* F(U) = F(f^-1 U)."),
+  K("D2-101", "preserved", "TopCat.Presheaf.pullbackPushforwardAdjunction", "Mathlib/Topology/Sheaves/Presheaf.lean", "related", "Pullback of presheaves is left adjoint to pushforward; the landed claim concerns the pullback of sheaves of modules, f^*, which this declaration does not cover."),
+  K("D2-114", "output", "AlgebraicGeometry.ProjectiveSpectrum.Proj.structureSheaf", "Mathlib/AlgebraicGeometry/ProjectiveSpectrum/StructureSheaf.lean", "ingredient", "The structure sheaf of Proj of a graded ring, which makes it a scheme; O(1) is not this declaration."),
+  // Batch 4: D2-124 to D2-149.
+  K("D2-127", "description", "Rep.indResAdjunction", "Mathlib/RepresentationTheory/Induced.lean", "related", "Induction is left adjoint to restriction along any group homomorphism (Frobenius reciprocity); the landed text says right adjoint, which needs finite index."),
+  K("D2-127", "description", "Rep.coindResAdjunction", "Mathlib/RepresentationTheory/FiniteIndex.lean", "special", "For a subgroup of finite index, coinduction (isomorphic there to induction) is left adjoint to restriction, so induction is also the right adjoint: the case where the landed claim holds."),
+  K("D2-129", "description", "Representation.ofQuotient", "Mathlib/RepresentationTheory/Basic.lean", "related", "A representation of G trivial on the normal subgroup S factors through G/S: the converse of inflation, which composes a representation of G/S with the quotient map."),
+  K("D2-130", "description", "Representation.quotientToInvariants", "Mathlib/RepresentationTheory/Invariants.lean", "related", "A representation of G gives one of G/S on the S-invariants: deflation by invariants. The landed \"averaging\" is not this declaration."),
+  K("D2-137", "output", "PositiveLinearMap.gnsStarAlgHom", "Mathlib/Analysis/CStarAlgebra/GelfandNaimarkSegal.lean", "general", "A unital star representation on the GNS Hilbert space from any positive linear functional on a unital C*-algebra; a state is the normalized case. The cyclic vector is not part of this declaration."),
+  K("D2-140", "output", "CategoryTheory.nerveFunctor", "Mathlib/AlgebraicTopology/SimplicialSet/Nerve.lean", "special", "The nerve functor from small categories to simplicial sets: the case of a category as input."),
+  K("D2-142", "description", "CategoryTheory.Adjunction", "Mathlib/CategoryTheory/Adjunction/Basic.lean", "exact", "An adjunction F left adjoint to G, given by a unit and a counit with the triangle identities; the hom-set bijection is Adjunction.homEquiv."),
+  // Batch 5: D2-150 to D2-177.
+  K("D2-151", "output", "MonoidAlgebra", "Mathlib/Algebra/MonoidAlgebra/Defs.lean", "general", "R[M] over any semiring, finitely supported functions with the convolution product; Z[M] for a commutative monoid is a case."),
+  K("D2-152", "output", "MonoidAlgebra", "Mathlib/Algebra/MonoidAlgebra/Defs.lean", "general", "The group ring is the monoid algebra of a group; Z[G] is a case."),
+  K("D2-162", "description", "Polynomial.resultant", "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean", "exact", "The resultant of two polynomials, defined as the determinant of their Sylvester matrix."),
+  K("D2-162", "preserved", "Polynomial.resultant_eq_zero_iff", "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean", "general", "Over a field the resultant vanishes exactly when the polynomials are not both zero and not coprime; over an algebraically closed field that is a common root."),
+  K("D2-163", "description", "Polynomial.discr", "Mathlib/RingTheory/Polynomial/Resultant/Basic.lean", "related", "The discriminant as the determinant of the Sylvester matrix of f and its derivative, times a sign; the landed text omits the normalization by the leading coefficient."),
+  K("D2-165", "output", "OreLocalization", "Mathlib/GroupTheory/OreLocalization/Basic.lean", "exact", "The localization of a monoid (and, through its instances, a ring) at an Ore set S: fractions with the Ore condition."),
+  K("D2-166", "output", "Subgroup.centralizer", "Mathlib/GroupTheory/Subgroup/Centralizer.lean", "exact", "The centralizer of a set as a subgroup.", { whole: true }),
+  K("D2-167", "output", "Subgroup.normalizer", "Mathlib/Algebra/Group/Subgroup/Defs.lean", "exact", "The normalizer of a set as a subgroup.", { whole: true }),
+  K("D2-167", "preserved", "Subgroup.normal_in_normalizer", "Mathlib/Algebra/Group/Subgroup/Basic.lean", "exact", "H is normal in its normalizer.", { whole: true }),
+  K("D2-170", "preserved", "Matrix.det_conj", "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean", "exact", "det (M N M^-1) = det N for invertible M: the determinant part."),
+  K("D2-170", "preserved", "Matrix.trace_conj", "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean", "exact", "trace (M N M^-1) = trace N for invertible M: the trace part."),
+  // Batch 6: D2-178 to D2-199.
+  K("D2-178", "description", "IsLocalRing.CotangentSpace", "Mathlib/RingTheory/Ideal/Cotangent.lean", "ingredient", "The cotangent space m/m^2 of a local ring, a module over the residue field; the tangent space, its dual, is not defined here."),
+  K("D2-179", "output", "KaehlerDifferential", "Mathlib/RingTheory/Kaehler/Basic.lean", "exact", "The module of Kahler differentials of S over R, built as I/I^2 for I the kernel of the multiplication S ⊗ S to S."),
+  K("D2-179", "output", "KaehlerDifferential.D", "Mathlib/RingTheory/Kaehler/Basic.lean", "exact", "The universal derivation from S into its module of Kahler differentials."),
+  K("D2-179", "preserved", "KaehlerDifferential.linearMapEquivDerivation", "Mathlib/RingTheory/Kaehler/Basic.lean", "exact", "S-linear maps from the module of differentials to M are the R-derivations from S to M: the universal property."),
+  K("D2-184", "input", "VectorBundleCore", "Mathlib/Topology/VectorBundle/Basic.lean", "exact", "Open base sets, coordinate changes into continuous linear maps of the fibre, and the cocycle condition coordChange_comp: the data a vector bundle is glued from."),
+  K("D2-185", "description", "DerivedCategory", "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean", "exact", "The derived category of an abelian category: cochain complexes up to quasi-isomorphism, a localization."),
+  K("D2-185", "preserved", "DerivedCategory.isIso_Q_map_iff_quasiIso", "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean", "exact", "A morphism of cochain complexes becomes an isomorphism in the derived category exactly when it is a quasi-isomorphism."),
+  K("D2-185", "preserved", "DerivedCategory.homologyFunctorFactors", "Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean", "exact", "Each homology functor of cochain complexes factors through the derived category: the homology is kept."),
+  K("D2-187", "output", "CategoryTheory.MonoidalCategory", "Mathlib/CategoryTheory/Monoidal/Category.lean", "exact", "A monoidal structure on a category, extending the tensor, unit, associator and unitors of MonoidalCategoryStruct; its pentagon and triangle fields lie past the declaration window the excerpt keeps."),
+  K("D2-190", "description", "CategoryTheory.ObjectProperty.IsSerreClass", "Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean", "exact", "A Serre class in an abelian category: it holds for zero and is closed under subobjects, quotients and extensions."),
+  K("D2-190", "broken", "CategoryTheory.ObjectProperty.SerreClassLocalization.isZero_obj_iff", "Mathlib/CategoryTheory/Abelian/SerreClass/Localization.lean", "exact", "For a localization L with respect to a Serre class P, L X is zero exactly when X lies in P: the subcategory's objects go to zero."),
+  K("D2-192", "description", "Ideal.radical", "Mathlib/RingTheory/Ideal/Operations.lean", "exact", "The radical of I: the elements some power of which lies in I."),
+  K("D2-192", "output", "Ideal.radical_idem", "Mathlib/RingTheory/Ideal/Operations.lean", "exact", "The radical of the radical is the radical: rad(I) is a radical ideal."),
+  K("D2-192", "preserved", "PrimeSpectrum.zeroLocus_radical", "Mathlib/RingTheory/Spectrum/Prime/Basic.lean", "exact", "The zero locus of rad(I) in the prime spectrum is that of I."),
+  K("D2-194", "description", "CategoryTheory.ComposableArrows.Exact", "Mathlib/Algebra/Homology/ExactSequence.lean", "general", "A sequence of composable arrows is exact when it is a complex and each two consecutive arrows form an exact short complex, in a category with zero morphisms."),
+];
+
+module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Involution (mathematics) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1372904372
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 416a46682c0fe08160449d6e49216527774d42dbd081030934a70a9999a24509
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+{{Short description|Function that is its own inverse}}
+
+An involution is a function {{math|''f'' : ''X'' → ''X''}} that, when applied twice, brings one back to the starting point.
+
+Given a module {{math|''M''}} over a [[ring (mathematics)|ring]] {{math|''R''}}, an {{math|''R''}} [[endomorphism]] {{math|''f''}} of {{math|''M''}} is called an involution if {{math|{{itco|''f''}}<sup>2</sup>}} is the identity homomorphism on {{math|''M''}}.
+
+In [[ring theory]], the word ''involution'' is customarily taken to mean an [[antihomomorphism]] that is its own inverse function.

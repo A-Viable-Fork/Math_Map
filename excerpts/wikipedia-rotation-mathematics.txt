@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Rotation (mathematics) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378041656
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f321ae9fff9ad1d35390cf72c2ef050ee6bdaccb6c7746dadbd60c9e5aac9604
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Any rotation is a [[motion (geometry)|motion]] of a certain [[space (mathematics)|space]] that preserves at least one [[point (geometry)|point]].
+
+This (common) fixed point or [[center (geometry)|center]] is called the ''[[center of rotation]]''
+
+* The ''[[axis of rotation]]'' is a [[line (geometry)|line]] of its fixed points.
+
+A motion of a [[Euclidean space]] is the same as its [[isometry]]: it leaves [[Euclidean distance|the distance]] between any two points unchanged after the transformation. But a (proper) rotation also has to preserve the [[orientation (vector space)|orientation structure]].
+
+In [[Plane (mathematics)|two dimensions]], only a single [[angle]] is needed to specify a rotation about the [[origin (mathematics)|origin]]

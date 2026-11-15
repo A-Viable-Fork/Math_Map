@@ -8,15 +8,15 @@ Entries: 2022.
 |---|---|---|
 | Every operand, with existing kinds only | 720 | 35.6% |
 | Every operand, using candidate kinds | 40 | 2.0% |
-| At least one input and one output kind | 151 | 7.5% |
-| Neither side | 1111 | 54.9% |
+| At least one input and one output kind | 153 | 7.6% |
+| Neither side | 1109 | 54.8% |
 
 ## By domain
 
 | Domain | Entries | Fully typed | Partly | Neither |
 |---|---|---|---|---|
 | D1 | 124 | 58 | 19 | 47 |
-| D2 | 205 | 54 | 15 | 136 |
+| D2 | 205 | 54 | 17 | 134 |
 | D3 | 189 | 58 | 8 | 123 |
 | D4 | 439 | 183 | 39 | 217 |
 | D5 | 160 | 51 | 11 | 98 |
@@ -31,15 +31,15 @@ Entries: 2022.
 | function | 426 | carrier |
 | sequence | 257 | carrier |
 | graph | 167 | carrier |
-| morphism | 139 | carrier |
-| space | 133 | carrier |
+| morphism | 141 | carrier |
+| space | 132 | carrier |
 | manifold | 112 | carrier |
 | category | 109 | carrier |
-| set | 97 | carrier |
+| set | 98 | carrier |
 | matrix | 97 | carrier |
-| element | 92 | carrier |
+| element | 93 | carrier |
 | group | 92 | carrier |
-| algebra | 89 | carrier |
+| algebra | 88 | carrier |
 | dataset | 79 | carrier |
 | poset | 75 | carrier |
 | ring | 65 | carrier |
@@ -54,16 +54,16 @@ Entries: 2022.
 | polynomial | 28 | carrier |
 | matroid | 25 | carrier |
 | proof | 24 | carrier |
+| curve | 23 | carrier |
 | relation | 23 | carrier |
 | model | 23 | carrier |
-| curve | 21 | carrier |
-| sheaf | 20 | carrier |
-| knot | 20 | carrier |
+| sheaf | 21 | carrier |
 | bundle | 20 | carrier |
 | ideal | 19 | carrier |
 | variety | 19 | carrier |
 | decision-problem | 19 | carrier |
 | topos | 19 | carrier |
+| knot | 19 | carrier |
 | spectral-sequence | 19 | carrier |
 | simplicial-set | 18 | carrier |
 | number | 17 | carrier |
@@ -79,7 +79,7 @@ Entries: 2022.
 | word | 9 | candidate |
 | form | 9 | carrier |
 | verdict | 9 | carrier |
-| connection | 7 | carrier |
+| connection | 6 | carrier |
 | code | 6 | candidate |
 | process | 6 | carrier |
 | vector-space | 5 | carrier |
@@ -96,4 +96,4 @@ Entries: 2022.
 
 Where the word list is thinnest: the next kinds to add, or senses to split.
 
-geometric 23, transformed 21, family 15, original 14, continuous 13, angle 12, cohomology 12, class 11, figure 11, solution 11, center 10, finite 9, normal 9, real 9, unique 9, algorithm 8, complex 8, discrete 8, evolved 8, fibration 8, ground 8, point 8, region 8, standard 8, target 8, algebraic 7, binary 7, complete 7, gaussian 7, modified 7, new 7, qubit 7, signature 7, theta 7, unitary 7, alpha 6, block 6, dual 6, image 6, kernel 6, lambda 6, linear 6, mapping 6, mother 6, pair 6, partition 6, permutation 6, scale 6, scaled 6, semiring 6, upper 6, vertical 6, boolean 5, chain 5, composite 5, delta 5, homology 5, hypersequent 5, join 5, monad 5.
+geometric 23, transformed 21, family 15, original 14, continuous 13, angle 12, cohomology 12, solution 12, class 11, figure 11, center 10, complex 9, finite 9, normal 9, real 9, unique 9, algorithm 8, discrete 8, evolved 8, fibration 8, ground 8, point 8, region 8, standard 8, target 8, binary 7, complete 7, gaussian 7, modified 7, new 7, qubit 7, signature 7, theta 7, unitary 7, algebraic 6, alpha 6, block 6, dual 6, image 6, kernel 6, lambda 6, linear 6, mapping 6, mother 6, pair 6, partition 6, permutation 6, scale 6, scaled 6, semiring 6, upper 6, vertical 6, boolean 5, chain 5, composite 5, delta 5, homology 5, hypersequent 5, join 5, monad 5.

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Ring/Prod.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Ring/Prod.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 773b8479fe52560625708247dde6e71ec600e4e97c704e3a5f4d5fdf7ccb76b5
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- RingHom.fst (line 187)
+def fst : R × S →+* R :=
+  { MonoidHom.fst R S, AddMonoidHom.fst R S with toFun := Prod.fst }

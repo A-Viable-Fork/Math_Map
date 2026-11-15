@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Covariance and contravariance of vectors (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376306988
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 85cefb62bbad853d0578fc2515a1be32603fe2e62470ea685076db551dad28f1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+then the components of the covector <math>\mathbf{v}\ \cdot</math> will transform with the same matrix <math>M</math>
+
+That is, the matrix that transforms the vector components must be the inverse of the matrix that transforms the basis vectors.
+
+Because the components of the linear functional α transform with the matrix ''A'', these components are said to '''transform covariantly''' under a change of basis.
+
+Because the components of the vector ''v'' transform with the ''inverse'' of the matrix ''A'', these components are said to '''transform contravariantly''' under a change of basis.
+
+<math display="block">\frac{\partial}{\partial y^i} = \sum_{j=1}^n\frac{\partial x^j}{\partial y^i}\frac{\partial}{\partial x^j}.</math>
+
+<math display="block">v^i\left[\mathbf{f}'\right] = \sum_{j=1}^n \frac{\partial y^i}{\partial x^j}v^j[\mathbf{f}].</math>
+
+a tensor is simply "there" and its components of either kind are only calculational artifacts whose values depend on the chosen coordinates.

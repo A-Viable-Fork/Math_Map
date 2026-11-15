@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Serre subcategory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1143559342
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 535b3d2a64fe016e5d3cb0dba637940c0aa071cefc17e992ff743fc3bed75aa5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Serre''' and '''localizing subcategories''' form important classes of [[Subcategory|subcategories]] of an [[abelian category]].
+
+Let <math>\mathcal{A}</math> be an [[abelian category]]. A non-empty full [[subcategory]] <math>\mathcal{C}</math> is called a ''Serre subcategory'' (or also a ''dense subcategory''), if for every short [[exact sequence]]
+
+In words: <math>\mathcal{C}</math> is closed under subobjects, quotient objects
+
+Each Serre subcategory <math>\mathcal{C}</math> of <math>\mathcal{A}</math> is itself an abelian category, and the inclusion functor <math>\mathcal{C}\to\mathcal{A}</math> is [[Exact functor|exact]].
+
+one can build (for locally small <math>\mathcal{A}</math>) the [[Quotient of an abelian category|quotient category]]

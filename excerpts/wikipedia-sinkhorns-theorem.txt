@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Sinkhorn's theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1363957487
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ecfdc73d86c9c918ccb5acedd8d12f2ba00fa0d01db1aace801e8ee67782f8e4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+If ''A'' is an [[Matrix (mathematics)#Square matrices|''n'' &times; ''n'' matrix]] with strictly positive elements, then there exist [[Diagonal matrix|diagonal matrices]] ''D''<sub>1</sub> and ''D''<sub>2</sub> with strictly positive diagonal elements such that ''D''<sub>1</sub>''AD''<sub>2</sub> is [[Doubly stochastic matrix|doubly stochastic]].
+
+A simple [[iterative method]] to approach the double [[stochastic matrix]] is to alternately rescale all rows and all columns of ''A'' to sum to 1.

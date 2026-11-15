@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Evolute (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369257467
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cf570d36a14e6238cf616726e086ee32dc05f9750283d0ab7829437a74024f23
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''evolute''' of a [[curve]] is the [[locus (mathematics)|locus]] of all its [[Center of curvature|centers of curvature]].
+
+is the parametric representation of a [[regular curve]] in the plane with its curvature nowhere 0
+
+Evolutes are closely connected to [[involute]]s: A curve is the evolute of any of its involutes.
+
+*For any arc of the evolute that does not include a cusp, the length of the arc equals the difference between the radii of curvature at its endpoints.

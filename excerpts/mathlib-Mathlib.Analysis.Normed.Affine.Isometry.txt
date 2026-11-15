@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/Normed/Affine/Isometry.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Normed/Affine/Isometry.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: d76f1a3d1f6dfe4baa8c24ff541e64f28868b43582b6a722cad74af0ff97b0e7
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AffineIsometryEquiv.constVAdd (line 753)
+def constVAdd (v : V) : P ≃ᵃⁱ[𝕜] P :=
+  { AffineEquiv.constVAdd 𝕜 P v with norm_map := fun _ => rfl }

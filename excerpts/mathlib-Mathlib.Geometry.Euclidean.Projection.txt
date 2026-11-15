@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Geometry/Euclidean/Projection.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Geometry/Euclidean/Projection.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 4bb9feda8ced36084b66fe30a76dd179a8ae58eeaa786b2dae2edc0b55dedd1a
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- EuclideanGeometry.reflection (line 417)
+def reflection (s : AffineSubspace 𝕜 P) [Nonempty s] [s.direction.HasOrthogonalProjection] :
+    P ≃ᵃⁱ[𝕜] P :=
+  letI x : P := Classical.arbitrary s
+  AffineIsometryEquiv.vaddConst 𝕜 x
+    |>.symm.trans s.direction.reflection.toAffineIsometryEquiv
+    |>.trans <| AffineIsometryEquiv.vaddConst 𝕜 x
