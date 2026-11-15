@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Simplex graph (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1385325684
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 5a98cf94fd6e673b8f9c62ea86c9e5c8a8cbf62deed023e21e23b40274ff1861
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]
+
+The empty set is included as one of the cliques of {{mvar|G}} that are used to form the clique graph, as is every set of one vertex and every set of two adjacent vertices.
+
+The simplex graph is the [[median graph]] corresponding to this median algebra structure.

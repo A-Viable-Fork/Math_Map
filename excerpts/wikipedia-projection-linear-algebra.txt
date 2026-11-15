@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Projection (linear algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374765997
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a8338544a9a23f00fe27300ee58a86b8623fddb94d97c0cea926b1d6b598f6a4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix
+
+A projection is orthogonal if and only if it is [[self-adjoint operator|self-adjoint]].
+
+It leaves its [[image (mathematics)|image]] unchanged.
+
+Suppose the [[Linear subspace|subspace]]s <math>U</math> and <math>V</math> are the [[Image (mathematics)|image]] and [[Kernel (linear algebra)|kernel]] of <math>P</math> respectively.

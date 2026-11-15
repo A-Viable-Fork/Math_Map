@@ -12,7 +12,7 @@ import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse, anchorable } from "./mathmap.mjs";
-import { evidence, LEVELS } from "./evidence.mjs";
+import { evidence, LEVELS, strictReadings } from "./evidence.mjs";
 import { status as leanStatus } from "./lean.mjs";
 import { leads as misalignLeads } from "./misalign.mjs";
 
@@ -171,7 +171,7 @@ export function build() {
     "Free-text fields say what an entry preserves and breaks; `mapfill/invariants.js` names those invariants, with the relations between them, gives each a carrier (the kind of object that has it), records what kinds of object each linked entry takes and returns, and links entries to invariants. Each link is justified by a phrase in the entry's own field or, where the entry is silent, by a receipted quote with a note. The vocabulary grows by use.", "",
     "`node scripts/compose.mjs --chain D2-118,D2-117` reports, for a chain of entries applied in order, whether each join fits (match, narrowing, partial: an input the previous step does not supply, or mismatch: an unstated conversion), and which invariants survive, break, are restored or created, judged only at the steps that act on their carrier. A step's input kinds are joint operands, and an implication between invariants carries claims only when it relates preservation itself. Silence means the map does not say; the invariant is then reported as unknown.", "",
     "## Evidence per claim", "",
-    "Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib or this repository's Lean project states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and formal links. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest.", "",
+    "Every field of every entry, and every named-invariant claim, carries an evidence level, weakest first: **contradicted** (a check found it wrong and it is not yet corrected), **unsupported** (checked; no source supports it), **unchecked** (never checked), **imprecise** (right idea, a detail wrong), **sourced** (a verbatim quote supports it), **formal** (Mathlib or this repository's Lean project states it). `scripts/evidence.mjs` computes them from the audit grades, receipts, corrections and formal links; a fill-review field read again under the strict rule (`audit/strict/`) takes that reading's verdict. The composition checker reports, for every result and join of a chain, the weakest claim it rests on and where it is, so verification can go where a chain is weakest.", "",
     "## Corrections", "",
     "`mapfill/corrections.js` replaces landed fields that a check found wrong or imprecise with receipted text; the landed text is kept on the entry (`corrected.landed`). A correction needs a prior finding (an audit grade, a flag, or a Mathlib conflict) and a receipt for every field it changes. Correcting every field of a flagged entry resolves the flag. The audit's error rates still describe the map as landed.", "",
     "## Formal links (Lean and Mathlib)", "",
@@ -236,6 +236,9 @@ export function build() {
     `- ${map.counts.byTier.authored ?? 0} authored fills and ${map.counts.byTier.generated ?? 0} generated entries not yet reviewed against sources; ${map.counts.fieldEvidence.unchecked} fields unchecked.`,
     `- ${map.counts.fieldEvidence.unsupported} fields unsupported and ${map.counts.fieldEvidence.imprecise} imprecise, awaiting a source or a correction.`,
     `- Misalignment leads: ${ML.filter((l) => l.state === "open").length} open, ${ML.filter((l) => l.state === "held").length} held (\`reports/MISALIGN.md\`).`,
+    (() => { const R = require("../audit/fill-review-0_1.js").REVIEW, S = strictReadings(R), FF = ["name", "description", "input", "output", "preserved", "broken"];
+      const n = R.filter((g) => g.batch <= 18).reduce((k, g) => k + FF.filter((f) => g.fields[f].verdict === "confirmed" && !S.has(`${g.id}.${f}`)).length, 0);
+      return `- ${n} fill-review fields confirmed under the earlier rule and not yet read under the strict rule; the blind sample's rate puts roughly a third of them below confirmed (\`reports/STRICT-READING.md\`).`; })(),
     "- Unreviewed Mathlib name matches: `reports/FORMAL-QUEUE.md`. Notions Mathlib lacks: `lean/WISHLIST.md`.",
     "- No binding is a device or host test.", "",
   ].join("\n");

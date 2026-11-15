@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Iterative compression (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1358364477
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f3de20f5591c039bc3e03dd5cb7673ffab96da8eaa611e24ad80d0da3094061d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step.
+
+The technique was invented by Reed, Smith and Vetta

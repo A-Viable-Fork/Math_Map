@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Homothety (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1356815044
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 07eb100d18b9a1b93ca9bd11399bc8b3ba3d1a8981f8dbcfa105d0f293bd0a45
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''
+
+<math display="block">\mathbf x'=\mathbf s + k(\mathbf x -\mathbf s).</math>
+
+* A ''line'' is mapped onto a parallel line. Hence: ''angles'' remain unchanged.
+
+* The ''ratio of two line segments'' is preserved.
+
+Both properties show that a homothety is a ''[[Similarity (geometry)|similarity]]''.
+
+In Euclidean geometry, a homothety of ratio <math>k</math> multiplies ''distances'' between points by {{tmath|\vert k \vert}}, ''areas'' by <math>k^2</math>

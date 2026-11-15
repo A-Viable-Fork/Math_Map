@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Delaunay refinement (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369427795
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8a4e684b8053420bf5de42ba0d1327b13fb5b236dc135eca333ae958251a2bcb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles.
+
+A triangle is considered poor-quality if it has a circumradius to shortest edge ratio larger than some prescribed threshold.
+
+* The [[circumcenter]] of a poor-quality triangle is inserted into the triangulation, unless this circumcenter lies in the diametral circle of some segment.
+
+In this case, the encroached segment is split instead.

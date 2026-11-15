@@ -1,13 +1,14 @@
 // Role: evidence per claim. Says, for each field of an entry and each named-invariant claim, how well it is
 //   supported, so a chain can report the weakest claim it rests on.
-// Contract: exports LEVELS, rank(level), weaker(a, b), and evidence(P) returning { field(e, f), claim(e, f,
+// Contract: exports LEVELS, rank(level), weaker(a, b), strictReadings(REVIEW?), and evidence(P) returning { field(e, f), claim(e, f,
 //   invariant), grades }. Levels, weakest first: contradicted (a check found it wrong: an audit grade of wrong
 //   or a Mathlib conflict, not since corrected), unsupported (checked; no source supports it), unchecked
 //   (landed or authored, never checked), imprecise (right idea, a detail wrong), sourced (a verbatim quote
 //   supports it: an audit grade of confirmed, an addition's or a correction's receipts, a receipted link),
 //   formal (Mathlib states it: an exact link covering the whole field or naming the invariant, or a general
 //   link whose premise field is itself formal; or lean/ proves it: an exact claim in mapfill/lean.js naming the
-//   invariant, or the whole-field claims, all proved according to lean/AUDIT.json, over receipted definitions). A relation between invariants passes evidence along at the
+//   invariant, or the whole-field claims, all proved according to lean/AUDIT.json, over receipted definitions). A
+//   field of the fill review read again under the strict rule takes the strict reading's verdict (strictReadings). A relation between invariants passes evidence along at the
 //   weaker of the claim's level and the relation's (receipts: sourced; a definitional basis: formal).
 // Invariant: read-only. A level summarizes recorded evidence; it is never raised by argument alone.
 import { createRequire } from "node:module";
@@ -21,8 +22,24 @@ export const weaker = (a, b) => (rank(a) <= rank(b) ? a : b);
 const stronger = (a, b) => (rank(a) >= rank(b) ? a : b);
 const FROM_GRADE = { wrong: "contradicted", unsupported: "unsupported", imprecise: "imprecise", confirmed: "sourced" };
 
+// The strict second reading of the fill review (audit/strict/, scripts/strict.mjs): the blind sample's grades (a grade made
+// after a new source was windowed, where there is one) and the targeted sweep's. Under the strict rule [ruling: operator,
+// 2026-11-13] a field read again takes the second reading's verdict, upward or downward; a home's reading covers every
+// entry the home fills. Returns a Map "id.field" to verdict.
+export function strictReadings(REVIEW = require("../audit/fill-review-0_1.js").REVIEW) {
+  const out = new Map();
+  const sample = require("../audit/strict/sample-0_2.json"), reading = require("../audit/strict/reading-0_2.js").READING, sweep = require("../audit/strict/sweep-0_2.js").SWEEP;
+  const covers = Object.fromEntries(REVIEW.map((g) => [g.id, [g.id, ...(g.covers || [])]]));
+  const set = (id, f, v) => { for (const x of covers[id] || [id]) out.set(`${x}.${f}`, v); };
+  for (const it of sample.items) { const g = reading.grades[it.id]; if (g) set(it.entry, it.field, (g.fetched || g).verdict); }
+  for (const [k, g] of Object.entries(sweep.grades)) { const [id, f] = k.split("."); set(id, f, g.verdict); }
+  return out;
+}
+
 export function evidence(P) {
-  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED, ...require("../audit/fill-review-0_1.js").REVIEW.flatMap((g) => [g, ...(g.covers || []).map((id) => ({ ...g, id }))])].map((g) => [g.id, g]));
+  const REVIEW = require("../audit/fill-review-0_1.js").REVIEW;
+  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED, ...REVIEW.flatMap((g) => [g, ...(g.covers || []).map((id) => ({ ...g, id }))])].map((g) => [g.id, g]));
+  const strict = strictReadings(REVIEW);
   const links = P.formal.links, V = P.vocabulary;
   const LA = leanStatus(), LC = require("../mapfill/lean.js").CLAIMS;
   const proved = (c) => LA?.decls?.[c.decl]?.status === "proved";
@@ -33,7 +50,9 @@ export function evidence(P) {
     const corrected = (e.corrected || []).includes(f) || (f === "name" && !!e.flagResolved);
     let level = "unchecked";
     if (e.origin === "added") { level = "sourced"; basis.push("addition receipts"); }
-    const g = grades[e.id]?.fields?.[f];
+    const st = strict.get(`${e.id}.${f}`);
+    const g = st ? { verdict: st } : grades[e.id]?.fields?.[f];
+    if (st) basis.push("strict reading");
     if (corrected) { level = "sourced"; basis.push("correction receipts"); }
     else if (g) { level = e.origin === "added" ? stronger(level, FROM_GRADE[g.verdict]) : FROM_GRADE[g.verdict]; basis.push(`audit: ${g.verdict}`); if (g.verdict === "wrong") level = "contradicted"; }
     if (conflict && !corrected) { level = "contradicted"; basis.push("Mathlib conflict"); }

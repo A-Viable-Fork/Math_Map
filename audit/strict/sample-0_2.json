@@ -1,0 +1,897 @@
+{
+ "version": "0.2",
+ "seed": 20261113,
+ "rng": "mulberry32, as scripts/audit.mjs",
+ "drawn": "2026-11-13",
+ "frame": "Every field of audit/fill-review-0_1.js (436 entries) graded confirmed, unsupported or imprecise, less D7-001, D7-002, D7-003, D7-004, whose grades the reader saw before the draw.",
+ "strata": {
+  "confirmed": {
+   "asked": 100,
+   "drawn": 100,
+   "frame": 1935
+  },
+  "unsupported": {
+   "asked": 30,
+   "drawn": 30,
+   "frame": 641
+  },
+  "imprecise": {
+   "asked": 20,
+   "drawn": 15,
+   "frame": 15
+  }
+ },
+ "method": "Each stratum shuffled (Fisher-Yates) and its first n taken, strata in the order confirmed, unsupported, imprecise; a stratum smaller than its n is taken whole (a census); the draw then shuffled together and numbered. The stratum of an item is not written here; it is recomputed from the review at comparison time.",
+ "items": [
+  {
+   "id": "S001",
+   "entry": "D7-017",
+   "field": "broken",
+   "batch": 1
+  },
+  {
+   "id": "S002",
+   "entry": "D7-279",
+   "field": "broken",
+   "batch": 12
+  },
+  {
+   "id": "S003",
+   "entry": "D7-233",
+   "field": "broken",
+   "batch": 10
+  },
+  {
+   "id": "S004",
+   "entry": "D7-062",
+   "field": "broken",
+   "batch": 3
+  },
+  {
+   "id": "S005",
+   "entry": "D7-239",
+   "field": "broken",
+   "batch": 10
+  },
+  {
+   "id": "S006",
+   "entry": "D7-360",
+   "field": "output",
+   "batch": 15
+  },
+  {
+   "id": "S007",
+   "entry": "D7-196",
+   "field": "input",
+   "batch": 8
+  },
+  {
+   "id": "S008",
+   "entry": "D7-228",
+   "field": "description",
+   "batch": 10
+  },
+  {
+   "id": "S009",
+   "entry": "D7-097",
+   "field": "description",
+   "batch": 4
+  },
+  {
+   "id": "S010",
+   "entry": "D7-233",
+   "field": "output",
+   "batch": 10
+  },
+  {
+   "id": "S011",
+   "entry": "D7-194",
+   "field": "output",
+   "batch": 8
+  },
+  {
+   "id": "S012",
+   "entry": "D7-119",
+   "field": "description",
+   "batch": 5
+  },
+  {
+   "id": "S013",
+   "entry": "D7-382",
+   "field": "input",
+   "batch": 16
+  },
+  {
+   "id": "S014",
+   "entry": "D7-347",
+   "field": "output",
+   "batch": 14
+  },
+  {
+   "id": "S015",
+   "entry": "D7-124",
+   "field": "broken",
+   "batch": 5
+  },
+  {
+   "id": "S016",
+   "entry": "D7-196",
+   "field": "broken",
+   "batch": 8
+  },
+  {
+   "id": "S017",
+   "entry": "D7-128",
+   "field": "broken",
+   "batch": 6
+  },
+  {
+   "id": "S018",
+   "entry": "D7-013",
+   "field": "name",
+   "batch": 1
+  },
+  {
+   "id": "S019",
+   "entry": "D7-052",
+   "field": "preserved",
+   "batch": 3
+  },
+  {
+   "id": "S020",
+   "entry": "D8-201",
+   "field": "description",
+   "batch": 18
+  },
+  {
+   "id": "S021",
+   "entry": "D7-121",
+   "field": "description",
+   "batch": 5
+  },
+  {
+   "id": "S022",
+   "entry": "D7-072",
+   "field": "description",
+   "batch": 3
+  },
+  {
+   "id": "S023",
+   "entry": "D7-146",
+   "field": "broken",
+   "batch": 6
+  },
+  {
+   "id": "S024",
+   "entry": "D7-210",
+   "field": "preserved",
+   "batch": 9
+  },
+  {
+   "id": "S025",
+   "entry": "D7-024",
+   "field": "broken",
+   "batch": 1
+  },
+  {
+   "id": "S026",
+   "entry": "D7-410",
+   "field": "input",
+   "batch": 17
+  },
+  {
+   "id": "S027",
+   "entry": "D7-394",
+   "field": "preserved",
+   "batch": 16
+  },
+  {
+   "id": "S028",
+   "entry": "D7-311",
+   "field": "output",
+   "batch": 13
+  },
+  {
+   "id": "S029",
+   "entry": "D7-065",
+   "field": "name",
+   "batch": 3
+  },
+  {
+   "id": "S030",
+   "entry": "D7-269",
+   "field": "output",
+   "batch": 11
+  },
+  {
+   "id": "S031",
+   "entry": "D7-013",
+   "field": "preserved",
+   "batch": 1
+  },
+  {
+   "id": "S032",
+   "entry": "D7-297",
+   "field": "output",
+   "batch": 12
+  },
+  {
+   "id": "S033",
+   "entry": "D7-015",
+   "field": "output",
+   "batch": 1
+  },
+  {
+   "id": "S034",
+   "entry": "D7-045",
+   "field": "preserved",
+   "batch": 2
+  },
+  {
+   "id": "S035",
+   "entry": "D7-045",
+   "field": "description",
+   "batch": 2
+  },
+  {
+   "id": "S036",
+   "entry": "D7-405",
+   "field": "broken",
+   "batch": 17
+  },
+  {
+   "id": "S037",
+   "entry": "D7-175",
+   "field": "preserved",
+   "batch": 7
+  },
+  {
+   "id": "S038",
+   "entry": "D7-156",
+   "field": "output",
+   "batch": 7
+  },
+  {
+   "id": "S039",
+   "entry": "D7-043",
+   "field": "input",
+   "batch": 2
+  },
+  {
+   "id": "S040",
+   "entry": "D7-055",
+   "field": "output",
+   "batch": 3
+  },
+  {
+   "id": "S041",
+   "entry": "D3-184",
+   "field": "input",
+   "batch": 18
+  },
+  {
+   "id": "S042",
+   "entry": "D7-226",
+   "field": "input",
+   "batch": 10
+  },
+  {
+   "id": "S043",
+   "entry": "D7-035",
+   "field": "description",
+   "batch": 2
+  },
+  {
+   "id": "S044",
+   "entry": "D7-136",
+   "field": "output",
+   "batch": 6
+  },
+  {
+   "id": "S045",
+   "entry": "D7-086",
+   "field": "description",
+   "batch": 4
+  },
+  {
+   "id": "S046",
+   "entry": "D7-154",
+   "field": "input",
+   "batch": 7
+  },
+  {
+   "id": "S047",
+   "entry": "D7-142",
+   "field": "output",
+   "batch": 6
+  },
+  {
+   "id": "S048",
+   "entry": "D7-243",
+   "field": "broken",
+   "batch": 10
+  },
+  {
+   "id": "S049",
+   "entry": "D7-220",
+   "field": "description",
+   "batch": 9
+  },
+  {
+   "id": "S050",
+   "entry": "D7-080",
+   "field": "output",
+   "batch": 4
+  },
+  {
+   "id": "S051",
+   "entry": "D7-259",
+   "field": "description",
+   "batch": 11
+  },
+  {
+   "id": "S052",
+   "entry": "D7-145",
+   "field": "name",
+   "batch": 6
+  },
+  {
+   "id": "S053",
+   "entry": "D7-005",
+   "field": "name",
+   "batch": 1
+  },
+  {
+   "id": "S054",
+   "entry": "D7-027",
+   "field": "description",
+   "batch": 2
+  },
+  {
+   "id": "S055",
+   "entry": "D7-138",
+   "field": "input",
+   "batch": 6
+  },
+  {
+   "id": "S056",
+   "entry": "D7-232",
+   "field": "input",
+   "batch": 10
+  },
+  {
+   "id": "S057",
+   "entry": "D7-245",
+   "field": "broken",
+   "batch": 10
+  },
+  {
+   "id": "S058",
+   "entry": "D7-338",
+   "field": "name",
+   "batch": 14
+  },
+  {
+   "id": "S059",
+   "entry": "D7-272",
+   "field": "description",
+   "batch": 11
+  },
+  {
+   "id": "S060",
+   "entry": "D7-040",
+   "field": "input",
+   "batch": 2
+  },
+  {
+   "id": "S061",
+   "entry": "D7-068",
+   "field": "broken",
+   "batch": 3
+  },
+  {
+   "id": "S062",
+   "entry": "D7-281",
+   "field": "input",
+   "batch": 12
+  },
+  {
+   "id": "S063",
+   "entry": "D7-388",
+   "field": "description",
+   "batch": 16
+  },
+  {
+   "id": "S064",
+   "entry": "D7-211",
+   "field": "description",
+   "batch": 9
+  },
+  {
+   "id": "S065",
+   "entry": "D7-310",
+   "field": "broken",
+   "batch": 13
+  },
+  {
+   "id": "S066",
+   "entry": "D7-161",
+   "field": "output",
+   "batch": 7
+  },
+  {
+   "id": "S067",
+   "entry": "D7-254",
+   "field": "output",
+   "batch": 11
+  },
+  {
+   "id": "S068",
+   "entry": "D7-400",
+   "field": "name",
+   "batch": 16
+  },
+  {
+   "id": "S069",
+   "entry": "D7-070",
+   "field": "broken",
+   "batch": 3
+  },
+  {
+   "id": "S070",
+   "entry": "D2-033",
+   "field": "output",
+   "batch": 18
+  },
+  {
+   "id": "S071",
+   "entry": "D7-334",
+   "field": "preserved",
+   "batch": 14
+  },
+  {
+   "id": "S072",
+   "entry": "D8-201",
+   "field": "preserved",
+   "batch": 18
+  },
+  {
+   "id": "S073",
+   "entry": "D8-202",
+   "field": "name",
+   "batch": 18
+  },
+  {
+   "id": "S074",
+   "entry": "D7-163",
+   "field": "name",
+   "batch": 7
+  },
+  {
+   "id": "S075",
+   "entry": "D7-295",
+   "field": "output",
+   "batch": 12
+  },
+  {
+   "id": "S076",
+   "entry": "D7-012",
+   "field": "name",
+   "batch": 1
+  },
+  {
+   "id": "S077",
+   "entry": "D7-193",
+   "field": "broken",
+   "batch": 8
+  },
+  {
+   "id": "S078",
+   "entry": "D7-297",
+   "field": "input",
+   "batch": 12
+  },
+  {
+   "id": "S079",
+   "entry": "D7-089",
+   "field": "output",
+   "batch": 4
+  },
+  {
+   "id": "S080",
+   "entry": "D7-228",
+   "field": "preserved",
+   "batch": 10
+  },
+  {
+   "id": "S081",
+   "entry": "D7-262",
+   "field": "name",
+   "batch": 11
+  },
+  {
+   "id": "S082",
+   "entry": "D7-412",
+   "field": "broken",
+   "batch": 17
+  },
+  {
+   "id": "S083",
+   "entry": "D7-396",
+   "field": "output",
+   "batch": 16
+  },
+  {
+   "id": "S084",
+   "entry": "D7-007",
+   "field": "name",
+   "batch": 1
+  },
+  {
+   "id": "S085",
+   "entry": "D7-255",
+   "field": "output",
+   "batch": 11
+  },
+  {
+   "id": "S086",
+   "entry": "D7-034",
+   "field": "input",
+   "batch": 2
+  },
+  {
+   "id": "S087",
+   "entry": "D7-359",
+   "field": "broken",
+   "batch": 15
+  },
+  {
+   "id": "S088",
+   "entry": "D7-284",
+   "field": "description",
+   "batch": 12
+  },
+  {
+   "id": "S089",
+   "entry": "D7-317",
+   "field": "description",
+   "batch": 13
+  },
+  {
+   "id": "S090",
+   "entry": "D7-387",
+   "field": "name",
+   "batch": 16
+  },
+  {
+   "id": "S091",
+   "entry": "D7-276",
+   "field": "output",
+   "batch": 11
+  },
+  {
+   "id": "S092",
+   "entry": "D7-370",
+   "field": "output",
+   "batch": 15
+  },
+  {
+   "id": "S093",
+   "entry": "D7-185",
+   "field": "output",
+   "batch": 8
+  },
+  {
+   "id": "S094",
+   "entry": "D7-112",
+   "field": "preserved",
+   "batch": 5
+  },
+  {
+   "id": "S095",
+   "entry": "D8-166",
+   "field": "preserved",
+   "batch": 18
+  },
+  {
+   "id": "S096",
+   "entry": "D7-070",
+   "field": "description",
+   "batch": 3
+  },
+  {
+   "id": "S097",
+   "entry": "D7-336",
+   "field": "input",
+   "batch": 14
+  },
+  {
+   "id": "S098",
+   "entry": "D7-341",
+   "field": "broken",
+   "batch": 14
+  },
+  {
+   "id": "S099",
+   "entry": "D7-088",
+   "field": "input",
+   "batch": 4
+  },
+  {
+   "id": "S100",
+   "entry": "D7-282",
+   "field": "preserved",
+   "batch": 12
+  },
+  {
+   "id": "S101",
+   "entry": "D7-194",
+   "field": "preserved",
+   "batch": 8
+  },
+  {
+   "id": "S102",
+   "entry": "D7-029",
+   "field": "description",
+   "batch": 2
+  },
+  {
+   "id": "S103",
+   "entry": "D7-069",
+   "field": "input",
+   "batch": 3
+  },
+  {
+   "id": "S104",
+   "entry": "D7-103",
+   "field": "output",
+   "batch": 5
+  },
+  {
+   "id": "S105",
+   "entry": "D7-065",
+   "field": "input",
+   "batch": 3
+  },
+  {
+   "id": "S106",
+   "entry": "D7-324",
+   "field": "output",
+   "batch": 13
+  },
+  {
+   "id": "S107",
+   "entry": "D7-122",
+   "field": "broken",
+   "batch": 5
+  },
+  {
+   "id": "S108",
+   "entry": "D7-174",
+   "field": "description",
+   "batch": 7
+  },
+  {
+   "id": "S109",
+   "entry": "D7-237",
+   "field": "output",
+   "batch": 10
+  },
+  {
+   "id": "S110",
+   "entry": "D8-202",
+   "field": "output",
+   "batch": 18
+  },
+  {
+   "id": "S111",
+   "entry": "D7-025",
+   "field": "name",
+   "batch": 1
+  },
+  {
+   "id": "S112",
+   "entry": "D7-017",
+   "field": "preserved",
+   "batch": 1
+  },
+  {
+   "id": "S113",
+   "entry": "D7-317",
+   "field": "output",
+   "batch": 13
+  },
+  {
+   "id": "S114",
+   "entry": "D7-369",
+   "field": "preserved",
+   "batch": 15
+  },
+  {
+   "id": "S115",
+   "entry": "D7-035",
+   "field": "broken",
+   "batch": 2
+  },
+  {
+   "id": "S116",
+   "entry": "D7-121",
+   "field": "broken",
+   "batch": 5
+  },
+  {
+   "id": "S117",
+   "entry": "D7-032",
+   "field": "output",
+   "batch": 2
+  },
+  {
+   "id": "S118",
+   "entry": "D7-220",
+   "field": "input",
+   "batch": 9
+  },
+  {
+   "id": "S119",
+   "entry": "D7-084",
+   "field": "output",
+   "batch": 4
+  },
+  {
+   "id": "S120",
+   "entry": "D7-167",
+   "field": "output",
+   "batch": 7
+  },
+  {
+   "id": "S121",
+   "entry": "D7-343",
+   "field": "preserved",
+   "batch": 14
+  },
+  {
+   "id": "S122",
+   "entry": "D7-352",
+   "field": "name",
+   "batch": 15
+  },
+  {
+   "id": "S123",
+   "entry": "D7-160",
+   "field": "name",
+   "batch": 7
+  },
+  {
+   "id": "S124",
+   "entry": "D2-029",
+   "field": "preserved",
+   "batch": 18
+  },
+  {
+   "id": "S125",
+   "entry": "D7-353",
+   "field": "description",
+   "batch": 15
+  },
+  {
+   "id": "S126",
+   "entry": "D7-351",
+   "field": "input",
+   "batch": 14
+  },
+  {
+   "id": "S127",
+   "entry": "D7-115",
+   "field": "broken",
+   "batch": 5
+  },
+  {
+   "id": "S128",
+   "entry": "D7-405",
+   "field": "description",
+   "batch": 17
+  },
+  {
+   "id": "S129",
+   "entry": "D7-412",
+   "field": "input",
+   "batch": 17
+  },
+  {
+   "id": "S130",
+   "entry": "D7-294",
+   "field": "output",
+   "batch": 12
+  },
+  {
+   "id": "S131",
+   "entry": "D7-079",
+   "field": "preserved",
+   "batch": 4
+  },
+  {
+   "id": "S132",
+   "entry": "D7-408",
+   "field": "name",
+   "batch": 17
+  },
+  {
+   "id": "S133",
+   "entry": "D3-171",
+   "field": "name",
+   "batch": 18
+  },
+  {
+   "id": "S134",
+   "entry": "D7-329",
+   "field": "broken",
+   "batch": 14
+  },
+  {
+   "id": "S135",
+   "entry": "D7-284",
+   "field": "name",
+   "batch": 12
+  },
+  {
+   "id": "S136",
+   "entry": "D7-205",
+   "field": "output",
+   "batch": 9
+  },
+  {
+   "id": "S137",
+   "entry": "D7-061",
+   "field": "description",
+   "batch": 3
+  },
+  {
+   "id": "S138",
+   "entry": "D7-010",
+   "field": "description",
+   "batch": 1
+  },
+  {
+   "id": "S139",
+   "entry": "D7-400",
+   "field": "description",
+   "batch": 16
+  },
+  {
+   "id": "S140",
+   "entry": "D2-039",
+   "field": "description",
+   "batch": 18
+  },
+  {
+   "id": "S141",
+   "entry": "D7-053",
+   "field": "name",
+   "batch": 3
+  },
+  {
+   "id": "S142",
+   "entry": "D7-036",
+   "field": "output",
+   "batch": 2
+  },
+  {
+   "id": "S143",
+   "entry": "D2-033",
+   "field": "input",
+   "batch": 18
+  },
+  {
+   "id": "S144",
+   "entry": "D7-092",
+   "field": "preserved",
+   "batch": 4
+  },
+  {
+   "id": "S145",
+   "entry": "D7-355",
+   "field": "broken",
+   "batch": 15
+  }
+ ]
+}

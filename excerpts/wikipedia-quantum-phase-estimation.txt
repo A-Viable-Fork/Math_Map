@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Quantum phase estimation algorithm (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1358386192
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3b06cee1a452b49f388c8b099f8ebc9b16e86363ffd06c9771e0cc8f51f67809
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]].
+
+the algorithm returns [[with high probability]] an approximation for <math>\theta</math>, within additive error <math>\varepsilon</math>, using <math>n=O(\log(1/\varepsilon))</math> qubits in the first register
+
+Thus if <math>| \psi \rangle</math> is an [[ Eigenvalues and eigenvectors |eigenvector]] of <math>U</math>
+
+uses of controlled-U, and this is optimal.
