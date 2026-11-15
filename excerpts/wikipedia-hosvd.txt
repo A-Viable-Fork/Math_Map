@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Higher-order singular value decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381415711
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d0841727832091a99a72d903da8c175a0a2f8ac37ce9acfd86dfd9ab8de5b4c7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+which is the classic algorithm that is currently referred in the literature as the '''Tucker''' or the '''HOSVD'''
+
+[[Lieven De Lathauwer |De Lathauwer]] ''et al.''
+
+a set of SVDs on mode-flattenings without making assumptions about the structure of the core tensor or implying a rank decomposition.
+
+The second equality is because the <math>{\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display="block">\mathcal{S} := \mathcal{A} \times ({\bf U}_1^H, {\bf U}_2^H, \ldots, {\bf U}_M^H).</math>
+
+The compact M-mode SVD(HOSVD) is a rank-revealing decomposition in the sense that the dimensions of its core tensor correspond with the components of the multilinear rank of the tensor.

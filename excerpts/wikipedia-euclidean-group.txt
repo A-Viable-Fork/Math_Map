@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Euclidean group (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371653962
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 189e6e7e29a6624e831ebf9067f1fd139e0e1384308a9b8b2a601ecf082c3dfd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Euclidean group  {{math|E(''n'')}} comprises all [[translation (geometry)|translations]], [[rotation (mathematics)|rotations]], and [[reflection (mathematics)|reflections]] of <math>\mathbb{E}^n</math>; and arbitrary finite combinations of them.

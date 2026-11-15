@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Pinhole camera model (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364592852
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 9d9abd3a5371905cd5faa0379b0829b6a8ea2a98edeba326db4b68abc697290c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* A point '''P''' somewhere in the world at coordinate <math> (x_1, x_2, x_3) </math> relative to the axes X1, X2, and X3.
+
+* The projection of point '''P''' onto the image plane, denoted '''Q'''.
+
+: <math> \frac{-y_1}{f} = \frac{x_1}{x_3} </math> or <math> y_1 = -\frac{f \, x_1}{x_3} </math>

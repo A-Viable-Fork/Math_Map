@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Edward Farhi, Jeffrey Goldstone, Sam Gutmann, A Quantum Approximate Optimization Algorithm, arXiv:1411.4028 (abstract page)
+URL: https://arxiv.org/abs/1411.4028
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8b6e84033f07ed5582b002bb5d2d3cdb7e2a6a2f43e131fcc389871bad930bad
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.
+
+positive integer p and the quality of the approximation improves as p is increased.

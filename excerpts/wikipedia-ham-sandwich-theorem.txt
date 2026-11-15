@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Ham sandwich theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384454276
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f8f7b369e473ea1bc37d787fb0617c39993878f6bede6ecd1ec8f2cb707b0971
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] "objects" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]
+
+to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]].

@@ -25477,6 +25477,3062 @@
    "sources": {
     "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1295299437"
    }
+  },
+  {
+   "id": "D5-072",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "i": "excerpts/wikipedia-inversive-geometry.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that",
+     "note": "The inverse lies on the ray from the centre, at c + r^2 (x - c)/|x - c|^2; the fill's r^2 (x - c)/|x - c|^2 drops the c, right only for centre 0 (the window's x to R^2 x/|x|^2). Generalized circles are stated; spheres are in no window.",
+     "more": [
+      {
+       "src": "i",
+       "quote": ":<math>OP \\cdot OP^{\\prime} = r^2.</math>"
+      },
+      {
+       "src": "i",
+       "quote": "<math>x \\mapsto R^2 \\frac {x} {|x|^2}"
+      },
+      {
+       "src": "i",
+       "quote": "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "with the center and the point at infinity changing positions",
+     "note": "Points of the plane, the centre going to the point at infinity; space is in no window."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "the '''inverse''' of a point ''P'' with respect to a ''reference circle (Ø)'' with center ''O'' and radius ''r'' is a point ''P''{{'}}, lying on the ray from ''O'' through ''P'' such that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "i",
+     "quote": "a transformation of the [[Euclidean plane]] that maps [[circle]]s or [[Line (geometry)|lines]] to other circles or lines and that preserves the angles between crossing curves",
+     "more": [
+      {
+       "src": "i",
+       "quote": "Inversion leaves the measure of angles unaltered, but reverses the orientation of oriented angles."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "i",
+     "quote": "*A circle that passes through the center ''O'' of the reference circle inverts to a line not passing through ''O''",
+     "note": "Lines and circles exchange through the centre; distances are in no window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "i": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383555555"
+   }
+  },
+  {
+   "id": "D5-074",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-isometry.txt",
+    "e": "excerpts/wikipedia-euclidean-group.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s",
+     "more": [
+      {
+       "src": "e",
+       "quote": "The Euclidean group  {{math|E(''n'')}} comprises all [[translation (geometry)|translations]], [[rotation (mathematics)|rotations]], and [[reflection (mathematics)|reflections]] of <math>\\mathbb{E}^n</math>; and arbitrary finite combinations of them."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Let  <math>X</math> and <math>Y</math> be [[metric space]]s with metrics"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "an '''isometry''' (or '''congruence''', or '''congruent transformation''') is a [[distance]]-preserving [[Transformation (mathematics)|transformation]] between [[metric space]]s"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": ":<math>d_X(a,b)=d_Y\\!\\left(f(a),f(b)\\right).</math>",
+     "note": "Distances are stated; angles are in no window (a general metric space has none)."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that position is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384702919",
+    "e": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371653962"
+   }
+  },
+  {
+   "id": "D6-029",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-homothety.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "<math display=\"block\">\\mathbf x'=\\mathbf s + k(\\mathbf x -\\mathbf s).</math>"
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "a '''homothety''' (or '''homothecy''', or '''homogeneous dilation''') is a [[Transformation (mathematics)|transformation]] of an [[affine space]] determined by a point {{mvar|S}} called its ''center'' and a nonzero number {{mvar|k}} called its ''ratio''",
+     "note": "Points of an affine space are stated; functions are in no window."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "<math display=\"block\">\\mathbf x'=\\mathbf s + k(\\mathbf x -\\mathbf s).</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "* A ''line'' is mapped onto a parallel line. Hence: ''angles'' remain unchanged.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "* The ''ratio of two line segments'' is preserved."
+      },
+      {
+       "src": "h",
+       "quote": "Both properties show that a homothety is a ''[[Similarity (geometry)|similarity]]''."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "In Euclidean geometry, a homothety of ratio <math>k</math> multiplies ''distances'' between points by {{tmath|\\vert k \\vert}}, ''areas'' by <math>k^2</math>",
+     "note": "Distances scale by |k|, not by k."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D8-188"
+   ],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1356815044"
+   }
+  },
+  {
+   "id": "D6-119",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-reflection-mathematics.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s",
+     "note": "Orientation reversal is stated as determinant -1.",
+     "more": [
+      {
+       "src": "f",
+       "quote": "A reflection is an [[involution (mathematics)|involution]]: when applied twice in succession, every point returns to its original location"
+      },
+      {
+       "src": "f",
+       "quote": "The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s",
+     "note": "An isometry, so distances, is stated; angles and size are in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1",
+     "note": "Determinant -1: orientation is reversed."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D8-180"
+   ],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380109823"
+   }
+  },
+  {
+   "id": "D6-145",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-translation-geometry.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "then the translation function <math>T_{\\mathbf{v}} </math> will work as <math> T_{\\mathbf{v}}(\\mathbf{p})=\\mathbf{p}+\\mathbf{v}</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]].",
+     "more": [
+      {
+       "src": "t",
+       "quote": "The [[Shift operator|translation operator]] turns a function of the original position"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A translation is an isometry that displaces the original figure according to a direction, a sense, and a length ([[vector (mathematics)|vector]]). Translations preserve the direction and length of line segments, and the amplitudes of angles.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "so that the orientation of the body in space is unaltered"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "A translation is an [[affine transformation]] with ''no'' [[fixed point (mathematics)|fixed point]]s.",
+     "note": "No fixed point: every point moves."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D8-216"
+   ],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1379247508"
+   }
+  },
+  {
+   "id": "D8-193",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-shear-mapping.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a function that takes a generic point with coordinates <math>(x,y)</math> to the point <math>(x + m y,y)</math>; where {{mvar|m}} is a fixed parameter, called the '''shear factor'''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a '''shear mapping''' is an [[affine transformation]] that displaces each point in a fixed direction by an amount proportional to its [[signed distance function|signed distance]] from a given [[straight line|line]] [[parallel (geometry)|parallel]] to that direction."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "that preserves the {{mvar|n}}-dimensional [[measure (mathematics)|measure]] (hypervolume) of any set.",
+     "note": "Measure, so area, is stated; determinant 1, parallelism and collinearity are in no window (the map is only named affine)."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Applying a shear map to a set of points of the plane will change all [[angle]]s between them (except [[straight angle]]s), and the length of any [[line segment]] that is not parallel to the direction of displacement."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374397906"
+   }
+  },
+  {
+   "id": "D8-150",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-3d-projection.txt",
+    "c": "excerpts/wikipedia-pinhole-camera-model.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "If the 3D perspective of an object should be preserved on a 2D surface, the transformation must include scaling and translation based on the object's relative position to the 2D surface. This process is called perspective projection."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": ": <math> \\frac{-y_1}{f} = \\frac{x_1}{x_3} </math> or <math> y_1 = -\\frac{f \\, x_1}{x_3} </math>",
+     "note": "The window gives y_1 = -f x_1/x_3, the image plane behind the pinhole; the fill's (f x/z, f y/z) is the other sign convention, the plane in front. That the map is projective is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* A point '''P''' somewhere in the world at coordinate <math> (x_1, x_2, x_3) </math> relative to the axes X1, X2, and X3."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "* The projection of point '''P''' onto the image plane, denoted '''Q'''."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Neither collinearity nor cross-ratio is in a fetched window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states what perspective projection loses."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381739094",
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364592852"
+   }
+  },
+  {
+   "id": "D8-145",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "o": "excerpts/wikipedia-projection-linear-algebra.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "o",
+     "quote": "* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "o",
+     "quote": "* A square matrix <math>P</math> is called an '''orthogonal projection matrix''' if <math>P^2 = P = P^{\\mathrm T}</math> for a [[real number|real]] [[matrix (mathematics)|matrix]], and respectively <math>P^2 = P = P^{*}</math> for a [[complex number|complex]] matrix",
+     "note": "Idempotent and self-adjoint are stated; projecting onto a subspace along its orthogonal complement is in no window.",
+     "more": [
+      {
+       "src": "o",
+       "quote": "A projection is orthogonal if and only if it is [[self-adjoint operator|self-adjoint]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "o",
+     "quote": "Suppose the [[Linear subspace|subspace]]s <math>U</math> and <math>V</math> are the [[Image (mathematics)|image]] and [[Kernel (linear algebra)|kernel]] of <math>P</math> respectively.",
+     "note": "The subspace appears only as the image of P; the input vector and subspace as such are in no window."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states that Px is the nearest point of the subspace."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "o",
+     "quote": "It leaves its [[image (mathematics)|image]] unchanged.",
+     "note": "Components in the image are kept; best approximation is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the orthogonal components are killed."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "o": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374765997"
+   }
+  },
+  {
+   "id": "D5-148",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-y-delta-transform.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]].",
+     "more": [
+      {
+       "src": "y",
+       "quote": "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "note": "Terminal equivalence is stated; that the planarity class is kept is in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "The transform preserves the number of edges in a graph, but not the number of vertices or the number of [[cycle (graph theory)|cycle]]s.",
+     "note": "The vertex count changes: the internal node goes."
+    }
+   },
+   "contra": [],
+   "covers": [
+    "D6-158",
+    "D8-233"
+   ],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226"
+   }
+  },
+  {
+   "id": "D8-235",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-y-delta-transform.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "R_1 &= \\frac{R_\\text{b}R_\\text{c}}{R_\\text{a} + R_\\text{b} + R_\\text{c}} \\\\[3pt]",
+     "note": "The Delta-Y direction of the same transform: the star resistances from the triangle's."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "R_1 &= \\frac{R_\\text{b}R_\\text{c}}{R_\\text{a} + R_\\text{b} + R_\\text{c}} \\\\[3pt]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.",
+     "note": "Networks are stated (\"and vice versa\"); graphs with a triangle are in no window."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "y",
+     "quote": "the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the triangle's edges are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226"
+   }
+  },
+  {
+   "id": "D8-197",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-singular-value-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]",
+     "more": [
+      {
+       "src": "s",
+       "quote": "<math>\\mathbf \\Sigma</math> is an <math>m \\times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\\mathbf V}} is an <math>n \\times n</math> complex unitary matrix"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the singular value decomposition of an <math>m \\times n</math> complex matrix {{tmath|\\mathbf M}} is a factorization of the form {{tmath|\\mathbf{M} {{=}} \\mathbf{U} \\mathbf{\\Sigma} \\mathbf{V}^*}}, where {{tmath|\\mathbf U}} is an {{tmath|m \\times m}} complex [[unitary matrix]]",
+     "more": [
+      {
+       "src": "s",
+       "quote": "<math>\\mathbf \\Sigma</math> is an <math>m \\times n</math> [[rectangular diagonal matrix]] with non-negative real numbers on the diagonal, {{tmath|\\mathbf V}} is an <math>n \\times n</math> complex unitary matrix"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the [[Rank of a matrix|rank]] of {{tmath|\\mathbf M}} equals the number of non-zero singular values",
+     "note": "Rank and the Eckart-Young theorem are stated; the operator and Frobenius norms are in no window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "This is known as the '''[[Low-rank approximation|Eckart–Young theorem]]'''"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "its singular value decomposition is unique up to multiplication of any column of {{tmath|\\mathbf U}} and the corresponding column of {{tmath|\\mathbf V}} by an arbitrary phase factor.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A singular value {{tmath|\\sigma}} which appears among them {{tmath|k}} times has a {{tmath|k}}-dimensional subspace of corresponding left-singular vectors."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796"
+   }
+  },
+  {
+   "id": "D8-028",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-singular-value-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "the [[Rank of a matrix|rank]] of {{tmath|\\mathbf M}} equals the number of non-zero singular values"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The term ''SVD'' sometimes refers to the '''compact SVD''', a similar decomposition {{tmath|\\mathbf{M} {{=}} \\mathbf{U}_r \\mathbf{\\Sigma}_r \\mathbf{V}_r^*}}, in which {{tmath|\\mathbf{\\Sigma}_r}} is an {{tmath|r \\times r}} matrix with only the non-zero singular values (allowing repetitions) on its main diagonal.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "the [[Rank of a matrix|rank]] of {{tmath|\\mathbf M}} equals the number of non-zero singular values"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The [[#Compact SVD|compact SVD]] eliminates the rows and columns from {{tmath|\\mathbf \\Sigma}} which consist entirely of zeros, and also the superfluous corresponding columns of {{tmath|\\mathbf U}} and rows of {{tmath|\\mathbf{V}^*}}:"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383914796"
+   }
+  },
+  {
+   "id": "D8-091",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hosvd.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "which is the classic algorithm that is currently referred in the literature as the '''Tucker''' or the '''HOSVD'''"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The second equality is because the <math>{\\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display=\"block\">\\mathcal{S} := \\mathcal{A} \\times ({\\bf U}_1^H, {\\bf U}_2^H, \\ldots, {\\bf U}_M^H).</math>",
+     "more": [
+      {
+       "src": "h",
+       "quote": "a set of SVDs on mode-flattenings without making assumptions about the structure of the core tensor or implying a rank decomposition."
+      },
+      {
+       "src": "h",
+       "quote": "[[Lieven De Lathauwer |De Lathauwer]] ''et al.''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The second equality is because the <math>{\\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display=\"block\">\\mathcal{S} := \\mathcal{A} \\times ({\\bf U}_1^H, {\\bf U}_2^H, \\ldots, {\\bf U}_M^H).</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The second equality is because the <math>{\\bf U}_m</math>'s are unitary matrices. Define now the '''core tensor'''<math display=\"block\">\\mathcal{S} := \\mathcal{A} \\times ({\\bf U}_1^H, {\\bf U}_2^H, \\ldots, {\\bf U}_M^H).</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "The compact M-mode SVD(HOSVD) is a rank-revealing decomposition in the sense that the dimensions of its core tensor correspond with the components of the multilinear rank of the tensor.",
+     "note": "Multilinear rank is stated; that the decomposition reproduces the tensor exactly is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the core is all-orthogonal rather than diagonal; one says the algorithm assumes nothing of its structure."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381415711"
+   }
+  },
+  {
+   "id": "D8-219",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-tucker-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "'''Tucker decomposition''' decomposes a [[tensor]] into a set of matrices and one small core tensor."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the multilinear subspace structure is kept."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "Taking <math>d_i = n_i</math> for all <math>i</math> is always sufficient to represent <math>T</math> exactly, but often <math>T</math> can be compressed or efficiently approximately by choosing <math>d_i < n_i</math>.",
+     "note": "Inexactness under truncation is stated; non-uniqueness (rotational freedom) is in no window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1293216395"
+   }
+  },
+  {
+   "id": "D8-163",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-principal-component-analysis.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The data are [[linear map|linearly transformed]] onto a new [[coordinate system]] such that the directions (principal components) capturing the largest variation in the data can be easily identified."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix."
+      },
+      {
+       "src": "p",
+       "quote": "we must first center the values of each variable in the dataset on 0 by subtracting the mean"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix.",
+     "note": "A data matrix is stated; its layout (n samples, p features) is in no window."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "the principal components are [[eigenvectors]] of the data's [[covariance matrix]]. Thus, the principal components are often computed by [[Eigendecomposition of a matrix|eigendecomposition]] of the data covariance matrix or [[singular value decomposition]] of the data matrix.",
+     "note": "The principal components are stated; scores are in no window."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "The <math>i</math>-th principal component can be taken as a direction orthogonal to the first <math>i-1</math> principal components that maximizes the variance of the projected data.",
+     "note": "Maximal variance of the projected data is stated; the Euclidean geometry of the projection is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what the discarded directions or nonlinear structure lose."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383885717"
+   }
+  },
+  {
+   "id": "D8-077",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-schur-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition''' factorizes both matrices as <math>A = QSZ^*</math> and <math>B = QTZ^*</math>, where ''Q'' and ''Z'' are [[unitary matrix|unitary]], and ''S'' and ''T'' are [[upper triangular]]. The generalized Schur decomposition is also sometimes called the '''QZ decomposition'''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the original bases are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381324233"
+   }
+  },
+  {
+   "id": "D8-107",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "j": "excerpts/wikipedia-jordan-normal-form.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]",
+     "note": "The window's condition (all eigenvalues in K) is weaker than the fill's algebraically closed field.",
+     "more": [
+      {
+       "src": "j",
+       "quote": ":<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>"
+      },
+      {
+       "src": "j",
+       "quote": "Then a basis with respect to which the matrix representing the operator has the required form exists [[if and only if]] all [[eigenvalue]]s of the operator lie in ''K''"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": ":<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]",
+     "more": [
+      {
+       "src": "j",
+       "quote": "and it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>."
+      },
+      {
+       "src": "j",
+       "quote": "* The sum of the sizes of all Jordan blocks corresponding to an eigenvalue ''λ''<sub>''i''</sub> is its [[algebraic multiplicity]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the form is numerically unstable or discontinuous."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374766194"
+   }
+  },
+  {
+   "id": "D8-117",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cholesky-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix.",
+     "note": "L unit lower triangular and D diagonal are stated; the block diagonal form under pivoting is in no window (Bunch-Kaufman is only named).",
+     "more": [
+      {
+       "src": "c",
+       "quote": "<math display=block>\\mathbf{A} = \\mathbf{L D L}^*,</math>"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "<math display=block>\\mathbf{A} = \\mathbf{L D L}^*,</math>",
+     "note": "The windows write A = LDL* without stating the hypothesis on A (symmetric) the field gives."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "where {{math|'''L'''}} is a [[Unitriangular matrix|lower unit triangular (unitriangular)]] matrix, and {{math|'''D'''}} is a [[diagonal matrix|diagonal]] matrix."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "<math display=block>\\mathbf{A} = \\mathbf{L D L}^*,</math>",
+     "note": "The matrix is reproduced; inertia (Sylvester) is in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}",
+     "note": "Square-root free, and exact."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371639196"
+   }
+  },
+  {
+   "id": "D8-209",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-symbolic-cholesky.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]",
+     "note": "The nonzero pattern before numerics is stated; the elimination tree and fill-in are in no window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "be a sparse symmetric positive definite matrix with elements from a field",
+     "note": "A sparse symmetric positive definite matrix is stated; the ordering is in no window."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the '''symbolic Cholesky decomposition''' is an [[algorithm]] used to determine the non-zero pattern for the <math>L</math> factors of a [[symmetric matrix|symmetric]] [[sparse matrix]]",
+     "note": "The pattern of L is stated; the elimination tree is in no window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "In order to implement an efficient sparse factorization it has been found to be necessary to determine the non zero structure of the factors before doing any numerical work.",
+     "note": "Computed before any numerical work."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369863060"
+   }
+  },
+  {
+   "id": "D8-106",
+   "batch": 19,
+   "why": "Fill review, batch 19: an authored fill graded field by field against sources.",
+   "files": {
+    "j": "excerpts/wikipedia-johnson-lindenstrauss-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": "Given <math>0 < \\varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\\mathbb{R}^n</math> , and an integer <math>k > 8(\\ln N)/\\varepsilon^2</math>,",
+     "note": "The dimension bound and the random construction are stated; the window bounds squared distances within 1 +- eps, not distances.",
+     "more": [
+      {
+       "src": "j",
+       "quote": ": <math>(1-\\varepsilon)\\|u-v\\|^2 \\leq \\|f(u) - f(v)\\|^2 \\leq (1+\\varepsilon)\\|u-v\\|^2</math>"
+      },
+      {
+       "src": "j",
+       "quote": "To obtain the projection algorithmically, it suffices [[with high probability]] to repeatedly sample orthogonal projection matrices at random."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "Given <math>0 < \\varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\\mathbb{R}^n</math> , and an integer <math>k > 8(\\ln N)/\\varepsilon^2</math>,"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "j",
+     "quote": "there exists a linear function <math>f: \\mathbb{R}^n \\rightarrow \\mathbb{R}^k</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": ": <math>(1-\\varepsilon)\\|u-v\\|^2 \\leq \\|f(u) - f(v)\\|^2 \\leq (1+\\varepsilon)\\|u-v\\|^2</math>",
+     "note": "The window bounds squared distances by 1 +- eps; the field says distances."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "j",
+     "quote": "concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]].",
+     "note": "The drop in dimension is stated; that exact geometry is lost is in no window."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "j": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380715096"
+   }
+  },
+  {
+   "id": "D8-171",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-random-projection.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''random projection''' is a technique used to [[dimensionality reduction|reduce the dimensionality]] of a set of points which lie in [[Euclidean space]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \\in \\R^{k \\times d} </math>.",
+     "note": "Projection by a random matrix, Gaussian, is stated; sign and sparse matrices are in no window.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "The random matrix R can be generated using a Gaussian distribution."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \\in \\R^{k \\times d} </math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \\in \\R^{k \\times d} </math>."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "then they may be projected into a suitable lower-dimensional space in a way which approximately preserves pairwise distances between the points with high probability.",
+     "note": "Pairwise distances, approximately, are stated; inner products are in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that exact geometry is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1370066440"
+   }
+  },
+  {
+   "id": "D8-205",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source names a sub-Gaussian sketch."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states the subspace embedding guarantee."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-222",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source names a uniform sketch."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source states the coherence condition."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-120",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/arxiv-2011.10695.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods",
+     "note": "LESS embeddings from sparse embeddings and leverage-based sampling are stated, Derezinski first among the authors; matching Gaussian sketch guarantees at lower cost is in no window.",
+     "more": [
+      {
+       "src": "l",
+       "quote": "citation_author\" content=\"Dereziński, Michał\""
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input matrix."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "We then propose a new sketching technique, called LEverage Score Sparsified (LESS) embeddings, which uses ideas from both data-oblivious sparse embeddings as well as data-aware leverage-based row sampling methods",
+     "note": "A sketching technique is stated; the sketched matrix as output is not."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states a subspace geometry guarantee."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what is lost."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "sources": {
+    "l": "https://arxiv.org/abs/2011.10695"
+   }
+  },
+  {
+   "id": "D8-104",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-iterative-compression.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step.",
+     "note": "Growing the instance and reusing a small solution are stated; compressing a size k + 1 solution to size k is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "'''iterative compression''' is an [[algorithm]]ic technique for the design of [[parameterized complexity|fixed-parameter tractable algorithms]], in which one element (such as a [[vertex (graph theory)|vertex of a graph]]) is added to the problem in each step, and a small solution for the problem prior to the addition is used to help find a small solution to the problem after the step.",
+     "note": "A small solution is stated; the bound k and rejection are in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that correctness of the decision is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states it, and FPT dependence on k reads as a running time, not a loss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358364477"
+   }
+  },
+  {
+   "id": "D8-058",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "f": "excerpts/wikipedia-finite-difference-method.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]].",
+     "more": [
+      {
+       "src": "f",
+       "quote": "Finite difference methods convert [[ordinary differential equations]] (ODE) or [[partial differential equations]] (PDE), which may be [[Nonlinear partial differential equation|nonlinear]], into a [[system of linear equations]] that can be solved by [[matrix algebra]] techniques"
+      },
+      {
+       "src": "f",
+       "quote": "This is usually done by dividing the domain into a uniform grid (see image)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]].",
+     "more": [
+      {
+       "src": "f",
+       "quote": "This is usually done by dividing the domain into a uniform grid (see image)."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "Finite difference methods convert [[ordinary differential equations]] (ODE) or [[partial differential equations]] (PDE), which may be [[Nonlinear partial differential equation|nonlinear]], into a [[system of linear equations]] that can be solved by [[matrix algebra]] techniques",
+     "note": "A system of linear equations is stated; that it is often sparse is in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states consistency or conservation."
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "f",
+     "quote": "[[truncation error]] or [[discretization error]], the difference between the exact solution of the original differential equation and the exact quantity assuming perfect arithmetic (no round-off).",
+     "note": "Truncation error is stated; that stability must be checked is in no window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384543215"
+   }
+  },
+  {
+   "id": "D8-061",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-automatic-differentiation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "* '''forward accumulation''' (also called '''bottom-up''', '''forward mode''', or '''tangent mode''')"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display=\"inline\">x_1,x_2,\\dots,x_n</math> a separate pass is therefore necessary",
+     "more": [
+      {
+       "src": "a",
+       "quote": "The augmented algebra is the algebra of [[dual numbers]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "is a set of techniques to evaluate the [[partial derivative]] of a function specified by a computer program."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display=\"inline\">x_1,x_2,\\dots,x_n</math> a separate pass is therefore necessary"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "partial derivatives of arbitrary order can be computed automatically, accurately to working precision"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "evaluates the function and calculates the derivative with respect to one independent variable in one pass. For each independent variable <math display=\"inline\">x_1,x_2,\\dots,x_n</math> a separate pass is therefore necessary"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384758862"
+   }
+  },
+  {
+   "id": "D8-088",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hensels-lemma.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The proof of Hensel's lemma is [[constructive proof|constructive]], and leads to an efficient algorithm for '''Hensel lifting'''"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.",
+     "note": "Lifting roots and coprime factorizations is stated; that the lifting is a p-adic Newton iteration is in no window.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "stating that if a [[univariate polynomial]] has a [[simple root]] modulo a [[prime number]] {{math|''p''}}, then this root can be ''lifted'' to a unique root modulo any higher power of {{math|''p''}}.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "More generally, if a polynomial factors modulo {{math|''p''}} into two [[coprime polynomials]], this factorization can be lifted to a factorization modulo any higher power of {{math|''p''}}"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that lifting loses nothing."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364657053"
+   }
+  },
+  {
+   "id": "D8-081",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-grobner-basis-ordering.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal.",
+     "note": "A Groebner basis of the same ideal and a change of ordering algorithm are stated; FGLM and the Groebner walk by name are in no window.",
+     "more": [
+      {
+       "src": "g",
+       "quote": "by first computing the degrevlex basis and then using a \"change of ordering algorithm\"."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "For every admissible monomial ordering and every finite set {{mvar|G}} of polynomials"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the original generators are lost (the basis contains them)."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743"
+   }
+  },
+  {
+   "id": "D8-070",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-linear-fractional-programming.txt",
+    "f": "excerpts/wikipedia-fractional-programming.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "'''fractional programming''' is a generalization of [[linear-fractional programming]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.",
+     "note": "Charnes-Cooper is stated, with a hypothesis the fill omits (feasible region non-empty and bounded); Dinkelbach's parametric method is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The [[objective function]] in a fractional program is a ratio of two functions that are in general nonlinear."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "l",
+     "quote": "Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.",
+     "note": "The linear program is stated; the parametric program is in no window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "A solution <math>\\mathbf{x}</math> to the original linear-fractional program can be translated to a solution of the transformed linear program via the equalities"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "Any linear-fractional program can be transformed into a linear program, assuming that the feasible region is non-empty and bounded, using the '''Charnes–Cooper transformation'''.",
+     "note": "The ratio objective becomes linear."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1333351925",
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1317651487"
+   }
+  },
+  {
+   "id": "D8-124",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "l": "excerpts/wikipedia-linear-programming-relaxation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the '''relaxation''' of a [[Mixed integer linear programming|(mixed) integer linear program]] is the problem that arises by removing the integrality constraint of each variable."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "the solution quality of the linear program is at least as good as that of the integer program, because any integer program solution would also be a valid linear program solution."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "l",
+     "quote": "an important concept is the '''integrality gap''', the maximum ratio between the solution quality of the integer program and of its relaxation."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "l": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1326322231"
+   }
+  },
+  {
+   "id": "D8-181",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No fetched source: Sherali and Adams (1990) has no free text found and Wikipedia has no page."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched source."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-111",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-additive-noise-dp.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>",
+     "more": [
+      {
+       "src": "a",
+       "quote": "To argue that the mechanism satisfies <math>\\epsilon</math>-differential privacy"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\Delta f=\\max | f(x)-f(y) |,</math>",
+     "more": [
+      {
+       "src": "a",
+       "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "where <math>\\mu</math> is the expectation of the Laplace distribution and <math>b</math> is the scale parameter.",
+     "note": "Zero-mean noise keeps the expected value.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "To argue that the mechanism satisfies <math>\\epsilon</math>-differential privacy"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": ": <math>\\mathcal{M}_\\mathrm{Lap}(x,f,\\epsilon) = f(x) + \\mathrm{Lap}\\left(\\mu = 0, b = \\frac{\\Delta f}{\\epsilon}\\right),</math>",
+     "note": "The released value is f(x) plus noise."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383227811"
+   }
+  },
+  {
+   "id": "D8-174",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-randomized-response.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''Randomised response''' is a research method used in [[Survey research|structured survey interview]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "They are then instructed to  answer \"yes\" if the coin comes up tails, and truthfully, if it comes up heads.",
+     "note": "The coin version and the estimate of the aggregate are stated; a general probability p is in no window.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "So whatever proportion of the group said \"no\", the true number who did not have sex with a prostitute is double that"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "They are then instructed to  answer \"yes\" if the coin comes up tails, and truthfully, if it comes up heads."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "They are then instructed to  answer \"yes\" if the coin comes up tails, and truthfully, if it comes up heads."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "So whatever proportion of the group said \"no\", the true number who did not have sex with a prostitute is double that",
+     "note": "The population frequency is estimable; local differential privacy is in no window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "the randomized response technique allows the subject to credibly say that they had not been trut"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1297027451"
+   }
+  },
+  {
+   "id": "D8-005",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-amplitude-amplification.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "'''Amplitude amplification''' is a technique in [[quantum computing]] that generalizes the idea behind [[Grover's algorithm|Grover's search algorithm]], and gives rise to a family of [[quantum algorithm]]s."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "'''Amplitude amplification''' is a technique in [[quantum computing]] that generalizes the idea behind [[Grover's algorithm|Grover's search algorithm]], and gives rise to a family of [[quantum algorithm]]s.",
+     "note": "The generalization of Grover and the iteration count (pi/4) sqrt(N/G), O(1/sqrt(a)) for a = G/N, are stated; the rotation toward the marked subspace is in no window.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "= \\left\\lfloor\\frac{\\pi}{4} \\sqrt{\\frac{N}{G}}\\right\\rfloor = O(\\sqrt{N})."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input algorithm with success amplitude sqrt(a)."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states the amplified algorithm as output."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that unitarity or the marked subspace is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states it; a quadratically better query count is a gain, not a loss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1346150076"
+   }
+  },
+  {
+   "id": "D8-165",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/arxiv-1411.4028.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.",
+     "note": "Approximate combinatorial optimization with a depth p is stated; alternating cost and mixer evolutions with tuned angles are in no window.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "positive integer p and the quality of the approximation improves as p is increased."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "positive integer p and the quality of the approximation improves as p is increased."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems.",
+     "note": "Approximate solutions are stated; the parameterized state is in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the expected cost is variationally optimized."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://arxiv.org/abs/1411.4028"
+   }
+  },
+  {
+   "id": "D8-168",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quantum-phase-estimation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]]."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "q",
+     "quote": "the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]].",
+     "note": "Estimating the eigenphase with controlled-U is stated; the inverse quantum Fourier transform is in no window.",
+     "more": [
+      {
+       "src": "q",
+       "quote": "uses of controlled-U, and this is optimal."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the '''quantum phase estimation algorithm''' is a [[quantum algorithm]] to estimate the phase corresponding to an eigenvalue of a given [[Unitary matrix|unitary operator]].",
+     "more": [
+      {
+       "src": "q",
+       "quote": "Thus if <math>| \\psi \\rangle</math> is an [[ Eigenvalues and eigenvectors |eigenvector]] of <math>U</math>"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "the algorithm returns [[with high probability]] an approximation for <math>\\theta</math>, within additive error <math>\\varepsilon</math>, using <math>n=O(\\log(1/\\varepsilon))</math> qubits in the first register"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the eigenstate is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that a superposition of eigenstates collapses."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1358386192"
+   }
+  },
+  {
+   "id": "D8-036",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-delaunay-triangulation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "into triangles whose [[Circumcircle#Triangles|circumcircle]]s do not contain any of the points",
+     "more": [
+      {
+       "src": "d",
+       "quote": "corresponds to the [[dual graph]] of the [[Voronoi diagram]] for {{math|'''P'''}}."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "into triangles whose [[Circumcircle#Triangles|circumcircle]]s do not contain any of the points"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "a '''Delaunay triangulation''' or '''Delone triangulation''' of a set of points in the plane subdivides their [[convex hull]]",
+     "more": [
+      {
+       "src": "d",
+       "quote": "This maximizes the size of the smallest angle in any of the triangles, and tends to avoid [[sliver triangle]]s."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states it; \"the point set as unstructured\" is a gloss."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1328127918"
+   }
+  },
+  {
+   "id": "D8-227",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-voronoi-diagram.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects.",
+     "more": [
+      {
+       "src": "v",
+       "quote": "for which <math>p_k</math> is the nearest site"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "a '''Voronoi diagram''' is a [[Partition of a set|partition]] of a [[plane (geometry)|plane]] into regions close to each of a given set of objects."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "for which <math>p_k</math> is the nearest site"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "for which <math>p_k</math> is the nearest site",
+     "more": [
+      {
+       "src": "v",
+       "quote": "The Voronoi diagram of a set of points is [[Duality (mathematics)|dual]] to that set's [[Delaunay triangulation]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that distances within a cell are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365615905"
+   }
+  },
+  {
+   "id": "D8-187",
+   "batch": 20,
+   "why": "Fill review, batch 20: an authored fill graded field by field against sources.",
+   "files": {
+    "r": "excerpts/wikipedia-delaunay-refinement.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "* The [[circumcenter]] of a poor-quality triangle is inserted into the triangulation, unless this circumcenter lies in the diametral circle of some segment.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "In this case, the encroached segment is split instead."
+      },
+      {
+       "src": "r",
+       "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "A triangle is considered poor-quality if it has a circumradius to shortest edge ratio larger than some prescribed threshold.",
+     "note": "A planar straight-line graph is stated; the quality bound is a circumradius-to-shortest-edge ratio, not stated as an angle bound."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "'''Ruppert's algorithm''' takes a [[planar straight-line graph]] (or in dimension higher than two a [[Piecewise linear manifold|piecewise linear]] system) and returns a conforming Delaunay triangulation of only quality triangles.",
+     "note": "A conforming triangulation (the input kept) is stated; the bound is a ratio threshold, not stated as a minimum angle."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that mesh size minimality is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369427795"
+   }
+  },
+  {
+   "id": "D8-085",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-ham-sandwich-theorem.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] \"objects\" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]].",
+     "note": "Bisecting n measures in R^n by one hyperplane is stated; the linear-time algorithm in the plane is in no window.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] \"objects\" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "the '''ham sandwich theorem''' states that given {{mvar|n}} [[measurable]] \"objects\" in {{mvar|n}}-[[dimension]]al [[Euclidean space]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "to divide each one of them in half (with respect to their [[Measure (mathematics)|measure]], e.g. volume) with a single {{math|(''n'' − 1)}}-dimensional [[Hyperplane#Affine hyperplanes|affine hyperplane]]."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what else about the sets is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384454276"
+   }
+  },
+  {
+   "id": "D8-226",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "v": "excerpts/wikipedia-vietoris-rips-complex.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]]."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "v",
+     "quote": "The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]]."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the persistence diagram is stable under Gromov-Hausdorff perturbation."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that exact geometry is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "v": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382495164"
+   }
+  },
+  {
+   "id": "D8-236",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "c": "excerpts/wikipedia-cech-complex-filtration.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''Čech complex''' is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "In other words, the Čech complex is the [[Nerve of a covering|nerve]] of the set of ''ε''-balls centered at points of ''X''.",
+     "note": "The nerve of the balls and the nerve-theorem guarantee are stated for one radius; the nested family over growing radii is in no window.",
+     "more": [
+      {
+       "src": "c",
+       "quote": "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "'''Čech complex''' is an [[abstract simplicial complex]] constructed from a point cloud in any [[metric space]]"
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "c",
+     "quote": "In other words, the Čech complex is the [[Nerve of a covering|nerve]] of the set of ''ε''-balls centered at points of ''X''.",
+     "note": "A complex for one radius is stated; the filtration over growing radii is in no window."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "the nerve theorem provides a guarantee that the Čech complex is homotopy equivalent to union of the balls in the complex.",
+     "note": "The source states the guarantee for a point cloud in any metric space; the nerve theorem needs balls whose intersections are contractible (convex balls in Euclidean space), so the source and the fill share the overreach. Graded on the window; recorded for the falsification pass."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "c",
+     "quote": "While the Čech complex is more computationally expensive than the Vietoris–Rips complex"
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "sources": {
+    "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1339780162"
+   }
+  },
+  {
+   "id": "D8-131",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-topological-data-analysis.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Carlsson et al. have proposed a general method called '''MAPPER'''."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "t",
+     "quote": "Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\\colon X\\to Z</math> be a continuous map. Let <math>\\mathbb{U} = \\{U_{\\alpha}\\}_{\\alpha \\in A}</math> be a finite open covering of <math>Z</math>.",
+     "note": "The filter map, the cover and the authors (Singh, Memoli, Carlsson) are stated; clustering the preimages and taking the nerve are in no window.",
+     "more": [
+      {
+       "src": "t",
+       "quote": "{{cite book |first1=G. |last1=Singh |first2=F. |last2=Mémoli |first3=G. |last3=Carlsson"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\\colon X\\to Z</math> be a continuous map. Let <math>\\mathbb{U} = \\{U_{\\alpha}\\}_{\\alpha \\in A}</math> be a finite open covering of <math>Z</math>."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states the output graph or complex."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states what coarse shape is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states what is lost or how stability depends on parameters."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1383254717"
+   }
+  },
+  {
+   "id": "D8-148",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-persistent-data-structure.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per",
+     "more": [
+      {
+       "src": "p",
+       "quote": "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712"
+   }
+  },
+  {
+   "id": "D8-142",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-persistent-data-structure.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "No window names the node-copying method."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Driscoll, Sarnak, [[Daniel Sleator|Sleator]], [[Robert Tarjan|Tarjan]] came up<ref name=Driscoll /> with a way to combine the techniques of fat nodes and path copying, achieving O(1) access slowdown and O(1) amortized overhead in space and time per",
+     "note": "Driscoll et al.'s combination of fat nodes and path copying is stated; copying a node when its spare fields fill is in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "Their method strictly assumes a [[linked data structure]] where the ''in-degree'' (the maximum number of incoming pointers pointing to any single node) is bounded by a known constant"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "p",
+     "quote": "A data structure is '''partially persistent''' if all versions can be accessed but only the newest version can be modified."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states the space cost of the copies."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384120712"
+   }
+  },
+  {
+   "id": "D8-047",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "d": "excerpts/wikipedia-dual-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "d",
+     "quote": "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}",
+     "note": "A vertex per face is stated; an edge crossing each edge falls outside the window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "the '''dual graph''' of a [[planar graph]] {{mvar|G}} is a graph that has a [[vertex (graph theory)|vertex]] for each [[face (graph theory)|face]] of {{mvar|G}}"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "For instance, [[cycle (graph theory)|cycles]] are dual to [[cut (graph theory)|cuts]], [[spanning tree]]s are dual to the [[complement set|complements]] of spanning trees"
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "d",
+     "quote": "The definition of the dual depends on the choice of embedding of the graph {{mvar|G}}"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "d": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376084107"
+   }
+  },
+  {
+   "id": "D8-134",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "m": "excerpts/wikipedia-medial-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* a vertex for each edge of ''G'' and",
+     "more": [
+      {
+       "src": "m",
+       "quote": "* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "m",
+     "quote": "* a vertex for each edge of ''G'' and",
+     "note": "The construction is stated; that the medial graph is 4-regular is in no window (only that every 4-regular plane graph is a medial graph).",
+     "more": [
+      {
+       "src": "m",
+       "quote": "* an edge between two vertices for each face of ''G'' in which their corresponding edges occur consecutively."
+      },
+      {
+       "src": "m",
+       "quote": "* Every 4-regular plane graph is the medial graph of some plane graph."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Given a connected [[plane graph]] ''G'', its medial graph ''M(G)'' has"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "* For any connected plane graph ''G'', the medial graph of ''G'' and the medial graph of the [[dual graph]] of ''G'' are isomorphic.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "For a plane graph ''G'', twice the evaluation of the [[Tutte polynomial]] at the point (3,3) equals the sum over weighted [[Eulerian orientation]]s in the medial graph of ''G''"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that vertex identity is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "m": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1359691639"
+   }
+  },
+  {
+   "id": "D8-217",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "t": "excerpts/wikipedia-transpose-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Kosaraju's algorithm uses the reversal; no window states that the transpose has the same strongly connected components."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "t",
+     "quote": "is another directed graph on the same set of [[Vertex (graph theory)|vertices]] with all of the edges reversed compared to the orientation of the corresponding edges in {{mvar|G}}."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "t": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1116542750"
+   }
+  },
+  {
+   "id": "D8-169",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "q": "excerpts/wikipedia-quotient-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "q",
+     "quote": "a '''quotient graph''' ''Q'' of a graph ''G'' is a graph whose vertices are blocks of a [[partition of a set|partition]] of the vertices of ''G'' and where block ''B'' is adjacent to block ''C'' if some vertex"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the internal structure of blocks is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "q": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1299226895"
+   }
+  },
+  {
+   "id": "D8-162",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "w": "excerpts/wikipedia-graph-power.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "w",
+     "quote": "the '''{{mvar|k}}th power''' {{mvar|G{{sup|k}}}} of an [[undirected graph]] {{mvar|G}} is another graph that has the same set of [[vertex (graph theory)|vertices]], but in which two vertices are adjacent when their [[Distance (graph theory)|distance]] in {{mvar|G}} is at most&nbsp;{{mvar|k}}.",
+     "note": "The vertex set is stated; connectivity is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states which distance information is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "w": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1335625130"
+   }
+  },
+  {
+   "id": "D8-196",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "s": "excerpts/wikipedia-simplex-graph.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]",
+     "note": "A node per clique, the empty clique included, and the median graph are stated; edges between cliques differing by one vertex fall outside the windows.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "The empty set is included as one of the cliques of {{mvar|G}} that are used to form the clique graph, as is every set of one vertex and every set of two adjacent vertices."
+      },
+      {
+       "src": "s",
+       "quote": "The simplex graph is the [[median graph]] corresponding to this median algebra structure."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "the '''simplex graph''' {{math|κ(''G'')}} of an [[undirected graph]] {{mvar|G}} is itself a graph, with one [[Vertex (graph theory)|node]] for each [[clique (graph theory)|clique]]"
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that the adjacency encoding is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1385325684"
+   }
+  },
+  {
+   "id": "D8-140",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "y": "excerpts/wikipedia-mycielskian.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]",
+     "note": "The construction's properties are stated; the definition of M(G) is in no window."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]",
+     "note": "Triangle-freeness kept and the chromatic number raised are stated; by exactly one is in no window."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input graph as such."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window defines M(G)."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "*More generally, if ''G'' has [[clique number]] ω(''G''), then μ(''G'') has clique number of the maximum among 2 and ω(''G'').",
+     "note": "Triangle-freeness is kept; the clique number becomes max(2, omega(G)), so it is kept only when omega(G) is at least 2.",
+     "more": [
+      {
+       "src": "y",
+       "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "y",
+     "quote": "The construction preserves the property of being [[triangle-free graph|triangle-free]] but increases the [[chromatic number]]",
+     "note": "An increase is stated; by one is not."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "y": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1308470583"
+   }
+  },
+  {
+   "id": "D8-046",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "b": "excerpts/wikipedia-bipartite-double-cover.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}.",
+     "note": "The name read as the bipartite double cover, as the fill's reading takes it."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "It can be constructed as the [[tensor product of graphs]], {{math|''G'' × ''K''{{sub|2}}}}.",
+     "note": "The bipartite double cover as G x K2 is stated; the variant adding edges within copies is in no window.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}.",
+     "note": "Bipartiteness and the covering are stated; the doubled degree sequence is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that odd cycles are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1335647863"
+   }
+  },
+  {
+   "id": "D8-080",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "g": "excerpts/wikipedia-graph-rewriting.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement",
+     "note": "Replacing a matched pattern by a rule is stated; the double- and single-pushout approaches are in no window."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement",
+     "more": [
+      {
+       "src": "g",
+       "quote": "Formally, a graph [[rewriting]] system usually consists of a set of graph rewrite rules of the form <math>L \\rightarrow R</math>, with <math>L</math> being called pattern graph (or left-hand side) and <math>R</math> being called replacement graph"
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that the context outside the match is kept."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "g",
+     "quote": "A graph rewrite rule is applied to the host graph by searching for an occurrence of the pattern graph ([[pattern matching]], thus solving the [[subgraph isomorphism problem]]) and by replacing the found occurrence by an instance of the replacement"
+    }
+   },
+   "contra": [],
+   "sources": {
+    "g": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1365965492"
+   }
+  },
+  {
+   "id": "D8-199",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {},
+   "fields": {
+    "name": {
+     "verdict": "unsupported",
+     "note": "The fill records the name as unidentified; no source was sought for a name the fill does not identify."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "Unknown, as the fill records."
+    }
+   },
+   "contra": [],
+   "sources": {}
+  },
+  {
+   "id": "D8-160",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "p": "excerpts/wikipedia-parsimonious-reduction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s.",
+     "note": "The class is named; its definition is in no window."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "Polynomial-time parsimonious reductions are a special case of a more general class of reductions for counting problems, the [[polynomial-time counting reduction]]s.",
+     "note": "Parsimonious reductions, which keep the count, are stated; the general reduction, the count of A computed from counts of B, is in no window.",
+     "more": [
+      {
+       "src": "p",
+       "quote": "a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input instance."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states the instances of B with a recovery map."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "p",
+     "quote": "a '''parsimonious reduction''' is a transformation from one problem to another (a [[Reduction (complexity)|reduction]]) that preserves the number of solutions.",
+     "note": "Counts are kept by parsimonious reductions; the transfer of #P-hardness is in no window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that solution structure is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "p": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1325874922"
+   }
+  },
+  {
+   "id": "D8-164",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "a": "excerpts/wikipedia-approximation-preserving-reduction.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "PTAS-reduction is another commonly used reduction scheme.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}."
+      }
+     ]
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "Nevertheless, APX-completeness is defined in terms of PTAS reductions.",
+     "note": "APX-completeness defined by PTAS reductions is stated; that a PTAS for B yields one for A is in no window."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states the input instance."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}.",
+     "note": "The solution map g is stated; the instance of B is in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that approximability within 1 + eps is kept."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that exact optima are lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1357847632"
+   }
+  },
+  {
+   "id": "D7-240",
+   "batch": 21,
+   "why": "Fill review, batch 21: an authored fill graded field by field against sources.",
+   "files": {
+    "h": "excerpts/wikipedia-hilbert-poincare-series.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "a '''Hilbert–Poincaré series''' (also known under the name '''[[Hilbert series]]'''), named after [[David Hilbert]] and [[Henri Poincaré]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>.",
+     "note": "The series of graded dimensions is stated; rationality is stated only \"in good cases\", without the Hilbert-Serre hypothesis (finitely generated over a polynomial ring).",
+     "more": [
+      {
+       "src": "h",
+       "quote": "In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "It is a [[formal power series]] in one indeterminate, say <math>t</math>, where the coefficient of <math>t^n</math> gives the dimension (or rank) of the sub-structure of elements homogeneous of degree <math>n</math>.",
+     "note": "Graded structures are stated; finite generation is in no window."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "In good cases, the Hilbert–Poincaré series can be expressed as a [[rational function]] of its argument <math>t</math>.",
+     "note": "Rational in good cases; the conditions are in no window."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No window states that dimension, degree and multiplicity are read from the series."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No window states that module structure beyond dimensions is lost."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1351899793"
+   }
   }
  ]
 }

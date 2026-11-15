@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Johnson–Lindenstrauss lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380715096
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 84eae8d093efb78cb9d905baaa340d726997c278aa9eb4c82400c7b3403000db
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+concerning low-distortion [[embedding]]s of points from high-dimensional into low-dimensional [[Euclidean space]].
+
+Given <math>0 < \varepsilon < 1</math>, a set <math>X</math> of <math>N</math> points in <math>\mathbb{R}^n</math> , and an integer <math>k > 8(\ln N)/\varepsilon^2</math>,
+
+: <math>(1-\varepsilon)\|u-v\|^2 \leq \|f(u) - f(v)\|^2 \leq (1+\varepsilon)\|u-v\|^2</math>
+
+there exists a linear function <math>f: \mathbb{R}^n \rightarrow \mathbb{R}^k</math>
+
+To obtain the projection algorithmically, it suffices [[with high probability]] to repeatedly sample orthogonal projection matrices at random.
