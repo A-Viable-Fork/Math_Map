@@ -83,6 +83,7 @@
 | `docs/schema-survey/check-quotes.mjs` | the survey's receipt tripwire. |
 | `docs/schema-survey/pilots/instances.mjs` | small exact instances for the schema-survey pilots: graphs, matroids as rank functions, integer matrices with rank over the rationals and over GF(2), polynomials, and a few numeric transforms. |
 | `docs/schema-survey/pilots/lib.mjs` | shared helpers for the schema-survey pilots: loads map.json, verifies a row's receipt, and gives a seeded random source. |
+| `docs/schema-survey/pilots/p0-contract-hash.mjs` | a side measurement for the schema survey (candidate G11, the contract hash). |
 | `docs/schema-survey/pilots/p1-predicates.mjs` | pilot 1 of the schema survey (candidates G02, G25, G39). |
 | `docs/schema-survey/pilots/p2-squares.mjs` | pilot 2 of the schema survey (candidates G09, G27, G60, G24, with G39 as a by-product). |
 | `docs/schema-survey/pilots/p3-inverses.mjs` | pilot 3 of the schema survey (candidates G16, G41, G62). |
@@ -173,6 +174,7 @@
 | `docs/schema-survey/02-generation.md` | Phase 2, a generation record (SCHEMA-001): sixty-seven candidate data kinds across six axes, each with the arrows it serves, the function it enables, its day-one reader, its evidence story and its cost; written before any prior-art search. |
 | `docs/schema-survey/03-prior-art.md` | Phase 3: how existing systems keep each candidate kind (Mathlib, the nLab, OEIS, the LMFDB, Wikidata, MMT and OMDoc, transport and univalence, ontology alignment), every quotation receipted in excerpts/, with what could not be fetched marked unknown. |
 | `docs/schema-survey/04-pilots.md` | Phase 4: what each of the six pilots caught that the map cannot, how many rows carry a receipt that verifies, what was run on instances, and where each row shape gave out. |
+| `docs/schema-survey/SURVEY.md` | Phase 5 and the survey's front page: all 67 candidates ranked confirmed, plausible, needs refinement, marginal or dead with the basis of each verdict, a recommended order to land them, and the first (predicates) as a concrete proposal with fields, file, checker change, evidence rule and consumers. |
 | `docs/schema-survey/excerpts/arxiv-biform.txt` | A verbatim excerpt of one prior-art source: its URL, fetch date, page hash and the quoted windows. |
 | `docs/schema-survey/excerpts/arxiv-fungrim.txt` | A verbatim excerpt of one prior-art source: its URL, fetch date, page hash and the quoted windows. |
 | `docs/schema-survey/excerpts/arxiv-lmfdb.txt` | A verbatim excerpt of one prior-art source: its URL, fetch date, page hash and the quoted windows. |
@@ -651,6 +653,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `CLAUDE.md` | names | `STATUS.md` |
 | `docs/schema-survey/pilots/lib.mjs` | names | `map.json` |
 | `docs/schema-survey/pilots/lib.mjs` | names | `scripts/audit.mjs` |
+| `docs/schema-survey/pilots/p0-contract-hash.mjs` | imports | `docs/schema-survey/pilots/lib.mjs` |
+| `docs/schema-survey/pilots/p0-contract-hash.mjs` | names | `map.json` |
 | `docs/schema-survey/pilots/p1-predicates.mjs` | imports | `docs/schema-survey/pilots/lib.mjs` |
 | `docs/schema-survey/pilots/p1-predicates.mjs` | names | `scripts/compose.mjs` |
 | `docs/schema-survey/pilots/p2-squares.mjs` | imports | `docs/schema-survey/pilots/instances.mjs` |
