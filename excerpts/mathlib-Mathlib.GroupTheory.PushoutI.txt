@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/GroupTheory/PushoutI.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/PushoutI.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 2182d57524d407e15b9bf5c2847e33f074b50f598a12e45376a8628f310b99cd
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Monoid.PushoutI (line 60)
+def PushoutI [∀ i, Monoid (G i)] [Monoid H] (φ : ∀ i, H →* G i) : Type _ :=
+  (PushoutI.con φ).Quotient
+
+-- Monoid.PushoutI.of_injective (line 584)
+theorem of_injective (hφ : ∀ i, Function.Injective (φ i)) (i : ι) :
+    Function.Injective (of (φ := φ) i)

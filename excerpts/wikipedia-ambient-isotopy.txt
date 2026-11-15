@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Ambient isotopy (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376192028
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 64bab428633661eca90246c839126bac78a94a704b4811c126d6c6a145dca126
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''ambient isotopy''', also called an ''h-isotopy'', is a kind of [[continuous map|continuous]] distortion of an [[ambient space]], for example a [[manifold]], taking a [[submanifold]] to another submanifold.
+
+For example in [[knot theory]], one considers two [[knot (mathematics)|knot]]s the same if one can distort one knot into the other without breaking it. Such a distortion is an example of an ambient isotopy.
+
+let <math>N</math> and <math>M</math> be manifolds and <math>g</math> and <math>h</math> be [[embedding]]s of <math>N</math> in <math>M</math>.

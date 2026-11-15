@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Handle decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381810994
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: bb78dca476e8b3484027eb95663376a68860a4c4781960972e2db0174c6e5b40
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \times D^{m-j} \to \partial M</math>. Let <math>H^j = D^j \times D^{m-j}</math>.
+
+The manifold <math>M \cup_f H^j</math>
+
+Thus, a manifold has a handle decomposition with only ''0''-handles if it is diffeomorphic to a disjoint union of balls.
+
+A manifold obtained by attaching ''g'' ''k''-handles to the disc <math>D^m</math> is an ''' ''(m,k)''-handlebody of genus ''g'' '''.

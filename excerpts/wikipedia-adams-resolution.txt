@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Adams resolution (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1353667325
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: e93f290fe33ed6a53f34ac31c80eb471c606cd80818db6607a1c696c8e8b5746
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+there is a resolution analogous to [[free resolution]]s of [[Spectrum (topology)|spectra]] yielding a tool for constructing the [[Adams spectral sequence]].
+
+The mod <math>p</math> Adams resolution <math>(X_s,g_s)</math> for a spectrum <math>X</math> is a certain "chain-complex" of spectra induced from recursively looking at the fibers of maps into generalized [[Eilenberg–MacLane spectra|Eilenberg–Maclane spectra]] giving generators for the cohomology of resolved spectra
+
+Then, we can take the [[homotopy fiber]] of this map (which acts as a homotopy kernel) to get
+
+X_0 & \leftarrow & X_1 \\

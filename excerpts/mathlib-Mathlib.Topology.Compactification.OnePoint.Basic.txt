@@ -8,3 +8,7 @@ theorem isOpenEmbedding_coe : IsOpenEmbedding ((↑) : X → OnePoint X)
 
 -- OnePoint.denseRange_coe (line 446)
 theorem denseRange_coe [NoncompactSpace X] : DenseRange ((↑) : X → OnePoint X)
+
+-- OnePoint (line 55)
+def OnePoint (X : Type*) :=
+  Option X

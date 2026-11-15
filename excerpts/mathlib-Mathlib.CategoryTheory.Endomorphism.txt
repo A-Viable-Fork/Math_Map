@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Endomorphism.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Endomorphism.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 4a5fa429a5f21cf21b974758d1771c5ba21db2eaa33f11c9f50f907e19c3ec66
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Aut (line 118)
+def Aut (X : C) := X ≅ X

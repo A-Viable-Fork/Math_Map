@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Barycentric subdivision (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361041412
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: fd865f907f6d924b862b4d20785ad2fd9ad6044daee3933141672c153c7a805c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''barycentric subdivision''' is a standard way to subdivide a given [[simplex]] into smaller ones. Its extension to [[Simplicial complex|simplicial complexes]] is a canonical method to refining them.
+
+The barycentric subdivision is an operation on simplicial complexes.
+
+meaning that one replaces larger simplices with a union of smaller simplices.
+
+Moreover, the induced map is an isomorphism: Subdivision does not change the homology of the complex.

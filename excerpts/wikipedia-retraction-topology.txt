@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Retraction (topology) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377901923
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: ac15edd2b71ccc813e2c87037768586764f7d370360b0b79823688cf8995df8b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An '''absolute neighborhood retract''' ('''ANR''') is a particularly [[well-behaved]] type of topological space.
+
+Every ANR has the [[homotopy type]] of a very simple topological space, a [[CW complex]].
+
+A space <math display="inline">X</math> is an '''absolute neighborhood retract''' for the class <math>\mathcal{C}</math>, written <math display="inline">\operatorname{ANR} \left(\mathcal{C}\right),</math> if <math display="inline">X</math> is in <math>\mathcal{C}</math> and whenever <math display="inline">X</math> is a closed subset of a space <math display="inline">Y</math> in <math>\mathcal{C}</math>, <math display="inline">X</math> is a neighborhood retract of <math display="inline">Y</math>.

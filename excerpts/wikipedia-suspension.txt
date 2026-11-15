@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Suspension (topology) (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377890955
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5ea820111eb00a73ccc6c668c03a229da0208acae7bf474ae2178e6f6f314c00
+Fetched: 2026-11-07, appended 2026-11-15. SHA-256 of the page source as fetched: 5ea820111eb00a73ccc6c668c03a229da0208acae7bf474ae2178e6f6f314c00
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 the '''suspension''' of a [[topological space]] ''X'' is intuitively obtained by stretching ''X'' into a [[cylinder (geometry)|cylinder]] and then collapsing both end faces to points.
@@ -16,3 +16,7 @@ The suspension of ''X'' is denoted by '''''SX'''''
 The reduced suspension can be used to construct a [[Group homomorphism|homomorphism]] of [[homotopy group]]s, to which the [[Freudenthal suspension theorem]] applies.
 
 In [[homotopy theory]], the phenomena which are preserved under suspension, in a suitable sense, make up [[stable homotopy theory]].
+
+The '''reduced suspension''' or '''based suspension''' &Sigma;''X'' of ''X'' is the quotient space:
+
+This is the equivalent to taking ''SX'' and collapsing the line (''x''<sub>0</sub> &times; ''I''{{space|hair}}) joining the two ends to a single point. The basepoint of the pointed space &Sigma;''X'' is taken to be the equivalence class of (''x''<sub>0</sub>,&thinsp;0).

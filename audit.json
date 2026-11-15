@@ -36950,6 +36950,1487 @@
    "sources": {
     "c": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376306988"
    }
+  },
+  {
+   "id": "D4-001",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-handle-decomposition.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Thus, a manifold has a handle decomposition with only ''0''-handles if it is diffeomorphic to a disjoint union of balls."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>.",
+     "note": "A 0-handle is D^0 x D^m, an m-disk; handlebodies are built on it, and 0-handles alone give a disjoint union of balls.",
+     "more": [
+      {
+       "src": "h",
+       "quote": "Thus, a manifold has a handle decomposition with only ''0''-handles if it is diffeomorphic to a disjoint union of balls."
+      },
+      {
+       "src": "h",
+       "quote": "A manifold obtained by attaching ''g'' ''k''-handles to the disc <math>D^m</math> is an ''' ''(m,k)''-handlebody of genus ''g'' '''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No window states what a 0-handle is attached to; its attaching sphere is empty."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Thus, a manifold has a handle decomposition with only ''0''-handles if it is diffeomorphic to a disjoint union of balls."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The manifold <math>M \\cup_f H^j</math>",
+     "note": "The union with a handle is again a manifold."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "Thus, a manifold has a handle decomposition with only ''0''-handles if it is diffeomorphic to a disjoint union of balls.",
+     "note": "Each 0-handle is one more ball of a disjoint union."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched handle, handlebody and CW attachment: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381810994"
+   }
+  },
+  {
+   "id": "D4-002",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\\phi\\colon S^p \\times D^q \\to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be",
+     "note": "The surgery on S^0 x D^n is stated (p = 0), and that on the 2-sphere it adds a handle; that it connects two components is not in a window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "Having cut out two disks <math>S^0\\times D^2</math>, we glue back in the cylinder <math>S^1\\times D^1</math>."
+      },
+      {
+       "src": "s",
+       "quote": "If the orientations are the same (Fig. 2b), the resulting manifold is the [[torus]] <math>S^1\\times S^1</math>, but if they are different, we obtain the [[Klein bottle]] (Fig. 2c)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\\phi\\colon S^p \\times D^q \\to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "As per the above definition, a surgery on the circle consists of cutting out a copy of <math>S^0\\times D^1</math> and gluing in <math>D^1\\times S^0</math>. The pictures in Fig. 1  show that the result of doing this is either (i) <math>S^1</math> again, or (ii) two copies of <math>S^1</math>.",
+     "note": "A 0-surgery on the circle gives one circle or two: the number of components changes."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "mathlib": "Searched surgery and spherical modification: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-003",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-handle-decomposition.txt",
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>.",
+     "note": "For j = 1: D^1 x D^(m-1) attached along S^0 x D^(m-1), two disks in the boundary."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given an <math>(n+1)</math>-manifold with boundary <math>(L, \\partial L)</math> and an embedding <math>\\phi\\colon S^p\\times D^q \\to \\partial L</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": ":<math>L' := L\\; \\cup_\\phi \\left(D^{p+1} \\times D^q\\right).</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+     "note": "The boundary changes by a surgery, and a surgery leaves the manifold in its cobordism class; the landed field does not say whose cobordism type is kept.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery"
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched handle, handlebody and CW attachment: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381810994",
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-004",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>.",
+     "note": "For p = 1; often, the source says: the class must be carried by an embedded circle with trivial normal bundle.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+      },
+      {
+       "src": "s",
+       "quote": "For instance, it is not possible to perform surgery on an orientation-reversing loop."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\\phi\\colon S^p \\times D^q \\to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched surgery and spherical modification: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-005",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-handle-decomposition.txt",
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>.",
+     "note": "For j = 2: D^2 x D^(m-2) attached along S^1 x D^(m-2) in the boundary. That the handle kills boundary loops is not in a window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Given an <math>(n+1)</math>-manifold with boundary <math>(L, \\partial L)</math> and an embedding <math>\\phi\\colon S^p\\times D^q \\to \\partial L</math>"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": ":<math>L' := L\\; \\cup_\\phi \\left(D^{p+1} \\times D^q\\right).</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+     "note": "The boundary changes by a surgery, and a surgery leaves the manifold in its cobordism class; the landed field does not say whose cobordism type is kept.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+     "note": "The boundary changes by a 1-surgery, which can kill an element of the fundamental group; that loops are killed is stated for surgery, with an often, not for the handle.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+      }
+     ]
+    }
+   },
+   "contra": [
+    "description",
+    "broken"
+   ],
+   "mathlib": "Searched handle, handlebody and CW attachment: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381810994",
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-006",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>.",
+     "note": "For p = 2; often, the source says.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\\phi\\colon S^p \\times D^q \\to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched surgery and spherical modification: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-007",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "h": "excerpts/wikipedia-handle-decomposition.txt",
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "h",
+     "quote": "The manifold <math>M \\cup_f H^j</math>"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+     "note": "The boundary changes by a surgery, and a surgery leaves the manifold in its cobordism class; the landed field does not say whose cobordism type is kept.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery"
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched handle, handlebody and CW attachment: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "h": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381810994",
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-008",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class."
+      },
+      {
+       "src": "s",
+       "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\\phi\\colon S^p \\times D^q \\to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+     "note": "The cobordism class is stated; dimensions above p are not in a window.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "Up to homotopy, the process of surgery on an embedding <math>\\phi\\colon S^p\\times D^q \\to M</math> can be described as the attaching of a <math>(p+1)</math>-cell, giving the homotopy type of the trace, and the detaching of a ''q''-cell to obtain ''N''."
+      }
+     ]
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched surgery and spherical modification: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-009",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-surgery-theory.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''.",
+     "note": "A p-surgery with the index named n."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\\phi\\colon S^p \\times D^q \\to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+     "more": [
+      {
+       "src": "s",
+       "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "Up to homotopy, the process of surgery on an embedding <math>\\phi\\colon S^p\\times D^q \\to M</math> can be described as the attaching of a <math>(p+1)</math>-cell, giving the homotopy type of the trace, and the detaching of a ''q''-cell to obtain ''N''."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched surgery and spherical modification: Mathlib has no handle attachments or surgery on manifolds at the pin; no declaration states this entry's claims.",
+   "falsify": {
+    "field": "preserved",
+    "claim": "Every surgery keeps the cobordism class.",
+    "attempt": "Looked for a surgery that leaves the class: the source states that the trace of any surgery is a cobordism between M and M', and that two manifolds are related by spherical modifications exactly when they lie in the same cobordism class.",
+    "outcome": "survived"
+   },
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062"
+   }
+  },
+  {
+   "id": "D4-012",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "r": "excerpts/wikipedia-retraction-topology.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "An '''absolute neighborhood retract''' ('''ANR''') is a particularly [[well-behaved]] type of topological space."
+    },
+    "description": {
+     "verdict": "wrong",
+     "src": "r",
+     "quote": "A space <math display=\"inline\">X</math> is an '''absolute neighborhood retract''' for the class <math>\\mathcal{C}</math>, written <math display=\"inline\">\\operatorname{ANR} \\left(\\mathcal{C}\\right),</math> if <math display=\"inline\">X</math> is in <math>\\mathcal{C}</math> and whenever <math display=\"inline\">X</math> is a closed subset of a space <math display=\"inline\">Y</math> in <math>\\mathcal{C}</math>, <math display=\"inline\">X</math> is a neighborhood retract of <math display=\"inline\">Y</math>.",
+     "note": "The source asks for a neighborhood retract of each space of the class in which X is a closed subset: a retract of some neighborhood, not of every open set, and under a closed embedding."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "r",
+     "quote": "A space <math display=\"inline\">X</math> is an '''absolute neighborhood retract''' for the class <math>\\mathcal{C}</math>, written <math display=\"inline\">\\operatorname{ANR} \\left(\\mathcal{C}\\right),</math> if <math display=\"inline\">X</math> is in <math>\\mathcal{C}</math> and whenever <math display=\"inline\">X</math> is a closed subset of a space <math display=\"inline\">Y</math> in <math>\\mathcal{C}</math>, <math display=\"inline\">X</math> is a neighborhood retract of <math display=\"inline\">Y</math>."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No window states a verification or construction as output."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "r",
+     "quote": "A space <math display=\"inline\">X</math> is an '''absolute neighborhood retract''' for the class <math>\\mathcal{C}</math>, written <math display=\"inline\">\\operatorname{ANR} \\left(\\mathcal{C}\\right),</math> if <math display=\"inline\">X</math> is in <math>\\mathcal{C}</math> and whenever <math display=\"inline\">X</math> is a closed subset of a space <math display=\"inline\">Y</math> in <math>\\mathcal{C}</math>, <math display=\"inline\">X</math> is a neighborhood retract of <math display=\"inline\">Y</math>.",
+     "note": "The neighborhood retract property is stated; homotopy extension is not in a window.",
+     "more": [
+      {
+       "src": "r",
+       "quote": "Every ANR has the [[homotopy type]] of a very simple topological space, a [[CW complex]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched absolute neighborhood retract, ANR and retract: Mathlib has retracts in categories, not absolute neighborhood retracts; no declaration states this entry's claims.",
+   "sources": {
+    "r": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377901923"
+   }
+  },
+  {
+   "id": "D4-013",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-adams-operation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''Adams operation''', denoted ψ<sup>''k''</sup> for natural numbers ''k'',  is a [[cohomology operation]] in [[topological K-theory]]"
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "In (algebraic or topological) K-theory, Adams operations <math>\\psi^k</math> are [[ring homomorphism]]s such that for <math>k\\in\\N</math>,",
+     "note": "Operations on K-theory that are ring homomorphisms, as stated; that they detect vector bundle structure is not in a window.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "an '''Adams operation''', denoted ψ<sup>''k''</sup> for natural numbers ''k'',  is a [[cohomology operation]] in [[topological K-theory]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''Adams operation''', denoted ψ<sup>''k''</sup> for natural numbers ''k'',  is a [[cohomology operation]] in [[topological K-theory]]"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "In (algebraic or topological) K-theory, Adams operations <math>\\psi^k</math> are [[ring homomorphism]]s such that for <math>k\\in\\N</math>,"
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "In (algebraic or topological) K-theory, Adams operations <math>\\psi^k</math> are [[ring homomorphism]]s such that for <math>k\\in\\N</math>,",
+     "note": "The ring homomorphism property is stated; the composition law is not in a window.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "* <math>\\psi^k</math> are [[functorial]]."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [
+    "description",
+    "preserved"
+   ],
+   "mathlib": "Searched Adams operation and lambda ring: Mathlib has no topological K-theory or Adams operations at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1380098444"
+   }
+  },
+  {
+   "id": "D4-014",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-adams-resolution.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The mod <math>p</math> Adams resolution <math>(X_s,g_s)</math> for a spectrum <math>X</math> is a certain \"chain-complex\" of spectra induced from recursively looking at the fibers of maps into generalized [[Eilenberg–MacLane spectra|Eilenberg–Maclane spectra]] giving generators for the cohomology of resolved spectra"
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "there is a resolution analogous to [[free resolution]]s of [[Spectrum (topology)|spectra]] yielding a tool for constructing the [[Adams spectral sequence]].",
+     "more": [
+      {
+       "src": "a",
+       "quote": "Then, we can take the [[homotopy fiber]] of this map (which acts as a homotopy kernel) to get"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The mod <math>p</math> Adams resolution <math>(X_s,g_s)</math> for a spectrum <math>X</math> is a certain \"chain-complex\" of spectra induced from recursively looking at the fibers of maps into generalized [[Eilenberg–MacLane spectra|Eilenberg–Maclane spectra]] giving generators for the cohomology of resolved spectra"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "X_0 & \\leftarrow & X_1 \\\\",
+     "more": [
+      {
+       "src": "a",
+       "quote": "The mod <math>p</math> Adams resolution <math>(X_s,g_s)</math> for a spectrum <math>X</math> is a certain \"chain-complex\" of spectra induced from recursively looking at the fibers of maps into generalized [[Eilenberg–MacLane spectra|Eilenberg–Maclane spectra]] giving generators for the cohomology of resolved spectra"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states the convergence."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched Adams resolution and spectrum: Mathlib has no spectra or Adams spectral sequence at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1353667325"
+   }
+  },
+  {
+   "id": "D4-015",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-adjunction-space.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''adjunction space''' (or '''attaching space''') is a common construction in [[topology]] where one [[topological space]] is attached or \"glued\" onto another."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The attaching construction is an example of a [[pushout (category theory)|pushout]] in the [[category of topological spaces]]. That is to say, the adjunction space is [[universal property|universal]] with respect to the following [[commutative diagram]]:",
+     "more": [
+      {
+       "src": "a",
+       "quote": "Specifically, let <math>X</math> and <math>Y</math> be topological spaces, and let <math>A</math> be a [[subspace (topology)|subspace]] of <math>Y</math>. Let <math>f : A \\rightarrow X</math> be a [[continuous (topology)|continuous map]] (called the '''attaching map''')."
+      },
+      {
+       "src": "a",
+       "quote": "Inductively attaching cells along their spherical boundaries to this space results in an example of a [[CW complex]]."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Specifically, let <math>X</math> and <math>Y</math> be topological spaces, and let <math>A</math> be a [[subspace (topology)|subspace]] of <math>Y</math>. Let <math>f : A \\rightarrow X</math> be a [[continuous (topology)|continuous map]] (called the '''attaching map''')."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "<math display=\"block\">X\\cup_f Y = (X\\sqcup Y) / \\sim</math>"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The attaching construction is an example of a [[pushout (category theory)|pushout]] in the [[category of topological spaces]]. That is to say, the adjunction space is [[universal property|universal]] with respect to the following [[commutative diagram]]:"
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "where the [[equivalence relation]] <math> \\sim</math> is generated by <math> a\\sim f(a)</math> for all <math>a</math> in <math>A</math>",
+     "note": "The points of A are identified with their images; A is any subspace of Y, a boundary only in the cell example."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched adjunction space and attaching cells: Mathlib attaches cells in categories (relative cell complexes) and states pushouts in general, with no adjunction space of topological spaces as such; no declaration states this entry's claims.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376192001"
+   }
+  },
+  {
+   "id": "D4-016",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-affine-transformation.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''affine transformation''' or '''affinity''' (from the Latin, ''[[wikt:affine|affinis]]'', \"connected with\") is a [[geometric transformation]] that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]], but not necessarily [[Euclidean distance]]s and [[angle]]s."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The landed text is a pointer to the entry's home domain and makes no claim about the operation."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "a [[Function (mathematics)|function]] which [[Map (mathematics)|maps]] an affine space onto itself while preserving both the [[dimension]] of any [[affine subspace]]s (meaning that it sends points to points, lines to lines, planes to planes, and so on) and the ratios of the lengths of [[Parallel (geometry)|parallel]] line segments."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "a [[Function (mathematics)|function]] which [[Map (mathematics)|maps]] an affine space onto itself while preserving both the [[dimension]] of any [[affine subspace]]s (meaning that it sends points to points, lines to lines, planes to planes, and so on) and the ratios of the lengths of [[Parallel (geometry)|parallel]] line segments."
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''affine transformation''' or '''affinity''' (from the Latin, ''[[wikt:affine|affinis]]'', \"connected with\") is a [[geometric transformation]] that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]], but not necessarily [[Euclidean distance]]s and [[angle]]s.",
+     "note": "Lines and parallelism, and the ratios of lengths of parallel segments.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "a [[Function (mathematics)|function]] which [[Map (mathematics)|maps]] an affine space onto itself while preserving both the [[dimension]] of any [[affine subspace]]s (meaning that it sends points to points, lines to lines, planes to planes, and so on) and the ratios of the lengths of [[Parallel (geometry)|parallel]] line segments."
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''affine transformation''' or '''affinity''' (from the Latin, ''[[wikt:affine|affinis]]'', \"connected with\") is a [[geometric transformation]] that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]], but not necessarily [[Euclidean distance]]s and [[angle]]s."
+    }
+   },
+   "contra": [],
+   "mathlib": "Affine maps are in Mathlib (AffineMap, linked at D2-009, the same operation in D2); searched for a declaration stating that an affine map sends lines to lines and keeps ratios along parallels: none at the pin in that form.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1369617920"
+   }
+  },
+  {
+   "id": "D4-017",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-alexandroff-extension.txt",
+    "m": "excerpts/mathlib-Mathlib.Topology.Compactification.OnePoint.Basic.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The map ''c'' is a Hausdorff [[compactification (mathematics)|compactification]] if and only if ''X'' is a [[locally compact]], noncompact [[Hausdorff space]].  For such spaces the Alexandroff extension is called the '''one-point compactification''' or '''Alexandroff compactification'''.",
+     "note": "The source spells it Alexandroff."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "the '''Alexandroff extension''' is a way to extend a noncompact [[topological space]] by adjoining a single point in such a way that the resulting space is [[compact space|compact]].",
+     "more": [
+      {
+       "src": "a",
+       "quote": "the fact that it is in a precise sense minimal among all compactifications"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "The map ''c'' is a Hausdorff [[compactification (mathematics)|compactification]] if and only if ''X'' is a [[locally compact]], noncompact [[Hausdorff space]].  For such spaces the Alexandroff extension is called the '''one-point compactification''' or '''Alexandroff compactification'''."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Then the Alexandroff extension of ''X'' is a certain compact space ''X''* together with an [[open mapping|open]] [[embedding (topology)|embedding]] ''c''&nbsp;:&nbsp;''X''&nbsp;→&nbsp;''X''* such that the complement of ''X'' in ''X''* consists of a single point, typically denoted ∞.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def OnePoint (X : Type*) :="
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Then the Alexandroff extension of ''X'' is a certain compact space ''X''* together with an [[open mapping|open]] [[embedding (topology)|embedding]] ''c''&nbsp;:&nbsp;''X''&nbsp;→&nbsp;''X''* such that the complement of ''X'' in ''X''* consists of a single point, typically denoted ∞.",
+     "note": "An open embedding: the topology of X is kept; the result is compact.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "theorem isOpenEmbedding_coe : IsOpenEmbedding ((↑) : X → OnePoint X)"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "the '''Alexandroff extension''' is a way to extend a noncompact [[topological space]] by adjoining a single point in such a way that the resulting space is [[compact space|compact]].",
+     "note": "Non-compactness is lost, as stated; separation at infinity is not in a window."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1364043037",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
+   }
+  },
+  {
+   "id": "D4-018",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-alpha-shape.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Alpha shapes are closely related to alpha complexes, which are subcomplexes of the [[Delaunay triangulation]] of the point set."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "For each [[real number]] <math>\\alpha</math>, the  <math>\\alpha</math>-complex of the given set of points is the [[simplicial complex]] formed by the set of edges and triangles whose radii are at most <math>1/\\alpha</math>.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "Alpha shapes are closely related to alpha complexes, which are subcomplexes of the [[Delaunay triangulation]] of the point set."
+      },
+      {
+       "src": "a",
+       "quote": "Each edge or triangle of the Delaunay triangulation may be associated with a characteristic radius: the radius of the smallest empty circle containing the edge or triangle."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "For each [[real number]] <math>\\alpha</math>, the  <math>\\alpha</math>-complex of the given set of points is the [[simplicial complex]] formed by the set of edges and triangles whose radii are at most <math>1/\\alpha</math>.",
+     "note": "A point set and a real parameter are stated, for edges and triangles in the plane; R^d is not in a window, and the source bounds the radii by 1/alpha.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "Alpha shapes are closely related to alpha complexes, which are subcomplexes of the [[Delaunay triangulation]] of the point set."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "For each [[real number]] <math>\\alpha</math>, the  <math>\\alpha</math>-complex of the given set of points is the [[simplicial complex]] formed by the set of edges and triangles whose radii are at most <math>1/\\alpha</math>."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "More specifically, {{harvtxt|Edelsbrunner|1995}} showed that the two shapes are [[homotopy equivalent]].",
+     "note": "The source states a homotopy equivalence with the alpha shape; the union of balls and the nerve theorem are not in a window."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [
+    "input",
+    "preserved"
+   ],
+   "mathlib": "Searched alpha complex, Delaunay and nerve: Mathlib has no Delaunay triangulation or alpha complex at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376354653"
+   }
+  },
+  {
+   "id": "D4-019",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "f": "excerpts/wikipedia-free-product.txt",
+    "m": "excerpts/mathlib-Mathlib.GroupTheory.PushoutI.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "is always an '''amalgamated free product''' of the fundamental groups of the spaces."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The more general construction of '''free product with amalgamation''' is correspondingly a special kind of [[pushout (category theory)|pushout]] in the same [[category theory|category]].",
+     "more": [
+      {
+       "src": "f",
+       "quote": "The free product with amalgamation of <math>G</math> and <math>H</math>, with respect to <math>\\varphi</math> and <math>\\psi</math>, is the [[quotient group]]"
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "Suppose <math>G</math> and <math>H</math> are given as before, along with monomorphisms (i.e. injective [[group homomorphisms]]):",
+     "more": [
+      {
+       "src": "f",
+       "quote": "The amalgamation has forced an identification between <math> \\varphi(F) </math> in <math>G</math> with <math>\\psi(F)</math> in <math>H</math>, element by element."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "f",
+     "quote": "The free product with amalgamation of <math>G</math> and <math>H</math>, with respect to <math>\\varphi</math> and <math>\\psi</math>, is the [[quotient group]]"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "m",
+     "quote": "Function.Injective (of (φ := φ) i)",
+     "note": "When the maps from H are injective, each factor embeds in the pushout."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "f": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1357518349",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/PushoutI.lean"
+   }
+  },
+  {
+   "id": "D4-020",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-ambient-isotopy.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''ambient isotopy''', also called an ''h-isotopy'', is a kind of [[continuous map|continuous]] distortion of an [[ambient space]], for example a [[manifold]], taking a [[submanifold]] to another submanifold."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''ambient isotopy''', also called an ''h-isotopy'', is a kind of [[continuous map|continuous]] distortion of an [[ambient space]], for example a [[manifold]], taking a [[submanifold]] to another submanifold.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "For example in [[knot theory]], one considers two [[knot (mathematics)|knot]]s the same if one can distort one knot into the other without breaking it. Such a distortion is an example of an ambient isotopy."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "For example in [[knot theory]], one considers two [[knot (mathematics)|knot]]s the same if one can distort one knot into the other without breaking it. Such a distortion is an example of an ambient isotopy.",
+     "note": "A knot and its ambient space are stated; S^3 is not in a window (the source takes embeddings of N in a manifold M).",
+     "more": [
+      {
+       "src": "a",
+       "quote": "let <math>N</math> and <math>M</math> be manifolds and <math>g</math> and <math>h</math> be [[embedding]]s of <math>N</math> in <math>M</math>."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "For example in [[knot theory]], one considers two [[knot (mathematics)|knot]]s the same if one can distort one knot into the other without breaking it. Such a distortion is an example of an ambient isotopy."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "a",
+     "quote": "For example in [[knot theory]], one considers two [[knot (mathematics)|knot]]s the same if one can distort one knot into the other without breaking it. Such a distortion is an example of an ambient isotopy.",
+     "note": "Knot type is stated: two knots are the same when one distorts into the other. All knot invariants is not in a window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''ambient isotopy''', also called an ''h-isotopy'', is a kind of [[continuous map|continuous]] distortion of an [[ambient space]], for example a [[manifold]], taking a [[submanifold]] to another submanifold.",
+     "note": "A submanifold is taken to another submanifold."
+    }
+   },
+   "contra": [
+    "input",
+    "preserved"
+   ],
+   "mathlib": "Searched isotopy and ambient isotopy: Mathlib has homotopies of maps and no isotopy of embeddings at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1376192028"
+   }
+  },
+  {
+   "id": "D4-021",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-analytic-continuation.txt",
+    "m": "excerpts/mathlib-Mathlib.Analysis.Analytic.Uniqueness.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "'''analytic continuation''' is a technique to extend the [[domain of a function|domain of definition]] of a given [[analytic function]]."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "'''analytic continuation''' is a technique to extend the [[domain of a function|domain of definition]] of a given [[analytic function]].",
+     "more": [
+      {
+       "src": "a",
+       "quote": "such that ''f'' has an analytic continuation along every path in ''G'', starting from some fixed point ''a'' in ''D'', then ''f'' has a direct analytic continuation to ''G''."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Suppose ''f'' is an [[analytic function]] defined on a non-empty [[open set|open subset]] ''U'' of the [[complex plane]] {{nowrap|<math>\\Complex</math>. }} If ''V'' is a larger open subset of {{nowrap|<math>\\Complex</math>,}} containing ''U'', and ''F'' is an analytic function defined on ''V'' such that",
+     "more": [
+      {
+       "src": "a",
+       "quote": "such that ''f'' has an analytic continuation along every path in ''G'', starting from some fixed point ''a'' in ''D'', then ''f'' has a direct analytic continuation to ''G''."
+      }
+     ]
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Suppose ''f'' is an [[analytic function]] defined on a non-empty [[open set|open subset]] ''U'' of the [[complex plane]] {{nowrap|<math>\\Complex</math>. }} If ''V'' is a larger open subset of {{nowrap|<math>\\Complex</math>,}} containing ''U'', and ''F'' is an analytic function defined on ''V'' such that"
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "Analytic continuations are unique in the following sense: if ''V'' is the [[connectedness|connected]] domain of two analytic functions ''F''<sub>1</sub> and ''F''<sub>2</sub> such that ''U'' is contained in ''V''",
+     "note": "The extension is analytic, and unique on a connected domain by the identity theorem.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "This follows directly from the [[identity theorem]] for [[holomorphic function]]s."
+      },
+      {
+       "src": "a",
+       "quote": "Suppose ''f'' is an [[analytic function]] defined on a non-empty [[open set|open subset]] ''U'' of the [[complex plane]] {{nowrap|<math>\\Complex</math>. }} If ''V'' is a larger open subset of {{nowrap|<math>\\Complex</math>,}} containing ''U'', and ''F'' is an analytic function defined on ''V'' such that"
+      },
+      {
+       "src": "m",
+       "quote": "EqOn f g U"
+      }
+     ]
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "'''analytic continuation''' is a technique to extend the [[domain of a function|domain of definition]] of a given [[analytic function]].",
+     "note": "The domain of definition is extended."
+    }
+   },
+   "contra": [],
+   "falsify": {
+    "field": "preserved",
+    "claim": "A continuation is fixed by the identity theorem.",
+    "attempt": "Looked for path dependence: the source says step-wise continuation can run into inconsistencies, defining more than one value, so continuations along different paths can differ. The uniqueness it states is for two continuations on one connected domain V containing U, which path dependence does not touch.",
+    "outcome": "survived"
+   },
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1381461639",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Analytic/Uniqueness.lean"
+   }
+  },
+  {
+   "id": "D4-022",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "x": "excerpts/arxiv-1305.7492-abstract.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "x",
+     "quote": "We give a new construction of slice knots via annulus twists.",
+     "note": "The abstract names the operation and does not define it."
+    },
+    "description": {
+     "verdict": "unsupported",
+     "note": "The abstracts found name annulus twists and do not define them; no fetched window states it."
+    },
+    "input": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    },
+    "output": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched annulus twist, Dehn twist and knot: Mathlib has no knots or Dehn twists at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "x": "https://export.arxiv.org/abs/1305.7492"
+   }
+  },
+  {
+   "id": "D4-023",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-approximate-fibration.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''approximate fibration''' is a sort of [[fibration]] such that the [[homotopy lifting property]] holds only approximately."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''approximate fibration''' is a sort of [[fibration]] such that the [[homotopy lifting property]] holds only approximately."
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''approximate fibration''' is a sort of [[fibration]] such that the [[homotopy lifting property]] holds only approximately."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''approximate fibration''' is a sort of [[fibration]] such that the [[homotopy lifting property]] holds only approximately."
+    },
+    "preserved": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''approximate fibration''' is a sort of [[fibration]] such that the [[homotopy lifting property]] holds only approximately.",
+     "note": "The lifting property holds only approximately."
+    }
+   },
+   "contra": [],
+   "mathlib": "Searched approximate fibration and homotopy lifting: Mathlib has no fibrations of topological spaces by a lifting property at the pin beyond covering maps; no declaration states this entry's claims.",
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1177174049"
+   }
+  },
+  {
+   "id": "D4-024",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "a": "excerpts/wikipedia-automorphism.txt",
+    "m": "excerpts/mathlib-Mathlib.CategoryTheory.Endomorphism.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''automorphism''' is an [[isomorphism]] from a [[mathematical object]] to itself."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an ''automorphism'' is simply a [[bijective]] [[homomorphism]] of an object into itself.",
+     "more": [
+      {
+       "src": "a",
+       "quote": "a way of [[map (mathematics)|mapping]] the object to itself while preserving all of its structure."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''automorphism''' is an [[isomorphism]] from a [[mathematical object]] to itself."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "an '''automorphism''' is an [[isomorphism]] from a [[mathematical object]] to itself.",
+     "more": [
+      {
+       "src": "m",
+       "quote": "def Aut (X : C) := X ≅ X"
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "a",
+     "quote": "a way of [[map (mathematics)|mapping]] the object to itself while preserving all of its structure."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [],
+   "sources": {
+    "a": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1384882385",
+    "m": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Endomorphism.lean"
+   }
+  },
+  {
+   "id": "D4-025",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "b": "excerpts/wikipedia-backlund-transform.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "'''Bäcklund transforms''' or '''Bäcklund transformations''' (named after the Swedish mathematician [[Albert Victor Bäcklund]]) relate [[partial differential equation]]s and their solutions."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "'''Bäcklund transforms''' or '''Bäcklund transformations''' (named after the Swedish mathematician [[Albert Victor Bäcklund]]) relate [[partial differential equation]]s and their solutions.",
+     "note": "The transform relates equations and their solutions; that it generates new solutions from known ones is not in a window.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "A Bäcklund transform is typically a system of first order partial differential equations relating two functions, and often depending on an additional parameter. It implies that the two functions separately satisfy partial differential equations, and each of the two functions is then said to be a Bäcklund transformation of the other."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "A Bäcklund transform is typically a system of first order partial differential equations relating two functions, and often depending on an additional parameter. It implies that the two functions separately satisfy partial differential equations, and each of the two functions is then said to be a Bäcklund transformation of the other."
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "A Bäcklund transform is typically a system of first order partial differential equations relating two functions, and often depending on an additional parameter. It implies that the two functions separately satisfy partial differential equations, and each of the two functions is then said to be a Bäcklund transformation of the other.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "A Bäcklund transform which relates solutions of the ''same'' equation is called an '''invariant Bäcklund transform''' or '''auto-Bäcklund transform'''."
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "A Bäcklund transform is typically a system of first order partial differential equations relating two functions, and often depending on an additional parameter. It implies that the two functions separately satisfy partial differential equations, and each of the two functions is then said to be a Bäcklund transformation of the other.",
+     "note": "Both functions satisfy partial differential equations."
+    },
+    "broken": {
+     "verdict": "unsupported",
+     "note": "No fetched window states it."
+    }
+   },
+   "contra": [
+    "description"
+   ],
+   "mathlib": "Searched Backlund and soliton: Mathlib has no Backlund transforms at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1382190940"
+   }
+  },
+  {
+   "id": "D4-026",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "b": "excerpts/wikipedia-barycentric-subdivision.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "the '''barycentric subdivision''' is a standard way to subdivide a given [[simplex]] into smaller ones. Its extension to [[Simplicial complex|simplicial complexes]] is a canonical method to refining them."
+    },
+    "description": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "the '''barycentric subdivision''' is a standard way to subdivide a given [[simplex]] into smaller ones. Its extension to [[Simplicial complex|simplicial complexes]] is a canonical method to refining them.",
+     "note": "A subdivision that refines a complex is stated; starring at barycenters and the homeomorphism type are not in a window.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "meaning that one replaces larger simplices with a union of smaller simplices."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "The barycentric subdivision is an operation on simplicial complexes."
+    },
+    "output": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "the '''barycentric subdivision''' is a standard way to subdivide a given [[simplex]] into smaller ones. Its extension to [[Simplicial complex|simplicial complexes]] is a canonical method to refining them.",
+     "note": "A refinement into smaller simplices is stated; the homeomorphism type is not in a window.",
+     "more": [
+      {
+       "src": "b",
+       "quote": "meaning that one replaces larger simplices with a union of smaller simplices."
+      }
+     ]
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "b",
+     "quote": "Moreover, the induced map is an isomorphism: Subdivision does not change the homology of the complex.",
+     "note": "Homology is stated; the homeomorphism type is not in a window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "b",
+     "quote": "meaning that one replaces larger simplices with a union of smaller simplices.",
+     "note": "Larger simplices are replaced by smaller ones."
+    }
+   },
+   "contra": [
+    "description",
+    "output",
+    "preserved"
+   ],
+   "mathlib": "Searched barycentric subdivision: Mathlib has barycentric coordinates and simplicial sets, no subdivision of a simplicial complex at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "b": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1361041412"
+   }
+  },
+  {
+   "id": "D4-027",
+   "batch": 7,
+   "why": "Landed review, batch 7: a landed entry graded field by field against sources under the strict rule.",
+   "files": {
+    "s": "excerpts/wikipedia-suspension.txt"
+   },
+   "fields": {
+    "name": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "The '''reduced suspension''' or '''based suspension''' &Sigma;''X'' of ''X'' is the quotient space:",
+     "note": "The based suspension."
+    },
+    "description": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "If ''X'' is a [[pointed space]] with basepoint ''x''<sub>0</sub>, there is a variation of the suspension",
+     "more": [
+      {
+       "src": "s",
+       "quote": "This is the equivalent to taking ''SX'' and collapsing the line (''x''<sub>0</sub> &times; ''I''{{space|hair}}) joining the two ends to a single point. The basepoint of the pointed space &Sigma;''X'' is taken to be the equivalence class of (''x''<sub>0</sub>,&thinsp;0)."
+      }
+     ]
+    },
+    "input": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "If ''X'' is a [[pointed space]] with basepoint ''x''<sub>0</sub>, there is a variation of the suspension"
+    },
+    "output": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "This is the equivalent to taking ''SX'' and collapsing the line (''x''<sub>0</sub> &times; ''I''{{space|hair}}) joining the two ends to a single point. The basepoint of the pointed space &Sigma;''X'' is taken to be the equivalence class of (''x''<sub>0</sub>,&thinsp;0)."
+    },
+    "preserved": {
+     "verdict": "imprecise",
+     "src": "s",
+     "quote": "This is the equivalent to taking ''SX'' and collapsing the line (''x''<sub>0</sub> &times; ''I''{{space|hair}}) joining the two ends to a single point. The basepoint of the pointed space &Sigma;''X'' is taken to be the equivalence class of (''x''<sub>0</sub>,&thinsp;0).",
+     "note": "The basepoint is stated; the shift of reduced homology is not in a window."
+    },
+    "broken": {
+     "verdict": "confirmed",
+     "src": "s",
+     "quote": "This is the equivalent to taking ''SX'' and collapsing the line (''x''<sub>0</sub> &times; ''I''{{space|hair}}) joining the two ends to a single point. The basepoint of the pointed space &Sigma;''X'' is taken to be the equivalence class of (''x''<sub>0</sub>,&thinsp;0).",
+     "note": "The line over the basepoint is collapsed."
+    }
+   },
+   "contra": [
+    "preserved"
+   ],
+   "mathlib": "Searched suspension and reduced suspension: Mathlib has no suspension of a topological space at the pin; no declaration states this entry's claims.",
+   "sources": {
+    "s": "https://en.wikipedia.org/w/index.php?action=raw&oldid=1377890955"
+   }
   }
  ]
 }

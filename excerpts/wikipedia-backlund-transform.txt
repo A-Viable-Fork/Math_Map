@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Bäcklund transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382190940
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: df4e30c7f61d03ec921c95cb5d8ec83903b580f5d117af0555f7584e86797f7e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Bäcklund transforms''' or '''Bäcklund transformations''' (named after the Swedish mathematician [[Albert Victor Bäcklund]]) relate [[partial differential equation]]s and their solutions.
+
+A Bäcklund transform is typically a system of first order partial differential equations relating two functions, and often depending on an additional parameter. It implies that the two functions separately satisfy partial differential equations, and each of the two functions is then said to be a Bäcklund transformation of the other.
+
+A Bäcklund transform which relates solutions of the ''same'' equation is called an '''invariant Bäcklund transform''' or '''auto-Bäcklund transform'''.

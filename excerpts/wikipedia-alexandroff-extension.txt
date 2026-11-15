@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Alexandroff extension (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364043037
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: dcb858f957ce50fadd6d9b3d0f748fe60e503d2971cfe4e4f19afc90117c773a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Alexandroff extension''' is a way to extend a noncompact [[topological space]] by adjoining a single point in such a way that the resulting space is [[compact space|compact]].
+
+Then the Alexandroff extension of ''X'' is a certain compact space ''X''* together with an [[open mapping|open]] [[embedding (topology)|embedding]] ''c''&nbsp;:&nbsp;''X''&nbsp;→&nbsp;''X''* such that the complement of ''X'' in ''X''* consists of a single point, typically denoted ∞.
+
+The map ''c'' is a Hausdorff [[compactification (mathematics)|compactification]] if and only if ''X'' is a [[locally compact]], noncompact [[Hausdorff space]].  For such spaces the Alexandroff extension is called the '''one-point compactification''' or '''Alexandroff compactification'''.
+
+the fact that it is in a precise sense minimal among all compactifications

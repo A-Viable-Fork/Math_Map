@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/Analytic/Uniqueness.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Analytic/Uniqueness.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 58009b2989e1f31a7fd9582698bb2e6a5f1dada2f10beb7f5d2cc3453ff66c8c
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- AnalyticOnNhd.eqOn_of_preconnected_of_eventuallyEq (line 223)
+theorem eqOn_of_preconnected_of_eventuallyEq {f g : E → F} {U : Set E} (hf : AnalyticOnNhd 𝕜 f U)
+    (hg : AnalyticOnNhd 𝕜 g U) (hU : IsPreconnected U) {z₀ : E} (h₀ : z₀ ∈ U) (hfg : f =ᶠ[𝓝 z₀] g) :
+    EqOn f g U

@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Analytic continuation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381461639
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: b645a3a81004ab0f2e142e53581769959b37d702d239b523f116999584fb4f46
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''analytic continuation''' is a technique to extend the [[domain of a function|domain of definition]] of a given [[analytic function]].
+
+These may have an essentially [[topological]] nature, leading to inconsistencies (defining more than one value).
+
+Suppose ''f'' is an [[analytic function]] defined on a non-empty [[open set|open subset]] ''U'' of the [[complex plane]] {{nowrap|<math>\Complex</math>. }} If ''V'' is a larger open subset of {{nowrap|<math>\Complex</math>,}} containing ''U'', and ''F'' is an analytic function defined on ''V'' such that
+
+Analytic continuations are unique in the following sense: if ''V'' is the [[connectedness|connected]] domain of two analytic functions ''F''<sub>1</sub> and ''F''<sub>2</sub> such that ''U'' is contained in ''V''
+
+This follows directly from the [[identity theorem]] for [[holomorphic function]]s.
+
+such that ''f'' has an analytic continuation along every path in ''G'', starting from some fixed point ''a'' in ''D'', then ''f'' has a direct analytic continuation to ''G''.

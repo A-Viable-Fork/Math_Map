@@ -506,6 +506,14 @@ const LANDED = [
   K("D2-192", "output", "Ideal.radical_idem", "Mathlib/RingTheory/Ideal/Operations.lean", "exact", "The radical of the radical is the radical: rad(I) is a radical ideal."),
   K("D2-192", "preserved", "PrimeSpectrum.zeroLocus_radical", "Mathlib/RingTheory/Spectrum/Prime/Basic.lean", "exact", "The zero locus of rad(I) in the prime spectrum is that of I."),
   K("D2-194", "description", "CategoryTheory.ComposableArrows.Exact", "Mathlib/Algebra/Homology/ExactSequence.lean", "general", "A sequence of composable arrows is exact when it is a complex and each two consecutive arrows form an exact short complex, in a category with zero morphisms."),
+  // Batch 7: D4-001 to D4-027.
+  K("D4-017", "output", "OnePoint", "Mathlib/Topology/Compactification/OnePoint/Basic.lean", "exact", "The one-point compactification of X: X with a point at infinity adjoined."),
+  K("D4-017", "preserved", "OnePoint.isOpenEmbedding_coe", "Mathlib/Topology/Compactification/OnePoint/Basic.lean", "exact", "The inclusion of X in its one-point compactification is an open embedding: the topology of X is kept."),
+  K("D4-017", "output", "OnePoint.denseRange_coe", "Mathlib/Topology/Compactification/OnePoint/Basic.lean", "exact", "For a noncompact X the inclusion has dense range: the result is a compactification of X."),
+  K("D4-019", "description", "Monoid.PushoutI", "Mathlib/GroupTheory/PushoutI.lean", "general", "The pushout of a family of monoids or groups over a common H, for any index set: the amalgamated product of two groups is the case of two factors."),
+  K("D4-019", "preserved", "Monoid.PushoutI.of_injective", "Mathlib/GroupTheory/PushoutI.lean", "general", "When every map from H is injective, each factor embeds in the pushout."),
+  K("D4-021", "preserved", "AnalyticOnNhd.eqOn_of_preconnected_of_eventuallyEq", "Mathlib/Analysis/Analytic/Uniqueness.lean", "general", "Two functions analytic on a preconnected set that agree near one point agree on the whole set: the identity theorem behind the uniqueness of a continuation."),
+  K("D4-024", "output", "CategoryTheory.Aut", "Mathlib/CategoryTheory/Endomorphism.lean", "exact", "The automorphisms of an object X of a category: the isomorphisms from X to itself."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

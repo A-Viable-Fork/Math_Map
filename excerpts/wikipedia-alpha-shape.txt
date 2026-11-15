@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Alpha shape (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376354653
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: f17a133a82829303317df11a71de283c8353921ce51ca319bbd762225b85f4a1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Alpha shapes are closely related to alpha complexes, which are subcomplexes of the [[Delaunay triangulation]] of the point set.
+
+Each edge or triangle of the Delaunay triangulation may be associated with a characteristic radius: the radius of the smallest empty circle containing the edge or triangle.
+
+For each [[real number]] <math>\alpha</math>, the  <math>\alpha</math>-complex of the given set of points is the [[simplicial complex]] formed by the set of edges and triangles whose radii are at most <math>1/\alpha</math>.
+
+More specifically, {{harvtxt|Edelsbrunner|1995}} showed that the two shapes are [[homotopy equivalent]].

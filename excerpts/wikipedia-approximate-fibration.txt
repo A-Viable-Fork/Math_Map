@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Approximate fibration (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1177174049
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 7e839df333a7f5775fe346560ac6577fee1e0229c0851a2b9e88099f2ad64892
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''approximate fibration''' is a sort of [[fibration]] such that the [[homotopy lifting property]] holds only approximately.

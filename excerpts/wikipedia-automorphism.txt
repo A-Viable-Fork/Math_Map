@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Automorphism (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384882385
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 4f1a7ebdd79a09772a75bf46e7187b51fa3e456b73ef8088c3b5f7770ab5a832
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''automorphism''' is an [[isomorphism]] from a [[mathematical object]] to itself.
+
+a way of [[map (mathematics)|mapping]] the object to itself while preserving all of its structure.
+
+an ''automorphism'' is simply a [[bijective]] [[homomorphism]] of an object into itself.

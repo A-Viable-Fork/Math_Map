@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Adams operation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380098444
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 2855feb11c3c0ad97054b0e1f64924fe2a0736831127e05580539f38e9c345c3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''Adams operation''', denoted ψ<sup>''k''</sup> for natural numbers ''k'',  is a [[cohomology operation]] in [[topological K-theory]]
+
+In (algebraic or topological) K-theory, Adams operations <math>\psi^k</math> are [[ring homomorphism]]s such that for <math>k\in\N</math>,
+
+* <math>\psi^k(l)=l^k</math> if <math>l</math> is the class of a [[line bundle]],
+
+* <math>\psi^k</math> are [[functorial]].

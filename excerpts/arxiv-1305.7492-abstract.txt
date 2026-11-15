@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: arXiv:1305.7492 abstract page: Tetsuya Abe, Motoo Tange, A construction of slice knots via annulus twists (2013)
+URL: https://export.arxiv.org/abs/1305.7492
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 5f884b4b730c6ff41cb3cb554a67dee19b8f03216f4b21916baabf09d5304e33
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We give a new construction of slice knots via annulus twists.

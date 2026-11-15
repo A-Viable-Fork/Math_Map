@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Free product (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1357518349
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 2c79b5f6afc4ab3da8b2edab3e48beccbacbd5766b901e5b1d01c2da1f907568
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is always an '''amalgamated free product''' of the fundamental groups of the spaces.
+
+The more general construction of '''free product with amalgamation''' is correspondingly a special kind of [[pushout (category theory)|pushout]] in the same [[category theory|category]].
+
+Suppose <math>G</math> and <math>H</math> are given as before, along with monomorphisms (i.e. injective [[group homomorphisms]]):
+
+The free product with amalgamation of <math>G</math> and <math>H</math>, with respect to <math>\varphi</math> and <math>\psi</math>, is the [[quotient group]]
+
+The amalgamation has forced an identification between <math> \varphi(F) </math> in <math>G</math> with <math>\psi(F)</math> in <math>H</math>, element by element.

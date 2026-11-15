@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "abf1d80c72b04c91b6a743103cfe70a540c386e5"
+  "commit": "109c1197db6892ebc6bd0aae3b42bb5f22c8ba73"
  },
  "domains": {
   "D1": {
@@ -747,20 +747,20 @@
    "generated": 44
   },
   "byTier": {
-   "landed": 1182,
-   "audited": 751,
+   "landed": 1157,
+   "audited": 776,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 123,
+  "corrected": 138,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 948,
-   "unchecked": 7445,
+   "unsupported": 964,
+   "unchecked": 7295,
    "imprecise": 309,
-   "sourced": 3604,
+   "sourced": 3738,
    "formal": 90
   },
   "lean": {
@@ -802,14 +802,14 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 174,
-   "links": 358,
+   "entries": 178,
+   "links": 365,
    "byMatch": {
-    "exact": 252,
+    "exact": 256,
     "conflicts": 5,
     "related": 27,
     "special": 27,
-    "general": 34,
+    "general": 37,
     "ingredient": 13
    }
   }
@@ -20356,14 +20356,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "unsupported",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-002",
@@ -20374,7 +20375,7 @@
     "surgery",
     "local"
    ],
-   "description": "Surgery on 0-dimensional sphere S^0 x D^n in n-manifold. Connects two components or creates handle.",
+   "description": "Surgery on S^0 x D^n in an n-manifold: two disks are cut out and a tube D^1 x S^(n-1) glued in; on the 2-sphere this gives a torus or a Klein bottle, on the circle one circle or two",
    "input": "n-manifold M with embedded S^0 x D^n",
    "output": "Surgered manifold M'",
    "preserved": "Cobordism class",
@@ -20384,14 +20385,55 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Surgery on 0-dimensional sphere S^0 x D^n in n-manifold. Connects two components or creates handle."
+    },
+    "reason": "Landed review, batch 7: description graded imprecise. That the surgery connects two components is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \\times D^q</math> and gluing in <math>D^{p+1} \\times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "Having cut out two disks <math>S^0\\times D^2</math>, we glue back in the cylinder <math>S^1\\times D^1</math>.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "If the orientations are the same (Fig. 2b), the resulting manifold is the [[torus]] <math>S^1\\times S^1</math>, but if they are different, we obtain the [[Klein bottle]] (Fig. 2c).",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "As per the above definition, a surgery on the circle consists of cutting out a copy of <math>S^0\\times D^1</math> and gluing in <math>D^1\\times S^0</math>. The pictures in Fig. 1  show that the result of doing this is either (i) <math>S^1</math> again, or (ii) two copies of <math>S^1</math>.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-003",
@@ -20404,21 +20446,48 @@
    "description": "Attaches D^1 x D^{n-1} along boundary. Adds a 'tunnel' connecting parts of the boundary.",
    "input": "Manifold with boundary ∂L",
    "output": "New manifold with 1-handle attached",
-   "preserved": "Cobordism type",
+   "preserved": "The cobordism class of the boundary: attaching the handle changes the boundary by a surgery, whose trace is a cobordism",
    "broken": "Boundary topology (modified)",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Cobordism type"
+    },
+    "reason": "Landed review, batch 7: preserved graded imprecise. The cobordism kept is the boundary's.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-004",
@@ -20439,14 +20508,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-005",
@@ -20456,24 +20526,77 @@
    "tags": [
     "surgery"
    ],
-   "description": "Attaches D^2 x D^{n-2} along boundary. Adds a 'cap' killing boundary loops.",
+   "description": "Attaches D^2 x D^(n-2) along S^1 x D^(n-2) in the boundary; the boundary changes by a 1-surgery",
    "input": "Manifold with boundary",
    "output": "New manifold with 2-handle",
-   "preserved": "Cobordism type",
-   "broken": "Boundary loops (killed)",
+   "preserved": "The cobordism class of the boundary: attaching the handle changes the boundary by a surgery, whose trace is a cobordism",
+   "broken": "Boundary topology: the boundary changes by a 1-surgery, which can often kill an element of its fundamental group",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved",
+     "description",
+     "broken"
+    ],
+    "landed": {
+     "preserved": "Cobordism type",
+     "description": "Attaches D^2 x D^{n-2} along boundary. Adds a 'cap' killing boundary loops.",
+     "broken": "Boundary loops (killed)"
+    },
+    "reason": "Landed review, batch 7: preserved and description, broken graded imprecise. That the handle kills boundary loops is stated only through the surgery on the boundary. The cobordism kept is the boundary's.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-handle-decomposition.txt",
+      "quote": "'''the process of attaching a ''j''-handle to an ''m''-manifold ''M'' ''' assumes that one has a smooth embedding of <math>f : S^{j-1} \\times D^{m-j} \\to \\partial M</math>. Let <math>H^j = D^j \\times D^{m-j}</math>.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+      "fields": [
+       "description",
+       "broken"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\\alpha\\in\\pi_p(M)</math>.",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-006",
@@ -20494,14 +20617,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-007",
@@ -20515,21 +20639,48 @@
    "description": "General: attaches D^k x D^{n-k} along S^{k-1} x D^{n-k} in boundary.",
    "input": "Manifold with boundary + attaching map",
    "output": "New manifold with k-handle",
-   "preserved": "Cobordism type",
+   "preserved": "The cobordism class of the boundary: attaching the handle changes the boundary by a surgery, whose trace is a cobordism",
    "broken": "Boundary topology",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Cobordism type"
+    },
+    "reason": "Landed review, batch 7: preserved graded imprecise. The cobordism kept is the boundary's.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "is obtained by \"attaching a <math>(p+1)</math>-handle\", with <math>\\partial L'</math> obtained from <math>\\partial L</math> by a ''p''-surgery",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-008",
@@ -20543,21 +20694,48 @@
    "description": "General spherical modification: excise S^p x D^q, glue D^{p+1} x S^{q-1}. Kills π_p elements.",
    "input": "n-manifold M with embedded S^p x D^q (p+q=n)",
    "output": "Surgered M' with altered π_p",
-   "preserved": "Cobordism class, dimensions > p",
+   "preserved": "Cobordism class: manifolds related by spherical modifications are those in the same cobordism class",
    "broken": "π_p (targeted), homotopy type",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Cobordism class, dimensions > p"
+    },
+    "reason": "Landed review, batch 7: preserved graded imprecise. The clause on dimensions above p is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-surgery-theory.txt",
+      "quote": "A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-009",
@@ -20578,14 +20756,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-010",
@@ -20673,24 +20852,54 @@
    "tags": [
     "construction"
    ],
-   "description": "Space that is retract of every open set of every space it's embedded in.",
+   "description": "A space X of a class C that is a neighborhood retract of every space Y of C in which it is a closed subset",
    "input": "Topological space X",
    "output": "ANR verification/construction",
-   "preserved": "Retract property, homotopy extension",
+   "preserved": "The neighborhood retract property; every ANR has the homotopy type of a CW complex",
    "broken": "Non-ANR obstructions",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "unsupported",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Space that is retract of every open set of every space it's embedded in.",
+     "preserved": "Retract property, homotopy extension"
+    },
+    "reason": "Landed review, batch 7: description graded wrong, preserved imprecise. An ANR is a retract of a neighborhood, not of every open set; homotopy extension is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-retraction-topology.txt",
+      "quote": "A space <math display=\"inline\">X</math> is an '''absolute neighborhood retract''' for the class <math>\\mathcal{C}</math>, written <math display=\"inline\">\\operatorname{ANR} \\left(\\mathcal{C}\\right),</math> if <math display=\"inline\">X</math> is in <math>\\mathcal{C}</math> and whenever <math display=\"inline\">X</math> is a closed subset of a space <math display=\"inline\">Y</math> in <math>\\mathcal{C}</math>, <math display=\"inline\">X</math> is a neighborhood retract of <math display=\"inline\">Y</math>.",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-retraction-topology.txt",
+      "quote": "Every ANR has the [[homotopy type]] of a very simple topological space, a [[CW complex]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "wrong"
   },
   {
    "id": "D4-013",
@@ -20700,24 +20909,69 @@
    "tags": [
     "surgery"
    ],
-   "description": "Operations ψ^k on K-theory. Ring homomorphisms detecting vector bundle structure.",
+   "description": "Cohomology operations ψ^k on K-theory: functorial ring homomorphisms with ψ^k(l) = l^k for the class l of a line bundle",
    "input": "K-theory class [E]",
    "output": "ψ^k([E]) in K-theory",
-   "preserved": "Ring homomorphism property, ψ^k ψ^l = ψ^{kl}",
+   "preserved": "Ring homomorphism property; functoriality",
    "broken": "Individual bundle structure",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Operations ψ^k on K-theory. Ring homomorphisms detecting vector bundle structure.",
+     "preserved": "Ring homomorphism property, ψ^k ψ^l = ψ^{kl}"
+    },
+    "reason": "Landed review, batch 7: description and preserved graded imprecise. Detection of bundle structure and the composition law are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-adams-operation.txt",
+      "quote": "an '''Adams operation''', denoted ψ<sup>''k''</sup> for natural numbers ''k'',  is a [[cohomology operation]] in [[topological K-theory]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-adams-operation.txt",
+      "quote": "In (algebraic or topological) K-theory, Adams operations <math>\\psi^k</math> are [[ring homomorphism]]s such that for <math>k\\in\\N</math>,",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-adams-operation.txt",
+      "quote": "* <math>\\psi^k(l)=l^k</math> if <math>l</math> is the class of a [[line bundle]],",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-adams-operation.txt",
+      "quote": "* <math>\\psi^k</math> are [[functorial]].",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-014",
@@ -20738,14 +20992,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-015",
@@ -20760,20 +21015,40 @@
    "input": "Spaces X, Y + map f: A -> X (A ⊆ Y)",
    "output": "Adjunction space X ∪_f Y",
    "preserved": "Pushout universal property",
-   "broken": "Individual space boundaries (identified)",
+   "broken": "The points of A, each identified with its image f(a) in X",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Individual space boundaries (identified)"
+    },
+    "reason": "Landed review, batch 7: broken graded imprecise. A is any subspace of Y, a boundary only in the cell example.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-adjunction-space.txt",
+      "quote": "where the [[equivalence relation]] <math> \\sim</math> is generated by <math> a\\sim f(a)</math> for all <math>a</math> in <math>A</math>",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-016",
@@ -20783,7 +21058,7 @@
    "tags": [
     "surgery"
    ],
-   "description": "See Domain 4 is HOME for geometric transforms.",
+   "description": "A geometric transformation that preserves lines and parallelism, but not necessarily Euclidean distances and angles: a linear transformation followed by a translation",
    "input": "Geometric figure in affine space",
    "output": "Transformed figure",
    "preserved": "Collinearity, parallelism, ratios",
@@ -20793,14 +21068,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "See Domain 4 is HOME for geometric transforms."
+    },
+    "reason": "Landed review, batch 7: description graded unsupported. The landed text is a pointer (\"See Domain 4 is HOME for geometric transforms.\"), not a description; the source's definition is put beside it.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-affine-transformation.txt",
+      "quote": "an '''affine transformation''' or '''affinity''' (from the Latin, ''[[wikt:affine|affinis]]'', \"connected with\") is a [[geometric transformation]] that preserves [[line (geometry)|lines]] and [[parallel (geometry)|parallelism]], but not necessarily [[Euclidean distance]]s and [[angle]]s.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-affine-transformation.txt",
+      "quote": "That is, an arbitrary affine transformation of {{mvar|X}} is the composition of a linear transformation of {{mvar|X}} (viewed as a vector space) and a translation of {{mvar|X}}.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "partly unsupported"
   },
   {
    "id": "D4-017",
@@ -20814,20 +21116,66 @@
    "input": "Non-compact locally compact Hausdorff space X",
    "output": "Compact space X ∪ {∞}",
    "preserved": "Local topology of X, compactness achieved",
-   "broken": "Non-compactness, separation at infinity",
+   "broken": "Non-compactness: the resulting space is compact",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "broken"
+    ],
+    "landed": {
+     "broken": "Non-compactness, separation at infinity"
+    },
+    "reason": "Landed review, batch 7: broken graded imprecise. Separation at infinity is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-alexandroff-extension.txt",
+      "quote": "the '''Alexandroff extension''' is a way to extend a noncompact [[topological space]] by adjoining a single point in such a way that the resulting space is [[compact space|compact]].",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "OnePoint",
+     "file": "Mathlib/Topology/Compactification/OnePoint/Basic.lean",
+     "match": "exact",
+     "note": "The one-point compactification of X: X with a point at infinity adjoined.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "OnePoint.isOpenEmbedding_coe",
+     "file": "Mathlib/Topology/Compactification/OnePoint/Basic.lean",
+     "match": "exact",
+     "note": "The inclusion of X in its one-point compactification is an open embedding: the topology of X is kept.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
+    },
+    {
+     "field": "output",
+     "decl": "OnePoint.denseRange_coe",
+     "file": "Mathlib/Topology/Compactification/OnePoint/Basic.lean",
+     "match": "exact",
+     "note": "For a noncompact X the inclusion has dense range: the result is a compactification of X.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-018",
@@ -20839,23 +21187,59 @@
     "parameterized"
    ],
    "description": "Simplicial complex from point cloud using Delaunay triangulation restricted by radius parameter.",
-   "input": "Point cloud P ⊂ R^d + radius α",
+   "input": "Point set + real parameter alpha (the complex keeps the edges and triangles of radius at most 1/alpha)",
    "output": "Alpha complex A_α(P)",
-   "preserved": "Homotopy type of union of balls (nerve theorem)",
+   "preserved": "Homotopy type of the alpha shape (Edelsbrunner 1995)",
    "broken": "Point cloud discreteness",
    "complexity": "O(n^{d/2}) (Delaunay complexity)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "input": "Point cloud P ⊂ R^d + radius α",
+     "preserved": "Homotopy type of union of balls (nerve theorem)"
+    },
+    "reason": "Landed review, batch 7: input and preserved graded imprecise. R^d, the union of balls and the nerve theorem are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-alpha-shape.txt",
+      "quote": "Alpha shapes are closely related to alpha complexes, which are subcomplexes of the [[Delaunay triangulation]] of the point set.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-alpha-shape.txt",
+      "quote": "For each [[real number]] <math>\\alpha</math>, the  <math>\\alpha</math>-complex of the given set of points is the [[simplicial complex]] formed by the set of edges and triangles whose radii are at most <math>1/\\alpha</math>.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-alpha-shape.txt",
+      "quote": "More specifically, {{harvtxt|Edelsbrunner|1995}} showed that the two shapes are [[homotopy equivalent]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-019",
@@ -20875,14 +21259,33 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Monoid.PushoutI",
+     "file": "Mathlib/GroupTheory/PushoutI.lean",
+     "match": "general",
+     "note": "The pushout of a family of monoids or groups over a common H, for any index set: the amalgamated product of two groups is the case of two factors.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/PushoutI.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "Monoid.PushoutI.of_injective",
+     "file": "Mathlib/GroupTheory/PushoutI.lean",
+     "match": "general",
+     "note": "When every map from H is injective, each factor embeds in the pushout.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/GroupTheory/PushoutI.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-020",
@@ -20893,23 +21296,53 @@
     "surgery"
    ],
    "description": "Continuous deformation of 3-space carrying knot along. Equivalence relation for knots.",
-   "input": "Knot K in S^3",
+   "input": "An embedding of a submanifold N in a manifold M; in knot theory, a knot in its ambient space",
    "output": "Equivalent knot K' with ambient isotopy H_t",
-   "preserved": "Knot type, all knot invariants",
+   "preserved": "Knot type: two knots are the same when one can be distorted into the other without breaking it",
    "broken": "Specific embedding (deformed)",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "input": "Knot K in S^3",
+     "preserved": "Knot type, all knot invariants"
+    },
+    "reason": "Landed review, batch 7: input and preserved graded imprecise. S^3 and the clause on all knot invariants are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-ambient-isotopy.txt",
+      "quote": "let <math>N</math> and <math>M</math> be manifolds and <math>g</math> and <math>h</math> be [[embedding]]s of <math>N</math> in <math>M</math>.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-ambient-isotopy.txt",
+      "quote": "For example in [[knot theory]], one considers two [[knot (mathematics)|knot]]s the same if one can distort one knot into the other without breaking it. Such a distortion is an example of an ambient isotopy.",
+      "fields": [
+       "input",
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-021",
@@ -20929,14 +21362,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "preserved",
+     "decl": "AnalyticOnNhd.eqOn_of_preconnected_of_eventuallyEq",
+     "file": "Mathlib/Analysis/Analytic/Uniqueness.lean",
+     "match": "general",
+     "note": "Two functions analytic on a preconnected set that agree near one point agree on the whole set: the identity theorem behind the uniqueness of a continuation.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/Analytic/Uniqueness.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D4-022",
@@ -20957,14 +21401,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-023",
@@ -20984,14 +21429,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "unsupported",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-024",
@@ -21011,14 +21457,25 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.Aut",
+     "file": "Mathlib/CategoryTheory/Endomorphism.lean",
+     "match": "exact",
+     "note": "The automorphisms of an object X of a category: the isomorphisms from X to itself.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Endomorphism.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D4-025",
@@ -21028,7 +21485,7 @@
    "tags": [
     "construction"
    ],
-   "description": "Generates new solutions of PDEs from known solutions.",
+   "description": "A system of first order partial differential equations relating two functions, each of which then satisfies a partial differential equation; an auto-Bäcklund transform relates solutions of the same equation",
    "input": "Solution u of PDE + Bäcklund equations",
    "output": "New solution u' of same (or related) PDE",
    "preserved": "PDE satisfaction",
@@ -21038,14 +21495,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description"
+    ],
+    "landed": {
+     "description": "Generates new solutions of PDEs from known solutions."
+    },
+    "reason": "Landed review, batch 7: description graded imprecise. That the transform generates new solutions from known ones is not in a fetched window.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-backlund-transform.txt",
+      "quote": "A Bäcklund transform is typically a system of first order partial differential equations relating two functions, and often depending on an additional parameter. It implies that the two functions separately satisfy partial differential equations, and each of the two functions is then said to be a Bäcklund transformation of the other.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-backlund-transform.txt",
+      "quote": "A Bäcklund transform which relates solutions of the ''same'' equation is called an '''invariant Bäcklund transform''' or '''auto-Bäcklund transform'''.",
+      "fields": [
+       "description"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-026",
@@ -21055,24 +21539,64 @@
    "tags": [
     "surgery"
    ],
-   "description": "Subdivides simplicial complex by starring at barycenters. Refines triangulation. Preserves homeomorphism type.",
+   "description": "A standard way to subdivide a simplex into smaller ones, extended to simplicial complexes as a canonical refinement; it does not change the homology",
    "input": "Simplicial complex K",
-   "output": "Subdivided complex K' (same homeomorphism type, finer mesh)",
-   "preserved": "Homeomorphism type, homology",
+   "output": "Subdivided complex K': larger simplices replaced by a union of smaller ones",
+   "preserved": "Homology: subdivision does not change the homology of the complex",
    "broken": "Simplicial structure (refined), mesh size (reduced)",
    "complexity": "O(n! per n-simplex) in worst case",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "output",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Subdivides simplicial complex by starring at barycenters. Refines triangulation. Preserves homeomorphism type.",
+     "output": "Subdivided complex K' (same homeomorphism type, finer mesh)",
+     "preserved": "Homeomorphism type, homology"
+    },
+    "reason": "Landed review, batch 7: description, output and preserved graded imprecise. That the homeomorphism type is kept, and the starring at barycenters, are not in a fetched window and are dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-barycentric-subdivision.txt",
+      "quote": "the '''barycentric subdivision''' is a standard way to subdivide a given [[simplex]] into smaller ones. Its extension to [[Simplicial complex|simplicial complexes]] is a canonical method to refining them.",
+      "fields": [
+       "description",
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-barycentric-subdivision.txt",
+      "quote": "meaning that one replaces larger simplices with a union of smaller simplices.",
+      "fields": [
+       "output"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-barycentric-subdivision.txt",
+      "quote": "Moreover, the induced map is an isomorphism: Subdivision does not change the homology of the complex.",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-027",
@@ -21085,21 +21609,41 @@
    "description": "Suspension that preserves basepoint structure.",
    "input": "Pointed space (X, x_0)",
    "output": "Pointed suspension (ΣX, *)",
-   "preserved": "Basepoint, reduced homology shift",
+   "preserved": "Basepoint: the class of (x_0, 0) in the reduced suspension",
    "broken": "Unreduced structure",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Basepoint, reduced homology shift"
+    },
+    "reason": "Landed review, batch 7: preserved graded imprecise. The shift of reduced homology is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-suspension.txt",
+      "quote": "This is the equivalent to taking ''SX'' and collapsing the line (''x''<sub>0</sub> &times; ''I''{{space|hair}}) joining the two ends to a single point. The basepoint of the pointed space &Sigma;''X'' is taken to be the equivalence class of (''x''<sub>0</sub>,&thinsp;0).",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D4-028",

@@ -1,0 +1,30 @@
+Excerpts, verbatim, from: Wikipedia, Surgery theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374502062
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 5af9c21cb9d24e5462ae74bfe2a704f86055e549bd681acc0cacbca7f895b99b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A relatively easy argument using [[Morse theory]] shows that a manifold can be obtained from another one by a sequence of spherical modifications [[if and only if]] those two belong to the same [[cobordism]] class.
+
+Now, given a manifold ''M'' of dimension <math>n = p+q</math> and an [[embedding]] <math>\phi\colon S^p \times D^q \to M</math>, define another ''n''-dimensional manifold <math>M'</math> to be
+
+One says that the manifold ''M''′ is produced by a ''surgery'' cutting out <math>S^p \times D^q</math> and gluing in <math>D^{p+1} \times S^{q-1}</math>, or by a ''p''-''surgery'' if one wants to specify the number ''p''.
+
+Given an <math>(n+1)</math>-manifold with boundary <math>(L, \partial L)</math> and an embedding <math>\phi\colon S^p\times D^q \to \partial L</math>
+
+:<math>L' := L\; \cup_\phi \left(D^{p+1} \times D^q\right).</math>
+
+is obtained by "attaching a <math>(p+1)</math>-handle", with <math>\partial L'</math> obtained from <math>\partial L</math> by a ''p''-surgery
+
+A surgery on ''M'' not only produces a new manifold ''M''′, but also a [[bordism|cobordism]] ''W'' between ''M'' and ''M''′.
+
+As per the above definition, a surgery on the circle consists of cutting out a copy of <math>S^0\times D^1</math> and gluing in <math>D^1\times S^0</math>. The pictures in Fig. 1  show that the result of doing this is either (i) <math>S^1</math> again, or (ii) two copies of <math>S^1</math>.
+
+Having cut out two disks <math>S^0\times D^2</math>, we glue back in the cylinder <math>S^1\times D^1</math>.
+
+If the orientations are the same (Fig. 2b), the resulting manifold is the [[torus]] <math>S^1\times S^1</math>, but if they are different, we obtain the [[Klein bottle]] (Fig. 2c).
+
+Up to homotopy, the process of surgery on an embedding <math>\phi\colon S^p\times D^q \to M</math> can be described as the attaching of a <math>(p+1)</math>-cell, giving the homotopy type of the trace, and the detaching of a ''q''-cell to obtain ''N''.
+
+a ''p''-surgery on a manifold ''M'' can often be used to kill an element <math>\alpha\in\pi_p(M)</math>.
+
+For instance, it is not possible to perform surgery on an orientation-reversing loop.
