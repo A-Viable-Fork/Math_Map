@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Frobenius normal form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374115939
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a1638e06438f5da8cc0014922751e36e71153ca9badc7ec22e7191a45554c565
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Frobenius normal form''' or  '''rational canonical form''' of a [[square matrix|square]] [[matrix (mathematics)|matrix]] ''A'' with entries in a [[field (mathematics)|field]] ''F'' is a [[canonical form]] for matrices obtained by conjugation by [[invertible matrices]] over ''F''.
+
+The last of these factors ''f<sub>k</sub>'' is then the minimal polynomial
+
+For each invariant factor ''f<sub>i</sub>'' one takes its [[companion matrix]] ''C''<sub>''f<sub>i</sub>''</sub>, and the block diagonal matrix formed from these blocks yields the '''rational canonical form''' of ''A''.
+
+The Frobenius normal form does not reflect any form of factorization of the characteristic polynomial, even if it does exist over the ground field ''F''.

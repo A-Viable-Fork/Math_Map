@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Algebraic space (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364060745
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cf69ea44b435473aca3e145daedd2c8be6c176bb1c798683ff9dbfc9c558c9ea
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+they can be defined as either quotients of schemes by étale equivalence relations

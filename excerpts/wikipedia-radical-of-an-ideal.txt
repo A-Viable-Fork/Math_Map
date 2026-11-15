@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Radical of an ideal (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1360542597
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 6c84415dd0498c5a782ebbdc0d843d660535b098d633d76083f3f95931adcdae
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''radical''' of an [[ideal (ring theory)|ideal]] <math>I</math> of a [[commutative ring]] is another ideal defined by the property that an element <math>x</math> is in the radical [[if and only if]] some power of <math>x</math> is in <math>I</math>.
+
+:<math>\sqrt{I} = \left\{r\in R \mid r^n\in I\ \hbox{for some}\ n \in \Z^{+}\!\right\},</math>
+
+Equivalently, <math>\sqrt{I}</math> is the [[preimage]] of the ideal of [[nilpotent]] elements (the [[nilradical of a ring|nilradical]] of the ring) of the [[quotient ring]] <math>R/I</math>
+
+A '''radical ideal''' (or '''semiprime ideal''' or '''reduced ideal''') is an ideal that is equal to its radical.

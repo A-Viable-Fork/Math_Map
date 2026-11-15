@@ -60,7 +60,13 @@ function declarations(text) {
     let m;
     if ((m = l.match(/^namespace\s+(\S+)/))) { stack.push({ kind: "ns", name: m[1] }); continue; }
     if ((m = l.match(/^(?:@\[[^\]]*\]\s*)?(?:(?:public|private|noncomputable)\s+)*section\b\s*(\S*)/))) { stack.push({ kind: "sec", name: m[1] }); continue; }
-    if ((m = l.match(/^end\b\s*(\S*)/))) { stack.pop(); continue; }
+    // `end A.B` closes every scope it names, whether opened as one `namespace A.B` or as two.
+    if ((m = l.match(/^end\b\s*(\S*)/))) {
+      if (!m[1]) { stack.pop(); continue; }
+      const acc = [];
+      while (stack.length) { acc.unshift(stack.pop().name); if (acc.join(".") === m[1]) break; }
+      continue;
+    }
     if (!(m = l.match(KW))) continue;
     const written = m[2], ns = stack.filter((s) => s.kind === "ns").map((s) => s.name).join(".");
     const full = written.startsWith("_root_.") ? written.slice(7) : ns ? `${ns}.${written}` : written;

@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Monoid ring (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1228471520
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1af71569bed4f988adc05c6141910276f3cf2151206ff1df04b7334a35f21bcd
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 1af71569bed4f988adc05c6141910276f3cf2151206ff1df04b7334a35f21bcd
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]], just as a [[group ring]] is constructed from a ring and a [[group (mathematics)|group]].
@@ -10,3 +10,7 @@ The monoid '''N'''<sup>''n''</sup> (with the addition) gives the polynomial ring
 constructed from a ring and a [[monoid]]
 
 a '''monoid ring''' is a [[ring (algebra)|ring]] constructed from a ring and a [[monoid]]
+
+The monoid ring or '''monoid algebra''' of ''G'' over ''R'', denoted ''R''[''G''] or ''RG'', is the set of formal sums
+
+More formally, ''R''[''G''] is the free ''R''-module on the set ''G'', endowed with ''R''-linear multiplication defined on the base elements by ''g·h'' := ''gh''

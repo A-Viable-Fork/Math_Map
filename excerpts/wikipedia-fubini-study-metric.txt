@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Fubini-Study metric (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1367192451
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: d35a643d5f5262416a7d5be0c82e1355b096bc7a830ca925adc667e3a649e8c9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Fubini–Study metric''' (IPA: /fubini-ʃtuːdi/) is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]].
+
+A Fubini–Study metric is determined up to [[homothety]] (overall scaling) by invariance under such a U(''n''&nbsp;+&nbsp;1) action; thus it is [[homogeneous space|homogeneous]].
+
+A consequence of this formula is that the sectional curvature satisfies <math>1 \leq K(\sigma) \leq 4</math> for all 2-planes <math>\sigma</math>.

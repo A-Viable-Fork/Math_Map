@@ -1,6 +1,7 @@
 {
  "scope": "Papers the map already cites: every paper with an excerpt in excerpts/ and every paper an audit grade was checked against. Seed only; the catalogue grows as papers are flagged.",
  "entries": [
+  {"id": "arxiv:alg-geom/9503025", "title": "Local Homology and Cohomology on Schemes", "authors": "Leovigildo Alonso Tarrío, Ana Jeremías López, Joseph Lipman", "year": 1995, "origin": ["excerpt"], "entries": ["D2-109"], "status": "receipted", "excerpts": ["excerpts/arxiv-alg-geom-9503025-abstract.txt"], "note": "receipted from the abstract page only, by the landed review"},
   {"id": "arxiv:1003.5944", "title": "Levels in the toposes of simplicial sets and cubical sets", "authors": "Carolyn Kennett, Emily Riehl, Michael Roy, Michael Zaks", "year": 2010, "origin": ["excerpt"], "entries": ["D7-X01"], "status": "receipted", "excerpts": ["excerpts/arxiv-1003.5944.txt"]},
   {"id": "arxiv:1603.04641", "title": "Compositional game theory", "authors": "Neil Ghani, Jules Hedges, Viktor Winschel, Philipp Zahn", "year": 2016, "origin": ["excerpt"], "entries": ["D7-X04"], "status": "receipted", "excerpts": ["excerpts/arxiv-1603.04641.txt"]},
   {"id": "arxiv:1608.02921", "title": "Construction of bicuspidal rational complex projective plane curves", "authors": "József Bodnár", "year": 2016, "origin": ["excerpt"], "entries": ["D2-X01"], "status": "receipted", "excerpts": ["excerpts/arxiv-1608.02921.txt"]},

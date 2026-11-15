@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Eigenvalues and eigenvectors (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384631874
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: be5fb8239285692f9cd19fbc3bd06767d9e68b52c843d916e8d584b06c5029ab
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+defined as the sum of its diagonal elements, is also the sum of all its eigenvalues:
+
+* The [[determinant]] of {{tmath|A}} is the product of all its eigenvalues:

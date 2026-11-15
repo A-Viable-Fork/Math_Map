@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Resolution (algebra) (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 745bbc52299ad6035b2503eab9e72272bd76e5000594364792a3f76600357dba
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 745bbc52299ad6035b2503eab9e72272bd76e5000594364792a3f76600357dba
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''
@@ -14,3 +14,23 @@ Similarly every module has '''injective resolutions''', which are right resoluti
 Dually, every <math>R</math>-module possesses an injective resolution.
 
 Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s.
+
+is an [[exact sequence]] of [[module (mathematics)|module]]s
+
+dually a '''coresolution''' or '''right resolution'''
+
+a ''free resolution'' of a module <math>M</math> is a left resolution in which all the modules <math>E_i</math> are [[free module|free]] <math>R</math>-modules.
+
+Every <math>R</math>-module possesses a free left resolution.
+
+Similarly, resolutions that are acyclic for all the functors '''Hom'''(&nbsp;⋅&nbsp;, ''M'') are the projective resolutions and those that are acyclic for the functors '''Hom'''(''M'', &nbsp;⋅&nbsp;) are the injective resolutions.
+
+Any injective (projective) resolution is ''F''-acyclic for any left exact (right exact, respectively) functor.
+
+can be obtained from as the homology of ''F''-acyclic resolutions
+
+Every flat resolution is acyclic with respect to this functor.
+
+Resolutions are used to define [[homological dimension (disambiguation)|homological dimension]]s.
+
+Similarly, flat dimension is used to define [[weak global dimension]].

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Cross-ratio (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380801487
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: d301758beb26dad49e689862c2c9bffec1c4058e1ce5c3f27b1ad5bd0a70d93a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The cross-ratio is a '''projective [[Invariant (mathematics)|invariant]]''' in the sense that it is preserved by the [[projective transformation]]s of a projective line.

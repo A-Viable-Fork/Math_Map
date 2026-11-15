@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 48cab6fdb422a1cb58c0098e1c001040dfb44d68918ee34cad2928ddc87b05a5
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.ObjectProperty.IsSerreClass (line 45)
+class IsSerreClass : Prop extends P.ContainsZero,
+    P.IsClosedUnderSubobjects, P.IsClosedUnderQuotients,
+    P.IsClosedUnderExtensions where

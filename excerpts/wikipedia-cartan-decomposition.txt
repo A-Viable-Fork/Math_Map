@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Cartan decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1327521166
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 7f35e06397892861278f188c254635dde364555ffdc089ed4952e2a584a4cd1c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Cartan decomposition''' is a decomposition of a [[Semisimple Lie algebra|semisimple]] [[Lie group]] or [[Lie algebra]]
+
+It generalizes the [[polar decomposition]] or [[singular value decomposition]] of matrices.
+
+Let <math>G</math> be a non-compact semisimple Lie group
+
+* The subgroup <math>K</math> is a maximal compact subgroup of <math>G</math>, whenever the center of G is finite.
+
+the maximal Abelian subalgebras <math>\mathfrak{a}</math> in <math>\mathfrak{p}</math> are unique up to conjugation by <math>K</math>.
+
+:<math>G = KP = KAK,</math>

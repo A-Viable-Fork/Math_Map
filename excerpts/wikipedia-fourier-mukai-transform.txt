@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Fourier-Mukai transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354517967
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 827f1035a0528d9a4edebe79b695ed986638b8e005277b8bb0cd57663c971a57
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[functor]] between [[derived category|derived categories]] of [[coherent sheaf|coherent sheaves]] D(''X'') → D(''Y'') for [[scheme (mathematics)|schemes]] ''X'' and ''Y'', which is, in a sense, an [[integral transform]] along a kernel object ''K'' ∈ D(''X''×''Y'').
+
+These kinds of functors were introduced by {{harvs|txt|last=Mukai|year=1981|authorlink=Shigeru Mukai}} in order to prove an [[equivalence of categories|equivalence]] between the derived categories of coherent sheaves on an [[abelian variety]] and its [[dual abelian variety|dual]].
+
+''K'' ∈ D<sup>b</sup>(''X''×''Y'') an object in the derived category of coherent sheaves on their product.
+
+Then the Fourier-Mukai transform ''Φ''<sub>''K''</sub> is a functor D<sup>b</sup>(''X'')→D<sup>b</sup>(''Y'') given by
+
+then the derived category of coherent sheaves determines the variety.
+
+In general, an abelian variety is not isomorphic to its dual, so this Fourier–Mukai transform gives examples of different varieties (with trivial canonical bundles) that have equivalent derived categories.
+
+a '''Fourier–Mukai transform''' ''Φ''<sub>''K''</sub>
+
+If the [[Canonical bundle|canonical class]] of a variety is [[ample line bundle|ample]] or anti-ample, then the derived category of coherent sheaves determines the variety.

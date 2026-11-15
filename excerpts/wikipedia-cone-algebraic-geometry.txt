@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Cone (algebraic geometry) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370192731
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c6fbe659a76875d05522878acd36c22eeca497e2da6c51735beb4b97fdb8b04b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is called the '''cone''' or '''affine cone''' of ''R''
+
+*If ''X'' = Spec ''k'' is a point and ''R'' is a [[homogeneous coordinate ring]], then the affine cone of ''R'' is the (usual) [[Convex cone#Affine_convex_cones|affine cone]] over the [[projective variety]] corresponding to ''R''.

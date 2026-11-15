@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Induced representation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1366796724
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 92263095b32e214a5e812b45bda99bd3dfb62e1a6b896ae2d64a40616e4ef95b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''induced representation''' is a [[group representation|representation of a group]], {{mvar|G}}, which is constructed using a known representation of a [[subgroup]] {{mvar|H}}.
+
+then every {{mvar|K}}-linear representation {{mvar|ρ}} of {{mvar|G}} can be viewed as a {{mvar|K}}-linear representation of {{mvar|H}}

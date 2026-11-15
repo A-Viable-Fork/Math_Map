@@ -1,6 +1,8 @@
 Excerpts, verbatim, from: Wikipedia, Leray spectral sequence (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1353225412
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 90d7467d667a56180aee8ad5da97a7f933eb0cd09bf62bb2002854c5bfe69309
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 90d7467d667a56180aee8ad5da97a7f933eb0cd09bf62bb2002854c5bfe69309
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 the higher direct image functor <math>R^pf_*(F)</math> is the sheafification of the presheaf
+
+:<math> E^{pq}_2=(R^p\Gamma \cdot R^q f_*)(\mathcal{F})=H^p(Y,R^qf_*(\mathcal{F})) ,</math>

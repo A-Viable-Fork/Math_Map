@@ -1,0 +1,44 @@
+Excerpts, verbatim, from: Wikipedia, Matrix decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380916678
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ef7319898b14715d7309c623ff64dea2e5a87a552df3a762b208c3fe34645bbb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+*Applicable to: [[square matrix]] A.
+
+*Decomposition: <math>A=PHP^*</math> where <math>H</math> is the [[Hessenberg matrix]] and <math>P</math> is a [[unitary matrix]].
+
+*Comment: often the first step in the Schur decomposition.
+
+*Applicable to: ''m''-by-''n'' matrix ''A''.
+
+=== Polar decomposition ===
+
+*Applicable to: any square complex matrix ''A''.
+
+*Decomposition: <math>A=UP</math> (right polar decomposition) or <math>A=P'U</math> (left polar decomposition), where ''U'' is a [[unitary matrix]] and ''P'' and ''P''' are [[positive semidefinite matrix|positive semidefinite]] [[Hermitian matrices]].
+
+=== Mostow's decomposition ===
+
+* Applicable to: square, complex, non-singular matrix ''A''.
+
+* Decomposition: <math>A=Ue^{iM}e^{S}</math>, where ''U'' is unitary, ''M'' is real anti-symmetric and ''S'' is real symmetric.
+
+=== Sinkhorn normal form ===
+
+=== Sectoral decomposition ===
+
+*Applicable to: square, complex matrix ''A'' with [[numerical range]] contained in the sector
+
+*Decomposition: <math>A = CZC^*</math>, where ''C'' is an invertible complex matrix and <math>Z = \operatorname{diag}\left(e^{i\theta_1},\ldots,e^{i\theta_n}\right)</math> with all <math>\left|\theta_j\right| \le \alpha </math>.
+
+=== Williamson's normal form ===
+
+* Applicable to: square, [[Positive-definite matrix|positive-definite]] real matrix ''A'' with order 2''n''×2''n''.
+
+* Decomposition: <math>A=S^\mathsf{T}\operatorname{diag}(D,D)S</math>, where <math>S \in \text{Sp}(2n)</math> is a [[symplectic matrix]] and ''D'' is a nonnegative ''n''-by-''n'' diagonal matrix.
+
+===Matrix square root===
+
+* Decomposition: <math>A=BB</math>, not unique in general.
+
+* In the case of positive semidefinite <math>A</math>, there is a unique positive semidefinite <math>B</math> such that <math>A=B^*B=BB</math>.

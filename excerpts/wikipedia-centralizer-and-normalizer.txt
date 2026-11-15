@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Centralizer and normalizer (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1309683055
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 527e0321f259f15363a535de06d375fa19e2595eb9b92752f6ce6ecf402d7cb7
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 527e0321f259f15363a535de06d375fa19e2595eb9b92752f6ce6ecf402d7cb7
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 elements of the centralizer of ''<math>S</math>'' must commute pointwise with ''<math>S</math>''
@@ -12,3 +12,11 @@ The centralizer of a subset of a ring ''R'' is a [[subring]] of ''R''.
 * If ''H'' is a subgroup of ''G''
 
 is the subgroup N<sub>''G''</sub>(''H'').
+
+:<math>\mathrm{C}_G(S) = \left\{g \in G \mid gs = sg \text{ for all } s \in S\right\} = \left\{g \in G \mid gsg^{-1} = s \text{ for all } s \in S\right\},</math>
+
+:<math>\mathrm{N}_G(S) = \left\{ g \in G \mid gS = Sg \right\} = \left\{g \in G \mid gSg^{-1} = S\right\},</math>
+
+Clearly <math>C_G(S) \subseteq N_G(S)</math> and both are subgroups of <math>G</math>.
+
+then the normalizer <math>N_G(S)</math> is the largest subgroup <math>G' \subseteq G</math> where <math>S</math> is a [[normal subgroup]] of <math>G'</math>.

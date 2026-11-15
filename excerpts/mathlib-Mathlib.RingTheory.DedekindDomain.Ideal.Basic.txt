@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/DedekindDomain/Ideal/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/DedekindDomain/Ideal/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 796de0d02380176bb8f1ec2fc22509689305d19c1e0bbe827cb34de7ec7a5f3f
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- IsDedekindDomainInv.commGroupWithZero (line 248)
+noncomputable abbrev commGroupWithZero : CommGroupWithZero (FractionalIdeal A⁰ K) where
+  inv_zero := inv_zero' _
+  mul_inv_cancel := isDedekindDomainInv_iff.mp h
+  div_eq_mul_inv I J := by
+    obtain rfl | hJ := eq_or_ne J 0
+    · simp [inv_zero']

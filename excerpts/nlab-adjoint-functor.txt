@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: nLab, adjoint functor (page source)
 URL: https://ncatlab.org/nlab/source/adjoint+functor
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: f06265e478f62abb33aee0c692033329033f78a7ee1b48328595a24342e54f13
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: f06265e478f62abb33aee0c692033329033f78a7ee1b48328595a24342e54f13
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 if there exists a [[natural isomorphism]] between the [[hom-functors]] of the following form:
@@ -8,3 +8,5 @@ if there exists a [[natural isomorphism]] between the [[hom-functors]] of the fo
 is the _[[unit of an adjunction|unit morphism]]_ of the adjunction at that object, denoted
 
 is the _[[counit of an adjunction|counit morphism]]_ of the adjunction at that object, denoted
+
+One may amplify this by characterizing these morphisms as _[[universal arrows]]_

@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Ideal/Cotangent.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Cotangent.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 9e42d69afc38f59407daf429b2bedc77fb2ac4639a9a0a15e13406df92dd4a3d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- IsLocalRing.CotangentSpace (line 297)
+abbrev CotangentSpace : Type _ := (maximalIdeal R).Cotangent

@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Group ring (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370986299
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5621cbbc824ad6ad9de9b749771d2e0eb3f61534d20e51ad163eab81455dd1db
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 5621cbbc824ad6ad9de9b749771d2e0eb3f61534d20e51ad163eab81455dd1db
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]], constructed in a natural way from any given ring and any given [[Group (mathematics)|group]].
@@ -12,3 +12,9 @@ constructed in a natural way from any given ring and any given [[Group (mathemat
 a '''group ring''' is a [[free module]] and at the same time a [[Ring (mathematics)|ring]]
 
 Thus, representations of the group correspond exactly to representations of the algebra, and the two theories are essentially equivalent.
+
+:<math>x\mapsto\sum_{uv=x}f(u)g(v)=\sum_{u\in G}f(u)g(u^{-1}x).</math>
+
+The apparatus of group rings is especially useful in the theory of [[group representation]]s.
+
+written as what are called "formal linear combinations of elements of <math>G</math> with coefficients in

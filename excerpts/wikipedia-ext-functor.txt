@@ -1,6 +1,6 @@
 Excerpts, verbatim, from: Wikipedia, Ext functor (page source; CC BY-SA)
 URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380841038
-Fetched: 2026-11-07. SHA-256 of the page source as fetched: 88dbec7cce9043eec00ec9f354269a605816eb90da9d095c09ab3b6ca4d08dab
+Fetched: 2026-11-07, appended 2026-11-13. SHA-256 of the page source as fetched: 88dbec7cce9043eec00ec9f354269a605816eb90da9d095c09ab3b6ca4d08dab
 Only the windows below are kept; each was checked to occur verbatim in the page source.
 
 The name comes from the fact that the first Ext group Ext<sup>1</sup> classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another.
@@ -8,3 +8,11 @@ The name comes from the fact that the first Ext group Ext<sup>1</sup> classifies
 There is a one-to-one correspondence between [[equivalence class]]es of extensions of <math>A</math> by <math>B</math> and elements of <math>\operatorname{Ext}_R^1(A,B)</math>.
 
 classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another.
+
+the '''Ext functors''' are the [[derived functor]]s of the [[Hom functor]].
+
+For each integer <math>i</math>, <math>\text{Ext}_R^i(A,B)</math> is the [[chain complex|cohomology]] of this complex at position <math>i</math>.
+
+is the set of equivalence classes of extensions of ''A'' by ''B'', forming an abelian group under the Baer sum.
+
+Let <math>R</math> be a ring and let <math>R\text{-Mod}</math> be the [[category (mathematics)|category]] of modules over <math>R</math>.

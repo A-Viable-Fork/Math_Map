@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Dual curve (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1348688112
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e333e799f51f3142a5693b3f59feefddf243a584585e83f298a5fe9938514f35
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''dual curve''' of a given [[plane curve]] {{mvar|C}} is a curve in the [[Duality (projective geometry)|dual projective plane]] consisting of the set of lines [[tangent]] to {{mvar|C}}.
+
+The [[Plücker formula]]s give the degree of the dual in terms of ''d'' and the number and types of singular points of {{mvar|X}}.

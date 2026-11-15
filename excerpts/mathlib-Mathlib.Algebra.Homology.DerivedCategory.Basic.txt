@@ -9,3 +9,7 @@ def DerivedCategory : Type (max u v) := HomologicalComplexUpToQuasiIso C (Comple
 -- DerivedCategory.Qh (line 109)
 def Qh : HomotopyCategory C (ComplexShape.up ℤ) ⥤ DerivedCategory C :=
   HomologicalComplexUpToQuasiIso.Qh
+
+-- DerivedCategory.isIso_Q_map_iff_quasiIso (line 283)
+lemma isIso_Q_map_iff_quasiIso {K L : CochainComplex C ℤ} (φ : K ⟶ L) :
+    IsIso (Q.map φ) ↔ QuasiIso φ

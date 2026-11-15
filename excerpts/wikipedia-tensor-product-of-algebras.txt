@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Tensor product of algebras (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380323046
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e0421cfa0a4f439145b61f4bd262c87ef6abde8d1500ed396bc4f9530ceb1531
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This gives the '''tensor product of algebras'''.
+
+Let ''R'' be a commutative ring and let ''A'' and ''B'' be ''R''-algebras.
+
+:<math>(a_1\otimes b_1)(a_2\otimes b_2) = a_1 a_2\otimes b_1b_2</math>
+
+This ring is an ''R''-algebra, [[associative algebra|associative]] and unital with the identity element given by
+
+There are natural [[homomorphism]]s from ''A'' and ''B'' to

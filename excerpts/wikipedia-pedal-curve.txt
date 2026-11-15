@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Pedal curve (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381818381
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 7dd5db86a1a14c84c9fe524381df3afab392e67ba3eba0d9243449fed55f9994
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''pedal curve''' of a given curve results from the [[orthogonal projection]] of a fixed point on the [[tangent line]]s of this curve.
