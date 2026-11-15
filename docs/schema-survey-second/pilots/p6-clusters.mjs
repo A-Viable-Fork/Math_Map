@@ -13,7 +13,7 @@ import * as I from "./instances.mjs";
 
 const R = rng(20261115), ri = (k) => Math.floor(R() * (2 * k + 1)) - k;
 const trials = (n, f) => { for (let i = 0; i < n; i++) { const w = f(); if (w !== true) return w; } return true; };
-const W = "docs/schema-survey/pilots/excerpts/";
+const W = "docs/schema-survey-second/pilots/excerpts/";
 // Polynomials in e1..e4 as Map("a,b,c,d" -> coefficient), for the omega involution.
 const P = { c: (k) => new Map([["0,0,0,0", k]]), gen: (i) => new Map([[[0, 1, 2, 3].map((j) => (j === i ? 1 : 0)).join(","), 1]]),
   add: (p, q, s = 1) => { const o = new Map(p); for (const [k, v] of q) { const n = (o.get(k) ?? 0) + s * v; n ? o.set(k, n) : o.delete(k); } return o; },

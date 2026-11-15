@@ -1,7 +1,7 @@
 // Role: shared helpers for the schema-survey pilots: loads map.json, verifies a row's receipt, and gives a
-//   seeded random source. Throwaway code for docs/schema-survey; no map script imports it.
+//   seeded random source. Throwaway code for docs/schema-survey-second; no map script imports it.
 // Contract: exports ROOT, map(), entry(id), verify(receipt) returning { ok, kind, why }, rng(seed), tally(rows).
-//   Receipt kinds: { excerpt: file, quote } (a window in excerpts/ or docs/schema-survey/excerpts/),
+//   Receipt kinds: { excerpt: file, quote } (a window in excerpts/ or docs/schema-survey-second/excerpts/),
 //   { field: [entryId, fieldName], quote } (a substring of that entry's field in map.json, the entry's own
 //   words), { formal: [entryId, decl] } (a Mathlib link or Lean claim the map already records on that entry),
 //   { computed: note } (the pilot script recomputes it on every run), { external: citation } (a file in

@@ -1,6 +1,6 @@
 // Role: the survey's receipt tripwire. Checks that every quotation in 03-prior-art.md that is followed by an
 //   excerpt file name occurs verbatim in that file, and that every excerpt file is cited.
-// Contract: `node docs/schema-survey/check-quotes.mjs`. A quotation is a double-quoted span (or an indented
+// Contract: `node docs/schema-survey-second/check-quotes.mjs`. A quotation is a double-quoted span (or an indented
 //   block) on a line or table cell that names one or more `name.txt` files in backticks; it must occur in one
 //   of the files named on that line. Exit 1 on a miss. Markdown escapes \| and \" are undone before matching.
 // Invariant: read-only; a tripwire for this survey's documents, not a check of the map.

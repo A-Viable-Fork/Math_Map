@@ -29,7 +29,7 @@
 //   CHAINS = [{ steps, given, expect, why }]: chains the gate runs, each with the verdict it must give (met,
 //     unknown or violated).
 //   HELD = [{ row, entry, why, closes }]: rows of the schema survey's first pilot
-//     (docs/schema-survey/pilots/p1-predicates.rows.json) that did not land, each with what would land it.
+//     (docs/schema-survey-second/pilots/p1-predicates.rows.json) that did not land, each with what would land it.
 //   Checked by `node scripts/predicates.mjs --check`; used by scripts/compose.mjs.
 // Invariant: data only. A row never edits an entry. A row lands under the strict rule [ruling: operator,
 //   2026-11-13]: its quote states the row itself, every part. A predicate in a chain belongs to "the object the

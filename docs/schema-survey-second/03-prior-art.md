@@ -1,6 +1,6 @@
 # Schema survey, phase 3: prior art, searched after generating
 
-Date: 2026-11-13. Searched after `02-generation.md` was committed (`f208016`). Every "read" below is a verbatim window in `docs/schema-survey/excerpts/`, made with `scripts/excerpt.mjs`, which checks the window against the page as fetched and records the page's hash. A statement marked **recalled** is from memory and is a lead. **Unknown** means a fetch was tried and failed, or the page read did not say. **Not searched** means no source was looked for.
+Date: 2026-11-13. Searched after `02-generation.md` was committed (`f208016`). Every "read" below is a verbatim window in `docs/schema-survey-second/excerpts/`, made with `scripts/excerpt.mjs`, which checks the window against the page as fetched and records the page's hash. A statement marked **recalled** is from memory and is a lead. **Unknown** means a fetch was tried and failed, or the page read did not say. **Not searched** means no source was looked for.
 
 What a quotation shows is that a system keeps data of that kind in that form. It does not show the kind is right for this map; that is for the pilots.
 

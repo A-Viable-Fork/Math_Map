@@ -13,7 +13,7 @@
 import { entry, verify, rng } from "./lib.mjs";
 import * as I from "./instances.mjs";
 
-const W = "docs/schema-survey/pilots/excerpts/", X = (f, q) => ({ excerpt: W + f, quote: q }), F = (e, f, q) => ({ field: [e, f], quote: q });
+const W = "docs/schema-survey-second/pilots/excerpts/", X = (f, q) => ({ excerpt: W + f, quote: q }), F = (e, f, q) => ({ field: [e, f], quote: q });
 const NONE = (why) => ({ none: why }), C = (what) => ({ computed: what });
 const GMq = "is a [[matroid]] whose independent sets are the [[tree (graph theory)|forests]] in a given finite [[undirected graph]]";
 const BASES = "are the full [[spanning tree|spanning forests]] of <math>G</math>, and the circuits of <math>M(G)</math> are the [[cycle (graph theory)|simple cycles]] of <math>G</math>.";

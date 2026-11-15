@@ -1,8 +1,8 @@
 # Schema survey, phase 4: six pilots
 
-Date: 2026-11-14. Each pilot adds rows for real entries in a scratch file under `docs/schema-survey/pilots/` and runs a throwaway script that uses them. Nothing here is in `mapfill/`, and no pilot row is map data. Every count below is printed by the script named beside it (**measured**); the readings of what a result means are **inferred** and say so.
+Date: 2026-11-14. Each pilot adds rows for real entries in a scratch file under `docs/schema-survey-second/pilots/` and runs a throwaway script that uses them. Nothing here is in `mapfill/`, and no pilot row is map data. Every count below is printed by the script named beside it (**measured**); the readings of what a result means are **inferred** and say so.
 
-To rerun: `node docs/schema-survey/pilots/p1-predicates.mjs` and likewise `p2-squares`, `p3-inverses`, `p4-binders`, `p5-atlas`, `p6-clusters`. Each exits 0 when its receipts verify and its computed checks come out as its rows say. Seeds are fixed. Pilot 4's rows were built from the 112 Mathlib files its links name, fetched at the pin, each matching the sha256 the map's excerpt records (112 of 112, measured); the built rows are committed, so the script reruns without the network.
+To rerun: `node docs/schema-survey-second/pilots/p1-predicates.mjs` and likewise `p2-squares`, `p3-inverses`, `p4-binders`, `p5-atlas`, `p6-clusters`. Each exits 0 when its receipts verify and its computed checks come out as its rows say. Seeds are fixed. Pilot 4's rows were built from the 112 Mathlib files its links name, fetched at the pin, each matching the sha256 the map's excerpt records (112 of 112, measured); the built rows are committed, so the script reruns without the network.
 
 ## What a receipt is in these pilots
 
