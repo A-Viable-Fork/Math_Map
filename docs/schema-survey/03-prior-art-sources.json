@@ -1,0 +1,714 @@
+{
+  "kind": "truth",
+  "evidence": "read: fetched and verbatim-checked using scripts/excerpt.mjs after generation commit d0f272d",
+  "sources": [
+    {
+      "id": "PA01",
+      "system": "lean-types",
+      "title": "Lean reference: dependent core terms",
+      "url": "https://lean-lang.org/doc/reference/latest/The-Type-System/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA01.txt",
+      "windows": [
+        "Terms are a dependently typed λ-calculus: they include function abstraction, application, variables, and <code>let</code>-bindings."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA01.txt",
+        "--title",
+        "Lean reference: dependent core terms",
+        "--url",
+        "https://lean-lang.org/doc/reference/latest/The-Type-System/",
+        "--window",
+        "Terms are a dependently typed λ-calculus: they include function abstraction, application, variables, and <code>let</code>-bindings."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA01.txt (1 windows from https://lean-lang.org/doc/reference/latest/The-Type-System/)",
+      "excerptSha256": "9e1a098e165790d027d1c6e918120b855441bdb5454285fc2b8fec20fbcfcd56",
+      "sourceSha256": "1e40e3ae4821d69ed6713685e6daef0e05153a54dc879a142f37409a13fffe28",
+      "offsets": [
+        {
+          "byteOffset": 342,
+          "byteLength": 132
+        }
+      ]
+    },
+    {
+      "id": "PA02",
+      "system": "lean-props",
+      "title": "Lean reference: propositions at runtime",
+      "url": "https://lean-lang.org/doc/reference/latest/The-Type-System/Propositions/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA02.txt",
+      "windows": [
+        "Propositions are erased from compiled code."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA02.txt",
+        "--title",
+        "Lean reference: propositions at runtime",
+        "--url",
+        "https://lean-lang.org/doc/reference/latest/The-Type-System/Propositions/",
+        "--window",
+        "Propositions are erased from compiled code."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA02.txt (1 windows from https://lean-lang.org/doc/reference/latest/The-Type-System/Propositions/)",
+      "excerptSha256": "21a91f61f4896f93a983b45c72d0ff4104de3c33407b8d5a2b99e4329e5c729d",
+      "sourceSha256": "b7713cb4a20203c8b67798fec795c961bec656a71f99c1eefd00f4ae480a70d8",
+      "offsets": [
+        {
+          "byteOffset": 358,
+          "byteLength": 43
+        }
+      ]
+    },
+    {
+      "id": "PA03",
+      "system": "lean-axioms",
+      "title": "Lean reference: audited axiom dependencies",
+      "url": "https://lean-lang.org/doc/reference/latest/Axioms/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA03.txt",
+      "windows": [
+        "Lean automatically tracks the axioms that each proof depends on so that they can be audited."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA03.txt",
+        "--title",
+        "Lean reference: audited axiom dependencies",
+        "--url",
+        "https://lean-lang.org/doc/reference/latest/Axioms/",
+        "--window",
+        "Lean automatically tracks the axioms that each proof depends on so that they can be audited."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA03.txt (1 windows from https://lean-lang.org/doc/reference/latest/Axioms/)",
+      "excerptSha256": "aee3738bc3fd5fa7ad4eeb57f6b0d949f6c6010a340d01b04bd4ceacf1af5969",
+      "sourceSha256": "23ae190bcc6a40b919f67cb498eed2a49e4d5a83a73c44f07eea562b7fad56a1",
+      "offsets": [
+        {
+          "byteOffset": 339,
+          "byteLength": 92
+        }
+      ]
+    },
+    {
+      "id": "PA04",
+      "system": "mathlib-equiv",
+      "title": "Mathlib at the map pin: Equiv",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Logic/Equiv/Defs.lean",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA04.txt",
+      "windows": [
+        "`α ≃ β` is the type of functions from `α → β` with a two-sided inverse.",
+        "protected def symm (e : α ≃ β) : β ≃ α := ⟨e.invFun, e.toFun, e.right_inv, e.left_inv⟩",
+        "protected def trans (e₁ : α ≃ β) (e₂ : β ≃ γ) : α ≃ γ :=\n  ⟨e₂ ∘ e₁, e₁.symm ∘ e₂.symm, e₂.left_inv.comp e₁.left_inv, e₂.right_inv.comp e₁.right_inv⟩"
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA04.txt",
+        "--title",
+        "Mathlib at the map pin: Equiv",
+        "--url",
+        "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Logic/Equiv/Defs.lean",
+        "--window",
+        "`α ≃ β` is the type of functions from `α → β` with a two-sided inverse.",
+        "--window",
+        "protected def symm (e : α ≃ β) : β ≃ α := ⟨e.invFun, e.toFun, e.right_inv, e.left_inv⟩",
+        "--window",
+        "protected def trans (e₁ : α ≃ β) (e₂ : β ≃ γ) : α ≃ γ :=\n  ⟨e₂ ∘ e₁, e₁.symm ∘ e₂.symm, e₂.left_inv.comp e₁.left_inv, e₂.right_inv.comp e₁.right_inv⟩"
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA04.txt (3 windows from https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Logic/Equiv/Defs.lean)",
+      "excerptSha256": "255e6cfae3d68272a0bb553620b6662c55d22632cde2aae3daaabd886be76ab6",
+      "sourceSha256": "04f4ce3f48c57e412f5db04c70a26df43d9c4e44d69ec413038113a1c1f1f1a1",
+      "offsets": [
+        {
+          "byteOffset": 410,
+          "byteLength": 79
+        },
+        {
+          "byteOffset": 491,
+          "byteLength": 98
+        },
+        {
+          "byteOffset": 591,
+          "byteLength": 189
+        }
+      ]
+    },
+    {
+      "id": "PA05",
+      "system": "mathlib-transfer",
+      "title": "Mathlib at the map pin: transferring group structure",
+      "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/TransferInstance.lean",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA05.txt",
+      "windows": [
+        "In this file we prove lemmas of the following form: if `β` has a group structure and `α ≃ β`\nthen `α` has a group structure, and similarly for monoids, semigroups and so on."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA05.txt",
+        "--title",
+        "Mathlib at the map pin: transferring group structure",
+        "--url",
+        "https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/TransferInstance.lean",
+        "--window",
+        "In this file we prove lemmas of the following form: if `β` has a group structure and `α ≃ β`\nthen `α` has a group structure, and similarly for monoids, semigroups and so on."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA05.txt (1 windows from https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/TransferInstance.lean)",
+      "excerptSha256": "8a32eb217484b741e668ef51f0cba66c262957f227cf8292a94aa733ef0fa995",
+      "sourceSha256": "860070fb18b81943bafceafed3028f6ff12253854566f1e3a0d79946b7e18047",
+      "offsets": [
+        {
+          "byteOffset": 447,
+          "byteLength": 179
+        }
+      ]
+    },
+    {
+      "id": "PA06",
+      "system": "rocq-rewriting",
+      "title": "Rocq 9.2: generalized rewriting",
+      "url": "https://rocq-prover.org/doc/V9.2.0/refman/addendum/generalized-rewriting.html",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA06.txt",
+      "windows": [
+        "One function can respect several different relations and thus it can\nbe declared as a morphism having multiple signatures."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA06.txt",
+        "--title",
+        "Rocq 9.2: generalized rewriting",
+        "--url",
+        "https://rocq-prover.org/doc/V9.2.0/refman/addendum/generalized-rewriting.html",
+        "--window",
+        "One function can respect several different relations and thus it can\nbe declared as a morphism having multiple signatures."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA06.txt (1 windows from https://rocq-prover.org/doc/V9.2.0/refman/addendum/generalized-rewriting.html)",
+      "excerptSha256": "f2d1a9350b2124c6c0cb2077dd32537d7515fd42e736ce5de6f52a65d698480d",
+      "sourceSha256": "ce283381d15849f358638030b78ea56fadb3faa80142f4bd63568c75cbc81956",
+      "offsets": [
+        {
+          "byteOffset": 355,
+          "byteLength": 122
+        }
+      ]
+    },
+    {
+      "id": "PA07",
+      "system": "hott",
+      "title": "HoTT book: univalence",
+      "url": "https://raw.githubusercontent.com/HoTT/book/578b85cc8d586b1677ec4335148adeb443057d24/basics.tex",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA07.txt",
+      "windows": [
+        "In particular, univalence means that \\emph{equivalent types may be identified}."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA07.txt",
+        "--title",
+        "HoTT book: univalence",
+        "--url",
+        "https://raw.githubusercontent.com/HoTT/book/578b85cc8d586b1677ec4335148adeb443057d24/basics.tex",
+        "--window",
+        "In particular, univalence means that \\emph{equivalent types may be identified}."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA07.txt (1 windows from https://raw.githubusercontent.com/HoTT/book/578b85cc8d586b1677ec4335148adeb443057d24/basics.tex)",
+      "excerptSha256": "4aba50a220068a15a98da09bfd89a91fcbebcdb385f56c4f9f78bd4d0fb2760f",
+      "sourceSha256": "516b469d7356e9d20df5539e726a0468760f9fa7b7f440b9c054981e803d7533",
+      "offsets": [
+        {
+          "byteOffset": 363,
+          "byteLength": 79
+        }
+      ]
+    },
+    {
+      "id": "PA08",
+      "system": "nlab",
+      "title": "nLab: adjunction coherence",
+      "url": "https://ncatlab.org/nlab/source/adjoint+functor",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA08.txt",
+      "windows": [
+        "The [[adjunction unit]] and [[adjunction counit]] satisfy the [[triangle identities]]"
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA08.txt",
+        "--title",
+        "nLab: adjunction coherence",
+        "--url",
+        "https://ncatlab.org/nlab/source/adjoint+functor",
+        "--window",
+        "The [[adjunction unit]] and [[adjunction counit]] satisfy the [[triangle identities]]"
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA08.txt (1 windows from https://ncatlab.org/nlab/source/adjoint+functor)",
+      "excerptSha256": "1071ba1a0a593a1e191f1b46f0ed575a0dabc83abe567ce5c29b72baca68b61a",
+      "sourceSha256": "f06265e478f62abb33aee0c692033329033f78a7ee1b48328595a24342e54f13",
+      "offsets": [
+        {
+          "byteOffset": 320,
+          "byteLength": 85
+        }
+      ]
+    },
+    {
+      "id": "PA09",
+      "system": "oeis",
+      "title": "OEIS: separate formula, example and program fields",
+      "url": "https://oeis.org/eishelp1.html",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA09.txt",
+      "windows": [
+        "%F = Formula (if not included in %N line)",
+        "%e = examples",
+        "Computer program to produce the sequence"
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA09.txt",
+        "--title",
+        "OEIS: separate formula, example and program fields",
+        "--url",
+        "https://oeis.org/eishelp1.html",
+        "--window",
+        "%F = Formula (if not included in %N line)",
+        "--window",
+        "%e = examples",
+        "--window",
+        "Computer program to produce the sequence"
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA09.txt (3 windows from https://oeis.org/eishelp1.html)",
+      "excerptSha256": "66a1be991323f98318b7439c7915d221eef1f486681e93e27a552240ba0344bc",
+      "sourceSha256": "ab4cb01b2993c7cc99020ffa58dd946e3867d50ee72bccbdedafdfc674c6521b",
+      "offsets": [
+        {
+          "byteOffset": 327,
+          "byteLength": 41
+        },
+        {
+          "byteOffset": 370,
+          "byteLength": 13
+        },
+        {
+          "byteOffset": 385,
+          "byteLength": 40
+        }
+      ]
+    },
+    {
+      "id": "PA10",
+      "system": "lmfdb",
+      "title": "LMFDB developer principles",
+      "url": "https://raw.githubusercontent.com/LMFDB/lmfdb/51941321c3c67054e0c3148c1c8d215857200280/README.md",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA10.txt",
+      "windows": [
+        "summarizes key invariants, links to completeness, source, and\nreliability knowls, and when applicable, a list of related objects."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA10.txt",
+        "--title",
+        "LMFDB developer principles",
+        "--url",
+        "https://raw.githubusercontent.com/LMFDB/lmfdb/51941321c3c67054e0c3148c1c8d215857200280/README.md",
+        "--window",
+        "summarizes key invariants, links to completeness, source, and\nreliability knowls, and when applicable, a list of related objects."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA10.txt (1 windows from https://raw.githubusercontent.com/LMFDB/lmfdb/51941321c3c67054e0c3148c1c8d215857200280/README.md)",
+      "excerptSha256": "c99f6e8e9fec7ae11b2ae500c02091541a6cdf9f143008520148aebeac73df7a",
+      "sourceSha256": "d64ac4122e28e666fe80d8e5b04e9797199a3fccc375af72493b382c3653e17c",
+      "offsets": [
+        {
+          "byteOffset": 369,
+          "byteLength": 129
+        }
+      ]
+    },
+    {
+      "id": "PA12",
+      "system": "wikidata",
+      "title": "Wikidata: statement qualifiers, ranks and references",
+      "url": "https://www.wikidata.org/wiki/Help:Statements",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA12.txt",
+      "windows": [
+        "The structure is property-value(s), with optionals for every value (rank, qualifier and references)."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA12.txt",
+        "--title",
+        "Wikidata: statement qualifiers, ranks and references",
+        "--url",
+        "https://www.wikidata.org/wiki/Help:Statements",
+        "--window",
+        "The structure is property-value(s), with optionals for every value (rank, qualifier and references)."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA12.txt (1 windows from https://www.wikidata.org/wiki/Help:Statements)",
+      "excerptSha256": "4103bc7fc5a1bb5610ae4c7884e38ef9c9009535afef113fbf1e1b7b7b9a97da",
+      "sourceSha256": "2024edb957b8baff51a0b154d2b6e77ad07c63e0040292951bad467fa684e0a4",
+      "offsets": [
+        {
+          "byteOffset": 344,
+          "byteLength": 100
+        }
+      ]
+    },
+    {
+      "id": "PA13",
+      "system": "wikidata-formula",
+      "title": "Wikidata P2534: defining formula",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/P2534.json",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA13.txt",
+      "windows": [
+        "\"datatype\":\"math\",\"id\":\"P2534\"",
+        "\"language\":\"en\",\"value\":\"defining formula\""
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA13.txt",
+        "--title",
+        "Wikidata P2534: defining formula",
+        "--url",
+        "https://www.wikidata.org/wiki/Special:EntityData/P2534.json",
+        "--window",
+        "\"datatype\":\"math\",\"id\":\"P2534\"",
+        "--window",
+        "\"language\":\"en\",\"value\":\"defining formula\""
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA13.txt (2 windows from https://www.wikidata.org/wiki/Special:EntityData/P2534.json)",
+      "excerptSha256": "a5bbbe14a6880af936bd8a499ba0c8af9cbb2cbd4b8be3631bfd6b67a47878b9",
+      "sourceSha256": "ce46d0bf9ee02e72d6c85f8943a4fc7ef0f0ac6e24e5ea4ef498c5e124ba4a12",
+      "offsets": [
+        {
+          "byteOffset": 338,
+          "byteLength": 30
+        },
+        {
+          "byteOffset": 370,
+          "byteLength": 42
+        }
+      ]
+    },
+    {
+      "id": "PA14",
+      "system": "wikidata-symbol",
+      "title": "Wikidata P7235: formula symbol",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/P7235.json",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA14.txt",
+      "windows": [
+        "\"datatype\":\"math\",\"id\":\"P7235\"",
+        "\"language\":\"en\",\"value\":\"in defining formula\""
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA14.txt",
+        "--title",
+        "Wikidata P7235: formula symbol",
+        "--url",
+        "https://www.wikidata.org/wiki/Special:EntityData/P7235.json",
+        "--window",
+        "\"datatype\":\"math\",\"id\":\"P7235\"",
+        "--window",
+        "\"language\":\"en\",\"value\":\"in defining formula\""
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA14.txt (2 windows from https://www.wikidata.org/wiki/Special:EntityData/P7235.json)",
+      "excerptSha256": "83a75c841c6e6a374c622a26586387704648db2f2039514ff72b3b8c6a7280cd",
+      "sourceSha256": "acc8bd61100ba14e7fb60c5cd5c5c22231f72aabe30fb836154a9198bfe766ef",
+      "offsets": [
+        {
+          "byteOffset": 336,
+          "byteLength": 30
+        },
+        {
+          "byteOffset": 368,
+          "byteLength": 45
+        }
+      ]
+    },
+    {
+      "id": "PA16",
+      "system": "mmt",
+      "title": "MMT: theory morphism composition",
+      "url": "https://uniformal.github.io/doc/language/modules",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA16.txt",
+      "windows": [
+        "Complex morphisms can be built in particular using composition."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA16.txt",
+        "--title",
+        "MMT: theory morphism composition",
+        "--url",
+        "https://uniformal.github.io/doc/language/modules",
+        "--window",
+        "Complex morphisms can be built in particular using composition."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA16.txt (1 windows from https://uniformal.github.io/doc/language/modules)",
+      "excerptSha256": "8e6e6272815e25c4d629cfe67ce35bf206e8ba07d8b3ab0b124a6e6d90b9ce87",
+      "sourceSha256": "851ba0bf173d20508a558d1cd6b676b85cf596db66d2098bf42e8843b72b6e93",
+      "offsets": [
+        {
+          "byteOffset": 327,
+          "byteLength": 63
+        }
+      ]
+    },
+    {
+      "id": "PA17",
+      "system": "mmt-language",
+      "title": "MMT and OMDoc: theories and interpretation",
+      "url": "https://uniformal.github.io/doc/language/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA17.txt",
+      "windows": [
+        "<em>Theory morphisms</em> translate between theories either by representation (<a href=\"modules.html#views\"><em>views</em></a>) or by inheritance (<a href=\"declarations.html#structures\"><em>structures</em></a>)."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA17.txt",
+        "--title",
+        "MMT and OMDoc: theories and interpretation",
+        "--url",
+        "https://uniformal.github.io/doc/language/",
+        "--window",
+        "<em>Theory morphisms</em> translate between theories either by representation (<a href=\"modules.html#views\"><em>views</em></a>) or by inheritance (<a href=\"declarations.html#structures\"><em>structures</em></a>)."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA17.txt (1 windows from https://uniformal.github.io/doc/language/)",
+      "excerptSha256": "d40b9fad34e39bcf76ca628bdd541d61e92de61070b57ff184655d985a8d9831",
+      "sourceSha256": "88da2675dc4a71ea55fe8e547ccec5ed5bb3d8379f308fd68632343bea894dd8",
+      "offsets": [
+        {
+          "byteOffset": 330,
+          "byteLength": 211
+        }
+      ]
+    },
+    {
+      "id": "PA18",
+      "system": "omdoc",
+      "title": "OMDoc: statement and theory modules",
+      "url": "https://www.omdoc.org/modules/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA18.txt",
+      "windows": [
+        "Definitions, Theorems, Axioms, Examples, etc, and simple theories with inheritance",
+        "To add inheritance via translations, theory inclusions."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA18.txt",
+        "--title",
+        "OMDoc: statement and theory modules",
+        "--url",
+        "https://www.omdoc.org/modules/",
+        "--window",
+        "Definitions, Theorems, Axioms, Examples, etc, and simple theories with inheritance",
+        "--window",
+        "To add inheritance via translations, theory inclusions."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA18.txt (2 windows from https://www.omdoc.org/modules/)",
+      "excerptSha256": "e79d946b0e434146a12fb55b239bcd9756e547519a6e2fd04c787054e35435d1",
+      "sourceSha256": "b7a4808ab1c5e748849272af04e94d2955e4383499340e8a2609d6bfa3aa55be",
+      "offsets": [
+        {
+          "byteOffset": 312,
+          "byteLength": 82
+        },
+        {
+          "byteOffset": 396,
+          "byteLength": 55
+        }
+      ]
+    },
+    {
+      "id": "PA19",
+      "system": "edoal",
+      "title": "EDOAL: transformation of aligned encodings",
+      "url": "https://moex.gitlabpages.inria.fr/alignapi/edoal.html",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA19.txt",
+      "windows": [
+        "Property values using different encoding or units can be\n aligned using transformations."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA19.txt",
+        "--title",
+        "EDOAL: transformation of aligned encodings",
+        "--url",
+        "https://moex.gitlabpages.inria.fr/alignapi/edoal.html",
+        "--window",
+        "Property values using different encoding or units can be\n aligned using transformations."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA19.txt (1 windows from https://moex.gitlabpages.inria.fr/alignapi/edoal.html)",
+      "excerptSha256": "9d63c0e814d12316825cbd721b0b8a4e8f797e91bdf437c0215aff5d41d19095",
+      "sourceSha256": "2daac81f0e6637ecdb36c020234a051136b4c51faa5b01a2c4dc67b53608de87",
+      "offsets": [
+        {
+          "byteOffset": 342,
+          "byteLength": 88
+        }
+      ]
+    },
+    {
+      "id": "PA20",
+      "system": "align-format",
+      "title": "Alignment API: confidence in a correspondence",
+      "url": "https://moex.gitlabpages.inria.fr/alignapi/format.html",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA20.txt",
+      "windows": [
+        "the confidence\n    that the relation holds between the first and\n    the second entity."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA20.txt",
+        "--title",
+        "Alignment API: confidence in a correspondence",
+        "--url",
+        "https://moex.gitlabpages.inria.fr/alignapi/format.html",
+        "--window",
+        "the confidence\n    that the relation holds between the first and\n    the second entity."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA20.txt (1 windows from https://moex.gitlabpages.inria.fr/alignapi/format.html)",
+      "excerptSha256": "3cff81eb0cfeea90257d3f106dcc61b0b3a1031a8a09ab5512a6d4dc316bd89a",
+      "sourceSha256": "99b65ec77a7ca57e9c6caa156b6f722942f6cdb441ee54341f62a1e9b563e6b9",
+      "offsets": [
+        {
+          "byteOffset": 346,
+          "byteLength": 87
+        }
+      ]
+    },
+    {
+      "id": "PA21",
+      "system": "skos",
+      "title": "W3C SKOS: limits of mapping composition",
+      "url": "https://www.w3.org/TR/skos-reference/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA21.txt",
+      "windows": [
+        "All other SKOS mapping properties are not transitive."
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA21.txt",
+        "--title",
+        "W3C SKOS: limits of mapping composition",
+        "--url",
+        "https://www.w3.org/TR/skos-reference/",
+        "--window",
+        "All other SKOS mapping properties are not transitive."
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA21.txt (1 windows from https://www.w3.org/TR/skos-reference/)",
+      "excerptSha256": "70793f1a07ecf1c2d3ba9f2c4eaafe626afd39d4b151cdf9fb73f23018e82580",
+      "sourceSha256": "3aa00cd16ee4d86d3a19b75501bb317d0b0c134e1f4029e9f3098c4dd3669e4c",
+      "offsets": [
+        {
+          "byteOffset": 323,
+          "byteLength": 53
+        }
+      ]
+    },
+    {
+      "id": "PA22",
+      "system": "prov",
+      "title": "W3C PROV-O: scoped activities and entities",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "status": "fetched",
+      "excerpt": "docs/schema-survey/receipts/PA22.txt",
+      "windows": [
+        "An activity is something that occurs over a period of time and acts upon or with entities;"
+      ],
+      "command": [
+        "node",
+        "scripts/excerpt.mjs",
+        "--out",
+        "docs/schema-survey/receipts/PA22.txt",
+        "--title",
+        "W3C PROV-O: scoped activities and entities",
+        "--url",
+        "https://www.w3.org/TR/prov-o/",
+        "--window",
+        "An activity is something that occurs over a period of time and acts upon or with entities;"
+      ],
+      "log": "excerpt: wrote docs/schema-survey/receipts/PA22.txt (1 windows from https://www.w3.org/TR/prov-o/)",
+      "excerptSha256": "1bed42b780a8f4130934bd472ccaba22e7909ff7e5602012490a13b66dc7a074",
+      "sourceSha256": "6b96671ab84faf12ce3f041aca12c3f93a6df2ed242348810743179a68e69555",
+      "offsets": [
+        {
+          "byteOffset": 318,
+          "byteLength": 90
+        }
+      ]
+    }
+  ],
+  "unfetchable": [
+    {
+      "id": "lean-dojo",
+      "url": "https://leandojo.org/lean-dojo.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "id": "wikidata-represents",
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/P9758.json",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "lmfdb-rcs",
+      "url": "https://www.lmfdb.org/rcs",
+      "status": "unknown",
+      "reason": "HTTP 200 was a reCAPTCHA page, not the requested mathematical documentation."
+    }
+  ],
+  "note": "Failed URLs remain unknown. Retrieved alternatives have their own receipts. A representation precedent does not establish the candidate design or any universal transport law."
+}

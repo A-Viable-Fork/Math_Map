@@ -1,0 +1,600 @@
+{
+  "kind": "read",
+  "note": "Source identities and selected verbatim windows. Private source snapshots remain outside this repository. Code behavior is bounded by these commits.",
+  "sources": [
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "CLAUDE.md",
+      "sha256": "3b91fad6edeb1a625189041ea5a1550148e7625a94b9f950856f6e70d864c22d",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/CLAUDE.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": ".infra/CONVENTIONS.md",
+      "sha256": "ae78dcb84c4b4f7c27c51bad33c08fdf17d8ef6ba450c1323f268e5114b42107",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/.infra/CONVENTIONS.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "AGENTS.md",
+      "sha256": "86ef71861006de4bfba80ad0d70a671198075d775cec7c116a05a056d5f5a0ec",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/AGENTS.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "README.md",
+      "sha256": "6815df7e7bf9e1b237ab3b5021b7ed351b051abc7f86ec9bf122d70a3607be7e",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/README.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "STATUS.md",
+      "sha256": "271ecc87ef0efc5c729b78c9754138d6add3a04b5cd91c979ac68857bfe9c443",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/STATUS.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "mapfill/README.md",
+      "sha256": "8f33ddbd70e38293cf3ecd8d6957e0ea5b417d1a12f9d553f54d37486f44e770",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/mapfill/README.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "map.json",
+      "sha256": "44eda2e5a89220ea5eebffb31909d351b99377ff4c739f7cc8630bcf1c65d640",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/map.json",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/compose.mjs",
+      "sha256": "18705bef6bd4a98dea767a26fa176c90f21958d7cd0494c2b112f16fd7f12fdc",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/compose.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/evidence.mjs",
+      "sha256": "3230aefe05a294618b574663a8c574c00acc41800869089fb8d4089762579103",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/evidence.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/misalign.mjs",
+      "sha256": "071a8a74234d03be83a90994bbfbb8227b6be49b102d98cebaeb536e00936a7f",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/misalign.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/excerpt.mjs",
+      "sha256": "558abb42c60ee87531cc0e0e165c4edeae8f97675d4aa712eb215b9eae211e13",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/excerpt.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/build.mjs",
+      "sha256": "bfab48216e2b7bfdfd5baff7e83e5e1ed04ac52e76da217f7da44eda1e728958",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/build.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/mathmap.mjs",
+      "sha256": "69b7720ee547dbea1680a985b2ab053781e49d9e9a461d3e080c87a054c0d13c",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/mathmap.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "scripts/mcp.mjs",
+      "sha256": "f460e09119ceddb5070a06790590f6893a2b5c1aba9604c8eccfa02051f21440",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/scripts/mcp.mjs",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "mapfill/conditions.js",
+      "sha256": "cbb5f058d74a60c4cf7e04e704ff6bb6f66589d1984d474a18468fc146734d22",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/mapfill/conditions.js",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "mapfill/android.js",
+      "sha256": "c2eeba8f5c3ff063ccb6686ee7f413f3f896b1348226a96302c1b0d881c89453",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/mapfill/android.js",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "mapfill/nixos.js",
+      "sha256": "f0fb3886d311ecb6ba574d2e86e0dc40f24a39d654a0c65d5ff11bbe8a7b2ecc",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/mapfill/nixos.js",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-10-11-compose-findings.md",
+      "sha256": "ea8d182f720adca0e87f6225bb3e1be26c02e3de9a93f3af8e0fef64f2ba8338",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-10-11-compose-findings.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-10-11-from-research-os.md",
+      "sha256": "c835983b399cbe3d21f688f96646b8858463fd95d75be1d6278280f72fdc0a71",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-10-11-from-research-os.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-10-14-mathlib-algebra-leads.md",
+      "sha256": "54f0662a18cf603b981bccf404e5e725e7b846f9cc30c655d2f1a9026bc496e3",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-10-14-mathlib-algebra-leads.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-10-22-flow-d-grading.md",
+      "sha256": "3b7d45ed081d1fd7989398aa943116d12b87dffd031df097011b4eec080d09f7",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-10-22-flow-d-grading.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-10-22-from-unattested.md",
+      "sha256": "7313249411ff8b942301a649f49eb153040497f43f2cd2d188b1b3bee60fcdab",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-10-22-from-unattested.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-10-22-observations-from-the-regulator.md",
+      "sha256": "a485010c0f4b1acf544a5cd9ab4cc714aec4a254daccbd5a6d4a9470d62155d2",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-10-22-observations-from-the-regulator.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-11-06-from-formalization-verdict.md",
+      "sha256": "9f61a5f10d79c36b3189138375ef738443e42dbc8a69ce0ad59535c7ddd2acea",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-11-06-from-formalization-verdict.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+      "path": "docs/inbound/2026-11-06-from-formalization.md",
+      "sha256": "b7b0b9b97f8b80bd8f6db7a818cbf999024f2c17b82d12824fd50abd037e2ddf",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/c6f8381284f67cf9e984dd75e00350a756f18880/docs/inbound/2026-11-06-from-formalization.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "b3f746c622d40109d5fd43650d3d288897710298",
+      "path": "reports/STRICT-READING.md",
+      "sha256": "bcbdbcccab60c172c523e180bb188e2d10788b27f3d279219fb7428749908537",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/b3f746c622d40109d5fd43650d3d288897710298/reports/STRICT-READING.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/Math_Map",
+      "commit": "2e6b13969e1412635ae3738b40f75d2403e2c45c",
+      "path": "docs/inbound/2026-11-06-schema-stress-test-from-research-os.md",
+      "sha256": "2b99ebb79426078f2cfaa22f5d5c1579a894873e5622de226cdb4038d489b707",
+      "url": "https://github.com/A-Viable-Fork/Math_Map/blob/2e6b13969e1412635ae3738b40f75d2403e2c45c/docs/inbound/2026-11-06-schema-stress-test-from-research-os.md",
+      "windows": []
+    },
+    {
+      "repository": "A-Viable-Fork/The_Smell_of_Knowledge",
+      "commit": "8b91372ef74f3695f9aabf5e7572268fcf6ad973",
+      "path": "The_Smell_of_Knowledge_v1_5.md",
+      "sha256": "e54432c76b4af145d2d398b63d9eb5a71ec9df54c023b957a6cc19861311d843",
+      "url": "https://github.com/A-Viable-Fork/The_Smell_of_Knowledge/blob/8b91372ef74f3695f9aabf5e7572268fcf6ad973/The_Smell_of_Knowledge_v1_5.md",
+      "windows": [
+        {
+          "quote": "Each relation is a chart; the atlas is the collection, compatible on overlaps.",
+          "byteOffset": 35873,
+          "byteLength": 78,
+          "line": 141
+        },
+        {
+          "quote": "Regions whose overlaps are unaffected by an admission do not recompute.",
+          "byteOffset": 39407,
+          "byteLength": 71,
+          "line": 147
+        }
+      ]
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "CLAUDE.md",
+      "sha256": "4cd4b81e2ef980bcd5bca2b5fe69bdc3815d29074b37786f2495184e4676ed71",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/CLAUDE.md",
+      "windows": [],
+      "verifiedSourceSha256": "495fcacf6651883b85309d1c4ee4fb2bb02da773d1fb80af1d738570368811ca",
+      "gitBlobSha": "378376d4f2151e33ad8f8d5025799867acc1d644",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "HANDOFF.md",
+      "sha256": "e3ecea38f840521785283d25413031da0f4be11bdc89852a43d466e86cf56c60",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/HANDOFF.md",
+      "windows": [],
+      "verifiedSourceSha256": "bc90ad3842912da3c02af1072a6a3834eabd5e0dc20ca9e6ec8339e79dc4f163",
+      "gitBlobSha": "13fc6b79ec614523cb13b978799de71a0552eadc",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "README.md",
+      "sha256": "c9e9c5ab6c9b779f87fa57d534bd80248fdc0aee7c2d8e9bdf913b9847ad554c",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/README.md",
+      "windows": [],
+      "verifiedSourceSha256": "8cfffcac4f6558e4a105a3e52f6ea48dbbbc0d040fde600e6498b619dcd19ab5",
+      "gitBlobSha": "d0b7c66054d6586d418bc9070452c41ebbf7c2fe",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "bindings.json",
+      "sha256": "fd6c5120f80cd9a26ec82dd8eae404ba8c6ee681255d8427c04aa18899a8cef5",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/bindings.json",
+      "windows": [
+        {
+          "quote": "Kept here until Math_Map takes code bindings.",
+          "byteOffset": 221,
+          "byteLength": 45,
+          "line": 2
+        }
+      ],
+      "verifiedSourceSha256": "220a26f2462ca63f4e60fe8f263f8886d2951847d1c29d2b8355336adc21a47d",
+      "gitBlobSha": "e9a146b24997af2491b17f4b78825a95938b56de",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "decompositions/chain-exactness-and-relative-hodge-0_1.md",
+      "sha256": "84c4b852bcd7fe8a3596d27551f681cb79cd6c2359b7f7e27dec483610a6c0ce",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/decompositions/chain-exactness-and-relative-hodge-0_1.md",
+      "windows": [],
+      "verifiedSourceSha256": "48fd9d2fe27bec91d39a9b7b0ba5a4e7b57acbedc433210bc61a5230c4aeb671",
+      "gitBlobSha": "6e6331b499efe6c8eaaf64454e46ae6c9a00c894",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "decompositions/selection-drift-0_1.md",
+      "sha256": "f314ce439a35fe8ec24764c35717bbaacafc77545d1c3443177bef4738191115",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/decompositions/selection-drift-0_1.md",
+      "windows": [],
+      "verifiedSourceSha256": "97fd8e92645caf84a211bb32977b9cbacd26b94cbdd773df204a52229921a064",
+      "gitBlobSha": "9265308c7b4146e5cb9187c84764e926fe5d5f10",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "findings/math-base-2026-10-13.md",
+      "sha256": "cf68c8f56c33baddb793acb23f350bed38d9a09cfcfd0767e032b6f545659cba",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/findings/math-base-2026-10-13.md",
+      "windows": [],
+      "verifiedSourceSha256": "d6b4347330365affc20a7f1436b8603c0a3016f501f1874b1ba4a966e9962623",
+      "gitBlobSha": "06e28c12580f0cf09aad64642fea275551d4effb",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "cd24c40c6b30097cd500045b4e5e87e5e9e623c1",
+      "path": "findings/math-map-stress-test-2026-11-06.md",
+      "sha256": "f729f4f68efd79a997512b0c3e1561f2e930090f59cc1f16eef434bda3d00f7f",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/cd24c40c6b30097cd500045b4e5e87e5e9e623c1/findings/math-map-stress-test-2026-11-06.md",
+      "windows": [],
+      "verifiedSourceSha256": "c8dd13641ac7a3ccc84b307b88979b9582f097b69d08255a5b202ab2b4aec925",
+      "gitBlobSha": "e8aa2306b553ed427a9febab17adb639fa88fc01",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "findings/mathlib-ingest-2026-10-14.md",
+      "sha256": "1a5f456170d457c2599817b19d13cf2abd88cc6d2b27602cbd95c45ae25f36f0",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/findings/mathlib-ingest-2026-10-14.md",
+      "windows": [],
+      "verifiedSourceSha256": "a2b578ed0bbb66a2cf38e2e63500b635491bc3253917bb1282325400327bbe79",
+      "gitBlobSha": "56d46462c29f8519a45308d7354c4a247464b93c",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "findings/mathlib-links-2026-10-14.md",
+      "sha256": "19354695ca02d3c1e7186ef9f037f0b37d9165d2afcefd89c5e8926fc05ca25a",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/findings/mathlib-links-2026-10-14.md",
+      "windows": [],
+      "verifiedSourceSha256": "496b09853febc372a1fb14938e170511583cf2e93406106c133c18103a10af20",
+      "gitBlobSha": "87c39b748b57c24b9ca8b6e6942a777c33b313f4",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "findings/operator-calls-2026-10-20.md",
+      "sha256": "36838c94d56e251ce449fa564bb6099e686966f6ae44e8d38f332a5d375738cd",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/findings/operator-calls-2026-10-20.md",
+      "windows": [],
+      "verifiedSourceSha256": "b130b6fb704095226527a566f5906094a1189368c6fa1d0f5dd568a4b3aea823",
+      "gitBlobSha": "270d64a9a101c5d2ca10e6013af00ab09c20bcfe",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Research_OS",
+      "commit": "e0415aae8b3e4d664fb0657e1758e2d113035948",
+      "path": "functions/mathlib-ingest/mapread.mjs",
+      "sha256": "923847fa9d5292f783da55aba9045becc9e8a60983324ccab8c5ab7afab1f78d",
+      "url": "https://github.com/A-Viable-Fork/Research_OS/blob/e0415aae8b3e4d664fb0657e1758e2d113035948/functions/mathlib-ingest/mapread.mjs",
+      "windows": [],
+      "verifiedSourceSha256": "71839dd9db2ca4e8eda62cb46d7f0ce103a0462979be5e012d3d03c7403fdc60",
+      "gitBlobSha": "b81826e22db2b24c325af5b0c670cbeea3d4124f",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Formalization",
+      "commit": "ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c",
+      "path": "CLAUDE.md",
+      "sha256": "6dd3ac2b2a68eddf5ddfae73e7afd497de23cb19ac89e38709872b5ffc7004dd",
+      "url": "https://github.com/A-Viable-Fork/Formalization/blob/ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c/CLAUDE.md",
+      "windows": [],
+      "verifiedSourceSha256": "7f7624aa529a91d66b6ac87aa986b09d7b6f6a7a2fbae197fdcdf6b12b5306dd",
+      "gitBlobSha": "37bdd7ef44d16cb940436c1bc3698b024c688e18",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Formalization",
+      "commit": "ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c",
+      "path": "HANDOFF.md",
+      "sha256": "95ae9b2ba244963bd723bc1e2a3196363abab5017997cb7213f63e7352bf75dd",
+      "url": "https://github.com/A-Viable-Fork/Formalization/blob/ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c/HANDOFF.md",
+      "windows": [],
+      "verifiedSourceSha256": "e5bf3d84c997bfef3a94a10344e192162d6617a57c9c48153e3a4bb0fa4d374d",
+      "gitBlobSha": "ac64a314759a7ff4927e7529e166dfbd5365ca26",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Formalization",
+      "commit": "ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c",
+      "path": "reports/2026-11-06-map-intake-stress.md",
+      "sha256": "9c1a6f0791567c538ad72be174f40ee9ad6183cc43600bc42625695177dc9d43",
+      "url": "https://github.com/A-Viable-Fork/Formalization/blob/ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c/reports/2026-11-06-map-intake-stress.md",
+      "windows": [],
+      "verifiedSourceSha256": "3efda255e6faaa0f7fc47de8bc23843fab5293e6b901f8b375b44ae3af0c17d4",
+      "gitBlobSha": "ffb17c965edc302b1c4139f3b631e793935050ae",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Formalization",
+      "commit": "ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c",
+      "path": "scripts/map-check.mjs",
+      "sha256": "3b6663da0760798438edef2e124be9a98e75c655e03a8ce289b54cd5af617afd",
+      "url": "https://github.com/A-Viable-Fork/Formalization/blob/ec4d139c8ca16290a4b7168e9ca5dbbbdc5c175c/scripts/map-check.mjs",
+      "windows": [],
+      "verifiedSourceSha256": "2f02ce65ba4df12c510ff04ab01af70fd2eeb50fbcb51b9cf304c0245f309bba",
+      "gitBlobSha": "b8c51549db18a481c07e5b833cb90810749722f5",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Phone",
+      "commit": "4d061e5fe02d8e24c1c1f8f3986f65057af0cc6a",
+      "path": "CLAUDE.md",
+      "sha256": "c150f9121003739c9057847680abe118a4e424e8636ea9626316993547a02b66",
+      "url": "https://github.com/A-Viable-Fork/Phone/blob/4d061e5fe02d8e24c1c1f8f3986f65057af0cc6a/CLAUDE.md",
+      "windows": [],
+      "verifiedSourceSha256": "322fc741acd91326493f463ccc544f8a90ea2abc24aa21e64212887ed98b7147",
+      "gitBlobSha": "04523bdb511936e8cd3a5bf7f58c01f5d0568f10",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Phone",
+      "commit": "4d061e5fe02d8e24c1c1f8f3986f65057af0cc6a",
+      "path": "HANDOFF.md",
+      "sha256": "e9467482883fd8b9f5bb3c32982ea54f995c4f3274cb1c417fd9cb6910aa6157",
+      "url": "https://github.com/A-Viable-Fork/Phone/blob/4d061e5fe02d8e24c1c1f8f3986f65057af0cc6a/HANDOFF.md",
+      "windows": [],
+      "verifiedSourceSha256": "0dd12a34bd6a66ed38afd4d47ae94154e15b42bbd3a05a248c8b034bfe0f815f",
+      "gitBlobSha": "2b0bfa0351364f56fa46f0846dc07799a51f36db",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    },
+    {
+      "repository": "A-Viable-Fork/Phone",
+      "commit": "4d061e5fe02d8e24c1c1f8f3986f65057af0cc6a",
+      "path": "apps/regulator/android/app/src/main/java/org/aviablefork/regulator/Typed.java",
+      "sha256": "cd127bcc4141b754427b3d35b4fca132b12b5d79115c4872b4b20dde5a96cc0c",
+      "url": "https://github.com/A-Viable-Fork/Phone/blob/4d061e5fe02d8e24c1c1f8f3986f65057af0cc6a/apps/regulator/android/app/src/main/java/org/aviablefork/regulator/Typed.java",
+      "windows": [],
+      "verifiedSourceSha256": "74705d7b076fac477c37b145fa40d6dcd5e7a6d37b3b835be80c6da0208b2d9c",
+      "gitBlobSha": "7ad8e462ee4e0ea06eee630993ba16778d425de7",
+      "sha256ScopeCorrection": "The original sha256 receipts the local snapshot with one added terminal newline. verifiedSourceSha256 receipts the exact source bytes; Git blob identity was independently matched."
+    }
+  ],
+  "corrections": [
+    {
+      "date": "2026-11-13",
+      "finding": "Snapshot materialization added one terminal newline to each connector file. Quote bytes and offsets were unaffected. Prior recorded hashes are retained; verified exact-source hashes and Git blob ids are added.",
+      "files": [
+        {
+          "repository": "Research_OS",
+          "path": "CLAUDE.md",
+          "originalSnapshotSha256": "4cd4b81e2ef980bcd5bca2b5fe69bdc3815d29074b37786f2495184e4676ed71",
+          "sourceSha256": "495fcacf6651883b85309d1c4ee4fb2bb02da773d1fb80af1d738570368811ca",
+          "gitBlobSha": "378376d4f2151e33ad8f8d5025799867acc1d644"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "HANDOFF.md",
+          "originalSnapshotSha256": "e3ecea38f840521785283d25413031da0f4be11bdc89852a43d466e86cf56c60",
+          "sourceSha256": "bc90ad3842912da3c02af1072a6a3834eabd5e0dc20ca9e6ec8339e79dc4f163",
+          "gitBlobSha": "13fc6b79ec614523cb13b978799de71a0552eadc"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "README.md",
+          "originalSnapshotSha256": "c9e9c5ab6c9b779f87fa57d534bd80248fdc0aee7c2d8e9bdf913b9847ad554c",
+          "sourceSha256": "8cfffcac4f6558e4a105a3e52f6ea48dbbbc0d040fde600e6498b619dcd19ab5",
+          "gitBlobSha": "d0b7c66054d6586d418bc9070452c41ebbf7c2fe"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "bindings.json",
+          "originalSnapshotSha256": "fd6c5120f80cd9a26ec82dd8eae404ba8c6ee681255d8427c04aa18899a8cef5",
+          "sourceSha256": "220a26f2462ca63f4e60fe8f263f8886d2951847d1c29d2b8355336adc21a47d",
+          "gitBlobSha": "e9a146b24997af2491b17f4b78825a95938b56de"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "findings/operator-calls-2026-10-20.md",
+          "originalSnapshotSha256": "36838c94d56e251ce449fa564bb6099e686966f6ae44e8d38f332a5d375738cd",
+          "sourceSha256": "b130b6fb704095226527a566f5906094a1189368c6fa1d0f5dd568a4b3aea823",
+          "gitBlobSha": "270d64a9a101c5d2ca10e6013af00ab09c20bcfe"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "functions/mathlib-ingest/mapread.mjs",
+          "originalSnapshotSha256": "923847fa9d5292f783da55aba9045becc9e8a60983324ccab8c5ab7afab1f78d",
+          "sourceSha256": "71839dd9db2ca4e8eda62cb46d7f0ce103a0462979be5e012d3d03c7403fdc60",
+          "gitBlobSha": "b81826e22db2b24c325af5b0c670cbeea3d4124f"
+        },
+        {
+          "repository": "Formalization",
+          "path": "CLAUDE.md",
+          "originalSnapshotSha256": "6dd3ac2b2a68eddf5ddfae73e7afd497de23cb19ac89e38709872b5ffc7004dd",
+          "sourceSha256": "7f7624aa529a91d66b6ac87aa986b09d7b6f6a7a2fbae197fdcdf6b12b5306dd",
+          "gitBlobSha": "37bdd7ef44d16cb940436c1bc3698b024c688e18"
+        },
+        {
+          "repository": "Formalization",
+          "path": "HANDOFF.md",
+          "originalSnapshotSha256": "95ae9b2ba244963bd723bc1e2a3196363abab5017997cb7213f63e7352bf75dd",
+          "sourceSha256": "e5bf3d84c997bfef3a94a10344e192162d6617a57c9c48153e3a4bb0fa4d374d",
+          "gitBlobSha": "ac64a314759a7ff4927e7529e166dfbd5365ca26"
+        },
+        {
+          "repository": "Formalization",
+          "path": "reports/2026-11-06-map-intake-stress.md",
+          "originalSnapshotSha256": "9c1a6f0791567c538ad72be174f40ee9ad6183cc43600bc42625695177dc9d43",
+          "sourceSha256": "3efda255e6faaa0f7fc47de8bc23843fab5293e6b901f8b375b44ae3af0c17d4",
+          "gitBlobSha": "ffb17c965edc302b1c4139f3b631e793935050ae"
+        },
+        {
+          "repository": "Formalization",
+          "path": "scripts/map-check.mjs",
+          "originalSnapshotSha256": "3b6663da0760798438edef2e124be9a98e75c655e03a8ce289b54cd5af617afd",
+          "sourceSha256": "2f02ce65ba4df12c510ff04ab01af70fd2eeb50fbcb51b9cf304c0245f309bba",
+          "gitBlobSha": "b8c51549db18a481c07e5b833cb90810749722f5"
+        },
+        {
+          "repository": "Phone",
+          "path": "CLAUDE.md",
+          "originalSnapshotSha256": "c150f9121003739c9057847680abe118a4e424e8636ea9626316993547a02b66",
+          "sourceSha256": "322fc741acd91326493f463ccc544f8a90ea2abc24aa21e64212887ed98b7147",
+          "gitBlobSha": "04523bdb511936e8cd3a5bf7f58c01f5d0568f10"
+        },
+        {
+          "repository": "Phone",
+          "path": "HANDOFF.md",
+          "originalSnapshotSha256": "e9467482883fd8b9f5bb3c32982ea54f995c4f3274cb1c417fd9cb6910aa6157",
+          "sourceSha256": "0dd12a34bd6a66ed38afd4d47ae94154e15b42bbd3a05a248c8b034bfe0f815f",
+          "gitBlobSha": "2b0bfa0351364f56fa46f0846dc07799a51f36db"
+        },
+        {
+          "repository": "Phone",
+          "path": "apps/regulator/android/app/src/main/java/org/aviablefork/regulator/Typed.java",
+          "originalSnapshotSha256": "cd127bcc4141b754427b3d35b4fca132b12b5d79115c4872b4b20dde5a96cc0c",
+          "sourceSha256": "74705d7b076fac477c37b145fa40d6dcd5e7a6d37b3b835be80c6da0208b2d9c",
+          "gitBlobSha": "7ad8e462ee4e0ea06eee630993ba16778d425de7"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "decompositions/chain-exactness-and-relative-hodge-0_1.md",
+          "originalSnapshotSha256": "84c4b852bcd7fe8a3596d27551f681cb79cd6c2359b7f7e27dec483610a6c0ce",
+          "sourceSha256": "48fd9d2fe27bec91d39a9b7b0ba5a4e7b57acbedc433210bc61a5230c4aeb671",
+          "gitBlobSha": "6e6331b499efe6c8eaaf64454e46ae6c9a00c894"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "decompositions/selection-drift-0_1.md",
+          "originalSnapshotSha256": "f314ce439a35fe8ec24764c35717bbaacafc77545d1c3443177bef4738191115",
+          "sourceSha256": "97fd8e92645caf84a211bb32977b9cbacd26b94cbdd773df204a52229921a064",
+          "gitBlobSha": "9265308c7b4146e5cb9187c84764e926fe5d5f10"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "findings/math-base-2026-10-13.md",
+          "originalSnapshotSha256": "cf68c8f56c33baddb793acb23f350bed38d9a09cfcfd0767e032b6f545659cba",
+          "sourceSha256": "d6b4347330365affc20a7f1436b8603c0a3016f501f1874b1ba4a966e9962623",
+          "gitBlobSha": "06e28c12580f0cf09aad64642fea275551d4effb"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "findings/mathlib-ingest-2026-10-14.md",
+          "originalSnapshotSha256": "1a5f456170d457c2599817b19d13cf2abd88cc6d2b27602cbd95c45ae25f36f0",
+          "sourceSha256": "a2b578ed0bbb66a2cf38e2e63500b635491bc3253917bb1282325400327bbe79",
+          "gitBlobSha": "56d46462c29f8519a45308d7354c4a247464b93c"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "findings/mathlib-links-2026-10-14.md",
+          "originalSnapshotSha256": "19354695ca02d3c1e7186ef9f037f0b37d9165d2afcefd89c5e8926fc05ca25a",
+          "sourceSha256": "496b09853febc372a1fb14938e170511583cf2e93406106c133c18103a10af20",
+          "gitBlobSha": "87c39b748b57c24b9ca8b6e6942a777c33b313f4"
+        },
+        {
+          "repository": "Research_OS",
+          "path": "findings/math-map-stress-test-2026-11-06.md",
+          "originalSnapshotSha256": "f729f4f68efd79a997512b0c3e1561f2e930090f59cc1f16eef434bda3d00f7f",
+          "sourceSha256": "c8dd13641ac7a3ccc84b307b88979b9582f097b69d08255a5b202ab2b4aec925",
+          "gitBlobSha": "e8aa2306b553ed427a9febab17adb639fa88fc01"
+        }
+      ]
+    }
+  ]
+}

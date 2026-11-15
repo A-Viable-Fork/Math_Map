@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: W3C PROV-O: scoped activities and entities
+URL: https://www.w3.org/TR/prov-o/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6b96671ab84faf12ce3f041aca12c3f93a6df2ed242348810743179a68e69555
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An activity is something that occurs over a period of time and acts upon or with entities;

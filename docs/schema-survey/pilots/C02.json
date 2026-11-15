@@ -1,0 +1,696 @@
+{
+  "candidate": "C02",
+  "mapCommit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+  "purpose": "Discharge explicit scoped guards; retain absent facts as unknown.",
+  "rows": [
+    {
+      "entry": "D2-118",
+      "name": "Blowing Down",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R95da71b3313b1ba4",
+        "Ra96d5673352e01d0"
+      ],
+      "claim": "smooth-point inverse contraction, other geometric hypotheses remain ambient",
+      "predicate": {
+        "op": "eq",
+        "var": "curve.selfIntersection",
+        "type": "integer",
+        "value": -1
+      },
+      "cases": [
+        {
+          "facts": {
+            "curve.selfIntersection": -1
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "curve.selfIntersection": -2
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D3-116",
+      "name": "Sheafification",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "imprecise",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rea20fc73278697f1",
+        "R860786d63db8dbb5"
+      ],
+      "claim": "the sheafification adjunction requires existence of this sheafification",
+      "predicate": {
+        "op": "eq",
+        "var": "site.hasWeakSheafify",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "site.hasWeakSheafify": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "site.hasWeakSheafify": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D4-048",
+      "name": "Cech complex construction",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rfcef5fce2d769d4a",
+        "R5dcf952aac3c2603"
+      ],
+      "claim": "nerve theorem for the cover, with all nonempty intersections contractible",
+      "predicate": {
+        "op": "eq",
+        "var": "cover.good",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "cover.good": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "cover.good": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D4-075",
+      "name": "Cone construction",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "formal",
+        "broken": "formal"
+      },
+      "receiptIds": [
+        "R95f033fa0009c4c1",
+        "R87c4e1fadfc340dd"
+      ],
+      "claim": "contractibility of this quotient definition of the cone",
+      "predicate": {
+        "op": "gt",
+        "var": "space.cardinality",
+        "type": "integer",
+        "value": 0
+      },
+      "cases": [
+        {
+          "facts": {
+            "space.cardinality": 2
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "space.cardinality": 0
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D4-176",
+      "name": "Hodge decomposition",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R5a3726e7f06dbd6b",
+        "R2e8bb33d9cab049b"
+      ],
+      "claim": "closed-manifold version of the Hodge statement",
+      "predicate": {
+        "op": "eq",
+        "var": "manifold.closed",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "manifold.closed": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "manifold.closed": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D5-037",
+      "name": "Doob h-transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R297edc6fc075b73c",
+        "R8ae5ebe0aac9e31e"
+      ],
+      "claim": "the particular Brownian/Bessel construction uses h(x)=x, rather than arbitrary h",
+      "predicate": {
+        "op": "eq",
+        "var": "harmonic.hIsX",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "harmonic.hIsX": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "harmonic.hIsX": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D6-090",
+      "name": "Lebesgue decomposition",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "unsupported"
+      },
+      "receiptIds": [
+        "R1d8fad2744fa8e01",
+        "R0c32619369e40f90"
+      ],
+      "claim": "the regular-Borel three-part refinement, separately from the two-part theorem",
+      "predicate": {
+        "op": "eq",
+        "var": "measure.regularBorel",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "measure.regularBorel": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "measure.regularBorel": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D6-117",
+      "name": "Radon-Nikodym decomposition",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "imprecise",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "unsupported"
+      },
+      "receiptIds": [
+        "R62a12a8ecfe02205",
+        "Rb45c27414abaa5da"
+      ],
+      "claim": "the SFinite/SigmaFinite construction, with SFinite(mu) still an ambient obligation",
+      "predicate": {
+        "op": "eq",
+        "var": "measure.nuSigmaFinite",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "measure.nuSigmaFinite": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "measure.nuSigmaFinite": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-068",
+      "name": "Reflective Subcategory Localization",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "imprecise",
+        "description": "sourced",
+        "input": "formal",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Ra23ea87d3a8dfe49",
+        "R0c9569e3f91e7690"
+      ],
+      "claim": "exact reflector version, between the declared categories",
+      "predicate": {
+        "op": "eq",
+        "var": "reflector.preservesFiniteLimits",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "reflector.preservesFiniteLimits": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "reflector.preservesFiniteLimits": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X14",
+      "name": "Degree of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R1fef369cdaa86ead",
+        "R9b027bbcbf8f030c"
+      ],
+      "claim": "degree of product equals sum, using the explicit leading-coefficient guard",
+      "predicate": {
+        "op": "ne",
+        "var": "leading.product",
+        "type": "integer",
+        "value": 0
+      },
+      "cases": [
+        {
+          "facts": {
+            "leading.product": 6
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "leading.product": 0
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X16",
+      "name": "Leading coefficient of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rcc3f925ed964ceb3",
+        "Rcb339aa68e5fed00"
+      ],
+      "claim": "leading coefficient of sum, only with the indicated strict degree ordering",
+      "predicate": {
+        "op": "lt",
+        "var": "degree.pMinusQ",
+        "type": "integer",
+        "value": 0
+      },
+      "cases": [
+        {
+          "facts": {
+            "degree.pMinusQ": -1
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "degree.pMinusQ": 0
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X17",
+      "name": "Change of coefficient ring",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R893a9261886161dc",
+        "R7536c04bdc2b20b0"
+      ],
+      "claim": "degree preserved by a coefficient homomorphism",
+      "predicate": {
+        "op": "eq",
+        "var": "coefficientMap.injective",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "coefficientMap.injective": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "coefficientMap.injective": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X18",
+      "name": "Evaluation of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R0a3e77309c889e0c",
+        "Rb98708a5fde0229a"
+      ],
+      "claim": "noncommutative-target evaluation as a ring homomorphism",
+      "predicate": {
+        "op": "eq",
+        "var": "point.commutesWithCoefficientImage",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "point.commutesWithCoefficientImage": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "point.commutesWithCoefficientImage": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X19",
+      "name": "Formal derivative of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R723a332a4d48f23e",
+        "R9d4e0007a3d6cc5a"
+      ],
+      "claim": "strict drop of natDegree under derivative, with nonconstant degree",
+      "predicate": {
+        "op": "ne",
+        "var": "polynomial.natDegree",
+        "type": "integer",
+        "value": 0
+      },
+      "cases": [
+        {
+          "facts": {
+            "polynomial.natDegree": 2
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "polynomial.natDegree": 0
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X20",
+      "name": "Roots of a polynomial with multiplicity",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R036628f868c9162d",
+        "Re8de48bfe75c1ab5"
+      ],
+      "claim": "membership in the chosen roots multiset agrees with IsRoot",
+      "predicate": {
+        "op": "eq",
+        "var": "polynomial.nonzero",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "polynomial.nonzero": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "polynomial.nonzero": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    },
+    {
+      "entry": "D7-X22",
+      "name": "Splitting of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R8228bd8489ca2a6b",
+        "R69efaf8b5aae54a6"
+      ],
+      "claim": "factorwise splitting inferred from product splitting, both factors nonzero",
+      "predicate": {
+        "op": "eq",
+        "var": "f.nonzero",
+        "type": "boolean",
+        "value": true
+      },
+      "cases": [
+        {
+          "facts": {
+            "f.nonzero": true
+          },
+          "expected": "satisfied"
+        },
+        {
+          "facts": {
+            "f.nonzero": false
+          },
+          "expected": "violated"
+        },
+        {
+          "facts": {},
+          "expected": "unknown"
+        }
+      ],
+      "remainingAmbient": "Other theorem hypotheses and the correspondence of operand facts to a real mathematical object remain obligations. Satisfied means this guard only."
+    }
+  ],
+  "fixtureRule": "Inputs and proposed annotations are generated fixtures, labeled as such. Source statements remain readings."
+}

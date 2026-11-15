@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: MMT and OMDoc: theories and interpretation
+URL: https://uniformal.github.io/doc/language/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 88da2675dc4a71ea55fe8e547ccec5ed5bb3d8379f308fd68632343bea894dd8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+<em>Theory morphisms</em> translate between theories either by representation (<a href="modules.html#views"><em>views</em></a>) or by inheritance (<a href="declarations.html#structures"><em>structures</em></a>).

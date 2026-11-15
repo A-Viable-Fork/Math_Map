@@ -1,0 +1,809 @@
+{
+  "candidate": "C30",
+  "mapCommit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+  "purpose": "Pin a realization to a contract fingerprint without promoting static source claims into behavior.",
+  "rows": [
+    {
+      "entry": "D9-X01",
+      "name": "Send",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R31fe82773cf8fb89",
+        "R5a346feea47e90a2"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "sendto(int, const void*, size_t, int, const struct sockaddr*, socklen_t)",
+      "contractFingerprint": "a7d1ce6f1c1175af2801480e71f2a06e7a66e1c6b64f07559978e2dca1d4e7f9",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "Bionic exposes the syscall; kernel and UID network rules govern access, not byte ancestry. No OP_INTERNET. Kernel/device implementation is separately pinned; failures can follow partial/earlier delivery and do not undo trace events.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke",
+        "e9-sig"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X02",
+      "name": "Store",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rbf0d6ab4b7735251",
+        "R89b240823c24073a"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "android.content.Context#openFileOutput(java.lang.String, int)",
+      "contractFingerprint": "c382b26ecc47a6498193c974a8257e842f39253f0686af97a72306fc329809f1",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "Private placement is enforceable against ordinary apps; content labels, backup inventory and atomic effect-plus-log are absent. A local file does not prove every copy of W data remains local.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke",
+        "e9-sig"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X03",
+      "name": "Read sensor",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R00aaf467d1647805",
+        "R47d399476b53899c"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "android.hardware.SensorManager#registerListener(android.hardware.SensorEventListener, android.hardware.Sensor, int)",
+      "contractFingerprint": "eeba11c475686bb8407e481fea05d6d81c386d756824cc1c26080d167105c02d",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "SensorService controls admission/rates/UID activity, so zero permission is not zero mediation. Samples identify sensor hardware/type and time, not the compartment whose speech or computation physically caused them. HIGH_SAMPLING_RATE_SENSORS is conditional, not needed for an ordinary <=200 Hz accelerometer stream.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X04",
+      "name": "Isolate",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R3a044002ead425e8",
+        "Rebd1e2c0cb10b3c5"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "android.os.UserManager#createProfile(java.lang.String, java.lang.String, java.util.Set)",
+      "contractFingerprint": "8e68cd1796ac086cce5263d16f04f4f84610521fe2b15f5cda24ecee83e270fa",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "System API; UID/user and data-directory separation are structural confinement only. Profiles share hardware, scheduler and authorized cross-profile brokers. Creating a profile does not install the D9 gate or certify noninterference.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X05",
+      "name": "Grant capability",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R2f6133f14d8663e1",
+        "Rb7d7c3444832f72c"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "android.app.PendingIntent#getBroadcast(android.content.Context, int, android.content.Intent, int)",
+      "contractFingerprint": "38005c561573b45eda8fed257ab5f7908cb8e4be65e3199912b9be1610195f00",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "Creates an authentic system-held token for specified action identity, but not a generic fresh capability generation with explicit expiry and reduced ambient rights. Sending can execute with creator authority; extra bytes and URI grants require independent review.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X06",
+      "name": "Revoke capability generation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R3c45db74eb89abad",
+        "Rdba5a0c09d3502c6"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "android.app.PendingIntent#cancel()",
+      "contractFingerprint": "1cb728b130d56f891cd8c1c664c3d03dccee09c832603df41d96eec39dbb673e",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "System record sharing is a useful restricted revocation mechanism. No expected-version CAS or authenticated atomic audit is supplied; cancellation is not rollback of past effects.",
+      "unestablished": [
+        "e9-audit",
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X07",
+      "name": "Read stored state",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R3e0f38b0a0cf6b77",
+        "Rb1f46f81c8209f3c"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": "android.content.Context#openFileInput(java.lang.String)",
+      "contractFingerprint": "071b1d045fb5de581c84f74610b1df887bc7e63e97c379f2a51eb703cca87663",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "No protected provenance/signature envelope is compulsory. Hashing or parsing an envelope does not authenticate historical dependencies without a trusted writer.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke",
+        "e9-sig"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X08",
+      "name": "Evaluate pure expression",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R42b500bb6dca7ed5",
+        "Reb47f6bc0114eeb7"
+      ],
+      "by": "platform",
+      "platform": "android",
+      "sourcePin": {
+        "tag": "android-16.0.0_r4",
+        "buildId": "BP4A.251205.006",
+        "downstream": {
+          "project": "LineageOS/android_build",
+          "ref": "lineage-23.2",
+          "buildId": "BP4A.251205.006",
+          "note": "a moving branch, read 2026-10-11"
+        },
+        "round": "MM-DR-002",
+        "grading": "generation/2026-10-11-mm-dr-002/grading.md"
+      },
+      "artifact": null,
+      "contractFingerprint": "93d5c6a0a16a99b2086480af7fb2dfbfed12e848db9c83da26775b00ee7015a7",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "Ordinary Kotlin/Java/native evaluation does not supply purity, totality or dependency-union proofs. Build a restricted interpreter; Thread/Handler is not its replacement.",
+      "unestablished": [
+        "e9-audit",
+        "e9-auth",
+        "e9-ebnd",
+        "e9-fresh",
+        "e9-local",
+        "e9-mediated",
+        "e9-noegress",
+        "e9-orig",
+        "e9-owner",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X09",
+      "name": "Allocate fresh resource",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Reb55636c3bafa4d4",
+        "R0cacd5ba859792b5"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": "openat(O_CREAT|O_EXCL) or kernel fresh object allocation",
+      "contractFingerprint": "c8a8541626ff0bc716dfcb28023a3115e627929c4168097f98fdaa3ed966d979",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[RESULT] O_EXCL supplies atomic freshness relative to an existing directory entry (with filesystem/symlink rules), not initialization+labeling+all monitor updates in one transaction. Locality requires the resource to be in B and no replication/export.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-local",
+        "e9-mediated",
+        "e9-noegress",
+        "e9-orig",
+        "e9-owner",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X10",
+      "name": "Declassify confidentiality label",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R96537da220b64dba",
+        "R318f26bdc800e107"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": null,
+      "contractFingerprint": "25439da5b8d5b0628c085f311c2546f978dafbe8901d5506eb26147639203714",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[GENERATED] chmod, polkit and permission grants change access. They do not create a protected weaker confidentiality view while retaining mandatory historical labels. A labeled runtime with authorized release metadata is required.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-gfree",
+        "e9-local",
+        "e9-mediated",
+        "e9-noegress",
+        "e9-orig",
+        "e9-owner",
+        "e9-prov",
+        "e9-revoke",
+        "e9-sig"
+      ],
+      "sourceAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X11",
+      "name": "Endorse integrity label",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R2a29a8b322fe1ab3",
+        "R43b792aa2b32f1e8"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": null,
+      "contractFingerprint": "b438b6e6ccbee6a0bca44f1621e2f9faa1f6b6a45fc825d5ec85efec59cf7797",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[GENERATED] A signature or successful polkit action is not scoped integrity endorsement with preserved guest origins. No stock protected endorsement carrier was verified; this is a trusted-runtime operation.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-gfree",
+        "e9-local",
+        "e9-mediated",
+        "e9-noegress",
+        "e9-orig",
+        "e9-owner",
+        "e9-prov",
+        "e9-revoke",
+        "e9-sig"
+      ],
+      "sourceAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X12",
+      "name": "Attenuate capability",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Ra7fccc59507d9a9a",
+        "Rfece08a41437f96e"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": "open a read-only descriptor to the same protected file object",
+      "contractFingerprint": "2179d91e9de7a9fef07dc1f0624df6bc53cda3b15ba77f7767d004681f3f0c4f",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[RESULT] A verified same-object read-only fd is a rights reduction for ordinary file read/write, but dup() preserves flags and rights. It does not reduce all ambient rights or introduce an expected generation/lifetime witness. Full D9 attenuation needs a guarded broker constructor.",
+      "unestablished": [
+        "e9-atten",
+        "e9-auth",
+        "e9-fresh",
+        "e9-local",
+        "e9-mediated",
+        "e9-noegress",
+        "e9-orig",
+        "e9-owner",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X13",
+      "name": "Delegate existing authority",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rc8750f0ec2f528c7",
+        "R591dc4a5eac9cc94"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": "sendmsg(SCM_RIGHTS) over AF_UNIX",
+      "contractFingerprint": "97c344a63151c68d1898ae9295429f1df4eea952660dfbea0bddb91d8efb319e",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[RESULT] SCM_RIGHTS delegates existing fd authority; it does not itself attenuate it. Unix DAC/LSM and namespaces control admission but may not bind a stable intended callee or downstream effects. Labels and root/generation are absent from ordinary descriptors.",
+      "unestablished": [
+        "e9-atten",
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X14",
+      "name": "Spawn task",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rb001c5473ff2feb0",
+        "Rf1291e804d2d5a0c"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": "clone/fork/exec or privileged systemd service launch",
+      "contractFingerprint": "41ec164476a2409e74bd017bd6623f8b859ddf2ae04ed5985700dbe3a7892147",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[RESULT] Forked children inherit many restrictions but also open authority and secret memory. exec replaces memory without establishing a clean origin context. New systemd units can use different credentials and brokers, so policy must authorize launch and inheritance. No whole child effect trace is authenticated.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X15",
+      "name": "Join task",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R674d22e60d44c6e3",
+        "R9762a293e468420f"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": "waitid/waitpid plus explicit result IPC",
+      "contractFingerprint": "e15e8f880de62d3871a478d3ea0c1731701edd5d171697b36a48114ed4587442",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[RESULT] Waiting reports exit state and reaps a child; it neither imports an authenticated execution trace nor reconstructs complete origins of result bytes. Cancellation/error and divergence remain distinct. Provenance-aware join needs runtime accounting.",
+      "unestablished": [
+        "e9-fresh",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "enforced",
+      "contractAssurance": "unknown",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    },
+    {
+      "entry": "D9-X16",
+      "name": "Install effect handler",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R9f9df31342d1773e",
+        "Re9369acd2a20b3e9"
+      ],
+      "by": "platform",
+      "platform": "nixos",
+      "sourcePin": {
+        "nixpkgs": "7c8764b7c7b09b34f632464276218ef9090eaa11",
+        "branch": "nixos-26.05",
+        "release": "26.05",
+        "kernel": "6.18.55",
+        "systemd": "260.5",
+        "nix": "2.34.8",
+        "round": "MM-DR-004",
+        "grading": "generation/2026-10-11-mm-dr-004/grading.md",
+        "limitation": "Package defaults at exact pin, not a running-host inventory. Architecture/kernel/device overrides change applicability."
+      },
+      "artifact": null,
+      "contractFingerprint": "444b82e836adffa58213ec2aa9fdb616c6954a57b058ca5124b574d86dcc666e",
+      "fingerprintAlgorithm": "survey-contract-v1",
+      "departures": "[GENERATED] A syscall filter or D-Bus routing policy is not a lexical effect-handler installation operation. An application interpreter can implement it, but no source-audited stock NixOS runtime for the attached semantics was identified.",
+      "unestablished": [
+        "e9-auth",
+        "e9-fresh",
+        "e9-mediated",
+        "e9-orig",
+        "e9-prov",
+        "e9-revoke"
+      ],
+      "sourceAssurance": "not observable",
+      "contractAssurance": "not observable",
+      "sourceHashesStatus": "read from the existing generated binding, not re-fetched in this pilot",
+      "behavioralCheck": null,
+      "observations": [],
+      "evidence": "read: this binding claim exists; its inherited assurance is unchanged"
+    }
+  ],
+  "fixtureRule": "Inputs and proposed annotations are generated fixtures, labeled as such. Source statements remain readings."
+}

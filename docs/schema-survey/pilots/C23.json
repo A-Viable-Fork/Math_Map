@@ -1,0 +1,399 @@
+{
+  "candidate": "C23",
+  "mapCommit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+  "purpose": "Execute a rule dictionary on bounded examples and catch a wrong target action or normalization.",
+  "rows": [
+    {
+      "entry": "D7-X14",
+      "name": "Degree of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R1fef369cdaa86ead",
+        "Rf9d7acf28dc0086a"
+      ],
+      "rule": "degree_product",
+      "equation": "degree(p*q) = degree(p)+degree(q)",
+      "domain": "nonzero polynomials over QQ",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "degree(p*q)",
+      "targetAction": "degree(p)+degree(q)"
+    },
+    {
+      "entry": "D7-X15",
+      "name": "Coefficient extraction",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Radbcf02eeee7a058",
+        "R4aa7015010497a81"
+      ],
+      "rule": "coefficient_add",
+      "equation": "coeff(p+q,n) = coeff(p,n)+coeff(q,n)",
+      "domain": "QQ[X], n=1",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "coeff(p+q,n)",
+      "targetAction": "coeff(p,n)+coeff(q,n)"
+    },
+    {
+      "entry": "D7-X16",
+      "name": "Leading coefficient of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rcc3f925ed964ceb3",
+        "Rf9d7acf28dc0086a",
+        "Rd0f1c5707230e98c"
+      ],
+      "rule": "leading_product",
+      "equation": "lc(p*q) = lc(p)*lc(q)",
+      "domain": "QQ[X], nonzero p and q",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "lc(p*q)",
+      "targetAction": "lc(p)*lc(q)"
+    },
+    {
+      "entry": "D7-X17",
+      "name": "Change of coefficient ring",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R893a9261886161dc",
+        "Rc32f0a73b0dcc6cc"
+      ],
+      "rule": "map_derivative",
+      "equation": "map_mod5(derivative(p)) = derivative(map_mod5(p))",
+      "domain": "ZZ[X] to (ZZ/5)[X]",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "map_mod5(derivative(p))",
+      "targetAction": "derivative(map_mod5(p))"
+    },
+    {
+      "entry": "D7-X18",
+      "name": "Evaluation of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R0a3e77309c889e0c",
+        "R511feaba12b9375b"
+      ],
+      "rule": "evaluate_product",
+      "equation": "eval(p*q,a) = eval(p,a)*eval(q,a)",
+      "domain": "commutative QQ, a=2",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "eval(p*q,a)",
+      "targetAction": "eval(p,a)*eval(q,a)"
+    },
+    {
+      "entry": "D7-X19",
+      "name": "Formal derivative of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R723a332a4d48f23e",
+        "R7a860b8621ab27ee"
+      ],
+      "rule": "derivative_product",
+      "equation": "D(p*q) = D(p)*q+p*D(q)",
+      "domain": "QQ[X]",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "D(p*q)",
+      "targetAction": "D(p)*q+p*D(q)"
+    },
+    {
+      "entry": "D7-X20",
+      "name": "Roots of a polynomial with multiplicity",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R036628f868c9162d",
+        "R4715d750aaeefd53"
+      ],
+      "rule": "roots_product",
+      "equation": "roots(p*q) = roots(p) multiset_union roots(q)",
+      "domain": "nonzero split polynomials over QQ",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "roots(p*q)",
+      "targetAction": "roots(p) multiset_union roots(q)"
+    },
+    {
+      "entry": "D7-X21",
+      "name": "Composition of polynomials",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Re2cd23881ed840c0",
+        "R6cce2f3eb07f51fb"
+      ],
+      "rule": "evaluate_composition",
+      "equation": "eval(p.comp(q),a) = eval(p,eval(q,a))",
+      "domain": "QQ[X], a=2",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "eval(p.comp(q),a)",
+      "targetAction": "eval(p,eval(q,a))"
+    },
+    {
+      "entry": "D7-X22",
+      "name": "Splitting of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R8228bd8489ca2a6b",
+        "R69efaf8b5aae54a6"
+      ],
+      "rule": "splitting_product",
+      "equation": "splits(p*q) iff splits(p) and splits(q)",
+      "domain": "QQ[X], both factors nonzero",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "splits(p*q) iff splits(p) and splits(q)",
+      "targetAction": "splits(p*q) iff splits(p) and splits(q)"
+    },
+    {
+      "entry": "D6-032",
+      "name": "Discrete Fourier transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R0467b66ae884923b",
+        "R14c9fc722ff5b4fd",
+        "Rd2a1993b8bdc26a8"
+      ],
+      "rule": "dft_convolution",
+      "equation": "DFT(circular_convolution(x,y)) = DFT(x)*DFT(y)",
+      "domain": "periodic vectors of length 4, backward normalization",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "DFT(circular_convolution(x,y))",
+      "targetAction": "DFT(x)*DFT(y)"
+    },
+    {
+      "entry": "D6-040",
+      "name": "Fast Fourier transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Ra22cad9657889ab1",
+        "R14c9fc722ff5b4fd"
+      ],
+      "rule": "fft_dft",
+      "equation": "FFT(x) = DFT(x)",
+      "domain": "four-point numeric algorithm instance, backward normalization",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "FFT(x)",
+      "targetAction": "DFT(x)"
+    },
+    {
+      "entry": "D1-001",
+      "name": "Transpose graph",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R0f37ff5a8ce2f0e3",
+        "Rb016d3365017ce87"
+      ],
+      "rule": "transpose_product",
+      "equation": "transpose(A*B) = transpose(B)*transpose(A)",
+      "domain": "finite adjacency matrices; multiplication counts walks",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "transpose(A*B)",
+      "targetAction": "transpose(B)*transpose(A)"
+    },
+    {
+      "entry": "D1-002",
+      "name": "Complement graph",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R8a82aa83487f2fc7",
+        "R5a294294f12c2b81"
+      ],
+      "rule": "complement_clique",
+      "equation": "S clique in complement(G) iff S independent in G",
+      "domain": "finite loopless simple graphs",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "S clique in complement(G) iff S independent in G",
+      "targetAction": "S clique in complement(G) iff S independent in G"
+    },
+    {
+      "entry": "D1-109",
+      "name": "Translation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rf5bdc1e080e93b87"
+      ],
+      "rule": "translation_difference",
+      "equation": "T_v(x)-T_v(y) = x-y",
+      "domain": "finite rational coordinate vectors, same v",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "T_v(x)-T_v(y)",
+      "targetAction": "x-y"
+    },
+    {
+      "entry": "D5-091",
+      "name": "Logarithm transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R61475ec776a95c18",
+        "R291fe4374cfcc253"
+      ],
+      "rule": "log_product",
+      "equation": "log(x*y) = log(x)+log(y)",
+      "domain": "ordinary real logarithm, positive x,y; Lean source uses its extended convention",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "log(x*y)",
+      "targetAction": "log(x)+log(y)"
+    },
+    {
+      "entry": "D6-101",
+      "name": "Mobius transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R53b5e3d512b23f55"
+      ],
+      "rule": "mobius_composition",
+      "equation": "M_A(M_B(z)) = M_(A*B)(z)",
+      "domain": "rational matrices with nonzero determinant; avoid poles",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "M_A(M_B(z))",
+      "targetAction": "M_(A*B)(z)"
+    },
+    {
+      "entry": "D6-148",
+      "name": "Walsh-Hadamard transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R9b615cde361e9fdc",
+        "Re0da075e09084669"
+      ],
+      "rule": "walsh_xor",
+      "equation": "W_ortho(x xor_convolve y) = sqrt(N)*W_ortho(x)*W_ortho(y)",
+      "domain": "N=4, Sylvester order, W_ortho=H/2",
+      "evidence": "read definitions; generated alignment; finite/symbolic experiment is separately recorded",
+      "sourceAction": "W_ortho(x xor_convolve y)",
+      "targetAction": "sqrt(N)*W_ortho(x)*W_ortho(y)"
+    }
+  ],
+  "fixtureRule": "Inputs and proposed annotations are generated fixtures, labeled as such. Source statements remain readings."
+}

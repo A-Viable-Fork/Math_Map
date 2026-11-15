@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Rocq 9.2: generalized rewriting
+URL: https://rocq-prover.org/doc/V9.2.0/refman/addendum/generalized-rewriting.html
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ce283381d15849f358638030b78ea56fadb3faa80142f4bd63568c75cbc81956
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+One function can respect several different relations and thus it can
+be declared as a morphism having multiple signatures.
