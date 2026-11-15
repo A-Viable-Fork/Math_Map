@@ -1493,6 +1493,8 @@ const URLS = {
 };
 
 const DOMAINS = {
+  D2: { verdict: "needs refinement", fields: ["preserved", "description", "input"],
+    note: "The operations are the right ones: 136 of 141 names and 126 outputs are stated by a source as landed, no entry describes a different operation, and no Mathlib declaration conflicts with one. The damage sits in what the entries claim around the operation: preserved is imprecise in 42 entries (an invariant listed that no source states, or a second item unquoted), description in 35 with one wrong (D2-169, which puts G2 in the magic square), input in 26 (a hypothesis dropped: commutativity, non-zero arguments, a Noetherian base, m at least n). Two fields are wrong (D2-050.broken, D2-169.description). 81 of 141 entries carry at least one corrected field. Broken is the unsourced field, not a damaged one: 102 of 141 have no window stating what the operation loses." },
 };
 
 const REVIEW = ROWS.map((g) => ({ ...g, files: Object.fromEntries(Object.entries(g.files).map(([k, b]) => [k, `excerpts/${b}.txt`])),
