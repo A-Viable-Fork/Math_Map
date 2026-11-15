@@ -24,3 +24,5 @@ Given square matrices ''A'' and ''B'', the '''generalized Schur decomposition'''
 The generalized [[eigenvalue]]s <math>\lambda</math> that solve the [[Eigendecomposition of a matrix#Additional topics|generalized eigenvalue problem]] <math>A\mathbf{x}=\lambda B\mathbf{x}</math>
 
 the '''Schur decomposition''' or '''Schur triangulation'''
+
+can be calculated as the ratio of the diagonal elements of ''S'' to those of ''T''.

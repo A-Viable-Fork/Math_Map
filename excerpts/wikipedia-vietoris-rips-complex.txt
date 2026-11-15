@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Vietoris–Rips complex (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382495164
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ae1e1918929cc401adf6f11f298d3d789a11f970365201cc4dbbbefa36440379
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Vietoris–Rips complex''', also called the '''Vietoris complex''' or '''Rips complex''', is a way of forming a [[topological space]] from [[finite set]]s of points and the [[distance]]s between them.
+
+The collection of all Vietoris–Rips complexes is a commonly applied construction in [[persistent homology]] and [[topological data analysis]], and is known as the [[Vietoris–Rips filtration|Rips filtration]].

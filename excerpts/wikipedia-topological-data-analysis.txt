@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Topological data analysis (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383254717
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 6e816b6102aa920a9489e717d489a0806caee06a832ee806f9362e458b0c5ac7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Carlsson et al. have proposed a general method called '''MAPPER'''.
+
+Let <math>X</math> and <math>Z</math> be topological spaces and let <math>f\colon X\to Z</math> be a continuous map. Let <math>\mathbb{U} = \{U_{\alpha}\}_{\alpha \in A}</math> be a finite open covering of <math>Z</math>.
+
+{{cite book |first1=G. |last1=Singh |first2=F. |last2=Mémoli |first3=G. |last3=Carlsson

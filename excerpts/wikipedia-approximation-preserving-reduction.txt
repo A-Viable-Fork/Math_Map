@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Approximation-preserving reduction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1357847632
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a44765065b8834ac9eb84a7e7736dbffba8ff9ed8eebca7ce210abeb3908eb1f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Nevertheless, APX-completeness is defined in terms of PTAS reductions.
+
+PTAS-reduction is another commonly used reduction scheme.
+
+PTAS-reductions are a generalization of P-reductions, shown below, with the only difference being that the function {{mvar|g}} is allowed to depend on the approximation ratio {{mvar|r}}.

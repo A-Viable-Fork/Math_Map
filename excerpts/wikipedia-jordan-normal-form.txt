@@ -22,3 +22,11 @@ it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>.
 The Jordan form of a ''n'' × ''n'' matrix ''A'' is block diagonal, and therefore gives a decomposition of the ''n'' dimensional Euclidean space into invariant subspaces of ''A''.
 
 representing a [[linear operator]] on a [[finite-dimensional]] [[vector space]] with respect to some [[Basis (linear algebra)|basis]].
+
+In general, a square complex matrix ''A'' is [[similar (linear algebra)|similar]] to a [[block diagonal matrix]]
+
+:<math>P^{-1}AP = J;</math> that is, <math>AP = PJ.</math>
+
+Then a basis with respect to which the matrix representing the operator has the required form exists [[if and only if]] all [[eigenvalue]]s of the operator lie in ''K''
+
+and it is the number of Jordan blocks corresponding to ''λ''<sub>''i''</sub>.

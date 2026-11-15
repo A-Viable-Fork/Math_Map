@@ -14,3 +14,7 @@ In Euclidean geometry, a homothety of ratio <math>k</math> multiplies ''distance
 * The ''ratio of two line segments'' is preserved.
 
 Consequences: A triangle is mapped on a [[Similarity (geometry)|similar]] one.
+
+<math display="block">\mathbf x'=\mathbf s + k(\mathbf x -\mathbf s).</math>
+
+Both properties show that a homothety is a ''[[Similarity (geometry)|similarity]]''.

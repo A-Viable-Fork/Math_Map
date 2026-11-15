@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Random projection (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370066440
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e8f7a626750497c4f7a5f224a92ac946edbe63566d74d5c590ba9b6966f839fc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''random projection''' is a technique used to [[dimensionality reduction|reduce the dimensionality]] of a set of points which lie in [[Euclidean space]].
+
+In random projection, the original <math>d </math>-dimensional data is projected to a <math>k </math>-dimensional subspace, by multiplying on the left by a random matrix <math>R \in \R^{k \times d} </math>.
+
+The random matrix R can be generated using a Gaussian distribution.
+
+then they may be projected into a suitable lower-dimensional space in a way which approximately preserves pairwise distances between the points with high probability.

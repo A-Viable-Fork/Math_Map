@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Gröbner basis (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371778743
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 4b95fa06e5820e8da60e52063bdf742b9ee11f0202b7516c2e898f1611e47757
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+there is a Gröbner basis that contains {{mvar|G}} and generates the same ideal.
+
+For every admissible monomial ordering and every finite set {{mvar|G}} of polynomials
+
+by first computing the degrevlex basis and then using a "change of ordering algorithm".

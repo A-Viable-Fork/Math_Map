@@ -18,3 +18,9 @@ Some indefinite matrices for which no Cholesky decomposition exists have an LDL 
 An alternative way to eliminate taking square roots in the <math display=inline>\mathbf{LL}^\mathrm{*}</math> decomposition is to compute the LDL decomposition <math display=inline>\mathbf{A} = \mathbf{LDL}^\mathrm{*}</math>, then solving <math display=inline>\mathbf{Ly} = \mathbf{b}</math> for {{math|'''y'''}}, and finally solving
 
 A closely related variant of the classical Cholesky decomposition is the LDL decomposition
+
+A closely related variant of the classical Cholesky decomposition is the LDL decomposition, also known as Bunch-Kaufman factorization
+
+<math display=block>\mathbf{A} = \mathbf{L D L}^*,</math>
+
+For this reason, the LDL decomposition is often called the ''square-root-free Cholesky'' decomposition. For real matrices, the factorization has the form {{math|1='''A''' = '''LDL'''<sup>T</sup>}}

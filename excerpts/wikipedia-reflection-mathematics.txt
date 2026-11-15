@@ -10,3 +10,9 @@ For example, the mirror image of the small Latin letter '''p''' for a reflection
 To find the reflection of a figure, reflect each point in the figure.
 
 The [[matrix (mathematics)|matrix]] for a reflection is [[orthogonal matrix|orthogonal]] with [[determinant]] −1
+
+is a [[function (mathematics)|mapping]] from a [[Euclidean space]] to itself that is an [[isometry]] with a [[hyperplane]] as the set of [[Fixed point (mathematics)|fixed point]]s
+
+The image of a figure by a reflection is its [[mirror image]] in the axis or plane of reflection.
+
+A reflection is an [[involution (mathematics)|involution]]: when applied twice in succession, every point returns to its original location

@@ -16,3 +16,11 @@ A '''vertical translation''' means composing the function {{tmath|y \mapsto y + 
 The [[antiderivative]]s of a function all differ from each other by a [[constant of integration]] and are therefore vertical translates of each other.
 
 a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]]. A translation can also be interpreted as the addition of a constant [[vector space|vector]] to every point
+
+a '''translation''' is a [[geometric transformation]] that moves every point of a figure, shape or space by the same [[Distance geometry|distance]] in a given [[direction (geometry)|direction]].
+
+then the translation function <math>T_{\mathbf{v}} </math> will work as <math> T_{\mathbf{v}}(\mathbf{p})=\mathbf{p}+\mathbf{v}</math>.
+
+so that the orientation of the body in space is unaltered
+
+The [[Shift operator|translation operator]] turns a function of the original position
