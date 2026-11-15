@@ -193,6 +193,7 @@
 | `docs/inbound/2026-10-22-observations-from-the-regulator.md` | A dated proposal from another repository or session; a lead, not a change. |
 | `docs/inbound/2026-11-06-from-formalization-verdict.md` | A dated proposal from another repository or session; a lead, not a change. |
 | `docs/inbound/2026-11-06-from-formalization.md` | A dated proposal from another repository or session; a lead, not a change. |
+| `docs/inbound/2026-11-06-schema-stress-test-from-research-os.md` | A dated proposal from another repository or session; a lead, not a change. |
 | `docs/schema-survey-second/01-reading.md` | Phase 1: per consumer, what it reads from the map, what it keeps outside it and what it asked for, with the atlas passages of The_Smell_of_Knowledge quoted; every claim marked read, measured or inferred. |
 | `docs/schema-survey-second/02-generation.md` | Phase 2, a generation record (SCHEMA-001): sixty-seven candidate data kinds across six axes, each with the arrows it serves, the function it enables, its day-one reader, its evidence story and its cost; written before any prior-art search. |
 | `docs/schema-survey-second/03-prior-art.md` | Phase 3: how existing systems keep each candidate kind (Mathlib, the nLab, OEIS, the LMFDB, Wikidata, MMT and OMDoc, transport and univalence, ontology alignment), every quotation receipted in excerpts/, with what could not be fetched marked unknown. |
