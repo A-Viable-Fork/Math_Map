@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Euler characteristic (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1368656473
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6591bb087489e125b8ccf7b3cb79e89ce1c5461d855e50b084ff59a3d6654102
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the alternating sum of ranks of reduced homology groups.
+
+This quantity is well-defined if the Betti numbers are all finite and if they are zero beyond a certain index&nbsp;''n''<sub>0</sub>.
+
+It follows that the Euler characteristic is also a homotopy invariant.

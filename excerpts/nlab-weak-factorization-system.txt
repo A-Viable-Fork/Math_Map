@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, weak factorization system (page source)
+URL: https://ncatlab.org/nlab/source/weak+factorization+system
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 38fe08e7658e914dc06089ba892643777780d813b9cc513916f9358ffd0c4e14
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A classical example of an orthogonal factorization system is the [[(epi,mono)-factorization system]] on the category [[Set]] or in fact on any [[topos]].
+
+every morphism of the category factors as the composite of one in $\mathcal{L}$ followed by one in $\mathcal{R}$
+
+A _weak factorization system_ on a [[category]] is a [[pair]] $(\mathcal{L},\mathcal{R})$ of [[classes]] of [[morphisms]]
+
+Non-orthogonal weak factorization systems are the key ingredient in [[model categories]]
+
+1. $\mathcal{L}$ is precisely the class of morphisms having the [[left lifting property]] against every morphism in $\mathcal{R}$;
+
+If the liftings here are unique, then one speaks of an _orthogonal factorization system_.

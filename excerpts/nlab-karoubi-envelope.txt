@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, Karoubi envelope (page source)
+URL: https://ncatlab.org/nlab/source/Karoubi+envelope
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a5be02736f9d1d2dd32de384012f067387f0d1e5bba45a1fc79c4944a20e4dce
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The _Karoubi envelope_ or _idempotent completion_ of a [[category]] is the [[universal construction|universal]] enlargement of the category with the property that every [[idempotent]] is a [[split idempotent]].
+
+For a fully faithful embedding $i \colon \mathcal{C} \to \mathcal{D}$ to exhibit an idempotent(-splitting) completion of $\mathcal{C}$, it suffices that
+
+which are [[retracts]] of objects in
+
+The _Karoubi envelope_ or _idempotent completion_ of a [[category]]
+
+Thus, the Karoubi envelope is a [[completion]] operation into such categories.
+
+In particular the idempotent completion always exists and is unique up to [[equivalence of categories]].

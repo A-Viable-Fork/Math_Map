@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Distributive lattice (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1353478499
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 03bcdce1e5d20204dba8f6d0f4910a9abb400e27559c1b782f38d8e07a56ebe0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+: ''x'' ∧ (''y'' ∨ ''z'') = (''x'' ∧ ''y'') ∨ (''x'' ∧ ''z'').
+
+: ''x'' ∨ (''y'' ∧ ''z'') = (''x'' ∨ ''y'') ∧ (''x'' ∨ ''z'') &nbsp; for all ''x'', ''y'', and ''z'' in ''L''.

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, Isbell duality (page source)
+URL: https://ncatlab.org/nlab/source/Isbell+duality
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dca216f3851699bf3f7ed3f243a826f90f792ee40894cdf8b2502356055e914b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+this is called **Isbell conjugation** or **Isbell duality** (after [[John Isbell]]).
+
+\mathcal{O}(X) \colon c \mapsto [C^{op}, \mathcal{V}](X, C(-,c))
+
+Spec(A) \colon c \mapsto [C, \mathcal{V}]^{op}(C(c,-),A)
+
+Isbell duality is the archetype of the [[duality]] between [[geometry]] and [[algebra]] that permeates mathematics
+
+relates (higher) [[presheaves]] with (higher) [[copresheaves]] on a given ([[higher category theory|higher]]) [[category]] $C$
+
+**Lemma 1:** $Spec(C(c,-)) \simeq C(-,c)$
+
+are called __Isbell self-dual__.

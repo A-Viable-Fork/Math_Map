@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Nilradical of a ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371809981
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a331092dbcd348a82095aa08efe8b6ff32a4f09c8cf2463e98c00d365db8c6a8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+{{Short description|Ideal of the nilpotent elements}}
+
+The nilradical of a commutative ring is the intersection of all [[prime ideal]]s.
+
+The nilradical of a commutative ring is the set of all [[nilpotent element]]s
+
+If the nilradical is the zero ideal, the ring is called a [[reduced ring]].

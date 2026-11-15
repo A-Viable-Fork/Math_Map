@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Horseshoe lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1349920892
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 66a73d713ff6e84824dfc38289c4ff22b42a2008e1b2ffbfb09e76c43fce8edd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It says that if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>, then a resolution of <math>A</math> can be built up
+
+if an object <math>A</math> is an extension of <math>A''</math> by <math>A'</math>
+
+then a resolution of <math>A</math> can be built up
+
+Then the [[snake lemma]] is invoked to show that the simultaneous resolution constructed so far has exact rows.

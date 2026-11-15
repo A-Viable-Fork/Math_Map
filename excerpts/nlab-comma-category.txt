@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, comma category (page source)
+URL: https://ncatlab.org/nlab/source/comma+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7060263cf4d04babda4c0c9215df8b3595cdfd85eeaa4df8f8117b8a76d23ac5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+their **comma category** is the [[category]] $(f/g)$ whose
+
+* [[objects]] are [[triples]] $(c,d,\alpha)$ where $c\in C$, $d\in D$, and
+
+then $(f/g)$ is the [[over category|slice category]] $C/c$.
+
+The _comma category_ of two [[functors]] $f : C \to E$ and $g : D \to E$
+
+they are the projections from the summit of the &quot;appropriate&quot; 2-categorical limit.
+
+It can also be seen a kind of [[2-limit]]

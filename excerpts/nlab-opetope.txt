@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, opetope (page source)
+URL: https://ncatlab.org/nlab/source/opetope
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f7406deaefa378616508edc168625bdcdea088403f2b0e3bec77caec77c8b16f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+_Opetopes_ are one of the [[geometric shapes for higher structures|geometric shapes]] of cells in the approach to the [[higher category theory]] of [[n-category|n-categories]] and [[∞-categories]] put forward in ([Baez-Dolan 97](#BaezDolan97))
+
+put forward in ([Baez-Dolan 97](#BaezDolan97))
+
+the word &quot;opetope&quot; seems to derive from *[[operad]]*/*operation* + *[[polytope]]*.
+
+* [[Eugenia Cheng]], The category of opetopes and the category of opetopic sets,

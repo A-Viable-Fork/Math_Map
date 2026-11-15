@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Verma module (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1365071954
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 581db33c4ce4da9253f72bd50ebc21da92642c7c2a72e7605c9613297cf446e6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Verma modules''', named after [[Daya-Nand Verma]]
+
+: <math>W_\lambda := U(\mathfrak{g}) \otimes_{U(\mathfrak{b})} F_\lambda</math>.
+
+We let <math>\mathfrak{b}</math> be the subalgebra of <math>\mathfrak{g}</math> spanned by <math>\mathfrak{h}</math> and the root vectors <math>X_\alpha</math> with <math>\alpha\in R^+</math>.
+
+Now let <math>\lambda\in\mathfrak{h}^*</math> be an arbitrary linear functional, not necessarily dominant or integral.
+
+Our goal is to construct a representation <math>W_\lambda</math> of <math>\mathfrak{g}</math> with highest weight <math>\lambda</math>
+
+<math>W_\lambda</math> contains a unique maximal [[submodule]], and its quotient is the unique (up to [[isomorphism]]) [[irreducible representation]] with highest weight <math>\lambda.</math>

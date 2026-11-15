@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Complemented lattice (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1293084295
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ab0c0f039a12cd4d21cd38a93435666f349b88ad16c45c295d255eb5ffc49c95
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A '''relatively complemented lattice''' is a lattice such that every [[Interval (partial order)|interval]] [''c'',&nbsp;''d'']
+
+A '''relatively complemented lattice''' is a lattice such that every [[Interval (partial order)|interval]] [''c'',&nbsp;''d''], viewed as a bounded lattice in its own right, is a complemented lattice.
+
+every [[Interval (partial order)|interval]] [''c'',&nbsp;''d''], viewed as a bounded lattice in its own right
+
+is a complemented lattice.
+
+Complements need not be unique.
+
+In bounded [[distributive lattice]]s, complements are unique.

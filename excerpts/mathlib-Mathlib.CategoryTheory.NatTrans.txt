@@ -1,0 +1,11 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/NatTrans.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/NatTrans.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 193c0dfc37aa9ba66ad4e5a537646a53b3ee874a59b1b716cebe4b8a8d82e427
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.NatTrans (line 54)
+structure NatTrans (F G : C ⥤ D) : Type max u₁ v₂ where
+  /-- The component of a natural transformation. -/
+  app (X : C) : F.obj X ⟶ G.obj X
+  /-- The naturality square for a given morphism. -/
+  naturality ⦃X Y : C⦄ (f : X ⟶ Y) : F.map f ≫ app Y = app X ≫ G.map f

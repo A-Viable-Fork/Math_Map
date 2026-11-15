@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, pushout (page source)
+URL: https://ncatlab.org/nlab/source/pushout
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 82344882776f98fee5ea3182b61c14e89cf8ca248a1b21b33c81caacae7db338
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+or more simply an __[[amalgamation]]__ (or __amalgam__) of $a$ and $b$.
+
+In the category [[Set]] a &#39;pushout&#39; is a quotient of the disjoint union of two sets.
+
+A [[pushout]] of [[injections]] of [[Sets]] is called the [[union]] of the sets.
+
+Such a diagram is called a [[span]].
+
+If the colimit exists, we obtain a [[commutative square]]
+
+Pushouts preserve [[epimorphisms]] and [[isomorphisms]]:
+
+identifying $a \in A$ with $b \in B$ if there exists $x \in C$ such that $f(x) = a$ and $g(x) = b$

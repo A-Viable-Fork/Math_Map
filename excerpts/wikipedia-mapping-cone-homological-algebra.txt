@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Mapping cone (homological algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1225460210
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 081b9ff5d3b13f617ce7801784cd264b6fca8a11fab7bb9cddf5ce66fdccdb58
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The main use of the cone is to identify [[quasi-isomorphism]]s: if the cone is [[acyclic complex|acyclic]], then the map is a quasi-isomorphism.
+
+In the theory of [[triangulated categories]] it is a kind of combined [[kernel (category theory)|kernel]] and [[cokernel]]
+
+a category whose morphisms form abelian groups and in which we may construct a [[direct sum]] of any two objects).
+
+where the maps <math>B \to C(f), C(f) \to A[1]</math> are given by the direct summands

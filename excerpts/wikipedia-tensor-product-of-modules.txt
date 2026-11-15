@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Tensor product of modules (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1362505653
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7e5c6b9843e1a7baf50258dc8bb59af267a2ab4edcfba109a7de0b6d89f3dc91
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+are always [[right exact functor]]s, but not necessarily left exact
+
+is exact but not after taking the tensor with <math>\Z_n</math>)

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, geometric theory (page source)
+URL: https://ncatlab.org/nlab/source/geometric+theory
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 33fb468ce996caef0af20e675825680e6e2109cb9002cf024dfa8a51a076fb20
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* A geometric theory is a (possibly infinitary) [[first-order logic|first order]] [[theory]] whose [[model|models]] are preserved and reflected by [[geometric morphisms]].
+
+by taking advantage of the availability of infinitary disjunctions in geometric logic
+
+whose [[model|models]] are preserved and reflected by [[geometric morphisms]].
+
+* A geometric theory is a (possibly infinitary) [[first-order logic|first order]] [[theory]]

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Derived functor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382294420
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 74a25f1367b91096f004829e1b584527bb18fab256d9ef4ccc0bc57525ed52b1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was noted in various quite different settings that a [[short exact sequence]] often gives rise to a "long exact sequence".
+
+where the ''I''<sup>&nbsp;''i''</sup> are all injective (this is known as an ''[[injective resolution]]'' of ''X'').
+
+Suppose we are given a [[Functor#Covariance and contravariance|covariant]] [[left exact functor]]
+
+and one could ask how to continue this sequence to the right to form a long exact sequence.

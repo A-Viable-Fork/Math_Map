@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Apomorphism (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381170408
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e31d3a5f56055d2e64e2371df6570cacbba4a53a22c20cd1677ee8f73a6b7df8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Whereas a paramorphism models [[primitive recursion]]
+
+The term "apomorphism" was introduced in ''Functional Programming with Apomorphisms (Corecursion)''.
+
+is the [[categorical dual]] of a [[paramorphism]] and
+
+an apomorphism models primitive [[corecursion]] over a coinductive data type.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Shapes/Pullback/Mono.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: dcfacd92e515af1cd8b5f86efa79677f2fccabf97f00edaa7ebc3a845fbb80ba
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Limits.pullback.fst_of_mono (line 124)
+instance pullback.fst_of_mono {X Y Z : C} {f : X ⟶ Z} {g : Y ⟶ Z} [HasPullback f g] [Mono g] :
+    Mono (pullback.fst f g)
+
+-- CategoryTheory.Limits.pushout.inl_of_epi (line 299)
+instance pushout.inl_of_epi {X Y Z : C} {f : X ⟶ Y} {g : X ⟶ Z} [HasPushout f g] [Epi g] :
+    Epi (pushout.inl f g)

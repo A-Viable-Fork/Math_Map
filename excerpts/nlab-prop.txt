@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, PROP (page source)
+URL: https://ncatlab.org/nlab/source/PROP
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8365d95baab96c7420ba3cb19edac09a509d1deffb3cb242234737d65e569097
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+because they can be used to describe operations with many outputs as well as many inputs.
+
+A **PROP** is a strict [[symmetric monoidal category]] where every object is of the form

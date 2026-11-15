@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Homomorphism (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381551549
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 59e9d0ace0399ffcfa86b2b9f4f882bf202986b95e2630fdfc25d623fb8367f2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\!\sim</math>; this fact is one of the [[isomorphism theorem]]s.
+
+Any homomorphism <math>f: X \to Y</math> defines an [[equivalence relation]]
+
+In that case the image of <math>X</math> in <math>Y</math> under the homomorphism <math>f</math> is necessarily [[isomorphic]] to <math>X/\!\sim</math>
+
+The relation <math>\sim</math> is called the '''kernel''' of <math>f</math>.

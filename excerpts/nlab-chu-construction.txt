@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, Chu construction (page source)
+URL: https://ncatlab.org/nlab/source/Chu+construction
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3a1014b0c1e73fbe9c646f46bff599744da474c0966201c4a506a51bfe0e2dce
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the _Chu construction_ &amp;lbrack;[Chu 1979](#Chu79); [Barr 1991](#Barr91), [1996](#Barr96)&amp;rbrack; is a method for constructing a [[star-autonomous category]] from a [[closed monoidal ca
+
+is a method for constructing a [[star-autonomous category]] from a [[closed monoidal ca
+
+Early discussion of application of the Chu construction as [[categorical semantics]] for [[linear logic]] is due to [Barr 1991](#Barr91)
+
+from a [[closed monoidal ca
+
+is a method for constructing a [[star-autonomous category]]
+
+Being star-autonomous, $Chu(C, d)$ is self-dual

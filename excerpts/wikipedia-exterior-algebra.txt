@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Exterior algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382602035
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c5b63b38f94abaf989f7c2facb264577db01a9158598d5ef10803f5d242890c3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+its [[alternating algebra|alternating property]] that <math>v\wedge v=0</math>
+
+we can define the exterior algebra <math>\textstyle \bigwedge(M)</math> just as above
+
+The binomial coefficient produces the correct result, even for exceptional cases

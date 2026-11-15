@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Fibred category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375036869
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 56a9d8434a4ea3931e4494cb79f0befe7180785d75605689fae86df30b3143db
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is called an ''inverse image'' of its projection

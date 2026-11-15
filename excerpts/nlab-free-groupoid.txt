@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, free groupoid (page source)
+URL: https://ncatlab.org/nlab/source/free+groupoid
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 126c628ef444d122bf958f11902b6b2e7b3bb4dd228b94fed4963bebdf74d228
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+given by freely adjoining [[inverse morphisms]] to all existing non-invertible morphisms
+
+On the construction of free groupoids on a category ([[localization]] at all morphisms):
+
+there is a free groupoid construction on ([[small category|small]]) [[strict categories]]

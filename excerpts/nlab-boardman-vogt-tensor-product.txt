@@ -1,0 +1,24 @@
+Excerpts, verbatim, from: nLab, Boardman-Vogt tensor product (page source)
+URL: https://ncatlab.org/nlab/source/Boardman-Vogt+tensor+product
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 47b3bcd8ce8dce84763239dbe26442a71cb876f53e27db9de8faa7b72a8cde49
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The _Boardman-Vogt tensor product_ is a natural [[tensor product]] on [[symmetric operads]].
+
+* [[Michael Boardman]], [[Rainer Vogt]], _Homotopy invariant algebraic structures on topological spaces_, Lecture Notes in Mathematics, Vol. 347, Springer-Verlag, (1973).
+
+For $P_1, P_2, E \in Operad$, the category of $P_1$-algebras in $P_2$-algebras in $E$ is equivalent to the category of $P_2$-algebras in $P_1$-algebras in $E$.
+
+We may therefore speak of $[P,Q]$ as being the **operad of $P$-algebras in $Q$.
+
+### Dunn&#39;s additivity theorem
+
+Then, the canonical maps $C_n,C_m \rightarrow C_{n+m}$ together yield a map $\mu:C_n \otimes C_m \rightarrow C_{n+m}$.
+
+Let $\mathcal{P}$ be an operad over a set of colors $C$, and $\mathcal{Q}$ be an operad over a set of colors $D$.
+
+Their **Boardman-Vogt tensor product** $\mathcal{P} \otimes_{BV} \mathcal{Q}$ is the operad whose set of colors is $C \times D$
+
+1. The operations  in $\mathcal{P}$ and $\mathcal{Q}$ [[distributive law|distribute]] over each other in $\mathcal{P} \otimes_{BV} \mathcal{Q}$ in the evident sense (...).
+
+Let $\mathcal{P}$ be an operad over a set of colors $C$

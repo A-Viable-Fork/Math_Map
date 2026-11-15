@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Characteristic function (probability theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378990780
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: cf93fd44468dac4af83b77d8c3b12cb7dcf99f6417db78d77ecf127a2b0f0846
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+There is a [[Bijection|one-to-one correspondence]] between cumulative distribution functions and characteristic functions

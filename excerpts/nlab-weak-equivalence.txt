@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, weak equivalence (page source)
+URL: https://ncatlab.org/nlab/source/weak+equivalence
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f3336e96f6819ca769873e3562d37ad2227a4fde1d8d542b27889a4d8604b023
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the corresponding [[homotopy category]], which is the universal solution to turning all weak equivalences into [[isomorphisms]];

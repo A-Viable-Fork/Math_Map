@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, inner fibration (page source)
+URL: https://ncatlab.org/nlab/source/inner+fibration
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b4c2a5e18fe009c829a5efc5d9789b218f55738b1fa543428528ab3e635fd15e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A [[morphism]] of [[simplicial set]]s $F : X \to Y$ is an **inner fibration** or **[[inner Kan fibration]]** if its has the [[right lifting property]] with respect to all inner [[horn]] inclusions
+
+an _inner fibration_ is a morphism of [[simplicial set]]s $C \to D$ such that each fiber is a quasi-category
+
+if its has the [[right lifting property]] with respect to all inner [[horn]] inclusions
+
+A [[morphism]] of [[simplicial set]]s $F : X \to Y$ is an **inner fibration**
+
+is an **inner fibration** or **[[inner Kan fibration]]** if
+
+such that each fiber is a quasi-category

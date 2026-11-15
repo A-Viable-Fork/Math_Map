@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, ind-object (page source)
+URL: https://ncatlab.org/nlab/source/ind-object
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 11044773a87964d921fdc94ccbfe9a161e1c16f75561741a8aab7d07b6a29c6e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An **ind-object** of a [[category]] $\mathcal{C}$ is a **formal [[filtered colimit]]** of objects of $\mathcal{C}$.
+
+Here &quot;formal&quot; means that the colimit is taken in the [[category of presheaves]] of $\mathcal{C}$
+
+1. The embedding $\mathcal{C}\to ind$-$\mathcal{C}$ should be [[full and faithful functor|full and faithful]],
+
+1. the objects of $\mathcal{C}$ should be [[compact object|compact]] in $ind$-$\mathcal{C}$.

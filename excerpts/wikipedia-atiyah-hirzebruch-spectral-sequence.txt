@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Atiyah–Hirzebruch spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1331219458
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 89d3d880746acbc20a4560cd0612e18f74527b7c4f22e760c07c79d7c47dc760
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Atiyah–Hirzebruch spectral sequence''' is a [[spectral sequence]] for calculating [[generalized cohomology]]
+
+the <math>E_2</math> term of the spectral sequence is <math>H^p(X;E^q(pt))</math>, and the spectral sequence converges conditionally to <math>E^{p+q}(X)</math>.
+
+is a [[spectral sequence]] for calculating [[generalized cohomology]]
+
+converges conditionally to <math>E^{p+q}(X)</math>.

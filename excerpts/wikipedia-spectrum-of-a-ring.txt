@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Spectrum of a ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382513632
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dd2e3c1b0f6b85e5a0bf91c9b876e882976e8ab4fef1cdf2243e87d22f23c3ec
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''prime spectrum''' (or simply the '''spectrum''') of a [[commutative ring]] <math>R</math> is the set of all [[prime ideal]]s
+
+This defines a functor in the opposite direction, and these two functors make the two categories [[dually equivalent]].
+
+called the ''structure sheaf'', which makes it a [[ringed space]]
+
+the '''prime spectrum''' (or simply the '''spectrum''') of a [[commutative ring]] <math>R</math>
+
+is a [[contravariant functor]] from the category of commutative rings to that of affine schemes.
+
+these facts motivate defining the ring of global sections of affine scheme <math>\operatorname{Spec}(R)</m

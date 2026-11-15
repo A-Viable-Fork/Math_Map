@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, model structure on sSet-categories (page source)
+URL: https://ncatlab.org/nlab/source/model+structure+on+sSet-categories
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8757de77b17d14896faa47bdcb5f7ab032a0029960006f0be37bed1d460909ad
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+&amp;lbrack;[Bergner (2004)](#Bergner04), [Lurie (2009), thm. A.3.2.4](#Lurie09)&amp;rbrack;
+
+* [[weak equivalences]] the [[Dwyer-Kan equivalences]] (Def. \ref{DwyerKanEquivalences});

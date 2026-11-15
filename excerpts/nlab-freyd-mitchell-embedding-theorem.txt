@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, Freyd-Mitchell embedding theorem (page source)
+URL: https://ncatlab.org/nlab/source/Freyd-Mitchell+embedding+theorem
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d901093b477f793ae61a55dd790c4db3b1eb833f32e213f480b94f6c7ed76c59
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor to the category $R$[[Mod]] for some [[ring]] $R$.
+
+Every [[small category|small]] [[abelian category]] admits a [[full functor|full]], [[faithful functor|faithful]] and [[exact functor|exact]] functor

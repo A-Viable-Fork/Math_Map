@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Clone (algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1368870620
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 77d00f854bbfef88c331024a4e9c4149ea08b1f562cc4503a9bed3804e251074
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''clone''' is a [[Set (mathematics)|set]] ''C'' of [[finitary]] [[operation (mathematics)|operation]]s on a set ''A'' such that
+
+*''C'' contains all the [[projection (set theory)|projection]]s
+
+*''C'' is closed under [[generalized composition|(finitary multiple) composition]] (or "superposition")
+
+the set of operations on its carrier definable by a ''σ''-[[first-order logic#Formation rules|term]] (the ''term functions'') is a clone.

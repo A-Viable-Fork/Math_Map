@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, PRO (page source)
+URL: https://ncatlab.org/nlab/source/PRO
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8a590df1d3e2aa62f60bd408bf22a1af73ff824de8a4cbcac2b818c647c827c9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A PRO, an abbreviation for &quot;product category&quot;, is similar to a [[PROP]] but more general
+
+A **PRO** is a [[strict monoidal category]] $T$ in which every [[object]] is of the form
+
+(\mathbb{N}, +, 0)
+
+being merely a [[monoidal category]] but not necessarily [[symmetric monoidal category|symmetric monoidal]]
+
+A **PRO** is a [[strict monoidal category]]
+
+Somewhat more precisely, a PRO is a strict monoidal category along with a [[strict monoidal functor|strict monoidal]] [[bijective-on-objects functor]]:

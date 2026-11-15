@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Kripke-Joyal semantics (page source)
+URL: https://ncatlab.org/nlab/source/Kripke-Joyal+semantics
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 432e34e6a0a4c21c2b8decbc492c3f57b138bd7e359f62ed39d0b1693a0ee748
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+**Kripke--Joyal semantics** is a higher order generalization of the [[semantics|semantic]] interpretation proposed initially by Beth, Grzegorczyk, and Kripke
+
+It provides a notion of _&#39;local truth&#39;_ or _&#39;validity at a stage&#39;_ in a [[topos]].
+
+for [[intuitionistic logic|intuitionistic predicate logic]
+
+it is sometimes called _forcing_ semantics.

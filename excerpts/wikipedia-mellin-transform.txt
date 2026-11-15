@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Mellin transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378457791
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bf71ff8f0d3b0245f8edb95a0ac5aad93923ac62532f187cea5064ea658ce5cb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Mellin transform also connects the [[Newton series]] or [[binomial transform]] to the [[Poisson generating function]] by means of the [[Poisson–Mellin–Newton cycle]].
+
+The Mellin transform is widely used in computer science for the [[analysis of algorithms]]

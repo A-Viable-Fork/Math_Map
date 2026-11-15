@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, Stone duality (page source)
+URL: https://ncatlab.org/nlab/source/Stone+duality
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3ac3959ff2e3bd732392978db0dbc2b03166a547fc193b569ef7eeca5546c3da
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Stone duality is often described for [[topological spaces]] rather than for [[locales]].
+
+Perhaps the most general duality falling under this heading is that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side).
+
+that between [[locales]] (on the [[space]] side) and [[frames]] (on the [[quantity]] side).

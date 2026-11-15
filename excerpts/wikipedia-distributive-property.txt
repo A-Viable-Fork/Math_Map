@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Distributive property (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371443742
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a96b04b9e895176189a25b1109fbde659bcffe3d1fca6c637f445775f9445d7e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+<math display="block">x \cdot (y + z) = x \cdot y + x \cdot z</math>
+
+This basic property of numbers is part of the definition of most [[algebraic structure]]s that have two operations called addition and multiplication

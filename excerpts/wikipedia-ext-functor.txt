@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Ext functor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380841038
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 88dbec7cce9043eec00ec9f354269a605816eb90da9d095c09ab3b6ca4d08dab
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The name comes from the fact that the first Ext group Ext<sup>1</sup> classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another.
+
+There is a one-to-one correspondence between [[equivalence class]]es of extensions of <math>A</math> by <math>B</math> and elements of <math>\operatorname{Ext}_R^1(A,B)</math>.
+
+classifies [[group extension|extensions]] of one [[module (mathematics)|module]] by another.

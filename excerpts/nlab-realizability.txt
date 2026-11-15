@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, realizability (page source)
+URL: https://ncatlab.org/nlab/source/realizability
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8f0a25d0e151123a9a3b0876b4b05c3fbb908604b9fc510025d49f3fd847f496
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The idea of _realizability_ is a way of making the [[Brouwer-Heyting-Kolmogorov interpretation]] of [[constructivism]] and [[intuitionistic mathematics]] precise.
+
+[[Stephen Kleene]], _On the interpretation of intuitionistic number theory_
+
+It is related to the [[propositions as types]] paradigm.

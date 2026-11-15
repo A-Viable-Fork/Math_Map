@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, fiber sequence (page source)
+URL: https://ncatlab.org/nlab/source/fiber+sequence
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 185bd321adb1812e3402a79074bd58e1ef857fd46b5eb062682bf773c94c96d7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the homotopy kernel of a homotopy kernel is typically far from trivial, but is a [[loop space object]].

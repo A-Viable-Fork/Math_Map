@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, direct image (page source)
+URL: https://ncatlab.org/nlab/source/direct+image
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b23517193640305ac065f0b2b7f30614d1ed789d6a03d0af319f8f30bbb715b0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The [[right adjoint]] part $f_*$ of any [[geometric morphism]]
+
+of any [[geometric morphism]]

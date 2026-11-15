@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Quasivariety (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1186598336
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ab66cc1f4e0110d5a2f35ab8f1db41ea6f0c03ae298b2b113c3828e7b166136b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''quasivariety''' is a class of [[algebraic structure]]s generalizing the notion of [[variety (universal algebra)|variety]]
+
+# ''K'' contains a trivial algebra and is closed under isomorphisms, subalgebras, direct products, and [[ultraproduct]]s.
+
+# ''K'' is the class of all [[model (logic)|model]]s of a set of [[quasi-identity|quasi-identities]]
+
+A '''quasivariety''' is a class ''K'' of algebras with a specified [[signature (logic)|signature]]

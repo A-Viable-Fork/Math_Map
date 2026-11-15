@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Transformation semigroup (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378037079
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 23301ca0d2eacd3409963953b59d102dddb40ae91d30b8a07c296df84777bb5a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''transformation semigroup''' (or '''composition semigroup''') is a collection of [[Transformation (function)|transformations]]
+
+If ''S'' includes the identity transformation of ''X'', then it is called a '''transformation monoid'''.
+
+that is [[closure (mathematics)|closed]] under [[function composition]].

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Natural transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375267552
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: cf8101b911b5027ec768857b8947ce88a3a9af5824aae1c82b6b2fcd66d5f8b8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Whiskering is an [[external binary operation]] between a functor and a natural transformation.
+
+=== Vertical composition ===
+
+:<math>(\epsilon \circ \eta)_X = \epsilon_X \circ \eta_X</math>.
+
+are natural transformations between functors <math>F, G, H: C \to D</math>
+
+then we can compose them to get a natural transformation
+
+This vertical composition of natural transformations is [[associative]] and has an identity
+
+the interchange law gives immediately the compact formulas of horizontal composition

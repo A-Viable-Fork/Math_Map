@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Schur's lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1363731042
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 19fd5698c2dbb75c8ba2b69f7d73d0ddea6dd61df653564e595d23002104a5ea
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+{{Short description|Homomorphisms between simple modules over the same ring are isomorphisms or zero}}
+
+Homomorphisms between simple modules over the same ring are isomorphisms or zero
+
+then the only nontrivial {{nowrap|''G''-linear}} maps are the identity, and scalar multiples of the identity.
+
+be irreducible representations of ''G'' on ''V'' and ''W'' respectively.
+
+then either ''φ'' is [[invertible function|invertible]], or ''φ'' = 0.

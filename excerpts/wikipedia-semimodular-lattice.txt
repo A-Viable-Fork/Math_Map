@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Semimodular lattice (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371018293
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c1253273c0bde83c991e3fe5d939e9da4d6190a974e5f924e22d98752d5e49e9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''semimodular lattice''', is a [[lattice (order)|lattice]] that satisfies the following condition:
+
+A lattice is sometimes called '''weakly semimodular''' if it satisfies the following condition due to [[Garrett Birkhoff]]:
+
+Every semimodular lattice is weakly semimodular. The converse is true for lattices of finite length

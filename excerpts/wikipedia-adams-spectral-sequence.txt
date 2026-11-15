@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Adams spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383572600
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2913ed6b13f80eae2e33c6263a9580256425f597fd480584fea1835133c755c0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+which computes the [[stable homotopy theory|stable homotopy groups]] of [[topological spaces]].
+
+But we can now consider the derived functors of Hom in the category of ''A''-modules, [[Ext functor|Ext]]<sub>''A''</sub><sup>''r''</sup>(''H''<sup>*</sup>(''Y''), ''H''<sup>*</sup>(''X'')).
+
+more modern treatments of this topic begin with the concept of a [[Spectrum (homotopy theory)|spectrum]].

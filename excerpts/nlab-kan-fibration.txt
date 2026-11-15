@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, Kan fibration (page source)
+URL: https://ncatlab.org/nlab/source/Kan+fibration
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b650d04cb3c6b6dc3a5a538c990228a9bc2f132d9961e5d897fe69878b9cb752
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A _Kan fibration_ is a [[morphism]] $\pi \colon Y \to X$ of [[simplicial set|simplicial sets]] with the [[lifting property]] for all [[horn]]-inclusions.
+
+of [[simplicial set|simplicial sets]]
+
+with the [[lifting property]] for all [[horn]]-inclusions.

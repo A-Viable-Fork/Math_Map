@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Derived category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364615062
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1e9ac91a93cb32d27b0a48121861da54fae886e6d0fb7047427281a4ee3709eb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''
+
+The universal property of the derived category is that it is a [[localization of a category|localization]] of the category of complexes with respect to quasi-isomorphisms.
+
+The axiomatics required an innovation, the concept of [[triangulated category]]
+
+is a construction of [[homological algebra]] introduced to refine and in a certain sense to simplify the theory of [[derived

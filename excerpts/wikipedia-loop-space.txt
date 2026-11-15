@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Loop space (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382205623
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ddb0553b16e8abcfdcd34b82a36393d89562cbc94c61ec5da92611cf8ae57a1f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''loop space''' Ω''X'' of a [[Pointed space|pointed]] [[topological space]] ''X'' is the space of (based) loops in ''X''
+
+the loop space construction is right adjoint to the [[reduced suspension]]
+
+With this operation, the loop space is an [[A-infinity operad|''A''<sub>∞</sub>-space]].
+
+of a [[Pointed space|pointed]] [[topological space]] ''X''
+
+the '''loop space''' Ω''X''
+
+:<math>\pi_k(X) \approxeq \pi_{k-1}(\Omega X)</math>.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Mitchell-B%C3%A9nabou language (page source)
+URL: https://ncatlab.org/nlab/source/Mitchell-B%C3%A9nabou+language
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 92c2c6a19218c7d23ea1136c02835180f143392e46118846bc39ca22e570f2ec
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a particularly simple form of the [[internal language]] of an [[elementary topos]] $E$.
+
+of an [[elementary topos]] $E$.
+
+is a particularly simple form of the [[internal language]]
+
+since a formula or [[proposition]] can be identified with a term o

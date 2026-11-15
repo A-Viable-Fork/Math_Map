@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, forcing (page source)
+URL: https://ncatlab.org/nlab/source/forcing
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a8d145f4e0a7f80bd83ff7f3688798ca4b08931785a11254bc79cf022ed1aeb3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+it is more or less equivalent to the construction of [[categories of sheaves]] in [[topos theory]]
+
+In structural set theory, this construction is simply that of the [[topos of sheaves]] on a suitable [[site]], in the model $V$.
+
+In structural set theory, this construction is simply that of the [[topos of sheaves]] on a suitable [[site]]

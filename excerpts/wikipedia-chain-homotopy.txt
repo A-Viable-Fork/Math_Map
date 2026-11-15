@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Homotopy category of chain complexes (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1362508169
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1ca40a68f1fe583a6a3895107d45b5add9f484861953442e14e74f8d227909c1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A morphism <math>f : A \rightarrow B</math> which is an isomorphism in ''K(A)'' is called a '''(chain) homotopy equivalence'''.
+
+of chain complexes in an [[additive category]] ''A''
+
+namely actually havi
+
+while ''D(A)'' turns into isomorphisms any maps of complexes that are [[quasi-isomorphism]]s in ''Kom(A)''

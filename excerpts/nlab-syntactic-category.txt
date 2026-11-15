@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, syntactic category (page source)
+URL: https://ncatlab.org/nlab/source/syntactic+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 43c7f7f1aafa9fa9a70d0e75a66c1a8412c1d2e04e277b08ef0512828a85a3bb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the syntactic category is also called the **category of contexts**.
+
+Since the objects of the syntactic category are frequently taken to be the [[contexts]] in the theory

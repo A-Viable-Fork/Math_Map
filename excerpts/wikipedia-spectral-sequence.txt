@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: Wikipedia, Spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381147459
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ec45ccb72235d2372b8f0640055a03f5c6675461421488eb4f53fbaaaa2e25ee
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Filtered complexes, which are common in [[abstract algebra]], give rise to exact couples.
+
+Another technique for constructing spectral sequences is [[William Schumacher Massey|William Massey]]'s method of exact couples.
+
+To get <math> E_1 </math>, we take the homology of <math> E_0 </math>.
+
+In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}, so they decrease ''n'' by one.
+
+In the homological case, the differentials have bidegree {{math|(&minus;''r'', ''r'' &minus; 1)}}
+
+is a natural candidate for the abutment of this spectral sequence.
+
+To get the second grading, we will take the associated graded object with respect to the filtration.
+
+to mean that whenever ''p'' + ''q'' = ''n'', <math>E_r^{p,q}</math> converges to <math>E_\infty^{p,q}</math>.
+
+Then <math>E_{r(p,q)}^{p,q} = E_\infty^{p,q}</math> is the limiting term.

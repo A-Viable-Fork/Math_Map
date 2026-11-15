@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Discrete cosine transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383445210
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 139f73b861402f813ae11ebd609da46daf93c2919c01cfe741096d1a60c83cd9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A '''discrete cosine transform''' ('''DCT''') expresses a finite sequence of [[data points]] in terms of a sum of [[cosine]] functions oscillating at different [[frequencies]].
+
+The most common variant of discrete cosine transform is the type-II DCT
+
+because it has a strong ''energy compaction'' property.
+
+It is used in image compression standards such as [[JPEG]]
+
+Formally, the discrete cosine transform is a [[linear]], invertible [[function (mathematics)|function]] <math> f : \R^{N} \to \R^{N} </math>
+
+This makes the DCT-II matrix [[orthogonal matrix|orthogonal]]
+
+Formally, the discrete cosine transform is a [[linear]], invertible [[function (mathematics)|function]]

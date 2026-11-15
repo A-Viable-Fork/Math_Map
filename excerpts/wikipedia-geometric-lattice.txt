@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Geometric lattice (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1353775762
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2b0db71a49a80610f597f689711cfc8639a8d5a1e41e4847e20608493b2d2f05
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''geometric lattice''' is a [[finite set|finite]] [[Atom (order theory)|atomistic]] [[semimodular lattice]]

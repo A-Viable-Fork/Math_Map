@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Bousfield localization (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380356533
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: cb51e76b40513307436001780696576d03c17342ee1c4c6c6a6932af4ff70dad
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Bousfield localization is named after [[Aldridge Bousfield]], who first introduced this technique in the context of localization of [[topological space|topological spaces]] and spectra.
+
+replaces the model structure with another model structure with the same cofibrations but with more weak equivalences.
+
+Given a [[class (mathematics)|class]] ''C'' of morphisms in a [[model category]] ''M''
+
+the left Bousfield localization is a new model structure on the same category as before.
+
+* the original cofibrations of ''M''
+
+is required to be a weak equivalence (of [[simplicial set]]s) for any ''C''-local object ''W''.

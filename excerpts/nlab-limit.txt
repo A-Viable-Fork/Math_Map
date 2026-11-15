@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, limit (page source)
+URL: https://ncatlab.org/nlab/source/limit
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f1468a2c67d3a7cfc173fab03ac13503debdf52a3b1374c197c44d81dfdebe8a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Moreover, the limit $lim F$ is the _universal_ object with this property
+
+is called the **universal cone** over $F$, because,
+
+A limit is taken over a [[functor]]
+
+is an [[object]] $lim F$ of $C$ equipped with morphisms to the objects $F(d)$
+
+The corresponding universal object for morphisms _out_ of the diagram is the [[colimit]].

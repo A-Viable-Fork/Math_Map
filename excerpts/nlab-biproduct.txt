@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, biproduct (page source)
+URL: https://ncatlab.org/nlab/source/biproduct
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c7d3cd37ba43965a1f8908f9483b0622482ace0e35b29e13126d41d38198b7db
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A _biproduct_ in a [[category]] $\mathcal{C}$ is an operation that is both a [[product]] and a [[coproduct]], in a compatible way.
+
+This object is often denoted $c_1 \oplus c_2$, alluding to the [[direct sum]] (which is often an example).
+
+Morphisms between finite biproducts are encoded in a [[matrix calculus]].
+
+is an [[isomorphism]], then the isomorphic objects $c_1 \times c_2$ and $c_1 \sqcup c_2$ are called [[generalized the|the]] __biproduct__

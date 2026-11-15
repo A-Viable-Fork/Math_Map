@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, quotient category (page source)
+URL: https://ncatlab.org/nlab/source/quotient+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c6f06fd6337a4b7c99957179bca311e8c6310f439857e4d2c6784e3777d82bc9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+one of the more useful is the quotient of the homsets of a category by equivalence relations compatible with composition.

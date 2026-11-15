@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, pro-object (page source)
+URL: https://ncatlab.org/nlab/source/pro-object
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: accab07ec1f46b62045f04b4a583ae52be61dda79ca33ca53251988658fd38f0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **pro-object** of a [[category]] $C$ is a &quot;formal [[filtered category|cofiltered]] [[limit]]&quot; of [[objects]] of $C$.
+
+The *category of pro-objects of $\mathcal{C}$*, according to [Grothendieck 1960, Section 2](#Grothendieck1960), is the [[full subcategory]]

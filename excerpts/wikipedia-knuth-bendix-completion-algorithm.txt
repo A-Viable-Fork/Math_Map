@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Knuth–Bendix completion algorithm (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374771357
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 969ddba7205f66a59b4fd99e243127889291d918d9c741c0e43b72a5d58af6b0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+[[algorithm]] for transforming a set of [[equation]]s (over [[term (logic)|terms]]) into a [[Confluence (term rewriting)|confluent]] [[term rewriting system]].
+
+and attempts to construct a confluent and terminating term rewriting system ''R'' that
+
+The Knuth–Bendix algorithm takes a set ''E'' of equations between [[term (logic)|terms]], and a [[reduction ordering]] (>) on the set of all terms
+
+When the algorithm succeeds, it effectively solves the [[word problem (mathematics)|word problem]] for the specified [[algebra]].
+
+is a [[semidecidable|semi-decision]]
+
+The [[critical pair lemma]] states that a term rewriting system is [[confluence (term rewriting)|locally confluent]] (or weakly confluent) if and only if all its [[critical pair (logic)|critical pairs]] are convergent.

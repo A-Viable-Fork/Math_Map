@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Dialectica interpretation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1270401680
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 09eb01e1fe07b01793c689817cd5a9a908062dcc3a78ba43900036f101128900
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was developed by [[Kurt Gödel]] to provide a [[consistency proof]] of arithmetic.

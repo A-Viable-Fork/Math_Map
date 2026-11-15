@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, cofiber sequence (page source)
+URL: https://ncatlab.org/nlab/source/cofiber+sequence
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ce6dd90b3c2e8dd2211fbe3b73eceed3b7ff4a79af63d41453bd584d8f89c637
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A cofiber sequence is the dual notion to a [[fiber sequence]].

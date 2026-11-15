@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, PROP (category theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1334143481
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bf9c764a2622b59693bcf0042f19c2fe262f1d2407070b91bab8e3c36c8f4d49
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion was introduced by [[Frank Adams]] and [[Saunders Mac Lane]]
+
+whose objects are the natural numbers ''n'' identified with the finite sets <math>\{0,1,\ldots,n-1\}</math> and whose tensor product is given on objects by the addition on numbers.
+
+a '''PROP''' is a [[symmetric monoidal category|symmetric]] strict [[monoidal category]]

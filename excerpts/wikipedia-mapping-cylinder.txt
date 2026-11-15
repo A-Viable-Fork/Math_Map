@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Mapping cylinder (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1344396108
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 87d19439130c81c1cbf93ff9de94cc55af4b431caefe384746ff812080a9df35
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Mapping cylinders are central to the definition of [[cofibration]]s.
+
+The bottom ''Y'' is a [[deformation retract]] of <math>M_f</math>.
+
+The map <math>f:X \to Y</math> is a [[homotopy equivalence]] if and only if

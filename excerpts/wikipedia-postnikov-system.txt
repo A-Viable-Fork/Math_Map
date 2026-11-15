@@ -1,0 +1,32 @@
+Excerpts, verbatim, from: Wikipedia, Postnikov system (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380969307
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3d7e5daeabdf5903e69a99da5242f65a990ba8fddec063bd47d839bcd0ded6cd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Postnikov systems were introduced by, and are named after, [[Mikhail Postnikov]].
+
+\pi_k(X) & \text{ for } k \leq n
+
+called the '''''n''th Postnikov invariant''' of <math>X</math>
+
+A '''Postnikov system''' of a [[connected space|path-connected space]] <math>X</math> is an inverse system of spaces
+
+that are [[Fibration|fibrations]] with [[Eilenberg–MacLane space|Eilenberg-MacLane spaces]] <math>K(\pi_n(X),n)</math> as fibers
+
+induces an isomorphism <math>\pi_i(X) \to \pi_i(X_n)</math> for every <math>i\leq n</math>.
+
+0 & \text{ for } k > n
+
+there is a dual construction to the Postnikov tower called the '''Whitehead tower'''.
+
+Instead of killing off all higher homotopy groups, the Whitehead tower iteratively kills off lower homotopy groups.
+
+each <math>X_n \to X</math> is the universal <math>n</math>-connected cover of <math>X</math>.
+
+Given a CW complex <math>X</math>, there is a dual construction
+
+This is given by a tower of CW complexes,
+
+The induced map <math>\pi_i : \pi_i(X_n) \to \pi_i(X)</math> is an isomorphism for <math>i > n</math>.
+
+The lower homotopy groups are zero, so <math>\pi_i(X_n) = 0</math> for <math>i \leq n</math>.

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, effective topos (page source)
+URL: https://ncatlab.org/nlab/source/effective+topos
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 121d3449d407b3e5b169804a3e70ef361b6b1b4fc4fe19e12c3b9f29b2d63285
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It can be specified as the [[realizability topos]] for [[Kleene&#39;s first algebra]].
+
+in the [[internal logic]], it is provable that every [[total function]] from [[natural numbers]] to natural numbers is [[compu
+
+It is an environment for [[higher-order logic|higher order]] [[recursion]] theory

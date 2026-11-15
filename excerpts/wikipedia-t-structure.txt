@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, T-structure (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375329989
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0657750ae960cbb0233f2aa87f3f39678690d83f882ddf7feaea49bf0cbf1bb6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''''t''-structure''' is a way to axiomatize the properties of an [[abelian category|abelian subcategory]] of a [[derived category]].
+
+The heart of a ''t''-structure is an [[abelian category]] (whereas a triangulated category is additive but almost never abelian)
+
+The heart of a ''t''-structure is an [[abelian category]]

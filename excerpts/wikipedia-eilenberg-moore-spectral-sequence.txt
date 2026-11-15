@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Eilenberg–Moore spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1306717620
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b65f3ba6211801e6bb1c67d5839d9780c0519aafebf50918af331ce7f0cf827c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Eilenberg–Moore spectral sequence''' addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]
+
+where ''p'' is a [[fibration]] of topological spaces and the base ''B'' is [[simply connected]].
+
+addresses the calculation of the [[homology group]]s of a [[Pullback (category theory)|pullback]]
+
+generalizes the above isomorphism to the situation where ''p'' is a [[fibration]] of topological spaces and the base ''B'' is [[simply connected]].

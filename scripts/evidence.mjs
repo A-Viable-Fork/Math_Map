@@ -22,7 +22,7 @@ const stronger = (a, b) => (rank(a) >= rank(b) ? a : b);
 const FROM_GRADE = { wrong: "contradicted", unsupported: "unsupported", imprecise: "imprecise", confirmed: "sourced" };
 
 export function evidence(P) {
-  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED].map((g) => [g.id, g]));
+  const grades = Object.fromEntries([...require("../audit/grades-0_1.js").GRADES, ...require("../audit/targeted-0_1.js").TARGETED, ...require("../audit/fill-review-0_1.js").REVIEW.flatMap((g) => [g, ...(g.covers || []).map((id) => ({ ...g, id }))])].map((g) => [g.id, g]));
   const links = P.formal.links, V = P.vocabulary;
   const LA = leanStatus(), LC = require("../mapfill/lean.js").CLAIMS;
   const proved = (c) => LA?.decls?.[c.decl]?.status === "proved";

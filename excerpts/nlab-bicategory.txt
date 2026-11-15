@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, bicategory (page source)
+URL: https://ncatlab.org/nlab/source/bicategory
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 13a4d6d785232c1b62cd6c5f5c76194128c1f10c92554e92aff1c7ac92f692d6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+One way to state the [[coherence theorem]] for bicategories is that every bicategory is [[equivalence of 2-categories|equivalent]] to a [[strict 2-category]].
+
+every bicategory is [[equivalence of 2-categories|equivalent]] to a [[strict 2-category]].
+
+Note that $n=2$ is the greatest value of $n$ for which every weak $n$-category is equivalent to a fully strict one; see [[semi-strict infinity-category]] and [[Gray-category]].

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Diaconescu%27s theorem (page source)
+URL: https://ncatlab.org/nlab/source/Diaconescu%27s+theorem
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 447ca0304670cd92cc4000f0167c6aa3bc953424cd71fa1b920a3ae8407ba589
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+For the theorem in [[logic]] that often goes by the same name, see at _[[Diaconescu-Goodman–Myhill theorem]]_.
+
+_Diaconescu&#39;s theorem_ asserts that any [[presheaf topos]] is the [[classifying topos]] for [[internally flat functors]] on its [[site]].
+
+_Diaconescu&#39;s theorem_ asserts that any [[presheaf topos]]
+
+between the category of [[geometric morphism]]s $f : \mathcal{E} \to PSh(C)$ and the category of [[internally flat functors]] $C \to \mathcal{E}$.

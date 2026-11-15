@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, coproduct (page source)
+URL: https://ncatlab.org/nlab/source/coproduct
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a10df95f074c563284f7222aa3d5d797a01b2285195363882240e470c2f679e6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion of _coproduct_ is a generalization to arbitrary [[categories]] of the notion of [[disjoint union]] in the category [[Set]].
+
+A coproduct is thus the [[colimit]] over the [[diagram]] that consists of just two objects.
+
+are called [[coprojections]] or sometimes &quot;injections&quot; or &quot;inclusions&quot;
+
+although in general they may not be [[monomorphisms]]
+
+especially when it is [[disjoint coproduct|disjoint]]

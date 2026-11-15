@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Lawson topology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1266264127
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4be6e53298f967356f9c174f061ba2d7d69507b9ed357b16a5973009eff62be3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Lawson topology on ''P'' is the smallest common refinement of the lower topology and the [[Scott topology]] on&nbsp;''P''.
+
+The Lawson topology on ''P''
+
+is the smallest common refinement of the lower topology and the [[Scott topology]]

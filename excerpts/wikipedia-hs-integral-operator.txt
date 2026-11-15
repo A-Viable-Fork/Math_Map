@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Hilbert–Schmidt integral operator (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1328385372
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c595ec5db4122c397897350ff15d56678f452cec9560cb020560b82e2277a318
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Hilbert–Schmidt integral operator''' is a type of [[integral transform]].
+
+:<math>(Tf) (x) = \int_{\Omega} k(x, y) f(y) \, dy</math>
+
+:<math>\Vert T \Vert_\mathrm{HS} = \Vert k \Vert_{L^2}.</math>
+
+Hilbert–Schmidt integral operators are both [[continuous function|continuous]] and [[compact operator|compact]].
+
+:<math>\int_{\Omega} \int_{\Omega} | k(x, y) |^{2} \,dx \, dy < \infty ,</math>
+
+{{math|''T''&nbsp;:&nbsp;''L''<sup>2</sup>(&Omega;)&nbsp;&rarr;&nbsp;''L''<sup>2</sup>(&Omega;)}} given by

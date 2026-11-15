@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Marginal distribution (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1367682406
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 18c79d9faaf975d3dff79df04042a04f85126e181200c576f0308235520a3428
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the marginal distribution of either variable
+
+This can be calculated by summing the [[joint probability]]
+
+Given a known [[joint distribution]] of two '''discrete''' [[random variable]]s

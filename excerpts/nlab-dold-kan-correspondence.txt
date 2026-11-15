@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Dold-Kan correspondence (page source)
+URL: https://ncatlab.org/nlab/source/Dold-Kan+correspondence
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 41420b7395a0f71c0b3314db216ae49819033546e0ac81fe155d6e76293e56e4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The _Dold--Kan correspondence_ asserts there is an [[equivalence of categories]] between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]] of [[abelian groups]].
+
+between [[abelian group|abelian]] [[simplicial groups]] and [[connective chain complex|connective]] [[chain complexes]]
+
+in that they induce isomorphisms between [[simplicial homotopy groups]] and [[homology group]]s
+
+asserts there is an [[equivalence of categories]]

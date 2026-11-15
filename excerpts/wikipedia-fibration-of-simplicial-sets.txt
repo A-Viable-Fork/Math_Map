@@ -1,0 +1,28 @@
+Excerpts, verbatim, from: Wikipedia, Fibration of simplicial sets (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1358208168
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a141821c57f2d8e78afec9ee69273eecb73d5bbab1c29f9c09a42adf53f2cc9d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The maps having the right lifting property with respect to inner anodyne extensions or equivalently with respect to the horn inclusions <math>\Lambda^n_k \to \Delta^n, \, n \ge 1, 0 < k < n</math> are called '''inner fibrations'''.
+
+Thus, a map is a left (resp. right) fibration if and only if it has the [[right lifting property]] with respect to left (resp. right) anodyne extensions.
+
+a map is a left (resp. right) fibration if and only if it has the [[right lifting property]] with respect to left (resp. right) anodyne extensions.
+
+A '''left anodyne extension''' is a map in the saturation of the set of the horn inclusions <math>\Lambda^n_k \to \Delta^n</math> for <math>n \ge 1, 0 \le k < n</math>
+
+the set of the isomorphism classes of left fibrations over ''X''
+
+in the category of [[simplicial set]]s, where the saturation of a class is the smallest class
+
+a map is a left (resp. right) fibration if and only if it has the [[right lifting property]]
+
+:<math>[X, \textbf{Kan}] \, \overset{\sim}\to </math>
+
+A right fibration is a [[cartesian fibration]] such that each fiber is a [[Kan complex]].
+
+A '''right anodyne extension''' is defined by replacing the condition <math>0 \le k < n</math> with <math>0 < k \le n</math>.
+
+A right fibration is a [[cartesian fibration]]
+
+a [[Fibered category|category fibered in groupoids over another category]] is a special case of a right fibration

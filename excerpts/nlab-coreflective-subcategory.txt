@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, coreflective subcategory (page source)
+URL: https://ncatlab.org/nlab/source/coreflective+subcategory
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 509ab5b0ac8b411698f71b2efd0e212b0209faf8197c4af9ce82a8c5b8f99585
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A __coreflective subcategory__ is a [[full subcategory]] whose inclusion functor has a [[right adjoint]] $R$
+
+* the inclusion of [[torsion theory|torsion]] [[abelian groups]] into [[Ab]], where the right adjoint takes the [[torsion subgroup]].

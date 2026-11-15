@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, Ab-enriched category (page source)
+URL: https://ncatlab.org/nlab/source/Ab-enriched+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: adb7b371a037a704298ac13f50af9d4291294cdcc2b3cc9a75949c72495809cf
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An _$Ab$-enriched category_  (or, if small, _ringoid_) is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]]
+
+is a [[category enriched]] over the [[monoidal category]] [[Ab]] of [[abelian groups]] with its usual [[tensor product]].
+
+Sometimes they are called [[pre-additive category|pre-additive categories]]
+
+is bilinear. A __ringoid__ is a small $Ab$-enriched category.

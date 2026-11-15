@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Term algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1325669145
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 77bd7645a9ff7c074099dab4926e01b232e8197da452a7520b7315590982d2f3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''term algebra''' is a freely generated [[algebraic structure]] over a given [[Signature (logic)|signature]].
+
+is the set of all well-formed [[String (computer science)|strings]] that can be constructed u
+
+Let <math>\tau</math> be a type, and let <math>X</math> be a non-empty set of symbols, representing the variable symbols.
+
+a term algebra is the [[initial object]] for the [[F-algebra|category of all ''X''-generated algebras of the same signature]]
+
+which is (absolutely freely) 

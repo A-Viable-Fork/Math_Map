@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Irrational base discrete weighted transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364721671
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 26ac94991639367a4fcb789c094111cbca14999ed13d6fe93fb71f389602507a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''irrational base discrete weighted transform''' ('''IBDWT''') is a variant of the [[fast Fourier transform]] using an [[irrational number|irrational]] base;
+
+This approach avoids the need for zero-padding the arrays and performs the multiplication modulo <math>M_p</math> directly.
+
+It is most notably used in the [[Great Internet Mersenne Prime Search]].
+
+is based on four key elements developed by Crandall and Fagin:
+
+which requires repeated squaring modulo a Mersenne number <math>M_p = 2^p - 1</math>
+
+The algorithm to compute the product <math>xy \pmod{M_p}</math> is as follows:
+
+performs the multiplication modulo <math>M_p</math> directly.
+
+optionally checking the roundoff error is no greater than 0.4

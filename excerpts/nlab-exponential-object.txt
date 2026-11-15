@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, exponential object (page source)
+URL: https://ncatlab.org/nlab/source/exponential+object
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4629880a9c3c9cc8854828f080db2b54af5dd76e919966f40b335d4c03b7cbf9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An __exponential object__ $X^Y$ is an [[internal hom]] $[Y,X]$ in a [[cartesian closed category]].
+
+an exponential object $X^Y$ is a [[representing object]] for the functor $\hom(- \times Y, X)$.
+
+Let $X$ and $Y$ be objects of a [[category]] $C$ such that all binary [[products]] with $Y$ exist.
+
+an __exponential object__ is an object $X^Y$ equipped with an __[[evaluation map]]__

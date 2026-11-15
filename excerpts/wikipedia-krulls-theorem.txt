@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Krull's theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376834558
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6ec694ca07c6ee546473fd87db2640c279c3f4f48e028ea9963915ab9e20d963
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Let ''R'' be a nonzero ring, and let ''I'' be a [[proper ideal]] of ''R''.  Then there is a maximal ideal of ''R'' containing ''I''.
+
+The theorem admits a [[Zorn's lemma#Every_nontrivial_ring_with_unity_contains_a_maximal_ideal|simple proof using Zorn's lemma]]
+
+Let ''R'' be a nonzero ring, and let ''I'' be a [[proper ideal]] of ''R''.
+
+Then there is a maximal ideal of ''R'' containing ''I''.

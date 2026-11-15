@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Newman's lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1352342600
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2cf7cd324477dc2b13f41dbfa70be51b18dd4d1a1d1d19348121d05086cdf021
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It states that [[Confluence (abstract rewriting)#Local confluence|local confluence]] is a sufficient condition for confluence, provided that the system is also
+
+'''Newman's lemma''', also commonly called the '''diamond lemma'''
+
+provided that the system is also [[Abstract rewriting system#Termination and convergence|terminating]].
+
+is a sufficient condition for confluence

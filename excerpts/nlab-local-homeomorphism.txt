@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, local homeomorphism (page source)
+URL: https://ncatlab.org/nlab/source/local+homeomorphism
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 58a750298f019b8fbb0f3a8d0bb8e40b6c31647b4148274883cd617bce5503de
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+One also says that this exhibits $X$ as an [[étale space]] over $Y$.
+
+In general, for every [[sheaf]] $A$ of sets on $Y$; there is a local homeomorphism $X \to Y$

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Center (group theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1372987594
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6018ff8c5ec0c2ba7d599f56774c82e51f6d53884228a1c485e1b8c45d6a3b2d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+{{Short description|Set of elements that commute with every element of a group}}
+
+The center is a [[normal subgroup]], <math>Z(G)\triangleleft G</math>

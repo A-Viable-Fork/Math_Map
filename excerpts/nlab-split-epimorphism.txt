@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, split epimorphism (page source)
+URL: https://ncatlab.org/nlab/source/split+epimorphism
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 370ed833f11a311ff237cafe6ce71de6ebc4bbd19afdf27a22e201aec32dd2da
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **split epimorphism** in a [[category]] $C$ is a [[morphism]] $e\colon A \to B$ in $C$ such that there exists a morphism $s\colon B \to A$
+
+* $B$ is a __[[retract]]__ of $A$,
+
+* $s$ is a __[[section]]__ of $e$,
+
+it is also possible to define a split epimorphism as an __absolute epimorphism__: a morphism such that for every [[functor]] $F$ out of $C$, $F(e)$ is an [[epimorphism]].

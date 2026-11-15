@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Boolean prime ideal theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1347096205
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5e8b82700a97e35477df915fa1caf8f157b8ae899fa5a57830bb0ba3210607c4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+''strong prime ideal theorems'' require that every ideal that is disjoint from a given filter can be extended to a prime ideal that is still disjoint from that filter.
+
+Then {{mvar|I}} is contained in some prime ideal of ''B'' that is disjoint from ''F''.
+
+or [[distributive lattice]]s and ''ma
+
+every ideal that is disjoint from a given filter can be extended to a prime ideal that is still disjoint from that filter.

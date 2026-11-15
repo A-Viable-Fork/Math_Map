@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, initial object (page source)
+URL: https://ncatlab.org/nlab/source/initial+object
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c1b9de9e558001d6ea80a284ca09e2e602d994278612a81ef5914e4843dfdc76
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An initial object, if it exists, is unique up to unique [[isomorphism]], so that we may speak of [[the]] initial object.
+
+By definition, an initial object is equipped with a universal [[cocone]] under the unique functor $\emptyset\to C$ from the [[empty category]].
+
+if $I$ is initial, the unique morphisms $!: I \to x$ form a cone

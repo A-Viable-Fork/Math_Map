@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, L-infinity-algebra (page source)
+URL: https://ncatlab.org/nlab/source/L-infinity-algebra
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f68d33fec2653e6209a0dc9fa941252e5107f92df0d53c6be50c6e813cfc91e4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+_$L_\infty$-algebras_ (or _strong homotopy Lie algebras_) are a higher generalization
+
+in an $L_\infty$-algebra the [[Jacobi identity]] is allowed to hold (only) up to higher [[coherence law|coherent]] [[homotopy]].

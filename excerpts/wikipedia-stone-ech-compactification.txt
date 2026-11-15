@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Stone–Čech compactification (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382289965
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8d000856a980a4ee0d3e42cf18ba74e8bd61e51384167884b9f309d93766b170
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''Stone–Čech compactification''' of a space provides the most extensive such enlargement

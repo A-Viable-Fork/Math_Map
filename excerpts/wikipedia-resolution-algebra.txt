@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Resolution (algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1342601458
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 745bbc52299ad6035b2503eab9e72272bd76e5000594364792a3f76600357dba
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+every module has '''free resolutions''',  '''projective resolutions''' and '''flat resolutions'''
+
+which are left resolutions consisting, respectively of [[free module]]s, [[projective module]]s or [[flat module]
+
+Projective resolution of a module <math>M</math> is unique up to a [[chain homotopy]]
+
+Similarly every module has '''injective resolutions''', which are right resolutions consisting of [[injective module]]s.
+
+Dually, every <math>R</math>-module possesses an injective resolution.
+
+Projective resolutions (and, more generally, flat resolutions) can be used to compute [[Tor functor]]s.

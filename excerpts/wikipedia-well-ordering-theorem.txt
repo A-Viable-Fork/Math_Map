@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Well-ordering theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1344684772
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: fb1c6d8114a9971bfe38d075069a2860358109f6091e3213bb1b5e4e42c26d16
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''well-ordering theorem''', also known as '''Zermelo's theorem''', states that every [[Set (mathematics)|set]] can be [[well-order]]ed.
+
+A set ''X'' is ''well-ordered'' by a [[strict total order]] if every non-empty subset of ''X'' has a [[least element]] under the ordering.
+
+are the most important mathematical statements that are equivalent to the [[axiom of choice]]
+
+states that every [[Set (mathematics)|set]] can be [[well-order]]ed.

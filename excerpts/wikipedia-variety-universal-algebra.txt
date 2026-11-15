@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Variety (universal algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1367299066
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0bdbdcc20e8ac03362b4873d3b2bf0f044161ca686621fa73c7e45f118f862df
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''variety of algebras''' or '''equational class''' is the [[class (set theory)|class]] of all [[algebraic structure]]s of a given [[signature (logic)|signature]] satisfying a given set of
+
+Given a class of algebraic structures of the same signature
+
+is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products.
+
+a class of algebras satisfying some set of identities must be closed under the HSP operations, follows immediately from the definitions.
+
+the product of fields is not a field, so fields do not form a variety.
+
+[[Garrett Birkhoff]] proved that a class of algebraic structures of the same signature is a variety if and only if it is closed under the taking of homomorphic images, subalgebras and arbitrary products.

@@ -1,0 +1,25 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Idempotents/Karoubi.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Idempotents/Karoubi.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: b102f20e9ac0ac319afeb651e310a4651b62017447516961c9c5e443475ba48d
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Idempotents.Karoubi (line 43)
+structure Karoubi where
+  /-- an object of the underlying category -/
+  X : C
+  /-- an endomorphism of the object -/
+  p : X ⟶ X
+  /-- the condition that the given endomorphism is an idempotent -/
+  idem : p ≫ p = p
+
+-- CategoryTheory.Idempotents.Karoubi.Hom (line 71)
+structure Hom (P Q : Karoubi C) where
+  /-- a morphism between the underlying objects -/
+  f : P.X ⟶ Q.X
+  /-- compatibility of the given morphism with the given idempotents -/
+  comm : P.p ≫ f ≫ Q.p = f
+
+-- CategoryTheory.Idempotents.toKaroubi (line 138)
+def toKaroubi : C ⥤ Karoubi C where
+  obj X := ⟨X, 𝟙 X, by rw [comp_id]⟩
+  map f := ⟨f, by simp only [comp_id, id_comp]⟩

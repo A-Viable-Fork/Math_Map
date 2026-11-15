@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Borel subalgebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1223580331
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c0be44748c1e9eb9281a3fec5d406b91a46a1128cdc4901d8256efaada0b2372
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Borel subalgebra''' of a [[Lie algebra]] <math>\mathfrak{g}</math> is a maximal [[solvable Lie algebra|solvable]] subalgebra.
+
+Then <math>\mathfrak b = \mathfrak h \oplus \mathfrak n^+</math> is the Borel subalgebra relative to the above setup.
+
+Let <math>\mathfrak g</math> be a complex [[semisimple Lie algebra]], <math>\mathfrak h</math> a [[Cartan subalgebra]] and ''R'' the [[root system]] associated to them.
+
+Choosing a base of ''R'' gives the notion of positive roots.
+
+Then <math>\mathfrak g</math> has the decomposition <math>\mathfrak g = \mathfrak n^- \oplus \mathfrak h \oplus \mathfrak n^+</math>

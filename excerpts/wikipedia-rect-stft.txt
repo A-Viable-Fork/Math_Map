@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Rectangular mask short-time Fourier transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380155291
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b06f9c37e60c086e918c42bff8e55720b3ee4632ced49f98e14e279e52024e4e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''rectangular mask short-time Fourier transform''' (rec-STFT) is a simplified form of the [[short-time Fourier transform]]
+
+In rec-STFT, a '''rectangular window''' (a simple on/off time-limiting function) is used to isolate short time segments of the signal.
+
+: <math>X(t,f)=\int_{t-B}^{t+B} x(\tau) e^{-j2\pi f\tau} \, d\tau</math>
+
+The [[Rectangular function|rectangular mask function]] can be defined for some bound (''B)'' over time (''t'') as
+
+:: <math>\int_{-\infty}^\infty \int_{-\infty}^\infty |X(t, f)|^2\,df\,dt = 2B \int_{-\infty}^\infty |x(\tau)|^2\,d\tau</math>
+
+Inverse form
+
+The [[jump discontinuity]] of the edges of the rectangular mask results in [[Gibbs phenomenon|Gibbs ringing artifacts]] in the frequency domain

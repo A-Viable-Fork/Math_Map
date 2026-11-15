@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Cyclic homology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1342267018
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ded9c7fd9400805003586929f5bb90b381c10b52ec78aafa161708c7dee2e77d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories for [[associative algebra]]s which generalize the [[de Rham cohomology|de Rh
+
+These notions were independently introduced by [[Boris Tsygan]] (homology)
+
+and [[Alain Connes]] (cohomology)
+
+certain (co)homology theories for [[associative algebra]]s
+
+'''cyclic homology''' and '''cyclic cohomology''' are certain (co)homology theories
+
+Then the components of the Connes complex are defined as

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, operad (page source)
+URL: https://ncatlab.org/nlab/source/operad
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8d4aa4916dc060168f49754f6842e434ee8e28cf06edb2206809b6ff60a669b2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+which encode the idea of substituting an $n$-ary operation into the $i-th$ argument of an $m$-ary operation, to get an $(m+n-1)$-ary operation.
+
+in the presence of identity operations, the two forms of operadic composition are mutually definable
+
+$$sub_i: C(m) \times C(n) \to C(m+n-1)$$
+
+to get an $(m+n-1)$-ary operation.
