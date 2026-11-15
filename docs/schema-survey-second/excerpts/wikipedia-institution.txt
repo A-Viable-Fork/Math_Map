@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Institution (computer science) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1305700908
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8b63c06e54392329ec0e8ae7b7751031dc8e9e872cf56e60c5ff8498556f65eb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+it is assumed that signature morphisms lead to translations of sentences and models in a way that satisfaction is preserved

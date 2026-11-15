@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikidata, property P460 (entity data, JSON; CC0)
+URL: https://www.wikidata.org/wiki/Special:EntityData/P460.json
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3692812af52508369a450f666d110bd4376a597365d851f74d98806b3300a51d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+"en":{"language":"en","value":"said to be the same as"}
+
+"en":{"language":"en","value":"this item is said to be the same as that item, though this may be uncertain or disputed"}

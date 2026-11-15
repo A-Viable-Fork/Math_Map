@@ -1,0 +1,166 @@
+{
+ "about": "Pilot 4 readings: each lead of p4-binders.rows.json read against the entry by hand, 2026-11-14. reading is one of: omitted (the entry's claim needs the hypothesis and nowhere states it), omitted-degenerate (omitted, and it excludes only a trivial case), claim-absent (the entry does not state the claim the link carries), known-special (the link's match grade already records it), implied (the entry's own setting gives it).",
+ "readings": [
+  {
+   "entry": "D2-071",
+   "decl": "InnerProductSpace.gramSchmidtNormed_orthonormal",
+   "predicate": "well-founded",
+   "reading": "implied",
+   "note": "Mathlib indexes by any well-ordered type; the entry's finite list v_1..v_k is one."
+  },
+  {
+   "entry": "D2-071",
+   "decl": "InnerProductSpace.span_gramSchmidt",
+   "predicate": "well-founded",
+   "reading": "implied",
+   "note": "As above."
+  },
+  {
+   "entry": "D2-080",
+   "decl": "exists_finite_inj_algHom_of_fg",
+   "predicate": "nontrivial",
+   "reading": "omitted-degenerate",
+   "note": "The zero algebra admits no injective map from a polynomial ring over k; the entry's input does not exclude it."
+  },
+  {
+   "entry": "D2-110",
+   "decl": "AddChar.doubleDualEmb_bijective",
+   "predicate": "finite",
+   "reading": "known-special",
+   "note": "The link is graded special for exactly this binder; the entry states the locally compact abelian case."
+  },
+  {
+   "entry": "D2-188",
+   "decl": "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition",
+   "predicate": "has-limits",
+   "reading": "omitted",
+   "note": "The entry's input reads 'Functor F satisfying conditions'. The audit note names the conditions (a complete domain category, preservation of limits, the solution set condition); the entry does not, and its description is graded formal."
+  },
+  {
+   "entry": "D2-193",
+   "decl": "Ideal.quotientInfRingEquivPiQuotient",
+   "predicate": "finite",
+   "reading": "omitted",
+   "note": "The isomorphism needs finitely many ideals: for the integers and all primes the intersection is zero and the product of the quotients is uncountable. The entry says 'coprime ideals' with no count, and its output is graded formal on this declaration."
+  },
+  {
+   "entry": "D4-408",
+   "decl": "Pi.compactSpace",
+   "predicate": "compact",
+   "reading": "claim-absent",
+   "note": "The entry names Tychonoff's theorem and states neither its hypothesis (each factor compact) nor its conclusion; the link carries the whole claim."
+  },
+  {
+   "entry": "D7-150",
+   "decl": "Polynomial.not_isUnit_X",
+   "predicate": "nontrivial",
+   "reading": "omitted-degenerate",
+   "note": "Over the zero ring R[x] is zero; the entry's 'field property' broken needs R nontrivial."
+  },
+  {
+   "entry": "D7-215",
+   "decl": "HomologicalComplex.d_comp_d",
+   "predicate": "additive-category",
+   "reading": "implied",
+   "note": "Writing d d = 0 presupposes zero morphisms."
+  },
+  {
+   "entry": "D7-219",
+   "decl": "CategoryTheory.ShortComplex.homology",
+   "predicate": "additive-category",
+   "reading": "implied",
+   "note": "ker d / im d presupposes zero morphisms."
+  },
+  {
+   "entry": "D7-221",
+   "decl": "CategoryTheory.ProjectiveResolution",
+   "predicate": "additive-category",
+   "reading": "implied",
+   "note": "The entry works in modules or a category with enough projectives."
+  },
+  {
+   "entry": "D7-222",
+   "decl": "CategoryTheory.InjectiveResolution",
+   "predicate": "additive-category",
+   "reading": "implied",
+   "note": "As D7-221."
+  },
+  {
+   "entry": "D7-230",
+   "decl": "CategoryTheory.Functor.leftDerived",
+   "predicate": "abelian-category",
+   "reading": "implied",
+   "note": "'Right exact functor' presupposes an abelian setting. The hypothesis the entry does omit, enough projectives, sits in Mathlib as HasProjectiveResolutions, which this pilot's word list lacks: a miss of the finder."
+  },
+  {
+   "entry": "D7-231",
+   "decl": "CategoryTheory.Functor.rightDerived",
+   "predicate": "abelian-category",
+   "reading": "implied",
+   "note": "As D7-230, with enough injectives."
+  },
+  {
+   "entry": "D7-232",
+   "decl": "CategoryTheory.Tor",
+   "predicate": "abelian-category",
+   "reading": "implied",
+   "note": "The entry is stated for modules."
+  },
+  {
+   "entry": "D7-233",
+   "decl": "CategoryTheory.Abelian.Ext",
+   "predicate": "abelian-category",
+   "reading": "implied",
+   "note": "The entry is stated for modules."
+  },
+  {
+   "entry": "D7-234",
+   "decl": "CochainComplex.mappingCone",
+   "predicate": "additive-category",
+   "reading": "implied",
+   "note": "Y (+) X[1] presupposes biproducts."
+  },
+  {
+   "entry": "D7-234",
+   "decl": "HomologicalComplex.homotopyCofiber",
+   "predicate": "additive-category",
+   "reading": "implied",
+   "note": "As above."
+  },
+  {
+   "entry": "D7-290",
+   "decl": "CategoryTheory.GrothendieckTopology.sheafify",
+   "predicate": "has-colimits",
+   "reading": "omitted",
+   "note": "The entry does not say what the presheaf takes values in. For sets the colimits exist; for a general target category sheafification needs them, and the description is graded formal on this declaration."
+  },
+  {
+   "entry": "D7-X11",
+   "decl": "LieAlgebra.hasTrivialRadical_iff_isKilling",
+   "predicate": "pid",
+   "reading": "implied",
+   "note": "The entry's hypothesis (finite-dimensional over a field) is stronger than Mathlib's; the word list matches literally and missed the implication."
+  },
+  {
+   "entry": "D7-X11",
+   "decl": "LieAlgebra.hasTrivialRadical_iff_isKilling",
+   "predicate": "domain",
+   "reading": "implied",
+   "note": "The entry's hypothesis (finite-dimensional over a field) is stronger than Mathlib's; the word list matches literally and missed the implication."
+  },
+  {
+   "entry": "D7-X11",
+   "decl": "LieAlgebra.hasTrivialRadical_iff_isKilling",
+   "predicate": "noetherian",
+   "reading": "implied",
+   "note": "The entry's hypothesis (finite-dimensional over a field) is stronger than Mathlib's; the word list matches literally and missed the implication."
+  },
+  {
+   "entry": "D7-X11",
+   "decl": "LieAlgebra.hasTrivialRadical_iff_isKilling",
+   "predicate": "free-module",
+   "reading": "implied",
+   "note": "The entry's hypothesis (finite-dimensional over a field) is stronger than Mathlib's; the word list matches literally and missed the implication."
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib at 380f2aa, Counterexamples.lean (Apache 2.0)
+URL: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Counterexamples.lean
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 39ada764a497a702cc0fe9bb7a2641e1490149bd9817f59597ec58556039276c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+public import Counterexamples.CharPZeroNeCharZero
+
+public import Counterexamples.NowhereDifferentiable
+
+public import Counterexamples.SeparableNotSecondCountable

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: arXiv:2112.07051, Matentzoglu et al., A Simple Standard for Sharing Ontological Mappings (SSSOM) (abstract page)
+URL: https://arxiv.org/abs/2112.07051
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 59f828f94e64d3ee375fdcccaad1d62363f229f5e86cc081b65ea776653009b9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+For example, are two terms equivalent or merely related? Are they narrow or broad matches?
+
+Introducing a machine-readable and extensible vocabulary to describe metadata that makes imprecision, inaccuracy and incompleteness in mappings explicit.

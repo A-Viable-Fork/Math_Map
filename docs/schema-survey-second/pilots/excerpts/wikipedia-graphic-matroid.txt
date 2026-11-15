@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Graphic matroid (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1360690537
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 9d352372275074633a1f3a212d4e8d9a9a2170bb162f98b4666f47756bb71053
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[matroid]] whose independent sets are the [[tree (graph theory)|forests]] in a given finite [[undirected graph]]
+
+The graphic matroid of a graph <math>G</math> can be defined as the column matroid of any [[incidence matrix|oriented incidence matrix]] of <math>G</math>.
+
+Such a matrix has one row for each vertex, and one column for each edge.
+
+This method of representing graphic matroids works regardless of the [[field (mathematics)|field]] over which the incidence is defined.
+
+are the full [[spanning tree|spanning forests]] of <math>G</math>, and the circuits of <math>M(G)</math> are the [[cycle (graph theory)|simple cycles]] of <math>G</math>.
+
+Despite being non-isomorphic as graphs, they have isomorphic graphic matroids.

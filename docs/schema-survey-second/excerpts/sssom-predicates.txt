@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: SSSOM documentation, How to use mapping predicates (dev)
+URL: https://mapping-commons.github.io/sssom/dev/mapping-predicates/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 02de20532c96cdfe22d4430ff89aca7db637d0f8cd48e63f53c5394506d6b0c5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The two terms are intended to refer to roughly the same thing, but not quite. This is a hazy category and should be avoided in practice

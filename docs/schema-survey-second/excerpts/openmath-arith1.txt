@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: OpenMath, content dictionary arith1 (arith1.ocd)
+URL: https://openmath.org/cd/arith1.ocd
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8dab1c657db03b87da8ed3a139c2490df0e86076ab634c3804b757c5594f6d8a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+<CMP> for all a,b | a + b = b + a </CMP>
+
+The symbol representing an n-ary commutative function plus.

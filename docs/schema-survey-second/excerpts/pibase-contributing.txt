@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: pi-Base data, CONTRIBUTING.md (github.com/pi-base/data, main)
+URL: https://raw.githubusercontent.com/pi-base/data/main/CONTRIBUTING.md
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 8e618a01f283e6c9171aa4ee94856164987f44a3b8ce5b4ae7c93ce5eb568431
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Contributions that edit/add a "trait" (pair of an existing space/property) are typically acceptable
+
+unless the trait is already deduced by existing theorems.
+
+- The space provides an example/counter-example that is not currently represented

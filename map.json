@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "e0e234ab4334689d14098a5487ccab4b60c9a149"
+  "commit": "8f5b72920cc6f1c3f3ec6f38df1a72b75451d4b0"
  },
  "domains": {
   "D1": {
@@ -779,6 +779,27 @@
    "sourced": 29,
    "formal": 20
   },
+  "hypotheses": {
+   "predicates": 35,
+   "rows": 47,
+   "entries": 25,
+   "implications": 9,
+   "counterexamples": 2,
+   "held": 13,
+   "byRole": {
+    "requires": 33,
+    "establishes": 6,
+    "keeps": 5,
+    "destroys": 2,
+    "silent": 1
+   },
+   "byEvidence": {
+    "unsupported": 2,
+    "unchecked": 4,
+    "sourced": 29,
+    "formal": 12
+   }
+  },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
    "entries": 174,
@@ -792,6 +813,270 @@
     "ingredient": 13
    }
   }
+ },
+ "predicates": {
+  "terms": [
+   {
+    "id": "compact",
+    "carrier": "space",
+    "definition": "every open cover has a finite subcover"
+   },
+   {
+    "id": "noncompact",
+    "carrier": "space",
+    "definition": "some open cover has no finite subcover"
+   },
+   {
+    "id": "locally-compact",
+    "carrier": "space",
+    "definition": "every point has a compact neighbourhood"
+   },
+   {
+    "id": "hausdorff",
+    "carrier": "space",
+    "definition": "distinct points have disjoint neighbourhoods"
+   },
+   {
+    "id": "nonempty",
+    "carrier": "space",
+    "definition": "has a point"
+   },
+   {
+    "id": "closed-riemannian-manifold",
+    "carrier": "manifold",
+    "definition": "a compact Riemannian manifold without boundary"
+   },
+   {
+    "id": "euclidean-points",
+    "carrier": "point-cloud",
+    "definition": "the points lie in a Euclidean space, with its metric"
+   },
+   {
+    "id": "good-cover",
+    "carrier": "point-cloud",
+    "definition": "every nonempty intersection of the balls around the points is contractible"
+   },
+   {
+    "id": "domain",
+    "carrier": "ring",
+    "definition": "a nontrivial commutative ring with no zero divisors"
+   },
+   {
+    "id": "field",
+    "carrier": "ring",
+    "definition": "a nontrivial commutative ring in which every nonzero element is a unit"
+   },
+   {
+    "id": "noetherian",
+    "carrier": "ring",
+    "definition": "every ideal is finitely generated"
+   },
+   {
+    "id": "ufd",
+    "carrier": "ring",
+    "definition": "a domain with unique factorization"
+   },
+   {
+    "id": "nontrivial",
+    "carrier": "ring",
+    "definition": "0 differs from 1"
+   },
+   {
+    "id": "fg-algebra-over-field",
+    "carrier": "algebra",
+    "definition": "a finitely generated commutative algebra over a field"
+   },
+   {
+    "id": "perfect-field",
+    "carrier": "algebraic-field",
+    "definition": "every irreducible polynomial over it is separable"
+   },
+   {
+    "id": "algebraically-closed",
+    "carrier": "algebraic-field",
+    "definition": "every nonconstant polynomial over it has a root"
+   },
+   {
+    "id": "char-zero",
+    "carrier": "algebraic-field",
+    "definition": "characteristic zero"
+   },
+   {
+    "id": "finite-dimensional",
+    "carrier": "vector-space",
+    "definition": "of finite dimension over its field"
+   },
+   {
+    "id": "sigma-finite",
+    "carrier": "measure",
+    "definition": "the space is a countable union of sets of finite measure"
+   },
+   {
+    "id": "s-finite",
+    "carrier": "measure",
+    "definition": "a countable sum of finite measures"
+   },
+   {
+    "id": "exponential-growth",
+    "carrier": "function",
+    "definition": "bounded by C e^{at} on the half line"
+   },
+   {
+    "id": "reflective-subcategory",
+    "carrier": "category",
+    "definition": "a full subcategory whose inclusion has a left adjoint, the reflector"
+   },
+   {
+    "id": "lex-reflector",
+    "carrier": "category",
+    "definition": "a reflective subcategory whose reflector preserves finite limits"
+   },
+   {
+    "id": "subtopos",
+    "carrier": "category",
+    "definition": "a full subcategory of a topos whose inclusion is a geometric embedding"
+   },
+   {
+    "id": "complete-category",
+    "carrier": "category",
+    "definition": "has all small limits"
+   },
+   {
+    "id": "weak-sheafify",
+    "carrier": "category",
+    "definition": "sheafification exists for this coefficient category on the site"
+   },
+   {
+    "id": "geometric-morphism",
+    "carrier": "morphism",
+    "definition": "an adjoint pair between toposes whose left adjoint preserves finite limits"
+   },
+   {
+    "id": "geometric-embedding",
+    "carrier": "morphism",
+    "definition": "a geometric morphism with fully faithful direct image"
+   },
+   {
+    "id": "essential",
+    "carrier": "morphism",
+    "definition": "the inverse image has a further left adjoint"
+   },
+   {
+    "id": "smooth-projective-surface",
+    "carrier": "variety",
+    "definition": "a smooth projective variety of dimension two"
+   },
+   {
+    "id": "minus-one-curve",
+    "carrier": "curve",
+    "definition": "a smooth rational curve of self-intersection -1 on the surface"
+   },
+   {
+    "id": "finite-family",
+    "carrier": "set",
+    "definition": "the indexing family is finite"
+   },
+   {
+    "id": "pairwise-coprime",
+    "carrier": "ideal",
+    "definition": "each two ideals of the family sum to the whole ring"
+   },
+   {
+    "id": "excessive-h",
+    "carrier": "function",
+    "definition": "h is excessive for the process"
+   },
+   {
+    "id": "harmonic-h",
+    "carrier": "function",
+    "definition": "h is harmonic for the process"
+   }
+  ],
+  "implications": [
+   {
+    "from": "field",
+    "to": "domain",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-context-Mathlib.Algebra.Field.Basic.txt",
+      "quote": "instance (priority := 100) Field.isDomain : IsDomain K :="
+     }
+    ],
+    "evidence": "sourced"
+   },
+   {
+    "from": "closed-riemannian-manifold",
+    "to": "compact",
+    "definitional": "closed means compact and without boundary",
+    "evidence": "formal"
+   },
+   {
+    "from": "sigma-finite",
+    "to": "s-finite",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-context-Mathlib.MeasureTheory.Measure.Typeclasses.SFinite.txt",
+      "quote": "instance (priority := 100) [SigmaFinite μ] : SFinite μ := by"
+     }
+    ],
+    "evidence": "sourced"
+   },
+   {
+    "from": "euclidean-points",
+    "to": "good-cover",
+    "own": {
+     "entry": "D4-048",
+     "field": "conditions",
+     "phrase": "as for balls in Euclidean space (they are convex)"
+    },
+    "evidence": "unchecked"
+   },
+   {
+    "from": "geometric-embedding",
+    "to": "geometric-morphism",
+    "definitional": "a geometric embedding is a geometric morphism with one more property",
+    "evidence": "formal"
+   },
+   {
+    "from": "geometric-embedding",
+    "to": "lex-reflector",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-reflective-subcategory.txt",
+      "quote": "If the categories are [[topos]]es then such embeddings are called [[geometric embedding]]s"
+     }
+    ],
+    "evidence": "sourced"
+   },
+   {
+    "from": "lex-reflector",
+    "to": "reflective-subcategory",
+    "receipts": [
+     {
+      "file": "excerpts/nlab-reflective-subcategory.txt",
+      "quote": "in addition preserves [[finite limits]], then the embedding is called _exact_"
+     }
+    ],
+    "evidence": "sourced"
+   },
+   {
+    "from": "subtopos",
+    "to": "lex-reflector",
+    "definitional": "a geometric embedding's inverse image is a left adjoint to the inclusion that preserves finite limits",
+    "evidence": "formal"
+   },
+   {
+    "from": "algebraically-closed",
+    "to": "perfect-field",
+    "receipts": [
+     {
+      "file": "excerpts/mathlib-context-Mathlib.FieldTheory.IsAlgClosed.Basic.txt",
+      "quote": "noncomputable instance (priority := 100) perfectField [IsAlgClosed k] : PerfectField k := by"
+     }
+    ],
+    "evidence": "sourced"
+   }
+  ]
  },
  "clusters": {
   "ISO-CROSS-CART": {
@@ -7071,6 +7356,26 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/LinearAlgebra/JordanChevalley.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "perfect-field",
+     "own": {
+      "field": "input",
+      "phrase": "over perfect field"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "requires",
+     "predicate": "finite-dimensional",
+     "own": {
+      "field": "input",
+      "phrase": "fin-dim space"
+     },
+     "evidence": "sourced"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "partly unsupported",
    "landedAuditVerdict": "imprecise"
@@ -8145,6 +8450,30 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Localization/FractionRing.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "domain",
+     "own": {
+      "field": "input",
+      "phrase": "Integral domain R"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "establishes",
+     "predicate": "field",
+     "formal": {
+      "decl": "FractionRing.field",
+      "quote": "noncomputable instance field : Field (FractionRing A)"
+     },
+     "ambient": [
+      "(A : Type*) [CommRing A]",
+      "[IsDomain A]: the requires row on domain"
+     ],
+     "evidence": "formal"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -8353,6 +8682,31 @@
      "match": "exact",
      "note": "A finitely generated algebra over a field contains a polynomial ring in s variables (an injective algebra map) over which it is finite.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/NoetherNormalization.lean"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "fg-algebra-over-field",
+     "formal": {
+      "decl": "exists_finite_inj_algHom_of_fg",
+      "quote": "[Field k] [CommRing R] [Nontrivial R] [a : Algebra k R] [fin : Algebra.FiniteType k R]",
+      "at": "excerpts/mathlib-context-Mathlib.RingTheory.NoetherNormalization.txt"
+     },
+     "ambient": [],
+     "evidence": "sourced"
+    },
+    {
+     "role": "requires",
+     "predicate": "nontrivial",
+     "formal": {
+      "decl": "exists_finite_inj_algHom_of_fg",
+      "quote": "[Nontrivial R]",
+      "at": "excerpts/mathlib-context-Mathlib.RingTheory.NoetherNormalization.txt"
+     },
+     "ambient": [],
+     "evidence": "sourced",
+     "note": "The entry does not state it; the declaration it is linked to does."
     }
    ],
    "tier": "audited",
@@ -10146,6 +10500,31 @@
     {
      "file": "excerpts/wikipedia-castelnuovo.txt",
      "quote": "(which means a smooth [[algebraic curve#rational curves|rational curve]] of [[intersection theory#self-intersection|self-intersection]] number&nbsp;&minus;1)"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "smooth-projective-surface",
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-castelnuovo.txt",
+       "quote": "be a [[smooth variety|smooth]] [[algebraic surface|projective surface]]"
+      }
+     ],
+     "evidence": "sourced",
+     "note": "The source states the theorem over the complex numbers."
+    },
+    {
+     "role": "requires",
+     "predicate": "minus-one-curve",
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-castelnuovo.txt",
+       "quote": "a (&minus;1)-[[algebraic curve|curve]] on <math>X</math>"
+      }
+     ],
+     "evidence": "sourced"
     }
    ],
    "tier": "audited",
@@ -13806,6 +14185,23 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/AdjointFunctorTheorems.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "complete-category",
+     "formal": {
+      "decl": "CategoryTheory.isRightAdjoint_of_preservesLimits_of_solutionSetCondition",
+      "quote": "[HasLimitsOfSize.{w, w} D]"
+     },
+     "ambient": [
+      "[PreservesLimitsOfSize.{w, w} G]",
+      "(hG : SolutionSetCondition.{w} G)",
+      "[LocallySmall.{w} D]"
+     ],
+     "evidence": "formal",
+     "note": "One of the conditions the entry's input leaves unnamed; the other three are properties of the functor and its solution sets."
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "partly unsupported"
   },
@@ -14077,6 +14473,35 @@
      "match": "exact",
      "note": "For pairwise coprime ideals, R modulo their intersection is isomorphic to the product of the quotients.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Quotient/Operations.lean"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "finite-family",
+     "formal": {
+      "decl": "Ideal.quotientInfRingEquivPiQuotient",
+      "quote": "[Finite ι]",
+      "at": "excerpts/mathlib-context-Mathlib.RingTheory.Ideal.Quotient.Operations.txt"
+     },
+     "ambient": [
+      "{R : Type*} [CommRing R]"
+     ],
+     "evidence": "sourced",
+     "note": "The entry does not state it; the declaration it is linked to does."
+    },
+    {
+     "role": "requires",
+     "predicate": "pairwise-coprime",
+     "formal": {
+      "decl": "Ideal.quotientInfRingEquivPiQuotient",
+      "quote": "(hf : Pairwise (IsCoprime on f))"
+     },
+     "ambient": [
+      "{R : Type*} [CommRing R]",
+      "[Finite ι]: the requires row on finite-family"
+     ],
+     "evidence": "formal"
     }
    ],
    "tier": "audited",
@@ -17704,6 +18129,21 @@
     {
      "file": "excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt",
      "quote": "def sheafificationAdjunction [HasWeakSheafify J A] :"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "weak-sheafify",
+     "formal": {
+      "decl": "CategoryTheory.sheafificationAdjunction",
+      "quote": "def sheafificationAdjunction [HasWeakSheafify J A] :"
+     },
+     "ambient": [
+      "{C : Type u₁} [Category.{v₁} C] (J : GrothendieckTopology C)",
+      "(A : Type u₂) [Category.{v₂} A]"
+     ],
+     "evidence": "formal"
     }
    ],
    "tier": "audited",
@@ -21349,6 +21789,40 @@
      "quote": "the set <math>\\bigcap_{i\\in J} U_i</math> is either empty or contractible"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "good-cover",
+     "claim": {
+      "field": "preserved",
+      "phrase": "(nerve theorem, exact)"
+     },
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-nerve-complex.txt",
+       "quote": "is either empty or contractible; equivalently: ''C'' is a [[good cover|good open cover]]), then <math>N(C)</math> is [[homotopy-equivalent]] to"
+      }
+     ],
+     "evidence": "sourced"
+    }
+   ],
+   "hypothesisCounterexamples": [
+    {
+     "drops": "good-cover",
+     "claim": {
+      "field": "preserved",
+      "phrase": "(nerve theorem, exact)"
+     },
+     "witness": "Two contractible sets covering an n-sphere and meeting in a set that is not contractible: the nerve is a 1-simplex, not a sphere.",
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-nerve-complex.txt",
+       "quote": "one can cover any [[N-sphere|''n''-sphere]] with two contractible sets <math>U_1</math> and <math>U_2</math> that have a non-empty intersection, as in example 1 above. In this case, <math>N(C)</math> is an abstract 1-simplex, which is similar to a line but not to a sphere."
+      }
+     ],
+     "evidence": "sourced"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed",
    "landedAuditVerdict": "imprecise"
@@ -22274,6 +22748,37 @@
     {
      "file": "excerpts/wikipedia-cone-topology.txt",
      "quote": "is a [[point (topology)|point]] (called the vertex of the cone)"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "nonempty",
+     "claim": {
+      "field": "output",
+      "phrase": "(contractible)"
+     },
+     "own": {
+      "field": "conditions",
+      "phrase": "The contractibility claim needs X nonempty"
+     },
+     "evidence": "unchecked",
+     "note": "For the landed formula. With the source's definition, which attaches the cylinder to a point, the cone of the empty space is a point and the claim needs nothing."
+    }
+   ],
+   "hypothesisCounterexamples": [
+    {
+     "drops": "nonempty",
+     "claim": {
+      "field": "output",
+      "phrase": "(contractible)"
+     },
+     "witness": "X empty: the landed quotient is the empty space, which is not contractible.",
+     "own": {
+      "field": "counterexamples",
+      "phrase": "X empty: the landed quotient is the empty space, which is not contractible."
+     },
+     "evidence": "unchecked"
     }
    ],
    "tier": "audited",
@@ -25310,6 +25815,19 @@
      "quote": "is a bounded, simply-connected, [[Lipschitz domain]]. Every [[square-integrable]] vector field"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "closed-riemannian-manifold",
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-hodge-theory.txt",
+       "quote": "on a closed Riemannian manifold as a sum of three parts in the form"
+      }
+     ],
+     "evidence": "sourced"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed",
    "landedAuditVerdict": "imprecise"
@@ -28142,6 +28660,53 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/Compactification/OnePoint/Basic.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "locally-compact",
+     "own": {
+      "field": "input",
+      "phrase": "Non-compact locally compact Hausdorff space X"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "requires",
+     "predicate": "hausdorff",
+     "own": {
+      "field": "input",
+      "phrase": "Non-compact locally compact Hausdorff space X"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "requires",
+     "predicate": "noncompact",
+     "own": {
+      "field": "input",
+      "phrase": "Non-compact locally compact Hausdorff space X"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "establishes",
+     "predicate": "compact",
+     "own": {
+      "field": "output",
+      "phrase": "Compact space"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "destroys",
+     "predicate": "noncompact",
+     "own": {
+      "field": "broken",
+      "phrase": "Non-compactness"
+     },
+     "evidence": "sourced"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -29239,6 +29804,18 @@
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "hypotheses": [
+    {
+     "role": "keeps",
+     "predicate": "compact",
+     "own": {
+      "field": "preserved",
+      "phrase": "product of compact = compact"
+     },
+     "evidence": "unchecked",
+     "note": "Of a family: the product is compact when every factor is (Tychonoff)."
+    }
+   ],
    "tier": "landed"
   },
   {
@@ -34064,6 +34641,30 @@
     {
      "file": "excerpts/wikipedia-bessel-process.txt",
      "quote": "dX_t = dW_t + \\frac{n-1}{2}\\frac{dt}{X_t}"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "excessive-h",
+     "own": {
+      "field": "input",
+      "phrase": "excessive h"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "requires",
+     "predicate": "harmonic-h",
+     "claim": {
+      "field": "description",
+      "phrase": "A harmonic h gives a conservative process"
+     },
+     "own": {
+      "field": "input",
+      "phrase": "a harmonic h for a conservative transform"
+     },
+     "evidence": "sourced"
     }
    ],
    "tier": "audited",
@@ -39894,6 +40495,17 @@
     "preserved": "unchecked",
     "broken": "unchecked"
    },
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "exponential-growth",
+     "own": {
+      "field": "input",
+      "phrase": "with exponential growth bound"
+     },
+     "evidence": "unchecked"
+    }
+   ],
    "tier": "landed"
   },
   {
@@ -40022,6 +40634,31 @@
     {
      "file": "excerpts/wikipedia-lebesgue-decomposition.txt",
      "quote": "An alternative refinement is that of the decomposition of a regular [[Borel measure]]"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "sigma-finite",
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-lebesgue-decomposition.txt",
+       "quote": "are [[sigma-finite measure|σ-finite]] [[signed measure]]s on <math>\\Sigma</math>, then there exist"
+      }
+     ],
+     "evidence": "sourced"
+    },
+    {
+     "role": "establishes",
+     "predicate": "sigma-finite",
+     "receipts": [
+      {
+       "file": "excerpts/wikipedia-lebesgue-decomposition.txt",
+       "quote": "then there exist two uniquely determined σ-finite signed measures"
+      }
+     ],
+     "evidence": "sourced",
+     "note": "Of the two parts."
     }
    ],
    "tier": "audited",
@@ -40804,6 +41441,32 @@
     {
      "file": "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt",
      "quote": "(μ ν : Measure α) [HaveLebesgueDecomposition μ ν] :"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "s-finite",
+     "receipts": [
+      {
+       "file": "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt",
+       "quote": "[SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν"
+      }
+     ],
+     "evidence": "sourced",
+     "note": "Of mu."
+    },
+    {
+     "role": "requires",
+     "predicate": "sigma-finite",
+     "receipts": [
+      {
+       "file": "excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt",
+       "quote": "[SFinite μ] [SigmaFinite ν] : HaveLebesgueDecomposition μ ν"
+      }
+     ],
+     "evidence": "sourced",
+     "note": "Of nu, the reference measure."
     }
    ],
    "tier": "audited",
@@ -44496,6 +45159,27 @@
      "quote": "in addition preserves [[finite limits]], then the embedding is called _exact_. If the categories are [[topos]]es then such embeddings are called [[geometric embedding]]s."
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "reflective-subcategory",
+     "formal": {
+      "decl": "CategoryTheory.Reflective",
+      "quote": "class Reflective (R : D ⥤ C) extends R.Full, R.Faithful where /-- a choice of a left adjoint to `R` -/ L : C ⥤ D /-- `R` is a right adjoint -/ adj : L ⊣ R"
+     },
+     "ambient": [],
+     "evidence": "formal"
+    },
+    {
+     "role": "silent",
+     "predicate": "lex-reflector",
+     "own": {
+      "field": "conditions",
+      "phrase": "A bare reflective subcategory need not."
+     },
+     "evidence": "unchecked"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "confirmed"
   },
@@ -47030,6 +47714,51 @@
      "match": "exact",
      "note": "The variable commutes with every polynomial.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Polynomial/Basic.lean"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "keeps",
+     "predicate": "noetherian",
+     "formal": {
+      "decl": "Polynomial.isNoetherianRing",
+      "quote": "[inst : IsNoetherianRing R] : IsNoetherianRing R[X]"
+     },
+     "ambient": [
+      "R commutative, from the file's variables (the link's note)"
+     ],
+     "evidence": "formal"
+    },
+    {
+     "role": "keeps",
+     "predicate": "domain",
+     "own": {
+      "field": "preserved",
+      "phrase": "domain property"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "keeps",
+     "predicate": "ufd",
+     "own": {
+      "field": "preserved",
+      "phrase": "UFD property"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "destroys",
+     "predicate": "field",
+     "formal": {
+      "decl": "Polynomial.not_isUnit_X",
+      "quote": "theorem not_isUnit_X : ¬IsUnit (X : R[X])"
+     },
+     "ambient": [
+      "[Semiring R]",
+      "[Nontrivial R]: the zero ring is no field either"
+     ],
+     "evidence": "formal"
     }
    ],
    "tier": "audited",
@@ -51338,6 +52067,27 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "geometric-morphism",
+     "own": {
+      "field": "input",
+      "phrase": "Geometric morphism f"
+     },
+     "evidence": "formal"
+    },
+    {
+     "role": "keeps",
+     "predicate": "geometric-embedding",
+     "own": {
+      "field": "broken",
+      "phrase": "Nothing; it is extra structure"
+     },
+     "evidence": "unsupported",
+     "note": "The entry says nothing is broken, which covers every predicate; this row names the one a later step needs."
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "partly unsupported"
   },
@@ -51566,6 +52316,17 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "establishes",
+     "predicate": "subtopos",
+     "own": {
+      "field": "output",
+      "phrase": "Subtopos Sh_j(E)"
+     },
+     "evidence": "unsupported"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "partly unsupported"
   },
@@ -51644,6 +52405,22 @@
      "match": "exact",
      "note": "Sheafification is left adjoint to the inclusion.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Sites/Sheafification.lean"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "weak-sheafify",
+     "formal": {
+      "decl": "CategoryTheory.sheafificationAdjunction",
+      "quote": "def sheafificationAdjunction [HasWeakSheafify J A] :"
+     },
+     "ambient": [
+      "{C : Type u₁} [Category.{v₁} C] (J : GrothendieckTopology C)",
+      "(A : Type u₂) [Category.{v₂} A]"
+     ],
+     "evidence": "formal",
+     "note": "The entry states no condition; the declaration it is linked to does."
     }
    ],
    "tier": "audited",
@@ -59393,6 +60170,26 @@
     "preserved": "imprecise",
     "broken": "imprecise"
    },
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "euclidean-points",
+     "own": {
+      "field": "input",
+      "phrase": "n points in R^d"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "establishes",
+     "predicate": "euclidean-points",
+     "own": {
+      "field": "output",
+      "phrase": "Points in R^k"
+     },
+     "evidence": "sourced"
+    }
+   ],
    "tier": "audited",
    "auditVerdict": "imprecise"
   },
@@ -65309,6 +66106,26 @@
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
     }
    ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "subtopos",
+     "own": {
+      "field": "input",
+      "phrase": "Subtopos Sh_j(E) of a topos E"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "establishes",
+     "predicate": "geometric-embedding",
+     "own": {
+      "field": "output",
+      "phrase": "Geometric embedding"
+     },
+     "evidence": "formal"
+    }
+   ],
    "tier": "receipted"
   },
   {
@@ -65470,6 +66287,26 @@
      "match": "general",
      "note": "The middle functor i^* is also a left adjoint, so it preserves colimits.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Adjunction/Limits.lean"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "essential",
+     "own": {
+      "field": "input",
+      "phrase": "Essential geometric embedding"
+     },
+     "evidence": "formal"
+    },
+    {
+     "role": "requires",
+     "predicate": "geometric-embedding",
+     "own": {
+      "field": "input",
+      "phrase": "Essential geometric embedding"
+     },
+     "evidence": "formal"
     }
    ],
    "tier": "receipted"
@@ -66312,6 +67149,36 @@
      "match": "ingredient",
      "note": "The Killing form, the trace form of the adjoint representation: tr(ad x ad y). Real forms and the signature are not in Mathlib at the pin.",
      "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Lie/TraceForm.lean"
+    }
+   ],
+   "hypotheses": [
+    {
+     "role": "requires",
+     "predicate": "field",
+     "own": {
+      "field": "input",
+      "phrase": "Finite-dimensional Lie algebra over a field of characteristic zero"
+     },
+     "evidence": "sourced",
+     "note": "Of the base ring."
+    },
+    {
+     "role": "requires",
+     "predicate": "char-zero",
+     "own": {
+      "field": "input",
+      "phrase": "Finite-dimensional Lie algebra over a field of characteristic zero"
+     },
+     "evidence": "sourced"
+    },
+    {
+     "role": "requires",
+     "predicate": "finite-dimensional",
+     "own": {
+      "field": "input",
+      "phrase": "Finite-dimensional Lie algebra over a field of characteristic zero"
+     },
+     "evidence": "sourced"
     }
    ],
    "tier": "receipted"

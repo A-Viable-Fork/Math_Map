@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: MMT documentation, Inclusions and implicit morphisms (uniformal.github.io)
+URL: https://uniformal.github.io/doc/language/implicit.html
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a106fdf49d09711df800acea5db929125ac95370e21a2b5c5f8d2e3ba6b24e93
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Of course, this only works if m is uniuqe, i.e., there may at most 1 implicit morphism between any two theories.
+
+In other words, the subgraph of implicit morphisms must commute.

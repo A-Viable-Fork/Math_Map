@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Atlas (topology) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373603532
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 0bfca227290394f2886a4c1a9211e75f6d4417e86dac87296dfadfaa1aaffecf
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A transition map provides a way of comparing two charts of an atlas.
+
+This composition is not well-defined unless we restrict both charts to the [[Intersection (set theory)|intersection]] of their [[Domain of a function|domains]] of definition.

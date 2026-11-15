@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikidata, property P4215 (entity data, JSON; CC0)
+URL: https://www.wikidata.org/wiki/Special:EntityData/P4215.json
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 4b383ef9ca1e62ffa3f89921e1c63d4f4badab10fd808763c89964ce5bae27d7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+"en":{"language":"en","value":"nLab ID"}
+
+"en":{"language":"en","value":"name of a page in nLab wiki"}

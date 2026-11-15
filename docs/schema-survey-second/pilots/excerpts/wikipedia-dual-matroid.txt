@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Dual matroid (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345571842
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: d9ecbb5b0d97c2235f186da87e2fe654d9aa178ddd4c180c44383c4d8353d120
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the matroid of the dual of a planar graph is the same as the dual of the matroid of the graph

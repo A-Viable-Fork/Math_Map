@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Proof of impossibility (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370697126
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 72bd732789df90612e95cfb5ba33f9a356eede68d4ad1630943b34fda6e90dfc
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a [[theorem]] that demonstrates a problem or general set of problems cannot be solved

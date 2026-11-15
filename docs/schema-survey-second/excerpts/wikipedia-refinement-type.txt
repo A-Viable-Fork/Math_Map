@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Refinement type (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384616566
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: a6620875a6845c1c1cf3502194774c1cd95ab194fb8ad11b3747d108b5b9ad40
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a type endowed with a predicate which is assumed to hold for any element of

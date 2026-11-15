@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: arXiv:1306.3198, Kohlhase, Mance, Rabe, A Universal Machine for Biform Theory Graphs (abstract page)
+URL: https://arxiv.org/abs/1306.3198
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 504f5d110da60ac56efb59bdafa3372bb1c6e0cdab4c6881a7d7faa38e26e843
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+proof assistants express the semantic in logic and emphasize deduction, and computer algebra systems express the semantics in programming languages and emphasize computation

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Tensor product of graphs (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1361746554
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: f9869afb47ff0c44ed0828a55cd4a60adec9a4416acc516ceb3687b09619cdca
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is the [[Kronecker product|Kronecker (tensor) product]] of the [[Adjacency matrix|adjacency matrices]] of {{mvar|G}} and {{mvar|H}}.

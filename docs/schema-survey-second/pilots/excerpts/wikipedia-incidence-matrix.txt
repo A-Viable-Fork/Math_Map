@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Incidence matrix (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371079195
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 0ea29fd521074a5d0420cbb4b4ba338e6f53866bed1f9aad1d0b7e33ebd12f46
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The binary cycle space is the null space of its oriented or unoriented incidence matrix, viewed as a matrix over the two-element [[Field (mathematics)|field]].
+
+The integral [[cycle space]] of a graph is equal to the [[null space]] of its oriented incidence matrix

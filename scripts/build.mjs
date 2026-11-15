@@ -4,6 +4,8 @@
 // Contract: `node scripts/build.mjs` writes them; `--check` fails if any differs from what would be written
 //   (the commit stamp aside). Sources: source/math_map.md, mapfill/, audit/, excerpts/. Exports build(),
 //   relationOf(iso) (the landed ISO / DEP / CS field as a relation) and clustersOf(entries).
+//   Hypothesis rows (mapfill/predicates.js) go on each entry as hypotheses and hypothesisCounterexamples, each
+//   row with its evidence level; the predicate vocabulary and implications go in map.json under predicates.
 // Invariant: generated files are never edited by hand.
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
@@ -15,6 +17,7 @@ import { parse, anchorable } from "./mathmap.mjs";
 import { evidence, LEVELS, strictReadings } from "./evidence.mjs";
 import { status as leanStatus } from "./lean.mjs";
 import { leads as misalignLeads } from "./misalign.mjs";
+import { forEntry as hypothesisRows, data as predicateData } from "./predicates.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const require = createRequire(import.meta.url);
@@ -74,6 +77,7 @@ export function build() {
   const leanSrc = readdirSync(join(ROOT, "lean/MathMap")).filter((f) => f.endsWith(".lean")).map((f) => [`lean/MathMap/${f}`, readFileSync(join(ROOT, "lean/MathMap", f), "utf8")]);
   const leanFile = (decl) => { const short = decl.split(".").pop(); return leanSrc.find(([, t]) => new RegExp(`^(theorem|def|structure|abbrev)\\s+(\\S+\\.)?${short.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "m").test(t))?.[0] ?? null; };
   const commit = (() => { try { return execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT }).toString().trim(); } catch { return "unknown"; } })();
+  const HY = hypothesisRows(P, E), PD = predicateData();
   const ANDROID = require("../mapfill/android.js");
   const NIXOS = require("../mapfill/nixos.js");
   const entries = P.entries.map((e) => {
@@ -102,6 +106,8 @@ export function build() {
     if (lc.length) o.lean = lc.map((c) => ({ field: c.field, decl: c.decl, match: c.match, status: LA?.decls?.[c.decl]?.status ?? "unaudited", ...(c.invariant ? { invariant: c.invariant } : {}), ...(c.whole ? { whole: true } : {}), note: c.note, file: leanFile(c.decl) }));
     if (e.formal) o.formal = e.formal.map((k) => ({ ...k, url: `https://github.com/leanprover-community/mathlib4/blob/${P.formal.mathlib.commit}/${k.file}` }));
     if (e.conditions) { o.conditions = e.conditions; o.counterexamples = e.counterexamples; o.conditionReceipts = e.conditionReceipts; }
+    if (HY.rows[e.id]) o.hypotheses = HY.rows[e.id];
+    if (HY.cx[e.id]) o.hypothesisCounterexamples = HY.cx[e.id];
     const g = grades[e.id];
     o.tier = e.flag ? "flagged" : e.flagResolved ? "receipted" : g ? "audited" : e.origin === "added" ? "receipted" : e.origin === "fill" ? "authored" : e.origin === "generated" ? "generated" : "landed";
     if (g) { o.auditVerdict = e.corrected ? worst({ fields: Object.fromEntries(FIELDS6.map((f) => [f, e.corrected.includes(f) || (f === "name" && e.flagResolved) ? { verdict: "confirmed" } : gradeOf[e.id].fields[f]])) }) : g; if (e.corrected) o.landedAuditVerdict = g; }
@@ -121,8 +127,12 @@ export function build() {
       lean: { toolchain: LA?.toolchain, claims: LC.length, entries: new Set(LC.map((c) => c.entry)).size, definitions: LD.length,
         proved: LC.filter((c) => LA?.decls?.[c.decl]?.status === "proved").length, stated: LC.filter((c) => LA?.decls?.[c.decl]?.status === "stated").length },
       claimEvidence: Object.fromEntries(LEVELS.map((l) => [l, entries.reduce((n, e) => n + (e.claims || []).filter((c) => c.level === l).length, 0)])),
+      hypotheses: { predicates: PD.PREDICATES.length, rows: PD.HYPOTHESES.length, entries: Object.keys(HY.rows).length, implications: PD.IMPLIES.length, counterexamples: PD.COUNTEREXAMPLES.length, held: PD.HELD.length,
+        byRole: Object.fromEntries(["requires", "establishes", "keeps", "destroys", "silent"].map((role) => [role, PD.HYPOTHESES.filter((r) => r.role === role).length])),
+        byEvidence: Object.fromEntries(LEVELS.map((l) => [l, Object.values(HY.rows).flat().filter((r) => r.evidence === l).length]).filter(([, n]) => n)) },
       formal: { mathlibCommit: P.formal.mathlib.commit, entries: entries.filter((e) => e.formal).length, links: P.formal.links.length,
         byMatch: P.formal.links.reduce((a, k) => { a[k.match] = (a[k.match] || 0) + 1; return a; }, {}) } },
+    predicates: { terms: PD.PREDICATES, implications: HY.implications },
     clusters: clustersOf(entries),
     entries: entries.map((e) => e.receipts ? e : e) };
   files["map.json"] = JSON.stringify(map, null, 1) + "\n";
@@ -140,6 +150,8 @@ export function build() {
       for (const k of e.lean || []) L.push(`- Lean (${k.match}, ${k.status}, on ${k.field}${k.invariant ? `: ${k.invariant}` : ""}): \`${k.decl}\` in \`${k.file}\`. ${k.note}`);
       for (const k of e.formal || []) L.push(`- Mathlib (${k.match}, on ${k.field}): [\`${k.decl}\`](${k.url})${k.twin ? `, with its additive twin \`${k.twin}\`` : ""}. ${k.note}`);
       for (const k of e.counterexamples || []) L.push(`- counterexample: ${k.case}`);
+      if (e.hypotheses) L.push(`- hypotheses: ${["requires", "establishes", "keeps", "destroys", "silent"].map((role) => [role === "silent" ? "silent on" : role, e.hypotheses.filter((r) => r.role === role)]).filter(([, rs]) => rs.length).map(([role, rs]) => `${role} ${rs.map((r) => `${r.predicate} [${r.evidence}]${r.claim ? ` (for "${r.claim.phrase}")` : ""}`).join(", ")}`).join("; ")}`);
+      for (const k of e.hypothesisCounterexamples || []) L.push(`- without ${k.drops}: ${k.witness}`);
       if (e.relation) L.push(`- relation (landed, unchecked): ${[e.relation.cluster && `cluster ${e.relation.cluster}${e.relation.clusterNote ? ` (${e.relation.clusterNote})` : ""}`, e.relation.iso, e.relation.departure && `departure: ${e.relation.departure}`, e.relation.cloneStatus, e.relation.note].filter(Boolean).join("; ")}`);
       if (e.reading) L.push(`- reading: ${e.reading}`);
       if (e.receipts) for (const r of e.receipts) L.push(`- receipt (${r.file}): "${r.quote}"`);
@@ -164,6 +176,7 @@ export function build() {
     "## Trust tiers", "",
     "Each entry carries a tier, strongest evidence first: **flagged** (known wrong, withheld from use), **audited** (graded field by field against cited sources; the worst verdict is shown), **receipted** (an addition whose every claim is quoted), **landed** (as written, not reviewed), **authored** (a fill, not reviewed), **generated** (from a graded generation round, not reviewed field by field; its claims start unchecked). A stronger tier is earned by evidence, never assigned. A flag withholds an entry from use and never rewrites it.", "",
     "Entries may also carry **conditions** (the hypotheses their claims need) and **counterexamples**, each receipted like an addition (`mapfill/conditions.js`).", "",
+    "A condition is prose; a **hypothesis row** is the same thing in a form a chain can be checked against (`mapfill/predicates.js`). Over a declared vocabulary of predicates (compact, sigma-finite, a domain), a row says an entry requires a predicate of its input, or establishes, keeps or destroys it in its output, with one receipt: a verbatim window, a Mathlib declaration the entry is linked to, or the entry's own words, pinned by a hash of the field so that a changed field makes its rows stale. Implications among predicates carry holding forward and destruction backward. `scripts/compose.mjs` judges each step's requirements along a chain (met, unknown or violated), given what the caller says holds on entry (`--given`), and prints a counterexample beside the requirement it answers. The verdict is reported and changes nothing unless the caller asks (`--require-hypotheses` makes a violated requirement a failure; unknown stays a warning). Rows cover few entries, and a step without rows carries nothing forward: silence, never an absence of hypotheses.", "",
     "## Platform bindings", "",
     "Entries of the systems domain can be bound to the platform primitives that would realize them: Android APIs (`mapfill/android.js`) and NixOS options, systemd unit settings and kernel features (`mapfill/nixos.js`), each at a pinned source release. A binding grades the platform primitive and the whole contract separately (enforced, monitored, unknown, not observable) and cites hashed source files. Bindings are generated claims from a graded round; none is a device or host test.", "",
     "`scripts/export-guardians.mjs` exports the systems entries as tool specifications for Guardians (github.com/metareflection/guardians, MIT), and a personal policy (`--source ID=label --forbid label`) as its taint rules, so an existing checker verifies agent workflows against the map's contracts. Relational and hyperproperty invariants and flows through branching stay outside it.", "",
@@ -223,6 +236,7 @@ export function build() {
     `| Invariant-claim evidence | ${LEVELS.map((l) => `${l} ${map.counts.claimEvidence[l]}`).join(", ")} |`, "",
     `Conditions: ${map.counts.withConditions} entries. Corrections: ${map.counts.corrected} entries. Flags: ${FL.length} recorded, ${entries.filter((e) => e.flagResolved).length} resolved by corrections, ${entries.filter((e) => e.flag).length} still withheld.`, "",
     `Named invariants: ${P.vocabulary.INVARIANTS.length} in the vocabulary, linked to ${new Set(P.vocabulary.LINKS.map((l) => l.entry)).size} entries.`, "",
+    `Hypotheses: ${map.counts.hypotheses.rows} rows on ${map.counts.hypotheses.entries} entries over ${map.counts.hypotheses.predicates} predicates (${kv(map.counts.hypotheses.byRole)}; evidence ${kv(map.counts.hypotheses.byEvidence)}), ${map.counts.hypotheses.implications} implications, ${map.counts.hypotheses.counterexamples} counterexamples tied to the hypothesis they defeat (\`mapfill/predicates.js\`).`, "",
     `Relations (landed, unchecked): ${entries.filter((e) => e.relation).length} entries carry one; ${entries.filter((e) => e.relation?.cluster).length} name one of ${Object.keys(map.clusters).length} isomorphism clusters, ${entries.filter((e) => e.relation?.departure).length} a departure.`, "",
     "## Audit", "",
     `${GRADES.length} entries in the fixed random sample (seed ${audit.sample.seed}), ${TARGETED.length} targeted grades. Error rates are in \`reports/AUDIT.md\`.`, "",
@@ -239,6 +253,7 @@ export function build() {
     (() => { const R = require("../audit/fill-review-0_1.js").REVIEW, S = strictReadings(R), FF = ["name", "description", "input", "output", "preserved", "broken"];
       const n = R.filter((g) => g.batch <= 18).reduce((k, g) => k + FF.filter((f) => g.fields[f].verdict === "confirmed" && !S.has(`${g.id}.${f}`)).length, 0);
       return `- ${n} fill-review fields confirmed under the earlier rule and not yet read under the strict rule; the blind sample's rate puts roughly a third of them below confirmed (\`reports/STRICT-READING.md\`).`; })(),
+    `- Hypothesis rows cover ${map.counts.hypotheses.entries} of ${map.counts.entries} entries; a chain through any other entry carries nothing forward. ${map.counts.hypotheses.held} rows of the first pilot are held, each with what would land it (\`mapfill/predicates.js\`, HELD).`,
     "- Unreviewed Mathlib name matches: `reports/FORMAL-QUEUE.md`. Notions Mathlib lacks: `lean/WISHLIST.md`.",
     "- No binding is a device or host test.", "",
   ].join("\n");

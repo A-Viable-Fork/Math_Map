@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Kron reduction (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1346595713
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 7ddd8404e255ea6459e1be56e6fc122e72430771b6f8adab0fa3d2eceebb88c0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Then simply remove the Kth row and column of the matrix, which reduces the size of the matrix by one.

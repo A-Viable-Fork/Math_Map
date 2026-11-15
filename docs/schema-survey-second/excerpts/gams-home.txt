@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: NIST, GAMS: Guide to Available Mathematical Software (home page)
+URL: https://gams.nist.gov/
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ba4be1ee0faf6ed848f15b3ed344ce07a630deadecf70c9fd0d87ee3ed433ea0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A cross-index and virtual repository of mathematical and statistical software

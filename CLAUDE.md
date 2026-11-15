@@ -6,14 +6,14 @@ A typed map of mathematical transformations across nine domains: each entry give
 
 ## Checks
 
-- `node scripts/check-all.mjs` before every commit: the parser and vocabulary checks (`mathmap.mjs --check`), the audit, the Mathlib and Lean links, freshness of every generated file (`build.mjs --check`), the composition and MCP self-tests, the blind and catalogue checks, the kit's checks (`.infra/run.mjs`), and freshness of the seven reports. Commit only on PASS, and gate the commit on the command's exit status.
+- `node scripts/check-all.mjs` before every commit: the parser and vocabulary checks (`mathmap.mjs --check`), the audit, the Mathlib and Lean links, the hypothesis rows (`predicates.mjs --check`), freshness of every generated file (`build.mjs --check`), the composition and MCP self-tests, the blind and catalogue checks, the kit's checks (`.infra/run.mjs`), and freshness of the seven reports. Commit only on PASS, and gate the commit on the command's exit status.
 - After a change to `mapfill/`, `source/` or `audit/`: `node scripts/build.mjs`, then regenerate the reports (`node scripts/mathmap.mjs`, `audit.mjs`, `topology.mjs`, `type-lexicon.mjs`, `gaps.mjs`, `misalign.mjs`).
 - After adding or removing a file: describe it (a `Role:` header in code, or a line in `repo-map-manifest.json`) and run `node .infra/tools/repo-map.mjs`.
 
 ## Layout
 
 - `source/`: the landed map, verbatim. Never edited.
-- `mapfill/`: everything this repository adds to it, each file with its own contract: fills, flags, additions, conditions, corrections, the invariant vocabulary, Mathlib links, Lean claims, generated D9 entries and their rounds, the Android and NixOS bindings (`mapfill/README.md`).
+- `mapfill/`: everything this repository adds to it, each file with its own contract: fills, flags, additions, conditions, hypothesis rows over a predicate vocabulary, corrections, the invariant vocabulary, Mathlib links, Lean claims, generated D9 entries and their rounds, the Android and NixOS bindings (`mapfill/README.md`).
 - `excerpts/`: verbatim windows receipting additions and corrections, each with its source and hash; `catalogue/` lists every paper cited and how deeply it was read.
 - `generation/`: one directory per generation round (`record.md`, the generators' reports and packages, `grading.md`); `prompts/` the prompts that started them.
 - `audit/`, `lean/`, `scripts/`, `reports/`; `docs/inbound/` for dated notes from other repositories.
@@ -27,5 +27,8 @@ A typed map of mathematical transformations across nine domains: each entry give
 - Generated entries land only from a graded round, at their own tier, with the round recorded in `mapfill/generated.js`; a round whose text this repository corrected says so and names the generator's ids.
 - Bindings are generated claims with hashed sources, never a device or host test; a hash is reproduced here before it is marked so.
 - A device observation, when one lands, bears only on the build it was made on; one run is a reading, never standing, and needs a second run by an observer independent of the actor; observations raise a contract grade to monitored at most; a contradiction is a finding [ruling: operator, 2026-10-23].
+- A hypothesis row (`mapfill/predicates.js`) carries exactly one receipt whose quote states the row itself: a verbatim window, a Mathlib declaration the entry is linked to, or the entry's own words. Every field a row quotes is pinned by its hash, and a changed field makes its rows stale until they are read again. A row that lacks such a receipt is held in the file's HELD list with what would land it.
+- A chain's hypothesis verdict (met, unknown, violated) is reported and changes nothing by default; the caller chooses: `--require-hypotheses` makes a violated requirement a failure, and unknown stays a warning. A predicate outside the vocabulary is an error [ruling: operator, 2026-11-15].
+- A rerunnable computation is evidence at its own level, tested, above imprecise and below sourced; a failing run is contradicted. How far a transition's evidence carries along a chain is the caller's choice, capped at the weakest link by default [rulings: operator, 2026-11-15]. Both await their rows: computations land with the squares step, transitions with the routes step, and until then no claim is graded tested and the composer has one carry rule.
 - Mathlib is pinned at `380f2aa` (`mapfill/formal.js`); links and Lean claims are made at that pin.
 - A held finding for an outside project (an upstream bug, a patch) is recorded and held until the operator signs off.

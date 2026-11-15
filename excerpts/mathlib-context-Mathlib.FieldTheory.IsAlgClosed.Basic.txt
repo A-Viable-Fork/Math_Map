@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Mathlib at 380f2aafb622cb2c1c93dac545b6389083c68c51, Mathlib/FieldTheory/IsAlgClosed/Basic.lean (source; Apache 2.0)
+URL: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/FieldTheory/IsAlgClosed/Basic.lean
+Fetched: 2026-11-15. SHA-256 of the page source as fetched: 8768eb9ffa5cfdb22296bd917c7b2df4671fad3ee625aea86dbeb815268c46b0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+noncomputable instance (priority := 100) perfectField [IsAlgClosed k] : PerfectField k := by

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Ontology alignment (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1305252981
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3b0c05e98ccfc0bf39a2ce4fa083d1011bd15cf5b303a05da4e7f67c061ffc30
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is the process of determining correspondences between [[concept]]s in [[ontologies]]. A set of correspondences is also called an alignment.

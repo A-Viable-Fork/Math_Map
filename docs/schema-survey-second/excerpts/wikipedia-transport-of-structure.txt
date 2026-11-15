@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Transport of structure (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1296792450
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: cade505e12dada43ca0747cdb727cf5d6d2dc2ff86c4d0917ffe17bc9dcbbe9d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+as a result of being [[isomorphic]] to (or otherwise identified with) another object with a pre-existing structure
