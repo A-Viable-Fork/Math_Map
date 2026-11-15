@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Localization (commutative algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380772468
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9e6decc5dcd28b701db8578f5bb050e5758df2b1f8989cd0089bfa626c6ce9b8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a new ring <math>S^{-1}R</math> whose elements are fractions with numerators in {{mvar|R}} and denominators in {{mvar|S}}.
+
+a ''localization'' by a multiplicative set may be viewed as the restriction of the spectrum of a ring to the subspace of the prime ideals that do not intersect the multiplicative set.
+
+The localization of a [[commutative ring]] {{mvar|R}} by a [[multiplicatively closed set]]  {{mvar|S}}
+
+In other words, localization is an [[exact functor]], and <math>S^{-1}R</math> is a [[flat module|flat {{mvar|R}}-module]].
+
+* There is a [[bijection]] between the set of prime ideals of <math>S^{-1}R</math> and the set of prime ideals of <math>R</math> that are [[Disjoint sets|disjoint]] from <math>S</math>.

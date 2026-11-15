@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, Godement product (page source)
+URL: https://ncatlab.org/nlab/source/Godement+product
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: fac012ddd7940943bc8f2c538348e8e9645b1085d3f4a51c8ef23b68d7f01432
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is their [[horizontal composition]] as 2-cells in the [[2-category]] [[Cat]] of [[categories]], functors and natural transformations:
+
+The __Godement product__ of two [[natural transformations]] between appropriate [[functors]]
+
+are defined by any of the two equivale
+
+The [[interchange law]] in (general) $2$-categories
+
+The [[interchange law]] in (general) $2$-categories (which in the case of $Cat$ boils down to assertion that the two formulas above are equivalent) is also sometimes called _Godement interchange law_.

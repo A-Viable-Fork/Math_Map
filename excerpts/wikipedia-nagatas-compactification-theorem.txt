@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Nagata's compactification theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1286045655
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f14dfcbbb2dc1c42cfbbd7b00b2168fd7497814adbe469cb7a0a07e7bf24a864
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Nagata's compactification theorem'''
+
+implies that every [[abstract variety]] can be embedded in a [[complete variety]]
+
+shows that a [[Glossary of scheme theory#separated|separated]] and [[Finite morphism#Morphisms of finite type|finite type morphism]] to a [[Noetherian scheme]] ''S'' can be factored into an [[Glossary of scheme theory#immersion|open immersion]] followed by a [[proper morphism]].

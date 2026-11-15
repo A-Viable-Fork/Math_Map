@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Hylomorphism (computer science) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1312860849
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0f79a32951936fdccf051ac88b870981790bccc240e834129acfaafd2a330015
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+corresponding to the [[function composition|composition]] of an [[anamorphism]]
+
+Fusion of these two recursive computations into a single recursive pattern then avoids building the intermediate [[data structure]].
+
+The anamorphic part can be defined in terms of a [[arity|unary]] function
+
+A hylomorphism <math>h : A \rightarrow C</math> can be defined in terms of its separate anamorphic and catamorphic parts.

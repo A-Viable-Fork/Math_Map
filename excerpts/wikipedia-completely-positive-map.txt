@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Completely positive map (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1273806442
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1bb9b9b9d3bb1abff46d66e7e6e66c53613cc44a481815f0fc9ca99423153264
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+and '''completely positive''' if <math>\phi</math> is k-positive for all k.
+
+We then say <math>\phi</math> is '''k-positive''' if <math>\textrm{id}_{\mathbb{C}^{k\times k}} \otimes \phi</math> is a positive map
+
+Let <math>A</math> and <math>B</math> be [[C*-algebra]]s. A linear map <math>\phi: A\to B</math>
+
+is a map between [[C*-algebra]]s that sends positive elements to positive elements.

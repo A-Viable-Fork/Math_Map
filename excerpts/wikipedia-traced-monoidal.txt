@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Traced monoidal category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375238551
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 712a032cf56c41c4007c7310ac420b6ef3f69ccba7f372d9dd17c2334c447c41
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''traced monoidal category''' is a category with some extra structure which gives a reasonable notion of feedback.
+
+:<math>\mathrm{Tr}^U_{X,Y}:\mathbf{C}(X\otimes U,Y\otimes U)\to\mathbf{C}(X,Y)</math>
+
+* dinaturality in <math>U</math>: for every <math>f:X\otimes U\to Y\otimes U'</math> and <math>g:U'\to U</math>

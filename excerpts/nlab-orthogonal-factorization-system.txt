@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, orthogonal factorization system (page source)
+URL: https://ncatlab.org/nlab/source/orthogonal+factorization+system
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 07da768f76aa2f0187c11e3044ee54071a5350d5df96df520e0f77ab7548aaa3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+We say that $(E,M)$ is an **orthogonal factorization system** if $(E,M)$ is a [[weak factorization system]] in which solutions to [[lifting problems]] are unique.
+
+a. $E$ is precisely the class of morphisms that are left [[orthogonality|orthogonal]] to every morphism in $M$;
+
+We say that $(E,M)$ is an **orthogonal factorization system** if
+
+in which solutions to [[lifting problems]] are unique.

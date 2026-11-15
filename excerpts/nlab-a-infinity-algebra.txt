@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, A-infinity-algebra (page source)
+URL: https://ncatlab.org/nlab/source/A-infinity-algebra
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3d080e1b6d0fc333ee679d78102398138acd6a561b71586a20dbcc089fd447ce
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An _$A_\infty$-algebra_ is a [[monoid]] [[internal category|internal]] to a [[homotopical category]] such that the [[associativity]] law holds not as an equation, but only up to higher [[coherent]] [[homotopy]].
+
+An $A_\infty$-algebra in chain complexes is concretely the following data.
+
+An **$A_\infty$-algebra** is an [[algebra over an operad]] over an [[A-∞ operad]].
+
+such that the [[associativity]] law holds not as an equation, but only up to higher [[coherent]] [[homotopy]].

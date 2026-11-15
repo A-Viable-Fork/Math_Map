@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Tensor product of fields (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345533112
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: bfb4d7a11ea846ce1f97491a59a95804d72ecf8b65abcceda82779d7dc9ea3d6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''tensor product''' of two [[field (mathematics)|fields]]  is their [[tensor product of algebras|tensor product]] as [[algebra over a field|algebras]] over a common [[subfield (mathematics)|subfield]].
+
+The tensor product of two fields is sometimes a field, and often a [[product ring|direct product]] of fields; in some cases, it can contain non-zero [[nilpotent element]]s.

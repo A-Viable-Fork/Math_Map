@@ -7,3 +7,6 @@ Only the declaration statements below are kept (proofs omitted); each was checke
 noncomputable def monadicCreatesLimits (R : D ⥤ C) [MonadicRightAdjoint R] :
     CreatesLimitsOfSize.{v, u} R :=
   createsLimitsOfNatIso (Monad.comparisonForget (monadicAdjunction R))
+
+-- CategoryTheory.Monad.forgetCreatesLimits (line 114)
+noncomputable instance forgetCreatesLimits : CreatesLimitsOfSize (forget T)

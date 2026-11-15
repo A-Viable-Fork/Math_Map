@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, end (page source)
+URL: https://ncatlab.org/nlab/source/end
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 456dbdb0fbd5476dfcf84edd5ab621d2dcb3e8382257edcb8778ece68820bd7f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An _end_ is a special kind of [[limit]] over a [[functor]] of the form $F : C^{op} \times C \to D$
+
+A classical example of an _end_ is the $V$-object of [[natural transformations]] between $V$-[[enriched functors]]
+
+then the _end_ of the functor picks out the universal [[subobject]] on which the left and right actions coincide.
+
+Dually, the _coend_ of $F$ is the universal quotient of $\coprod_{c \in C} F(c,c)$ that forces the two actions of $F$ on that object to be equal.
+
+Perhaps the most common way in which ends and coends arise is through homs and tensor products of (generalized) modules

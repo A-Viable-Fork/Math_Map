@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Free object (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375074174
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2e2b49ae3c726c4e2f7a0db747b6a9d2491f233beed69f193d40c0fe10ab3f14
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Informally, a free object over a [[Set (mathematics)|set]] ''A'' can be thought of as being a "generic" [[algebraic structure]] over ''A''
+
+the only equations that hold between elements of the free object are those that follow from the defining axioms of the algebraic structure.
+
+{{Short description|Left adjoint to a forgetful functor to sets}}
+
+The concept is a part of [[universal algebra]], in the sense that it relates to all types of algebraic structure (with [[finitary]] operations).
+
+the universal property implies]] every map between two sets induces a unique morphism between the free objects built on them

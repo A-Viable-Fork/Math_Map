@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, double negation translation (page source)
+URL: https://ncatlab.org/nlab/source/double+negation+translation
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0eba06fe4940ca5ad788446fbcf58f7a95769020b13dee353024cf2002d04c33
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+**Double negation translation** is a method for converting [[propositions]] [[valid]] in [[classical logic]] into propositions valid in [[intuitionistic logic]].
+
+is a method for converting [[propositions]] [[valid]] in [[classical logic]]
+
+into propositions valid in [[intuitionistic logic]].
+
+[[Kurt Gödel]] used this technique to show that [[Peano arithmetic]] and [[Heyting arithmetic]] are equiconsistent.

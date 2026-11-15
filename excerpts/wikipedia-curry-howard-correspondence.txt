@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Curry–Howard correspondence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373154084
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 22f38187eddebaf506f9cda34bdfd3502aa5f4b7ccbdf14f59b791959bc08f03
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Lambek's correspondence is a correspondence of equational theories
+
+abstracting away from dynamics of computation such as beta reduction and term normalization
+
+It is also known as the '''Curry–Howard isomorphism''' or '''equivalence''', or the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''.
+
+the '''proofs-as-programs''' and '''propositions-''' or '''formulae-as-types interpretation'''.
+
+For instance, the notion of [[combinatory logic#Reduction in combinatory logic|reduction]] of terms in combinatory logic can be transferred to Hilbert-style logic

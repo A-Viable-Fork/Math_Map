@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Finite difference method (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384543215
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e76d59f04f6d8c81a3e56d58f0aee86e4e8016c4856105eef10c7ae5b076269c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''finite-difference methods''' ('''FDM''') are a class of numerical techniques for solving [[differential equations]] by approximating [[derivative]]s with [[Finite difference approximation|finite differences]].
+
+Finite difference methods convert [[ordinary differential equations]] (ODE) or [[partial differential equations]] (PDE), which may be [[Nonlinear partial differential equation|nonlinear]], into a [[system of linear equations]] that can be solved by [[matrix algebra]] techniques
+
+[[truncation error]] or [[discretization error]], the difference between the exact solution of the original differential equation and the exact quantity assuming perfect arithmetic (no round-off).
+
+This is usually done by dividing the domain into a uniform grid (see image).

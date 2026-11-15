@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Koszul cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1383508976
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 31014168d10f000f120838a661f57651fe06fb05440c138a22fdb7a34c0bd99d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+They were introduced by [[Mark Lee Green]]
+
+the '''Koszul cohomology''' groups <math>K_{p,q}(X,L)</math> are [[group (mathematics)|group]]s associated to a [[projective variety]] <math>X</math> with a [[line bundle]] <math>L</math>.
+
+If <math>L</math> is a line bundle over a projective variety <math>X</math>, then the Koszul cohomology <math>K_{p,q}(X,L)</math> is given by the Koszul cohomology <math>K_{p,q}(M,V)</math> of the graded module
+
+the '''Koszul cohomology''' groups <math>K_{p,q}(X,L)</math>

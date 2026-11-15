@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Composition series (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1353739230
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ed9e54a5002f65894810312288d3749aba7ef7fecd0f78fd968e71cbcb68808b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a group of results known under the general name '''Jordan–Hölder theorem''' asserts that whenever composition series exist, the ''[[isomorphism class]]es'' of simple pieces
+
+A composition series may not exist, and when it does, it need not be unique.
+
+A subnormal series is a composition series [[if and only if]] it is of maximal length.
+
+the ''[[isomorphism class]]es'' of simple pieces (although, perhaps, not their ''location'' in t

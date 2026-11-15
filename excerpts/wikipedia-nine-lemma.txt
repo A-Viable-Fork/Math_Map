@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Nine lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1372029050
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8d4c58f809e66eb346a5e036623c623a16b294cbd73241a2b6713daafb48cf26
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''nine lemma''' (or 3×3 lemma) is a statement about [[commutative diagram]]s and [[exact sequence]]s
+
+* If all columns as well as the top and bottom rows are exact, and <math>A_2 \to C_2</math> is the zero morphism, then the middle row is exact.
+
+* If all columns as well as the two bottom rows are exact, then the top row is exact.
+
+is a statement about [[commutative diagram]]s and [[exact sequence]]s valid in the category of [[group (mathematics)|group]]s and any [[abelian category]].
+
+* If all columns as well as the two top rows are exact, then the bottom row is exact.

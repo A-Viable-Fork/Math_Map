@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Stirling transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1371072699
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a5b1c61cf472f4cf2136dc6aa6bcf9300b925ee74fc490ee7d8521a0c97b7c4a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Stirling transform''' of a [[sequence]]
+
+:<math>b_n=\sum_{k=1}^n \left\{\begin{matrix} n \\ k \end{matrix} \right\} a_k</math>
+
+is a signed [[Stirling number of the first kind]]
+
+:<math>g(x) = f(e^x-1)</math>.
+
+of a [[sequence]] { ''a''<sub>''n''</sub> : ''n'' = 1, 2, 3, ... } of numbers
+
+is the sequence { ''b''<sub>''n''</sub> : ''n'' = 1, 2, 3, ... } given by
+
+The inverse transform is

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Lexicographic order (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374724941
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 880d1c81339383dc1b1cee44d45d6cced2e413cfaabe3441b56979e0b70559c9
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the {{visible anchor|lexicographical order on the Cartesian product|Lexicographic order on Cartesian products}} <math>A \times B</math> is defined as
+
+Specifically, given two [[partially ordered set]]s <math>A</math> and <math>B,</math>
+
+<math>A \times B</math> is defined as
+
+this order is a total order if and only if all factors of the Cartesian product are totally ordered.

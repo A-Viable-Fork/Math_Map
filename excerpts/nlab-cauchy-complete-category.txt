@@ -1,0 +1,22 @@
+Excerpts, verbatim, from: nLab, Cauchy complete category (page source)
+URL: https://ncatlab.org/nlab/source/Cauchy+complete+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: bc85cacd9746dae208023c9b0122b61e4215fa575f9766303db198a08b8315a3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The basic idea is that the Cauchy [[completion]] of a [[category]] is the closure of a category under what are called &quot;[[absolute limit]]s&quot;
+
+Equivalently, the Cauchy completion is the closure with respect to [[absolute colimit]]s.
+
+the Cauchy completion of $\mathcal{V}$-enriched category is its completion under _finite direct sums and idempotent splitting_.
+
+The Cauchy completion is the usual completion under _Cauchy nets_ or _Cauchy filters_.
+
+All of these concepts generalize straightforwardly to the context of general $V$-[[enriched category theory|enriched categories]]
+
+It contains $C$ as a [[full subcategory]] because the [[Yoneda embedding]] is a [[full and faithful functor]].
+
+and we say that $C$ and $\bar{C}$ are **Morita equivalent**.
+
+$$Set^{C^{op}} \simeq Set^{\bar{C}^{op}}$$
+
+the inclusion $C \hookrightarrow \overline{C}$ is an [[equivalence of categories]] precisely if already every [[idempotent]] in $C$ splits;

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Congruence-permutable algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=994781352
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b743a1a0b01a568d8f04fc5735ba8171208769dba84b4f1867ce67005f6fb510
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Such a term is called a '''Maltsev term''' and congruence-permutable varieties are also known as '''Maltsev varieties''' in his honor.
+
+:<math>\mathcal{V}\models q(x,y,y)\approx x\approx q(y,y,x)</math>.
+
+Suppose that <math>\mathcal{V}</math> is a variety of algebras. The following are equivalent:
+
+|1= The variety <math>\mathcal{V}</math> is congruence-permutable.

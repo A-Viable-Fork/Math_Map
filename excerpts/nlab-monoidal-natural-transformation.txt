@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, monoidal natural transformation (page source)
+URL: https://ncatlab.org/nlab/source/monoidal+natural+transformation
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a8692edeef763b808ff5b8aced9ac264e5dfab64c2be8e4c1267b7a0ac702331
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+between the underlying functors that is compatible with the tensor product and the unit

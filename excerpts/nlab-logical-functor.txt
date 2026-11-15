@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, logical functor (page source)
+URL: https://ncatlab.org/nlab/source/logical+functor
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: af4fba071dd50d8ed288e52b7a1200830249ae0f75c1b05996128279d49df6a4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+it suffices to define a logical functor to preserve these, up to [[isomorphism]].
+
+Since all the elementary topos structure follows from having [[finite limits]] and [[power objects]], it suffices to define a logical functor to preserve these, up to [[isomorphism]].
+
+it suffices to define a logical functor to preserve these
+
+Since all the elementary topos structure follows from having [[finite limits]] and [[power objects]]

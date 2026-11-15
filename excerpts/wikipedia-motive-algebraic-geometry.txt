@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Motive (algebraic geometry) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380465246
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 38bdcadc79f06dae8230020d1c476d53d29b11d69d92071e3a36a2a06591f671
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+should arise as different realizations of the same underlying object.
+
+The idea is that theories such as [[Betti cohomology]], [[de Rham cohomology]], [[etale cohomology]], and [[crystalline cohomology]] should arise as different realizations of the same underlying object.
+
+[[Vladimir Voevodsky]] constructed [[triangulated category|triangulated categories]] of motives
+
+For [[smooth variety|smooth varieties]], ''pure motives'' can be constructed from [[correspondence (algebraic geometry)|algebraic correspondences]]
+
+For [[smooth variety|smooth varieties]], ''pure motives'' can be constructed from [[correspondence (algebraic geometry)|algebraic correspondences]] and [[idempotent]] projections.
+
+The morphisms are [[correspondence (algebraic geometry)|correspondences]].
+
+the (partially conjectural) theory of ''mixed motives''

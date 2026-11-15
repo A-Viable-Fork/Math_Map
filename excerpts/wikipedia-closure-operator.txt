@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Closure operator (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377888587
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1a284821eb3958c7e3b9a8b0a82a078c32de81a5ece6a54b532d7c4b9b3e0b49
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+| {{nb5}}(cl is ''idempotent'').
+
+Closure operators are determined by their '''closed sets'''
+
+Such families of "closed sets" are sometimes called '''closure systems''' or "'''Moore families'''".

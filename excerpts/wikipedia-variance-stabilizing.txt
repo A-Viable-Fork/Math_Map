@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Variance-stabilizing transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1328174344
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6f689bf0cbbe76915aa36ea51bf716466beed569bcf1bb95e701d8b675bf2951
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+:<math>y=\sqrt{x} \, </math>
+
+suppose that the values x are realizations from different [[Poisson distribution]]s
+
+such that the variability of the values ''y'' is not related to their mean value.

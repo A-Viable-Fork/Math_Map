@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Duality (order theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345571859
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 23587cd2bef5fb7a7bb279b6f3884b7238c9d353ff79542e58b3fda847ac4a5f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+every [[partially ordered set]] ''P'' gives rise to a '''dual''' (or '''opposite''') partially ordered set
+
+This dual order ''P''<sup>op</sup> is defined to be the same set, but with the '''inverse order'''
+
+which is often denoted by ''P''<sup>op</sup> or ''P''<sup>''d''</sup>
+
+This dual order ''P''<sup>op</sup> is defined to be the same set
+
+but with the '''inverse order'''

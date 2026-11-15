@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Factorization homology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1117924325
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 66d23acdb9e7a48d1f030cf035f81427151ffa7abb99a956f4d32d68de59e641
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was introduced by David Ayala, John Francis, and Nick Rozenblyum.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, sieve (page source)
+URL: https://ncatlab.org/nlab/source/sieve
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3462c053f834ea359dbfca1762a2c82b28f35434ab74b90bf808c6934ac8e562
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the classical examples of _sieves on_ an object are [[Grothendieck topologies]], used to present the [[presheaves]] that behave like [[coverings]].
+
+A _sieve_ $S$ on an object $c \in C$ is a subset $S \subset Ob(C/c)$
+
+which is _closed under precomposition_
+
+the singled out subobjects then correspond to _covering si

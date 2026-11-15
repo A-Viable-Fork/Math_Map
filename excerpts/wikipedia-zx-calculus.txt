@@ -1,0 +1,28 @@
+Excerpts, verbatim, from: Wikipedia, ZX-calculus (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380962408
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3732713b35ffde7da15fa67e2ce9fdb81bd3381cf70113cdb3e7388b0de1c3b4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''ZX-calculus''' is a [[Graphical modeling language|graphical language]].
+
+Whenever two Z-spider touch, they can fuse together, and their phases add.
+
+|Color change
+
+i.e. the ZX-calculus is [[Soundness|sound]] and [[Completeness (logic)|complete]].
+
+which are represented as [[string diagrams]] called ''ZX-diagrams''
+
+A given ZX-diagram can be transformed into another ZX-diagram using the rewrite rules of the ZX-calculus if and only if the two diagrams represent the same linear map
+
+if and only if the two diagrams represent the same linear map
+
+The ''ZW-calculus'' was developed alongside the ZX-calculus
+
+It was the first graphical language which had a complete rule-set for an approximately universal set of linear maps between qubits,
+
+|last1=Hadzihasanovic |first1=Amar |last2=Ng |first2=Kang Feng |last3=Wang |first3=Quanlong
+
+A more recent language is the ''ZH-calculus''.
+
+This adds the ''H-box'' as a generator, that generalizes the Hadamard gate from the ZX-calculus. It can naturally describe quantum circuits involving Toffoli gates.

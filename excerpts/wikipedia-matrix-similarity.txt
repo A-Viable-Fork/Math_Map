@@ -1,0 +1,24 @@
+Excerpts, verbatim, from: Wikipedia, Matrix similarity (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1303684723
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: c173e1bf4fcbafea4ee837d782c23da9062e40ef1ad32cf2ed76c5a7b7087bbe
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+are called '''similar''' if there exists an [[invertible matrix|invertible]] ''n''-by-''n'' matrix {{mvar|P}} such that
+
+<math display="block">B = P^{-1} A P .</math>
+
+{{Short description|Equivalence under a change of basis (linear algebra)}}
+
+similar matrices share all properties of their shared underlying operator:
+
+*[[Characteristic polynomial]], and attributes that can be derived from it:
+
+**[[Determinant]]
+
+**[[Trace (linear algebra)|Trace]]
+
+**[[Eigenvalues and eigenvectors|Eigenvalues]], and their [[Algebraic multiplicity|algebraic multiplicities]]
+
+*[[Minimal polynomial (linear algebra)|Minimal polynomial]]
+
+(but not the eigenspaces, which are transformed according to the base change matrix ''P'' used).

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Hom functor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374264691
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6ad44c7a264ca688611278d44dafebbe777450d2b5d568b576be561dde937ed3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a covariant [[exact functor|left-exact]] functor

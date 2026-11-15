@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Hermite normal form (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345542222
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: bf5682a66bd6276a20aa7471764c5fe97275400643d2bcf1a5d3e8cdb4db38b8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Hermite normal form''' is an analogue of [[reduced echelon form]] for [[matrix (mathematics)|matrices]] over the [[integer]]s
+
+A matrix <math>A \in \mathbb{Z}^{m \times n}</math> has a (row) Hermite normal form <math>H</math> if there is a square [[unimodular matrix]] <math>U</math> such that <math>H=UA</math>
+
+# <math>H</math> is upper triangular (that is, <math>h_{ij}=0</math> for <math>i>j</math>), and any rows of zeros are located below any other row.
+
+# The elements below pivots are zero and elements above pivots are nonnegative and strictly smaller than the pivot.
+
+A unimodular matrix is a square [[integer matrix]] whose [[determinant]] is 1 or −1 (and hence [[Invertible matrix|invertible]]). In fact, a unimodular matrix is invertible over the integers
+
+Every full row rank ''m''-by-''n'' matrix '''A''' with integer entries has a unique ''m''-by-''n'' matrix '''H''' in Hermite normal form, such that '''H'''='''UA''' for some square unimodular matrix '''U'''.
+
+Because the Hermite normal form is unique, it can be used to answer many questions about two lattice descriptions.

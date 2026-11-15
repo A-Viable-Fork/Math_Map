@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, simplicially enriched category (page source)
+URL: https://ncatlab.org/nlab/source/simplicially+enriched+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: d6ffc8626290ddbc92750becd07b7aa99b55ddded54bc899fec89d824b7f81a6
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* requiring the hom-simplicial sets to be [[Kan complex]]es makes simplicially enriched categories a model for [[(∞,1)-categories]];
+
+To every [[category with weak equivalences]] $(C,W)$ is associated its [[simplicial localization]] $L_W C$
+
+which is an $sSet$-category
+
+with the property that its [[homotopy category of an (∞,1)-category]] coincides with the [[homotopy category]] $Ho_W(C)$.

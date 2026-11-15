@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Vector bundle (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381355624
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 010d3647f738578391566063e97b6ea089f86b36fd86336696df496604b18f6a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Two trivial vector bundles over [[open set]]s <math>U_\alpha</math> and <math>U_\beta</math> may be [[Gluing (topology)|glued]] over the intersection <math>U_{\alpha\beta}</math> by transition functions <math>g_{\alpha \beta}</math>
+
+:<math>g_{UV}\colon U\cap V\to \operatorname{GL}(k).</math>
+
+These are called the '''[[Transition map|transition functions]]''' (or the '''coordinate transformations''') of the vector bundle.
+
+The [[Set (mathematics)|set]] of transition functions forms a [[Čech cocycle]] in the sense that
+
+:<math>g_{UU}(x) = I, \quad g_{UV}(x)g_{VW}(x)g_{WU}(x) = I</math>
+
+Conversely, given a fiber bundle <math>(E,X,\pi,\R^k)</math> with a <math>\text{GL}(k)</math> cocycle acting in the standard way on the fiber <math>\R^k</math>, there is [[associated bundle|associated]] a vector bundle.  This is an example of the [[fibre bundle construction theorem]] for vector bundles, and can be taken as an alternative definition of a vector bundle.

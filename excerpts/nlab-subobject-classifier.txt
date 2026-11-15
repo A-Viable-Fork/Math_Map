@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, subobject classifier (page source)
+URL: https://ncatlab.org/nlab/source/subobject+classifier
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9d3fb14063c90c3acfd67040bee121ac1a5dffd83f48e40abe654619483f42df
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In a [[category]] $C$ with [[finite limit]]s, a **subobject classifier** is a [[monomorphism]]
+
+is the [[pullback]] of this morphism along a unique morphism (the [[characteristic morphism]] of $A$)
+
+In this case the representing object is [[generalized the|the]] subobject classifier: there is a [[natural isomorphism]]
+
+It is not usually true in [[toposes]] that $\Omega$ is the [[coproduct]] $\mathbf{2} = 1 + 1$

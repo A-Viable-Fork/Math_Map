@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: arXiv:1704.01914 (abstract page)
+URL: https://export.arxiv.org/abs/1704.01914
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c92738d60b86c63f0f2aa8157c661e949ae34cde110b2a2d2c7beaad7065b72b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It was conjectured that if a constraint language has a weak near unanimity polymorphism then the corresponding constraint satisfaction problem is tractable

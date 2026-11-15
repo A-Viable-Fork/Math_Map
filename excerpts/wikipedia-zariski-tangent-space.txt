@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Zariski tangent space (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1340846727
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: fe1825f71991b0a07e4dd2e6708151f247dd58adcd12e3178efb04c31be14fb4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Zariski tangent space''' is a construction that defines a [[tangent space]] at a point ''P'' on an [[algebraic variety]] ''V'' (and more generally)
+
+The '''cotangent space''' of a [[local ring]] ''R'', with [[maximal ideal]] <math>\mathfrak{m}</math> is defined to be
+
+:<math>\mathfrak{m}/\mathfrak{m}^2</math>
+
+Its [[dual vector space|dual]] (as a ''k''-vector space) is called '''tangent space''' of ''R''.
+
+The tangent space <math>T_P(X)</math> and cotangent space <math>T_P^*(X)</math> to a scheme ''X'' at a point ''P'' is the (co)tangent space of <math>\mathcal{O}_{X,P}</math>.
+
+If ''R'' is a [[noetherian ring|Noetherian]] local ring, the dimension of the tangent space is at least the [[Krull dimension|dimension]] of ''R'':
+
+''R'' is called [[regular local ring|regular]] if equality holds. In a more geometric parlance, when ''R'' is the local ring of a variety ''V'' at a point ''v'', one also says that ''v'' is a regular point. Otherwise it is called a '''singular point'''.
+
+Morally, modding out ''<math>\mathfrak{m}</math><sup>2</sup>'' corresponds to dropping the non-linear terms from the equations defining ''V'' inside some affine space, therefore giving a system of linear equations that define the tangent space.

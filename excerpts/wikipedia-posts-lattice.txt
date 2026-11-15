@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Post's lattice (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374905377
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8097cab569b64e3c538eacca616063d21f879a95d62b44f9932770d3d1c76f03
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The lattice is [[countably infinite]], and all its members are finitely generated.
+
+The relative simplicity of Post's lattice is in stark contrast to the lattice of clones on a three-element (or larger) set, which has the [[cardinality of the continuum]]

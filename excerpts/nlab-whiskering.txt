@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, whiskering (page source)
+URL: https://ncatlab.org/nlab/source/whiskering
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b4710861f7d88feed42e364ff134d2e626a2bb4cf3438351c4c2090ec333ba0f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the [[horizontal composition]] of a [[2-morphism]] with [[1-morphisms]] is sometimes called _whiskering_.

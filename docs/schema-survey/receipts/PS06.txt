@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: networkx-product, pinned source
+URL: https://raw.githubusercontent.com/networkx/networkx/networkx-3.5/networkx/algorithms/operators/product.py
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 15091221db8ebfecf592d57389dd93e34ef9f52f819807d39726bcf15cadb997
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+$P$ has an edge $((u,v), (x,y))$ if and only if $(u,x)$ is an edge in $G$
+    and $(v,y)$ is an edge in $H$.

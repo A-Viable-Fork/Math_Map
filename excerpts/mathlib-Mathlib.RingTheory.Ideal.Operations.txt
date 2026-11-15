@@ -1,0 +1,15 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Ideal/Operations.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Operations.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 73f6a597697d94652087ca0c8553369de87edb02814fdf8f81ce56911e0624a3
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- Ideal.radical (line 799)
+def radical (I : Ideal R) : Ideal R where
+  carrier := { r | ∃ n : ℕ, r ^ n ∈ I }
+  zero_mem' := ⟨1, (pow_one (0 : R)).symm ▸ I.zero_mem⟩
+  add_mem' := fun {_ _} ⟨m, hxmi⟩ ⟨n, hyni⟩ =>
+    ⟨m + n - 1, add_pow_add_pred_mem_of_pow_mem I hxmi hyni⟩
+  smul_mem' {r s} := fun ⟨n, h⟩ ↦ ⟨n, (mul_pow r s n).symm ▸ I.mul_mem_left (r ^ n) h⟩
+
+-- Ideal.radical_idem (line 836)
+theorem radical_idem : radical (radical I) = radical I

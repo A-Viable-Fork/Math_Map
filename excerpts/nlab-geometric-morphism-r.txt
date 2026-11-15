@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, geometric morphism (page source)
+URL: https://ncatlab.org/nlab/source/geometric+morphism
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3161ae27bb1335f2fd03ee61b8f42f493895b60e20c130e72019906113ad319b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+such that the [[left adjoint]] $f^*:F \to E$ preserves [[finite limits]].
+
+* furthermore, $f^*$ is [[exact functor|left exact]] in that it preserves finite [[limits]].
+
+* $f^*$ is [[adjoint functor|left adjoint]] to $f_*$, so $f^*$ preserves all small [[colimits]] and $f_*$ preserves all small [[limits]].
+
+between the corresponding  [[Grothendieck topos|Grothendieck topoi]] of [[sheaf|sheaves]] on $X$ and $Y$.
+
+necessarily preserves all constructions in [[geometric logic]].
+
+so $f^*$ preserves all small [[colimits]] and $f_*$ preserves all small [[limits]].
+
+a [[functor]] such as $f^*$ that preserves finite [[limits]] and arbitrary [[colimits]] (since it is a [[adjoint functor|left adjoint]]) necessarily preserves all constructions in [[geometric logic]].

@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Y-Δ transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1369326226
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 40643fc21df5c477d02bd580ce6871fef849ef5efeeba200e221a7b41b27c28c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is a mathematical technique to simplify [[Network analysis (electrical circuits)|the analysis]] of an [[electrical network]].
+
+This circuit transformation theory was published by [[Arthur Edwin Kennelly]] in 1899.
+
+the corresponding currents (<math>I_1, I_2</math> and <math>I_3</math>) are exactly the same for both the Y and Δ circuit, and vice versa.
+
+In [[graph theory]], the Y-Δ transform means replacing a Y [[Glossary of graph theory#Subgraphs|subgraph]] of a graph with the equivalent Δ subgraph.
+
+The transform preserves the number of edges in a graph, but not the number of vertices or the number of [[cycle (graph theory)|cycle]]s.
+
+R_\text{a} &= \frac{R_1 R_2 + R_2 R_3 + R_3 R_1}{R_1} = R_2+R_3+\frac{R_2R_3}{R_1} \\[3pt]
+
+R_1 &= \frac{R_\text{b}R_\text{c}}{R_\text{a} + R_\text{b} + R_\text{c}} \\[3pt]

@@ -1,0 +1,28 @@
+Excerpts, verbatim, from: Wikipedia, Chain complex (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381466415
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: be4c3872e09c8b374124d608ec59f977ad69caa289f156ea35703398f5b7635f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A '''chain complex''' <math>(A_\bullet, d_\bullet)</math> is a sequence of abelian groups or modules
+
+Explicitly, the differentials satisfy <math>d_n\circ d_{n+1}=0</math> for all <math>n</math>, or, concisely, <math>d^2=0</math>.
+
+connected by homomorphisms (called '''boundary operators''' or '''differentials''')
+
+Associated to a chain complex is its [[Homology (mathematics)|homology]]
+
+connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math>
+
+connected by homomorphisms ('''coboundary operators''') <math>d^n:A^n\to A^{n+1}</math> satisfying <math>d^{n+1}\circ d^{n}=0</mat
+
+It consists of a sequence of abelian groups or modules <math>\cdots, A^0, A^1, A^2,\dots</math>
+
+The homology of a cochain complex is called its [[cohomology]].
+
+The elements in the kernel of <math>d</math> are called '''(co)cycles''' (or '''closed''' elements), and the elements in the image of ''d'' are called '''(co)boundaries''' (or '''exact''' elements).
+
+satisfying <math>d^{n+1}\circ d^{n}=0</mat
+
+Associated to a chain complex is its [[Homology (mathematics)|homology]], which is (loosely speaking) a measure of the failure of a chain complex to be [[Exact sequence|exact]].
+
+and is a commonly used [[topological invariant|invariant]] of a topological space.

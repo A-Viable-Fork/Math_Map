@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, comonad (page source)
+URL: https://ncatlab.org/nlab/source/comonad
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dd2df9ef9a79278b31f30b8c7cbb3aea44705c5fb0df3e2c3f4f2b4351a0ae2b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **[[coalgebra over a comonad]]** (or **comodule**) over a comonad $C$ on a category $A$
+
+The category of coalgebras is called its (co-)[[Eilenberg-Moore category]] and satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad
+
+[[co-Kleisli morphisms]]
+
+satisfies a universal property dual to that of the [[Eilenberg-Moore object]] for a monad

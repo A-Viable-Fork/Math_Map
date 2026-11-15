@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Plancherel theorem for spherical functions (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1354552690
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3de337f55547c74b22732865c8557db4c9564bbb33720f8f6039c6cd59efa842
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The transformation ''U'' is called the '''spherical Fourier transform''' or sometimes just the '''spherical transform'''
+
+consisting of compactly supported ''K''-biinvariant continuous functions on ''G''
+
+due in its final form to [[Harish-Chandra]]
+
+Two different characters λ<sub>1</sub> and λ<sub>2</sub> give the same spherical function if and only if λ<sub>1</sub> = λ<sub>2</sub>·''s'', where ''s'' is in the [[Weyl group]] of ''A''
+
+and μ is called the '''[[Plancherel measure]]'''
+
+Here '''c'''(λ) is '''Harish-Chandra's c-function'''.

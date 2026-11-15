@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Abstract rewriting system (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378824802
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a4c272cb1c09a1de95d2b0add0944e56420d2808ca509df270dd72e2ae3a5791
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In its simplest form, an ARS is simply a [[set (mathematics)|set]] (of "objects") together with a [[binary relation]]
+
+an ARS is sufficient to describe important properties of rewriting systems like [[Normal form (abstract rewriting)|normal form]]s, [[Termination (term rewriting)|termination]], and various notions of
+
+An ARS is a [[set (mathematics)|set]] ''A'', whose elements are usually called objects, together with a [[binary relation]] on ''A''
+
+otherwise it is called ''irreducible'' or a ''normal form''.

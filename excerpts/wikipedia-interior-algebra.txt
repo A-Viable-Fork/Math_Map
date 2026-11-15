@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Interior algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1295577828
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 859543ca37f66d2f1d4b3f94626082b643ee980ed275d918e67fb2729956a51e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Interior algebras are to [[topology]] and the [[modal logic]] '''S4''' what [[Boolean algebra (structure)|Boolean algebra]]s are to [[set theory]] and ordinary [[propositional logic]].
+
+The [[duality (order theory)|dual]] of the interior operator is the '''[[closure operator]]'''

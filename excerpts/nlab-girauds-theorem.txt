@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, Giraud%27s theorem (page source)
+URL: https://ncatlab.org/nlab/source/Giraud%27s+theorem
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 240ee81416915ab8ecf2f19c5d25ebeae9aa2a8d858a54c40a5586d8af68753a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A classical theorem of [[Jean Giraud|Giraud]] characterizes [[sheaf toposes]] abstractly as [[categories]] with certain [[properties]] known as *Giraud&#39;s axioms*.
+
+A [[category]] is a [[Grothendieck topos]] if and only if it satisfies the following conditions:
+
+1. it has [[universal colimits]];
+
+1. it has [[effective quotients]].
+
+A [[category]] is a [[Grothendieck topos]] if and only if

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Serre duality (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1345571946
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: ab1ba6772f6dbf5343f7901f04066e2243622c011a2518feb7730dcb8e0cf75f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Serre duality''' is a [[duality (mathematics)|duality]] for the [[coherent sheaf cohomology]] of algebraic varieties
+
+The basic version applies to [[vector bundle]]s on a smooth projective variety
+
+Then Serre duality says: for an [[algebraic vector bundle]] ''E'' on ''X'' and an integer ''i'', there is a natural isomorphism:
+
+:<math>H^i(X,E)\cong H^{n-i}(X,K_X\otimes E^{\ast})^{\ast}</math>
+
+:<math>h^i(X,E)=h^{n-i}(X,K_X\otimes E^{\ast}).</math>

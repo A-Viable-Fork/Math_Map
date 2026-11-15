@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Zorn's lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1364256157
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a1e65be43ddaa9f96e27b7850cfc1fc53f79d3e8512a04635b1e69eb26e122bd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It states that a [[partially ordered set]] containing [[upper bound]]s for every [[chain (order theory)|chain]] (that is, every [[total order|totally ordered]] [[subset]]) [[Necessity and sufficiency|necessarily]] con
+
+necessarily]] contains at least one [[maximal element]].
+
+the theorem that every [[vector space]] has a [[basis (linear algebra)|basis]]
+
+It states that a [[partially ordered set]] containing [[upper bound]]s for every [[chain (order theory)|chain]]

@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, Bousfield localization (page source)
+URL: https://ncatlab.org/nlab/source/Bousfield+localization
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 20a4bf4a580589ecb5e16b8f478219cdbf3ee6ae6a8b80b7f5d1e653bfcdfa41
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Bousfield localization allows us to *make more morphisms count as weak equivalences*.

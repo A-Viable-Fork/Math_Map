@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Daubechies wavelet (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377628474
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 925cd92a85b20ebd476ebc7b52c69ec8450359f4db4875c72a2a0a0d698314ae
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The '''Daubechies wavelets''', based on the work of [[Ingrid Daubechies]], are a family of [[orthogonal wavelet]]s defining a [[discrete wavelet transform]]
+
+characterized by a maximal number of vanishing [[Moment (mathematics)|moments]] for some given [[Support (mathematics)|support]].
+
+D4 encodes polynomials with two coefficients, i.e. constant and linear signal components

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Snake lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1375057256
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f00bd1b17d7bc67093c8d4aa7baffc08a5bfb78a658e6723f187c3df829c8f2c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Homomorphisms constructed with its help are generally called ''connecting homomorphisms''.
+
+The '''snake lemma''' is a tool used in [[mathematics]], particularly [[homological algebra]], to  construct [[long exact sequence]]s.
+
+where the rows are [[exact sequence]]s and 0 is the [[zero object]].
+
+to  construct [[long exact sequence]]s.

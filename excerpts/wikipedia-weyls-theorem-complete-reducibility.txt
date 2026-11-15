@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Weyl's theorem on complete reducibility (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1366424424
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a46cd059f7703bfc4aad7c13cd8422f55568edad411fa101d02122632321535e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''Weyl's theorem on complete reducibility''' is a fundamental result
+
+The theorem states that every finite-dimensional module over <math>\mathfrak{g}</math> is [[semisimple representation|semisimple]] as a module (i.e., a direct sum of simple modules.)
+
+every finite-dimensional module over <math>\mathfrak{g}</math>
+
+(i.e., a direct sum of simple modules.)

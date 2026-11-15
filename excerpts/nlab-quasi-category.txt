@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, quasi-category (page source)
+URL: https://ncatlab.org/nlab/source/quasi-category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 41bcf1eea03046d08f9ffdb4240c55f7844f21fba0a5549f905edb433ba50f5e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion of _quasi-category_ is a [[geometric definition of higher categories|geometric model]] for [[(∞,1)-category]].
+
+* all _inner_ [[horn]]s in $C$ have fillers.

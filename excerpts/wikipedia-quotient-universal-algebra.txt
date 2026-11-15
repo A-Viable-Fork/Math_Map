@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Quotient (universal algebra) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1136207094
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: be3728b33212188fbbba4bdbebf25125ebda848eee5363d66cfc72bb18a726b0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+we can define the [[Closure operator|closure]] of any [[binary relation]] ''E'', with respect to a fixed algebra <math>\mathcal{A}</math>, such that it is a congruence
+
+<math> \langle E \rangle_{\mathcal{A}} = \bigcap \{ F \in \mathrm{Con}(\mathcal{A}) \mid E \subseteq F \}</math>
+
+Note that the closure of a binary relation is a congruence
+
+the compatibility conditions are used to give the classes an algebraic structure.
+
+a '''quotient algebra''' is the result of [[Partition of a set|partition]]ing the elements of an [[algebraic structure]] using a [[congruence relation]].
+
+The quotient algebra has these classes as its elements, and the compatibility conditions are used to give the classes an algebraic structure.
+
+Quotient algebras are also called '''factor algebras'''.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, zero object (page source)
+URL: https://ncatlab.org/nlab/source/zero+object
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dedf20c08ac46ba2151d39d1f7ff1898c3d2cab05f7a3fef250527ad695c610c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a **zero object**, **null object**, or **biterminator** if it is both an [[initial object]] and a [[terminal object]].
+
+there is always a canonical morphism from any object $A$ to any other object $B$ called the _[[zero morphism]]_
+
+In a category with a zero object 0
+
+A category with a zero object is sometimes called a _[[pointed category]]_.

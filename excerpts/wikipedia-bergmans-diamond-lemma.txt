@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Bergman's diamond lemma (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1351364215
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 8ca3723d96f0a6a6e3ec138dadbf1517b045dc543af87f3575b3688090276182
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It is an extension of [[Gröbner basis|Gröbner bases]] to non-commutative [[Ring (mathematics)|rings]].

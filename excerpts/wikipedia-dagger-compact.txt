@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Dagger compact category (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1370402753
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a952fe0c475a8cceb58ba65ae1033f211da71bbb3f2fdc41ef742cc9bb6b6c4c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+'''dagger compact categories''' (or '''dagger compact closed categories''')
+
+first appeared in 1989 in the work of  [[Sergio Doplicher]] and John E. Roberts
+
+* The category '''FdHilb''' of [[Category of finite dimensional Hilbert spaces|finite dimensional Hilbert spaces]] and [[linear maps]].
+
+Dagger compact categories can be used to express and verify some fundamental [[quantum computing|quantum information]] protocols, namely: [[quantum teleportation|teleportation]]

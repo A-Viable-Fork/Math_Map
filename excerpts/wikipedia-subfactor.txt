@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Subfactor (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1305741998
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 90e72790463369f2814985e4d9e5179c813528c0980f3312221ac8b3c85d2736
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''subfactor''' of a [[factor (functional analysis)|factor]] <math> M </math> is a subalgebra that is a factor and contains <math> 1 </math>. The theory of subfactors led to the discovery of the
+
+The '''index''' <math> [M:N] </math>  of a subfactor <math> N </math> is defined to be <math> \dim_N(L^2(M)) </math>.
+
+This states that if <math> N </math> is a subfactor of <math> M </math> (both of type <math> {\rm II}_1 </math>) then the index <math>[M:N]</math> is either of the form <math> 4 \cos(\pi /n)^2</math> for <math> n = 3,4,5,... </math>, or is at least <math> 4 </math>.

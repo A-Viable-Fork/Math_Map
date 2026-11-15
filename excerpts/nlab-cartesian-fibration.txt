@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, Cartesian fibration (page source)
+URL: https://ncatlab.org/nlab/source/Cartesian+fibration
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 036da592bcf0f5ca609b87e7a80c7ee59b99b9b3a1c74f365918dc392139c0ed
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+and such that there is a sufficient supply of [[cartesian morphisms]].
+
+Hence a Cartesian lift $(\gamma, \hat f)$ of $\gamma$ in $E&#39;$ having $y$ as target.
+
+It is an [[inner fibration]] that lifts also all right _outer_ [[horn]] inclusions

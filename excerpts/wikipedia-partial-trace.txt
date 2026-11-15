@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Partial trace (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1352052580
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 22eb1e8dc86e05c971e0c391fed35ca579d2de2289e69d9084e313e35515ec04
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The partial trace of ''ρ'' with respect to the system ''B'', denoted by <math>\rho ^A</math>, is called the reduced state of ''ρ'' on system ''A''.
+
+is called the reduced state of ''ρ'' on system ''A''.
+
+Let ''M'' be an observable on the subsystem ''A'', then the corresponding observable on the composite system is <math>M \otimes I</math>.

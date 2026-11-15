@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Functor/KanExtension/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 68f19ad37853b36dee9ad89fa42804ed007fcc9041322a196f8e09bea9aa9fcf
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Functor.IsLeftKanExtension (line 171)
+class IsLeftKanExtension : Prop where
+  nonempty_isUniversal : Nonempty (LeftExtension.mk F' α).IsUniversal
+
+-- CategoryTheory.Functor.IsRightKanExtension (line 78)
+class IsRightKanExtension : Prop where
+  nonempty_isUniversal : Nonempty (RightExtension.mk F' α).IsUniversal

@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Integral element (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381774461
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ae6ebcf3b8a56df5c1c35924121ad6b6e363a5793a239848e2eaaf7f287b8467
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The set of elements of <math>B</math> that are integral over <math>A</math> is called the '''integral closure''' of <math>A</math> in <math>B.</math>
+
+if ''b'' is a [[root of a polynomial|root]] of some [[monic polynomial]] over ''A''.
+
+an element ''b'' of a [[commutative ring]] ''B'' is said to be '''integral over''' a [[subring]] ''A'' of ''B''
+
+The integral closure of any subring <math>A</math> in <math>B</math> is, itself, a subring of <math>B</math> and contains <math>A.</math>
+
+In particular, the [[Krull dimension]]s of ''A'' and ''B'' are the same.
+
+It is the first step in [[resolution of singularities]] since it gives a process for resolving singularities of [[codimension]] 1.

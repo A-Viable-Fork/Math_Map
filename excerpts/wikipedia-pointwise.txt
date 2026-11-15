@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Pointwise (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1298665805
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b5df8503f123e2f59cd185c864872825e9d455be7a578f932081d0a00fe8018c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+are the ''pointwise operations'', that is, operations defined on functions by applying the operations to function values separately for each point in the [[domain of a function|domain]] of definition.
+
+The pointwise addition <math>f+g</math> of two functions <math>f</math> and <math>g</math> with the same domain and [[codomain]] is defined by:
+
+A binary operation {{math|''o'': ''Y'' × ''Y'' → ''Y''}} on a set {{mvar|Y}} can be lifted pointwise
+
+the set of all functions <math>X</math> to the [[carrier set]] of <math>A</math> can be turned into an algebraic structure of the same type in an analogous way.
+
+Pointwise operations inherit such properties as [[associativity]], [[commutativity]] and [[distributivity]] from corresponding operations on the [[codomain]].

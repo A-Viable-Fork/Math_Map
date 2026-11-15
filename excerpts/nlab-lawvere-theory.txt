@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, Lawvere theory (page source)
+URL: https://ncatlab.org/nlab/source/Lawvere+theory
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2677d19dc73b528d7dd1f58e3ae894e6f917989dabc04f49932c2f9935254d2e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+dissertation]], Bill Lawvere introduced a new categorical method for doing [[universal algebra]]
+
+finite product theories with the property that every object is isomorphic to a product of finitely many copies of a given object $x$.
+
+is a product-preserving [[functor]]
+
+alternative to the usual way of presenting an algebraic concept by means of its logical [[signature (in logic)|signature]] (with generating operations satisfying equational axioms).
+
+1. If $C$ is a category with finite products, then a group (object) in $C$ may be defined as a product-preserving functor

@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, free operad (page source)
+URL: https://ncatlab.org/nlab/source/free+operad
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c2a9d4b594dc3dbdbe453366c4d11dc77318390b12d51d61a6c5b8b47c7161f0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+And composition of operations is given by grafting of trees.
+
+the free operad on this collection has as $n$-ary operations the collection of all [[trees]] with $n$ leaves equipped with a labelling of each vertex $v$ with a $k$-ary operation
+
+The corresponding free operad has as $n$-ary operations all rooted trees with $n$ leaves.

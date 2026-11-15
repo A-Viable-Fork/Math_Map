@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: nLab, straightening functor (page source)
+URL: https://ncatlab.org/nlab/source/straightening+functor
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: a6bc1521b068feafd7442864145737b2f7e829e01da5db47157add1e783bf2e0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+which has been introduced under the name *straightening and unstraightening* in [Lurie 2009, Sec. 3.2](#Lurie09):
+
+the [[(∞,1)-Grothendieck construction]] takes the form of a [[Quillen equivalence]]
+
+takes the form of a [[Quillen equivalence]]
+
+* $Un_\phi$ is called the *unstraightening functor*.
+
+1. the global projective [[model structure on functors]] with values in the [[model structure on marked simplicial sets]].
+
+1. the [[model structure for Cartesian fibrations]]

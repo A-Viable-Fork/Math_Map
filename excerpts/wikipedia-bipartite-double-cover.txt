@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Bipartite double cover (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1335647863
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: fb9685f6eeb6a614669c5900448d1538f7f57dd5d2e081bfe346d4d1a5d1a98b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''bipartite double cover''' of an [[undirected graph]] {{mvar|G}} is a [[bipartite graph|bipartite]], [[covering graph]] of {{mvar|G}}, with twice as many [[Vertex (graph theory)|vertices]] as {{mvar|G}}.
+
+It can be constructed as the [[tensor product of graphs]], {{math|''G'' × ''K''{{sub|2}}}}.

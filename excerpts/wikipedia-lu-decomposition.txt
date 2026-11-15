@@ -1,0 +1,38 @@
+Excerpts, verbatim, from: Wikipedia, LU decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380927710
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 379539b1188ba4e3cd89531e1f6df42cb68bedae68fcfac868a3b11fd01daf92
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+factors a [[matrix (mathematics)|matrix]] as the product of a lower [[triangular matrix]] and an upper triangular matrix
+
+LU decomposition can be viewed as the matrix form of [[Gaussian elimination]].
+
+Let {{mvar|A}} be a square matrix. An '''LU factorization''' refers to expression of {{mvar|A}} into product of two factors – a lower triangular matrix {{mvar|L}} and an upper triangular matrix {{mvar|U}} such that {{math|1=''A'' = ''LU''}}. Sometimes factorization is impossible without prior reordering of {{mvar|A}} to prevent [[division by zero]] or uncontrolled growth of rounding errors.
+
+It turns out that a proper permutation of rows (or columns) to select column (or row) absolute maximal pivot {{math|''a''{{sub|11}}}} is sufficient for numerically stable LU factorization, except for known pathological cases.
+
+<math display=block> PA = LU, \quad (AQ=LU),</math>
+
+which, when correspondingly left- and right-multiplied to {{mvar|A}}, reorder the rows and columns of {{mvar|A}}. It turns out that all square matrices can be factorized in this form,
+
+and the factorization is numerically stable in practice.
+
+where {{mvar|D}} is a [[diagonal matrix]], and {{mvar|L}} and {{mvar|U}} are [[Triangular matrix#Unitriangular matrix|unitriangular matrices]], meaning that all the entries on the diagonals of {{mvar|L}} and {{mvar|U}} are one.
+
+<math display=block> A = LDU, </math>
+
+If {{mvar|A}} is [[invertible matrix|invertible]], then it admits an LU (or LDU) factorization [[if and only if]] all its leading principal [[minor (linear algebra)|minors]] are nonzero
+
+In this case the solution is done in two logical steps:
+
+# First, we solve the equation {{math|1={{itco|''L''}}'''y''' = {{itco|''P''}}'''b'''}} for {{math|'''y'''}}.
+
+# Second, we solve the equation {{math|1={{itco|''U''}}'''x''' = '''y'''}} for {{math|'''x'''}}.
+
+\det(A) &= \det\left(P^{-1}\right) \det(L) \det(U) \\
+
+'''lower–upper''' ('''LU''') '''decomposition''' or '''factorization'''
+
+A '{{dfni|lower-diagonal-upper decomposition}}' (LDU) is a decomposition of the form
+
+It is called '{{dfni|LU factorization with partial pivoting}}' (LUP):

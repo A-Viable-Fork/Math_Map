@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Krull–Schmidt theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380868315
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 539fe4f09d00b94b7598aba73e5534fe3313608c62f87be27c84064a9214186c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Krull–Schmidt theorem''' states that a [[group (mathematics)|group]] subjected to certain [[finite set|finiteness]] conditions
+
+Up to a permutation, the indecomposable components in such a direct sum are uniquely determined up to isomorphism.
+
+A module is '''strongly indecomposable''' if its ring of endomorphisms is local.
+
+of finite [[Length of a module|length]]), then <math>E</math> is a [[direct sum of modules|direct sum]] of [[indecomposable module]]s.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Separable extension (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373059862
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9f0f615c6c3b7d57016434b803f2c88691f53cbf799e3a5dd88b25235c2aba4c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The separable closure of {{math|''F''}} in an [[algebraic closure]] of {{math|''F''}} is simply called the '''[[separable closure]]''' of {{math|''F''}}.
+
+The separable closure of {{math|''F''}} in an [[algebraic closure]] of {{math|''F''}}
+
+is simply called the '''[[separable closure]]''' of {{math|''F''}}.
+
+every algebraic extension may be decomposed uniquely as a purely inseparable extension of  a separable extension.

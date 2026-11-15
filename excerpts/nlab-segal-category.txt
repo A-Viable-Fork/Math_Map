@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, Segal category (page source)
+URL: https://ncatlab.org/nlab/source/Segal+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 443ac301e3deb28c25a1fd949d75a1bba4c2376c9a9318010ac2ee9f4c1cf6dd
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion of _Segal category_ is one of the models for that of _[[(∞,1)-category]]_
+
+* such that $X_0$ is a [[discrete object|discrete]] (= constant) simplicial set;
+
+This property of the [[nerve]] of an ordinary category goes by the name _Segal condition_ and is what gave Segal categories its name.
+
+* a [[simplicial object|simplicial]] [[simplicial set]] ($\simeq$ [[bisimplicial set]]) $X \in [\Delta^{op}, sSet]$
+
+The notion of _Segal category_ is one of the models

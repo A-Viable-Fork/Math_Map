@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: numpy-fft, pinned source
+URL: https://raw.githubusercontent.com/numpy/numpy/v2.3.5/numpy/fft/__init__.py
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 3961349ba1ff6e5cafd70b6a42989753992ac45e8ed94c71715e6dd75534e511
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+that a convolution in the time domain is equivalent to a point-by-point
+multiplication in the frequency domain.

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Probability integral transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1359903284
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 07101bea55a54f6f4faffac2bae9684d8ade1685df04ae1d6d4f7f0a3342f3a7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Then the random variable <math>Y</math> defined as
+
+has a [[standard uniform distribution]].
+
+applying the inverse of the probability integral transform to convert random variables from a uniform distribution to have a selected distribution
+
+data values that are modeled as being [[random variable]]s from any given [[continuous distribution]]
+
+The result is sometimes modified or extended so that the result of the transformation is a standard distribution other than the uniform distribution

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Universal enveloping algebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1363419142
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3acb99aee5490d8bb50b8b43c872ad125ba24c750f38f6b0edd737b85832994e
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''universal enveloping algebra''' of a [[Lie algebra]] is the [[unital algebra|unital]] [[associative algebra|associative]] algebra whose [[Algebra representation|representations]] correspond precisely
+
+constructing the universal enveloping algebra as a quotient of the tensor algebra over <math>\mathfrak g</math>.
+
+the '''universal enveloping algebra''' of a [[Lie algebra]]
+
+The [[Poincaré–Birkhoff–Witt theorem]], discussed below, asserts that these elements are linearly independent and thus form a basis for the universal enveloping algebra.
+
+The Poincaré–Birkhoff–Witt theorem implies, in particular, that the elements <math>x_1,\ldots, x_n</math> themselves are linearly independent.

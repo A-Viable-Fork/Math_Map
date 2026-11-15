@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Commutator subgroup (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377919281
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 109a220b969781593416606627726657c4c89ea5ac33abe48cd0ca662979f5c1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is an abelian group called the '''abelianization''' of <math>G</math>
+
+The commutator subgroup is important because it is the [[Universal property|smallest]] [[normal subgroup]] such that the [[quotient group]] of the original group by this subgroup is [[abelian group|abelian]].
+
+The quotient <math>G/[G, G]</math> is an abelian group called the '''abelianization''' of <math>G</math>
+
+is universal for homomorphisms from <math>G</math> to an abelian group <math>H</math>
+
+So in some sense it provides a measure of how far the group is fr
+
+the '''commutator subgroup''' or '''derived subgroup''' of a [[group (mathematics)|group]]
+
+This motivates the definition of the '''commutator subgroup''' <math>[G, G]</math>
+
+[''G'',''G''] is a [[fully characteristic subgroup]] of ''G'', a property considerably stronger than normality.

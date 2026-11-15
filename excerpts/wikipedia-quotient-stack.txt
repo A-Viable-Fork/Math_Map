@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Quotient stack (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373926152
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f32acc3ce29acdb8e05af60115696f0f7680c17f443b74f09a1ef6fbb69931e3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Let ''G'' be an affine smooth [[group scheme]] over a scheme ''S'' and ''X'' an ''S''-scheme on which ''G'' [[group-scheme action|acts]]. Let the quotient stack <math>[X/G]</math> be the [[fibered category|category over]] the category of ''S''-schemes
+
+*an object over ''T'' is a [[torsor (algebraic geometry)|principal ''G''-bundle]] <math>P\to T</math> together with equivariant map <math>P\to X</math>;
+
+the space "X/G" is usually coarser.
+
+In general, <math>[X/G]</math> is an [[Artin stack]] (also called algebraic stack). If the stabilizers of the [[geometric point]]s are finite and reduced, then it is a [[Deligne–Mumford stack]].

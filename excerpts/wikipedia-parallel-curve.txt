@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Parallel curve (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380622918
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 0ee252e6bf218a3dbaad6def765cde761266eb33dd1a4c43dc9b8d4fc7323fb4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It can also be defined as a curve whose points are at a constant ''[[normal distance]]'' from a given curve.
+
+*As for [[parallel (geometry)|parallel lines]], a normal line to a curve is also normal to its parallels.
+
+*<math>\vec x'_d(t) \parallel  \vec x'(t),\quad</math> that means: the tangent vectors for a fixed parameter are parallel.
+
+*<math>k_d(t)=\frac{k(t)}{1+dk(t)},\quad</math> with <math>k(t)</math> the  [[curvature]] of the given curve
+
+*When parallel curves are constructed they will have [[Cusp (singularity)|cusp]]s when the distance from the curve matches the radius of [[curvature]].

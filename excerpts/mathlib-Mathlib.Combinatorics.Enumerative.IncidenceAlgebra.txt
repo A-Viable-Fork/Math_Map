@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Combinatorics/Enumerative/IncidenceAlgebra.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Combinatorics/Enumerative/IncidenceAlgebra.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: ffc9b9423b9bc9a4f97fbce4ac0bc86aeeb3b63b8f13359c30bf51fa301bc8d6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- IncidenceAlgebra.moebius_inversion_top (line 539)
+lemma moebius_inversion_top (f g : α → 𝕜) (h : ∀ x, g x = ∑ y ∈ Ici x, f y) (x : α) :
+    f x = ∑ y ∈ Ici x, mu 𝕜 x y * g y

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, monoidal category (page source)
+URL: https://ncatlab.org/nlab/source/monoidal+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9b0a5ece899f7d97005eec2f9c1e9c409ded85633c61461adaddc5f20a6f517b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **monoidal category** is a [[category]] equipped with some notion of &#39;tensor product&#39; of its [[objects]].
+
+For any monoidal category $M$, the operation of tensor product is actually a [[functor]]:
+
+out of the [[product category]] of $\mathcal{C}$ with itself, called the **[[tensor product]]**,
+
+\label{AssociatorInAMonoidalCategory}

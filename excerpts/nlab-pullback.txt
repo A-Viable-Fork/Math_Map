@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, pullback (page source)
+URL: https://ncatlab.org/nlab/source/pullback
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 24f0ea95539fcb0334cd2368737369b5a1457cf70d307d9e52634f6b0c3e97f7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a pullback is sometimes called a __fibered product__ (or _fiber product_ or _fibre product_).
+
+consisting of pairs $(a,b)$ such that the [[equation]] $f(a) = g(b)$ holds.
+
+Such a diagram is also called a **pullback diagram** or a [[cospan]].
+
+If the [[limit]] exists, we obtain a commutative square
+
+Pullbacks preserve [[monomorphisms]] and [[isomorphisms]]:

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Field of fractions (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1372290847
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2551c61863a67c23ef07f40bddcd089ef77b8fe309cc0fc7643d0f8bf65ca159
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''field of fractions''' of an [[integral domain]] is the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]].
+
+the '''field of fractions''' of an [[integral domain]]
+
+The field of fractions of an integral domain <math>R</math> is sometimes denoted by <math>\operatorname{Frac}(R)</math>
+
+the smallest [[field (mathematics)|field]] in which it can be [[Embedding|embedded]].
+
+Intuitively, it consists of ratios between integral domain elements.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, additive envelope (page source)
+URL: https://ncatlab.org/nlab/source/additive+envelope
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 2c915d18fe348a5bde87afcf3afcf00dee15e75487c2cb154d97a4a843c276ae
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The additive envelope of an [[Ab-enriched category]] $A$ is defined by taking the objects as formal direct sums of objects in $A$
+
+and morphisms as matrices of coefficients, giving an [[additive category]].  This is a universal construction.
+
+The additive envelope of an [[Ab-enriched category]] $A$
+
+and morphisms as matrices of coefficients, giving an [[additive category]].

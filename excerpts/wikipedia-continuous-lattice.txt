@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Continuous poset (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1114750496
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 72d1eefbcf9c76f6761856221754898b54e99db4caf27332f76b37beb1e858a7
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is [[isomorphic]] to the [[image (mathematics)|image]] of a [[Scott-continuous]] [[idempotent map]]
+
+Let <math>L</math> be a [[complete lattice]]. Then the following conditions are equivalent.

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, functor (page source)
+URL: https://ncatlab.org/nlab/source/functor
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1c6fbb8032060bd1e3095365b7fd3387d84bea9743761c6e7d47720f9710a61b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+* A *functor* is a [[homomorphism]] of [[categories]].
+
+a component-[[function]] of the [[classes]] of [[objects]];
+
+* A functor between [[small categories]] is a [[homomorphism]] of the [[underlying]] [[graphs]] that respects the [[composition]] of [[edges]].
+
+* $F$ preserves [[commuting diagrams]].
+
+* it respects [[composition]]: the image of the composite of two morphisms under $F$ is the composite of their images.

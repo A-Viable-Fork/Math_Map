@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Jordan–Chevalley decomposition (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1376010683
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e57bbb9b255f48ed8d893ed9fe6a3f9ce9e9d8af4e797431701642e8f8f7b14f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Jordan–Chevalley decomposition''', named after [[Camille Jordan]] and [[Claude Chevalley]], expresses a [[linear operator]] in a unique way as the sum of two other linear operators which are simpler to understand.
+
+can be written as a polynomial (with coefficients from <math> K </math>) in <math> x </math> with zero constant coefficient.
+
+The commutativity condition on the decomposition yields
+
+If <math> K </math> is a [[perfect field]], then every polynomial is a product of separable polynomials
+
+there is a unique Jordan-Chevalley decomposition

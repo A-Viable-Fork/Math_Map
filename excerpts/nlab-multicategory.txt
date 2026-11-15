@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, multicategory (page source)
+URL: https://ncatlab.org/nlab/source/multicategory
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6fc4f9193d7295f55ef3b6cf14552f1b0d703a6250dd512935d4935162d52a52
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Another term for _multicategory_ is (nonsymmetric/planar)_coloured [[operad]]_.
+
+* A source map $s: C_1 \to (C_0)*$ to the collection of finite, possibly empty [[list]]s of objects
+
+We write $f: c_1, \ldots, c_n \to c$ to indicate the source and target of a multimorphism $f$.

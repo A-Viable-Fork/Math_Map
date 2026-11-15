@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, braided monoidal category (page source)
+URL: https://ncatlab.org/nlab/source/braided+monoidal+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9c3604d7caec557136d8bdcf816066e99a96b18f44ab542b1660bd3d3ed48281
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+called the **[[braiding]]**, such that the following two kinds of [[commuting diagram|diagrams commute]] for all [[objects]] involved
+
+(called the **hexagon identities** encoding the compatibility of the braiding with the [[associator]] for the tensor product):
+
+Intuitively speaking, a braided monoidal category is a category with a tensor product and an isomorphism called the &#39;braiding&#39;
+
+an isomorphism called the &#39;braiding&#39; which lets us &#39;switch&#39; two objects in a tensor product like $x \otimes y$.
+
+then the braided monoidal category is called a _[[symmetric monoidal category]]_.

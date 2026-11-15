@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, complete Segal space (page source)
+URL: https://ncatlab.org/nlab/source/complete+Segal+space
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 406b71370c2787f53180e6ae3615c95b28c7c930cc57684693453878af26c0b0
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+They are also called _Rezk categories_ after [[Charles Rezk]].
+
+the sub-simplicial object $Core(X_\bullet)$ on the invertible morphisms in each degree is homotopy constant
+
+* forming a [[simplicial object]] $X_\bullet$ in [[sSet]] (a [[bisimplicial set]]);
+
+More in detail, a complete Segal space $X$ is
+
+So complete Segal spaces present [[(∞,1)-categories]].

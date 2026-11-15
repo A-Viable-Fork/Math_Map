@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Fox derivative (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1280013860
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 0c2d138751d863977b712a4cabdf27eb5b9af0ab8257ee4d976c97d311d1ea0a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Fox derivative''' is an [[algebra]]ic construction in the theory of [[free group]]s which bears many similarities to the conventional [[derivative]] of [[calculus]].
+
+If <math>G</math> is a free group with identity element <math>e</math> and [[generating set of a group|generators]] <math>g_i</math>, then the Fox derivative with respect to <math>g_i</math> is a function from <math>G</math> into the [[integral group ring]] <math>\Z G</math>
+
+* <math>\frac{\partial}{\partial g_i}(uv) = \frac{\partial}{\partial g_i}(u) + u\frac{\partial}{\partial g_i}(v)</math> for any elements <math>u</math> and <math>v</math> of <math>G</math>.
+
+The Fox derivative has applications in [[group cohomology]], [[knot theory]], and [[covering space]] theory, among other areas of mathematics.

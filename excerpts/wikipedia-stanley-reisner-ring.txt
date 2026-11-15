@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Stanley-Reisner ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1367373436
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: baa16b17e809a2a5841ad1aa17eb5e17b8489059d7bfddeff6294bdfbc96edda
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Given an [[abstract simplicial complex]] Δ on the vertex set {''x''<sub>1</sub>,...,''x''<sub>''n''</sub>} and a field '''k'''
+
+: <math> I_\Delta=(x_{i_1}\ldots x_{i_r}: \{i_1,\ldots,i_r\}\notin\Delta), \quad k[\Delta]=k[x_1,\ldots,x_n]/I_\Delta. </math>
+
+* The multigraded, or ''fine'', [[Hilbert series]] of '''k'''[Δ] is given by the formula
+
+\sum_{\sigma\in\Delta}\prod_{i\in\sigma}\frac{x_i}{1-x_i}. </math>
+
+then the coefficients (''h''<sub>0</sub>, ..., ''h''<sub>''d''</sub>) of the numerator form the ''h''-vector of the simplicial complex&nbsp;Δ.

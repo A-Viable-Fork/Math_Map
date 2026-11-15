@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, sheafification (page source)
+URL: https://ncatlab.org/nlab/source/sheafification
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: c861d8d4da8a4515d3393cfe3d9254d67d4bdd237bb9ce6e6568e8d0e8ab0138
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It is characterized as being the [[left adjoint|left]] [[adjoint functor]] $L : PSh(C) \to Sh(C)$ to the inclusion $Sh(C) \hookrightarrow PSh(C)$ of sheaves into all presheaves
+
+exhibiting this as a [[reflective subcategory]].

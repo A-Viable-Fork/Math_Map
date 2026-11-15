@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Exponential map (Lie theory) (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1356799612
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 1eadf77937077c9c9389f023f02471f90f896c310e2c7c3f69286086ebeddd6f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The exponential map coincides with the [[matrix exponential]] and is given by the ordinary series expansion:
+
+restricts to a [[diffeomorphism]] from some neighborhood of 0 in <math>\mathfrak g</math> to a neighborhood of 1 in <math>G</math>.
+
+the exponential map is the restriction of the matrix exponential to the Lie algebra <math>\mathfrak g</math> of <math>G</math>.
+
+the map <math>\gamma(t) = \exp(tX)</math> is the unique [[one-parameter subgroup]] of <math>G</math>

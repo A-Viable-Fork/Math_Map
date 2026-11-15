@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: Wikipedia, Hyperhomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1365289135
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 55edd4582bbb3516f8f9c4621563eea6702b2ce9bb6042cd9d5134548810424f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+One application of hypercohomology spectral sequences are in the study of [[Gerbe|gerbes]].

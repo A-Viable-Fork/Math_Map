@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Exact sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384254588
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 6c35fb9c26a3cea551fbf3906fa5b80310d3c64621cdc37a544143167ffeeee2
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+an '''exact sequence''' is a sequence of [[morphisms]] between objects (for example, [[Group (mathematics)|groups]], [[Module (mathematics)|modules]], and, more generally, objects of an [[abelian category]]) such that the [[Image (category theory)|image]] of one morphism equals the [[kernel (category theory)|kernel]] of the next.
+
+of groups and [[group homomorphism]]s is said to be '''exact''' '''at''' <math>G_i</math> if <math>\operatorname{im}(f_i)=\ker(f_{i+1})</math>.
+
+The [[snake lemma]] shows how a [[commutative diagram]] with two exact rows gives rise to a longer exact sequence.

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Involute (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1363148116
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 67b4f116ca047021a26dec1824d6996f89d310008564c43de47134c1773c53a3
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+An example of the involute of a curve is the [[Locus (mathematics)|locus]] of a point on a piece of taut string as the string is either unwrapped from or wrapped around the curve.
+
+The [[evolute]] of an involute is the original curve.

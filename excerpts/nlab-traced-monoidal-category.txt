@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: nLab, traced monoidal category (page source)
+URL: https://ncatlab.org/nlab/source/traced+monoidal+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 90bda4ec7d13548803008188d11bc2b3524c2ff5cb2521f94bf341ed4f76fe32
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The trace is a minor generalization of matrix trace:

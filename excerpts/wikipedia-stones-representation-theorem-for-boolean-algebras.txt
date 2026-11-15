@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Stone's representation theorem for Boolean algebras (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1312231128
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7d08f2265f1c156c1c0282da9ff190640fd166f59f7c7af4c3fe1bf22efdc02b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A simple version of '''Stone's representation theorem''' states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'').
+
+For every Boolean algebra ''B'', ''S''(''B'') is a [[Compact space|compact]] [[totally disconnected]] [[Hausdorff space]]
+
+For every Boolean algebra ''B''
+
+such spaces are called '''Stone spaces''' (also ''profinite spaces'').
+
+states that every Boolean algebra ''B'' is isomorphic to the algebra of clopen subsets of its Stone space ''S''(''B'').
+
+In other words, there is a [[contravariant functor]] that gives an [[Equivalence (category theory)|equivalence]] between the categories.
+
+there is a [[contravariant functor]]

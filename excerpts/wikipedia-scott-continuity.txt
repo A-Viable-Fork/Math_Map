@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Scott continuity (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384071998
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ec2e355cafd6fb217ba42e3b495a7726c98a3d8e70fa99d2dc98acef73fbc962
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The Scott-open subsets of a partially ordered set ''P'' form a [[topological space|topology]] on ''P,'' the '''Scott topolo
+
+is called '''Scott-open''' if it is an [[upper set]] and if it is '''inaccessible by directed joins'''
+
+The Scott topology was first defined by Dana Scott for [[complete lattice]]s and later defined for arbitrary partially ordered sets.
+
+The order relation of a dcpo ''D'' can be reconstructed from the Scott-open sets as the specialization order induced by the Scott topology.
+
+it satisfies the [[T0 separation axiom|T<sub>0</sub> separation axiom]])

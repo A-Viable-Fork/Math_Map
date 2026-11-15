@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Mirsky's theorem (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1184448688
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ddf845774ba5dfe90cd3bfb69708c30fe0e09bd9f9e2a3287cf1074939f8b337
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]], a [[total order|totally ordered]] subset of the given partial order.
+
+The height of a partially ordered set is defined to be the maximum cardinality of a [[antichain|chain]]
+
+'''Mirsky's theorem''' characterizes the height of any finite [[partially ordered set]] in terms of a partition of the order into a minimum nu
+
+characterizes the height of any finite [[partially ordered set]]
+
+a [[total order|totally ordered]] subset of the given partial order.

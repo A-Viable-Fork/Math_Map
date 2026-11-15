@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, cyclic operad (page source)
+URL: https://ncatlab.org/nlab/source/cyclic+operad
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f1f3a6e199a54bffa057f8efe1274f248923302fc44f33b02572f7682c83eefa
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The notion of *cyclic operads* ([Getzler &amp; Kapranov 1995](#GetzlerKapranov1995))
+
+the [[cyclic group]] $\mathbb{Z}_{/(n+1)}$ which rotates the $n+1$ in/outputs into each other.
+
+for a cyclic operad this is extended to an [[group action|action]] of $Sym(n+1)$
+
+The notion of *cyclic operads*
+
+in which the distinction between &quot;inputs&quot; and &quot;output&quot; of operations is made to disappear.
+
+(the unique root of one tree to any of the leaves of another)
+
+where the [[composition]] operations in a symmetric operad are indexed by grafting of [[rooted trees]]

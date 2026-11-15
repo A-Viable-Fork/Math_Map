@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, sifted colimit (page source)
+URL: https://ncatlab.org/nlab/source/sifted+colimit
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 3834f7e052391bb6c79ac9ac7d3d3e530d21c3d3de6714eaf6402fa07a9d5f3b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A _sifted colimit_ is a [[colimit]] of a [[diagram]] $D \to C$ where $D$ is a [[sifted category]]
+
+In fact, sifted colimits can &quot;almost&quot; be characterized as combinations of [[filtered colimits]] and reflexive coequalizers.
+
+Such colimits [[limits commuting with colimits|commute]] with finite [[products]] in [[Set]], by definition.

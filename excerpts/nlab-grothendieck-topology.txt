@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: nLab, Grothendieck topology (page source)
+URL: https://ncatlab.org/nlab/source/Grothendieck+topology
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5ad16c22668d3be298bc0627f69debdfed4e9702b663bf2b9bcb777649d62765
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A category equipped with a Grothendieck topology is a [[site]].
+
+Probably the main point of having a site is so that one can define [[sheaf|sheaves]]

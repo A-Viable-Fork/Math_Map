@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, homotopy category of a model category (page source)
+URL: https://ncatlab.org/nlab/source/homotopy+category+of+a+model+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 0b902960563e514144ec8f2235939b0450350362f03062fb92cec34a0db7c953
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+For $\mathcal{C}$ a [[category with weak equivalences]], its _[[homotopy category]]_ (or: _[[localization]]_ at the weak equivalences)
+
+Let $\mathcal{C}$ be a [[model category]]. Write $Ho(\mathcal{C})$ for the [[category]] whose
+
+Write $Ho(\mathcal{C})$ for the [[category]] whose

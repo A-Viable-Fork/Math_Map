@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Analysis/SpecialFunctions/ContinuousFunctionalCalculus/Rpow/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: e1ac3759d4ac4233afd2662bb5a53232c40df19d7839f1d3aea704ecce43aceb
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CFC.sq_sqrt (line 641)
+lemma sq_sqrt (a : A) (ha : 0 ≤ a := by cfc_tac) : (sqrt a) ^ 2 = a
+
+-- CFC.sqrt_nonneg (line 234)
+lemma sqrt_nonneg (a : A) : 0 ≤ sqrt a

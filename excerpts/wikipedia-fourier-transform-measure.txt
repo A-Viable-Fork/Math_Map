@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Fourier transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382587942
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: ffa23135eaca08d2e2443113a5ecf21f10964758081940bed3778006ae715696
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+is called the ''Fourier–Stieltjes transform''
+
+The Fourier transform of a [[finite measure|finite]] [[Borel measure]] {{mvar|μ}} on {{math|'''R'''<sup>''n''</sup>}}, given by the bounded, uniformly continuous function:
+
+then its Fourier–Stieltjes transform is, by definition, a [[Characteristic function (probability theory)|characteristic function]].
+
+The Fourier transform of a [[finite measure|finite]] [[Borel measure]]
+
+given by the bounded, uniformly continuous function:
+
+[[Bochner's theorem]] characterizes which functions may arise as the Fourier–Stieltjes transform of a positive measure on the circle.
+
+the Fourier-Stieltjes transform need not vanish at infinity, i.e., the [[Riemann–Lebesgue lemma]] fails for measures.

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, coequalizer (page source)
+URL: https://ncatlab.org/nlab/source/coequalizer
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5b2aee2b7e30fd352e97f75d9f82a038a0069b000ac0472beb0eba01825202d1
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the **coequalizer** $coeq(f,g)$ of two [[parallel morphisms]] $f$ and $g$
+
+is (if it exists), the _[[colimit]]_ under the [[diagram]] formed by these two morphisms
+
+Morphisms that coequalize some pair of [[parallel morphisms]] are called *[[regular epimorphisms]]*.
+
+This means that the [[quotient]] function

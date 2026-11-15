@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Burnside ring (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378038404
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 4bf6297abdc97df435d506a9ba68c848aaf4d3d7ea0256e9a00593c4d98ded1f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Given a [[finite group]] ''G'', the generators of its Burnside ring Ω(''G'') are the formal sums of isomorphism classes of finite [[Group action (mathematics)|''G''-sets]]. For the [[Ring (mathematics)|ring structure]], addition is given by [[disjoint union]] of ''G''-sets and multiplication by their [[Cartesian product]].
+
+The Burnside ring is a free '''Z'''-[[Module (mathematics)|module]], whose generators are the (isomorphism classes of) [[Group action (mathematics)|orbit types]] of ''G''.

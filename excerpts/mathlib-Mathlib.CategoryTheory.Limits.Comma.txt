@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Limits/Comma.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Limits/Comma.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 9565285e62748b0b825d254504fb8957057fa548ab69f3517003419153134b27
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.Comma.hasLimitsOfShape (line 172)
+instance hasLimitsOfShape [HasLimitsOfShape J A] [HasLimitsOfShape J B]
+    [PreservesLimitsOfShape J R] : HasLimitsOfShape J (Comma L R)
+
+-- CategoryTheory.Comma.hasColimitsOfShape (line 187)
+instance hasColimitsOfShape [HasColimitsOfShape J A] [HasColimitsOfShape J B]
+    [PreservesColimitsOfShape J L] : HasColimitsOfShape J (Comma L R)

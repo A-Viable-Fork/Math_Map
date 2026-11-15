@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Cremona group (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1378527059
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: e7bf79de4c7f382c53806cf4c764e7d0017824fab689c2066e09763d0bac48b5
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Cremona group''', named after [[Luigi Cremona]], is [[Birational geometry#Birational automorphism groups|the group of birational automorphisms]] of the <math>n</math>-dimensional [[projective space]]
+
+The Cremona group is naturally identified with the [[automorphism group]] <math>\mathrm{Aut}_k(k(x_1, ..., x_n)) </math> of the [[rational function|field of the rational function]]s
+
+The [[projective general linear group]] <math>\mathrm{PGL}_{n+1}</math> is contained in <math>Cr_n</math>. The two are equal only when <math>n=0</math> or <math>n=1</math>

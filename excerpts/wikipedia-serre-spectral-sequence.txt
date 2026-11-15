@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Serre spectral sequence (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373949739
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 6bb2c9baab959410164f883a889017509bfaaa7faf6b241b7d4d1716c22b9612
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It expresses, in the language of [[homological algebra]], the singular (co)homology of the total space ''X'' of a (Serre) [[fibration]]
+
+the singular (co)homology of the total space ''X'' of a (Serre) [[fibration]] in terms of the (co)homology of the [[base space]] ''B'' and the fiber ''F''.
+
+Let <math>f\colon X\to B</math> be a [[fibration#Serre fibrations|Serre fibration]] of topological spaces
+
+It expresses, in the language of [[homological algebra]], the singular (co)homology of the total space ''X''
+
+what is meant is cohomology with respect to the [[local coefficient system]] on ''B'' given by the cohomology of the various fibers.

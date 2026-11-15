@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Group cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377238214
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: e0b8c162d911c0b7b9636bf773521aeba3776cfbfecc2346b0fea32cbe00792a
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Then ''H''<sub>''n''</sub>(''G'', ''M'') are the homology groups of this chain complex, <math>H_n(G,M)=H_n(F\otimes_{\Z[G]}M)</math> for ''n'' ≥ 0.
+
+<math>H_n(G,M)=H_n(F\otimes_{\Z[G]}M)</math> for ''n'' ≥ 0.
+
+Then ''H''<sub>''n''</sub>(''G'', ''M'') are the homology groups of this chain complex
+
+The first cohomology group is the quotient of the so-called ''crossed homomorphisms''
+
+:<math>H^{n}(G,M) = \operatorname{Ext}^{n}_{\Z [G]}(\Z, M).

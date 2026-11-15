@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: Wikipedia, Krull dimension (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374476368
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 7f65c1bcc4868efff3d247befd6409dd47cbc07fe4a768cd1ac861635699f83b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Krull dimension''' of a [[commutative ring]] ''R'', named after [[Wolfgang Krull]], is the [[supremum]] of the lengths of all [[chain (order theory)|chain]]s of [[prime ideals]].
+
+We define the '''Krull dimension''' of <math>R</math> to be the supremum of the lengths of all chains of prime ideals in <math>R</math>.
+
+The Krull dimension need not be finite even for a [[Noetherian ring]].

@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: nLab, classifying topos (page source)
+URL: https://ncatlab.org/nlab/source/classifying+topos
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 9a763b2b3795c49956d17aff7454500a97f4bf4991cc5917774e1f49e6b21b25
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+So the **classifying [[topos]]** for the [[geometric theory]] $T$ is a [[Grothendieck topos]] $S[T]$ equipped with a &quot;universal model $U$ of $T$&quot;.
+
+for any Grothendieck topos $E$, the category of $T$-models in $E$ is equivalent to the category of geometric morphisms $E \to S[T]$.
+
+for the [[geometric theory]] $T$
+
+equipped with a &quot;universal model $U$ of $T$&quot;.
+
+the category of $T$-models in $E$ is equivalent to the category of geometric morphisms $E \to S[T]$.

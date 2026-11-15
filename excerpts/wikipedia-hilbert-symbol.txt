@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Hilbert symbol (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1363529473
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: 0b86f63164fd6590ddd76360d392f496180f3856f481abf000a818fd39659d9c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Hilbert symbol''' or '''norm-residue symbol''' is a function
+
+Over a local field <math>K</math> with [[multiplicative group]] of non-zero elements <math>K^\times</math>,
+
+the quadratic Hilbert symbol is the [[function (mathematics)|function]] <math>K^\times\times K^\times\to\{\pm 1\}</math> defined by
+
+:<math>(a,b)=\begin{cases}+1,&\mbox{ if }z^2=ax^2+by^2\mbox{ has a non-zero solution }(x,y,z)\in K^3;\\-1,&\mbox{ otherwise.}\end{cases}</math>
+
+Equivalently, <math>(a, b) = 1</math> if and only if <math>b</math> is equal to the [[Field norm|norm]] of an element of the quadratic extension <math>K[\sqrt{a}]</math>.
+
+The (bi)multiplicativity, i.e.,
+
+:<math>(a,b_1b_2)=(a,b_1)\cdot(a,b_2)</math>

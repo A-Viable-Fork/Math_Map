@@ -1,0 +1,10 @@
+Excerpts, verbatim, from: nLab, cartesian product (page source)
+URL: https://ncatlab.org/nlab/source/cartesian+product
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 63ea975ba1a46a1e34129ec2091a2c623a5f6e6e9f5c254d6863dcd1f4f44f08
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+(as a special case of a category-theoretic _[[limit]]_)
+
+such that it is [[universal property|universal with this property]]
+
+(the _[[projections]]_), for each $i

@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Cohomology (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377746958
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b7a9f9465096bc476ae3d437feefcf93d38db4d37948187dc62c17cfee40e007
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+The most important cohomology theories have a product, the [[cup product]], which gives them a [[ring (mathematics)|ring]] structure.
+
+into a [[graded ring]], called the '''[[cohomology ring]]''' of <math>X</math>.

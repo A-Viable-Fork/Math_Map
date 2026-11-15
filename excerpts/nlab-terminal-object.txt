@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, terminal object (page source)
+URL: https://ncatlab.org/nlab/source/terminal+object
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: de1511c5afab64990aa73096bd8287e4ca854e498f87c1a21667e17a4dbe6c80
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A **terminal object** in a [[category]] $C$ is an [[object]] $1$ of $C$ satisfying the following [[universal property]]:
+
+for every object $x$ of $C$, there exists a unique [[morphism]] $!:x\to 1$.
+
+A **terminal object** in a [[category]] $C$ is an [[object]] $1$ of $C$
+
+The terminal object of any category, if it exists, is unique up to unique [[isomorphism]].

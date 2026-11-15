@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Inverse Laplace transform (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1366640671
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: f53ea1215d17494bdea55b287e32b18d6c97d8241621a2b0ca161f73aca5bedb
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+where the integration is done along the vertical line <math>\textrm{Re}(s) = \gamma</math> in the [[complex plane]]
+
+for example if the contour path is in the [[region of convergence]].
+
+:<math>f(t) = \mathcal{L}^{-1} \{F(s)\}(t) =  \frac{1}{2\pi i}\lim_{T\to\infty}\int_{\gamma-iT}^{\gamma+iT}e^{st}F(s)\,ds</math>
+
+then <math>f</math> is uniquely determined

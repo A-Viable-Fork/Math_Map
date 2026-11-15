@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Jacobson radical (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1379844793
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 34c31046228b985f1cda8b7342399e64736b215ae2b2b776ece0aea04cdc8bd4
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Jacobson radical''' of a [[Ring (mathematics)|ring]] <math>R</math> is the [[ideal (ring theory)|ideal]]
+
+It is also true that J(''R'') equals the intersection of all maximal left ideals within the ring.
+
+The Jacobson radical plays a prominent role in many ring- and module-theoretic results, such as [[Nakayama's lemma]].
+
+For a general ring with unity <math>R</math>
+
+the Jacobson radical <math>J(R)</math> is defined as the ideal of all elements <math>r\in R</math> such that <math>rM=0</math> whenever <math>M</math> is a [[simple module|simple]] <math>R</math>-module.

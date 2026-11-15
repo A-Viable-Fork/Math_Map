@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Algebraic K-theory (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1382064269
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 30043163bc1eeac1dcad5ce383a43eed07a8c4b0c759b6e5954747b1383fe380
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Quillen was led to define the ''K''-theory of ''R'' as the homotopy groups of ''BGL''(''R'')<sup>+</sup>.
+
+This modification was called the [[plus construction]].
+
+This new definition began with an [[exact category]]
+
+The functor ''K''<sub>0</sub> takes a ring ''A'' to the [[Grothendieck group]] of the set of isomorphism classes of its [[finitely generated module|finitely generated]] [[projective module]]s

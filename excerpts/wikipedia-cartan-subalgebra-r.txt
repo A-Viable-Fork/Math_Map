@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Cartan subalgebra (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374197769
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4beb9435780ef242e3a46c472c6b1fbbf6989bdfdbfe1457e9da62f77db6ad29
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Cartan subalgebra''', often abbreviated as '''CSA''', is a [[nilpotent Lie algebra|nilpotent]] [[subalgebra]] <math>\mathfrak{h}</math> of a [[Lie algebra]] <math>\mathfrak{g}</math> that is [[self-normalising]]
+
+a Cartan subalgebra can also be defined as a maximal toral subalgebra.
+
+of a [[Lie algebra]] <math>\mathfrak{g}</math> that is [[self-normalising]]
+
+a '''Cartan subalgebra''', often abbreviated as '''CSA'''
+
+The common dimension of a Cartan subalgebra is then called the

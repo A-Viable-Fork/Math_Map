@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Anamorphism (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1381168143
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b6d333a1a4882b7918ac50b106148f60bc51f2488d929c75e7eaf98789619157
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+denotes the assignment of a [[coalgebra]] to its unique [[morphism]] to the [[Initial algebra|final coalgebra]] of an [[endofunctor]].
+
+an '''anamorphism''' is a generalization of the concept of ''[[Fold (higher-order function)|unfolds]]'' on coinductive [[List (computing)|lists]].

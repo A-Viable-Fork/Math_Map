@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: nLab, co-Yoneda lemma (page source)
+URL: https://ncatlab.org/nlab/source/co-Yoneda+lemma
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 5253665633463978cad68031f6b77acd95e2615b96af5f3e7afb33e99434f35c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+What is sometimes called the _co-Yoneda lemma_ or _density formula_ is a basic fact about [[presheaves]]
+
+it says that every [[presheaf]] is a [[colimit]] of [[representable functor|representables]]
+
+Under [[duality|abstract duality]] an [[end]] turns into a [[coend]], so a co-Yoneda lemma ought to be a similarly fundamental expression for $F(c)$ in terms of a [[coend]].
+
+## Every presheaf is a colimit of representables
+
+Yet another way to state this is as a [[colimit]] over the [[comma category]] $(Y,F)$, for $Y$ the [[Yoneda embedding]] (the [[category of elements]] of $F$):
+
+is canonically presented as a colimit of representables, we exhibit a natural isomorphism
+
+it is the &quot;colimit over itself of all the representables contained in it&quot;

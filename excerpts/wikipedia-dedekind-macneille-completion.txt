@@ -1,0 +1,14 @@
+Excerpts, verbatim, from: Wikipedia, Dedekind–MacNeille completion (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1377697498
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 892f4fafdfebbaf05429f5b2508172d5877a6a96b3afe3c459365c6bb6d6a22d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+It is named after [[Holbrook Mann MacNeille]] whose 1937 paper first defined and constructed it
+
+define a ''cut'' to be a pair of sets {{math|(''A'', ''B'')}} for which {{math|1=''A''<sup>u</sup> = ''B''}}
+
+is the smallest [[complete lattice]] that contains it.
+
+is join-dense and meet-dense in the Dedekind–MacNeille completion
+
+However, the completion of a [[distributive lattice]] need not itself be distributive

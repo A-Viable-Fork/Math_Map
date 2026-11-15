@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Wikipedia, Wreath product (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1380815775
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: b8f8c7907f42fbd8563f0c2d02a3dc2dcf49cf4ff199f4ee7120df776995d79b
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+This is also known as the ''Krasner–Kaloujnine embedding theorem''.
+
+If <math>G</math> is an [[Group extension|extension]] of <math>A</math> by <math>H</math>, then there exists a subgroup of the unrestricted wreath product <math>A\wr H</math> which is isomorphic to <math>G</math>.

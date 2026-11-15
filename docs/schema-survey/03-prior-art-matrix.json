@@ -1,0 +1,625 @@
+{
+  "generationCommit": "d0f272d",
+  "statusKey": {
+    "exists": "the candidate data kind has a concrete fetched representation precedent, not necessarily the proposed integration",
+    "partial": "related representational machinery exists; at least one essential part remains unestablished",
+    "unknown": "the full kind was not established by this bounded fetched-source search; no absence claim"
+  },
+  "candidates": [
+    {
+      "candidate": "C01",
+      "status": "partial",
+      "receipts": [
+        "PA12",
+        "PA18"
+      ],
+      "form": "Wikidata reifies property-value statements with qualifiers/references; OMDoc has statement classes. Atomic logical entailment is additional work.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C02",
+      "status": "partial",
+      "receipts": [
+        "PA01",
+        "PA06"
+      ],
+      "form": "Dependent terms and relation-respecting morphism signatures are substrates. The proposed map-side obligation environment is not specified by these pages.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C03",
+      "status": "partial",
+      "receipts": [
+        "PA01",
+        "PA17"
+      ],
+      "form": "Bound variables and context/theory interpretation can express operand roles. Cross-step D9 resource identity remains a design obligation.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C04",
+      "status": "partial",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "OMDoc separates definitions, theorems, axioms and examples. The proposed partial/stochastic/choice shape vocabulary needs a separate specification.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C05",
+      "status": "partial",
+      "receipts": [
+        "PA13",
+        "PA19"
+      ],
+      "form": "Wikidata stores defining formulas; EDOAL transforms encodings/units. Neither fetched window specifies dependent probabilistic guarantee discharge.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C06",
+      "status": "exists",
+      "receipts": [
+        "PA09",
+        "PA18"
+      ],
+      "form": "OEIS keeps examples separate from generating programs/formulas; OMDoc distinguishes examples as statements. Executable example receipts remain local work.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C07",
+      "status": "partial",
+      "receipts": [
+        "PA03",
+        "PA12"
+      ],
+      "form": "Axiom dependencies and ranked referenced statements exist. A rank is not a theorem's mathematical standing; the exact status ledger is not established here.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C08",
+      "status": "exists",
+      "receipts": [
+        "PA03"
+      ],
+      "form": "Lean tracks a proof's axiom dependencies for auditing. A foundation-crossing admission policy still belongs to the receiver.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C09",
+      "status": "unknown",
+      "receipts": [
+        "PA09",
+        "PA19"
+      ],
+      "form": "Formulas and transformation expressions are present; no fetched source establishes the proposed family/degeneration record with limiting losses.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C10",
+      "status": "partial",
+      "receipts": [
+        "PA19",
+        "PA14"
+      ],
+      "form": "Encoding/unit conversions and formula symbols have records. A mathematical sign/normalization profile still needs defining equations.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C11",
+      "status": "exists",
+      "receipts": [
+        "PA05",
+        "PA06"
+      ],
+      "form": "Mathlib transfers algebraic structure using an equivalence; Rocq supports functions respecting relation signatures. The required law must be proved.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C12",
+      "status": "partial",
+      "receipts": [
+        "PA08",
+        "PA17"
+      ],
+      "form": "Adjunction coherence and theory interpretations encode structured mathematical specifications. A generic universal-property query interface was not found here.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C13",
+      "status": "partial",
+      "receipts": [
+        "PA01"
+      ],
+      "form": "Dependent types provide a representation substrate. Explicit convergence-region output and its inference rules are not documented in the fetched page.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C14",
+      "status": "unknown",
+      "receipts": [
+        "PA10",
+        "PA22"
+      ],
+      "form": "Reliability links and provenance activities are related records. A compositional noise/error model is not established by these sources.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C15",
+      "status": "exists",
+      "receipts": [
+        "PA04"
+      ],
+      "form": "Mathlib Equiv stores the forward/inverse structure and composes/reverses equivalences. Restricted domains require subtypes or separate hypotheses.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C16",
+      "status": "exists",
+      "receipts": [
+        "PA08"
+      ],
+      "form": "The nLab adjunction definition explicitly includes unit/counit triangle identities. It is narrative mathematics here, not a checked map edge.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C17",
+      "status": "partial",
+      "receipts": [
+        "PA06",
+        "PA17"
+      ],
+      "form": "Relation-aware morphism signatures and theory interpretation support directed transport; arbitrary duality/variance data require actual theorems.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C18",
+      "status": "partial",
+      "receipts": [
+        "PA17"
+      ],
+      "form": "A view interprets a source theory in a target theory. A text saying generalizes does not supply a valid view or premise implication.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C19",
+      "status": "partial",
+      "receipts": [
+        "PA10",
+        "PA12"
+      ],
+      "form": "Object pages and referenced statements are established identity infrastructure. Same-name mathematical operation canonicalization is not certified by either.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C20",
+      "status": "partial",
+      "receipts": [
+        "PA17",
+        "PA19"
+      ],
+      "form": "Theory representations and data transformations have explicit arrows. Numerical refinement bounds and executable correctness are additional obligations.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C21",
+      "status": "unknown",
+      "receipts": [
+        "PA19"
+      ],
+      "form": "Encoding transformations exist; the fetched source does not establish topology-sensitive continuum/discrete convergence records.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C22",
+      "status": "partial",
+      "receipts": [
+        "PA16"
+      ],
+      "form": "MMT composes theory morphisms. A control-flow recipe with external resources needs more than this composition operation.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C23",
+      "status": "partial",
+      "receipts": [
+        "PA05",
+        "PA06"
+      ],
+      "form": "Transport of algebraic structure and relation-respecting rewriting are verified-rule forms. A map-wide dictionary of analytic intertwinings needs claim-specific equations.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C24",
+      "status": "unknown",
+      "receipts": [
+        "PA22"
+      ],
+      "form": "PROV models bounded activities; the fetched sources do not give temporal propagation rules for the map's state/step/trace invariant classes.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C25",
+      "status": "unknown",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "OMDoc distinguishes assertion forms, but this fetched module list establishes no obstruction-planning record or pruning rule.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C26",
+      "status": "partial",
+      "receipts": [
+        "PA09",
+        "PA18"
+      ],
+      "form": "Examples have independent slots. Claim-targeted executable refutations and attacked-invariant links are extra structure.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C27",
+      "status": "unknown",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "Structured mathematical documents can carry statements. No dead-route/reopening ledger is established by the inspected module documentation.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C28",
+      "status": "partial",
+      "receipts": [
+        "PA04"
+      ],
+      "form": "A two-sided inverse is a precise positive contract. Explicit fibers/kernels and lost-information accounts require further theorems, not just reversing an arrow.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C29",
+      "status": "partial",
+      "receipts": [
+        "PA03",
+        "PA18"
+      ],
+      "form": "Axioms and theorem/assertion distinctions are represented. Neither no proof found nor a postulated axiom certifies independence.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C30",
+      "status": "partial",
+      "receipts": [
+        "PA09",
+        "PA17",
+        "PA22"
+      ],
+      "form": "Programs, theory interpretations and artifact activities are existing forms. A uniform envelope must preserve their distinct evidence and applicability.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C31",
+      "status": "partial",
+      "receipts": [
+        "PA03",
+        "PA17"
+      ],
+      "form": "Audited axiom dependencies and interpreted theories support external proof references. Receiving-side statement fidelity and replay receipts remain mandatory.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C32",
+      "status": "unknown",
+      "receipts": [
+        "PA03"
+      ],
+      "form": "Dependency audits exist. No semantic statement/definition fingerprint format is established by the fetched audit documentation.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C33",
+      "status": "partial",
+      "receipts": [
+        "PA02",
+        "PA17",
+        "PA19"
+      ],
+      "form": "Theory interpretations and encoding transformations are explicit arrows; Lean's proposition erasure is a concrete semantic difference between proof and runtime views.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C34",
+      "status": "partial",
+      "receipts": [
+        "PA04",
+        "PA07"
+      ],
+      "form": "Equivalence supplies inverse laws; univalence identifies equivalent types within its foundation. Neither certifies a natural-language round trip automatically.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C35",
+      "status": "partial",
+      "receipts": [
+        "PA14",
+        "PA19"
+      ],
+      "form": "Formula symbols and aligned ontology entities are represented. Mathematical sense disambiguation still needs context and review.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C36",
+      "status": "unknown",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "OMDoc separates mathematical statement kinds. The fetched module list supplies no verified controlled-language parser or language-to-proof equivalence.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C37",
+      "status": "partial",
+      "receipts": [
+        "PA02",
+        "PA17"
+      ],
+      "form": "Runtime proposition erasure and interpreted theories expose model differences. No fetched source establishes a deployment-specific crash/integer model for these consumers.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C38",
+      "status": "partial",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "OMDoc supports structured proofs from hypotheses. Cross-domain move skeleton retrieval is not certified by that representation alone.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C39",
+      "status": "unknown",
+      "receipts": [
+        "PA03"
+      ],
+      "form": "Audited proof dependencies are available. The proposed role classification of map anchors and its mapping fidelity are consumer-specific additions.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C40",
+      "status": "unknown",
+      "receipts": [
+        "PA12"
+      ],
+      "form": "Referenced statements have source identity. No per-operation contract-fingerprint algorithm or dependency policy is established by the fetched pages.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C41",
+      "status": "partial",
+      "receipts": [
+        "PA22"
+      ],
+      "form": "PROV activities can identify events and entities. Independent observer reproduction and the map's assurance ladder are additional local rules.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C42",
+      "status": "unknown",
+      "receipts": [
+        "PA09"
+      ],
+      "form": "Executable programs can be stored separately. Binding-specific tri-state read-back semantics are not established by the inspected sources.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C43",
+      "status": "unknown",
+      "receipts": [
+        "PA10",
+        "PA22"
+      ],
+      "form": "Reliability/provenance have homes. Reproducible hardware/workload envelopes and cross-platform performance comparisons are not specified in the fetched windows.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C44",
+      "status": "unknown",
+      "receipts": [
+        "PA17"
+      ],
+      "form": "Theory contexts are explicit. A manifest of fields a consumer actually reads was not established by the fetched documentation.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C45",
+      "status": "partial",
+      "receipts": [
+        "PA09",
+        "PA10"
+      ],
+      "form": "Worked examples and related-object browsing offer use-oriented entry points. Typed problem-to-route retrieval still needs its own solver and applicability rules.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C46",
+      "status": "exists",
+      "receipts": [
+        "PA12",
+        "PA10"
+      ],
+      "form": "References attached to statements and source/reliability links attached to object pages are working precedents. Automatic retraction closure remains extra.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C47",
+      "status": "partial",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "OMDoc explicitly provides development-graph infrastructure for theory change. The map still needs precise dependency grains and invalidation rules.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C48",
+      "status": "partial",
+      "receipts": [
+        "PA03",
+        "PA22"
+      ],
+      "form": "Axiom dependency audits and recorded activities support scoped evidence tasks. They do not independently establish checker succession or authority.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C49",
+      "status": "partial",
+      "receipts": [
+        "PA03",
+        "PA16"
+      ],
+      "form": "Whole theories/morphisms and proof assumptions can be recorded. Binding a theorem to this exact chain, policy and operands remains local alignment work.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C50",
+      "status": "unknown",
+      "receipts": [
+        "PA16"
+      ],
+      "form": "Morphism composition exists. Bounded loops, branch frames and hyperproperty verification do not follow from it and were not established in the fetched pages.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C51",
+      "status": "partial",
+      "receipts": [
+        "PA17",
+        "PA18"
+      ],
+      "form": "MMT theories/views and OMDoc theory modules organize mathematical contexts. Their notion of theory is not automatically the paper's chart projection.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C52",
+      "status": "partial",
+      "receipts": [
+        "PA16",
+        "PA19"
+      ],
+      "form": "Theory morphisms and ontology alignments explicitly connect contexts. Shared labels alone do not witness a compatible overlap.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C53",
+      "status": "exists",
+      "receipts": [
+        "PA04",
+        "PA05",
+        "PA16"
+      ],
+      "form": "Equivalence maps with inverse laws and composable theory morphisms provide concrete transition forms. A transition must declare the structure it actually transports.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C54",
+      "status": "partial",
+      "receipts": [
+        "PA04",
+        "PA07"
+      ],
+      "form": "Composition/inverses and foundational identification exist. Arbitrary atlas cycle coherence still needs the declared equality level and domain intersection.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C55",
+      "status": "partial",
+      "receipts": [
+        "PA20",
+        "PA21"
+      ],
+      "form": "Alignment confidence and limits on mapping transitivity are explicit. A numerical confidence is not evidence of isomorphism or a substitute for lost-law witnesses.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C56",
+      "status": "partial",
+      "receipts": [
+        "PA03",
+        "PA17"
+      ],
+      "form": "Audited assumptions and theory interpretations can support receiving-side admission. The paper's local-standing policy is a separate institutional rule.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C57",
+      "status": "partial",
+      "receipts": [
+        "PA18"
+      ],
+      "form": "Development graphs address theory change. Regional ownership, sparse overlap maintenance and their performance need their own implementation and governance.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C58",
+      "status": "exists",
+      "receipts": [
+        "PA03"
+      ],
+      "form": "Lean records proof axiom dependencies. Discharge/retraction identity across libraries and intended-reference fidelity require separate checks.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C59",
+      "status": "partial",
+      "receipts": [
+        "PA19",
+        "PA20"
+      ],
+      "form": "Ontology alignment records possible correspondences and confidence. A technique cluster remains a proposal until its transport laws are verified.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C60",
+      "status": "partial",
+      "receipts": [
+        "PA22"
+      ],
+      "form": "PROV activities give empirical provenance a representation. Formal model departure and uncertified successful compression need additional domain-specific claims.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C61",
+      "status": "partial",
+      "receipts": [
+        "PA12"
+      ],
+      "form": "References belong to statements. Computed anticipation/priority and a declared-versus-computed citation delta are not established by this representation.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C62",
+      "status": "partial",
+      "receipts": [
+        "PA10"
+      ],
+      "form": "LMFDB links completeness and reliability next to invariants. Consumer-weighted coverage/evidence-debt calculations are a local design and must expose denominators.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C63",
+      "status": "partial",
+      "receipts": [
+        "PA20"
+      ],
+      "form": "Alignment confidence is stored as a measure. Learned retrieval needs an actual evaluated retriever; confidence in an alignment is not map truth.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    },
+    {
+      "candidate": "C64",
+      "status": "unknown",
+      "receipts": [
+        "PA12",
+        "PA20"
+      ],
+      "form": "Ranks and correspondence confidence exist, but neither supplies a calibrated global mathematical truth/utility score. The proposed scalar mixes incompatible judgments.",
+      "evidence": "read for the quoted representation; inferred for applicability and limits"
+    }
+  ]
+}

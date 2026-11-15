@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Wikipedia, Absorption law (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1373730955
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: af5515f2399f4275d476a7443d22e87e0d71595a66c0da3a8a8f2a56ec225270
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''absorption law''' or '''absorption identity''' is an [[Identity (mathematics)|identity]] linking a pair of [[binary operations]].
+
+:''a'' ¤ (''a'' ⁂ ''b'') = ''a'' ⁂ (''a'' ¤ ''b'') = ''a''.
+
+=== Lattices ===
+
+A [[Set (mathematics)|set]] equipped with two [[commutative]] and [[associative]] binary operations

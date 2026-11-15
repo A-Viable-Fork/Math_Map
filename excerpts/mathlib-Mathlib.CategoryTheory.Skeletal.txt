@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/CategoryTheory/Skeletal.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Skeletal.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 5c56274abf5bf5a45e0557d2028a4858edb8b4c952e9d18cfa163897887fb77b
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.skeletonEquivalence (line 131)
+@[simps] noncomputable def skeletonEquivalence : Skeleton C ≌ C where
+  functor := fromSkeleton C
+  inverse := toSkeletonFunctor C
+  unitIso := NatIso.ofComponents
+    (fun X ↦ InducedCategory.isoMk (Nonempty.some <| Quotient.mk_out X.out).symm)
+    (fun f ↦ InducedCategory.hom_ext (Iso.inv_hom_id_assoc _ _).symm)

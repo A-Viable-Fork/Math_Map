@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, homotopy coherent nerve (page source)
+URL: https://ncatlab.org/nlab/source/homotopy+coherent+nerve
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: 4f11dcc20701ab5fbcb6e9bdda03250799cc5770f94fcafe551dbabb3105d2ab
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In the original paper, Cordier uses a different one of these conventions
+
+then the homotopy coherent nerve $N(C)$ is a [[weak Kan complex]]/[[quasi-category]].
+
+also known as the operation of *[[rigidification of quasi-categories]]*.
+
+is such that all [[hom-object]]s $C(x,y) \in sSet$ are [[Kan complex]]es

@@ -1,0 +1,12 @@
+Excerpts, verbatim, from: nLab, skeletal category (page source)
+URL: https://ncatlab.org/nlab/source/skeletal+category
+Fetched: 2026-11-07. SHA-256 of the page source as fetched: dfb38af8b7e38a5ff792a4700713d988ea8cf99e95bf38a3e792c3e0c88bed51
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+A __skeleton__ of a category $C$ is defined to be a skeletal [[subcategory]] of $C$
+
+is called __skeletal__ if any two [[objects]] that are [[isomorphism|isomorphic]] are actually already [[equality|equal]]
+
+whose [[inclusion functor]] exhibits it as [[equivalence of categories|equivalent]] to $C$.
+
+If the [[axiom of choice]] holds, then every category $C$ has a skeleton (in the strongest sense).
