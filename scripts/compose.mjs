@@ -1,8 +1,8 @@
 // Role: composition. For a chain of entries applied in order, reports which named invariants survive the
 //   whole chain, where each one breaks, where the map is silent, and whether each step's output kind fits
 //   the next step's input.
-// Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--require ID,ID] [--json]`, or `--selftest`.
-//   `--proof ID=citation` (repeatable). Exports compose(chain, P?, opts?). An
+// Contract: `node scripts/compose.mjs --chain D2-118,D2-117 [--require ID,ID] [--given P,Q] [--require-hypotheses]
+//   [--json]`, or `--selftest`. `--proof ID=citation` (repeatable). Exports compose(chain, P?, opts?). An
 //   invariant's status: survives (every step preserves it), broken (at the first step that breaks it), or
 //   unknown (no step breaks it, but some step says nothing about it; the silent steps are listed); a step
 //   whose output produces the invariant after an earlier step broke it restores it; one that produces it
@@ -45,11 +45,18 @@
 //   step stays on every later step until a step clears it, and a step that forbids a label present on
 //   entry is a context violation. Under a policy, any context violation makes the chain's verdict
 //   "violation stated".
+//   Hypotheses (mapfill/predicates.js, judged by scripts/predicates.mjs) are a third report beside the joins and
+//   the invariants: each requirement of each step is met, unknown or violated, given the predicates the caller
+//   says hold on entry (`--given P,Q`, or opts.given; a predicate outside the vocabulary is an error). By default
+//   the report changes no verdict. With `--require-hypotheses` (opts.requireHypotheses) a violated requirement
+//   fails the chain: the command exits 1 and a policy's verdict becomes "violation stated". An unknown
+//   requirement never fails a chain [ruling: operator, 2026-11-15].
 // Invariant: read-only. The answer is only as good as the entries' fields and links: "unknown" means the
 //   map does not say, not that the invariant is lost. `--selftest` checks these rules on synthetic chains.
 import { fileURLToPath } from "node:url";
 import { parse } from "./mathmap.mjs";
 import { evidence, weaker, rank } from "./evidence.mjs";
+import { hypotheses, describeHypotheses } from "./predicates.mjs";
 
 // Closes a step's direct claims (a Map from invariant to evidence level) under the relations, carrying the
 // evidence along: a derived claim is as strong as the best chain of claim and relation that yields it.
@@ -124,6 +131,9 @@ export function compose(chain, P = parse(), opts = {}) {
   const missing = chain.filter((id) => !by[id]);
   if (missing.length) return { chain, error: `no such entries: ${missing.join(", ")}` };
   const E = evidence(P);
+  // A wrapped step has no rows of its own: it is listed as carrying nothing forward.
+  const hyp = hypotheses(chain, P, E, opts, opts.predicates);
+  if (hyp.error) return { chain, error: hyp.error };
   const steps = chain.map((id) => {
     const e = by[id], inv = e.invariants || { preserved: [], broken: [], output: [] };
     const direct = (f) => new Map(inv[f].map((v) => [v, E.claim(e, f, v).level]));
@@ -224,13 +234,13 @@ export function compose(chain, P = parse(), opts = {}) {
     for (const l of c.raises || []) if (!live.has(l)) live.set(l, { at: k + 1, by: st.id });
   });
   const context = { live: [...live.entries()].map(([label, x]) => ({ label, raisedAt: x.at, raisedBy: x.by })), cleared, violations: contextViolations };
-  if (policy && contextViolations.length) policy.verdict = "violation stated";
+  if (policy && (contextViolations.length || hyp.failed)) policy.verdict = "violation stated";
   const unlinked = steps.filter((s) => !s.preserved.size && !s.broken.size && !s.output.size).map((s) => s.id);
   const asserted = [...result.filter((x) => x.evidence), ...joins.filter((j) => j.evidence)];
   const weakest = asserted.reduce((w, x) => (!w || rank(x.evidence.level) < rank(w.evidence.level) ? x : w), null);
   if (policy) for (const r of policy.required) if (r.verdict === "holds by whole-chain proof")
     r.evidence = weakest ? { level: weakest.evidence.level, weakest: { ...weakest.evidence.weakest }, inherited: "the chain's weakest link" } : null;
-  return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked, context, ...(policy ? { policy } : {}),
+  return { chain, steps: steps.map((s) => ({ id: s.id, name: s.name, actsOn: s.actsOn })), joins, invariants: result, unlinked, context, hypotheses: hyp, ...(policy ? { policy } : {}),
     evidence: weakest ? { level: weakest.evidence.level, weakest: { ...weakest.evidence.weakest, on: weakest.invariant ? `${weakest.name}, ${weakest.status}` : `join ${weakest.from} to ${weakest.to}` } } : null };
 }
 
@@ -255,6 +265,7 @@ export function describe(r) {
   if (r.unlinked.length) L.push(`  no invariant links yet for: ${r.unlinked.join(", ")}`);
   for (const v of r.context?.violations || []) L.push(`  context violation at step ${v.at} (${v.by}): ${v.label}, raised at step ${v.raisedAt} (${v.raisedBy}) and not cleared`);
   for (const c of r.context?.cleared || []) L.push(`  context cleared at step ${c.at} (${c.by}): ${c.label}`);
+  L.push(...describeHypotheses(r.hypotheses));
   if (r.policy) { L.push(`  policy: ${r.policy.verdict}`); for (const p of r.policy.required) L.push(`    ${p.verdict}: ${p.name} (${p.status})${p.proof ? `, by ${p.proof}, grounded as the chain's weakest link${p.evidence ? ` (${p.evidence.level})` : ""}` : ""}`); }
   if (r.evidence) L.push(`  weakest link: ${r.evidence.level} (${r.evidence.weakest.on}; step ${r.evidence.weakest.step}, ${r.evidence.weakest.id} ${r.evidence.weakest.field})`);
   return L.join("\n");
@@ -342,6 +353,13 @@ function selftest() {
   want("only a combinator wraps", !!runW(["x(y)"]).error, true);
   want("a combinator does not wrap a combinator", !!runW(["g(g)"]).error, true);
   want("a wrapped step carries the effect's context", runW(["r", "g(x)"], [e("r")], [{ entry: "r", raises: ["w"], basis: "s" }, { entry: "x", forbids: ["w"], basis: "s" }]).context.violations.length, 1);
+  const HD = { PREDICATES: [{ id: "p" }], IMPLIES: [], COUNTEREXAMPLES: [], HYPOTHESES: [{ entry: "a", name: "a", role: "destroys", predicate: "p", receipts: [] }, { entry: "b", name: "b", role: "requires", predicate: "p", receipts: [] }] };
+  const runH = (o) => compose(["a", "b"], { ...P0, entries: [e("a"), e("b")], vocabulary: { ...P0.vocabulary, CARRIERS: { t: null }, RELATIONS: [], INVARIANTS: [], LINKS: [], ACTS_ON: [], CONTEXT: [] } }, { given: ["p"], predicates: HD, ...o });
+  want("a violated hypothesis is reported", runH({}).hypotheses.verdict, "violated");
+  want("reported only: the policy is unchanged", runH({ require: [] }).policy.verdict, "holds under the map's claims");
+  want("required: the policy is a violation", runH({ require: [], requireHypotheses: true }).policy.verdict, "violation stated");
+  want("an undeclared given predicate is an error", !!compose(["D2-075"], P0, { given: ["no-such-predicate"] }).error, true);
+  want("map chain: compactifying twice violates noncompact", compose(["D4-273", "D4-273"], P0, { given: ["locally-compact", "hausdorff", "noncompact"] }).hypotheses.verdict, "violated");
   want("map chain still restores", st(compose(["D2-118", "D2-117"]), "exceptional-divisor"), "restored");
   if (F.length) { console.log(`compose selftest: FAIL\n  ${F.join("\n  ")}`); process.exit(1); }
   console.log(`compose selftest: PASS (${N} checks)`);
@@ -353,8 +371,11 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (i < 0 || !a[i + 1]) { console.log("compose: needs --chain ID,ID,..."); process.exit(1); }
   const q = a.indexOf("--require");
   const opts = q >= 0 && a[q + 1] ? { require: a[q + 1].split(",").map((s) => s.trim()) } : {};
+  const gv = a.indexOf("--given");
+  if (gv >= 0 && a[gv + 1]) opts.given = a[gv + 1].split(",").map((s) => s.trim()).filter(Boolean);
+  if (a.includes("--require-hypotheses")) opts.requireHypotheses = true;
   for (let k = 0; k < a.length; k++) if (a[k] === "--proof" && a[k + 1]) { const [inv, ...cite] = a[k + 1].split("="); (opts.proofs ||= {})[inv] = cite.join("="); }
   const r = compose(a[i + 1].split(",").map((s) => s.trim()), parse(), opts);
   console.log(a.includes("--json") ? JSON.stringify(r, null, 1) : describe(r));
-  if (r.error) process.exit(1);
+  if (r.error || r.hypotheses.failed) process.exit(1);
 }

@@ -112,6 +112,7 @@
 | `mapfill/invariants.js` | the invariant vocabulary. |
 | `mapfill/lean.js` | the Lean layer's registry. |
 | `mapfill/nixos.js` | the NixOS binding layer. |
+| `mapfill/predicates.js` | hypotheses as predicates. |
 | `scripts/audit.mjs` | the math map audit. |
 | `scripts/blind.mjs` | second readings of the Mathlib match grades. |
 | `scripts/build.mjs` | the build. |
@@ -133,6 +134,7 @@
 | `scripts/mathmap.mjs` | the math map, made queryable. |
 | `scripts/mcp.mjs` | the map as a tool server. |
 | `scripts/misalign.mjs` | the misalignment lead finder. |
+| `scripts/predicates.mjs` | hypotheses as predicates, checked and applied. |
 | `scripts/topology.mjs` | the topology of the typed map. |
 | `scripts/type-lexicon.mjs` | the free typing pass. |
 
@@ -255,126 +257,131 @@
 | `excerpts/arxiv-2103.12179.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/arxiv-hep-th-0410212.txt` | Verbatim windows from an arXiv paper. |
 | `excerpts/econometrica-jackson-1991.txt` | Verbatim windows from a journal article. |
-| `excerpts/mathlib-Mathlib.Algebra.Algebra.Subalgebra.Lattice.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.FiveLemma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Lattice.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.HomologySequence.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.Homotopy.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCofiber.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.HomologicalComplex.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.Homology.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.SnakeLemma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Lie.CartanCriterion.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Lie.Cochain.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Lie.Killing.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Lie.OfAssociative.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Lie.TraceForm.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Lie.UniversalEnveloping.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.MvPolynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Degree.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Expand.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.FieldDivision.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Monic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.AlgebraicGeometry.Scheme.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.Nerve.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Unital.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.CStarAlgebra.GelfandNaimarkSegal.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.Calculus.DifferentialForm.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.InnerProductSpace.GramSchmidtOrtho.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.MellinTransform.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.AdjointFunctorTheorems.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Reflective.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Adjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Algebra.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Kleisli.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Quotient.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.ConcreteSheafification.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.LeftExact.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Dual.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Minor.Contract.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Minor.Order.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Rank.ENat.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Combinatorics.SimpleGraph.LineGraph.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Data.Nat.ModEq.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.FieldTheory.Finite.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.Construction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.IsSplittingField.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Geometry.Manifold.Diffeomorph.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Geometry.Manifold.VectorBundle.CovariantDerivative.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Geometry.Manifold.WhitneyEmbedding.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.GroupTheory.Abelianization.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.GroupTheory.Commutator.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.GroupTheory.GroupAction.Quotient.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.GroupTheory.Index.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.GroupTheory.MonoidLocalization.GrothendieckGroup.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.GroupTheory.SemidirectProduct.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.LinearAlgebra.ExteriorAlgebra.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.LinearAlgebra.Span.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.LinearAlgebra.TensorProduct.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.LinearAlgebra.TensorProduct.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.LinearAlgebra.TensorProduct.RightExactness.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.ModelTheory.Fraisse.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.ModelTheory.Ultraproducts.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Order.Closure.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Order.GaloisConnection.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Order.Hom.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Order.Zorn.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.AdicCompletion.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.KrullDimension.Polynomial.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Localization.AtPrime.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Localization.FractionRing.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Localization.Ideal.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.NoetherNormalization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Polynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Polynomial.UniqueFactorization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.RingTheory.Spectrum.Prime.Topology.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Bases.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Closure.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.CompactOpen.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Compactification.OnePoint.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Compactification.StoneCech.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Compactness.Compact.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Defs.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.DerivedSet.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Instances.CantorSet.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.Metrizable.Urysohn.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
-| `excerpts/mathlib-Mathlib.Topology.VectorBundle.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Algebra.Subalgebra.Lattice.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.FiveLemma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Lattice.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.HomologySequence.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.Homotopy.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCofiber.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.HomologicalComplex.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.Homology.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.ShortComplex.SnakeLemma.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.CartanCriterion.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.Cochain.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.Killing.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.OfAssociative.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.TraceForm.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Lie.UniversalEnveloping.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.MvPolynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.AlgebraMap.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Coeff.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Lemmas.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Degree.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Derivative.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Div.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.EraseLead.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Eval.Degree.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Expand.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.FieldDivision.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Monic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Roots.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Algebra.Polynomial.Splits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.AlgebraicGeometry.Scheme.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.Nerve.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Unital.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.CStarAlgebra.GelfandNaimarkSegal.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.Calculus.DifferentialForm.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.InnerProductSpace.GramSchmidtOrtho.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.MellinTransform.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.AdjointFunctorTheorems.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Reflective.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Adjunction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Algebra.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Kleisli.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Quotient.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.ConcreteSheafification.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.LeftExact.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Sites.Sheafification.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Yoneda.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Dual.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Minor.Contract.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Minor.Order.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Combinatorics.Matroid.Rank.ENat.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Combinatorics.SimpleGraph.LineGraph.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Data.Nat.ModEq.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.FieldTheory.Finite.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.Construction.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.FieldTheory.SplittingField.IsSplittingField.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Geometry.Manifold.Diffeomorph.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Geometry.Manifold.VectorBundle.CovariantDerivative.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Geometry.Manifold.WhitneyEmbedding.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.GroupTheory.Abelianization.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.GroupTheory.Commutator.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.GroupTheory.GroupAction.Quotient.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.GroupTheory.Index.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.GroupTheory.MonoidLocalization.GrothendieckGroup.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.GroupTheory.SemidirectProduct.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.LinearAlgebra.ExteriorAlgebra.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.LinearAlgebra.Span.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.LinearAlgebra.TensorProduct.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.LinearAlgebra.TensorProduct.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.LinearAlgebra.TensorProduct.RightExactness.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.ModelTheory.Fraisse.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.ModelTheory.Ultraproducts.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Order.Closure.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Order.GaloisConnection.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Order.Hom.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Order.Zorn.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.AdicCompletion.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.KrullDimension.Polynomial.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Localization.AtPrime.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Localization.FractionRing.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Localization.Ideal.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.NoetherNormalization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Polynomial.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Polynomial.UniqueFactorization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.RingTheory.Spectrum.Prime.Topology.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Bases.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Closure.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.CompactOpen.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Compactification.OnePoint.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Compactification.StoneCech.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Compactness.Compact.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Defs.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.DerivedSet.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Instances.CantorSet.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.Metrizable.Urysohn.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-Mathlib.Topology.VectorBundle.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-context-Mathlib.Algebra.Field.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-context-Mathlib.FieldTheory.IsAlgClosed.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-context-Mathlib.MeasureTheory.Measure.Typeclasses.SFinite.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-context-Mathlib.RingTheory.Ideal.Quotient.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
+| `excerpts/mathlib-context-Mathlib.RingTheory.NoetherNormalization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash; the mathlib-context-* files hold the variable and instance lines the hypothesis rows quote, made with scripts/excerpt.mjs. |
 | `excerpts/mathlib4-d13f23b-Computability.TuringMachine.Computable.txt` | Mathlib declaration statements at a commit other than the formal layer's pin (named in the file), quoted verbatim with the file's hash. |
 | `excerpts/nixpkgs-7c8764b-lib-modules.txt` | Verbatim windows from a nixpkgs source file at a pinned commit (MIT), with the file's hash. |
 | `excerpts/nlab-aufhebung-definition.txt` | Verbatim windows from an nLab page. |
@@ -642,6 +649,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `CLAUDE.md` | names | `map.json` |
 | `CLAUDE.md` | names | `mapfill/formal.js` |
 | `CLAUDE.md` | names | `mapfill/generated.js` |
+| `CLAUDE.md` | names | `mapfill/predicates.js` |
 | `CLAUDE.md` | names | `mapfill/README.md` |
 | `CLAUDE.md` | names | `README.md` |
 | `CLAUDE.md` | names | `repo-map-manifest.json` |
@@ -917,9 +925,25 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/nixos.js` | names | `generation/2026-10-11-mm-dr-004/grading.md` |
 | `mapfill/nixos.js` | names | `mapfill/android.js` |
 | `mapfill/nixos.js` | names | `scripts/mathmap.mjs` |
+| `mapfill/predicates.js` | names | `docs/schema-survey/pilots/p1-predicates.rows.json` |
+| `mapfill/predicates.js` | names | `excerpts/mathlib-Mathlib.MeasureTheory.Measure.Decomposition.Lebesgue.txt` |
+| `mapfill/predicates.js` | names | `excerpts/nlab-reflective-subcategory.txt` |
+| `mapfill/predicates.js` | names | `excerpts/wikipedia-blowing-up.txt` |
+| `mapfill/predicates.js` | names | `excerpts/wikipedia-castelnuovo.txt` |
+| `mapfill/predicates.js` | names | `excerpts/wikipedia-hodge-theory.txt` |
+| `mapfill/predicates.js` | names | `excerpts/wikipedia-lebesgue-decomposition.txt` |
+| `mapfill/predicates.js` | names | `excerpts/wikipedia-nerve-complex.txt` |
+| `mapfill/predicates.js` | names | `mapfill/conditions.js` |
+| `mapfill/predicates.js` | names | `mapfill/formal.js` |
+| `mapfill/predicates.js` | names | `mapfill/invariants.js` |
+| `mapfill/predicates.js` | names | `reports/SECOND-READING.md` |
+| `mapfill/predicates.js` | names | `scripts/compose.mjs` |
+| `mapfill/predicates.js` | names | `scripts/predicates.mjs` |
+| `mapfill/README.md` | names | `scripts/compose.mjs` |
 | `mapfill/README.md` | names | `scripts/excerpt.mjs` |
 | `mapfill/README.md` | names | `scripts/mathmap.mjs` |
 | `mapfill/README.md` | names | `scripts/misalign.mjs` |
+| `mapfill/README.md` | names | `scripts/predicates.mjs` |
 | `mapfill/README.md` | names | `source/Category_Theory_Transformation_Enumeration.pdf` |
 | `mapfill/README.md` | names | `source/math_map.md` |
 | `README.md` | names | `.infra/run.mjs` |
@@ -945,6 +969,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `README.md` | names | `mapfill/invariants.js` |
 | `README.md` | names | `mapfill/lean.js` |
 | `README.md` | names | `mapfill/nixos.js` |
+| `README.md` | names | `mapfill/predicates.js` |
 | `README.md` | names | `mapfill/README.md` |
 | `README.md` | names | `repo-map-manifest.json` |
 | `README.md` | names | `reports/AUDIT.md` |
@@ -1034,6 +1059,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | imports | `scripts/lean.mjs` |
 | `scripts/build.mjs` | imports | `scripts/mathmap.mjs` |
 | `scripts/build.mjs` | imports | `scripts/misalign.mjs` |
+| `scripts/build.mjs` | imports | `scripts/predicates.mjs` |
 | `scripts/build.mjs` | names | `.infra/run.mjs` |
 | `scripts/build.mjs` | names | `.infra/tools/repo-map.mjs` |
 | `scripts/build.mjs` | names | `audit.json` |
@@ -1057,6 +1083,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | names | `mapfill/invariants.js` |
 | `scripts/build.mjs` | names | `mapfill/lean.js` |
 | `scripts/build.mjs` | names | `mapfill/nixos.js` |
+| `scripts/build.mjs` | names | `mapfill/predicates.js` |
 | `scripts/build.mjs` | names | `mapfill/README.md` |
 | `scripts/build.mjs` | names | `README.md` |
 | `scripts/build.mjs` | names | `repo-map-manifest.json` |
@@ -1101,12 +1128,16 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/check-all.mjs` | names | `scripts/mathmap.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/mcp.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/misalign.mjs` |
+| `scripts/check-all.mjs` | names | `scripts/predicates.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/topology.mjs` |
 | `scripts/check-all.mjs` | names | `scripts/type-lexicon.mjs` |
 | `scripts/compose.mjs` | imports | `scripts/evidence.mjs` |
 | `scripts/compose.mjs` | imports | `scripts/mathmap.mjs` |
+| `scripts/compose.mjs` | imports | `scripts/predicates.mjs` |
 | `scripts/compose.mjs` | names | `mapfill/invariants.js` |
+| `scripts/compose.mjs` | names | `mapfill/predicates.js` |
 | `scripts/compose.mjs` | names | `scripts/evidence.mjs` |
+| `scripts/compose.mjs` | names | `scripts/predicates.mjs` |
 | `scripts/deform-algebras.mjs` | imports | `scripts/deform.mjs` |
 | `scripts/deform-algebras.mjs` | names | `scripts/deform.mjs` |
 | `scripts/deform-history.mjs` | imports | `scripts/deform-algebras.mjs` |
@@ -1219,6 +1250,13 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/misalign.mjs` | names | `mapfill/alignment.js` |
 | `scripts/misalign.mjs` | names | `mapfill/flags.js` |
 | `scripts/misalign.mjs` | names | `reports/MISALIGN.md` |
+| `scripts/predicates.mjs` | imports | `mapfill/predicates.js` |
+| `scripts/predicates.mjs` | imports | `scripts/evidence.mjs` |
+| `scripts/predicates.mjs` | imports | `scripts/formal.mjs` |
+| `scripts/predicates.mjs` | imports | `scripts/mathmap.mjs` |
+| `scripts/predicates.mjs` | names | `mapfill/formal.js` |
+| `scripts/predicates.mjs` | names | `mapfill/predicates.js` |
+| `scripts/predicates.mjs` | names | `scripts/evidence.mjs` |
 | `scripts/topology.mjs` | imports | `scripts/compose.mjs` |
 | `scripts/topology.mjs` | imports | `scripts/mathmap.mjs` |
 | `scripts/topology.mjs` | names | `reports/TOPOLOGY.md` |
@@ -1227,6 +1265,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/type-lexicon.mjs` | names | `reports/TYPING.md` |
 | `STATUS.md` | names | `lean/WISHLIST.md` |
 | `STATUS.md` | names | `mapfill/domains.js` |
+| `STATUS.md` | names | `mapfill/predicates.js` |
 | `STATUS.md` | names | `README.md` |
 | `STATUS.md` | names | `reports/AUDIT.md` |
 | `STATUS.md` | names | `reports/FORMAL-QUEUE.md` |

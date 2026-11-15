@@ -2,7 +2,7 @@
 //   Protocol (stdio, newline-delimited JSON-RPC 2.0), so a language model can query entries and check
 //   chains instead of reading the map whole.
 // Contract: `node scripts/mcp.mjs` serves on stdin/stdout. Tools: map_info, search_entries, get_entry,
-//   list_invariants, compose_chain. Every answer carries the commit the map was built from, so a citation
+//   list_invariants, list_predicates, compose_chain. Every answer carries the commit the map was built from, so a citation
 //   names an exact version. `--selftest` runs each tool in process and exits 1 on any failure (check-all
 //   runs it). Node 18 or later, no dependencies.
 // Invariant: read-only. Entries are served from the generated map.json as published (with origin and
@@ -33,12 +33,16 @@ const TOOLS = [
       invariant: str("A named invariant id (see list_invariants) the entry preserves, breaks or produces."),
       formal: { type: "boolean", description: "Only entries linked to Mathlib declarations (get_entry shows the links and their match grades)." },
       limit: { type: "integer", minimum: 1, maximum: 100, description: "Default 20." } } } },
-  { name: "get_entry", description: "One entry in full: fields, origin, trust tier, evidence level per field and per invariant claim, audit verdict, receipts, corrections (with the landed text), conditions, counterexamples, Mathlib links with match grades, named invariants and the kinds of object it acts on.",
+  { name: "get_entry", description: "One entry in full: fields, origin, trust tier, evidence level per field and per invariant claim, audit verdict, receipts, corrections (with the landed text), conditions, counterexamples, hypothesis rows (what it requires, establishes, keeps and destroys, each with its receipt), Mathlib links with match grades, named invariants and the kinds of object it acts on.",
     inputSchema: { type: "object", properties: { id: str("Entry id, e.g. D2-117 or D7-X01.") }, required: ["id"] } },
   { name: "list_invariants", description: "The named-invariant vocabulary used by compose_chain: carriers (kinds of object, with parents), invariants with definitions, and the relations between them. Optionally filtered to one carrier and its sub-kinds.",
     inputSchema: { type: "object", properties: { carrier: str("e.g. variety, functor, field.") } } },
   { name: "compose_chain", description: "Apply entries in order and report whether each join fits (match, narrowing, partial: an input the previous step does not supply, or mismatch) and what happens to each named invariant: survives, broken, unknown (the map is silent), restored, created, created then broken, restored or created then unknown (a later step is silent on it), or whole-chain check required (a relational or hyperproperty invariant, which per-join claims cannot establish). With require, each listed invariant is graded holds under the map's claims, violation stated, unknown, or whole-chain check required, and the chain takes the worst. Each result, join and the chain as a whole carries the weakest evidence level it rests on (contradicted, unsupported, unchecked, imprecise, sourced, formal) and where that claim is. Unknown means the map does not say, not that the invariant is lost.",
-    inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." }, require: { type: "array", items: { type: "string" }, description: "Invariant ids the chain must keep (a policy); each is graded." } }, required: ["chain"] } },
+    inputSchema: { type: "object", properties: { chain: { type: "array", items: { type: "string" }, minItems: 1, description: "Entry ids in order of application." }, require: { type: "array", items: { type: "string" }, description: "Invariant ids the chain must keep (a policy); each is graded." },
+      given: { type: "array", items: { type: "string" }, description: "Predicate ids (see list_predicates) that hold of the chain's input. The result's hypotheses report judges each step's requirements against them: met, unknown or violated. A predicate outside the vocabulary is an error." },
+      requireHypotheses: { type: "boolean", description: "Make a violated hypothesis a failure (hypotheses.failed, and a policy's verdict becomes violation stated). Default false: the report changes no verdict. Unknown never fails a chain." } }, required: ["chain"] } },
+  { name: "list_predicates", description: "The predicate vocabulary of the hypothesis rows: each predicate with its carrier and definition, the implications among them, and how many rows use it. Entries carry their rows under hypotheses (get_entry). Rows cover few entries yet: a step without rows is silence, never an absence of hypotheses.",
+    inputSchema: { type: "object", properties: {} } },
 ];
 
 const short = (e) => ({ id: e.id, name: e.name, domain: e.domain, ...(e.facets?.length > 1 ? { facets: e.facets } : {}), kind: e.kind, tier: e.tier, ...(e.auditVerdict ? { auditVerdict: e.auditVerdict } : {}), ...(e.formal ? { mathlib: e.formal.map((k) => `${k.decl} (${k.match})`) } : {}), input: e.input, output: e.output, description: e.description });
@@ -68,9 +72,11 @@ const HANDLERS = {
     const ids = new Set(terms.map((t) => t.id));
     return { ...VERSION, carriers: C, invariants: terms, relations: V.relations.filter((r) => ids.has(r.from) || ids.has(r.to)) };
   },
+  list_predicates: () => ({ ...VERSION, predicates: MAP.predicates.terms.map((p) => ({ ...p, rows: MAP.entries.reduce((n, e) => n + (e.hypotheses || []).filter((r) => r.predicate === p.id).length, 0) })), implications: MAP.predicates.implications,
+    note: "Pass predicate ids as compose_chain's given. A row is only as good as its receipt; each carries an evidence level." }),
   compose_chain: (a) => {
     if (!Array.isArray(a.chain) || !a.chain.length) throw new Error("chain must be a non-empty array of entry ids");
-    const r = compose(a.chain.map(String), undefined, Array.isArray(a.require) ? { require: a.require.map(String) } : {});
+    const r = compose(a.chain.map(String), undefined, { ...(Array.isArray(a.require) ? { require: a.require.map(String) } : {}), ...(Array.isArray(a.given) ? { given: a.given.map(String) } : {}), ...(a.requireHypotheses === true ? { requireHypotheses: true } : {}) });
     if (r.error) throw new Error(r.error);
     return { ...VERSION, summary: describe(r), result: r, note: "Unknown means the map is silent at those steps, not that the invariant is lost." };
   },
@@ -122,6 +128,13 @@ function selftest() {
   if (g2.err || !JSON.parse(g2.text).entry.corrected || JSON.parse(g2.text).entry.tier === "flagged") F.push("get_entry D8-133 does not show its correction");
   const cp = call("compose_chain", { chain: ["D2-118", "D2-117"], require: ["local-structure-at-center"] });
   if (cp.err || JSON.parse(cp.text).result.policy?.verdict !== "violation stated") F.push("compose_chain did not grade a required invariant");
+  const lp = call("list_predicates", {});
+  if (lp.err || !JSON.parse(lp.text).predicates.some((p) => p.id === "noncompact" && p.rows >= 2)) F.push("list_predicates misses noncompact and its rows");
+  const ch = call("compose_chain", { chain: ["D4-273", "D4-273"], given: ["locally-compact", "hausdorff", "noncompact"], requireHypotheses: true });
+  if (ch.err || JSON.parse(ch.text).result.hypotheses?.failed !== true) F.push("compose_chain did not fail a violated hypothesis when asked to");
+  if (!call("compose_chain", { chain: ["D4-273"], given: ["no-such-predicate"] }).err) F.push("compose_chain accepted an undeclared predicate");
+  const ge = call("get_entry", { id: "D4-273" });
+  if (ge.err || !(JSON.parse(ge.text).entry.hypotheses || []).some((r) => r.role === "destroys" && r.predicate === "noncompact")) F.push("get_entry D4-273 does not show its hypothesis rows");
   if (!call("compose_chain", { chain: ["D2-118", "nope"] }).err) F.push("compose_chain accepted a missing id");
   for (const f of F) console.log("FAIL", f);
   if (F.length) { console.log(`mcp: ${F.length} failure(s)`); process.exit(1); }
