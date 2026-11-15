@@ -2169,6 +2169,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/build.mjs` | names | `reports/FORMAL-QUEUE.md` |
 | `scripts/build.mjs` | names | `reports/MATHMAP.md` |
 | `scripts/build.mjs` | names | `reports/MISALIGN.md` |
+| `scripts/build.mjs` | names | `reports/STRICT-READING.md` |
 | `scripts/build.mjs` | names | `scripts/check-all.mjs` |
 | `scripts/build.mjs` | names | `scripts/compose.mjs` |
 | `scripts/build.mjs` | names | `scripts/evidence.mjs` |
@@ -2257,11 +2258,15 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `scripts/deform.mjs` | names | `scripts/deform-algebras.mjs` |
 | `scripts/evidence.mjs` | imports | `audit/fill-review-0_1.js` |
 | `scripts/evidence.mjs` | imports | `audit/grades-0_1.js` |
+| `scripts/evidence.mjs` | imports | `audit/strict/reading-0_2.js` |
+| `scripts/evidence.mjs` | imports | `audit/strict/sample-0_2.json` |
+| `scripts/evidence.mjs` | imports | `audit/strict/sweep-0_2.js` |
 | `scripts/evidence.mjs` | imports | `audit/targeted-0_1.js` |
 | `scripts/evidence.mjs` | imports | `mapfill/lean.js` |
 | `scripts/evidence.mjs` | imports | `scripts/lean.mjs` |
 | `scripts/evidence.mjs` | names | `lean/AUDIT.json` |
 | `scripts/evidence.mjs` | names | `mapfill/lean.js` |
+| `scripts/evidence.mjs` | names | `scripts/strict.mjs` |
 | `scripts/export-guardians.mjs` | imports | `scripts/mathmap.mjs` |
 | `scripts/export-guardians.mjs` | names | `generation/2026-10-11-mm-dr-003/grading.md` |
 | `scripts/formal.mjs` | imports | `mapfill/formal.js` |
@@ -2354,4 +2359,5 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `STATUS.md` | names | `reports/AUDIT.md` |
 | `STATUS.md` | names | `reports/FORMAL-QUEUE.md` |
 | `STATUS.md` | names | `reports/MISALIGN.md` |
+| `STATUS.md` | names | `reports/STRICT-READING.md` |
 | `STATUS.md` | names | `scripts/build.mjs` |
