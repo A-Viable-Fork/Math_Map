@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: scipy-hadamard, pinned source
+URL: https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/linalg/_special_matrices.py
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: f4bacdfee93f3e6cda75fc7941ea2131e64636ea5df4fde2cae1a9034887e46c
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Constructs an n-by-n Hadamard matrix, using Sylvester's
+    construction. `n` must be a power of 2.
+
+H = np.array([[1]], dtype=dtype)

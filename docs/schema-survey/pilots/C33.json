@@ -1,0 +1,1583 @@
+{
+  "candidate": "C33",
+  "mapCommit": "c6f8381284f67cf9e984dd75e00350a756f18880",
+  "purpose": "Track losses on math/code/language arrows and refuse to restore omitted information on a round trip.",
+  "rows": [
+    {
+      "entry": "D7-X14",
+      "name": "Degree of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R1fef369cdaa86ead",
+        "R1fef369cdaa86ead",
+        "Rf9d7acf28dc0086a",
+        "R8903fc9557a9fd19",
+        "R251d7a68f129567b"
+      ],
+      "model": "degree_product",
+      "mathematicalFragment": {
+        "equation": "degree(p*q) = degree(p)+degree(q)",
+        "domain": "nonzero polynomials over QQ",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "degree_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Assigns to a polynomial the largest exponent of X with a nonzero coefficient, the maximum of its support. The zero polynomial has degree minus infinity (degree takes values in WithBot ℕ); natDegree is the same with the zero polynomial sent to 0.",
+        "input": "Polynomial p in R[X], R a semiring",
+        "output": "degree p in ℕ ∪ {-∞}, or natDegree p in ℕ",
+        "preserved": "deg(p + q) ≤ max(deg p, deg q) and deg(pq) ≤ deg p + deg q over any semiring; deg(pq) = deg p + deg q when R has no zero divisors, and then natDeg(p ∘ q) = natDeg p · natDeg q",
+        "broken": "The polynomial itself: degree keeps one exponent. With zero divisors the product law is only an inequality; equality needs the product of the leading coefficients nonzero"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X15",
+      "name": "Coefficient extraction",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Radbcf02eeee7a058",
+        "Radbcf02eeee7a058",
+        "R4aa7015010497a81",
+        "Re1ae97b04bf82d06",
+        "R06ceae5146ef41bd"
+      ],
+      "model": "coefficient_add",
+      "mathematicalFragment": {
+        "equation": "coeff(p+q,n) = coeff(p,n)+coeff(q,n)",
+        "domain": "QQ[X], n=1",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "coefficient_add",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Reads the coefficient of X^n in p. A polynomial is determined by its coefficients; the exponents with a nonzero coefficient form its support, a finite set.",
+        "input": "Polynomial p in R[X], R a semiring; an exponent n",
+        "output": "coeff p n in R; support p, a finite set of naturals",
+        "preserved": "Additivity: coeff (p + q) n = coeff p n + coeff q n, and coeff at n is an R-linear map; two polynomials with the same coefficients are equal; the coefficient of a product is the sum over i + j = n of coeff p i · coeff q j",
+        "broken": "Multiplicativity: the coefficient of a product is that convolution sum, not the product of coefficients"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X16",
+      "name": "Leading coefficient of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Rcc3f925ed964ceb3",
+        "Rcc3f925ed964ceb3",
+        "Rf9d7acf28dc0086a",
+        "Rd0f1c5707230e98c",
+        "Rd87e783086bb4b83",
+        "R251d7a68f129567b"
+      ],
+      "model": "leading_product",
+      "mathematicalFragment": {
+        "equation": "lc(p*q) = lc(p)*lc(q)",
+        "domain": "QQ[X], nonzero p and q",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "leading_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "The coefficient of the highest power present, coeff p (natDegree p). A polynomial is monic when its leading coefficient is 1. Erasing the leading term leaves eraseLead p, with p = eraseLead p + (leading coefficient) X^(natDegree p) and, for p ≠ 0, deg(eraseLead p) < deg p.",
+        "input": "Polynomial p in R[X], R a semiring",
+        "output": "leadingCoeff p in R; whether p is monic; eraseLead p in R[X]",
+        "preserved": "Multiplicative when R has no zero divisors: lc(pq) = lc p · lc q; a product of monic polynomials is monic over any semiring; lc 0 = 0",
+        "broken": "Additivity: lc(p + q) = lc q is given only when deg p < deg q"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X17",
+      "name": "Change of coefficient ring",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R893a9261886161dc",
+        "R893a9261886161dc",
+        "Rc32f0a73b0dcc6cc",
+        "R22eb3c74f57f5cbc",
+        "Rc9ccd431a4bc56b2"
+      ],
+      "model": "map_derivative",
+      "mathematicalFragment": {
+        "equation": "map_mod5(derivative(p)) = derivative(map_mod5(p))",
+        "domain": "ZZ[X] to (ZZ/5)[X]",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "map_derivative",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Applies a ring homomorphism f: R → S to every coefficient: map f p = eval₂ (C ∘ f) X p, a ring homomorphism R[X] → S[X] sending X to X.",
+        "input": "Ring homomorphism f: R → S of semirings; polynomial p in R[X]",
+        "output": "map f p in S[X]",
+        "preserved": "It is a ring homomorphism (mapRingHom); evaluating map f p at x is eval₂ f x p, so at f a it is f (eval a p); it commutes with the derivative and with composition; degree is kept when f is injective",
+        "broken": "Degree can drop: deg(map f p) ≤ deg p, strict when f kills the leading coefficient"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X18",
+      "name": "Evaluation of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R0a3e77309c889e0c",
+        "R0a3e77309c889e0c",
+        "R511feaba12b9375b",
+        "R7dd619aedf627371",
+        "R0c341e31708f3ba0"
+      ],
+      "model": "evaluate_product",
+      "mathematicalFragment": {
+        "equation": "eval(p*q,a) = eval(p,a)*eval(q,a)",
+        "domain": "commutative QQ, a=2",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "evaluate_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Substitutes a value for X. eval₂ f x p = Σ f(a_i) x^i along a ring homomorphism f: R → S at x in S; eval x p takes f the identity; aeval x is the R-algebra homomorphism R[X] → A sending X to x, for any R-algebra A, commutative or not.",
+        "input": "Polynomial p in R[X]; a point x in S, or in an R-algebra A (R commutative); for eval₂, a ring homomorphism f: R → S",
+        "output": "The value p(x) in S or A",
+        "preserved": "eval₂ f x is a ring homomorphism when S is commutative, and when x commutes with every f(a) in general (eval₂RingHom'); aeval x is the unique R-algebra homomorphism sending X to x",
+        "broken": "The polynomial is lost: over a finite field with q elements every a has a^q = a, so X^q and X define the same function though X^q - X ≠ 0; over an infinite domain, polynomials agreeing at every point are equal"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X19",
+      "name": "Formal derivative of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R723a332a4d48f23e",
+        "R723a332a4d48f23e",
+        "R7a860b8621ab27ee",
+        "R79bf7989068c681d",
+        "R251d7a68f129567b"
+      ],
+      "model": "derivative_product",
+      "mathematicalFragment": {
+        "equation": "D(p*q) = D(p)*q+p*D(q)",
+        "domain": "QQ[X]",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "derivative_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Sends Σ a_i X^i to Σ i·a_i X^(i-1), defined by the formula over any semiring, with no limit. The algebraic counterpart of the analytic derivative (D6-028).",
+        "input": "Polynomial p in R[X], R a semiring",
+        "output": "derivative p in R[X]",
+        "preserved": "R-linearity; the Leibniz rule (pq)' = p'q + pq' over any semiring; the chain rule (p ∘ q)' = q' · (p' ∘ q) over a commutative semiring",
+        "broken": "Degree: natDeg p' ≤ natDeg p - 1, strictly below natDeg p unless p is constant. In characteristic p, (X^n)' = n X^(n-1) vanishes when p divides n, and p' = 0 makes f an expansion f(X^p) rather than a constant (over a domain). A root t has multiplicity above 1 iff t is a root of both p and p' (p ≠ 0, R a commutative ring)"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X20",
+      "name": "Roots of a polynomial with multiplicity",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R036628f868c9162d",
+        "R036628f868c9162d",
+        "R4715d750aaeefd53",
+        "R00dc9ff202f19f89",
+        "Rbbe92b3f44a61cf5"
+      ],
+      "model": "roots_product",
+      "mathematicalFragment": {
+        "equation": "roots(p*q) = roots(p) multiset_union roots(q)",
+        "domain": "nonzero split polynomials over QQ",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "roots_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "IsRoot p a says p(a) = 0. rootMultiplicity a p is the largest n with (X - a)^n dividing p (0 for p = 0). Over a commutative domain, roots p is the multiset of roots, each counted with its multiplicity.",
+        "input": "Polynomial p in R[X]; R a commutative domain for roots, a ring for rootMultiplicity",
+        "output": "roots p, a finite multiset of R; rootMultiplicity a p in ℕ; whether a is a root",
+        "preserved": "card (roots p) ≤ natDegree p; roots (pq) = roots p + roots q when pq ≠ 0; for p ≠ 0, a is in roots p iff it is a root; the count of a in roots p is its multiplicity; X - a divides p iff a is a root (the factor theorem, R commutative)",
+        "broken": "roots 0 = 0 by convention; over a commutative domain, card (roots p) = natDegree p exactly when p splits (D7-X22), so a polynomial that does not split has fewer"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X21",
+      "name": "Composition of polynomials",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "Re2cd23881ed840c0",
+        "Re2cd23881ed840c0",
+        "R6cce2f3eb07f51fb",
+        "R2885c09e2a872530",
+        "Re52212484e69a037"
+      ],
+      "model": "evaluate_composition",
+      "mathematicalFragment": {
+        "equation": "eval(p.comp(q),a) = eval(p,eval(q,a))",
+        "domain": "QQ[X], a=2",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "evaluate_composition",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Substitutes q for X in p: p.comp q = eval₂ C q p = Σ a_i q^i.",
+        "input": "Polynomials p, q in R[X], R a semiring",
+        "output": "p.comp q in R[X]",
+        "preserved": "Associative over a commutative semiring, with X a two-sided identity; eval x (p ∘ q) = eval (eval x q) p over a commutative semiring; additive in p over any semiring and multiplicative in p over a commutative semiring; natDeg(p ∘ q) = natDeg p · natDeg q when R has no zero divisors",
+        "broken": "No receipted claim: the generator's (no additivity in q) is true but no declaration at the pin states it; see the round's grading"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D7-X22",
+      "name": "Splitting of a polynomial",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "formal",
+        "preserved": "sourced",
+        "broken": "sourced"
+      },
+      "receiptIds": [
+        "R8228bd8489ca2a6b",
+        "R8228bd8489ca2a6b",
+        "R69efaf8b5aae54a6",
+        "Rec69b968a37f413e",
+        "R06b6297056ce8f20"
+      ],
+      "model": "splitting_product",
+      "mathematicalFragment": {
+        "equation": "splits(p*q) iff splits(p) and splits(q)",
+        "domain": "QQ[X], both factors nonzero",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "splitting_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Tests whether p is a product of constants and monic linear polynomials X + a, over the ring it lives in (Mathlib's definition, for any semiring). Splitting over a larger ring is splitting of the image: p splits along i: R → S when map i p splits.",
+        "input": "Polynomial p in R[X], R a semiring; for splitting along i, a ring homomorphism i: R → S and map i p",
+        "output": "Whether p splits",
+        "preserved": "Splitting persists along any ring homomorphism; a product of splitting polynomials splits, and over a commutative domain a product of nonzero polynomials splits iff each factor does; over a commutative domain p splits iff it has natDegree p roots counted with multiplicity",
+        "broken": "Nothing"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": []
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D6-032",
+      "name": "Discrete Fourier transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R0467b66ae884923b",
+        "R0467b66ae884923b",
+        "R14c9fc722ff5b4fd",
+        "Rd2a1993b8bdc26a8",
+        "R5d822ef60d217905",
+        "R4238bf6fd56a1443"
+      ],
+      "model": "dft_convolution",
+      "mathematicalFragment": {
+        "equation": "DFT(circular_convolution(x,y)) = DFT(x)*DFT(y)",
+        "domain": "periodic vectors of length 4, backward normalization",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard",
+          "normalization"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "dft_convolution",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "DFT: X_k = sum_{n=0}^{N-1} x_n e^{-2pi ikn/N}. N-point. Assumes periodicity.",
+        "input": "Finite sequence {x_0,...,x_{N-1}}",
+        "output": "Frequency coefficients {X_0,...,X_{N-1}}",
+        "preserved": "Parseval, periodicity assumption, convolution -> multiplication",
+        "broken": "Continuous spectrum (discretized)"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "preserved",
+        "keptExplicitly": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ],
+        "unestablished": [
+          "normalization"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": [
+            "normalization"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation",
+            "operatorLaw",
+            "domainGuard"
+          ],
+          "lost": [
+            "normalization"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D6-040",
+      "name": "Fast Fourier transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Ra22cad9657889ab1",
+        "Ra22cad9657889ab1",
+        "R14c9fc722ff5b4fd",
+        "R7c5f1a8031dd7f76",
+        "R9357e56b413f8c1c"
+      ],
+      "model": "fft_dft",
+      "mathematicalFragment": {
+        "equation": "FFT(x) = DFT(x)",
+        "domain": "four-point numeric algorithm instance, backward normalization",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard",
+          "normalization"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "fft_dft",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Cooley-Tukey: divide-and-conquer factorization of DFT matrix into sparse factors. Reduces O(N^2) to O(N log N).",
+        "input": "Sequence of length N (preferably power of 2)",
+        "output": "DFT coefficients",
+        "preserved": "Same as DFT (implementation, not mathematically distinct)",
+        "broken": "Arbitrary-length sequences (radix-2 requires power of 2)"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "normalization",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "normalization",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "normalization",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D1-001",
+      "name": "Transpose graph",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R0f37ff5a8ce2f0e3",
+        "R0f37ff5a8ce2f0e3",
+        "Rb016d3365017ce87",
+        "Rc0aa8c9bec54e187",
+        "R40ca8348fdc339e5"
+      ],
+      "model": "transpose_product",
+      "mathematicalFragment": {
+        "equation": "transpose(A*B) = transpose(B)*transpose(A)",
+        "domain": "finite adjacency matrices; multiplication counts walks",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "transpose_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Reverses all edge orientations in a directed graph. Each directed edge (u,v) becomes (v,u).",
+        "input": "Directed graph G = (V, E)",
+        "output": "Directed graph G^T = (V, E') where E' = {(v,u) : (u,v) in E}",
+        "preserved": "Vertex set, strongly connected components (as sets), degree sequence (in/out swapped)",
+        "broken": "Edge orientation, directed path structure, reachability ordering"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D1-002",
+      "name": "Complement graph",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R8a82aa83487f2fc7",
+        "R8a82aa83487f2fc7",
+        "R5a294294f12c2b81",
+        "R18d0a0219e06619c",
+        "Rcd3815500db8d550"
+      ],
+      "model": "complement_clique",
+      "mathematicalFragment": {
+        "equation": "S clique in complement(G) iff S independent in G",
+        "domain": "finite loopless simple graphs",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "complement_clique",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Produces the graph on the same vertex set where two vertices are adjacent if and only if they are not adjacent in the original.",
+        "input": "Simple graph G = (V, E)",
+        "output": "Simple graph G' = (V, E(K_|V|) \\ E)",
+        "preserved": "Vertex set, vertex count",
+        "broken": "All adjacencies inverted, edge count (complemented to n(n-1)/2 - |E|), clique/independent set duality"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D1-109",
+      "name": "Translation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "Rf5bdc1e080e93b87",
+        "Rf5bdc1e080e93b87",
+        "R294d83636c08d5ec",
+        "Rd9d5ceec97ba6441"
+      ],
+      "model": "translation_difference",
+      "mathematicalFragment": {
+        "equation": "T_v(x)-T_v(y) = x-y",
+        "domain": "finite rational coordinate vectors, same v",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "translation_difference",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Slides every point by the same displacement vector.",
+        "input": "Geometric figure + displacement vector",
+        "output": "Translated figure",
+        "preserved": "All distances, angles, size, shape, orientation",
+        "broken": "Position"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D5-091",
+      "name": "Logarithm transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R61475ec776a95c18",
+        "R61475ec776a95c18",
+        "R291fe4374cfcc253",
+        "R40b5fb319f2d3265",
+        "R30a2604de0f96a92"
+      ],
+      "model": "log_product",
+      "mathematicalFragment": {
+        "equation": "log(x*y) = log(x)+log(y)",
+        "domain": "ordinary real logarithm, positive x,y; Lean source uses its extended convention",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "log_product",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Y=log(X). Right-skew correction, linearizes growth.",
+        "input": "Positive data",
+        "output": "{log(x_i)}",
+        "preserved": "Order, monotonicity",
+        "broken": "Additive structure, scale"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D6-101",
+      "name": "Mobius transformation",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R53b5e3d512b23f55",
+        "R53b5e3d512b23f55",
+        "Rebd5965fd40506a8",
+        "R229b1d59483c7f10"
+      ],
+      "model": "mobius_composition",
+      "mathematicalFragment": {
+        "equation": "M_A(M_B(z)) = M_(A*B)(z)",
+        "domain": "rational matrices with nonzero determinant; avoid poles",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "mobius_composition",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "(az+b)/(cz+d), ad-bc != 0. Conformal auto of Riemann sphere. Preserves circles/lines.",
+        "input": "z in C union {inf} + matrix [[a,b],[c,d]]",
+        "output": "(az+b)/(cz+d)",
+        "preserved": "Circles/lines (mapped to circles/lines), cross-ratio, conformality",
+        "broken": "Distances"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D6-148",
+      "name": "Walsh-Hadamard transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "unchecked",
+        "description": "unchecked",
+        "input": "unchecked",
+        "output": "unchecked",
+        "preserved": "unchecked",
+        "broken": "unchecked"
+      },
+      "receiptIds": [
+        "R9b615cde361e9fdc",
+        "R9b615cde361e9fdc",
+        "Re0da075e09084669",
+        "R759d8cb613e3333a",
+        "R97974af7995614d7"
+      ],
+      "model": "walsh_xor",
+      "mathematicalFragment": {
+        "equation": "W_ortho(x xor_convolve y) = sqrt(N)*W_ortho(x)*W_ortho(y)",
+        "domain": "N=4, Sylvester order, W_ortho=H/2",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard",
+          "normalization"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c23",
+        "modelKey": "walsh_xor",
+        "status": "generated finite/symbolic implementation, not an imported production binding"
+      },
+      "language": {
+        "description": "Recursive +1/-1 matrix. Sequency analysis. Only addition/subtraction needed.",
+        "input": "Binary sequence of length 2^n",
+        "output": "Walsh-Hadamard spectrum",
+        "preserved": "Sequency decomposition, O(N log N) with no multiplication",
+        "broken": "Frequency (replaced by sequency)"
+      },
+      "alignment": {
+        "kind": "generation: manually proposed span interpretation, not automatic semantic parsing",
+        "field": "description",
+        "keptExplicitly": [
+          "operation"
+        ],
+        "unestablished": [
+          "domainGuard",
+          "normalization",
+          "operatorLaw"
+        ],
+        "guardMeaning": "The finite trial domain is narrower than the general entry. Broader language never proves broader code correctness."
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "kept": "the named finite model and equation test",
+          "lost": [
+            "generality beyond the tested fragment",
+            "unrun proof obligations"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "normalization",
+            "operatorLaw"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "kept": [
+            "operation"
+          ],
+          "lost": [
+            "domainGuard",
+            "normalization",
+            "operatorLaw"
+          ]
+        }
+      ],
+      "equality": "same scoped contract information and same finite computation; surface wording equality is irrelevant"
+    },
+    {
+      "entry": "D6-060",
+      "name": "Hadamard transform",
+      "kind": "generation: disposable survey proposal",
+      "entryEvidence": {
+        "name": "sourced",
+        "description": "sourced",
+        "input": "sourced",
+        "output": "sourced",
+        "preserved": "sourced",
+        "broken": "unsupported"
+      },
+      "receiptIds": [
+        "R6993c471fda3f765",
+        "Re0da075e09084669",
+        "R10b2fe1aee725435"
+      ],
+      "model": "hadamard_recursive",
+      "mathematicalFragment": {
+        "equation": "orthonormal Sylvester H4 = unnormalized H4 / 2",
+        "domain": "N=4",
+        "requiredInformation": [
+          "operation",
+          "operatorLaw",
+          "domainGuard",
+          "normalization"
+        ]
+      },
+      "codeFragment": {
+        "file": "docs/schema-survey/pilots/run_pilots.py",
+        "function": "c33",
+        "status": "generated exact/symbolic recurrence comparison"
+      },
+      "language": {
+        "description": "H_N = (1/sqrt(N)) [[H_{N/2}, H_{N/2}],[H_{N/2},-H_{N/2}]]. Recursive +/-1 matrix. = Walsh-Hadamard.",
+        "input": "Signal vector of length N = 2^n",
+        "output": "Hadamard-transformed vector",
+        "preserved": "Parseval, self-inverse (up to scaling), only +/- operations",
+        "broken": "Complex phase information"
+      },
+      "alignment": {
+        "kind": "generation: one literal-recursion interpretation",
+        "field": "description",
+        "keptExplicitly": [
+          "operation",
+          "domainGuard"
+        ],
+        "unestablished": [
+          "operatorLaw",
+          "normalization"
+        ]
+      },
+      "arrows": [
+        {
+          "from": "math",
+          "to": "code",
+          "lost": [
+            "generality beyond N=4"
+          ]
+        },
+        {
+          "from": "code",
+          "to": "language",
+          "lost": [
+            "normalization convention needs an explicit submatrix convention"
+          ]
+        },
+        {
+          "from": "language",
+          "to": "math",
+          "lost": [
+            "a unique normalized recurrence is not recoverable without interpretation"
+          ]
+        }
+      ],
+      "equality": "matrix equality at N=4 under the stated submatrix convention"
+    }
+  ],
+  "fixtureRule": "Inputs and proposed annotations are generated fixtures, labeled as such. Source statements remain readings."
+}

@@ -1,0 +1,9 @@
+Excerpts, verbatim, from: scipy-fft, pinned source
+URL: https://raw.githubusercontent.com/scipy/scipy/v1.17.0/scipy/fft/_basic.py
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 0a7dd430c204bf29655ac68fe72029349ad08240abf91c448739c3b22059211d
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Compute the 1-D discrete Fourier Transform.
+
+Normalization mode. Default is "backward", meaning no normalization on
+        the forward transforms and scaling by ``1/n`` on the `ifft`.

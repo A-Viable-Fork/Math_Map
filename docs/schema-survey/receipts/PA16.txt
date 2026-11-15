@@ -1,0 +1,6 @@
+Excerpts, verbatim, from: MMT: theory morphism composition
+URL: https://uniformal.github.io/doc/language/modules
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 851ba0bf173d20508a558d1cd6b676b85cf596db66d2098bf42e8843b72b6e93
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+Complex morphisms can be built in particular using composition.

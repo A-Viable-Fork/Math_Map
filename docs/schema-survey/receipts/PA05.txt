@@ -1,0 +1,7 @@
+Excerpts, verbatim, from: Mathlib at the map pin: transferring group structure
+URL: https://raw.githubusercontent.com/leanprover-community/mathlib4/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Group/TransferInstance.lean
+Fetched: 2026-11-13. SHA-256 of the page source as fetched: 860070fb18b81943bafceafed3028f6ff12253854566f1e3a0d79946b7e18047
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+In this file we prove lemmas of the following form: if `β` has a group structure and `α ≃ β`
+then `α` has a group structure, and similarly for monoids, semigroups and so on.
