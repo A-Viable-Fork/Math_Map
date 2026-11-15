@@ -490,6 +490,22 @@ const LANDED = [
   K("D2-167", "preserved", "Subgroup.normal_in_normalizer", "Mathlib/Algebra/Group/Subgroup/Basic.lean", "exact", "H is normal in its normalizer.", { whole: true }),
   K("D2-170", "preserved", "Matrix.det_conj", "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean", "exact", "det (M N M^-1) = det N for invertible M: the determinant part."),
   K("D2-170", "preserved", "Matrix.trace_conj", "Mathlib/LinearAlgebra/Matrix/NonsingularInverse.lean", "exact", "trace (M N M^-1) = trace N for invertible M: the trace part."),
+  // Batch 6: D2-178 to D2-199.
+  K("D2-178", "description", "IsLocalRing.CotangentSpace", "Mathlib/RingTheory/Ideal/Cotangent.lean", "ingredient", "The cotangent space m/m^2 of a local ring, a module over the residue field; the tangent space, its dual, is not defined here."),
+  K("D2-179", "output", "KaehlerDifferential", "Mathlib/RingTheory/Kaehler/Basic.lean", "exact", "The module of Kahler differentials of S over R, built as I/I^2 for I the kernel of the multiplication S ⊗ S to S."),
+  K("D2-179", "output", "KaehlerDifferential.D", "Mathlib/RingTheory/Kaehler/Basic.lean", "exact", "The universal derivation from S into its module of Kahler differentials."),
+  K("D2-179", "preserved", "KaehlerDifferential.linearMapEquivDerivation", "Mathlib/RingTheory/Kaehler/Basic.lean", "exact", "S-linear maps from the module of differentials to M are the R-derivations from S to M: the universal property."),
+  K("D2-184", "input", "VectorBundleCore", "Mathlib/Topology/VectorBundle/Basic.lean", "exact", "Open base sets, coordinate changes into continuous linear maps of the fibre, and the cocycle condition coordChange_comp: the data a vector bundle is glued from."),
+  K("D2-185", "description", "DerivedCategory", "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean", "exact", "The derived category of an abelian category: cochain complexes up to quasi-isomorphism, a localization."),
+  K("D2-185", "preserved", "DerivedCategory.isIso_Q_map_iff_quasiIso", "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean", "exact", "A morphism of cochain complexes becomes an isomorphism in the derived category exactly when it is a quasi-isomorphism."),
+  K("D2-185", "preserved", "DerivedCategory.homologyFunctorFactors", "Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean", "exact", "Each homology functor of cochain complexes factors through the derived category: the homology is kept."),
+  K("D2-187", "output", "CategoryTheory.MonoidalCategory", "Mathlib/CategoryTheory/Monoidal/Category.lean", "exact", "A monoidal structure on a category, extending the tensor, unit, associator and unitors of MonoidalCategoryStruct; its pentagon and triangle fields lie past the declaration window the excerpt keeps."),
+  K("D2-190", "description", "CategoryTheory.ObjectProperty.IsSerreClass", "Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean", "exact", "A Serre class in an abelian category: it holds for zero and is closed under subobjects, quotients and extensions."),
+  K("D2-190", "broken", "CategoryTheory.ObjectProperty.SerreClassLocalization.isZero_obj_iff", "Mathlib/CategoryTheory/Abelian/SerreClass/Localization.lean", "exact", "For a localization L with respect to a Serre class P, L X is zero exactly when X lies in P: the subcategory's objects go to zero."),
+  K("D2-192", "description", "Ideal.radical", "Mathlib/RingTheory/Ideal/Operations.lean", "exact", "The radical of I: the elements some power of which lies in I."),
+  K("D2-192", "output", "Ideal.radical_idem", "Mathlib/RingTheory/Ideal/Operations.lean", "exact", "The radical of the radical is the radical: rad(I) is a radical ideal."),
+  K("D2-192", "preserved", "PrimeSpectrum.zeroLocus_radical", "Mathlib/RingTheory/Spectrum/Prime/Basic.lean", "exact", "The zero locus of rad(I) in the prime spectrum is that of I."),
+  K("D2-194", "description", "CategoryTheory.ComposableArrows.Exact", "Mathlib/Algebra/Homology/ExactSequence.lean", "general", "A sequence of composable arrows is exact when it is a complex and each two consecutive arrows form an exact short complex, in a category with zero morphisms."),
 ];
 
 module.exports = { MATHLIB, FORMAL: [...FORMAL, ...LANDED], LANDED };

@@ -6,25 +6,23 @@ The landed entries (origin map, tier landed: as written, never reviewed) graded 
 
 The strict rule [ruling: operator, 2026-11-13]: **confirmed** only when a quoted window states the field's claim itself, not merely names the object; a claim with several parts is confirmed only when every part is quoted. **imprecise**: right idea with a part unquoted or a detail off (the note names it); **wrong**: a window contradicts it; **unsupported**: no window states it. Every imprecise or wrong content field carries a receipted correction in `mapfill/corrections.js` (the landed text kept beside it) or a flag. Before each batch's sources were read, the reviewer committed what each field should be (`audit/landed-review-recall-0_1.js`, recalled: a lead, never evidence).
 
-Graded: 125 of 993 entries in 5 batches. By domain: D2 125 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
-
-Recall committed, grades pending: batch 6 (D2-178, D2-179, D2-181, D2-182, D2-183, D2-184, D2-185, D2-186, D2-187, D2-189, D2-190, D2-192, D2-194, D2-197, D2-198, D2-199).
+Graded: 141 of 993 entries in 6 batches. By domain: D2 141 of 141, D4 0 of 352, D1 0 of 106, D3 0 of 137, D5 0 of 68, D6 0 of 138, D8 0 of 51.
 
 ## 1. Verdicts by field
 
 Each domain's fields, counted by verdict.
 
-### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (125 entries)
+### D2, ALGEBRA AND ALGEBRAIC GEOMETRY (141 entries)
 
 | Field | Confirmed | Imprecise | Wrong | Unsupported |
 |---|---|---|---|---|
-| name | 121 | 1 | 0 | 3 |
-| description | 90 | 32 | 1 | 2 |
-| input | 101 | 20 | 0 | 4 |
-| output | 111 | 11 | 0 | 3 |
-| preserved | 68 | 36 | 0 | 21 |
-| broken | 26 | 4 | 1 | 94 |
-| **all** | 517 | 104 | 2 | 127 |
+| name | 136 | 1 | 0 | 4 |
+| description | 102 | 35 | 1 | 3 |
+| input | 110 | 26 | 0 | 5 |
+| output | 126 | 11 | 0 | 4 |
+| preserved | 77 | 42 | 0 | 22 |
+| broken | 32 | 6 | 1 | 102 |
+| **all** | 583 | 121 | 2 | 140 |
 
 ## 2. By batch
 
@@ -37,6 +35,7 @@ Per batch: imprecise and wrong fields found, scaled to 25 entries, and the share
 | 3 | D2 | 25 | 19 | 0 | 19.0 | 12 | 123 | 6 | 5% |
 | 4 | D2 | 25 | 27 | 0 | 27.0 | 15 | 119 | 21 | 18% |
 | 5 | D2 | 25 | 20 | 1 | 21.0 | 13 | 124 | 15 | 12% |
+| 6 | D2 | 16 | 17 | 0 | 26.6 | 11 | 83 | 10 | 12% |
 
 ## 3. Blind re-grades
 
@@ -68,12 +67,14 @@ Every tenth entry: its most specific claim (a hypothesis, a formula, an attribut
 - **D2-149 Ward's Twistor Construction**, input: Any holomorphic bundle on CP^3 gives a self-dual connection. *Attempt:* Looked in the source for the triviality-on-lines condition the recall expected; the fetched window states the relation for holomorphic vector bundles on CP^3 without it, so the attempt found no contradiction in the source (the condition is recalled, not receipted). *Outcome:* survived.
 - **D2-161 Elimination Theory Reduction**, preserved: Elimination keeps the projected solution set. *Attempt:* Looked for points of the closure missed by the projection: the source says the elimination ideal defines the Zariski closure of the projection (for xy = 1 projected to y, the closure adds y = 0, inferred). *Outcome:* falsified.
 - **D2-172 Parallel Curve Construction**, broken: Parallel curves change curvature and can acquire cusps. *Attempt:* Checked the curvature formula and the cusp condition in the source: curvature becomes k/(1 + dk), and cusps appear where d equals the radius of curvature. *Outcome:* survived.
+- **D2-183 Hilbert Symbol Construction**, description: (a,b)_v = 1 exactly when ax^2 + by^2 = 1 is solvable in the local field. *Attempt:* Tested against the source's definition, z^2 = ax^2 + by^2 with a non-zero solution: a solution with z non-zero scales to one of ax^2 + by^2 = 1, and one with z = 0 makes the form isotropic, hence universal, so it represents 1; conversely a solution of the landed equation is one with z = 1. The two conditions agree; the landed form is the one no window states. *Outcome:* survived.
+- **D2-198 Covariant Transformation**, description: T'_i = (dx^j/dx'^i) T_j: covariant components transform with the Jacobian of the old coordinates in the new. *Attempt:* The index placement and the direction of the Jacobian were tested against the source's basis rule, d/dy^i = sum over j of (dx^j/dy^i) d/dx^j, and its statement that covector components transform with the same matrix as the basis; an inverted Jacobian would have matched the contravariant rule instead. *Outcome:* survived.
 
 ## 5. Findings
 
 Corrections, flags and Mathlib conflicts on reviewed entries.
 
-### Corrections (69 entries, 105 fields)
+### Corrections (80 entries, 122 fields)
 
 - **D2-003 Rotation** (broken): Landed review, batch 1: broken graded imprecise. In space the axis of rotation is a line of fixed points, so not every non-centre point moves.
 - **D2-004 Dilation (Scaling)** (description): Landed review, batch 1: description graded imprecise. "Not isometric" fails for |k| = 1: k = -1 is the point reflection, an isometry.
@@ -144,6 +145,17 @@ Corrections, flags and Mathlib conflicts on reviewed entries.
 - **D2-101 Pullback** (preserved): Landed review, re-graded after blind round 1: preserved graded imprecise. The adjunction is stated for the sheaf inverse image f^-1, not for the module pullback f^*.
 - **D2-132 Bruhat Decomposition** (input): Landed review, re-graded after blind round 1: input graded imprecise. The decomposition is stated for a connected reductive group over an algebraically closed field.
 - **D2-134 Iwasawa Decomposition** (description): Landed review, re-graded after blind round 1: description graded imprecise. Abelian and nilpotent are stated for the Lie algebras that generate A and N.
+- **D2-178 Zariski Tangent Space Construction** (preserved): Landed review, batch 6: preserved graded imprecise. The dimension is bounded by the tangent space, not kept by it.
+- **D2-179 Kahler Differential Construction** (input): Landed review, batch 6: input graded imprecise. The source takes commutative rings.
+- **D2-181 Prym Variety Construction** (preserved, broken): Landed review, batch 6: preserved and broken graded imprecise. That a Prym variety is principally polarized is not in a fetched window (the source states the converse direction, in dimension 5 or less), and the loss of the full Jacobian is stated as a passage to a subvariety.
+- **D2-183 Hilbert Symbol Construction** (description, input): Landed review, batch 6: description and input graded imprecise. The source states the homogeneous equation, and defines the symbol on the non-zero elements.
+- **D2-184 Vector Bundle Construction** (preserved): Landed review, batch 6: preserved graded imprecise. The isomorphism class is not in a fetched window and is dropped.
+- **D2-186 Fractional (Mobius) Transformation** (input, preserved): Landed review, batch 6: input and preserved graded imprecise. The source requires ad - bc non-zero, and says a circle need not go to a circle.
+- **D2-187 Monoidal Category Construction** (input): Landed review, batch 6: input graded imprecise. The natural isomorphisms are data of the structure.
+- **D2-190 Serre Subcategory Construction** (description, preserved): Landed review, batch 6: description and preserved graded imprecise. The source's synonym is dense, not thick; a localization sequence is not in a fetched window and is dropped.
+- **D2-192 Radical Operation** (input, broken): Landed review, batch 6: input and broken graded imprecise. The radical is stated for a commutative ring, and the nilpotent elements it absorbs are those of R/I.
+- **D2-194 Exact Sequence Construction** (description, preserved): Landed review, batch 6: description and preserved graded imprecise. Exactness is a property of a given sequence, not a construction, and connecting maps are not in a fetched window.
+- **D2-197 Fubini-Study Metric** (input): Landed review, batch 6: input graded imprecise. The metric is that of a projective space with a Hermitian form.
 
 ### Flags (0)
 
@@ -159,15 +171,15 @@ Links this review added in `mapfill/formal.js` (its LANDED list), by match grade
 
 | Match | Links |
 |---|---|
-| exact | 24 |
-| general | 14 |
+| exact | 37 |
+| general | 15 |
 | special | 9 |
 | related | 10 |
-| ingredient | 3 |
+| ingredient | 4 |
 | conflicts | 0 |
-| **all** | 60 on 44 entries |
+| **all** | 75 on 52 entries |
 
-No link (80):
+No link (88):
 
 - D2-005 Vertical Shift: Searched graph shifts and Function.comp with addition: Mathlib states no graph transformations as such (f (x + c) is composition with a translation); no declaration states this entry's claims.
 - D2-006 Horizontal Shift: Searched as for D2-005: no graph-transformation declarations at the pin.
@@ -249,6 +261,14 @@ No link (80):
 - D2-175 Pedal Curve Construction: Searched pedal curves: none at the pin.
 - D2-176 Negative Pedal Curve: Searched as for D2-175: none at the pin.
 - D2-177 Homogeneous Coordinate Transformation: Mathlib has projective spaces (Projectivization), linked on D2-010, but no homogeneous-coordinate chart at the pin.
+- D2-181 Prym Variety Construction: Searched Prym, the Jacobian of a curve and norm maps of Jacobians: Mathlib has no Jacobian variety of a curve at the pin; no declaration states this entry's claims.
+- D2-182 Todd Class Construction: Searched Todd class and Chern classes: Mathlib has no characteristic classes of vector bundles at the pin; no declaration states this entry's claims.
+- D2-183 Hilbert Symbol Construction: Searched hilbertSymbol, HilbertSymbol and norm residue: Mathlib has no Hilbert symbol at the pin; no declaration states this entry's claims.
+- D2-186 Fractional (Mobius) Transformation: Searched Mobius, moebius and the action of GL(2) on the Riemann sphere: Mathlib has the action on the upper half-plane and the arithmetic Mobius function, not the transformations of the sphere; no declaration states this entry's claims.
+- D2-189 Ischebeck Spectral Sequence: Searched Ischebeck: no declaration or docstring at the pin names it; no declaration states this entry's claims.
+- D2-197 Fubini-Study Metric: Searched FubiniStudy, Kahler and metrics on projective space: Mathlib has no Kahler manifolds and no metric on complex projective space at the pin; no declaration states this entry's claims.
+- D2-198 Covariant Transformation: Searched covariant and contravariant component laws and tangentCoordChange: Mathlib states changes of chart on the tangent bundle but no component transformation law for tensors; no declaration states this entry's claims.
+- D2-199 Contravariant Transformation: Searched covariant and contravariant component laws and tangentCoordChange: Mathlib states changes of chart on the tangent bundle but no component transformation law for tensors; no declaration states this entry's claims.
 
 ## 7. Receipts
 
@@ -1971,4 +1991,229 @@ No link (80):
 - mathlib: none. Mathlib has projective spaces (Projectivization), linked on D2-010, but no homogeneous-coordinate chart at the pin.
 
   h: excerpts/wikipedia-homogeneous-coordinates.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374996410)
+
+### D2-178 Zariski Tangent Space Construction (batch 6)
+
+- name (landed: Zariski Tangent Space Construction): **confirmed** [z] "the '''Zariski tangent space''' is a construction that defines a [[tangent space]] at a point ''P'' on an [[algebraic variety]] ''V'' (and more generally)"
+- description (landed: Tangent space at point: (m/m^2)*.): **confirmed** [z] "Its [[dual vector space|dual]] (as a ''k''-vector space) is called '''tangent space''' of ''R''." [z] ":<math>\mathfrak{m}/\mathfrak{m}^2</math>" [m] "abbrev CotangentSpace : Type _ := (maximalIdeal R).Cotangent"
+- input (landed: Scheme X + point x): **confirmed** [z] "The tangent space <math>T_P(X)</math> and cotangent space <math>T_P^*(X)</math> to a scheme ''X'' at a point ''P'' is the (co)tangent space of <math>\mathcal{O}_{X,P}</math>."
+- output (landed: T_x X = (m/m^2)*): **confirmed** [z] "Its [[dual vector space|dual]] (as a ''k''-vector space) is called '''tangent space''' of ''R''." [z] ":<math>\mathfrak{m}/\mathfrak{m}^2</math>" [z] "The tangent space <math>T_P(X)</math> and cotangent space <math>T_P^*(X)</math> to a scheme ''X'' at a point ''P'' is the (co)tangent space of <math>\mathcal{O}_{X,P}</math>."
+- preserved (landed: Dimension, smoothness detection): **imprecise** [z] "If ''R'' is a [[noetherian ring|Noetherian]] local ring, the dimension of the tangent space is at least the [[Krull dimension|dimension]] of ''R'':" [z] "''R'' is called [[regular local ring|regular]] if equality holds. In a more geometric parlance, when ''R'' is the local ring of a variety ''V'' at a point ''v'', one also says that ''v'' is a regular point. Otherwise it is called a '''singular point'''." *Smoothness detection is stated: equality holds exactly for a regular local ring. Dimension is bounded, not kept: the tangent space has dimension at least that of the Noetherian local ring.*
+- broken (landed: Higher-order structure): **confirmed** [z] "Morally, modding out ''<math>\mathfrak{m}</math><sup>2</sup>'' corresponds to dropping the non-linear terms from the equations defining ''V'' inside some affine space, therefore giving a system of linear equations that define the tangent space." *The non-linear terms are dropped.*
+- recalled: name: ok; description: ok: the dual of m/m^2 over the residue field; input: ok: a point of a scheme, through its local ring; output: ok; preserved: ok: dim of T at least the local dimension, equal exactly at regular points; broken: thin
+- mathlib (ingredient, description): `IsLocalRing.CotangentSpace`. The cotangent space m/m^2 of a local ring, a module over the residue field; the tangent space, its dual, is not defined here.
+
+  z: excerpts/wikipedia-zariski-tangent-space.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1340846727)
+  m: excerpts/mathlib-Mathlib.RingTheory.Ideal.Cotangent.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Cotangent.lean)
+
+### D2-179 Kahler Differential Construction (batch 6)
+
+- name (landed: Kahler Differential Construction): **confirmed** [k] "'''Kähler differentials''' provide an adaptation of [[differential form]]s to arbitrary [[commutative ring]]s or [[scheme (mathematics)|scheme]]s." *The landed name drops the umlaut.*
+- description (landed: Module Ω_{A/k} with universal derivation.): **confirmed** [k] "The [[module (mathematics)|module]] of Kähler differentials is defined as the {{math|''S''}}-module <math>\Omega_{S/R}</math> for which there is a universal derivation <math>d : S \to \Omega_{S/R}</math>."
+- input (landed: k-algebra A): **imprecise** [k] "Let {{math|''R''}} and {{math|''S''}} be commutative rings and {{math|''φ'' : ''R'' → ''S''}} be a [[ring homomorphism]]." [k] "An important example is for {{math|''R''}} a [[Field (mathematics)|field]] and {{math|''S''}} a unital [[associative algebra|algebra]] over {{math|''R''}}" *The source takes commutative rings, R to S; the landed k-algebra A carries no commutativity.* (recall contradicted)
+- output (landed: Ω_{A/k} with d: A -> Ω): **confirmed** [k] "The [[module (mathematics)|module]] of Kähler differentials is defined as the {{math|''S''}}-module <math>\Omega_{S/R}</math> for which there is a universal derivation <math>d : S \to \Omega_{S/R}</math>." [m] "def KaehlerDifferential.D : Derivation R S Ω[S⁄R] :="
+- preserved (landed: Derivation universal property): **confirmed** [k] ":<math>\operatorname{Hom}_S(\Omega_{S/R},M) \xrightarrow{\cong} \operatorname{Der}_R(S,M).</math>" [m] "def KaehlerDifferential.linearMapEquivDerivation : (Ω[S⁄R] →ₗ[S] M) ≃ₗ[S] Derivation R S M :="
+- broken (landed: Specific derivation behavior): **unsupported** *No window states what the construction breaks: every derivation factors through the universal one.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: Hom(Omega, M) is Der(A, M); broken: thin
+- mathlib (exact, output): `KaehlerDifferential`. The module of Kahler differentials of S over R, built as I/I^2 for I the kernel of the multiplication S ⊗ S to S.
+- mathlib (exact, output): `KaehlerDifferential.D`. The universal derivation from S into its module of Kahler differentials.
+- mathlib (exact, preserved): `KaehlerDifferential.linearMapEquivDerivation`. S-linear maps from the module of differentials to M are the R-derivations from S to M: the universal property.
+
+  k: excerpts/wikipedia-kahler-differential.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1382035790)
+  m: excerpts/mathlib-Mathlib.RingTheory.Kaehler.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Kaehler/Basic.lean)
+
+### D2-181 Prym Variety Construction (batch 6)
+
+- name (landed: Prym Variety Construction): **confirmed** [p] "the '''Prym variety''' construction (named for [[Friedrich Prym]]) is a method in [[algebraic geometry]] of making an [[abelian variety]] from a [[Morphism of algebraic varieties|morphism]] of [[algebraic curve]]s."
+- description (landed: Double cover -> Prym abelian variety.): **confirmed** [p] "the '''Prym variety''' construction (named for [[Friedrich Prym]]) is a method in [[algebraic geometry]] of making an [[abelian variety]] from a [[Morphism of algebraic varieties|morphism]] of [[algebraic curve]]s." [p] "In its original form, it was applied to an unramified [[Double cover (topology)|double covering]] of a [[Riemann surface]]" *A double cover is a morphism of curves; the original form took an unramified one.*
+- input (landed: Double cover f: C->C'): **confirmed** [p] "In its original form, it was applied to an unramified [[Double cover (topology)|double covering]] of a [[Riemann surface]]" [p] "of algebraic curves, write ''J''<sub>''i''</sub> for the Jacobian variety of ''C''<sub>''i''</sub>."
+- output (landed: Prym(C/C')): **confirmed** [p] "Then the Prym variety of φ is the [[kernel (algebra)|kernel]] of ψ."
+- preserved (landed: Principally polarized abelian variety): **imprecise** [p] "[[principally polarized]] abelian varieties (p.p.a.v.'s) of dimension > 3 are not generally Jacobians, but all p.p.a.v.'s of dimension 5 or less are Prym varieties." [p] "To qualify that somewhat, to get an abelian ''variety'', the [[connected component of the identity]] of the [[reduced scheme]] underlying the [[kernel (scheme theory)|kernel]] may be intended." *An abelian variety is stated; that the Prym is principally polarized is not: the window says every principally polarized abelian variety of dimension 5 or less is a Prym, the converse direction.*
+- broken (landed: Full Jacobian): **imprecise** [p] "Or in other words take the largest abelian subvariety of  ''J''<sub>1</sub> on which ψ is trivial." *The Prym is the largest abelian subvariety of J_1 on which the norm is trivial; that this is less than the full Jacobian is not stated (it is all of J_1 when J_2 is trivial).*
+- recalled: name: ok; description: ok: the connected kernel of the norm map between Jacobians of a double cover; input: ok; output: ok; preserved: off: principally polarized for an unramified cover or one branched at two points; in general the restricted polarization is twice a principal one; broken: thin
+- mathlib: none. Searched Prym, the Jacobian of a curve and norm maps of Jacobians: Mathlib has no Jacobian variety of a curve at the pin; no declaration states this entry's claims.
+
+  p: excerpts/wikipedia-prym-variety.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1350924033)
+
+### D2-182 Todd Class Construction (batch 6)
+
+- name (landed: Todd Class Construction): **confirmed** [t] "the '''Todd class''' is a construction in the [[algebraic topology]] of [[characteristic class]]es."
+- description (landed: Characteristic class td(E) via Chern classes.): **confirmed** [t] "The Todd class of a [[vector bundle]] can be defined in terms of [[Chern class]]es within various theories"
+- input (landed: Vector bundle E): **confirmed** [t] "The Todd class of a [[vector bundle]] can be defined in terms of [[Chern class]]es within various theories"
+- output (landed: td(E) in cohomology): **confirmed** [t] "which is to be computed in the [[cohomology ring]] of <math>X</math>" [t] ":<math>\operatorname{td}(E) = \prod Q(\alpha_i),</math>"
+- preserved (landed: Multiplicativity): **confirmed** [t] "The Todd class is multiplicative:" [t] "::<math>\operatorname{td}(E\oplus F) = \operatorname{td}(E)\cdot \operatorname{td}(F).</math>"
+- broken (landed: Chern root details): **unsupported** *No window states that Chern root details are lost.*
+- recalled: name: ok; description: ok: the product of x/(1 - e^-x) over the Chern roots; input: ok; output: ok; preserved: ok: td(E + F) = td(E) td(F); broken: thin
+- mathlib: none. Searched Todd class and Chern classes: Mathlib has no characteristic classes of vector bundles at the pin; no declaration states this entry's claims.
+
+  t: excerpts/wikipedia-todd-class.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384924306)
+
+### D2-183 Hilbert Symbol Construction (batch 6)
+
+- name (landed: Hilbert Symbol Construction): **confirmed** [h] "the '''Hilbert symbol''' or '''norm-residue symbol''' is a function"
+- description (landed: (a,b)_v detecting local solvability of ax^2+by^2=1.): **imprecise** [h] ":<math>(a,b)=\begin{cases}+1,&\mbox{ if }z^2=ax^2+by^2\mbox{ has a non-zero solution }(x,y,z)\in K^3;\\-1,&\mbox{ otherwise.}\end{cases}</math>" [h] "the quadratic Hilbert symbol is the [[function (mathematics)|function]] <math>K^\times\times K^\times\to\{\pm 1\}</math> defined by" *The symbol is +1 exactly when z^2 = ax^2 + by^2 has a non-zero solution, as stated; the landed ax^2 + by^2 = 1 is the dehomogenized form, equivalent by scaling and isotropy, which no window states.*
+- input (landed: a, b in local field): **imprecise** [h] "Over a local field <math>K</math> with [[multiplicative group]] of non-zero elements <math>K^\times</math>," [h] "the quadratic Hilbert symbol is the [[function (mathematics)|function]] <math>K^\times\times K^\times\to\{\pm 1\}</math> defined by" *The symbol is defined on the non-zero elements; the landed a, b in a local field omits that.* (recall contradicted)
+- output (landed: (a,b)_v in {±1}): **confirmed** [h] "the quadratic Hilbert symbol is the [[function (mathematics)|function]] <math>K^\times\times K^\times\to\{\pm 1\}</math> defined by"
+- preserved (landed: Bilinearity, solvability): **confirmed** [h] "The (bi)multiplicativity, i.e.," [h] ":<math>(a,b_1b_2)=(a,b_1)\cdot(a,b_2)</math>" [h] ":<math>(a,b)=\begin{cases}+1,&\mbox{ if }z^2=ax^2+by^2\mbox{ has a non-zero solution }(x,y,z)\in K^3;\\-1,&\mbox{ otherwise.}\end{cases}</math>" *Multiplicative in each argument, and +1 exactly when the equation is solvable.*
+- broken (landed: Solution structure): **unsupported** *No window states what the symbol breaks.*
+- recalled: name: ok; description: ok: (a, b) = 1 iff ax^2 + by^2 = z^2 has a nonzero solution; input: ok; output: ok; preserved: ok: bimultiplicative, with a product formula over the places; broken: thin
+- mathlib: none. Searched hilbertSymbol, HilbertSymbol and norm residue: Mathlib has no Hilbert symbol at the pin; no declaration states this entry's claims.
+
+  h: excerpts/wikipedia-hilbert-symbol.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1363529473)
+
+### D2-184 Vector Bundle Construction (batch 6)
+
+- name (landed: Vector Bundle Construction): **confirmed** [v] "Conversely, given a fiber bundle <math>(E,X,\pi,\R^k)</math> with a <math>\text{GL}(k)</math> cocycle acting in the standard way on the fiber <math>\R^k</math>, there is [[associated bundle|associated]] a vector bundle.  This is an example of the [[fibre bundle construction theorem]] for vector bundles, and can be taken as an alternative definition of a vector bundle."
+- description (landed: Transition functions -> vector bundle.): **confirmed** [v] "Conversely, given a fiber bundle <math>(E,X,\pi,\R^k)</math> with a <math>\text{GL}(k)</math> cocycle acting in the standard way on the fiber <math>\R^k</math>, there is [[associated bundle|associated]] a vector bundle.  This is an example of the [[fibre bundle construction theorem]] for vector bundles, and can be taken as an alternative definition of a vector bundle." [v] "These are called the '''[[Transition map|transition functions]]''' (or the '''coordinate transformations''') of the vector bundle."
+- input (landed: Open cover + transition g_{ij}): **confirmed** [v] ":<math>g_{UV}\colon U\cap V\to \operatorname{GL}(k).</math>" [v] "Two trivial vector bundles over [[open set]]s <math>U_\alpha</math> and <math>U_\beta</math> may be [[Gluing (topology)|glued]] over the intersection <math>U_{\alpha\beta}</math> by transition functions <math>g_{\alpha \beta}</math>" [m] "isOpen_baseSet : ∀ i, IsOpen (baseSet i)" [m] "coordChange : ι → ι → B → F →L[R] F"
+- output (landed: Vector bundle E -> X): **confirmed** [v] "Conversely, given a fiber bundle <math>(E,X,\pi,\R^k)</math> with a <math>\text{GL}(k)</math> cocycle acting in the standard way on the fiber <math>\R^k</math>, there is [[associated bundle|associated]] a vector bundle.  This is an example of the [[fibre bundle construction theorem]] for vector bundles, and can be taken as an alternative definition of a vector bundle."
+- preserved (landed: Cocycle condition, iso class): **imprecise** [v] ":<math>g_{UU}(x) = I, \quad g_{UV}(x)g_{VW}(x)g_{WU}(x) = I</math>" [v] "The [[Set (mathematics)|set]] of transition functions forms a [[Čech cocycle]] in the sense that" [m] "(coordChange j k x) (coordChange i j x v) = coordChange i k x v" *The cocycle condition is stated; the isomorphism class is not in a window.* (recall contradicted)
+- broken (landed: Specific trivialization): **unsupported** *No window states that a trivialization is lost.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: the cocycle condition; cohomologous cocycles give isomorphic bundles; broken: thin
+- mathlib (exact, input): `VectorBundleCore`. Open base sets, coordinate changes into continuous linear maps of the fibre, and the cocycle condition coordChange_comp: the data a vector bundle is glued from.
+
+  v: excerpts/wikipedia-vector-bundle.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1381355624)
+  m: excerpts/mathlib-Mathlib.Topology.VectorBundle.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/VectorBundle/Basic.lean)
+
+### D2-185 Derived Category Construction (batch 6)
+
+- name (landed: Derived Category Construction): **confirmed** [d] "the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''"
+- description (landed: Abelian category -> derived category by localizing at quasi-isos.): **confirmed** [d] "The universal property of the derived category is that it is a [[localization of a category|localization]] of the category of complexes with respect to quasi-isomorphisms." [m] "def DerivedCategory : Type (max u v) := HomologicalComplexUpToQuasiIso C (ComplexShape.up ℤ)"
+- input (landed: Abelian category A): **confirmed** [d] "the '''derived category''' ''D''(''A'') of an  [[abelian category]] ''A''"
+- output (landed: Triangulated D(A)): **confirmed** [d] "Since ''K(A)'' is a [[triangulated category]], its localization ''D(A)'' is also triangulated."
+- preserved (landed: Homological info, quasi-iso classes): **confirmed** [m] "IsIso (Q.map φ) ↔ QuasiIso φ" [h] "noncomputable def homologyFunctorFactors (n : ℤ) : Q ⋙ homologyFunctor C n ≅" *Quasi-isomorphisms become isomorphisms, and each homology functor factors through the derived category.*
+- broken (landed: Complex structure): **confirmed** [d] "with two such chain complexes considered [[isomorphism|isomorphic]] when there is a [[Chain complex#Chain maps|chain map]] that induces an isomorphism on the level of [[homology (mathematics)|homology]] of the chain complexes." *Complexes joined by a quasi-isomorphism become isomorphic: the complex is kept only up to that.*
+- recalled: name: ok; description: ok; input: ok; output: ok: triangulated; preserved: ok: quasi-isomorphisms become isomorphisms; cohomology is kept; broken: thin
+- mathlib (exact, description): `DerivedCategory`. The derived category of an abelian category: cochain complexes up to quasi-isomorphism, a localization.
+- mathlib (exact, preserved): `DerivedCategory.isIso_Q_map_iff_quasiIso`. A morphism of cochain complexes becomes an isomorphism in the derived category exactly when it is a quasi-isomorphism.
+- mathlib (exact, preserved): `DerivedCategory.homologyFunctorFactors`. Each homology functor of cochain complexes factors through the derived category: the homology is kept.
+
+  d: excerpts/wikipedia-derived-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1364615062)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean)
+  h: excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.HomologySequence.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean)
+
+### D2-186 Fractional (Mobius) Transformation (batch 6)
+
+- name (landed: Fractional (Mobius) Transformation): **confirmed** [w] "a '''Möbius transformation''' of the [[complex plane]] is a [[rational function]] of the form" *The landed name drops the umlaut.*
+- description (landed: z -> (az+b)/(cz+d). Conformal auto of Riemann sphere.): **confirmed** [w] "<math display="block">f(z) = \frac{a z + b}{c z + d}</math>" [w] "The Möbius transformations are exactly the [[bijective]] [[conformal map|conformal]] maps from the Riemann sphere to itself"
+- input (landed: z in C ∪ {∞} + matrix): **imprecise** [w] "here the coefficients {{mvar|a}}, {{mvar|b}}, {{mvar|c}}, {{mvar|d}} are complex numbers satisfying {{math|''ad'' − ''bc'' ≠ 0}}." [w] "transformations are defined on the [[Riemann sphere|extended complex plane]] <math>\widehat{\Complex} = \Complex \cup \{\infty\}</math>" *The extended plane and the coefficients are stated; the source requires ad - bc non-zero, which the landed matrix omits.* (recall contradicted)
+- output (landed: (az+b)/(cz+d)): **confirmed** [w] "<math display="block">f(z) = \frac{a z + b}{c z + d}</math>"
+- preserved (landed: Cross-ratio, circles->circles, conformality): **imprecise** [w] "Since Möbius transformations preserve generalized circles and cross-ratios, they also preserve the conjugation." [w] "The Möbius transformations are exactly the [[bijective]] [[conformal map|conformal]] maps from the Riemann sphere to itself" [w] "Furthermore, Möbius transformations map [[generalized circle]]s to generalized circles since circle inversion has this property." [w] "Note that a Möbius transformation does not necessarily map circles to circles and lines to lines:" *Cross-ratio and conformality are stated; circles go to generalized circles, and the source says a circle need not go to a circle.*
+- broken (landed: Metric, distances): **unsupported** *No window states that the metric or distances are lost.*
+- recalled: name: ok; description: ok: ad - bc nonzero; the automorphisms of the Riemann sphere; input: ok; output: ok; preserved: ok: cross-ratio, generalized circles, conformality; broken: ok: not isometries in general
+- mathlib: none. Searched Mobius, moebius and the action of GL(2) on the Riemann sphere: Mathlib has the action on the upper half-plane and the arithmetic Mobius function, not the transformations of the sphere; no declaration states this entry's claims.
+
+  w: excerpts/wikipedia-mobius-transformation.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1374014348)
+
+### D2-187 Monoidal Category Construction (batch 6)
+
+- name (landed: Monoidal Category Construction): **confirmed** [w] "a '''monoidal category''' (or '''tensor category''') is a [[category (mathematics)|category]] <math>\mathbf C</math> equipped with a [[bifunctor]]"
+- description (landed: Category + tensor + unit + coherence.): **confirmed** [w] "that is [[associative]] [[up to]] a [[natural isomorphism]], and an [[Object (category theory)|object]] <math>I</math> that is both a [[left identity|left]] and [[right identity]] for <math>\otimes</math>, again up to a natural isomorphism. The associated natural isomorphisms are subject to certain [[coherence condition]]s, which ensure that all the relevant [[diagram (category theory)|diagram]]s [[commutative diagram|commute]]." [w] "a '''monoidal category''' (or '''tensor category''') is a [[category (mathematics)|category]] <math>\mathbf C</math> equipped with a [[bifunctor]]"
+- input (landed: Category C + bifunctor ⊗ + unit I): **imprecise** [w] "a '''monoidal category''' (or '''tensor category''') is a [[category (mathematics)|category]] <math>\mathbf C</math> equipped with a [[bifunctor]]" [w] "*three [[natural isomorphism]]s subject to certain [[coherence condition]]s expressing the fact that the tensor operation:" *Category, bifunctor and unit object are stated; the source adds three natural isomorphisms as data, which the landed input omits.* (recall contradicted)
+- output (landed: Monoidal (C, ⊗, I)): **confirmed** [w] "a '''monoidal category''' (or '''tensor category''') is a [[category (mathematics)|category]] <math>\mathbf C</math> equipped with a [[bifunctor]]" [m] "class MonoidalCategory (C : Type u) [𝒞 : Category.{v} C] extends MonoidalCategoryStruct C where"
+- preserved (landed: Coherence (pentagon, triangle)): **confirmed** [w] "* for all <math>A</math>, <math>B</math>, <math>C</math> and <math>D</math> in <math>\mathbf C</math>, the pentagon [[diagram (category theory)|diagram]]" [w] "* for all <math>A</math> and <math>B</math> in <math>\mathbf C</math>, the triangle diagram"
+- broken (landed: Non-monoidal structure): **unsupported** *No window states what a monoidal structure breaks.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: Mac Lane coherence from the pentagon and triangle; broken: thin
+- mathlib (exact, output): `CategoryTheory.MonoidalCategory`. A monoidal structure on a category, extending the tensor, unit, associator and unitors of MonoidalCategoryStruct; its pentagon and triangle fields lie past the declaration window the excerpt keeps.
+
+  w: excerpts/wikipedia-monoidal-category.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1373753963)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Category.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Category.lean)
+
+### D2-189 Ischebeck Spectral Sequence (batch 6)
+
+- name (landed: Ischebeck Spectral Sequence): **unsupported** *No fetched source names an Ischebeck spectral sequence: the nLab has no page of that name, Wikipedia no article, and the arXiv search was refused (rate limit) on 2026-11-14.*
+- description (landed: Spectral sequence computing Ext via filtration.): **unsupported** *No fetched window states it.*
+- input (landed: Filtered modules): **unsupported** *No fetched window states it.*
+- output (landed: Spectral seq -> Ext): **unsupported** *No fetched window states it.*
+- preserved (landed: Ext groups in limit): **unsupported** *No fetched window states it.*
+- broken (landed: Filtration steps): **unsupported** *No fetched window states it.*
+- recalled: name: thin: unsure the name is standard; description: thin; input: thin; output: thin; preserved: thin; broken: thin
+- mathlib: none. Searched Ischebeck: no declaration or docstring at the pin names it; no declaration states this entry's claims.
+
+
+### D2-190 Serre Subcategory Construction (batch 6)
+
+- name (landed: Serre Subcategory Construction): **confirmed** [s] "'''Serre''' and '''localizing subcategories''' form important classes of [[Subcategory|subcategories]] of an [[abelian category]]."
+- description (landed: Thick subcategory + quotient category.): **imprecise** [s] "Let <math>\mathcal{A}</math> be an [[abelian category]]. A non-empty full [[subcategory]] <math>\mathcal{C}</math> is called a ''Serre subcategory'' (or also a ''dense subcategory''), if for every short [[exact sequence]]" [s] "one can build (for locally small <math>\mathcal{A}</math>) the [[Quotient of an abelian category|quotient category]]" [m] "class IsSerreClass : Prop extends P.ContainsZero," *The Serre subcategory and its quotient category are stated; the source calls it dense, and thick is not in a window.* (recall contradicted)
+- input (landed: Abelian category + condition): **confirmed** [s] "Let <math>\mathcal{A}</math> be an [[abelian category]]. A non-empty full [[subcategory]] <math>\mathcal{C}</math> is called a ''Serre subcategory'' (or also a ''dense subcategory''), if for every short [[exact sequence]]"
+- output (landed: Serre subcategory S, quotient A/S): **confirmed** [s] "one can build (for locally small <math>\mathcal{A}</math>) the [[Quotient of an abelian category|quotient category]]" [s] "Let <math>\mathcal{A}</math> be an [[abelian category]]. A non-empty full [[subcategory]] <math>\mathcal{C}</math> is called a ''Serre subcategory'' (or also a ''dense subcategory''), if for every short [[exact sequence]]"
+- preserved (landed: Exactness, localization seq): **imprecise** [s] "Each Serre subcategory <math>\mathcal{C}</math> of <math>\mathcal{A}</math> is itself an abelian category, and the inclusion functor <math>\mathcal{C}\to\mathcal{A}</math> is [[Exact functor|exact]]." *Exactness of the inclusion is stated; a localization sequence is not in a window.* (recall contradicted)
+- broken (landed: Objects in S (zeroed)): **confirmed** [l] "IsZero (L.obj X) ↔ P X" *In the localization at a Serre class P, an object goes to zero exactly when it lies in P.*
+- recalled: name: ok; description: ok: closed under subobjects, quotients and extensions; the quotient A/S is abelian; input: ok; output: ok; preserved: ok: the quotient functor is exact; broken: ok: objects of S go to zero
+- mathlib (exact, description): `CategoryTheory.ObjectProperty.IsSerreClass`. A Serre class in an abelian category: it holds for zero and is closed under subobjects, quotients and extensions.
+- mathlib (exact, broken): `CategoryTheory.ObjectProperty.SerreClassLocalization.isZero_obj_iff`. For a localization L with respect to a Serre class P, L X is zero exactly when X lies in P: the subcategory's objects go to zero.
+
+  s: excerpts/wikipedia-serre-subcategory.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1143559342)
+  m: excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean)
+  l: excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Localization.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/SerreClass/Localization.lean)
+
+### D2-192 Radical Operation (batch 6)
+
+- name (landed: Radical Operation): **confirmed** [r] "the '''radical''' of an [[ideal (ring theory)|ideal]] <math>I</math> of a [[commutative ring]] is another ideal defined by the property that an element <math>x</math> is in the radical [[if and only if]] some power of <math>x</math> is in <math>I</math>."
+- description (landed: rad(I) = {r: r^n in I}. Same variety as I.): **confirmed** [r] ":<math>\sqrt{I} = \left\{r\in R \mid r^n\in I\ \hbox{for some}\ n \in \Z^{+}\!\right\},</math>" [o] "carrier := { r | ∃ n : ℕ, r ^ n ∈ I }" [p] "theorem zeroLocus_radical (I : Ideal R) : zeroLocus (I.radical : Set R) = zeroLocus I" *The same variety: the zero locus of the radical is that of I.*
+- input (landed: Ideal I): **imprecise** [r] "the '''radical''' of an [[ideal (ring theory)|ideal]] <math>I</math> of a [[commutative ring]] is another ideal defined by the property that an element <math>x</math> is in the radical [[if and only if]] some power of <math>x</math> is in <math>I</math>." *The radical is stated for an ideal of a commutative ring; the landed input omits commutativity.* (recall contradicted)
+- output (landed: Radical ideal rad(I)): **confirmed** [o] "theorem radical_idem : radical (radical I) = radical I" [r] "A '''radical ideal''' (or '''semiprime ideal''' or '''reduced ideal''') is an ideal that is equal to its radical."
+- preserved (landed: Variety (same zero set)): **confirmed** [p] "theorem zeroLocus_radical (I : Ideal R) : zeroLocus (I.radical : Set R) = zeroLocus I"
+- broken (landed: Nilpotent elements): **imprecise** [r] "Equivalently, <math>\sqrt{I}</math> is the [[preimage]] of the ideal of [[nilpotent]] elements (the [[nilradical of a ring|nilradical]] of the ring) of the [[quotient ring]] <math>R/I</math>" *The radical is the preimage of the nilpotent elements of R/I; the landed field names nilpotent elements without saying of what.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: V(rad I) = V(I); the Nullstellensatz gives I(V(I)) = rad I over an algebraically closed field; broken: ok: nilpotents modulo I are killed
+- mathlib (exact, description): `Ideal.radical`. The radical of I: the elements some power of which lies in I.
+- mathlib (exact, output): `Ideal.radical_idem`. The radical of the radical is the radical: rad(I) is a radical ideal.
+- mathlib (exact, preserved): `PrimeSpectrum.zeroLocus_radical`. The zero locus of rad(I) in the prime spectrum is that of I.
+
+  r: excerpts/wikipedia-radical-of-an-ideal.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1360542597)
+  o: excerpts/mathlib-Mathlib.RingTheory.Ideal.Operations.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Operations.lean)
+  p: excerpts/mathlib-Mathlib.RingTheory.Spectrum.Prime.Basic.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Spectrum/Prime/Basic.lean)
+
+### D2-194 Exact Sequence Construction (batch 6)
+
+- name (landed: Exact Sequence Construction): **confirmed** [e] "an '''exact sequence''' is a sequence of [[morphisms]] between objects (for example, [[Group (mathematics)|groups]], [[Module (mathematics)|modules]], and, more generally, objects of an [[abelian category]]) such that the [[Image (category theory)|image]] of one morphism equals the [[kernel (category theory)|kernel]] of the next."
+- description (landed: Constructs sequence with im(f_i) = ker(f_{i+1}).): **imprecise** [e] "of groups and [[group homomorphism]]s is said to be '''exact''' '''at''' <math>G_i</math> if <math>\operatorname{im}(f_i)=\ker(f_{i+1})</math>." [m] "structure Exact : Prop extends S.IsComplex where" *The condition im(f_i) = ker(f_{i+1}) is stated as a property of a given sequence; that the operation constructs such a sequence is not.* (recall contradicted)
+- input (landed: Morphism sequence): **confirmed** [e] "an '''exact sequence''' is a sequence of [[morphisms]] between objects (for example, [[Group (mathematics)|groups]], [[Module (mathematics)|modules]], and, more generally, objects of an [[abelian category]]) such that the [[Image (category theory)|image]] of one morphism equals the [[kernel (category theory)|kernel]] of the next."
+- output (landed: Exact sequence): **confirmed** [e] "an '''exact sequence''' is a sequence of [[morphisms]] between objects (for example, [[Group (mathematics)|groups]], [[Module (mathematics)|modules]], and, more generally, objects of an [[abelian category]]) such that the [[Image (category theory)|image]] of one morphism equals the [[kernel (category theory)|kernel]] of the next."
+- preserved (landed: Exactness, connecting maps): **imprecise** [e] "of groups and [[group homomorphism]]s is said to be '''exact''' '''at''' <math>G_i</math> if <math>\operatorname{im}(f_i)=\ker(f_{i+1})</math>." [e] "The [[snake lemma]] shows how a [[commutative diagram]] with two exact rows gives rise to a longer exact sequence." *Exactness is the defining condition; connecting maps are not in a window (the snake lemma is named, its connecting map is not).*
+- broken (landed: Non-exact residual): **unsupported** *No window states a non-exact residual.*
+- recalled: name: ok; description: ok: image equals kernel at each term; input: thin; output: thin; preserved: thin: connecting maps come from short exact sequences of complexes; broken: thin
+- mathlib (general, description): `CategoryTheory.ComposableArrows.Exact`. A sequence of composable arrows is exact when it is a complex and each two consecutive arrows form an exact short complex, in a category with zero morphisms.
+
+  e: excerpts/wikipedia-exact-sequence.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1384254588)
+  m: excerpts/mathlib-Mathlib.Algebra.Homology.ExactSequence.txt (https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ExactSequence.lean)
+
+### D2-197 Fubini-Study Metric (batch 6)
+
+- name (landed: Fubini-Study Metric): **confirmed** [f] "'''Fubini–Study metric''' (IPA: /fubini-ʃtuːdi/) is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]]."
+- description (landed: Canonical Kahler metric on CP^n from Hermitian inner product.): **confirmed** [f] "is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]]." [f] "is determined up to [[homothety]] (overall scaling) by invariance under such a U(''n''&nbsp;+&nbsp;1) action; thus it is [[homogeneous space|homogeneous]]." *Canonical: determined up to scaling by unitary invariance.*
+- input (landed: CP^n): **imprecise** [f] "is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]]." *CP^n is stated, endowed with a Hermitian form, which the landed input omits.* (recall contradicted)
+- output (landed: (CP^n, g_FS) Kahler manifold): **confirmed** [f] "is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]]."
+- preserved (landed: Kahler structure, U(n+1) homogeneity): **confirmed** [f] "is determined up to [[homothety]] (overall scaling) by invariance under such a U(''n''&nbsp;+&nbsp;1) action; thus it is [[homogeneous space|homogeneous]]." [f] "is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]]."
+- broken (landed: Flat metric): **confirmed** [f] "A consequence of this formula is that the sectional curvature satisfies <math>1 \leq K(\sigma) \leq 4</math> for all 2-planes <math>\sigma</math>." *Sectional curvature between 1 and 4: the metric is not flat.*
+- recalled: name: ok; description: ok; input: ok; output: ok; preserved: ok: Kahler, homogeneous under the unitary group; broken: thin: positively curved
+- mathlib: none. Searched FubiniStudy, Kahler and metrics on projective space: Mathlib has no Kahler manifolds and no metric on complex projective space at the pin; no declaration states this entry's claims.
+
+  f: excerpts/wikipedia-fubini-study-metric.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1367192451)
+
+### D2-198 Covariant Transformation (batch 6)
+
+- name (landed: Covariant Transformation): **confirmed** [c] "Because the components of the linear functional α transform with the matrix ''A'', these components are said to '''transform covariantly''' under a change of basis."
+- description (landed: Tensor components transform via Jacobian: T'_i = (∂x^j/∂x'^i)T_j.): **confirmed** [c] "<math display="block">\frac{\partial}{\partial y^i} = \sum_{j=1}^n\frac{\partial x^j}{\partial y^i}\frac{\partial}{\partial x^j}.</math>" [c] "then the components of the covector <math>\mathbf{v}\ \cdot</math> will transform with the same matrix <math>M</math>" [c] "Because the components of the linear functional α transform with the matrix ''A'', these components are said to '''transform covariantly''' under a change of basis." *Covector components transform with the same matrix as the basis; for a change of coordinates that matrix is the one displayed.*
+- input (landed: Covariant tensor + coord change): **confirmed** [c] "Because the components of the linear functional α transform with the matrix ''A'', these components are said to '''transform covariantly''' under a change of basis." [c] "<math display="block">\frac{\partial}{\partial y^i} = \sum_{j=1}^n\frac{\partial x^j}{\partial y^i}\frac{\partial}{\partial x^j}.</math>"
+- output (landed: Transformed components): **confirmed** [c] "Because the components of the linear functional α transform with the matrix ''A'', these components are said to '''transform covariantly''' under a change of basis."
+- preserved (landed: Tensor character, geometric quantity): **confirmed** [c] "a tensor is simply "there" and its components of either kind are only calculational artifacts whose values depend on the chosen coordinates."
+- broken (landed: Coordinate expression): **confirmed** [c] "a tensor is simply "there" and its components of either kind are only calculational artifacts whose values depend on the chosen coordinates." *The components depend on the chosen coordinates.*
+- recalled: name: ok; description: ok: covariant components transform with the Jacobian; input: ok; output: ok; preserved: ok: the tensor itself is independent of coordinates; broken: ok
+- mathlib: none. Searched covariant and contravariant component laws and tangentCoordChange: Mathlib states changes of chart on the tangent bundle but no component transformation law for tensors; no declaration states this entry's claims.
+
+  c: excerpts/wikipedia-covariance-and-contravariance-of-vectors.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376306988)
+
+### D2-199 Contravariant Transformation (batch 6)
+
+- name (landed: Contravariant Transformation): **confirmed** [c] "Because the components of the vector ''v'' transform with the ''inverse'' of the matrix ''A'', these components are said to '''transform contravariantly''' under a change of basis."
+- description (landed: Tensor via inverse Jacobian: T'^i = (∂x'^i/∂x^j)T^j.): **confirmed** [c] "<math display="block">v^i\left[\mathbf{f}'\right] = \sum_{j=1}^n \frac{\partial y^i}{\partial x^j}v^j[\mathbf{f}].</math>" [c] "That is, the matrix that transforms the vector components must be the inverse of the matrix that transforms the basis vectors."
+- input (landed: Contravariant tensor + coord change): **confirmed** [c] "Because the components of the vector ''v'' transform with the ''inverse'' of the matrix ''A'', these components are said to '''transform contravariantly''' under a change of basis." [c] "<math display="block">v^i\left[\mathbf{f}'\right] = \sum_{j=1}^n \frac{\partial y^i}{\partial x^j}v^j[\mathbf{f}].</math>"
+- output (landed: Transformed components): **confirmed** [c] "Because the components of the vector ''v'' transform with the ''inverse'' of the matrix ''A'', these components are said to '''transform contravariantly''' under a change of basis."
+- preserved (landed: Tensor character, geometric quantity): **confirmed** [c] "a tensor is simply "there" and its components of either kind are only calculational artifacts whose values depend on the chosen coordinates."
+- broken (landed: Coordinate expression): **confirmed** [c] "a tensor is simply "there" and its components of either kind are only calculational artifacts whose values depend on the chosen coordinates." *The components depend on the chosen coordinates.*
+- recalled: name: ok; description: ok: contravariant components transform with the inverse Jacobian; input: ok; output: ok; preserved: ok; broken: ok
+- mathlib: none. Searched covariant and contravariant component laws and tangentCoordChange: Mathlib states changes of chart on the tangent bundle but no component transformation law for tensors; no declaration states this entry's claims.
+
+  c: excerpts/wikipedia-covariance-and-contravariance-of-vectors.txt (https://en.wikipedia.org/w/index.php?action=raw&oldid=1376306988)
 

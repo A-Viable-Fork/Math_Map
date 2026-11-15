@@ -1,0 +1,8 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/Algebra/Homology/ExactSequence.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ExactSequence.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 510c1849f752f4770d7451beb72de97ef12d43eb860d9d53aecd95ed70e81db6
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- CategoryTheory.ComposableArrows.Exact (line 128)
+structure Exact : Prop extends S.IsComplex where
+  exact (i : ℕ) (hi : i + 2 ≤ n := by omega) : (S.sc toIsComplex i).Exact

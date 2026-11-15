@@ -1,7 +1,7 @@
 {
  "about": "A typed map of mathematical transformations: input, output, preserved and broken invariants, functional tags. Landed entries, an authored fill layer, and receipted additions; every entry states its origin.",
  "builtFrom": {
-  "commit": "bfa44c962500a77d9d4a20cc106480d77f270de1"
+  "commit": "d47fd4251eb352fd978b369f3a4b7617f78ee4f3"
  },
  "domains": {
   "D1": {
@@ -747,21 +747,21 @@
    "generated": 44
   },
   "byTier": {
-   "landed": 1198,
-   "audited": 677,
+   "landed": 1182,
+   "audited": 693,
    "authored": 58,
    "flagged": 15,
    "receipted": 74,
    "generated": 44
   },
   "withConditions": 10,
-  "corrected": 111,
+  "corrected": 122,
   "fieldEvidence": {
    "contradicted": 0,
-   "unsupported": 848,
-   "unchecked": 7889,
+   "unsupported": 861,
+   "unchecked": 7793,
    "imprecise": 18,
-   "sourced": 3551,
+   "sourced": 3634,
    "formal": 90
   },
   "lean": {
@@ -782,15 +782,15 @@
   },
   "formal": {
    "mathlibCommit": "380f2aafb622cb2c1c93dac545b6389083c68c51",
-   "entries": 166,
-   "links": 343,
+   "entries": 174,
+   "links": 358,
    "byMatch": {
-    "exact": 239,
+    "exact": 252,
     "conflicts": 5,
     "related": 27,
     "special": 27,
-    "general": 33,
-    "ingredient": 12
+    "general": 34,
+    "ingredient": 13
    }
   }
  },
@@ -13165,21 +13165,58 @@
    "description": "Tangent space at point: (m/m^2)*.",
    "input": "Scheme X + point x",
    "output": "T_x X = (m/m^2)*",
-   "preserved": "Dimension, smoothness detection",
+   "preserved": "Smoothness detection: for a Noetherian local ring the tangent space has dimension at least the Krull dimension, with equality exactly at regular points",
    "broken": "Higher-order structure",
    "complexity": "Polynomial",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Dimension, smoothness detection"
+    },
+    "reason": "Landed review, batch 6: preserved graded imprecise. The dimension is bounded by the tangent space, not kept by it.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-zariski-tangent-space.txt",
+      "quote": "If ''R'' is a [[noetherian ring|Noetherian]] local ring, the dimension of the tangent space is at least the [[Krull dimension|dimension]] of ''R'':",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-zariski-tangent-space.txt",
+      "quote": "''R'' is called [[regular local ring|regular]] if equality holds.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "IsLocalRing.CotangentSpace",
+     "file": "Mathlib/RingTheory/Ideal/Cotangent.lean",
+     "match": "ingredient",
+     "note": "The cotangent space m/m^2 of a local ring, a module over the residue field; the tangent space, its dual, is not defined here.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Cotangent.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-179",
@@ -13190,7 +13227,7 @@
     "construction"
    ],
    "description": "Module Ω_{A/k} with universal derivation.",
-   "input": "k-algebra A",
+   "input": "Commutative k-algebra A: a homomorphism k -> A of commutative rings",
    "output": "Ω_{A/k} with d: A -> Ω",
    "preserved": "Derivation universal property",
    "broken": "Specific derivation behavior",
@@ -13199,14 +13236,60 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "k-algebra A"
+    },
+    "reason": "Landed review, batch 6: input graded imprecise. The source takes commutative rings.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-kahler-differential.txt",
+      "quote": "Let {{math|''R''}} and {{math|''S''}} be commutative rings and {{math|''φ'' : ''R'' → ''S''}} be a [[ring homomorphism]].",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "KaehlerDifferential",
+     "file": "Mathlib/RingTheory/Kaehler/Basic.lean",
+     "match": "exact",
+     "note": "The module of Kahler differentials of S over R, built as I/I^2 for I the kernel of the multiplication S ⊗ S to S.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Kaehler/Basic.lean"
+    },
+    {
+     "field": "output",
+     "decl": "KaehlerDifferential.D",
+     "file": "Mathlib/RingTheory/Kaehler/Basic.lean",
+     "match": "exact",
+     "note": "The universal derivation from S into its module of Kahler differentials.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Kaehler/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "KaehlerDifferential.linearMapEquivDerivation",
+     "file": "Mathlib/RingTheory/Kaehler/Basic.lean",
+     "match": "exact",
+     "note": "S-linear maps from the module of differentials to M are the R-derivations from S to M: the universal property.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Kaehler/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-180",
@@ -13273,21 +13356,57 @@
    "description": "Double cover -> Prym abelian variety.",
    "input": "Double cover f: C->C'",
    "output": "Prym(C/C')",
-   "preserved": "Principally polarized abelian variety",
-   "broken": "Full Jacobian",
+   "preserved": "Abelian variety: the connected component of the identity of the kernel of the norm map; every principally polarized abelian variety of dimension 5 or less arises as a Prym variety",
+   "broken": "The Jacobian J_1 is cut down to its largest abelian subvariety on which the norm map to J_2 is trivial",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved",
+     "broken"
+    ],
+    "landed": {
+     "preserved": "Principally polarized abelian variety",
+     "broken": "Full Jacobian"
+    },
+    "reason": "Landed review, batch 6: preserved and broken graded imprecise. That a Prym variety is principally polarized is not in a fetched window (the source states the converse direction, in dimension 5 or less), and the loss of the full Jacobian is stated as a passage to a subvariety.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-prym-variety.txt",
+      "quote": "To qualify that somewhat, to get an abelian ''variety'', the [[connected component of the identity]] of the [[reduced scheme]] underlying the [[kernel (scheme theory)|kernel]] may be intended.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-prym-variety.txt",
+      "quote": "[[principally polarized]] abelian varieties (p.p.a.v.'s) of dimension > 3 are not generally Jacobians, but all p.p.a.v.'s of dimension 5 or less are Prym varieties.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-prym-variety.txt",
+      "quote": "Or in other words take the largest abelian subvariety of  ''J''<sub>1</sub> on which ψ is trivial.",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-182",
@@ -13307,14 +13426,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-183",
@@ -13324,8 +13444,8 @@
    "tags": [
     "construction"
    ],
-   "description": "(a,b)_v detecting local solvability of ax^2+by^2=1.",
-   "input": "a, b in local field",
+   "description": "(a,b)_v = +1 exactly when z^2 = ax^2 + by^2 has a non-zero solution in the local field; equivalently, when b is a norm from K(sqrt a)",
+   "input": "Non-zero a, b in a local field K",
    "output": "(a,b)_v in {±1}",
    "preserved": "Bilinearity, solvability",
    "broken": "Solution structure",
@@ -13334,14 +13454,57 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "input"
+    ],
+    "landed": {
+     "description": "(a,b)_v detecting local solvability of ax^2+by^2=1.",
+     "input": "a, b in local field"
+    },
+    "reason": "Landed review, batch 6: description and input graded imprecise. The source states the homogeneous equation, and defines the symbol on the non-zero elements.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-hilbert-symbol.txt",
+      "quote": ":<math>(a,b)=\\begin{cases}+1,&\\mbox{ if }z^2=ax^2+by^2\\mbox{ has a non-zero solution }(x,y,z)\\in K^3;\\\\-1,&\\mbox{ otherwise.}\\end{cases}</math>",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-hilbert-symbol.txt",
+      "quote": "Equivalently, <math>(a, b) = 1</math> if and only if <math>b</math> is equal to the [[Field norm|norm]] of an element of the quadratic extension <math>K[\\sqrt{a}]</math>.",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-hilbert-symbol.txt",
+      "quote": "Over a local field <math>K</math> with [[multiplicative group]] of non-zero elements <math>K^\\times</math>,",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-hilbert-symbol.txt",
+      "quote": "the quadratic Hilbert symbol is the [[function (mathematics)|function]] <math>K^\\times\\times K^\\times\\to\\{\\pm 1\\}</math> defined by",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-184",
@@ -13354,21 +13517,58 @@
    "description": "Transition functions -> vector bundle.",
    "input": "Open cover + transition g_{ij}",
    "output": "Vector bundle E -> X",
-   "preserved": "Cocycle condition, iso class",
+   "preserved": "The cocycle condition: g_UU = I and g_UV g_VW g_WU = I on triple overlaps",
    "broken": "Specific trivialization",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "preserved"
+    ],
+    "landed": {
+     "preserved": "Cocycle condition, iso class"
+    },
+    "reason": "Landed review, batch 6: preserved graded imprecise. The isomorphism class is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-vector-bundle.txt",
+      "quote": "The [[Set (mathematics)|set]] of transition functions forms a [[Čech cocycle]] in the sense that",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-vector-bundle.txt",
+      "quote": ":<math>g_{UU}(x) = I, \\quad g_{UV}(x)g_{VW}(x)g_{WU}(x) = I</math>",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "input",
+     "decl": "VectorBundleCore",
+     "file": "Mathlib/Topology/VectorBundle/Basic.lean",
+     "match": "exact",
+     "note": "Open base sets, coordinate changes into continuous linear maps of the fibre, and the cocycle condition coordChange_comp: the data a vector bundle is glued from.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Topology/VectorBundle/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-185",
@@ -13388,14 +13588,41 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "formal": [
+    {
+     "field": "description",
+     "decl": "DerivedCategory",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean",
+     "match": "exact",
+     "note": "The derived category of an abelian category: cochain complexes up to quasi-isomorphism, a localization.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "DerivedCategory.isIso_Q_map_iff_quasiIso",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/Basic.lean",
+     "match": "exact",
+     "note": "A morphism of cochain complexes becomes an isomorphism in the derived category exactly when it is a quasi-isomorphism.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/Basic.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "DerivedCategory.homologyFunctorFactors",
+     "file": "Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean",
+     "match": "exact",
+     "note": "Each homology functor of cochain complexes factors through the derived category: the homology is kept.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/DerivedCategory/HomologySequence.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-186",
@@ -13406,23 +13633,73 @@
     "surgery"
    ],
    "description": "z -> (az+b)/(cz+d). Conformal auto of Riemann sphere.",
-   "input": "z in C ∪ {∞} + matrix",
+   "input": "z in the extended complex plane C ∪ {∞} + complex a, b, c, d with ad - bc non-zero",
    "output": "(az+b)/(cz+d)",
-   "preserved": "Cross-ratio, circles->circles, conformality",
+   "preserved": "Cross-ratio, generalized circles (a circle or a line goes to a circle or a line, not always a circle to a circle), conformality",
    "broken": "Metric, distances",
    "complexity": "O(1)",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input",
+     "preserved"
+    ],
+    "landed": {
+     "input": "z in C ∪ {∞} + matrix",
+     "preserved": "Cross-ratio, circles->circles, conformality"
+    },
+    "reason": "Landed review, batch 6: input and preserved graded imprecise. The source requires ad - bc non-zero, and says a circle need not go to a circle.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-mobius-transformation.txt",
+      "quote": "here the coefficients {{mvar|a}}, {{mvar|b}}, {{mvar|c}}, {{mvar|d}} are complex numbers satisfying {{math|''ad'' − ''bc'' ≠ 0}}.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-mobius-transformation.txt",
+      "quote": "transformations are defined on the [[Riemann sphere|extended complex plane]] <math>\\widehat{\\Complex} = \\Complex \\cup \\{\\infty\\}</math>",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-mobius-transformation.txt",
+      "quote": "Since Möbius transformations preserve generalized circles and cross-ratios, they also preserve the conjugation.",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-mobius-transformation.txt",
+      "quote": "Note that a Möbius transformation does not necessarily map circles to circles and lines to lines:",
+      "fields": [
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-mobius-transformation.txt",
+      "quote": "The Möbius transformations are exactly the [[bijective]] [[conformal map|conformal]] maps from the Riemann sphere to itself",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-187",
@@ -13433,7 +13710,7 @@
     "construction"
    ],
    "description": "Category + tensor + unit + coherence.",
-   "input": "Category C + bifunctor ⊗ + unit I",
+   "input": "Category C + bifunctor ⊗ + unit object I + three natural isomorphisms, for associativity and the left and right unit",
    "output": "Monoidal (C, ⊗, I)",
    "preserved": "Coherence (pentagon, triangle)",
    "broken": "Non-monoidal structure",
@@ -13442,14 +13719,58 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "Category C + bifunctor ⊗ + unit I"
+    },
+    "reason": "Landed review, batch 6: input graded imprecise. The natural isomorphisms are data of the structure.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-monoidal-category.txt",
+      "quote": "a '''monoidal category''' (or '''tensor category''') is a [[category (mathematics)|category]] <math>\\mathbf C</math> equipped with a [[bifunctor]]",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-monoidal-category.txt",
+      "quote": "that is [[associative]] [[up to]] a [[natural isomorphism]], and an [[Object (category theory)|object]] <math>I</math> that is both a [[left identity|left]] and [[right identity]] for <math>\\otimes</math>, again up to a natural isomorphism.",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-monoidal-category.txt",
+      "quote": "*three [[natural isomorphism]]s subject to certain [[coherence condition]]s expressing the fact that the tensor operation:",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "output",
+     "decl": "CategoryTheory.MonoidalCategory",
+     "file": "Mathlib/CategoryTheory/Monoidal/Category.lean",
+     "match": "exact",
+     "note": "A monoidal structure on a category, extending the tensor, unit, associator and unitors of MonoidalCategoryStruct; its pentagon and triangle fields lie past the declaration window the excerpt keeps.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Monoidal/Category.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-188",
@@ -13508,14 +13829,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "unsupported",
+    "description": "unsupported",
+    "input": "unsupported",
+    "output": "unsupported",
+    "preserved": "unsupported",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "partly unsupported"
   },
   {
    "id": "D2-190",
@@ -13526,24 +13848,92 @@
     "construction",
     "projection"
    ],
-   "description": "Thick subcategory + quotient category.",
+   "description": "Serre (dense) subcategory of an abelian category, closed under subobjects, quotients and extensions, + the quotient category (A locally small)",
    "input": "Abelian category + condition",
    "output": "Serre subcategory S, quotient A/S",
-   "preserved": "Exactness, localization seq",
+   "preserved": "Exactness: a Serre subcategory is abelian and its inclusion functor is exact",
    "broken": "Objects in S (zeroed)",
    "complexity": "N/A",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Thick subcategory + quotient category.",
+     "preserved": "Exactness, localization seq"
+    },
+    "reason": "Landed review, batch 6: description and preserved graded imprecise. The source's synonym is dense, not thick; a localization sequence is not in a fetched window and is dropped.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-serre-subcategory.txt",
+      "quote": "Let <math>\\mathcal{A}</math> be an [[abelian category]]. A non-empty full [[subcategory]] <math>\\mathcal{C}</math> is called a ''Serre subcategory'' (or also a ''dense subcategory''), if for every short [[exact sequence]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Basic.txt",
+      "quote": "P.IsClosedUnderSubobjects, P.IsClosedUnderQuotients,",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Basic.txt",
+      "quote": "P.IsClosedUnderExtensions where",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-serre-subcategory.txt",
+      "quote": "one can build (for locally small <math>\\mathcal{A}</math>) the [[Quotient of an abelian category|quotient category]]",
+      "fields": [
+       "description"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-serre-subcategory.txt",
+      "quote": "Each Serre subcategory <math>\\mathcal{C}</math> of <math>\\mathcal{A}</math> is itself an abelian category, and the inclusion functor <math>\\mathcal{C}\\to\\mathcal{A}</math> is [[Exact functor|exact]].",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.ObjectProperty.IsSerreClass",
+     "file": "Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean",
+     "match": "exact",
+     "note": "A Serre class in an abelian category: it holds for zero and is closed under subobjects, quotients and extensions.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/SerreClass/Basic.lean"
+    },
+    {
+     "field": "broken",
+     "decl": "CategoryTheory.ObjectProperty.SerreClassLocalization.isZero_obj_iff",
+     "file": "Mathlib/CategoryTheory/Abelian/SerreClass/Localization.lean",
+     "match": "exact",
+     "note": "For a localization L with respect to a Serre class P, L X is zero exactly when X lies in P: the subcategory's objects go to zero.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/CategoryTheory/Abelian/SerreClass/Localization.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-191",
@@ -13582,23 +13972,78 @@
     "closure"
    ],
    "description": "rad(I) = {r: r^n in I}. Same variety as I.",
-   "input": "Ideal I",
+   "input": "Ideal I of a commutative ring R",
    "output": "Radical ideal rad(I)",
    "preserved": "Variety (same zero set)",
-   "broken": "Nilpotent elements",
+   "broken": "Nilpotents modulo I: rad(I) is the preimage of the nilradical of R/I",
    "complexity": "Polynomial via Groebner",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input",
+     "broken"
+    ],
+    "landed": {
+     "input": "Ideal I",
+     "broken": "Nilpotent elements"
+    },
+    "reason": "Landed review, batch 6: input and broken graded imprecise. The radical is stated for a commutative ring, and the nilpotent elements it absorbs are those of R/I.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-radical-of-an-ideal.txt",
+      "quote": "the '''radical''' of an [[ideal (ring theory)|ideal]] <math>I</math> of a [[commutative ring]] is another ideal",
+      "fields": [
+       "input"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-radical-of-an-ideal.txt",
+      "quote": "Equivalently, <math>\\sqrt{I}</math> is the [[preimage]] of the ideal of [[nilpotent]] elements (the [[nilradical of a ring|nilradical]] of the ring) of the [[quotient ring]] <math>R/I</math>",
+      "fields": [
+       "broken"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "Ideal.radical",
+     "file": "Mathlib/RingTheory/Ideal/Operations.lean",
+     "match": "exact",
+     "note": "The radical of I: the elements some power of which lies in I.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Operations.lean"
+    },
+    {
+     "field": "output",
+     "decl": "Ideal.radical_idem",
+     "file": "Mathlib/RingTheory/Ideal/Operations.lean",
+     "match": "exact",
+     "note": "The radical of the radical is the radical: rad(I) is a radical ideal.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Ideal/Operations.lean"
+    },
+    {
+     "field": "preserved",
+     "decl": "PrimeSpectrum.zeroLocus_radical",
+     "file": "Mathlib/RingTheory/Spectrum/Prime/Basic.lean",
+     "match": "exact",
+     "note": "The zero locus of rad(I) in the prime spectrum is that of I.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Spectrum/Prime/Basic.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-193",
@@ -13646,24 +14091,64 @@
    "tags": [
     "construction"
    ],
-   "description": "Constructs sequence with im(f_i) = ker(f_{i+1}).",
+   "description": "A sequence of morphisms is exact when im(f_i) = ker(f_{i+1}) at each term",
    "input": "Morphism sequence",
    "output": "Exact sequence",
-   "preserved": "Exactness, connecting maps",
+   "preserved": "Exactness at each term; the snake lemma turns a diagram with two exact rows into a longer exact sequence",
    "broken": "Non-exact residual",
    "complexity": "Polynomial",
    "status": "Unformalized / Unformalized / Unvalidated / Unreviewed",
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "unsupported"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "description",
+     "preserved"
+    ],
+    "landed": {
+     "description": "Constructs sequence with im(f_i) = ker(f_{i+1}).",
+     "preserved": "Exactness, connecting maps"
+    },
+    "reason": "Landed review, batch 6: description and preserved graded imprecise. Exactness is a property of a given sequence, not a construction, and connecting maps are not in a fetched window.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-exact-sequence.txt",
+      "quote": "of groups and [[group homomorphism]]s is said to be '''exact''' '''at''' <math>G_i</math> if <math>\\operatorname{im}(f_i)=\\ker(f_{i+1})</math>.",
+      "fields": [
+       "description",
+       "preserved"
+      ]
+     },
+     {
+      "file": "excerpts/wikipedia-exact-sequence.txt",
+      "quote": "The [[snake lemma]] shows how a [[commutative diagram]] with two exact rows gives rise to a longer exact sequence.",
+      "fields": [
+       "preserved"
+      ]
+     }
+    ]
+   },
+   "formal": [
+    {
+     "field": "description",
+     "decl": "CategoryTheory.ComposableArrows.Exact",
+     "file": "Mathlib/Algebra/Homology/ExactSequence.lean",
+     "match": "general",
+     "note": "A sequence of composable arrows is exact when it is a complex and each two consecutive arrows form an exact short complex, in a category with zero morphisms.",
+     "url": "https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/Algebra/Homology/ExactSequence.lean"
+    }
+   ],
+   "tier": "audited",
+   "auditVerdict": "partly unsupported",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-195",
@@ -13780,7 +14265,7 @@
     "construction"
    ],
    "description": "Canonical Kahler metric on CP^n from Hermitian inner product.",
-   "input": "CP^n",
+   "input": "CP^n endowed with a Hermitian form",
    "output": "(CP^n, g_FS) Kahler manifold",
    "preserved": "Kahler structure, U(n+1) homogeneity",
    "broken": "Flat metric",
@@ -13789,14 +14274,34 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "corrected": {
+    "fields": [
+     "input"
+    ],
+    "landed": {
+     "input": "CP^n"
+    },
+    "reason": "Landed review, batch 6: input graded imprecise. The metric is that of a projective space with a Hermitian form.",
+    "receipts": [
+     {
+      "file": "excerpts/wikipedia-fubini-study-metric.txt",
+      "quote": "is a [[Kähler metric]] on a [[complex projective space]] '''CP'''<sup>''n''</sup> endowed with a [[Hermitian form]].",
+      "fields": [
+       "input"
+      ]
+     }
+    ]
+   },
+   "tier": "audited",
+   "auditVerdict": "confirmed",
+   "landedAuditVerdict": "imprecise"
   },
   {
    "id": "D2-198",
@@ -13816,14 +14321,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-199",
@@ -13843,14 +14349,15 @@
    "origin": "map",
    "anchorable": true,
    "evidence": {
-    "name": "unchecked",
-    "description": "unchecked",
-    "input": "unchecked",
-    "output": "unchecked",
-    "preserved": "unchecked",
-    "broken": "unchecked"
+    "name": "sourced",
+    "description": "sourced",
+    "input": "sourced",
+    "output": "sourced",
+    "preserved": "sourced",
+    "broken": "sourced"
    },
-   "tier": "landed"
+   "tier": "audited",
+   "auditVerdict": "confirmed"
   },
   {
    "id": "D2-200",

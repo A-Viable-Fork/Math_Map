@@ -1,0 +1,20 @@
+Excerpts, verbatim, from: Wikipedia, Möbius transformation (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1374014348
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: d783bb04b177de2c6e62a835eb2529fa72a445f747c3757ae361cfa8fd16e3ff
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+a '''Möbius transformation''' of the [[complex plane]] is a [[rational function]] of the form
+
+<math display="block">f(z) = \frac{a z + b}{c z + d}</math>
+
+here the coefficients {{mvar|a}}, {{mvar|b}}, {{mvar|c}}, {{mvar|d}} are complex numbers satisfying {{math|''ad'' − ''bc'' ≠ 0}}.
+
+transformations are defined on the [[Riemann sphere|extended complex plane]] <math>\widehat{\Complex} = \Complex \cup \{\infty\}</math>
+
+The Möbius transformations are exactly the [[bijective]] [[conformal map|conformal]] maps from the Riemann sphere to itself
+
+Furthermore, Möbius transformations map [[generalized circle]]s to generalized circles since circle inversion has this property.
+
+Note that a Möbius transformation does not necessarily map circles to circles and lines to lines:
+
+Since Möbius transformations preserve generalized circles and cross-ratios, they also preserve the conjugation.

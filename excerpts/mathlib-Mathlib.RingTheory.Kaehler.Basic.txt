@@ -1,0 +1,24 @@
+Excerpts, verbatim, from: Mathlib, Mathlib/RingTheory/Kaehler/Basic.lean
+URL: https://github.com/leanprover-community/mathlib4/blob/380f2aafb622cb2c1c93dac545b6389083c68c51/Mathlib/RingTheory/Kaehler/Basic.lean
+Commit: 380f2aafb622cb2c1c93dac545b6389083c68c51. SHA-256 of the file at that commit: 99953f3b83ac4eb563dd93c20c9aaa163aef505f60fbbdd42767e61c6dd06125
+Only the declaration statements below are kept (proofs omitted); each was checked to occur verbatim in the file. Mathlib is licensed under Apache 2.0.
+
+-- KaehlerDifferential (line 148)
+def KaehlerDifferential : Type v :=
+  (KaehlerDifferential.ideal R S).Cotangent
+
+-- KaehlerDifferential.D (line 226)
+def KaehlerDifferential.D : Derivation R S Ω[S⁄R] :=
+  { toLinearMap := KaehlerDifferential.DLinearMap R S
+    map_one_eq_zero' := by
+      dsimp [KaehlerDifferential.DLinearMap_apply, Ideal.toCotangent_apply]
+      congr
+      rw [sub_self]
+
+-- KaehlerDifferential.linearMapEquivDerivation (line 355)
+def KaehlerDifferential.linearMapEquivDerivation : (Ω[S⁄R] →ₗ[S] M) ≃ₗ[S] Derivation R S M :=
+  { Derivation.llcomp.flip <| KaehlerDifferential.D R S with
+    invFun := Derivation.liftKaehlerDifferential
+    left_inv := fun _ =>
+      Derivation.liftKaehlerDifferential_unique _ _ (Derivation.liftKaehlerDifferential_comp _)
+    right_inv := Derivation.liftKaehlerDifferential_comp }

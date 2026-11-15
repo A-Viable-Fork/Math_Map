@@ -1,0 +1,18 @@
+Excerpts, verbatim, from: Wikipedia, Prym variety (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1350924033
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: c66ca1051c7788e64f42007504f34f6efec2fa066855c7787d14c866a7c9a6f8
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Prym variety''' construction (named for [[Friedrich Prym]]) is a method in [[algebraic geometry]] of making an [[abelian variety]] from a [[Morphism of algebraic varieties|morphism]] of [[algebraic curve]]s.
+
+In its original form, it was applied to an unramified [[Double cover (topology)|double covering]] of a [[Riemann surface]]
+
+of algebraic curves, write ''J''<sub>''i''</sub> for the Jacobian variety of ''C''<sub>''i''</sub>.
+
+Then the Prym variety of φ is the [[kernel (algebra)|kernel]] of ψ.
+
+To qualify that somewhat, to get an abelian ''variety'', the [[connected component of the identity]] of the [[reduced scheme]] underlying the [[kernel (scheme theory)|kernel]] may be intended.
+
+Or in other words take the largest abelian subvariety of  ''J''<sub>1</sub> on which ψ is trivial.
+
+[[principally polarized]] abelian varieties (p.p.a.v.'s) of dimension > 3 are not generally Jacobians, but all p.p.a.v.'s of dimension 5 or less are Prym varieties.

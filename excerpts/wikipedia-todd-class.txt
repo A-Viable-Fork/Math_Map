@@ -1,0 +1,16 @@
+Excerpts, verbatim, from: Wikipedia, Todd class (page source; CC BY-SA)
+URL: https://en.wikipedia.org/w/index.php?action=raw&oldid=1384924306
+Fetched: 2026-11-14. SHA-256 of the page source as fetched: acda68198abdd4acab4054c86387cb1d4dd7e9074dd115d2123324631e057c1f
+Only the windows below are kept; each was checked to occur verbatim in the page source.
+
+the '''Todd class''' is a construction in the [[algebraic topology]] of [[characteristic class]]es.
+
+The Todd class of a [[vector bundle]] can be defined in terms of [[Chern class]]es within various theories
+
+:<math>\operatorname{td}(E) = \prod Q(\alpha_i),</math>
+
+which is to be computed in the [[cohomology ring]] of <math>X</math>
+
+The Todd class is multiplicative:
+
+::<math>\operatorname{td}(E\oplus F) = \operatorname{td}(E)\cdot \operatorname{td}(F).</math>

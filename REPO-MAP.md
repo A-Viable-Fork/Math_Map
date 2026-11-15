@@ -199,6 +199,7 @@
 | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.HomologySequence.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.Algebra.Homology.ExactSequence.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Homology.HomologicalComplex.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Homology.Homotopy.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -255,6 +256,8 @@
 | `excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Localization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.AdjointFunctorTheorems.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -271,6 +274,7 @@
 | `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Algebra.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Kleisli.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Monad.Limits.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Category.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.NatTrans.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -335,9 +339,12 @@
 | `excerpts/mathlib-Mathlib.RingTheory.AdicCompletion.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.DedekindDomain.Ideal.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Henselian.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.RingTheory.Ideal.Cotangent.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Maps.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.RingTheory.Ideal.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Defs.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Operations.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.RingTheory.Kaehler.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.KrullDimension.Polynomial.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Lasker.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Localization.AtPrime.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -348,6 +355,7 @@
 | `excerpts/mathlib-Mathlib.RingTheory.Polynomial.Resultant.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Polynomial.UniqueFactorization.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.SimpleModule.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
+| `excerpts/mathlib-Mathlib.RingTheory.Spectrum.Prime.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.Spectrum.Prime.Topology.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.RingTheory.TensorProduct.Basic.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
 | `excerpts/mathlib-Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology.txt` | Mathlib declaration statements at the pinned commit, quoted verbatim, with each file's hash. |
@@ -667,6 +675,7 @@
 | `excerpts/wikipedia-congruence-lattice-problem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-congruence-permutable-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-continuous-lattice.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-covariance-and-contravariance-of-vectors.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cremona-group.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-critical-pair-term-rewriting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-cross-ratio.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -708,6 +717,7 @@
 | `excerpts/wikipedia-evolute.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-exact-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-exact-couple.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-exact-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-exponential-map-lie.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-ext-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-exterior-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -732,6 +742,7 @@
 | `excerpts/wikipedia-freudenthal-magic-square.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-frobenius-normal-form.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-frobenius-reciprocity.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-fubini-study-metric.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-fundamental-theorem-of-galois-theory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galilean-transformation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-galois-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -758,6 +769,7 @@
 | `excerpts/wikipedia-hessenberg-matrix.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-heyting-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-highest-weight-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-hilbert-symbol.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hilberts-basis-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-history-lorentz-transformations.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-hochschild-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -797,6 +809,7 @@
 | `excerpts/wikipedia-jordan-chevalley-dec.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-jordan-chevalley.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-jordan-normal-form.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-kahler-differential.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-kazhdan-lusztig.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-killing-form-history.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-killing-form-r.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -850,8 +863,10 @@
 | `excerpts/wikipedia-mirskys-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mobius-inversion-formula.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-mobius-inversion.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-mobius-transformation.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-modular-lattice.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-monoid-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-monoidal-category.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-motive-algebraic-geometry.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-murray-gerstenhaber.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-nagatas-compactification-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -896,6 +911,7 @@
 | `excerpts/wikipedia-proj-construction.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-projective-representation-bargmann.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-prop.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-prym-variety.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-pseudocomplement.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-puppe-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-qr-decomposition.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -907,6 +923,7 @@
 | `excerpts/wikipedia-quotient-ring.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quotient-stack.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-quotient-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-radical-of-an-ideal.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-random-walk.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-rank-factorization.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-rect-stft.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -932,6 +949,7 @@
 | `excerpts/wikipedia-separable-extension.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-serre-duality.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-serre-spectral-sequence.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-serre-subcategory.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-sheaf-cohomology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-sinkhorns-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-snake-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -961,6 +979,7 @@
 | `excerpts/wikipedia-tensor-product-of-fields.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-tensor-product-of-modules.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-term-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-todd-class.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-hochschild-homology.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-topological-sorting.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-tor-functor.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -978,6 +997,7 @@
 | `excerpts/wikipedia-upper-set.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-variance-stabilizing.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-variety-universal-algebra.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-vector-bundle.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-verdier-duality.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-verma-module.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-well-ordering-theorem.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -990,6 +1010,7 @@
 | `excerpts/wikipedia-wus-method-of-characteristic-set.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-xi-baryon-1959.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-z-transform.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
+| `excerpts/wikipedia-zariski-tangent-space.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-zassenhaus-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-zig-zag-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
 | `excerpts/wikipedia-zorns-lemma.txt` | Verbatim windows from a Wikipedia page at a pinned revision (CC BY-SA). |
@@ -1442,6 +1463,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/arxiv-2103.12179.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.AlgebraicTopology.SimplicialSet.NerveAdjunction.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.Log.Basic.txt` |
+| `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Basic.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Limits.Comma.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.LinearAlgebra.JordanChevalley.txt` |
 | `mapfill/corrections.js` | names | `excerpts/mathlib-Mathlib.ModelTheory.Fraisse.txt` |
@@ -1493,6 +1515,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-eckmann-hilton-argument.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-evolute.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-exact-category.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-exact-sequence.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-five-lemma.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-flip-algebraic-geometry.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-fourier-mukai-transform.txt` |
@@ -1501,12 +1524,14 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-fraisse-limit.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-freudenthal-magic-square.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-frobenius-reciprocity.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-fubini-study-metric.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-galois-connection-r.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-galois-connection.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-geometric-lattice.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-grobner-basis.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hermite-normal-form.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hermite-transform.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-hilbert-symbol.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hodge-projection.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-hodge-theory.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-homogeneous-coordinates.txt` |
@@ -1520,6 +1545,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-jones-polynomial.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-jordan-chevalley.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-jordan-normal-form.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-kahler-differential.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-kodaira-dimension.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-koszul-duality.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-langlands-program.txt` |
@@ -1530,6 +1556,8 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-matrix-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-matrix-square-root.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-matroid-minor.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-mobius-transformation.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-monoidal-category.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-nagatas-compactification-theorem.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-nerve-complex.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-nerve.txt` |
@@ -1539,8 +1567,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-polynomial-greatest-common-divisor.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-product-of-rings.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-proj-construction.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-prym-variety.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-qr-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-quotient-stack.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-radical-of-an-ideal.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-rank-factorization.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-resolution-algebra.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-robust-pca.txt` |
@@ -1550,6 +1580,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-schur-decomposition.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-semimodular-lattice.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-serre-duality.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-serre-subcategory.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-sinkhorns-theorem.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-spectrum-of-a-ring.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-stanley-reisner-ring.txt` |
@@ -1557,7 +1588,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-torus-action.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-translation-geometry.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-tschirnhaus-transformation.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-vector-bundle.txt` |
 | `mapfill/corrections.js` | names | `excerpts/wikipedia-wus-method-of-characteristic-set.txt` |
+| `mapfill/corrections.js` | names | `excerpts/wikipedia-zariski-tangent-space.txt` |
 | `mapfill/corrections.js` | names | `lean/MathMap/StoneCech.lean` |
 | `mapfill/corrections.js` | names | `scripts/mathmap.mjs` |
 | `mapfill/corrections.js` | names | `source/math_map.md` |
@@ -2173,7 +2206,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/arxiv-alg-geom-9503025-abstract.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Group.Subgroup.Defs.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.Ext.Basic.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.DerivedCategory.HomologySequence.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.ExactSequence.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCategory.MappingCone.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.Homology.HomotopyCofiber.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Algebra.MonoidAlgebra.Defs.txt` |
@@ -2190,7 +2226,10 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.LeftDerived.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.RightDerived.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Basic.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Abelian.SerreClass.Localization.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Adjunction.Basic.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Category.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Monoidal.Tor.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Injective.Resolution.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.CategoryTheory.Preadditive.Projective.Resolution.txt` |
@@ -2212,13 +2251,18 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RepresentationTheory.Invariants.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.DedekindDomain.Ideal.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Henselian.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Cotangent.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Maps.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Operations.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Ideal.Quotient.Defs.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Kaehler.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Lasker.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Polynomial.Resultant.Basic.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.Spectrum.Prime.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.RingTheory.TensorProduct.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Topology.Algebra.Nonarchimedean.AdicTopology.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Topology.Sheaves.Presheaf.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/mathlib-Mathlib.Topology.VectorBundle.Basic.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-adjoint-functor.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-burnside-ring.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/nlab-derived-tensor-product.txt` |
@@ -2245,9 +2289,11 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-colombeau-algebra.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-complete-orthogonal-decomposition.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-cone-algebraic-geometry.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-covariance-and-contravariance-of-vectors.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-cremona-group.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-cross-ratio.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-cylindrical-algebraic-decomposition.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-derived-category.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-derived-functor.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-differential-algebra.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-direct-image-functor.txt` |
@@ -2257,6 +2303,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-eigenvalues-and-eigenvectors.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-elimination-theory.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-evolute.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-exact-sequence.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-ext-functor.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-fiber-product-of-schemes.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-flip-algebraic-geometry.txt` |
@@ -2266,12 +2313,14 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-freudenthal-magic-square.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-frobenius-normal-form.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-frobenius-reciprocity.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-fubini-study-metric.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-gns.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-grobner-basis.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-group-ring.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-henselian-ring.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-hermite-normal-form.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-hessenberg-matrix.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-hilbert-symbol.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-homogeneous-coordinates.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-homothety.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-i-adic-topology.txt` |
@@ -2282,6 +2331,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-iwasawa-decomposition.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-jones-polynomial.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-jordan-normal-form.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-kahler-differential.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-kodaira-dimension.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-koszul-complex.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-koszul-duality.txt` |
@@ -2294,7 +2344,9 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-mapping-cylinder.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-matrix-decomposition.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-matrix-similarity.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-mobius-transformation.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-monoid-ring.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-monoidal-category.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-nagatas-compactification-theorem.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-negative-pedal-curve.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-ore-condition.txt` |
@@ -2308,9 +2360,11 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-primary-decomposition.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-product-of-rings.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-proj-construction.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-prym-variety.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-qr-decomposition.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-quotient-ring.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-quotient-stack.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-radical-of-an-ideal.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-rank-factorization.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-reflection-mathematics.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-resolution-algebra.txt` |
@@ -2320,6 +2374,7 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-scaling-geometry.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-schur-decomposition.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-serre-duality.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-serre-subcategory.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-sinkhorns-theorem.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-spectrum-of-a-ring.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-stanley-reisner-ring.txt` |
@@ -2327,12 +2382,15 @@ Extracted from code and Markdown files outside any family: `imports` (a relative
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-subfactor.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-tensor-product-of-algebras.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-tensor-product-of-fields.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-todd-class.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-tor-functor.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-torus-action.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-translation-geometry.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-tschirnhaus-transformation.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-vector-bundle.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-verdier-duality.txt` |
 | `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-wus-method-of-characteristic-set.txt` |
+| `reports/LANDED-REVIEW.md` | names | `excerpts/wikipedia-zariski-tangent-space.txt` |
 | `reports/LANDED-REVIEW.md` | names | `mapfill/corrections.js` |
 | `reports/LANDED-REVIEW.md` | names | `mapfill/formal.js` |
 | `reports/LANDED-REVIEW.md` | names | `scripts/audit.mjs` |
